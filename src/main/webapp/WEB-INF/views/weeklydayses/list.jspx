@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_softrism_tortlets_domain_WeeklyDays" items="${weeklydayses}" z="t2PtxuBdL3IAkkSQDsF3UADDbuQ=">
+        <table:table data="${weeklydayses}" id="l_com_softrism_tortlets_domain_WeeklyDays" path="/weeklydayses" z="od/gy/AvcDHuWskDaKsT2e7KgiA=">
+            <table:column id="c_com_softrism_tortlets_domain_WeeklyDays_dayOfWeek" property="dayOfWeek" z="lWblSwf+RLdkG86Cngpsg/khc9Q="/>
+        </table:table>
+    </page:list>
+</div>

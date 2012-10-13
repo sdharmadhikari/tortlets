@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_softrism_tortlets_domain_Tortlet" items="${tortlets}" z="2QrXL/Md5dw930BFvd+MKXgRImE=">
+        <table:table data="${tortlets}" id="l_com_softrism_tortlets_domain_Tortlet" path="/tortlets" z="Gnus+cQ6kO/urPf97YtObMepHKc=">
+            <table:column id="c_com_softrism_tortlets_domain_Tortlet_title" property="title" z="LT61plJTiyXnsrTglZFvkUBQVHA="/>
+            <table:column id="c_com_softrism_tortlets_domain_Tortlet_status" property="status" z="e3R7TBry02vSc/Lo1kQyYeW0O3o="/>
+            <table:column id="c_com_softrism_tortlets_domain_Tortlet_notes" property="notes" z="4QyQ0NYn/n49CfmLgJ98RAfsvH8="/>
+            <table:column date="true" dateTimePattern="${tortlet_createdon_date_format}" id="c_com_softrism_tortlets_domain_Tortlet_createdOn" property="createdOn" z="bW8QTVN4B0UcJutYYbHqHItPosk="/>
+            <table:column date="true" dateTimePattern="${tortlet_updatedon_date_format}" id="c_com_softrism_tortlets_domain_Tortlet_updatedOn" property="updatedOn" z="0B2j1eKvEdKqr876SwtAoC5xAC0="/>
+            <table:column date="true" dateTimePattern="${tortlet_completedon_date_format}" id="c_com_softrism_tortlets_domain_Tortlet_completedOn" property="completedOn" z="KQnPUoIIeguEFtth/DfEC8cmuYs="/>
+        </table:table>
+    </page:list>
+</div>

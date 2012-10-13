@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_dream" z="ChwMvSsc4Uu/0MGutZMXVjK3Ex8=">
+            <menu:item id="i_dream_new" messageCode="global_menu_new" url="/dreams?form" z="WmXMGa8pyAAmGZIFgPtnIxODfJA="/>
+            <menu:item id="i_dream_list" messageCode="global_menu_list" url="/dreams?page=1&amp;size=${empty param.size ? 10 : param.size}" z="oypk+dPWeYGkcVyxXieSYFu7ebQ="/>
+        </menu:category>
+        <menu:category id="c_tuser" z="2gdtQJwRJ1Y8PXU0RzJg6xHnRaU=">
+            <menu:item id="i_tuser_new" messageCode="global_menu_new" url="/tusers?form" z="H6kCSPD2F1ecVxrkEaLXP/Tdofw="/>
+            <menu:item id="i_tuser_list" messageCode="global_menu_list" url="/tusers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="djwy5eQxZECgt3Ns8o5YS7LDQPE="/>
+        </menu:category>
+        <menu:category id="c_weeklydays" z="yFQZZy4MHQgpQSVoRMACF9j+ykk=">
+            <menu:item id="i_weeklydays_new" messageCode="global_menu_new" url="/weeklydayses?form" z="1ln1635n4AfI6nQujYaoRMwGNZ4="/>
+            <menu:item id="i_weeklydays_list" messageCode="global_menu_list" url="/weeklydayses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KxpMyU6d9515HfKIuClVjhI9DSY="/>
+        </menu:category>
+        <menu:category id="c_tortlet" z="ZWiWmxvOYEF+drCzwEfqRe9rNm0=">
+            <menu:item id="i_tortlet_new" messageCode="global_menu_new" url="/tortlets?form" z="1H37sHeYlA8h99utE9bd6FMyN+Q="/>
+            <menu:item id="i_tortlet_list" messageCode="global_menu_list" url="/tortlets?page=1&amp;size=${empty param.size ? 10 : param.size}" z="QL9lSj2o4/6brNbphxmiFNRYT60="/>
+        </menu:category>
+        <menu:category id="c_tortoise" z="sfGASZ0b2/JD6vmc8Yutp6c4Zk8=">
+            <menu:item id="i_tortoise_new" messageCode="global_menu_new" url="/tortoises?form" z="kZspn5GuYIPRVeMUTwPyi8OQhD8="/>
+            <menu:item id="i_tortoise_list" messageCode="global_menu_list" url="/tortoises?page=1&amp;size=${empty param.size ? 10 : param.size}" z="0irlg4en0vMe7qo6HvB7qSbE1ts="/>
+        </menu:category>
+    </menu:menu>
+</div>

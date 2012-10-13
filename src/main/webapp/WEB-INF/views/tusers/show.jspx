@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_softrism_tortlets_domain_Tuser" object="${tuser}" path="/tusers" z="Mrh1CBwwyG0D+n3zE4HmdUlSUmg=">
+        <field:display field="userid" id="s_com_softrism_tortlets_domain_Tuser_userid" object="${tuser}" z="uN/Kk8jQCcIuXt999VD1pf95soA="/>
+        <field:display field="password" id="s_com_softrism_tortlets_domain_Tuser_password" object="${tuser}" z="/8rQiNMinIAjqAzpg42gWdcD2kI="/>
+        <field:display field="firstName" id="s_com_softrism_tortlets_domain_Tuser_firstName" object="${tuser}" z="2Ueya97U/hgQskb3WOW7eSDqvzA="/>
+        <field:display field="lastName" id="s_com_softrism_tortlets_domain_Tuser_lastName" object="${tuser}" z="Ev2MmHLqFnLA8A5HfRWahT5Cu28="/>
+        <field:display date="true" dateTimePattern="${tuser_birthdate_date_format}" field="birthDate" id="s_com_softrism_tortlets_domain_Tuser_birthDate" object="${tuser}" z="hd4WC4cAgUGLoJyhhMO25rlw46c="/>
+        <field:display field="timeZone" id="s_com_softrism_tortlets_domain_Tuser_timeZone" object="${tuser}" z="QXoKVH0mMcvmx+e8cHtiMy/8g+A="/>
+        <field:display field="allowedDelayDays" id="s_com_softrism_tortlets_domain_Tuser_allowedDelayDays" object="${tuser}" z="OEASB+VsIs4swJT2QFvdnf0YYxU="/>
+        <field:display field="status" id="s_com_softrism_tortlets_domain_Tuser_status" object="${tuser}" z="nBCDK5RvhaD81sSZZ4u3Q1rSU3c="/>
+        <field:display field="latestDreamScore" id="s_com_softrism_tortlets_domain_Tuser_latestDreamScore" object="${tuser}" z="dw7R/uPTlxYGiXAnnxXhKmwNhvc="/>
+        <field:display field="tortletsCreatedCount" id="s_com_softrism_tortlets_domain_Tuser_tortletsCreatedCount" object="${tuser}" z="LCpWnk2OAUY512MSl3smEWWRUvE="/>
+        <field:display field="tortletsDeletedCount" id="s_com_softrism_tortlets_domain_Tuser_tortletsDeletedCount" object="${tuser}" z="vF8TEJT4+zPo+WjsWJrlyjSENYc="/>
+        <field:display field="tortletsCompletedCount" id="s_com_softrism_tortlets_domain_Tuser_tortletsCompletedCount" object="${tuser}" z="4rBAYBznOqjpnGt2/wsiaSqE6Cg="/>
+        <field:display date="true" dateTimePattern="${tuser_createdon_date_format}" field="createdOn" id="s_com_softrism_tortlets_domain_Tuser_createdOn" object="${tuser}" z="FHURUOdOCaMPGSmv6msh4cwOm7k="/>
+        <field:display date="true" dateTimePattern="${tuser_updatedon_date_format}" field="updatedON" id="s_com_softrism_tortlets_domain_Tuser_updatedON" object="${tuser}" z="r6RDa1Bl4+b7xgpBIxIfeOnHnog="/>
+    </page:show>
+</div>

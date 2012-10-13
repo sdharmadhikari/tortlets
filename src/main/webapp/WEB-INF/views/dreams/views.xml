@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="dreams/list">
+        <put-attribute name="body" value="/WEB-INF/views/dreams/list.jspx"/>
+    </definition>
+<definition extends="default" name="dreams/show">
+        <put-attribute name="body" value="/WEB-INF/views/dreams/show.jspx"/>
+    </definition>
+<definition extends="default" name="dreams/create">
+        <put-attribute name="body" value="/WEB-INF/views/dreams/create.jspx"/>
+    </definition>
+<definition extends="default" name="dreams/update">
+        <put-attribute name="body" value="/WEB-INF/views/dreams/update.jspx"/>
+    </definition>
+</tiles-definitions>
