@@ -43,7 +43,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Tortlet, String> ApplicationConversionServiceFactoryBean.getTortletToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.softrism.tortlets.domain.Tortlet, java.lang.String>() {
             public String convert(Tortlet tortlet) {
-                return new StringBuilder().append(tortlet.getTitle()).append(' ').append(tortlet.getStatus()).append(' ').append(tortlet.getNotes()).append(' ').append(tortlet.getCreatedOn()).toString();
+                return new StringBuilder().append(tortlet.getTitle()).append(' ').append(tortlet.getNotes()).append(' ').append(tortlet.getCreatedOn()).append(' ').append(tortlet.getUpdatedOn()).toString();
             }
         };
     }

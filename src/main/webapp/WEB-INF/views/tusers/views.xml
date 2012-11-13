@@ -13,4 +13,7 @@
 <definition extends="default" name="tusers/update">
         <put-attribute name="body" value="/WEB-INF/views/tusers/update.jspx"/>
     </definition>
+<definition extends="default" name="tusers/findTusersByUseridEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tusers/findTusersByUseridEquals.jspx"/>
+    </definition>
 </tiles-definitions>

@@ -9,4 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RooWebScaffold(path = "dreams", formBackingObject = Dream.class)
 public class DreamController {
+
+    public void myMethod() {
+        Dream dream = new Dream();
+    }
 }

@@ -6,7 +6,6 @@ package com.softrism.tortlets.web;
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.domain.Tortoise;
-import com.softrism.tortlets.domain.WeeklyDay;
 import com.softrism.tortlets.web.TortoiseController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -103,7 +102,6 @@ privileged aspect TortoiseController_Roo_Controller {
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("dreams", Dream.findAllDreams());
         uiModel.addAttribute("tortlets", Tortlet.findAllTortlets());
-        uiModel.addAttribute("weeklydays", WeeklyDay.findAllWeeklyDays());
     }
     
     String TortoiseController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

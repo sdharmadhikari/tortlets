@@ -6,7 +6,6 @@ package com.softrism.tortlets.domain;
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.domain.Tortoise;
-import com.softrism.tortlets.domain.WeeklyDay;
 import java.util.Date;
 import java.util.Set;
 
@@ -132,12 +131,60 @@ privileged aspect Tortoise_Roo_JavaBean {
         this.tortlets = tortlets;
     }
     
-    public Set<WeeklyDay> Tortoise.getWeekdays() {
-        return this.weekdays;
+    public Boolean Tortoise.getMonday() {
+        return this.monday;
     }
     
-    public void Tortoise.setWeekdays(Set<WeeklyDay> weekdays) {
-        this.weekdays = weekdays;
+    public void Tortoise.setMonday(Boolean monday) {
+        this.monday = monday;
+    }
+    
+    public Boolean Tortoise.getTuesday() {
+        return this.tuesday;
+    }
+    
+    public void Tortoise.setTuesday(Boolean tuesday) {
+        this.tuesday = tuesday;
+    }
+    
+    public Boolean Tortoise.getWednesday() {
+        return this.wednesday;
+    }
+    
+    public void Tortoise.setWednesday(Boolean wednesday) {
+        this.wednesday = wednesday;
+    }
+    
+    public Boolean Tortoise.getThursday() {
+        return this.thursday;
+    }
+    
+    public void Tortoise.setThursday(Boolean thursday) {
+        this.thursday = thursday;
+    }
+    
+    public Boolean Tortoise.getFriday() {
+        return this.friday;
+    }
+    
+    public void Tortoise.setFriday(Boolean friday) {
+        this.friday = friday;
+    }
+    
+    public Boolean Tortoise.getSaturday() {
+        return this.saturday;
+    }
+    
+    public void Tortoise.setSaturday(Boolean saturday) {
+        this.saturday = saturday;
+    }
+    
+    public Boolean Tortoise.getSunday() {
+        return this.sunday;
+    }
+    
+    public void Tortoise.setSunday(Boolean sunday) {
+        this.sunday = sunday;
     }
     
 }

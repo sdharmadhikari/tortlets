@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
@@ -58,6 +59,17 @@ public class Tortoise {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "tortoise")
     private Set<Tortlet> tortlets = new HashSet<Tortlet>();
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tortoise")
-    private Set<WeeklyDay> weekdays = new HashSet<WeeklyDay>();
+    private Boolean monday;
+
+    private Boolean tuesday;
+
+    private Boolean wednesday;
+
+    private Boolean thursday;
+
+    private Boolean friday;
+
+    private Boolean saturday;
+
+    private Boolean sunday;
 }

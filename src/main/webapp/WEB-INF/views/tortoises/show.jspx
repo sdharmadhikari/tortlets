@@ -17,5 +17,12 @@
         <field:display date="true" dateTimePattern="${tortoise_createdon_date_format}" field="createdOn" id="s_com_softrism_tortlets_domain_Tortoise_createdOn" object="${tortoise}" z="HL1tJ858Uuk+5XEHRYKGuI6u5Bw="/>
         <field:display date="true" dateTimePattern="${tortoise_updatedon_date_format}" field="updatedOn" id="s_com_softrism_tortlets_domain_Tortoise_updatedOn" object="${tortoise}" z="dU0k7F0lK6Q7yINnf07MB+/CKZc="/>
         <field:display field="dream" id="s_com_softrism_tortlets_domain_Tortoise_dream" object="${tortoise}" z="5zODnOEuarZyTKpLDJsG0wb9rXg="/>
+        <field:display field="monday" id="s_com_softrism_tortlets_domain_Tortoise_monday" object="${tortoise}" z="gMd2fGhAjGEd8zLs/+j2VC/tY/4="/>
+        <field:display field="tuesday" id="s_com_softrism_tortlets_domain_Tortoise_tuesday" object="${tortoise}" z="kwzL/mB+stBH4wMVOukSm9kUbWw="/>
+        <field:display field="wednesday" id="s_com_softrism_tortlets_domain_Tortoise_wednesday" object="${tortoise}" z="oLKZ19s3dmlBOmHfE1po4u2OqeU="/>
+        <field:display field="thursday" id="s_com_softrism_tortlets_domain_Tortoise_thursday" object="${tortoise}" z="uDS/z0y6taDwmkvMzCygSHSAtkc="/>
+        <field:display field="friday" id="s_com_softrism_tortlets_domain_Tortoise_friday" object="${tortoise}" z="VKQiMk5roD3H3QoSHrbAzQNlElI="/>
+        <field:display field="saturday" id="s_com_softrism_tortlets_domain_Tortoise_saturday" object="${tortoise}" z="vI0cDkcR1vgLXjEKbq1y6aTdrHo="/>
+        <field:display field="sunday" id="s_com_softrism_tortlets_domain_Tortoise_sunday" object="${tortoise}" z="OddSNP1lEmPbep+Zz1JvoFr09RE="/>
     </page:show>
 </div>

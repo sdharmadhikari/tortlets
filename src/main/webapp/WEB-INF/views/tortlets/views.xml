@@ -7,10 +7,18 @@
 <definition extends="default" name="tortlets/show">
         <put-attribute name="body" value="/WEB-INF/views/tortlets/show.jspx"/>
     </definition>
-<definition extends="default" name="tortlets/create">
-        <put-attribute name="body" value="/WEB-INF/views/tortlets/create.jspx"/>
+
+
+<definition extends="default" name="tortlets/findTortletsByTuserAndCreatedOnEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByTuserAndCreatedOnEquals.jspx"/>
     </definition>
-<definition extends="default" name="tortlets/update">
-        <put-attribute name="body" value="/WEB-INF/views/tortlets/update.jspx"/>
+<definition extends="default" name="tortlets/findTortletsByCreatedOnEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByCreatedOnEquals.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByTortoiseAndCreatedOnEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByTortoiseAndCreatedOnEquals.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByCompletedNot">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByCompletedNot.jspx"/>
     </definition>
 </tiles-definitions>

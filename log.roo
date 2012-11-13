@@ -82,3 +82,98 @@ focus --class ~.domain.WeeklyDay
 field reference --fieldName tortoise --type ~.domain.Tortoise --cardinality MANY_TO_ONE 
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-10 15:07:15
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-12 23:21:36
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-17 09:37:18
+focus --class ~.domain.Tortoise
+field boolean --fieldName monday
+field boolean --fieldName tuesday
+field boolean --fieldName wednesday
+field boolean --fieldName thursday
+field boolean --fieldName friday
+field boolean --fieldName saturday
+field boolean --fieldName sunday
+web mvc all --package com.softrism.tortlets.web
+web mvc all --package com.softrism.tortlets.web
+web mvc all --package com.softrism.tortlets.web
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-17 13:02:08
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-17 19:57:40
+perform eclipse 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-17 21:57:20
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-20 15:59:13
+jpa setup --database MYSQL --provider HIBERNATE 
+jpa setup --database ORACLE --provider HIBERNATE 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-21 13:14:56
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-21 13:28:04
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-21 18:59:53
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-22 14:54:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-22 15:15:38
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-22 15:18:15
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-22 16:24:49
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-26 05:50:49
+hint
+hint web mvc
+hint web mvc finder
+hint web mvc
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-26 10:04:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-28 16:34:14
+hint
+focus --class ~.domain.Tortlet
+// [failed] finder list --depth 9 --filter findTortletsByTuser
+finder list --depth 3 --filter findTortletsByTuser
+finder list --depth 3 --filter findTortletsByTortoise
+finder list --depth 3 --filter Tuser
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-28 20:08:03
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-28 21:10:41
+hint
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-29 09:07:19
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-30 05:59:42
+focus --class ~.domain.Tortlet
+finder list --filter findTortletsByTortoiseAndCreatedOn
+finder list --filter findTortletsByTortoise
+finder list --depth 3 --filter findTortletsByTortoiseAndCreatedOn
+finder list --depth 2 --filter findTortletsByTortoiseAndCreatedOnEquals
+finder add findTortletsByTortoiseAndCreatedOn
+web mvc finder all 
+finder list --depth 3 --filter Tuser
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-30 06:25:06
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-31 14:55:04
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-31 15:04:21
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-31 15:04:39
+hint
+hint
+focus --class ~.domain.Tortlet
+finder list --filter findTortletsByTortoise
+finder list --depth 2 --filter findTortletsByTortoise
+finder list --depth 2 --filter findTortletsByTortoiseAndCreatedOn
+finder add --finderName findTortletsByTortoiseAndCreatedOnEquals
+web mvc finder all 
+finder list --filter findTortletsByCreatedOn
+finder add --finderName findTortletsByCreatedOnEquals
+finder list --filter findTortletsByTortoiseAndCreatedOnEquals
+finder list --depth --filter findTortletsByTortoiseAndCreatedOnEquals
+finder list --depth --filter findTortletsByTortoiseAndCreated
+finder list --depth 2 --filter findTortletsByTortoiseAndCreated
+finder add --finderName findTortletsByTortoiseAndCreatedOnEquals
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-31 16:32:10
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-31 21:38:02
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-01 08:52:11
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-01 15:31:46
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-01 15:32:58
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-07 21:36:27
+focus --class ~.domain.Tuser
+finder list
+finder add --finderName findTusersByUseridEquals
+web mvc all --package com.softrism.tortlets.web
+web mvc finder all 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-08 08:58:16
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-09 11:41:19
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-09 11:57:42
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-11 10:54:51
+hint
+focus --class ~.domain.Tortlet
+finder list 
+finder list --filter completed
+finder add findTortletsByCompletedNot
+hint
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-12 12:34:12
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-12 12:50:15
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-12 16:04:52
