@@ -10,6 +10,5 @@
         <field:datetime dateTimePattern="${tortlet_completedon_date_format}" field="completedOn" id="c_com_softrism_tortlets_domain_Tortlet_completedOn" z="AQDzxl6EWLaX8sUkACf3PSHZ7bI="/>
         <field:select field="tortoise" id="c_com_softrism_tortlets_domain_Tortlet_tortoise" itemValue="id" items="${tortoises}" path="/tortoises" z="jfIuPz6Ime7mj3lAiBTkZZsO8io="/>
         <field:checkbox field="completed" id="c_com_softrism_tortlets_domain_Tortlet_completed" z="Zlck5MXov3r6ciERUKQsmUOPMFo="/>
-        <field:checkbox field="expired" id="c_com_softrism_tortlets_domain_Tortlet_expired" z="O8fpY3G9H5fEIzAM7+Ayx0MnoYw="/>
     </form:update>
 </div>

@@ -4,13 +4,18 @@
 package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Tortlet;
+import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.web.TortletController;
+import java.io.UnsupportedEncodingException;
+import javax.servlet.http.HttpServletRequest;
 import org.joda.time.format.DateTimeFormat;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.util.UriUtils;
+import org.springframework.web.util.WebUtils;
 
 privileged aspect TortletController_Roo_Controller {
     
@@ -37,10 +42,33 @@ privileged aspect TortletController_Roo_Controller {
         return "tortlets/list";
     }
     
+    @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
+    public String TortletController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        populateEditForm(uiModel, Tortlet.findTortlet(id));
+        return "tortlets/update";
+    }
+    
     void TortletController.addDateTimeFormatPatterns(Model uiModel) {
         uiModel.addAttribute("tortlet_createdon_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("tortlet_updatedon_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("tortlet_completedon_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+    }
+    
+    void TortletController.populateEditForm(Model uiModel, Tortlet tortlet) {
+        uiModel.addAttribute("tortlet", tortlet);
+        addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("tortoises", Tortoise.findAllTortoises());
+    }
+    
+    String TortletController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
+        String enc = httpServletRequest.getCharacterEncoding();
+        if (enc == null) {
+            enc = WebUtils.DEFAULT_CHARACTER_ENCODING;
+        }
+        try {
+            pathSegment = UriUtils.encodePathSegment(pathSegment, enc);
+        } catch (UnsupportedEncodingException uee) {}
+        return pathSegment;
     }
     
 }

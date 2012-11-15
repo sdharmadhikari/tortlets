@@ -177,3 +177,10 @@ hint
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-12 12:34:12
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-12 12:50:15
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-12 16:04:52
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-13 12:14:14
+hint
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-14 09:09:49
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-14 16:31:16
+focus --class ~.domain.Tortlet
+finder list --filter createdOn
+finder add findTortletsByCreatedOnEquals

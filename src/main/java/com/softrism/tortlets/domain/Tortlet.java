@@ -15,12 +15,10 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals" })
+@RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals", "findTortletsByCreatedOnEquals" })
 public class Tortlet {
 
     private String title;
-
-    private Boolean expired;
 
     private Boolean completed;
 
@@ -53,7 +51,7 @@ public class Tortlet {
         if (tortoiseList.size() == 0) {
             return null;
         } else {
-        	Boolean completed = new Boolean(true);
+            Boolean completed = new Boolean(true);
             q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.tortoise in :tortoiseList and o.completed IS NOT :completed or o.completed is null", Tortlet.class);
             q.setParameter("tortoiseList", tortoiseList);
             q.setParameter("completed", completed);

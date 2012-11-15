@@ -88,14 +88,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Tuser, String> ApplicationConversionServiceFactoryBean.getTuserToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.softrism.tortlets.domain.Tuser, java.lang.String>() {
-            public String convert(Tuser tuser) {
-                return new StringBuilder().append(tuser.getUserid()).append(' ').append(tuser.getPassword()).append(' ').append(tuser.getFirstName()).append(' ').append(tuser.getLastName()).toString();
-            }
-        };
-    }
-    
     public Converter<Long, Tuser> ApplicationConversionServiceFactoryBean.getIdToTuserConverter() {
         return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.softrism.tortlets.domain.Tuser>() {
             public com.softrism.tortlets.domain.Tuser convert(java.lang.Long id) {

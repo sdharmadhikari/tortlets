@@ -2,9 +2,8 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show create="false" delete="false" id="ps_com_softrism_tortlets_domain_Tortlet" object="${tortlet}" path="/tortlets" update="false" z="JQbfKDZkxRhZAo0R5HfgLEorfvk=">
+    <page:show create="false" delete="false" id="ps_com_softrism_tortlets_domain_Tortlet" object="${tortlet}" path="/tortlets" z="7IVbib6oLps1udt0e2nlSqF+PfI=">
         <field:display field="title" id="s_com_softrism_tortlets_domain_Tortlet_title" object="${tortlet}" z="0QalChfEQR0GzWEpnOlWoLhPfWw="/>
-        <field:display field="expired" id="s_com_softrism_tortlets_domain_Tortlet_expired" object="${tortlet}" z="MSDe6c1rzuVrEeUTQtxDV5F+Za4="/>
         <field:display field="completed" id="s_com_softrism_tortlets_domain_Tortlet_completed" object="${tortlet}" z="dZ7vh1zObxLleqbapC5cfkpYTo0="/>
         <field:display field="notes" id="s_com_softrism_tortlets_domain_Tortlet_notes" object="${tortlet}" z="13OdF835piwaW0YnvRHqsZdt9u0="/>
         <field:display date="true" dateTimePattern="${tortlet_createdon_date_format}" field="createdOn" id="s_com_softrism_tortlets_domain_Tortlet_createdOn" object="${tortlet}" z="lTE5sNG09Wq2a2gIbFBiL8hTVx0="/>

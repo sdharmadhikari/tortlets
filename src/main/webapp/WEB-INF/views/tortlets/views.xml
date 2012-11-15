@@ -21,4 +21,7 @@
 <definition extends="default" name="tortlets/findTortletsByCompletedNot">
         <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByCompletedNot.jspx"/>
     </definition>
+<definition extends="default" name="tortlets/update">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/update.jspx"/>
+    </definition>
 </tiles-definitions>

@@ -17,14 +17,6 @@ privileged aspect Tortlet_Roo_JavaBean {
         this.title = title;
     }
     
-    public Boolean Tortlet.getExpired() {
-        return this.expired;
-    }
-    
-    public void Tortlet.setExpired(Boolean expired) {
-        this.expired = expired;
-    }
-    
     public Boolean Tortlet.getCompleted() {
         return this.completed;
     }
