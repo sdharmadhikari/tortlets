@@ -8,9 +8,7 @@
         <field:input field="firstName" id="c_com_softrism_tortlets_domain_Tuser_firstName" z="NjXBKT8+NNQZoV3YP8Nq5UM/AhE="/>
         <field:input field="lastName" id="c_com_softrism_tortlets_domain_Tuser_lastName" z="xlABMXAWZRw9BI/NblxLh8scI/I="/>
         <field:datetime dateTimePattern="${tuser_birthdate_date_format}" field="birthDate" id="c_com_softrism_tortlets_domain_Tuser_birthDate" z="IYtgDF2AcnlTU/V2UhU+vc5Q5y4="/>
-        <field:input field="timeZone" id="c_com_softrism_tortlets_domain_Tuser_timeZone" z="aC4CQSFn9v4Iu0VouUn6E+bBJ+M="/>
         <field:input field="allowedDelayDays" id="c_com_softrism_tortlets_domain_Tuser_allowedDelayDays" z="tc6b6YN2EzORJdnGSKTPvA8U8Uk="/>
-        <field:input field="status" id="c_com_softrism_tortlets_domain_Tuser_status" z="7lWMZlXb47Nc6S/rKMsuzVvtayA="/>
         <field:input field="latestDreamScore" id="c_com_softrism_tortlets_domain_Tuser_latestDreamScore" z="1IRA6f/Ix44Np0CUB+Sb2aywRy0="/>
         <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Tuser_tortletsCreatedCount" z="Ft7WZVa0VPpRdMsYbpQ+VlRRKf0="/>
         <field:input field="tortletsDeletedCount" id="c_com_softrism_tortlets_domain_Tuser_tortletsDeletedCount" z="KDD0nqjdltxPZLhR3ZTFL9rkubY="/>
@@ -18,5 +16,7 @@
         <field:datetime dateTimePattern="${tuser_createdon_date_format}" field="createdOn" id="c_com_softrism_tortlets_domain_Tuser_createdOn" z="z6fLjt+dcjkg0zvBgkwnykzRcVI="/>
         <field:datetime dateTimePattern="${tuser_updatedon_date_format}" field="updatedON" id="c_com_softrism_tortlets_domain_Tuser_updatedON" z="V69ZxeGvWfmgoCkgHQYxVBI5pOE="/>
         <field:simple field="dreams" id="c_com_softrism_tortlets_domain_Tuser_dreams" messageCode="entity_reference_not_managed" messageCodeAttribute="Dream" z="o1z7o+sJHWSdeVd7RHcvpdV5SHU="/>
+        <field:select field="status" id="c_com_softrism_tortlets_domain_Tuser_status" items="${tuserstatusenums}" path="tuserstatusenums" z="L3XCaT4K32WBPPeCSHFQ1EOYLh4="/>
+        <field:select field="timezone" id="c_com_softrism_tortlets_domain_Tuser_timezone" items="${tusertimezoneenums}" path="tusertimezoneenums" z="drddr080si4m8vHnRbhnCAmXSvY="/>
     </form:update>
 </div>

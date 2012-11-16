@@ -184,3 +184,23 @@ hint
 focus --class ~.domain.Tortlet
 finder list --filter createdOn
 finder add findTortletsByCreatedOnEquals
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-14 21:54:40
+focus --class ~.domain.Tuser
+field enum --fieldName status --type ~.domain.UserStatusEnum
+enum type --class ~.domain.TuserStatusEnum
+enum constant --name ACTIVE
+enum constant --name ON_VACATION
+enum constant --name FALLEN_SICK
+focus --class ~.domain.Tuser
+field enum --fieldName status --type ~.domain.TuserStatusEnum
+enum type --class ~.domain.TuserTimezoneEnum
+enum constant --name PST
+enum constant --name EST
+enum constant --name IST
+focus --class ~.domain.Tuser 
+field enum --fieldName timezone --type ~.domain.TuserTimezoneEnum --enumType STRING
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-15 09:30:37
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-15 20:33:37
+hint
+jpa setup --database MYSQL --provider HIBERNATE 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-15 21:37:07

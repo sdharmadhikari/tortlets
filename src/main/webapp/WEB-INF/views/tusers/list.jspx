@@ -5,11 +5,11 @@
     <page:list id="pl_com_softrism_tortlets_domain_Tuser" items="${tusers}" z="yIyAsn6G9zmgQHZSrqkENqKQDP4=">
         <table:table data="${tusers}" id="l_com_softrism_tortlets_domain_Tuser" path="/tusers" z="cHqnH8rjrLHW0oJBJbmjDLrtpnQ=">
             <table:column id="c_com_softrism_tortlets_domain_Tuser_userid" property="userid" z="vIwwDAZtVbIv3m3PPdjfqPpfksA="/>
-            <table:column id="c_com_softrism_tortlets_domain_Tuser_password" property="password" z="IIMRCRJeRAHncxKJnu/F09SEk3I="/>
             <table:column id="c_com_softrism_tortlets_domain_Tuser_firstName" property="firstName" z="MKYT0U+5Nszs2Tj+HCvDbUDY5Io="/>
             <table:column id="c_com_softrism_tortlets_domain_Tuser_lastName" property="lastName" z="trN2vFkV58tszo6lVqmgJEUdmzc="/>
+            <table:column id="c_com_softrism_tortlets_domain_Tuser_password" property="password" render="false" z="user-managed"/>
             <table:column date="true" dateTimePattern="${tuser_birthdate_date_format}" id="c_com_softrism_tortlets_domain_Tuser_birthDate" property="birthDate" z="o4VzryHJCIguf9V3Op7pBBX7Ywg="/>
-            <table:column id="c_com_softrism_tortlets_domain_Tuser_timeZone" property="timeZone" z="O2L3IM0yE9bV9vQEo89qYvLYdOQ="/>
+            <table:column id="c_com_softrism_tortlets_domain_Tuser_allowedDelayDays" property="allowedDelayDays" z="k3nb9vAmh2BRU8vd+XK4HpracaE="/>
         </table:table>
     </page:list>
 </div>

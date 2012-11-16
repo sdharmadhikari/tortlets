@@ -5,6 +5,8 @@ package com.softrism.tortlets.domain;
 
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tuser;
+import com.softrism.tortlets.domain.TuserStatusEnum;
+import com.softrism.tortlets.domain.TuserTimezoneEnum;
 import java.util.Date;
 import java.util.Set;
 
@@ -50,28 +52,12 @@ privileged aspect Tuser_Roo_JavaBean {
         this.birthDate = birthDate;
     }
     
-    public String Tuser.getTimeZone() {
-        return this.timeZone;
-    }
-    
-    public void Tuser.setTimeZone(String timeZone) {
-        this.timeZone = timeZone;
-    }
-    
     public int Tuser.getAllowedDelayDays() {
         return this.allowedDelayDays;
     }
     
     public void Tuser.setAllowedDelayDays(int allowedDelayDays) {
         this.allowedDelayDays = allowedDelayDays;
-    }
-    
-    public String Tuser.getStatus() {
-        return this.status;
-    }
-    
-    public void Tuser.setStatus(String status) {
-        this.status = status;
     }
     
     public int Tuser.getLatestDreamScore() {
@@ -128,6 +114,22 @@ privileged aspect Tuser_Roo_JavaBean {
     
     public void Tuser.setDreams(Set<Dream> dreams) {
         this.dreams = dreams;
+    }
+    
+    public TuserStatusEnum Tuser.getStatus() {
+        return this.status;
+    }
+    
+    public void Tuser.setStatus(TuserStatusEnum status) {
+        this.status = status;
+    }
+    
+    public TuserTimezoneEnum Tuser.getTimezone() {
+        return this.timezone;
+    }
+    
+    public void Tuser.setTimezone(TuserTimezoneEnum timezone) {
+        this.timezone = timezone;
     }
     
 }

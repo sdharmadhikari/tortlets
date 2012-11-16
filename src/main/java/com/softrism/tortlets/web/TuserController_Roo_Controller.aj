@@ -5,8 +5,11 @@ package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tuser;
+import com.softrism.tortlets.domain.TuserStatusEnum;
+import com.softrism.tortlets.domain.TuserTimezoneEnum;
 import com.softrism.tortlets.web.TuserController;
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
@@ -21,17 +24,6 @@ import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
 privileged aspect TuserController_Roo_Controller {
-    
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String TuserController.create(@Valid Tuser tuser, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, tuser);
-            return "tusers/create";
-        }
-        uiModel.asMap().clear();
-        tuser.persist();
-        return "redirect:/tusers/" + encodeUrlPathSegment(tuser.getId().toString(), httpServletRequest);
-    }
     
     @RequestMapping(params = "form", produces = "text/html")
     public String TuserController.createForm(Model uiModel) {
@@ -99,6 +91,8 @@ privileged aspect TuserController_Roo_Controller {
         uiModel.addAttribute("tuser", tuser);
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("dreams", Dream.findAllDreams());
+        uiModel.addAttribute("tuserstatusenums", Arrays.asList(TuserStatusEnum.values()));
+        uiModel.addAttribute("tusertimezoneenums", Arrays.asList(TuserTimezoneEnum.values()));
     }
     
     String TuserController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
