@@ -6,6 +6,8 @@ package com.softrism.tortlets.domain;
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.domain.Tortoise;
+import com.softrism.tortlets.domain.TortoiseDurationTypeEnum;
+import com.softrism.tortlets.domain.TortoiseStatusEnum;
 import java.util.Date;
 import java.util.Set;
 
@@ -49,22 +51,6 @@ privileged aspect Tortoise_Roo_JavaBean {
     
     public void Tortoise.setEndDate(Date endDate) {
         this.endDate = endDate;
-    }
-    
-    public String Tortoise.getStatus() {
-        return this.status;
-    }
-    
-    public void Tortoise.setStatus(String status) {
-        this.status = status;
-    }
-    
-    public String Tortoise.getDurationType() {
-        return this.durationType;
-    }
-    
-    public void Tortoise.setDurationType(String durationType) {
-        this.durationType = durationType;
     }
     
     public int Tortoise.getLatestTortoiseScore() {
@@ -185,6 +171,22 @@ privileged aspect Tortoise_Roo_JavaBean {
     
     public void Tortoise.setSunday(Boolean sunday) {
         this.sunday = sunday;
+    }
+    
+    public TortoiseStatusEnum Tortoise.getStatus() {
+        return this.status;
+    }
+    
+    public void Tortoise.setStatus(TortoiseStatusEnum status) {
+        this.status = status;
+    }
+    
+    public TortoiseDurationTypeEnum Tortoise.getDuration() {
+        return this.duration;
+    }
+    
+    public void Tortoise.setDuration(TortoiseDurationTypeEnum duration) {
+        this.duration = duration;
     }
     
 }

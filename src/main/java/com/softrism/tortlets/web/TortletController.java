@@ -114,7 +114,7 @@ public class TortletController {
 	        tortlet.setCompletedOn(now);
 	        tortlet.setUpdatedOn(now);
 	        
-	        Tortoise tortoise = tortlet.getTortoise();
+	        Tortoise tortoise = oldTortlet.getTortoise();
 	        tortoise.setTortletsCompletedCount(tortoise.getTortletsCompletedCount()+1);
 	        tortoise.setUpdatedOn(now);
 	        tortlet.setTortoise(tortoise);

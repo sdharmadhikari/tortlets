@@ -4,19 +4,18 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_softrism_tortlets_domain_Tortoise" object="${tortoise}" path="/tortoises" z="8RPZ+PZ1LC6MiWSnaxg0jtw+vNc=">
         <field:display field="title" id="s_com_softrism_tortlets_domain_Tortoise_title" object="${tortoise}" z="iXaAGbqfpflUVVDhBlAnj+oNtMk="/>
-        <field:display field="frequency" id="s_com_softrism_tortlets_domain_Tortoise_frequency" object="${tortoise}" z="uAX1gCcNXiSlb7smSgbBx5HA1MQ="/>
+        <field:display field="dream" id="s_com_softrism_tortlets_domain_Tortoise_dream" object="${tortoise}" z="5zODnOEuarZyTKpLDJsG0wb9rXg="/>
+        <field:display field="frequency" id="s_com_softrism_tortlets_domain_Tortoise_frequency" object="${tortoise}" render="false" z="user-managed"/>
         <field:display field="notes" id="s_com_softrism_tortlets_domain_Tortoise_notes" object="${tortoise}" z="kDe8DYx0cTE08STm9K+NF2hEUXg="/>
         <field:display date="true" dateTimePattern="${tortoise_startdate_date_format}" field="startDate" id="s_com_softrism_tortlets_domain_Tortoise_startDate" object="${tortoise}" z="JRhrTqs9nuwa1GIYJWoB8Wql8rA="/>
         <field:display date="true" dateTimePattern="${tortoise_enddate_date_format}" field="endDate" id="s_com_softrism_tortlets_domain_Tortoise_endDate" object="${tortoise}" z="0AeCRNwAcB4a+oFvFLZj6d6EOKs="/>
         <field:display field="status" id="s_com_softrism_tortlets_domain_Tortoise_status" object="${tortoise}" z="JIydTHJ43e0vEnQXy/InRanjc7U="/>
-        <field:display field="durationType" id="s_com_softrism_tortlets_domain_Tortoise_durationType" object="${tortoise}" z="r8qb37N3h7P/qfYI6IMD8WbLqJw="/>
-        <field:display field="latestTortoiseScore" id="s_com_softrism_tortlets_domain_Tortoise_latestTortoiseScore" object="${tortoise}" z="bDurcrrCLQfNK+Th3NIAK26he00="/>
-        <field:display field="tortletsCreatedCount" id="s_com_softrism_tortlets_domain_Tortoise_tortletsCreatedCount" object="${tortoise}" z="xWbo3b7FYngDJf6grynnu+F+XnA="/>
-        <field:display field="tortletsDeletedCount" id="s_com_softrism_tortlets_domain_Tortoise_tortletsDeletedCount" object="${tortoise}" z="p6PIwsLMLeO6npsKLrmt+p+dVg0="/>
-        <field:display field="tortletsCompletedCount" id="s_com_softrism_tortlets_domain_Tortoise_tortletsCompletedCount" object="${tortoise}" z="8BQ2f3vIG+dfwp4OO4FtEtYf/FI="/>
+        <field:display field="duration" id="s_com_softrism_tortlets_domain_Tortoise_duration" object="${tortoise}" z="zUZSpKbCIHDST6hN3GDdP2tviCg="/>
+        <field:display field="tortletsCreatedCount" id="s_com_softrism_tortlets_domain_Tortoise_tortletsCreatedCount" object="${tortoise}" render="false" z="user-managed"/>
+        <field:display field="tortletsDeletedCount" id="s_com_softrism_tortlets_domain_Tortoise_tortletsDeletedCount" object="${tortoise}" render="false" z="user-managed"/>
+        <field:display field="tortletsCompletedCount" id="s_com_softrism_tortlets_domain_Tortoise_tortletsCompletedCount" object="${tortoise}" render="false" z="user-managed"/>
         <field:display date="true" dateTimePattern="${tortoise_createdon_date_format}" field="createdOn" id="s_com_softrism_tortlets_domain_Tortoise_createdOn" object="${tortoise}" z="HL1tJ858Uuk+5XEHRYKGuI6u5Bw="/>
-        <field:display date="true" dateTimePattern="${tortoise_updatedon_date_format}" field="updatedOn" id="s_com_softrism_tortlets_domain_Tortoise_updatedOn" object="${tortoise}" z="dU0k7F0lK6Q7yINnf07MB+/CKZc="/>
-        <field:display field="dream" id="s_com_softrism_tortlets_domain_Tortoise_dream" object="${tortoise}" z="5zODnOEuarZyTKpLDJsG0wb9rXg="/>
+        <field:display date="true" dateTimePattern="${tortoise_updatedon_date_format}" field="updatedOn" id="s_com_softrism_tortlets_domain_Tortoise_updatedOn" object="${tortoise}" render="false" z="user-managed"/>
         <field:display field="monday" id="s_com_softrism_tortlets_domain_Tortoise_monday" object="${tortoise}" z="gMd2fGhAjGEd8zLs/+j2VC/tY/4="/>
         <field:display field="tuesday" id="s_com_softrism_tortlets_domain_Tortoise_tuesday" object="${tortoise}" z="kwzL/mB+stBH4wMVOukSm9kUbWw="/>
         <field:display field="wednesday" id="s_com_softrism_tortlets_domain_Tortoise_wednesday" object="${tortoise}" z="oLKZ19s3dmlBOmHfE1po4u2OqeU="/>
@@ -24,5 +23,6 @@
         <field:display field="friday" id="s_com_softrism_tortlets_domain_Tortoise_friday" object="${tortoise}" z="VKQiMk5roD3H3QoSHrbAzQNlElI="/>
         <field:display field="saturday" id="s_com_softrism_tortlets_domain_Tortoise_saturday" object="${tortoise}" z="vI0cDkcR1vgLXjEKbq1y6aTdrHo="/>
         <field:display field="sunday" id="s_com_softrism_tortlets_domain_Tortoise_sunday" object="${tortoise}" z="OddSNP1lEmPbep+Zz1JvoFr09RE="/>
+        <field:display field="latestTortoiseScore" id="s_com_softrism_tortlets_domain_Tortoise_latestTortoiseScore" object="${tortoise}" z="bDurcrrCLQfNK+Th3NIAK26he00="/>
     </page:show>
 </div>

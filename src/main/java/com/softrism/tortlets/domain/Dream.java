@@ -4,11 +4,16 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -19,18 +24,18 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJpaActiveRecord
 public class Dream {
 
+    @NotNull
     private String title;
 
+    @Size(min = 0, max = 100)
     private String notes;
 
+    @NotNull
+    @Value("LightBlue")
     private String dreamColor;
 
-    private String priority;
-
-    private String status;
-
     private int latestDreamScore;
-    
+
     private int tortletsCreatedCount;
 
     private int tortletsDeletedCount;
@@ -50,4 +55,7 @@ public class Dream {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "dream")
     private Set<Tortoise> tortoises = new HashSet<Tortoise>();
+
+    @Enumerated(EnumType.STRING)
+    private DreamStatusEnum status;
 }

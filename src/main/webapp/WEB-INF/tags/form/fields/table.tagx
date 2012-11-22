@@ -19,6 +19,7 @@
     <c:set var="columnMaxLengths" scope="request" />
     <c:set var="columnTypes" scope="request" />
     <c:set var="columnDatePatterns" scope="request" />
+    <c:set var="dotDot" value="..." scope="request" />
 
     <jsp:doBody />
 
@@ -89,6 +90,7 @@
                 <c:set value="${fn:substring(colTxt, 0, columnMaxLength)}" var="colTxt" />
               </c:if>
               <c:out value="${colTxt}" />
+              <c:out value="${dotDot}" />
             </td>
           </c:forTokens>
           <c:set var="itemId"><spring:eval expression="item[typeIdFieldName]"/></c:set>

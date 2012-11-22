@@ -19,7 +19,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Dream, String> ApplicationConversionServiceFactoryBean.getDreamToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.softrism.tortlets.domain.Dream, java.lang.String>() {
             public String convert(Dream dream) {
-                return new StringBuilder().append(dream.getTitle()).append(' ').append(dream.getNotes()).append(' ').append(dream.getDreamColor()).append(' ').append(dream.getPriority()).toString();
+                return new StringBuilder().append(dream.getTitle()).append(' ').append(dream.getNotes()).append(' ').append(dream.getDreamColor()).append(' ').append(dream.getLatestDreamScore()).toString();
             }
         };
     }

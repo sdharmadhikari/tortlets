@@ -2,7 +2,7 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:find finderName="ByUseridEquals" id="ff_com_softrism_tortlets_domain_Tuser" path="/tusers" z="r/fTLJ3x0wJhLQVqf42CkPAOWSk=">
-        <field:input disableFormBinding="true" field="userid" id="f_com_softrism_tortlets_domain_Tuser_userid" max="16" min="6" required="true" z="b3RACT9NCQAm6/C+bHUjWoLhgSc="/>
+    <form:find finderName="ByCompleted" id="ff_com_softrism_tortlets_domain_Tortlet" path="/tortlets" z="0xEGiFOwxW9Zq7uX+v6/lbqnS/k=">
+        <field:checkbox disableFormBinding="true" field="completed" id="f_com_softrism_tortlets_domain_Tortlet_completed" z="uBMujKrCrJKooMTrcJqFo43EcaI="/>
     </form:find>
 </div>

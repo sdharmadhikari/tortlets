@@ -204,3 +204,42 @@ field enum --fieldName timezone --type ~.domain.TuserTimezoneEnum --enumType STR
 hint
 jpa setup --database MYSQL --provider HIBERNATE 
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-15 21:37:07
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-16 10:59:56
+focus --class ~.domain.Tuser
+field string --fieldName myPassword --value defaultpw
+field number --fieldName myInteger --type int --value 7
+field string --fieldName confirmPassword --transient true --notNull --sizeMin 8 --sizeMax 25
+field string --fieldName myP --unique 
+enum type --class ~.domain.DreamStatusEnum
+enum constant --name ACTIVE
+enum constant --name DONE
+focus --class ~.domain.Dream
+// [failed] field enum --fieldName status --type ~.domain.DreamStatusEnum --enumType STRING
+field enum --fieldName status --type ~.domain.DreamStatusEnum --enumType STRING
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-16 14:45:14
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-16 15:36:05
+hint
+enum type --class ~.domain.TortoiseStatusEnum
+enum constant --name WALKING
+enum constant --name FINISHED_RACE
+focus --class ~.domain.Tortoise
+field enum --fieldName status --type ~.domain.TortoiseStatusEnum --enumType STRING
+enum type --class ~.domain.TortoiseDurationTypeEnum
+enum constant --name AROUND_AN_HOUR
+enum constant --name FEW_MINUTES
+enum constant --name HOURS
+focus --class ~.domain.Tortoise
+field enum --fieldName duration --type ~.domain.TortoiseDurationTypeEnum
+focus --class ~.domain.Tortlet
+finder list
+finder list --filter completed
+finder add --finderName findTortletsByCompletedNot
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-17 17:08:46
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-17 17:09:17
+focus --class ~.domain.Tortlet
+finder list --filter competed
+finder list --filter completed
+finder add --finderName findTortletsByCompleted
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-19 13:52:02
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-19 14:12:17
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-19 14:12:38

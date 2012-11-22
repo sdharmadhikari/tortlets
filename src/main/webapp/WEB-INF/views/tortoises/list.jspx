@@ -5,11 +5,12 @@
     <page:list id="pl_com_softrism_tortlets_domain_Tortoise" items="${tortoises}" z="X0V+pkiqR49NdUBYzaBUOtbzMMc=">
         <table:table data="${tortoises}" id="l_com_softrism_tortlets_domain_Tortoise" path="/tortoises" z="lNKGPcR2kWv5FmDtN41fYUvhq9E=">
             <table:column id="c_com_softrism_tortlets_domain_Tortoise_title" property="title" z="HBRK8MAvOl3yWkOPDWBFN5NcMYU="/>
-            <table:column id="c_com_softrism_tortlets_domain_Tortoise_frequency" property="frequency" z="LCK7qB+zT0hsXjdTs8xI4R7aChg="/>
+            <table:column id="c_com_softrism_tortlets_domain_Tortoise_frequency" property="frequency" render="false" z="user-managed"/>
+            <table:column id="c_com_softrism_tortlets_domain_Tortoise_duration" property="duration" z="LCK7qB+zT0hsXjdTs8xI4R7aChg="/>
             <table:column id="c_com_softrism_tortlets_domain_Tortoise_notes" property="notes" z="9lV31g7CFJ7grY9hH3Hmzm8JdVc="/>
             <table:column date="true" dateTimePattern="${tortoise_startdate_date_format}" id="c_com_softrism_tortlets_domain_Tortoise_startDate" property="startDate" z="Wscj2kv6FPd/bE2jTrjbC3KBmeo="/>
             <table:column date="true" dateTimePattern="${tortoise_enddate_date_format}" id="c_com_softrism_tortlets_domain_Tortoise_endDate" property="endDate" z="m5XB0eWu2Iar/EPcnC6ayXT4UTs="/>
-            <table:column id="c_com_softrism_tortlets_domain_Tortoise_status" property="status" z="khkXK8idNMVGJW5BF3WGKXPREBI="/>
+            <table:column id="c_com_softrism_tortlets_domain_Tortoise_latestTortoiseScore" property="latestTortoiseScore" z="o9439T20FQxWc446JWokSPQJAqA="/>
         </table:table>
     </page:list>
 </div>

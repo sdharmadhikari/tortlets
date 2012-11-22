@@ -3,20 +3,21 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_softrism_tortlets_domain_Tuser" modelAttribute="tuser" path="/tusers" versionField="Version" z="bsOD1/1vD3oL0dGBG9gqU3RSCVk=">
-        <field:input field="userid" id="c_com_softrism_tortlets_domain_Tuser_userid" z="J+OcmgpM91NPC7BqKCrIrSVxF9g="/>
-        <field:input field="password" id="c_com_softrism_tortlets_domain_Tuser_password" z="JeQgaIoCUkmglvPKwBAjn99r1Vw="/>
-        <field:input field="firstName" id="c_com_softrism_tortlets_domain_Tuser_firstName" z="NjXBKT8+NNQZoV3YP8Nq5UM/AhE="/>
-        <field:input field="lastName" id="c_com_softrism_tortlets_domain_Tuser_lastName" z="xlABMXAWZRw9BI/NblxLh8scI/I="/>
+        <field:input field="firstName" id="c_com_softrism_tortlets_domain_Tuser_firstName" max="25" min="1" required="true" z="zYpCOSW/yk9KzOEUojssClxJwas="/>
+        <field:input field="lastName" id="c_com_softrism_tortlets_domain_Tuser_lastName" max="25" min="1" required="true" z="JJJ5PLGRApbrSNsdB3CvnQHMeVE="/>
+        <field:input field="userid" id="c_com_softrism_tortlets_domain_Tuser_userid" max="16" min="6" required="true" z="3z95lfN2LcWUaZQ98i5+mfX6h18="/>
+        <field:input field="password" id="c_com_softrism_tortlets_domain_Tuser_password" max="16" min="6" required="true" type="password" z="user-managed"/>
+        <field:input field="retypePassword" id="c_com_softrism_tortlets_domain_Tuser_retypePassword" max="16" min="6" render="false" required="true" type="password" z="user-managed"/>
         <field:datetime dateTimePattern="${tuser_birthdate_date_format}" field="birthDate" id="c_com_softrism_tortlets_domain_Tuser_birthDate" z="IYtgDF2AcnlTU/V2UhU+vc5Q5y4="/>
         <field:input field="allowedDelayDays" id="c_com_softrism_tortlets_domain_Tuser_allowedDelayDays" z="tc6b6YN2EzORJdnGSKTPvA8U8Uk="/>
-        <field:input field="latestDreamScore" id="c_com_softrism_tortlets_domain_Tuser_latestDreamScore" z="1IRA6f/Ix44Np0CUB+Sb2aywRy0="/>
-        <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Tuser_tortletsCreatedCount" z="Ft7WZVa0VPpRdMsYbpQ+VlRRKf0="/>
-        <field:input field="tortletsDeletedCount" id="c_com_softrism_tortlets_domain_Tuser_tortletsDeletedCount" z="KDD0nqjdltxPZLhR3ZTFL9rkubY="/>
-        <field:input field="tortletsCompletedCount" id="c_com_softrism_tortlets_domain_Tuser_tortletsCompletedCount" z="g0LX93WRJUi1xGJA6UAbS1e+Sac="/>
-        <field:datetime dateTimePattern="${tuser_createdon_date_format}" field="createdOn" id="c_com_softrism_tortlets_domain_Tuser_createdOn" z="z6fLjt+dcjkg0zvBgkwnykzRcVI="/>
-        <field:datetime dateTimePattern="${tuser_updatedon_date_format}" field="updatedON" id="c_com_softrism_tortlets_domain_Tuser_updatedON" z="V69ZxeGvWfmgoCkgHQYxVBI5pOE="/>
-        <field:simple field="dreams" id="c_com_softrism_tortlets_domain_Tuser_dreams" messageCode="entity_reference_not_managed" messageCodeAttribute="Dream" z="o1z7o+sJHWSdeVd7RHcvpdV5SHU="/>
-        <field:select field="status" id="c_com_softrism_tortlets_domain_Tuser_status" items="${tuserstatusenums}" path="tuserstatusenums" z="L3XCaT4K32WBPPeCSHFQ1EOYLh4="/>
-        <field:select field="timezone" id="c_com_softrism_tortlets_domain_Tuser_timezone" items="${tusertimezoneenums}" path="tusertimezoneenums" z="drddr080si4m8vHnRbhnCAmXSvY="/>
+        <field:input field="latestDreamScore" id="c_com_softrism_tortlets_domain_Tuser_latestDreamScore" type="hidden" z="user-managed"/>
+        <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Tuser_tortletsCreatedCount" type="hidden" z="user-managed"/>
+        <field:input field="tortletsDeletedCount" id="c_com_softrism_tortlets_domain_Tuser_tortletsDeletedCount" type="hidden" z="user-managed"/>
+        <field:input field="tortletsCompletedCount" id="c_com_softrism_tortlets_domain_Tuser_tortletsCompletedCount" type="hidden" z="user-managed"/>
+        <field:datetime dateTimePattern="${tuser_createdon_date_format}" disabled="true" field="createdOn" id="c_com_softrism_tortlets_domain_Tuser_createdOn" type="hidden" z="user-managed"/>
+        <field:datetime dateTimePattern="${tuser_updatedon_date_format}" field="updatedON" id="c_com_softrism_tortlets_domain_Tuser_updatedON" render="false" type="hidden" z="user-managed"/>
+        <field:simple field="dreams" id="c_com_softrism_tortlets_domain_Tuser_dreams" messageCode="entity_reference_not_managed" messageCodeAttribute="Dream" render="false" z="user-managed"/>
+        <field:select field="status" id="c_com_softrism_tortlets_domain_Tuser_status" items="${tuserstatusenums}" path="tuserstatusenums" required="true" z="DZNHOje8iwoQhYkAVnCSxbmuQDM="/>
+        <field:select field="timezone" id="c_com_softrism_tortlets_domain_Tuser_timezone" items="${tusertimezoneenums}" path="tusertimezoneenums" required="true" z="54TsmHYJddog1NU0ATSQdNCiKcQ="/>
     </form:update>
 </div>

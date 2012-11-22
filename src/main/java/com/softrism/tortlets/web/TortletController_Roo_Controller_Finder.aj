@@ -5,8 +5,6 @@ package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.web.TortletController;
-import java.util.Date;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,16 +12,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 privileged aspect TortletController_Roo_Controller_Finder {
     
-    @RequestMapping(params = { "find=ByCreatedOnEquals", "form" }, method = RequestMethod.GET)
-    public String TortletController.findTortletsByCreatedOnEqualsForm(Model uiModel) {
-        addDateTimeFormatPatterns(uiModel);
-        return "tortlets/findTortletsByCreatedOnEquals";
+    @RequestMapping(params = { "find=ByCompleted", "form" }, method = RequestMethod.GET)
+    public String TortletController.findTortletsByCompletedForm(Model uiModel) {
+        return "tortlets/findTortletsByCompleted";
     }
     
-    @RequestMapping(params = "find=ByCreatedOnEquals", method = RequestMethod.GET)
-    public String TortletController.findTortletsByCreatedOnEquals(@RequestParam("createdOn") @DateTimeFormat(style = "M-") Date createdOn, Model uiModel) {
-        uiModel.addAttribute("tortlets", Tortlet.findTortletsByCreatedOnEquals(createdOn).getResultList());
-        addDateTimeFormatPatterns(uiModel);
+    @RequestMapping(params = "find=ByCompleted", method = RequestMethod.GET)
+    public String TortletController.findTortletsByCompleted(@RequestParam(value = "completed", required = false) Boolean completed, Model uiModel) {
+        uiModel.addAttribute("tortlets", Tortlet.findTortletsByCompleted(completed == null ? Boolean.FALSE : completed).getResultList());
         return "tortlets/list";
     }
     

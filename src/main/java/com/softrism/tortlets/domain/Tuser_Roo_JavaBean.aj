@@ -28,6 +28,14 @@ privileged aspect Tuser_Roo_JavaBean {
         this.password = password;
     }
     
+    public String Tuser.getRetypePassword() {
+        return this.retypePassword;
+    }
+    
+    public void Tuser.setRetypePassword(String retypePassword) {
+        this.retypePassword = retypePassword;
+    }
+    
     public String Tuser.getFirstName() {
         return this.firstName;
     }

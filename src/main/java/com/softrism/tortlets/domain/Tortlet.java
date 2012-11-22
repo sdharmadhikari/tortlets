@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.TypedQuery;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -15,13 +17,15 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals", "findTortletsByCreatedOnEquals" })
+@RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals" ,"findTortletsByCompleted"})
 public class Tortlet {
 
+    @NotNull
     private String title;
 
     private Boolean completed;
 
+    @Size(min = 0, max = 100)
     private String notes;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -56,6 +60,19 @@ public class Tortlet {
             q.setParameter("tortoiseList", tortoiseList);
             q.setParameter("completed", completed);
         }
+        return q;
+    }
+
+    public static TypedQuery<com.softrism.tortlets.domain.Tortlet> findTortletsByCompleted(Boolean completed) {
+        if (completed == null) throw new IllegalArgumentException("The completed argument is required");
+        EntityManager em = Tortlet.entityManager();
+        TypedQuery<Tortlet> q = null;
+        if (completed == null ? false : completed.booleanValue()) {
+            q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed IS NOT :completed or o.completed is null", Tortlet.class);
+        } else {
+            q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed IS NOT :completed", Tortlet.class);
+        }
+        q.setParameter("completed", completed);
         return q;
     }
 }

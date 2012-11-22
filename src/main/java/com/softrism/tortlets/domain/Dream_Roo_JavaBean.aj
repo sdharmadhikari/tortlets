@@ -4,6 +4,7 @@
 package com.softrism.tortlets.domain;
 
 import com.softrism.tortlets.domain.Dream;
+import com.softrism.tortlets.domain.DreamStatusEnum;
 import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.domain.Tuser;
 import java.util.Date;
@@ -33,22 +34,6 @@ privileged aspect Dream_Roo_JavaBean {
     
     public void Dream.setDreamColor(String dreamColor) {
         this.dreamColor = dreamColor;
-    }
-    
-    public String Dream.getPriority() {
-        return this.priority;
-    }
-    
-    public void Dream.setPriority(String priority) {
-        this.priority = priority;
-    }
-    
-    public String Dream.getStatus() {
-        return this.status;
-    }
-    
-    public void Dream.setStatus(String status) {
-        this.status = status;
     }
     
     public int Dream.getLatestDreamScore() {
@@ -113,6 +98,14 @@ privileged aspect Dream_Roo_JavaBean {
     
     public void Dream.setTortoises(Set<Tortoise> tortoises) {
         this.tortoises = tortoises;
+    }
+    
+    public DreamStatusEnum Dream.getStatus() {
+        return this.status;
+    }
+    
+    public void Dream.setStatus(DreamStatusEnum status) {
+        this.status = status;
     }
     
 }

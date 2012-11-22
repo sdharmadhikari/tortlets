@@ -6,8 +6,11 @@ package com.softrism.tortlets.web;
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.domain.Tortoise;
+import com.softrism.tortlets.domain.TortoiseDurationTypeEnum;
+import com.softrism.tortlets.domain.TortoiseStatusEnum;
 import com.softrism.tortlets.web.TortoiseController;
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
@@ -22,17 +25,6 @@ import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
 privileged aspect TortoiseController_Roo_Controller {
-    
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String TortoiseController.create(@Valid Tortoise tortoise, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, tortoise);
-            return "tortoises/create";
-        }
-        uiModel.asMap().clear();
-        tortoise.persist();
-        return "redirect:/tortoises/" + encodeUrlPathSegment(tortoise.getId().toString(), httpServletRequest);
-    }
     
     @RequestMapping(params = "form", produces = "text/html")
     public String TortoiseController.createForm(Model uiModel) {
@@ -102,6 +94,8 @@ privileged aspect TortoiseController_Roo_Controller {
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("dreams", Dream.findAllDreams());
         uiModel.addAttribute("tortlets", Tortlet.findAllTortlets());
+        uiModel.addAttribute("tortoisedurationtypeenums", Arrays.asList(TortoiseDurationTypeEnum.values()));
+        uiModel.addAttribute("tortoisestatusenums", Arrays.asList(TortoiseStatusEnum.values()));
     }
     
     String TortoiseController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

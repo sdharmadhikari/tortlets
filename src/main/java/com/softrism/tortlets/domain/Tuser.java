@@ -6,17 +6,21 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateMidnight;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeComparator;
 import org.joda.time.DateTimeConstants;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -28,18 +32,31 @@ import org.springframework.transaction.annotation.Transactional;
 @RooJpaActiveRecord(finders = { "findTusersByUseridEquals" })
 public class Tuser {
 
+    @NotNull
+    @Size(min = 6, max = 16)
+    @Column(unique = true)
     private String userid;
 
+    @NotNull
+    @Size(min = 6, max = 16)
     private String password;
+    
+    @Size(min = 6, max = 16)
+    private String retypePassword;
 
+    @NotNull
+    @Size(min = 1, max = 25)
     private String firstName;
 
+    @NotNull
+    @Size(min = 1, max = 25)
     private String lastName;
 
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date birthDate;
 
+    @Value("7")
     private int allowedDelayDays;
 
     private int latestDreamScore;
@@ -63,9 +80,11 @@ public class Tuser {
 
     private static final Log log = LogFactory.getLog(Tuser.class);
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     private TuserStatusEnum status;
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     private TuserTimezoneEnum timezone;
 

@@ -4,10 +4,12 @@
 package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Dream;
+import com.softrism.tortlets.domain.DreamStatusEnum;
 import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.domain.Tuser;
 import com.softrism.tortlets.web.DreamController;
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
@@ -22,17 +24,6 @@ import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
 privileged aspect DreamController_Roo_Controller {
-    
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String DreamController.create(@Valid Dream dream, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, dream);
-            return "dreams/create";
-        }
-        uiModel.asMap().clear();
-        dream.persist();
-        return "redirect:/dreams/" + encodeUrlPathSegment(dream.getId().toString(), httpServletRequest);
-    }
     
     @RequestMapping(params = "form", produces = "text/html")
     public String DreamController.createForm(Model uiModel) {
@@ -98,6 +89,7 @@ privileged aspect DreamController_Roo_Controller {
     void DreamController.populateEditForm(Model uiModel, Dream dream) {
         uiModel.addAttribute("dream", dream);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("dreamstatusenums", Arrays.asList(DreamStatusEnum.values()));
         uiModel.addAttribute("tortoises", Tortoise.findAllTortoises());
         uiModel.addAttribute("tusers", Tuser.findAllTusers());
     }

@@ -3,19 +3,18 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_softrism_tortlets_domain_Dream" modelAttribute="dream" path="/dreams" render="${empty dependencies}" z="yr2+FbODKOAKFWgcjluWFy+rYJI=">
-        <field:input field="title" id="c_com_softrism_tortlets_domain_Dream_title" z="/wqjGUu0WAU8vS4/jo7sqOM8/sI="/>
-        <field:input field="notes" id="c_com_softrism_tortlets_domain_Dream_notes" z="H/IPh4HjQ4HCNNNJVYWC+A3gQr4="/>
-        <field:input field="dreamColor" id="c_com_softrism_tortlets_domain_Dream_dreamColor" z="NLZfRlVGgGRWHuPsHDzInTwlncE="/>
-        <field:input field="priority" id="c_com_softrism_tortlets_domain_Dream_priority" z="Umn8tz9hegjdpnfp/xTEc2K1zFM="/>
-        <field:input field="status" id="c_com_softrism_tortlets_domain_Dream_status" z="CCoAM/r3HkI5dZ5C2li4vZ+XPe4="/>
-        <field:input field="latestDreamScore" id="c_com_softrism_tortlets_domain_Dream_latestDreamScore" z="YdAMHoqsdPP7a9dKhNcGm/3kxR8="/>
-        <field:datetime dateTimePattern="${dream_createdon_date_format}" field="createdOn" id="c_com_softrism_tortlets_domain_Dream_createdOn" z="faNd2J0WtXj2Y6GpstqWUEjiaRc="/>
-        <field:datetime dateTimePattern="${dream_updatedon_date_format}" field="updatedOn" id="c_com_softrism_tortlets_domain_Dream_updatedOn" z="16YJrDh6Vg7GQdldra76UBdDDCw="/>
+        <field:input field="title" id="c_com_softrism_tortlets_domain_Dream_title" required="true" z="user-managed"/>
+        <field:textarea field="notes" id="c_com_softrism_tortlets_domain_Dream_notes" z="/Mhp/sGMLB+7l2LjZQxnGKSqB+A="/>
+        <field:input field="dreamColor" id="c_com_softrism_tortlets_domain_Dream_dreamColor" required="true" z="n78Ste5kOODNkvMxNBXQ1/NLaKI="/>
+        <field:input field="status" id="c_com_softrism_tortlets_domain_Dream_status" render="false" z="user-managed"/>
+        <field:input field="latestDreamScore" id="c_com_softrism_tortlets_domain_Dream_latestDreamScore" render="false" z="user-managed"/>
+        <field:datetime dateTimePattern="${dream_createdon_date_format}" field="createdOn" id="c_com_softrism_tortlets_domain_Dream_createdOn" render="false" required="true" z="user-managed"/>
+        <field:datetime dateTimePattern="${dream_updatedon_date_format}" field="updatedOn" id="c_com_softrism_tortlets_domain_Dream_updatedOn" render="false" required="true" z="user-managed"/>
         <field:select field="tuser" id="c_com_softrism_tortlets_domain_Dream_tuser" itemValue="id" items="${tusers}" path="/tusers" z="sc0Q6VzIK4wkCvcMyfAnsQnRITA="/>
-        <field:simple field="tortoises" id="c_com_softrism_tortlets_domain_Dream_tortoises" messageCode="entity_reference_not_managed" messageCodeAttribute="Tortoise" z="fuHa/K1vUjRUkbh42q50ARSMalo="/>
-        <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsCreatedCount" z="CrcXjuMvSXB1EgFhhe6hZ6nIorQ="/>
-        <field:input field="tortletsDeletedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsDeletedCount" z="JdPYlfgQqScYRCVH3yL98Se10j0="/>
-        <field:input field="tortletsCompletedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsCompletedCount" z="/TP/wFpzNBBJpUe9Q+6d0VYNByw="/>
+        <field:simple field="tortoises" id="c_com_softrism_tortlets_domain_Dream_tortoises" messageCode="entity_reference_not_managed" messageCodeAttribute="Tortoise" render="false" z="user-managed"/>
+        <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsCreatedCount" render="false" z="user-managed"/>
+        <field:input field="tortletsDeletedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsDeletedCount" render="false" z="user-managed"/>
+        <field:input field="tortletsCompletedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsCompletedCount" render="false" z="user-managed"/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_softrism_tortlets_domain_Dream" render="${not empty dependencies}" z="g1uPDdT8HKOTai9iddgTWmXXo7E="/>
 </div>
