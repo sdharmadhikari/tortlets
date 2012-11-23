@@ -7,13 +7,13 @@
         <field:textarea field="notes" id="c_com_softrism_tortlets_domain_Dream_notes" z="/Mhp/sGMLB+7l2LjZQxnGKSqB+A="/>
         <field:input field="dreamColor" id="c_com_softrism_tortlets_domain_Dream_dreamColor" required="true" z="n78Ste5kOODNkvMxNBXQ1/NLaKI="/>
         <field:input field="latestDreamScore" id="c_com_softrism_tortlets_domain_Dream_latestDreamScore" z="YdAMHoqsdPP7a9dKhNcGm/3kxR8="/>
-        <field:datetime dateTimePattern="${dream_createdon_date_format}" field="createdOn" id="c_com_softrism_tortlets_domain_Dream_createdOn" type="hidden" z="faNd2J0WtXj2Y6GpstqWUEjiaRc="/>
-        <field:datetime dateTimePattern="${dream_updatedon_date_format}" field="updatedOn" id="c_com_softrism_tortlets_domain_Dream_updatedOn" type="hidden" z="16YJrDh6Vg7GQdldra76UBdDDCw="/>
+        <field:datetime dateTimePattern="${dream_createdon_date_format}" field="createdOn" id="c_com_softrism_tortlets_domain_Dream_createdOn" type="hidden" z="user-managed"/>
+        <field:datetime dateTimePattern="${dream_updatedon_date_format}" field="updatedOn" id="c_com_softrism_tortlets_domain_Dream_updatedOn" type="hidden" z="user-managed"/>
         <field:select field="tuser" id="c_com_softrism_tortlets_domain_Dream_tuser" itemValue="id" items="${tusers}" path="/tusers" z="sc0Q6VzIK4wkCvcMyfAnsQnRITA="/>
-        <field:simple field="tortoises" id="c_com_softrism_tortlets_domain_Dream_tortoises" messageCode="entity_reference_not_managed" messageCodeAttribute="Tortoise" render="false" z="fuHa/K1vUjRUkbh42q50ARSMalo="/>
-        <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsCreatedCount" type="hidden" z="CrcXjuMvSXB1EgFhhe6hZ6nIorQ="/>
-        <field:input field="tortletsDeletedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsDeletedCount" type="hidden" z="JdPYlfgQqScYRCVH3yL98Se10j0="/>
-        <field:input field="tortletsCompletedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsCompletedCount" type="hidden" z="/TP/wFpzNBBJpUe9Q+6d0VYNByw="/>
+        <field:simple field="tortoises" id="c_com_softrism_tortlets_domain_Dream_tortoises" messageCode="entity_reference_not_managed" messageCodeAttribute="Tortoise" render="false" z="user-managed"/>
+        <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsCreatedCount" type="hidden" z="user-managed"/>
+        <field:input field="tortletsDeletedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsDeletedCount" type="hidden" z="user-managed"/>
+        <field:input field="tortletsCompletedCount" id="c_com_softrism_tortlets_domain_Dream_tortletsCompletedCount" type="hidden" z="user-managed"/>
         <field:select field="status" id="c_com_softrism_tortlets_domain_Dream_status" items="${dreamstatusenums}" path="dreamstatusenums" z="aqrkQ3KNMehMNhW+Bn1p4Tzfo8k="/>
     </form:update>
 </div>

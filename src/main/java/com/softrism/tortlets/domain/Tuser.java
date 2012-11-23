@@ -170,9 +170,25 @@ public class Tuser {
                     tortlet.setCreatedOn(new Date());
                     tortlet.setNotes("Do anything on " + tortoise.getTitle() + " to fulfil your dream - " + tortoise.getDream().getTitle());
                     tortlet.setUpdatedOn(new Date());
-                    tortoise.setTortletsCreatedCount(tortoise.getTortletsCreatedCount() + 1);
-                    dream.setTortletsCreatedCount(dream.getTortletsCreatedCount() + 1);
-                    tuser.setTortletsCreatedCount(tuser.getTortletsCreatedCount() + 1);
+                    
+                    int tortoiseCreatedCount = tortoise.getTortletsCreatedCount() + 1;
+                    int tortoiseCompletedCount = tortoise.getTortletsCompletedCount();
+                    int tortoiseScore = (tortoiseCompletedCount * 100) / tortoiseCreatedCount; // Parenthesis are important
+                    tortoise.setTortletsCreatedCount(tortoiseCreatedCount);
+                    tortoise.setLatestTortoiseScore(tortoiseScore);
+ 
+                    int dreamCreatedCount = dream.getTortletsCreatedCount() + 1;
+                    int dreamCompletedCount = dream.getTortletsCompletedCount();
+                    int dreamScore = (dreamCompletedCount * 100)/ dreamCreatedCount;
+                    dream.setTortletsCreatedCount(dreamCreatedCount);
+                    dream.setLatestDreamScore(dreamScore);
+                    
+                    int tuserCreatedCount = tuser.getTortletsCreatedCount() + 1;
+                    int tuserCompletedCount = tuser.getTortletsCompletedCount();
+                    int tuserScore = (tuserCompletedCount * 100) / tuserCreatedCount;
+                    
+                    tuser.setTortletsCreatedCount(tuserCreatedCount);
+                    tuser.setLatestDreamScore(tuserScore);
                     tortlet.setTortoise(tortoise);
                     tortoise.setDream(dream);
                     dream.setTuser(tuser);

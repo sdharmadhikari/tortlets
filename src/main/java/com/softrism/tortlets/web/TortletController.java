@@ -114,18 +114,30 @@ public class TortletController {
 	        tortlet.setCompletedOn(now);
 	        tortlet.setUpdatedOn(now);
 	        
-	        Tortoise tortoise = oldTortlet.getTortoise();
-	        tortoise.setTortletsCompletedCount(tortoise.getTortletsCompletedCount()+1);
+	        Tortoise tortoise = oldTortlet.getTortoise(); // Using oldTortlet here because tortlet from web or mobile will not have all data.
+	        int tortoiseCompletedCount = tortoise.getTortletsCompletedCount()+1;
+	        int tortoiseCreatedCount = tortoise.getTortletsCreatedCount();
+	        int tortoiseScore = (tortoiseCompletedCount * 100)/ tortoiseCreatedCount;
+	        tortoise.setTortletsCompletedCount(tortoiseCompletedCount);
+	        tortoise.setLatestTortoiseScore(tortoiseScore);
 	        tortoise.setUpdatedOn(now);
 	        tortlet.setTortoise(tortoise);
 	        
 	        Dream dream = tortoise.getDream();
-	        dream.setTortletsCompletedCount(dream.getTortletsCompletedCount()+1);
+	        int dreamCompletedCount = dream.getTortletsCompletedCount()+1;
+	        int dreamCreatedCount = dream.getTortletsCreatedCount();
+	        int dreamScore = (dreamCompletedCount * 100) / dreamCreatedCount;
+	        dream.setTortletsCompletedCount(dreamCompletedCount);
+	        dream.setLatestDreamScore(dreamScore);
 	        dream.setUpdatedOn(now);
 	        tortoise.setDream(dream);
 	        
 	        Tuser tuser = dream.getTuser();
-	        tuser.setTortletsCompletedCount(tuser.getTortletsCompletedCount()+1);
+	        int tuserCompletedCount = tuser.getTortletsCompletedCount()+1;
+	        int tuserCreatedCount = tuser.getTortletsCreatedCount();
+	        int tuserScore = (tuserCompletedCount * 100 ) / tuserCreatedCount;
+	        tuser.setTortletsCompletedCount(tuserCompletedCount);
+	        tuser.setLatestDreamScore(tuserScore);
 	        tuser.setUpdatedON(now);
 	        dream.setTuser(tuser);
 	        
