@@ -7,8 +7,8 @@
         <field:input field="title" id="c_com_softrism_tortlets_domain_Tortoise_title" required="true" z="x7dEsLce+AaVue/npFZrftKewKE="/>
         <field:input field="frequency" id="c_com_softrism_tortlets_domain_Tortoise_frequency" render="false" z="user-managed"/>
         <field:textarea field="notes" id="c_com_softrism_tortlets_domain_Tortoise_notes" z="VPpDIoQTpsBJlJUCLO8huGndajI="/>
-        <field:datetime dateTimePattern="${tortoise_startdate_date_format}" field="startDate" id="c_com_softrism_tortlets_domain_Tortoise_startDate" z="EO0KJ7Xl/h2b3yMe9yF/bzZmS4w="/>
-        <field:datetime dateTimePattern="${tortoise_enddate_date_format}" field="endDate" id="c_com_softrism_tortlets_domain_Tortoise_endDate" z="21C64GiGN8qIv9rL1fhiml7j7N8="/>
+        <field:datetime dateTimePattern="${tortoise_startdate_date_format}" field="startDate" id="c_com_softrism_tortlets_domain_Tortoise_startDate" future="true"  z="EO0KJ7Xl/h2b3yMe9yF/bzZmS4w="/>
+        <field:datetime dateTimePattern="${tortoise_enddate_date_format}" field="endDate" id="c_com_softrism_tortlets_domain_Tortoise_endDate" future="true" z="21C64GiGN8qIv9rL1fhiml7j7N8="/>
         <field:input field="latestTortoiseScore" id="c_com_softrism_tortlets_domain_Tortoise_latestTortoiseScore" render="false" z="user-managed"/>
         <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Tortoise_tortletsCreatedCount" render="false" z="user-managed"/>
         <field:input field="tortletsDeletedCount" id="c_com_softrism_tortlets_domain_Tortoise_tortletsDeletedCount" render="false" z="user-managed"/>

@@ -93,7 +93,7 @@ public class Tuser {
         Tuser tuser = Tuser.findTusersByUseridEquals(userid).getResultList().get(0);
         DateTime jdTime = new DateTime();
         int dayOfWeek = jdTime.getDayOfWeek();
-        DateTimeComparator dtComparator = DateTimeComparator.getDateOnlyInstance();
+        
         for (Dream dream : tuser.getDreams()) {
             for (Tortoise tortoise : dream.getTortoises()) {
                 List<Tortlet> tortlets = new ArrayList<Tortlet>(tortoise.getTortlets());
@@ -111,58 +111,71 @@ public class Tuser {
                         deleteIt.remove();
                     }
                 }
+                
                 boolean shouldCreate = false;
-                switch(dayOfWeek) {
-                    case (DateTimeConstants.MONDAY):
-                        if (tortoise.getMonday() == null ? false : tortoise.getMonday().booleanValue()) {
-                            shouldCreate = true;
-                            break;
-                        } else {
-                            break;
-                        }
-                    case (DateTimeConstants.TUESDAY):
-                        if (tortoise.getTuesday() == null ? false : tortoise.getTuesday().booleanValue()) {
-                            shouldCreate = true;
-                            break;
-                        } else {
-                            break;
-                        }
-                    case (DateTimeConstants.WEDNESDAY):
-                        if (tortoise.getWednesday() == null ? false : tortoise.getWednesday().booleanValue()) {
-                            shouldCreate = true;
-                            break;
-                        } else {
-                            break;
-                        }
-                    case (DateTimeConstants.THURSDAY):
-                        if (tortoise.getThursday() == null ? false : tortoise.getThursday().booleanValue()) {
-                            shouldCreate = true;
-                            break;
-                        } else {
-                            break;
-                        }
-                    case (DateTimeConstants.FRIDAY):
-                        if (tortoise.getFriday() == null ? false : tortoise.getFriday().booleanValue()) {
-                            shouldCreate = true;
-                            break;
-                        } else {
-                            break;
-                        }
-                    case (DateTimeConstants.SATURDAY):
-                        if (tortoise.getSaturday() == null ? false : tortoise.getSaturday().booleanValue()) {
-                            shouldCreate = true;
-                            break;
-                        } else {
-                            break;
-                        }
-                    case (DateTimeConstants.SUNDAY):
-                        if (tortoise.getSunday() == null ? false : tortoise.getSunday().booleanValue()) {
-                            shouldCreate = true;
-                            break;
-                        } else {
-                            break;
-                        }
+                boolean tortoiseStarted = tortoise.getStartDate()==null?true:jdTime.isAfter(tortoise.getStartDate().getTime());
+                
+                DateMidnight tortoiseEndMidnight = tortoise.getEndDate()==null?new DateMidnight():new DateMidnight(tortoise.getEndDate());
+                tortoiseEndMidnight = tortoiseEndMidnight.plusDays(1);
+                boolean tortoiseAlive = jdTime.isBefore(tortoiseEndMidnight.getMillis());   
+                
+                if(tortoiseStarted && tortoiseAlive){
+	                switch(dayOfWeek) {
+	                    case (DateTimeConstants.MONDAY):
+	                        if (tortoise.getMonday() == null ? false : tortoise.getMonday().booleanValue()) {
+	                            shouldCreate = true;
+	                            break;
+	                        } else {
+	                            break;
+	                        }
+	                    case (DateTimeConstants.TUESDAY):
+	                        if (tortoise.getTuesday() == null ? false : tortoise.getTuesday().booleanValue()) {
+	                            shouldCreate = true;
+	                            break;
+	                        } else {
+	                            break;
+	                        }
+	                    case (DateTimeConstants.WEDNESDAY):
+	                        if (tortoise.getWednesday() == null ? false : tortoise.getWednesday().booleanValue()) {
+	                            shouldCreate = true;
+	                            break;
+	                        } else {
+	                            break;
+	                        }
+	                    case (DateTimeConstants.THURSDAY):
+	                        if (tortoise.getThursday() == null ? false : tortoise.getThursday().booleanValue()) {
+	                            shouldCreate = true;
+	                            break;
+	                        } else {
+	                            break;
+	                        }
+	                    case (DateTimeConstants.FRIDAY):
+	                        if (tortoise.getFriday() == null ? false : tortoise.getFriday().booleanValue()) {
+	                            shouldCreate = true;
+	                            break;
+	                        } else {
+	                            break;
+	                        }
+	                    case (DateTimeConstants.SATURDAY):
+	                        if (tortoise.getSaturday() == null ? false : tortoise.getSaturday().booleanValue()) {
+	                            shouldCreate = true;
+	                            break;
+	                        } else {
+	                            break;
+	                        }
+	                    case (DateTimeConstants.SUNDAY):
+	                        if (tortoise.getSunday() == null ? false : tortoise.getSunday().booleanValue()) {
+	                            shouldCreate = true;
+	                            break;
+	                        } else {
+	                            break;
+	                        }
+	                }
+                }else{
+                	log.info("Skipping creating tortlet for tuser : " + tuser.getId() + " for tortoise " + tortoise.getTitle() );
+                	log.info("because tortoise has startDate " + tortoise.getStartDate() + " and end date " + tortoise.getEndDate());
                 }
+                
                 if (shouldCreate) {
                     log.info("Creating new tortlet for tortoise : " + tortoise.getTitle());
                     Tortlet tortlet = new Tortlet();
