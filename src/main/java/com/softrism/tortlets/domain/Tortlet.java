@@ -63,7 +63,7 @@ public class Tortlet {
         return q;
     }
 
-    public static TypedQuery<com.softrism.tortlets.domain.Tortlet> findTortletsByCompleted(Boolean completed) {
+    public static TypedQuery<com.softrism.tortlets.domain.Tortlet> findTortletsByCompletedCustom(Boolean completed) {
         if (completed == null) throw new IllegalArgumentException("The completed argument is required");
         EntityManager em = Tortlet.entityManager();
         TypedQuery<Tortlet> q = null;
@@ -71,6 +71,19 @@ public class Tortlet {
             q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed IS NOT :completed or o.completed is null", Tortlet.class);
         } else {
             q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed IS NOT :completed", Tortlet.class);
+        }
+        q.setParameter("completed", completed);
+        return q;
+    }
+    
+    public static TypedQuery<Tortlet> findTortletsByCompleted(Boolean completed) {
+        if (completed == null) throw new IllegalArgumentException("The completed argument is required");
+        EntityManager em = Tortlet.entityManager();
+        TypedQuery<Tortlet> q = null;
+        if(completed){
+        	q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed", Tortlet.class);
+        }else{
+        	q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed or o.completed is null", Tortlet.class);
         }
         q.setParameter("completed", completed);
         return q;
