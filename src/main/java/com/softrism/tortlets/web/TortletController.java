@@ -146,5 +146,19 @@ public class TortletController {
       tortlet.merge();
       return "redirect:/tortlets/" + encodeUrlPathSegment(tortlet.getId().toString(), httpServletRequest);
   }
+  
+  // Following two methods being added because when I add my own finder on Tuser (override IDT) , this controller finder.js disappears ! 
+  // That too not right away, but when I open roo shell next time.
+  
+  @RequestMapping(params = { "find=ByCompleted", "form" }, method = RequestMethod.GET)
+  public String findTortletsByCompletedForm(Model uiModel) {
+      return "tortlets/findTortletsByCompleted";
+  }
+  
+  @RequestMapping(params = "find=ByCompleted", method = RequestMethod.GET)
+  public String findTortletsByCompleted(@RequestParam(value = "completed", required = false) Boolean completed, Model uiModel) {
+      uiModel.addAttribute("tortlets", Tortlet.findTortletsByCompleted(completed == null ? Boolean.FALSE : completed).getResultList());
+      return "tortlets/list";
+  }
     
 }

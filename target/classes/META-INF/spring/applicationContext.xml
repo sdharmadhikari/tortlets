@@ -56,4 +56,6 @@
         <property name="persistenceUnitName" value="persistenceUnit"/>
         <property name="dataSource" ref="dataSource"/>
     </bean>
+    
+    <import resource="batch/quartz-job-launcher-context.xml"/>
 </beans>
