@@ -181,7 +181,7 @@ public class Tuser {
                     Tortlet tortlet = new Tortlet();
                     tortlet.setTitle("A step for " + tortoise.getTitle());
                     tortlet.setCreatedOn(new Date());
-                    tortlet.setNotes("Do anything on " + tortoise.getTitle() + " to fulfil your dream - " + tortoise.getDream().getTitle());
+                    //tortlet.setNotes("Do anything on " + tortoise.getTitle() + " to fulfil your dream - " + tortoise.getDream().getTitle());
                     tortlet.setUpdatedOn(new Date());
                     
                     int tortoiseCreatedCount = tortoise.getTortletsCreatedCount() + 1;

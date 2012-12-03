@@ -28,7 +28,7 @@ public class Tortoise {
 
     private String frequency;
 
-    @Size(min = 0, max = 100)
+    @Size(min = 0, max = 4000)
     private String notes;
 
     @Temporal(TemporalType.TIMESTAMP)

@@ -25,7 +25,7 @@ public class Tortlet {
 
     private Boolean completed;
 
-    @Size(min = 0, max = 100)
+    @Size(min = 0, max = 5000)
     private String notes;
 
     @Temporal(TemporalType.TIMESTAMP)
