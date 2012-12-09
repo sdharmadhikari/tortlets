@@ -16,14 +16,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
     
-    public Converter<Dream, String> ApplicationConversionServiceFactoryBean.getDreamToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.softrism.tortlets.domain.Dream, java.lang.String>() {
-            public String convert(Dream dream) {
-                return new StringBuilder().append(dream.getTitle()).append(' ').append(dream.getNotes()).append(' ').append(dream.getDreamColor()).append(' ').append(dream.getLatestDreamScore()).toString();
-            }
-        };
-    }
-    
     public Converter<Long, Dream> ApplicationConversionServiceFactoryBean.getIdToDreamConverter() {
         return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.softrism.tortlets.domain.Dream>() {
             public com.softrism.tortlets.domain.Dream convert(java.lang.Long id) {
@@ -60,14 +52,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.softrism.tortlets.domain.Tortlet>() {
             public com.softrism.tortlets.domain.Tortlet convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Tortlet.class);
-            }
-        };
-    }
-    
-    public Converter<Tortoise, String> ApplicationConversionServiceFactoryBean.getTortoiseToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.softrism.tortlets.domain.Tortoise, java.lang.String>() {
-            public String convert(Tortoise tortoise) {
-                return new StringBuilder().append(tortoise.getTitle()).append(' ').append(tortoise.getFrequency()).append(' ').append(tortoise.getNotes()).append(' ').append(tortoise.getStartDate()).toString();
             }
         };
     }
