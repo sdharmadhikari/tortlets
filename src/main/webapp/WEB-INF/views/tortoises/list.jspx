@@ -5,6 +5,7 @@
     <page:list id="pl_com_softrism_tortlets_domain_Tortoise" items="${tortoises}" z="X0V+pkiqR49NdUBYzaBUOtbzMMc=">
         <table:table data="${tortoises}" id="l_com_softrism_tortlets_domain_Tortoise" path="/tortoises" z="lNKGPcR2kWv5FmDtN41fYUvhq9E=">
             <table:column id="c_com_softrism_tortlets_domain_Tortoise_title" property="title" z="HBRK8MAvOl3yWkOPDWBFN5NcMYU="/>
+            <table:column id="c_com_softrism_tortlets_domain_dream" property="dream" z=""/>
             <table:column id="c_com_softrism_tortlets_domain_Tortoise_frequency" property="frequency" render="false" z="user-managed"/>
             <table:column id="c_com_softrism_tortlets_domain_Tortoise_duration" property="duration" z="LCK7qB+zT0hsXjdTs8xI4R7aChg="/>
             <table:column id="c_com_softrism_tortlets_domain_Tortoise_notes" property="notes" z="9lV31g7CFJ7grY9hH3Hmzm8JdVc="/>

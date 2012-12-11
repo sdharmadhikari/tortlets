@@ -6,7 +6,7 @@
         <table:table data="${dreams}" id="l_com_softrism_tortlets_domain_Dream" path="/dreams" z="uCSCxHaQWKOIs7jcxTx5iVVSptQ=">
             <table:column id="c_com_softrism_tortlets_domain_Dream_title" property="title" z="+zoFzjEt3dxzLcRBxbd2DgPrexk="/>
             <table:column id="c_com_softrism_tortlets_domain_Dream_notes" property="notes" z="X9JuVTAjDIowxBk5Mif1dgCaADQ="/>
-            <table:column id="c_com_softrism_tortlets_domain_Dream_dreamColor" property="dreamColor" z="At071A+IBfG3UavXJepW2HfSUww="/>
+            <table:column id="c_com_softrism_tortlets_domain_Dream_dreamColor" property="dreamColor" render="false" z="user-managed"/>
             <table:column id="c_com_softrism_tortlets_domain_Dream_latestDreamScore" property="latestDreamScore" z="HgdtLOkSsVo/JIZN5or2dk+PCyw="/>
             <table:column id="c_com_softrism_tortlets_domain_Dream_tortletsCreatedCount" property="tortletsCreatedCount" render="false" z="user-managed"/>
             <table:column id="c_com_softrism_tortlets_domain_Dream_tortletsDeletedCount" property="tortletsDeletedCount" render="false" z="user-managed"/>

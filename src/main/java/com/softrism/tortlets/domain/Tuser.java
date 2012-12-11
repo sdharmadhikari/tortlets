@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EnumType;
@@ -14,11 +15,11 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateMidnight;
 import org.joda.time.DateTime;
-import org.joda.time.DateTimeComparator;
 import org.joda.time.DateTimeConstants;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -179,7 +180,7 @@ public class Tuser {
                 if (shouldCreate) {
                     log.info("Creating new tortlet for tortoise : " + tortoise.getTitle());
                     Tortlet tortlet = new Tortlet();
-                    tortlet.setTitle("A step for " + tortoise.getTitle());
+                    tortlet.setTitle(tortoise.getTitle() + " - " + jdTime.dayOfWeek().getAsShortText() + "," + jdTime.toString(org.joda.time.format.DateTimeFormat.forPattern("MM/dd")) );
                     tortlet.setCreatedOn(new Date());
                     //tortlet.setNotes("Do anything on " + tortoise.getTitle() + " to fulfil your dream - " + tortoise.getDream().getTitle());
                     tortlet.setUpdatedOn(new Date());
