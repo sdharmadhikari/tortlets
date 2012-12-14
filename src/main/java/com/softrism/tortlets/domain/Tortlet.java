@@ -81,9 +81,9 @@ public class Tortlet {
         EntityManager em = Tortlet.entityManager();
         TypedQuery<Tortlet> q = null;
         if(completed){
-        	q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed", Tortlet.class);
+        	q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed order by o.createdOn asc", Tortlet.class);
         }else{
-        	q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed or o.completed is null", Tortlet.class);
+        	q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed or o.completed is null order by o.createdOn asc", Tortlet.class);
         }
         q.setParameter("completed", completed);
         return q;
