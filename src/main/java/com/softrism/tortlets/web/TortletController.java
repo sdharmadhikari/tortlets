@@ -160,5 +160,11 @@ public class TortletController {
       uiModel.addAttribute("tortlets", Tortlet.findTortletsByCompleted(completed == null ? Boolean.FALSE : completed).getResultList());
       return "tortlets/list";
   }
+  
+  @RequestMapping(params = { "find=ByCompleted", "NoForm" }, method = RequestMethod.GET)
+  public String findTortletsByCompletedNoForm( Model uiModel) {
+      uiModel.addAttribute("tortlets", Tortlet.findTortletsByCompleted(Boolean.FALSE).getResultList());
+      return "tortlets/list";
+  }
     
 }
