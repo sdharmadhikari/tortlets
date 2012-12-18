@@ -13,11 +13,13 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
+import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals" ,"findTortletsByCompleted"})
+@RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals", "findTortletsByCompleted" })
+@RooJson
 public class Tortlet {
 
     @NotNull
@@ -75,15 +77,15 @@ public class Tortlet {
         q.setParameter("completed", completed);
         return q;
     }
-    
-    public static TypedQuery<Tortlet> findTortletsByCompleted(Boolean completed) {
+
+    public static TypedQuery<com.softrism.tortlets.domain.Tortlet> findTortletsByCompleted(Boolean completed) {
         if (completed == null) throw new IllegalArgumentException("The completed argument is required");
         EntityManager em = Tortlet.entityManager();
         TypedQuery<Tortlet> q = null;
-        if(completed){
-        	q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed order by o.createdOn asc", Tortlet.class);
-        }else{
-        	q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed or o.completed is null order by o.createdOn asc", Tortlet.class);
+        if (completed) {
+            q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed order by o.createdOn asc", Tortlet.class);
+        } else {
+            q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed or o.completed is null order by o.createdOn asc", Tortlet.class);
         }
         q.setParameter("completed", completed);
         return q;

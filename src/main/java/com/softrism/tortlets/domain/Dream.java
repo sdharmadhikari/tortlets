@@ -2,6 +2,7 @@ package com.softrism.tortlets.domain;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.EnumType;
@@ -17,11 +18,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
+import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
+@RooJson
 public class Dream {
 
     @NotNull
@@ -58,4 +61,8 @@ public class Dream {
 
     @Enumerated(EnumType.STRING)
     private DreamStatusEnum status;
+
+    public static List<com.softrism.tortlets.domain.Dream> findAllDreams() {
+        return entityManager().createQuery("SELECT o FROM Dream o", Dream.class).getResultList();
+    }
 }

@@ -1,14 +1,14 @@
 package com.softrism.tortlets.web;
 
-import java.util.Date;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.DreamStatusEnum;
-
+import java.util.Date;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import org.springframework.roo.addon.web.mvc.controller.json.RooWebJson;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,10 +18,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/dreams")
 @Controller
 @RooWebScaffold(path = "dreams", formBackingObject = Dream.class)
+@RooWebJson(jsonObject = Dream.class)
 public class DreamController {
 
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String create(@Valid Dream dream, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        System.out.println("user-details: " + userDetails.getUsername());
         if (bindingResult.hasErrors()) {
             populateEditForm(uiModel, dream);
             return "dreams/create";
