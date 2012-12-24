@@ -21,8 +21,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
 @RooJson
+@RooJpaActiveRecord(finders = { "findTortoisesByUseridEquals" })
 public class Tortoise {
 
     @NotNull
@@ -82,4 +82,6 @@ public class Tortoise {
 
     @Enumerated(EnumType.STRING)
     private TortoiseDurationTypeEnum duration;
+
+    private String userid;
 }

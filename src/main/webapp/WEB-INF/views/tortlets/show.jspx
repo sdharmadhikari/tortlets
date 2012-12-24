@@ -10,5 +10,6 @@
         <field:display date="true" dateTimePattern="${tortlet_updatedon_date_format}" field="updatedOn" id="s_com_softrism_tortlets_domain_Tortlet_updatedOn" object="${tortlet}" render="false" z="user-managed"/>
         <field:display date="true" dateTimePattern="${tortlet_completedon_date_format}" field="completedOn" id="s_com_softrism_tortlets_domain_Tortlet_completedOn" object="${tortlet}" render="${tortlet.completed}" z="user-managed"/>
         <field:display field="completed" id="s_com_softrism_tortlets_domain_Tortlet_completed" object="${tortlet}" z="dZ7vh1zObxLleqbapC5cfkpYTo0="/>
+        <field:display field="userid" id="s_com_softrism_tortlets_domain_Tortlet_userid" object="${tortlet}" render="false" z="user-managed"/>
     </page:show>
 </div>

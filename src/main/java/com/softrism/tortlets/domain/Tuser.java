@@ -107,7 +107,11 @@ public class Tuser {
                         tortoise.setTortletsDeletedCount(tortoise.getTortletsDeletedCount() + 1);
                         dream.setTortletsDeletedCount(dream.getTortletsDeletedCount() + 1);
                         tuser.setTortletsDeletedCount(tuser.getTortletsDeletedCount() + 1);
-                        tortoise.getTortlets().remove(deleteIt);
+                        // we dont have to do similar when tortlets have to add ! 
+                        // because here tortlets is getting removed and java will fail by saying "tortlet was removed when saving tortoise 
+                        //(because tortoise is being saved at the end)
+
+                        tortoise.getTortlets().remove(deleteIt); 
                         deleteIt.remove();
                     }
                 }
@@ -175,6 +179,7 @@ public class Tuser {
                 if (shouldCreate) {
                     log.info("Creating new tortlet for tortoise : " + tortoise.getTitle());
                     Tortlet tortlet = new Tortlet();
+                    tortlet.setUserid(tuser.getUserid());
                     tortlet.setTitle(tortoise.getTitle() + " - " + jdTime.dayOfWeek().getAsShortText() + "," + jdTime.toString(org.joda.time.format.DateTimeFormat.forPattern("MM/dd")));
                     tortlet.setCreatedOn(new Date());
                     tortlet.setUpdatedOn(new Date());

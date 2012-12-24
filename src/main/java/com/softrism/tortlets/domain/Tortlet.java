@@ -1,25 +1,22 @@
 package com.softrism.tortlets.domain;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.TypedQuery;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals", "findTortletsByCompleted" })
 @RooJson
+@RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals", "findTortletsByCompleted", "findTortletsByUseridEquals", "findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted", "findTortletsByUseridEqualsAndCompleted" })
 public class Tortlet {
 
     @NotNull
@@ -44,6 +41,8 @@ public class Tortlet {
 
     @ManyToOne
     private Tortoise tortoise;
+
+    private String userid;
 
     public static TypedQuery<com.softrism.tortlets.domain.Tortlet> findTortletsByTuserAndCreatedOnEquals(Tuser tuser, Date createdOn) {
         if (tuser == null) throw new IllegalArgumentException("The tuser argument is required");
@@ -88,6 +87,44 @@ public class Tortlet {
             q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.completed = :completed or o.completed is null order by o.createdOn asc", Tortlet.class);
         }
         q.setParameter("completed", completed);
+        return q;
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    // All Pending Tortlets
+    public static TypedQuery<Tortlet> findTortletsByUseridEqualsAndCompleted(String userid, Boolean completed) {
+        if (userid == null || userid.length() == 0) throw new IllegalArgumentException("The userid argument is required");
+        if (completed == null) throw new IllegalArgumentException("The completed argument is required");
+        EntityManager em = Tortlet.entityManager();
+
+        TypedQuery<Tortlet> q = null;
+        if (completed) {
+            q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.userid = :userid  AND o.completed = :completed order by o.createdOn asc", Tortlet.class);
+            q.setParameter("completed", completed);
+        }else{
+            q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.userid = :userid  AND o.completed is null order by o.createdOn asc", Tortlet.class);
+        }
+        q.setParameter("userid", userid);
+        return q;
+    }
+
+    public static TypedQuery<Tortlet> findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(String userid, Date createdOn, Boolean completed) {
+        if (userid == null || userid.length() == 0) throw new IllegalArgumentException("The userid argument is required");
+        if (createdOn == null) throw new IllegalArgumentException("The createdOn argument is required");
+        if (completed == null) throw new IllegalArgumentException("The completed argument is required");
+        EntityManager em = Tortlet.entityManager();
+        TypedQuery<Tortlet> q = null;
+        // Two changes below, removed createdOn criteria because it should be handled in java controller and addressed completed=false is null.
+        if(completed){
+            q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.userid = :userid  AND o.completed = :completed", Tortlet.class);
+            q.setParameter("completed", completed);
+        }else{
+            q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.userid = :userid  AND o.completed is null", Tortlet.class);
+        }
+        q.setParameter("userid", userid);
+        //q.setParameter("createdOn", createdOn);
+
         return q;
     }
 }

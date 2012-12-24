@@ -189,4 +189,12 @@ privileged aspect Tortoise_Roo_JavaBean {
         this.duration = duration;
     }
     
+    public String Tortoise.getUserid() {
+        return this.userid;
+    }
+    
+    public void Tortoise.setUserid(String userid) {
+        this.userid = userid;
+    }
+    
 }

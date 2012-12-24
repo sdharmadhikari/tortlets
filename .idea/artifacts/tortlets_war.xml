@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tortlets:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="tortlets-0.1.war">
+      <element id="artifact" artifact-name="tortlets:war exploded" />
+    </root>
+  </artifact>
+</component>

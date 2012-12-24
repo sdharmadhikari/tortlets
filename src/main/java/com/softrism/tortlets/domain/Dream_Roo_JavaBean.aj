@@ -108,4 +108,12 @@ privileged aspect Dream_Roo_JavaBean {
         this.status = status;
     }
     
+    public String Dream.getUserid() {
+        return this.userid;
+    }
+    
+    public void Dream.setUserid(String userid) {
+        this.userid = userid;
+    }
+    
 }

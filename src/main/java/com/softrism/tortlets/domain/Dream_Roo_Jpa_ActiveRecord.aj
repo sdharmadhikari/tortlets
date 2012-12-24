@@ -24,6 +24,10 @@ privileged aspect Dream_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT COUNT(o) FROM Dream o", Long.class).getSingleResult();
     }
     
+    public static List<Dream> Dream.findAllDreams() {
+        return entityManager().createQuery("SELECT o FROM Dream o", Dream.class).getResultList();
+    }
+    
     public static Dream Dream.findDream(Long id) {
         if (id == null) return null;
         return entityManager().find(Dream.class, id);

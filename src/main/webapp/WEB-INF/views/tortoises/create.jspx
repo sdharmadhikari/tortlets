@@ -25,6 +25,7 @@
         <field:checkbox field="friday" id="c_com_softrism_tortlets_domain_Tortoise_friday" z="iqT/PDSqn5O7IS62TuIP0u/Py4Y="/>
         <field:checkbox field="saturday" id="c_com_softrism_tortlets_domain_Tortoise_saturday" z="6UqZ8qFvVlEPp8lRfnQEoLc/les="/>
         <field:checkbox field="sunday" id="c_com_softrism_tortlets_domain_Tortoise_sunday" z="BimVyMBDr7kCLC7EfZ+cyhqsMvQ="/>
+        <field:input field="userid" id="c_com_softrism_tortlets_domain_Tortoise_userid" render="false" z="user-managed"/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_softrism_tortlets_domain_Tortoise" render="${not empty dependencies}" z="rOafzDaj9d4wX0kt7xgjxBbxipI="/>
 </div>

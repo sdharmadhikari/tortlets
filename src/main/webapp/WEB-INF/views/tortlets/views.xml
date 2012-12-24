@@ -27,4 +27,16 @@
 <definition extends="default" name="tortlets/findTortletsByCompleted">
         <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByCompleted.jspx"/>
     </definition>
+<definition extends="default" name="tortlets/findTortletsByUseridEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByUseridEquals.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByUseridEqualsAndCreatedOnEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByUseridEqualsAndCreatedOnEquals.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByUseridEqualsAndCompleted">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByUseridEqualsAndCompleted.jspx"/>
+    </definition>
 </tiles-definitions>

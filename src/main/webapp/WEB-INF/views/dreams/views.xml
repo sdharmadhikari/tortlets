@@ -13,4 +13,7 @@
 <definition extends="default" name="dreams/update">
         <put-attribute name="body" value="/WEB-INF/views/dreams/update.jspx"/>
     </definition>
+<definition extends="default" name="dreams/findDreamsByUseridEquals">
+        <put-attribute name="body" value="/WEB-INF/views/dreams/findDreamsByUseridEquals.jspx"/>
+    </definition>
 </tiles-definitions>

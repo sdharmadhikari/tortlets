@@ -31,14 +31,6 @@ privileged aspect TuserController_Roo_Controller {
         return "tusers/create";
     }
     
-    @RequestMapping(value = "/{id}", produces = "text/html")
-    public String TuserController.show(@PathVariable("id") Long id, Model uiModel) {
-        addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("tuser", Tuser.findTuser(id));
-        uiModel.addAttribute("itemId", id);
-        return "tusers/show";
-    }
-    
     @RequestMapping(produces = "text/html")
     public String TuserController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         if (page != null || size != null) {

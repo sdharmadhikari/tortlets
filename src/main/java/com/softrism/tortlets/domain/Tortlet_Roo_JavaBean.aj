@@ -65,4 +65,12 @@ privileged aspect Tortlet_Roo_JavaBean {
         this.tortoise = tortoise;
     }
     
+    public String Tortlet.getUserid() {
+        return this.userid;
+    }
+    
+    public void Tortlet.setUserid(String userid) {
+        this.userid = userid;
+    }
+    
 }

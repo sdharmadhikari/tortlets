@@ -4,23 +4,26 @@ import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.domain.Tuser;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import javax.persistence.TypedQuery;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 import org.joda.time.DateMidnight;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
 import org.springframework.roo.addon.web.mvc.controller.json.RooWebJson;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.persistence.TypedQuery;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @RequestMapping("/tortlets")
 @Controller
@@ -116,6 +119,42 @@ public class TortletController {
     @RequestMapping(params = { "find=ByCompleted", "NoForm" }, method = RequestMethod.GET)
     public String findTortletsByCompletedNoForm(Model uiModel) {
         uiModel.addAttribute("tortlets", Tortlet.findTortletsByCompleted(Boolean.FALSE).getResultList());
+        return "tortlets/list";
+    }
+
+    @RequestMapping(params = "find=ByUseridEqualsAndCompleted", method = RequestMethod.GET)
+    public String findTortletsByUseridEqualsAndCompleted(@RequestParam(value = "userid",required = false) String userid, @RequestParam(value = "completed", required = false) Boolean completed, Model uiModel) {
+        if (userid == null || userid.length() == 0) {
+            UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            userid = userDetails.getUsername();
+        }
+        uiModel.addAttribute("tortlets", Tortlet.findTortletsByUseridEqualsAndCompleted(userid, completed == null ? Boolean.FALSE : completed).getResultList());
+        return "tortlets/list";
+    }
+
+    @RequestMapping(params = "find=ByUseridEqualsAndCreatedOnEqualsAndCompleted", method = RequestMethod.GET)
+    public String findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(@RequestParam(value = "userid", required = false) String userid, @RequestParam(value = "createdOn", required = false) @DateTimeFormat(style = "M-") Date createdOn, @RequestParam(value = "completed", required = false) Boolean completed, Model uiModel) {
+        if (userid == null || userid.length() == 0) {
+            UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            userid = userDetails.getUsername();
+        }
+        if (createdOn == null) {
+            createdOn = new Date();
+        }
+        TypedQuery q = Tortlet.findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(userid, createdOn, completed == null ? Boolean.FALSE : completed);
+        List<Tortlet> resultList = new ArrayList<Tortlet>();
+        List<Tortlet> list = q.getResultList();
+        for (Tortlet tortlet : list) {
+            if (tortlet.getCreatedOn() != null) {
+                DateMidnight dt = new DateMidnight(tortlet.getCreatedOn());
+                System.out.println("checking tortlet.." + tortlet.getId());
+                if (dt.isEqual(new DateMidnight(createdOn))) {
+                    resultList.add(tortlet);
+                }
+            }
+        }
+        uiModel.addAttribute("tortlets", resultList);
+        addDateTimeFormatPatterns(uiModel);
         return "tortlets/list";
     }
 }

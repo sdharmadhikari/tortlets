@@ -22,8 +22,9 @@
         <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Tortoise_tortletsCreatedCount" type="hidden" z="user-managed"/>
         <field:input field="tortletsDeletedCount" id="c_com_softrism_tortlets_domain_Tortoise_tortletsDeletedCount" type="hidden" z="user-managed"/>
         <field:input field="tortletsCompletedCount" id="c_com_softrism_tortlets_domain_Tortoise_tortletsCompletedCount" type="hidden" z="user-managed"/>
-        <field:datetime dateTimePattern="${tortoise_createdon_date_format}" field="createdOn" id="c_com_softrism_tortlets_domain_Tortoise_createdOn"  type="hidden" z="user-managed"/>
+        <field:datetime dateTimePattern="${tortoise_createdon_date_format}" field="createdOn" id="c_com_softrism_tortlets_domain_Tortoise_createdOn" type="hidden" z="user-managed"/>
         <field:datetime dateTimePattern="${tortoise_updatedon_date_format}" field="updatedOn" id="c_com_softrism_tortlets_domain_Tortoise_updatedOn" type="hidden" z="user-managed"/>
         <field:simple field="tortlets" id="c_com_softrism_tortlets_domain_Tortoise_tortlets" messageCode="entity_reference_not_managed" messageCodeAttribute="Tortlet" render="false" z="user-managed"/>
+        <field:input field="userid" id="c_com_softrism_tortlets_domain_Tortoise_userid" render="false" z="user-managed"/>
     </form:update>
 </div>

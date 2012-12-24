@@ -13,4 +13,7 @@
 <definition extends="default" name="tortoises/update">
         <put-attribute name="body" value="/WEB-INF/views/tortoises/update.jspx"/>
     </definition>
+<definition extends="default" name="tortoises/findTortoisesByUseridEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortoises/findTortoisesByUseridEquals.jspx"/>
+    </definition>
 </tiles-definitions>
