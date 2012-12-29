@@ -435,3 +435,27 @@ exit
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-23 11:39:37
 exit
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2012-12-23 11:39:50
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-12-28 16:22:03
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-12-28 16:22:30
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-28 16:23:11
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2012-12-28 16:29:16
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-28 16:29:23
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2012-12-28 16:32:18
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-28 16:32:27
+web mvc all --package com.softrism.tortlets.web
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2012-12-28 16:37:28
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-28 16:37:35
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2012-12-28 16:38:59
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-28 16:40:17
+hint
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2012-12-28 16:46:19
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2012-12-28 16:46:28
+hint
+web mvc all --package com.softrism.tortlets.web
+web mvc finder all

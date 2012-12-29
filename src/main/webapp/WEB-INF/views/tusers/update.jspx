@@ -8,7 +8,6 @@
         <field:input field="userid" id="c_com_softrism_tortlets_domain_Tuser_userid" max="16" min="6" required="true" z="3z95lfN2LcWUaZQ98i5+mfX6h18="/>
         <field:input field="password" id="c_com_softrism_tortlets_domain_Tuser_password" max="16" min="6" required="true" type="password" z="user-managed"/>
         <field:input field="retypePassword" id="c_com_softrism_tortlets_domain_Tuser_retypePassword" max="16" min="6" render="false" required="true" type="password" z="user-managed"/>
-        <field:datetime dateTimePattern="${tuser_birthdate_date_format}" field="birthDate" id="c_com_softrism_tortlets_domain_Tuser_birthDate" z="IYtgDF2AcnlTU/V2UhU+vc5Q5y4="/>
         <field:input field="allowedDelayDays" id="c_com_softrism_tortlets_domain_Tuser_allowedDelayDays" z="tc6b6YN2EzORJdnGSKTPvA8U8Uk="/>
         <field:input field="latestDreamScore" id="c_com_softrism_tortlets_domain_Tuser_latestDreamScore" type="hidden" z="user-managed"/>
         <field:input field="tortletsCreatedCount" id="c_com_softrism_tortlets_domain_Tuser_tortletsCreatedCount" type="hidden" z="user-managed"/>
@@ -19,5 +18,6 @@
         <field:simple field="dreams" id="c_com_softrism_tortlets_domain_Tuser_dreams" messageCode="entity_reference_not_managed" messageCodeAttribute="Dream" render="false" z="user-managed"/>
         <field:select field="status" id="c_com_softrism_tortlets_domain_Tuser_status" items="${tuserstatusenums}" path="tuserstatusenums" required="true" z="DZNHOje8iwoQhYkAVnCSxbmuQDM="/>
         <field:select field="timezone" id="c_com_softrism_tortlets_domain_Tuser_timezone" items="${tusertimezoneenums}" path="tusertimezoneenums" required="true" z="54TsmHYJddog1NU0ATSQdNCiKcQ="/>
+        <field:datetime dateTimePattern="${tuser_birthdate_date_format}" field="birthDate" id="c_com_softrism_tortlets_domain_Tuser_birthDate" z="IYtgDF2AcnlTU/V2UhU+vc5Q5y4="/>
     </form:update>
 </div>

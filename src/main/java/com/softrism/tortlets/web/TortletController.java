@@ -4,6 +4,12 @@ import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.domain.Tuser;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import javax.persistence.TypedQuery;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import org.joda.time.DateMidnight;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
@@ -17,13 +23,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.persistence.TypedQuery;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 @RequestMapping("/tortlets")
 @Controller
@@ -123,7 +122,7 @@ public class TortletController {
     }
 
     @RequestMapping(params = "find=ByUseridEqualsAndCompleted", method = RequestMethod.GET)
-    public String findTortletsByUseridEqualsAndCompleted(@RequestParam(value = "userid",required = false) String userid, @RequestParam(value = "completed", required = false) Boolean completed, Model uiModel) {
+    public String findTortletsByUseridEqualsAndCompleted(@RequestParam(value = "userid", required = false) String userid, @RequestParam(value = "completed", required = false) Boolean completed, Model uiModel) {
         if (userid == null || userid.length() == 0) {
             UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             userid = userDetails.getUsername();

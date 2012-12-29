@@ -1,19 +1,5 @@
 package com.softrism.tortlets.domain;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateMidnight;
@@ -26,6 +12,15 @@ import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.Date;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.List;
+import java.util.ArrayList;
 
 @RooJavaBean
 @RooToString
@@ -92,6 +87,10 @@ public class Tuser {
     @Transactional
     public static com.softrism.tortlets.domain.Tuser generateTortlets(String userid) {
         Tuser tuser = Tuser.findTusersByUseridEquals(userid).getResultList().get(0);
+        if(!tuser.getStatus().equals(TuserStatusEnum.ACTIVE)){
+            System.out.println("Tuser " + tuser.getUserid() + " is not in active status, skipping generating and deleting tortlets");
+            return tuser;
+        }
         DateTime jdTime = new DateTime();
         int dayOfWeek = jdTime.getDayOfWeek();
         for (Dream dream : tuser.getDreams()) {

@@ -2,24 +2,26 @@ package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.domain.TortoiseStatusEnum;
+import java.util.Arrays;
+import java.util.Date;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-import java.util.Arrays;
-import java.util.Date;
-
 @RequestMapping("/tortoises")
 @Controller
 @RooWebScaffold(path = "tortoises", formBackingObject = Tortoise.class)
+@RooWebFinder
 public class TortoiseController {
 
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
@@ -40,7 +42,7 @@ public class TortoiseController {
     }
 
     @RequestMapping(params = "find=ByUseridEquals", method = RequestMethod.GET)
-    public String findTortoisesByUseridEquals(@RequestParam("userid") String userid, Model uiModel) {
+    public String findTortoisesByUseridEquals(@RequestParam(value = "userid",required = false) String userid, Model uiModel) {
         if (userid == null || userid.length() == 0) {
             UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             userid = userDetails.getUsername();
@@ -69,17 +71,25 @@ public class TortoiseController {
         populateEditForm(uiModel, new Tortoise());
         return "tortoises/create";
     }
-	
-	    void populateEditForm(Model uiModel, Tortoise tortoise) {
-		
-			UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-			String userid = userDetails.getUsername();
-			
-			uiModel.addAttribute("tortoise", tortoise);
-			addDateTimeFormatPatterns(uiModel);
-			uiModel.addAttribute("dreams", com.softrism.tortlets.domain.Dream.findDreamsByUseridEquals(userid).getResultList());
-			uiModel.addAttribute("tortlets", com.softrism.tortlets.domain.Tortlet.findTortletsByUseridEquals(userid).getResultList());
-			uiModel.addAttribute("tortoisedurationtypeenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseDurationTypeEnum.values()));
-			uiModel.addAttribute("tortoisestatusenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseStatusEnum.values()));
+
+    void populateEditForm(Model uiModel, Tortoise tortoise) {
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String userid = userDetails.getUsername();
+        uiModel.addAttribute("tortoise", tortoise);
+        addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("dreams", com.softrism.tortlets.domain.Dream.findDreamsByUseridEquals(userid).getResultList());
+        uiModel.addAttribute("tortlets", com.softrism.tortlets.domain.Tortlet.findTortletsByUseridEquals(userid).getResultList());
+        uiModel.addAttribute("tortoisedurationtypeenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseDurationTypeEnum.values()));
+        uiModel.addAttribute("tortoisestatusenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseStatusEnum.values()));
+    }
+    
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
+    public String delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        Tortoise tortoise = Tortoise.findTortoise(id);
+        tortoise.remove();
+        uiModel.asMap().clear();
+        uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
+        uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
+        return "redirect:/tortoises?find=ByUseridEquals";
     }
 }

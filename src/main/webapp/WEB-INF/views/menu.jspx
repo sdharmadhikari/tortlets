@@ -25,9 +25,9 @@
         </menu:category>
         <menu:category id="c_tuser" z="2gdtQJwRJ1Y8PXU0RzJg6xHnRaU=">
             <menu:item id="i_tuser_new" messageCode="global_menu_show" url="/tusers/9999" z="user-managed"/>
-            <menu:item id="i_tuser_list" messageCode="global_menu_list" url="/tusers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="djwy5eQxZECgt3Ns8o5YS7LDQPE="/>
-            <menu:item id="i_tuser_new" messageCode="global_menu_new" url="/tusers?form" z="user-managed"/>
-            <menu:item id="fi_tuser_useridequals" messageCode="global_menu_find" url="/tusers?find=ByUseridEquals&amp;form" z="user-managed"/>
+            <menu:item id="i_tuser_list" messageCode="global_menu_list" url="/tusers?page=1&amp;size=${empty param.size ? 10 : param.size}" render="false" z="djwy5eQxZECgt3Ns8o5YS7LDQPE="/>
+            <menu:item id="i_tuser_new" messageCode="global_menu_new" url="/tusers?form" render="false" z="user-managed"/>
+            <menu:item id="fi_tuser_useridequals" messageCode="global_menu_find" url="/tusers?find=ByUseridEquals&amp;form" render="false" z="user-managed"/>
         </menu:category>
     </menu:menu>
 </div>

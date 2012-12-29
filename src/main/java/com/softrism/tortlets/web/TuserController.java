@@ -1,6 +1,9 @@
 package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Tuser;
+import java.util.Date;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
 import org.springframework.roo.addon.web.mvc.controller.json.RooWebJson;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
@@ -13,10 +16,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-import java.util.Date;
 
 @RequestMapping("/tusers")
 @Controller
