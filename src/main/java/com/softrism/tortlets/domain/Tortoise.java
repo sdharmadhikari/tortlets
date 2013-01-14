@@ -57,10 +57,10 @@ public class Tortoise {
     @DateTimeFormat(style = "M-")
     private Date updatedOn;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     private Dream dream;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tortoise")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tortoise",fetch=FetchType.LAZY)
     private Set<Tortlet> tortlets = new HashSet<Tortlet>();
 
     private Boolean monday;

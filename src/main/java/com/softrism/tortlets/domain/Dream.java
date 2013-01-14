@@ -8,6 +8,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.EntityManager;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
@@ -56,10 +57,10 @@ public class Dream {
     @DateTimeFormat(style = "M-")
     private Date updatedOn;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     private Tuser tuser;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "dream")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "dream",fetch=FetchType.LAZY)
     private Set<Tortoise> tortoises = new HashSet<Tortoise>();
 
     @Enumerated(EnumType.STRING)

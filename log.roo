@@ -459,3 +459,38 @@ exit
 hint
 web mvc all --package com.softrism.tortlets.web
 web mvc finder all
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2012-12-28 20:27:06
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-04 16:33:44
+hint
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-04 17:31:08
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-13 18:09:29
+hint
+addon search 
+addon search cloudfoundry
+addon search cloudfoundry
+addon search cloudfoundry
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr start --bundleSymbolicName org.springframework.roo.addon.cloud.foundry
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+addon install id --searchResultId 01
+cloud foundry login
+cloud foundry clear login details
+cloud foundry login
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-13 18:17:42
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-13 18:18:20
+cloud foundry login --email tortlets@softrism.com --password G10dstart!
+perform clean
+perform package
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-13 18:47:43
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-13 18:47:53
+web mvc all --package com.softrism.tortlets.web 
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-13 18:55:24
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-13 18:55:50
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-13 19:03:00
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-13 19:04:12
+web mvc all --package com.softrism.tortlets.web
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-13 19:12:03

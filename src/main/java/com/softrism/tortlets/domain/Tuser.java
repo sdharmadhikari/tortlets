@@ -71,7 +71,7 @@ public class Tuser {
     @DateTimeFormat(style = "M-")
     private Date updatedON;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tuser")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tuser",fetch=FetchType.LAZY)
     private Set<Dream> dreams = new HashSet<Dream>();
 
     private static final Log log = LogFactory.getLog(Tuser.class);

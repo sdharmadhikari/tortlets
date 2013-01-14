@@ -15,11 +15,6 @@ import com.softrism.tortlets.domain.Tuser;
 @RooConversionService
 public class ApplicationConversionServiceFactoryBean extends FormattingConversionServiceFactoryBean {
 
-	@Override
-	protected void installFormatters(FormatterRegistry registry) {
-		super.installFormatters(registry);
-		// Register application converters and formatters
-	}
 	
     public Converter<Tuser, String> getTuserToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.softrism.tortlets.domain.Tuser, java.lang.String>() {

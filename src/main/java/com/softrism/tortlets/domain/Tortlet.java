@@ -39,7 +39,7 @@ public class Tortlet {
     @DateTimeFormat(style = "M-")
     private Date completedOn;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     private Tortoise tortoise;
 
     private String userid;

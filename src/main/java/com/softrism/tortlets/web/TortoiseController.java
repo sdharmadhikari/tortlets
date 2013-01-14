@@ -42,7 +42,7 @@ public class TortoiseController {
     }
 
     @RequestMapping(params = "find=ByUseridEquals", method = RequestMethod.GET)
-    public String findTortoisesByUseridEquals(@RequestParam(value = "userid",required = false) String userid, Model uiModel) {
+    public String findTortoisesByUseridEquals(@RequestParam(value = "userid", required = false) String userid, Model uiModel) {
         if (userid == null || userid.length() == 0) {
             UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             userid = userDetails.getUsername();
@@ -82,7 +82,7 @@ public class TortoiseController {
         uiModel.addAttribute("tortoisedurationtypeenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseDurationTypeEnum.values()));
         uiModel.addAttribute("tortoisestatusenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseStatusEnum.values()));
     }
-    
+
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
     public String delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Tortoise tortoise = Tortoise.findTortoise(id);
