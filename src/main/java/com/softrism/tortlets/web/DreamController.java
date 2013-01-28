@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/dreams")
 @Controller
 @RooWebScaffold(path = "dreams", formBackingObject = Dream.class)
-@RooWebJson(jsonObject = Dream.class)
 @RooWebFinder
+@RooWebJson(jsonObject = Dream.class)
 public class DreamController {
 
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")

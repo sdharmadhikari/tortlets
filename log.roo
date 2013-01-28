@@ -494,3 +494,177 @@ exit
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-13 19:04:12
 web mvc all --package com.softrism.tortlets.web
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-13 19:12:03
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-23 16:21:54
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-23 17:16:25
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-23 18:05:45
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-23 18:11:09
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-23 18:29:03
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-24 14:39:12
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-24 16:32:23
+json all --deepSerialize false
+web mvc json all --package  com.softrism.tortlets.web
+web mvc finder all
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-24 17:06:38
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-24 17:06:49
+hint
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-24 17:10:09
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-24 17:10:17
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-24 17:13:04
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-24 17:13:12
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 11:35:46
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 11:38:12
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 11:38:20
+json all --deepSerialize false
+web mvc json all --package com.softrism.tortlets.web.json
+web mvc json all --package com.softrism.tortlets.web
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 11:41:13
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 11:41:20
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 11:47:10
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 11:47:17
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 11:55:47
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 11:55:56
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 11:56:43
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 11:56:51
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 11:57:35
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 11:57:42
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:04:46
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:04:53
+help
+hint
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:08:23
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:08:31
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:11:57
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:12:05
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:16:07
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:16:42
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:19:26
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:19:47
+hint
+perform package
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:24:20
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:24:28
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:28:52
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:29:07
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:29:27
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:29:34
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:33:06
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:33:22
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:34:04
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:36:20
+hint
+json all --deepSerialize 0
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:39:14
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:39:24
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:42:39
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:42:49
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:54:42
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:54:59
+hint
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 12:59:23
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 12:59:31
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 13:02:01
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 13:02:10
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 13:05:36
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 13:05:45
+hint
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 13:06:02
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 13:07:01
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 13:07:47
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 13:07:53
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 13:12:12
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 13:12:47
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 13:14:19
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 13:14:43
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 13:23:13
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 13:23:24
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 13:23:48
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:07:25
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 16:18:50
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:20:49
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 16:26:46
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:26:53
+hint
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 16:34:29
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:34:38
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 16:35:03
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:35:09
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 16:36:51
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:38:23
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 16:40:06
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:40:15
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 16:42:46
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:42:53
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 16:49:46
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:50:17
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 16:52:09
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 16:52:22
+hint
+json add --class ~.domain.Tuser --deepSerialize false
+web mvc json all --package com.softrism.tortlets.web
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 17:00:07
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 17:00:14
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 18:36:25
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 18:38:04
+web mvc all --package com.softrism.tortlets.web
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 18:38:59
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 18:46:26
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-25 18:46:52
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-25 18:47:04
+web mvc all --package com.softrism.tortlets.web 
+web mvc finder all
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-27 16:13:11
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-27 18:42:49
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-27 18:49:28
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-27 21:38:53
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-01-27 21:43:39
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-01-27 21:43:47

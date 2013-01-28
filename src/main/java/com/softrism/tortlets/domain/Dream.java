@@ -1,34 +1,23 @@
 package com.softrism.tortlets.domain;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
-import javax.persistence.EntityManager;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.TypedQuery;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
-import org.springframework.security.core.context.SecurityContextHolder;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @RooJavaBean
 @RooToString
-@RooJson
 @RooJpaActiveRecord(finders = { "findDreamsByUseridEquals" })
+@RooJson(deepSerialize = false)
 public class Dream {
 
     @NotNull
@@ -57,15 +46,14 @@ public class Dream {
     @DateTimeFormat(style = "M-")
     private Date updatedOn;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Tuser tuser;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "dream",fetch=FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "dream", fetch = FetchType.LAZY)
     private Set<Tortoise> tortoises = new HashSet<Tortoise>();
 
     @Enumerated(EnumType.STRING)
     private DreamStatusEnum status;
 
     private String userid;
-    
 }

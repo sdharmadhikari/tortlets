@@ -15,5 +15,6 @@
         <field:display field="tortletsDeletedCount" id="s_com_softrism_tortlets_domain_Dream_tortletsDeletedCount" object="${dream}" render="false" z="user-managed"/>
         <field:display field="tortletsCompletedCount" id="s_com_softrism_tortlets_domain_Dream_tortletsCompletedCount" object="${dream}" render="false" z="user-managed"/>
         <field:display field="userid" id="s_com_softrism_tortlets_domain_Dream_userid" object="${dream}" render="false" z="user-managed"/>
+        <field:display field="tortoises" id="s_com_softrism_tortlets_domain_Dream_tortoises" object="${dream}" z="PScXBs/OcxoYBFTXOtaCTpKcn3U="/>
     </page:show>
 </div>

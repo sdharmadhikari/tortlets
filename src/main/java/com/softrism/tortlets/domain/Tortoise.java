@@ -1,28 +1,23 @@
 package com.softrism.tortlets.domain;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-import javax.persistence.CascadeType;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import flexjson.JSONSerializer;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
 @RooJavaBean
 @RooToString
-@RooJson
 @RooJpaActiveRecord(finders = { "findTortoisesByUseridEquals" })
+@RooJson(deepSerialize = false)
 public class Tortoise {
 
     @NotNull
@@ -57,10 +52,10 @@ public class Tortoise {
     @DateTimeFormat(style = "M-")
     private Date updatedOn;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Dream dream;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tortoise",fetch=FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tortoise", fetch = FetchType.LAZY)
     private Set<Tortlet> tortlets = new HashSet<Tortlet>();
 
     private Boolean monday;
@@ -84,4 +79,5 @@ public class Tortoise {
     private TortoiseDurationTypeEnum duration;
 
     private String userid;
+
 }

@@ -1,5 +1,14 @@
 package com.softrism.tortlets.domain;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import javax.*;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateMidnight;
@@ -13,19 +22,10 @@ import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.Date;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.List;
-import java.util.ArrayList;
-
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord(finders = { "findTusersByUseridEquals" })
-@RooJson
+@RooJson(deepSerialize = false)
 public class Tuser {
 
     @NotNull
@@ -71,7 +71,7 @@ public class Tuser {
     @DateTimeFormat(style = "M-")
     private Date updatedON;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tuser",fetch=FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tuser", fetch = FetchType.LAZY)
     private Set<Dream> dreams = new HashSet<Dream>();
 
     private static final Log log = LogFactory.getLog(Tuser.class);
@@ -87,7 +87,7 @@ public class Tuser {
     @Transactional
     public static com.softrism.tortlets.domain.Tuser generateTortlets(String userid) {
         Tuser tuser = Tuser.findTusersByUseridEquals(userid).getResultList().get(0);
-        if(!tuser.getStatus().equals(TuserStatusEnum.ACTIVE)){
+        if (!tuser.getStatus().equals(TuserStatusEnum.ACTIVE)) {
             System.out.println("Tuser " + tuser.getUserid() + " is not in active status, skipping generating and deleting tortlets");
             return tuser;
         }
@@ -106,11 +106,7 @@ public class Tuser {
                         tortoise.setTortletsDeletedCount(tortoise.getTortletsDeletedCount() + 1);
                         dream.setTortletsDeletedCount(dream.getTortletsDeletedCount() + 1);
                         tuser.setTortletsDeletedCount(tuser.getTortletsDeletedCount() + 1);
-                        // we dont have to do similar when tortlets have to add ! 
-                        // because here tortlets is getting removed and java will fail by saying "tortlet was removed when saving tortoise 
-                        //(because tortoise is being saved at the end)
-
-                        tortoise.getTortlets().remove(deleteIt); 
+                        tortoise.getTortlets().remove(deleteIt);
                         deleteIt.remove();
                     }
                 }

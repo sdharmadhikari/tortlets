@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.DateMidnight;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
 import org.springframework.roo.addon.web.mvc.controller.json.RooWebJson;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
@@ -23,6 +26,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequestMapping("/tortlets")
 @Controller
@@ -156,4 +160,13 @@ public class TortletController {
         addDateTimeFormatPatterns(uiModel);
         return "tortlets/list";
     }
+    //////////////////////////////json////////////////////////////////////json////////////////////////////
+    @RequestMapping( value = "/json",params = "find=ByUseridEqualsAndCompleted", headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String> jsonFindTortletsByUseridEqualsAndCompleted(@RequestParam("userid") String userid, @RequestParam(value = "completed", required = false) Boolean completed) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCompleted(userid, completed == null ? Boolean.FALSE : completed).getResultList()), headers, HttpStatus.OK);
+    }
+
 }

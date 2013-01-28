@@ -25,5 +25,6 @@
         <field:display field="sunday" id="s_com_softrism_tortlets_domain_Tortoise_sunday" object="${tortoise}" z="OddSNP1lEmPbep+Zz1JvoFr09RE="/>
         <field:display field="latestTortoiseScore" id="s_com_softrism_tortlets_domain_Tortoise_latestTortoiseScore" object="${tortoise}" z="bDurcrrCLQfNK+Th3NIAK26he00="/>
         <field:display field="userid" id="s_com_softrism_tortlets_domain_Tortoise_userid" object="${tortoise}" render="false" z="user-managed"/>
+        <field:display field="tortlets" id="s_com_softrism_tortlets_domain_Tortoise_tortlets" object="${tortoise}" z="cNvvL+svwVvyh+w4eM8yX1TsAtI="/>
     </page:show>
 </div>

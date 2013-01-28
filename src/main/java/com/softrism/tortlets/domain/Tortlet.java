@@ -15,8 +15,8 @@ import java.util.List;
 
 @RooJavaBean
 @RooToString
-@RooJson
 @RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals", "findTortletsByCompleted", "findTortletsByUseridEquals", "findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted", "findTortletsByUseridEqualsAndCompleted" })
+@RooJson
 public class Tortlet {
 
     @NotNull
@@ -39,7 +39,7 @@ public class Tortlet {
     @DateTimeFormat(style = "M-")
     private Date completedOn;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Tortoise tortoise;
 
     private String userid;
@@ -90,41 +90,34 @@ public class Tortlet {
         return q;
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////////////
-
-    // All Pending Tortlets
-    public static TypedQuery<Tortlet> findTortletsByUseridEqualsAndCompleted(String userid, Boolean completed) {
+    public static TypedQuery<com.softrism.tortlets.domain.Tortlet> findTortletsByUseridEqualsAndCompleted(String userid, Boolean completed) {
         if (userid == null || userid.length() == 0) throw new IllegalArgumentException("The userid argument is required");
         if (completed == null) throw new IllegalArgumentException("The completed argument is required");
         EntityManager em = Tortlet.entityManager();
-
         TypedQuery<Tortlet> q = null;
         if (completed) {
             q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.userid = :userid  AND o.completed = :completed order by o.createdOn asc", Tortlet.class);
             q.setParameter("completed", completed);
-        }else{
+        } else {
             q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.userid = :userid  AND o.completed is null order by o.createdOn asc", Tortlet.class);
         }
         q.setParameter("userid", userid);
         return q;
     }
 
-    public static TypedQuery<Tortlet> findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(String userid, Date createdOn, Boolean completed) {
+    public static TypedQuery<com.softrism.tortlets.domain.Tortlet> findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(String userid, Date createdOn, Boolean completed) {
         if (userid == null || userid.length() == 0) throw new IllegalArgumentException("The userid argument is required");
         if (createdOn == null) throw new IllegalArgumentException("The createdOn argument is required");
         if (completed == null) throw new IllegalArgumentException("The completed argument is required");
         EntityManager em = Tortlet.entityManager();
         TypedQuery<Tortlet> q = null;
-        // Two changes below, removed createdOn criteria because it should be handled in java controller and addressed completed=false is null.
-        if(completed){
+        if (completed) {
             q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.userid = :userid  AND o.completed = :completed", Tortlet.class);
             q.setParameter("completed", completed);
-        }else{
+        } else {
             q = em.createQuery("SELECT o FROM Tortlet AS o WHERE o.userid = :userid  AND o.completed is null", Tortlet.class);
         }
         q.setParameter("userid", userid);
-        //q.setParameter("createdOn", createdOn);
-
         return q;
     }
 }

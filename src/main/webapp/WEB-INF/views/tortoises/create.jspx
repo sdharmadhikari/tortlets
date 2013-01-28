@@ -3,7 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_softrism_tortlets_domain_Tortoise" modelAttribute="tortoise" path="/tortoises" render="${empty dependencies}" z="fBG0lNsTjsxPrarwQEOgakGPZY0=">
-        <field:select field="dream" id="c_com_softrism_tortlets_domain_Tortoise_dream" itemValue="id" items="${dreams}" path="/dreams" z="sbqiLki0SSeSfiY5Kyo9JqghOSM="/>
+        <field:select field="dream" id="c_com_softrism_tortlets_domain_Tortoise_dream" itemValue="id" items="${dreams}" path="/dreams" z=""/>
+        <!--field:input field="dream" id="c_com_softrism_tortlets_domain_Tortoise_dream" z="EPPvOvLJvzkwq9heAJ1/BJ4pxAk="/-->
         <field:input field="title" id="c_com_softrism_tortlets_domain_Tortoise_title" required="true" z="x7dEsLce+AaVue/npFZrftKewKE="/>
         <field:input field="frequency" id="c_com_softrism_tortlets_domain_Tortoise_frequency" render="false" z="user-managed"/>
         <field:textarea field="notes" id="c_com_softrism_tortlets_domain_Tortoise_notes" z="VPpDIoQTpsBJlJUCLO8huGndajI="/>

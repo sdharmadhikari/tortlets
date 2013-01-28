@@ -6,7 +6,8 @@
         <field:input field="title" id="c_com_softrism_tortlets_domain_Tortoise_title" required="true" z="x7dEsLce+AaVue/npFZrftKewKE="/>
         <field:input field="frequency" id="c_com_softrism_tortlets_domain_Tortoise_frequency" render="false" z="user-managed"/>
         <field:textarea field="notes" id="c_com_softrism_tortlets_domain_Tortoise_notes" z="VPpDIoQTpsBJlJUCLO8huGndajI="/>
-        <field:select field="dream" id="c_com_softrism_tortlets_domain_Tortoise_dream" itemValue="id" items="${dreams}" path="/dreams" z="sbqiLki0SSeSfiY5Kyo9JqghOSM="/>
+        <field:input field="dream" id="c_com_softrism_tortlets_domain_Tortoise_dream" render="false" z="user-managed"/>
+        <field:select field="dream" id="c_com_softrism_tortlets_domain_Tortoise_dream" itemValue="id" items="${dreams}" path="/dreams" z="imanaged"/>
         <field:datetime dateTimePattern="${tortoise_startdate_date_format}" field="startDate" id="c_com_softrism_tortlets_domain_Tortoise_startDate" z="EO0KJ7Xl/h2b3yMe9yF/bzZmS4w="/>
         <field:datetime dateTimePattern="${tortoise_enddate_date_format}" field="endDate" id="c_com_softrism_tortlets_domain_Tortoise_endDate" z="21C64GiGN8qIv9rL1fhiml7j7N8="/>
         <field:select field="status" id="c_com_softrism_tortlets_domain_Tortoise_status" items="${tortoisestatusenums}" path="tortoisestatusenums" z="HMnA9JHjg+ybhIH0NEyt4hMaSF4="/>
