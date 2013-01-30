@@ -1,0 +1,41 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ScoreTabCardPanel",
+        "designer|userAlias": "scoretabcardpanel",
+        "layout": "card"
+    },
+    "id": "ExtBox1-ext-gen58466",
+    "designerId": "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar8",
+                "docked": "top",
+                "title": "Your Score"
+            },
+            "designerId": "35d96897-69ce-4875-8b5f-283f45a0d2cf"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "e53cb628-906d-48d8-b301-66560b7eb214",
+            "masterInstanceId": "ExtBox1-ext-gen59293"
+        }
+    ]
+}

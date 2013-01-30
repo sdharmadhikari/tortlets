@@ -1,0 +1,49 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "IncompleteTortletsStore",
+        "designer|userAlias": "incompleteTortletsStore",
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "Tortlet",
+        "storeId": "IncompleteTortletsStore"
+    },
+    "id": "ExtBox1-ext-gen2756",
+    "designerId": "345107d0-a788-4507-9220-261ec811d61a",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "http://tortlets.cloudfoundry.com/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir",
+                "headers": null
+            },
+            "designerId": "45439594-47f2-42c4-a6a7-b8b5ffe071a7",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "useSimpleAccessors": false
+                    },
+                    "designerId": "207d21af-e6bb-4d25-9c67-1f2d2c2be027"
+                }
+            ]
+        }
+    ]
+}

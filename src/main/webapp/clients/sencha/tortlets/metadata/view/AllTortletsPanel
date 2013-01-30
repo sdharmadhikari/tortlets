@@ -1,0 +1,89 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AllTortletsPanel",
+        "designer|userAlias": "allTortletsPanel",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen48824",
+    "designerId": "3a789a20-fef4-4313-b085-1612d07320cf",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar7",
+                "docked": "top",
+                "title": "All Completed Tortlets"
+            },
+            "designerId": "9da951d0-8971-4600-acfa-95458d65ec06",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "allTortletsPanelBackButton",
+                        "designer|userClassName": "MyButton15",
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "824855a5-164e-42d3-8db8-3b00b6898ceb",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "allTortletsPanelDreamButton",
+                        "align": "right",
+                        "designer|userClassName": "MyButton16",
+                        "iconCls": "action",
+                        "iconMask": true,
+                        "text": ""
+                    },
+                    "designerId": "0f4465db-1d6b-439c-ba50-55992154f910",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "2239a94b-552b-400a-9891-b026a334d19d",
+            "masterInstanceId": "ExtBox1-ext-gen11968"
+        }
+    ]
+}

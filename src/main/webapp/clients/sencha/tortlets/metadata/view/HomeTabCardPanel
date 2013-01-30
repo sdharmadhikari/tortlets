@@ -1,0 +1,47 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "HomeTabCardPanel",
+        "designer|userAlias": "homeTabCardPanel",
+        "layout": "card"
+    },
+    "id": "ExtBox1-ext-gen11868",
+    "designerId": "c2bdc653-c608-400e-b209-ef000e5d7997",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "ca549a70-f78d-4a7c-a328-5aa94a693df7",
+            "masterInstanceId": "ExtBox1-ext-gen1795"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "0766883a-6b7a-428e-b2c3-7a88bc68f48d",
+            "masterInstanceId": "ExtBox1-ext-gen25443"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "084eb44d-be38-4655-91c1-b3548c4fe1ea",
+            "masterInstanceId": "ExtBox1-ext-gen8589"
+        }
+    ]
+}

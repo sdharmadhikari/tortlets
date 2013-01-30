@@ -1,0 +1,236 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DreamDetails",
+        "designer|userAlias": "dreamDetails"
+    },
+    "id": "ExtBox1-ext-gen25443",
+    "designerId": "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar3",
+                "designer|displayName": "DreamTitleBar",
+                "docked": "top",
+                "title": "Dream"
+            },
+            "designerId": "db9230b8-3d4b-4985-a332-eecb9a0ae3d9",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "dreamDetailsBackButton",
+                        "designer|userClassName": "MyButton8",
+                        "designer|displayName": "DreamDetailsBackButton",
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "22f810b3-cfce-45e8-8f7d-ca087e4fb45e",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet4",
+                "title": "I dream"
+            },
+            "designerId": "f03f3521-6792-4644-bb78-198870f75137",
+            "cn": [
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea1",
+                        "designer|displayName": "DreamTitleTextArea",
+                        "height": 74,
+                        "html": "",
+                        "label": null,
+                        "placeHolder": "Become healthy and loose weight.."
+                    },
+                    "designerId": "42eedf72-10fb-401d-996f-4d294ec6d9d1"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet5",
+                "designer|displayName": "DreamNotesFieldSet",
+                "title": "Bit More On This Dream"
+            },
+            "designerId": "3c2c5764-5008-45d2-86e7-85aead566c5b",
+            "cn": [
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea2",
+                        "designer|displayName": "WhyDreamTextArea",
+                        "height": 78,
+                        "width": 280,
+                        "label": null
+                    },
+                    "designerId": "c5ea08c1-e697-401c-b8e6-0cf08e04c3d6"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "dreamDetailsTortoises",
+                        "designer|userClassName": "MyButton12",
+                        "designer|displayName": "DreamDetailsTortoises",
+                        "ui": "forward",
+                        "text": "Tortoises"
+                    },
+                    "designerId": "4e6b4041-b148-4c15-b77d-010b80203633",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "selectfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySelectField1",
+                        "designer|displayName": "DreamColorSelectField",
+                        "label": "Dream Color",
+                        "labelWidth": "40%",
+                        "options": "[\r\n{text: 'White',  value: 'White'},\r\n{text: 'Yellow', value: 'Yellow'},\r\n{text: 'Blue',  value: 'Blue'},\r\n{text: 'Green',  value: 'Green'},\r\n{text: 'Red',  value: 'Red'},\r\n]"
+                    },
+                    "designerId": "75ed7e71-8d1c-4c47-ba32-ba8a669fda9a"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet6",
+                "title": null
+            },
+            "designerId": "83806c65-0127-46e9-94ac-f5cd5a986ad2",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "dreamDetailsStartDreaming",
+                        "designer|userClassName": "MyButton13",
+                        "designer|displayName": "DreamDetailsStartDreaming",
+                        "ui": "confirm",
+                        "text": "Make It Happen !"
+                    },
+                    "designerId": "7dbcbeb9-1f21-4080-9511-14c064886592",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet3",
+                "designer|displayName": "DreamDetailsDeleteFieldSet",
+                "title": null
+            },
+            "designerId": "3c298db0-c717-467d-a8d5-69241c6471d4",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "dreamDeleteButton",
+                        "designer|userClassName": "MyButton10",
+                        "designer|displayName": "DreamDeleteButton",
+                        "ui": "decline",
+                        "text": "I am done ! (Delete)"
+                    },
+                    "designerId": "f7569e87-0a20-431f-81b1-203ae453565b",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

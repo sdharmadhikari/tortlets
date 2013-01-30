@@ -1,0 +1,59 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": "[ { \"string\" : \"Aerobics class/cardio\" },\r\n { \"string\" : \"Strength training\" },\r\n { \"string\" : \"Check body weight\"}\r\n ]",
+        "designer|userClassName": "TortoiseList",
+        "designer|userAlias": "tortoiseList",
+        "designer|displayName": "TortoiseList",
+        "margin": null,
+        "ui": "round",
+        "onItemDisclosure": true
+    },
+    "configAlternates": {
+        "data": "array"
+    },
+    "id": "ExtBox1-ext-gen1925",
+    "designerId": "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "data",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div>{string}</div>\r",
+                    "<br/>\r",
+                    ".........<img src=\"images/tortoise_smaller.gif\"></img>.............!"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "configAlternates": {
+                "data": "array"
+            },
+            "designerId": "4033550c-a896-459f-ad4d-caf4924e0e06",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,285 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DreamsTabController"
+    },
+    "id": "ExtBox1-ext-gen30487",
+    "designerId": "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dreamListCardPanel",
+                "ref": "dreamListCardPanel",
+                "selector": "dreamListCardPanel"
+            },
+            "designerId": "0e003a23-372d-43a2-b5f7-849b3b6ded62"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDreamListItemTap",
+                "fn": "onDreamListItemTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().animateActiveItem(1, { type: 'slide'} );\r",
+                    ""
+                ],
+                "name": "itemtap",
+                "designer|targetType": "DreamList",
+                "designer|controlQuery": "dreamList"
+            },
+            "designerId": "6a472545-fa60-47a8-8b8f-00b688783d49"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDreamDetailsTortoisesButtonTap",
+                "fn": "onDreamDetailsTortoisesButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().animateActiveItem(2, {type : 'slide'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='dreamDetailsTortoises']"
+            },
+            "designerId": "9c51680b-4656-4e4d-b939-c8eeac2e2673"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDreamDetailsBackButtonTap",
+                "fn": "onDreamDetailsBackButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().animateActiveItem(0, { type : 'slide',direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='dreamDetailsBackButton']"
+            },
+            "designerId": "075d72c9-245d-4d97-8502-3706d8ebf5fb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDreamDetailsStartDreamingButtonTap",
+                "fn": "onDreamDetailsStartDreamingButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().animateActiveItem(0, {type : 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='dreamDetailsStartDreaming']"
+            },
+            "designerId": "c186816a-c7a5-442a-a87c-ac31985b4fec"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDreamDeleteButtonButtonTap",
+                "fn": "onDreamDeleteButtonButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().animateActiveItem(0, { type : 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='dreamDeleteButton']"
+            },
+            "designerId": "70fa4141-6d52-4614-b3ac-0aceef2caf90"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseListPanelBackButtonTap",
+                "fn": "onTortoiseListPanelBackButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().animateActiveItem(1, { type : 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='tortoiseListPanelBackButton']"
+            },
+            "designerId": "a0134396-bb69-46ab-95dd-b01b50aafafb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseListItemTap",
+                "fn": "onTortoiseListItemTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().\r",
+                    "animateActiveItem(4,{ type : 'slide'});"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "TortoiseList",
+                "designer|controlQuery": "tortoiseList"
+            },
+            "designerId": "cbe11079-1bc5-4c39-8c6d-32aa80e3894a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onAllTortletsPanelDreamButtonTap",
+                "fn": "onAllTortletsPanelDreamButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel()\r",
+                    ".animateActiveItem(0,{ type : 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='allTortletsPanelDreamButton']"
+            },
+            "designerId": "e4a862f1-7e07-489d-9218-dc7429d887ff"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseListPanelAddButtonTap",
+                "fn": "onTortoiseListPanelAddButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().\r",
+                    "    animateActiveItem(4, { type : 'slide', direction : 'down'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='tortoiseListPanelAddButton']"
+            },
+            "designerId": "a73eda5b-6679-4509-9d0e-28fc7012c772"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseDetailsSaveButtonTap",
+                "fn": "onTortoiseDetailsSaveButtonTap",
+                "implHandler": [
+                    "\r",
+                    "this.getDreamListCardPanel().\r",
+                    "animateActiveItem(2,{ type : 'slide', direction : 'up'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='tortoiseDetailsSaveButton']"
+            },
+            "designerId": "71a86a3a-f024-4828-a47b-c5f047ff4b45"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseDetailsBackButtonTap",
+                "fn": "onTortoiseDetailsBackButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().\r",
+                    "    animateActiveItem(2, {type : 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='tortoiseDetailsBackButton']"
+            },
+            "designerId": "edd5ef49-a3e4-491f-9dae-92d7aa9a1fd1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onAllTortletsPanelBackButtonTap",
+                "fn": "onAllTortletsPanelBackButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().\r",
+                    "    animateActiveItem( 4,{type : 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='allTortletsPanelBackButton']"
+            },
+            "designerId": "ef03b1de-909f-494e-af4d-397771740508"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseDetailsTortletsButtonTap",
+                "fn": "onTortoiseDetailsTortletsButtonTap",
+                "implHandler": [
+                    "this.getDreamListCardPanel().\r",
+                    "    animateActiveItem(3, {type : 'slide'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='tortoiseDetailsTortletsButton']"
+            },
+            "designerId": "0c23b93c-d6a8-422c-a277-105bdaeaa519"
+        }
+    ]
+}

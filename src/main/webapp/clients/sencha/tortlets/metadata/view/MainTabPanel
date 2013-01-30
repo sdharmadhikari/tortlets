@@ -1,0 +1,86 @@
+{
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainTabPanel",
+        "designer|userAlias": "mainTabPanel",
+        "designer|initialView": true
+    },
+    "id": "ExtBox1-ext-gen1831",
+    "designerId": "424d6af0-4bed-488c-bf22-6b9993519c5f",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Home",
+                "iconCls": "home"
+            },
+            "designerId": "bcc0ae67-91fd-4d26-85c0-65fe79f35217",
+            "masterInstanceId": "ExtBox1-ext-gen11868"
+        },
+        {
+            "type": "tabbar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTabBar",
+                "docked": "bottom"
+            },
+            "designerId": "e9ea8147-6b1e-44dc-af44-483e1ebd9577"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Dreams",
+                "iconCls": "star"
+            },
+            "designerId": "188ee7e3-3e56-4e96-ae66-e940ea174345",
+            "masterInstanceId": "ExtBox1-ext-gen26769"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Your Score",
+                "iconCls": "user"
+            },
+            "designerId": "44e7eaf8-c360-4200-9227-e36979155a10",
+            "masterInstanceId": "ExtBox1-ext-gen58466"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Help",
+                "iconCls": "info"
+            },
+            "designerId": "c681d4f7-2a2a-42e0-85ca-65a63c61e49c",
+            "masterInstanceId": "ExtBox1-ext-gen61739"
+        }
+    ]
+}

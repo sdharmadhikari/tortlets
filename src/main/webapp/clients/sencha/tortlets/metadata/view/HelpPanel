@@ -1,0 +1,34 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "HelpPanel",
+        "designer|userAlias": "helpPanel",
+        "data": null,
+        "html": "You keep on self-declaring your dreams. I want to do this, I want to do that, where are you now ? Do you want win like TORToise against that hare ? Use TORTlets and realize your dreams !  <br/> Did you really try as you promised yourself ? You said, I will do this every day . You said, I would do it at least once a week. Did you really do it ? <br/> What inspires you ? Calvin Coolidge words “Nothing in this world can take a place of persistence, talent will not ! Persistence and determination alone are omnipotent “ Or is hare-tortoise story is enough for you ?  <br/> TORTlets lets you find out how much you just talk and how much you really on it !  <br/> <ul> <li>Declare your dream to yourself.</li> <li>Create a TORToise to win for your dream.</li> <li>The app will automatically generate TORTlets and will be ready for you every morning.</li> <li>When you are done with TORTlet, mark it complete.</li> <li>If you miss TORTlet, you just have 7 days to catch up. Or miss it.</li> <li>If you have too many TORTlets pending, sacrifice a weekend and complete it. If you have that camping over weekend, take a leave. Don’t sleep like hare ! </li> <li>The app will show you how much you were tortoise or hare ! </li> <br/> Whether you are college student, home-maker mom or professional. You have dreams, Do It !  <br/> Want to share your dream with close friend ? Want to get a spank from a friend for not doing it ? Send email to need-friends-help@softrism.com ",
+        "styleHtmlContent": true,
+        "scrollable": "vertical"
+    },
+    "id": "ExtBox1-ext-gen61739",
+    "designerId": "0da20323-db08-47ce-9741-64ded49ccb84",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar9",
+                "docked": "top",
+                "title": "What Are Tortlets"
+            },
+            "designerId": "04f4dd2a-76f8-4e70-8351-598b6fcff7e1"
+        }
+    ]
+}

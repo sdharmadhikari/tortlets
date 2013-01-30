@@ -1,0 +1,16 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainScorePanel",
+        "designer|userAlias": "mainScorePanel",
+        "html": "<h1> How Much You Say and How Much You Do !</h1>",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen59293",
+    "designerId": "0e3fa1af-7c66-4370-bf0e-45af7191d28e"
+}

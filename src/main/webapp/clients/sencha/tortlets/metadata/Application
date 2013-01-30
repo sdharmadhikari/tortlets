@@ -1,0 +1,43 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Tortlet"
+        ],
+        "stores": [
+            "IncompleteTortletsStore"
+        ],
+        "views": [
+            "MainTabPanel",
+            "HomePage",
+            "TortletsDetails",
+            "TortoiseDetails",
+            "DreamDetails",
+            "DreamListPanel",
+            "CarouselDreamPanel",
+            "DreamCaraoselCard",
+            "TortoiseListPanel",
+            "HomeTabCardPanel",
+            "TortletsList",
+            "DreamListCardPanel",
+            "DreamList",
+            "TortoiseList",
+            "AllTortletsPanel",
+            "ScoreTabCardPanel",
+            "MainScorePanel",
+            "HelpPanel"
+        ],
+        "name": "MyApp",
+        "controllers": [
+            "HomeTabController",
+            "DreamsTabController"
+        ]
+    },
+    "id": "ExtBox1-ext-gen1500",
+    "designerId": "application"
+}

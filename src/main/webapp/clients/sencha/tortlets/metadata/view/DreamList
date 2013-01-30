@@ -1,0 +1,59 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": "[ { \"string\" : \"Be Healthy, Loose Weight By 20 pounds\" },\r\n { \"string\" : \"Start my own independent business\" },\r\n { \"string\" : \"Find my dream home in the heart of city\"}\r\n ]",
+        "designer|userClassName": "DreamList",
+        "designer|userAlias": "dreamList",
+        "designer|displayName": "DreamList",
+        "margin": null,
+        "ui": "round",
+        "onItemDisclosure": true
+    },
+    "configAlternates": {
+        "data": "array"
+    },
+    "id": "ExtBox1-ext-gen1871",
+    "designerId": "3f058fa0-cbf4-4a61-a122-32c6457d8ec4",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "data",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div>{string}</div>\r",
+                    "<br/>\r",
+                    ".........<img src=\"images/tortoise_smaller.gif\"></img>.............!"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "configAlternates": {
+                "data": "array"
+            },
+            "designerId": "5f23be3f-3745-4d2a-9ef2-a383a02992be",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

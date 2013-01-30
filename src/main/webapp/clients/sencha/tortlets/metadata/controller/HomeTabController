@@ -1,0 +1,141 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "HomeTabController"
+    },
+    "id": "ExtBox1-ext-gen6082",
+    "designerId": "f349d5fa-f50b-405e-b80f-e46f09bf9967",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onHomePageDreamButtonTap",
+                "fn": "onHomePageDreamButtonTap",
+                "implHandler": [
+                    "console.log(1);\r",
+                    "this.getHomeTabCardPanel().animateActiveItem(this.getDreamDetails(), { type: 'slide'});\r",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='homePageDreamButton']"
+            },
+            "designerId": "f9e7f298-2d53-44a8-b259-bbfb2698deaf"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "homeTabCardPanel",
+                "ref": "homeTabCardPanel",
+                "selector": "homeTabCardPanel"
+            },
+            "designerId": "345e27f2-eaae-4385-ab6f-bee6c0fa579f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dreamDetails",
+                "ref": "dreamDetails",
+                "selector": "dreamDetails"
+            },
+            "designerId": "c36fe289-8522-4e2e-a835-2be6b8e037db"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortletsListItemTap",
+                "fn": "onTortletsListItemTap",
+                "implHandler": [
+                    "this.getHomeTabCardPanel().animateActiveItem(3, { type: 'slide'});"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "TortletsList",
+                "designer|controlQuery": "tortletsList"
+            },
+            "designerId": "1acb295d-6f6b-429c-9e32-2ae72f6c3aef"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortletsDetailsBackButtonTap",
+                "fn": "onTortletsDetailsBackButtonTap",
+                "implHandler": [
+                    "this.getHomeTabCardPanel().animateActiveItem(0, { type: 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='tortletsDetailsBackButton']"
+            },
+            "designerId": "f9954aa4-486a-4ba8-bbe9-7f0df46d7c9e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDreamDetailBackButtonTap",
+                "fn": "onDreamDetailBackButtonTap",
+                "implHandler": [
+                    "this.getHomeTabCardPanel().animateActiveItem(0, { type: 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='dreamDetailsBackButton']"
+            },
+            "designerId": "5d03803e-69ad-4808-921b-00a2af3bf411"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortletDetailsSaveButtonTap",
+                "fn": "onTortletDetailsSaveButtonTap",
+                "implHandler": [
+                    "this.getHomeTabCardPanel().\r",
+                    "    animateActiveItem(0,{type : 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button"
+            },
+            "designerId": "02d9775a-ead2-4cad-9120-9ef137056185"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Tortlet",
+        "designer|userAlias": "tortlet"
+    },
+    "id": "ExtBox1-ext-gen3256",
+    "designerId": "98103327-6270-4ea5-9055-efe31b2727a6",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "title"
+            },
+            "designerId": "1b51fab2-4b61-40c4-b82c-69b015e76a8d"
+        }
+    ]
+}

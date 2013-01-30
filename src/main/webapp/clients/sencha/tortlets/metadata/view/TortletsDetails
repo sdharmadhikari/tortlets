@@ -1,0 +1,155 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TortletsDetails",
+        "designer|userAlias": "tortletsDetails"
+    },
+    "id": "ExtBox1-ext-gen8589",
+    "designerId": "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",
+    "cn": [
+        {
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLabel",
+                "html": "Read Spring Newsletter to realize my dream - Become Techincally Strong",
+                "margin": 10
+            },
+            "designerId": "d18152e7-7a49-4a02-ad4e-0b51d0eea3fd"
+        },
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar1",
+                "docked": "top",
+                "title": "Tortlet"
+            },
+            "designerId": "32a67882-8f70-4574-a1ae-6790eb991159",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortletsDetailsBackButton",
+                        "designer|userClassName": "MyButton3",
+                        "designer|displayName": "TortletsDetailBack",
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "52aaa77a-0cf2-448d-b873-0fc7ce3f4c69",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortletDetailsSaveButton",
+                        "align": "right",
+                        "designer|userClassName": "MyButton4",
+                        "text": "Save"
+                    },
+                    "designerId": "07af0886-2d9e-453b-93ad-7485abd11357",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet",
+                "designer|displayName": "CompletedFieldSet",
+                "margin": 10,
+                "title": null
+            },
+            "designerId": "ec25368c-c38b-47d2-a0ec-3a872bfe971d",
+            "cn": [
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField",
+                        "designer|displayName": "CompletedToggleField",
+                        "margin": null,
+                        "label": "Completed",
+                        "labelWidth": "50%"
+                    },
+                    "designerId": "67184b3b-04cc-46eb-9b47-a5c4bc36ed28"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet1",
+                "designer|displayName": "TortoiseDetailsFieldSet",
+                "margin": 10,
+                "title": null
+            },
+            "designerId": "c34cb1eb-d7d0-44e8-a708-e85804393db8",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "ui": "plain",
+                        "text": "Tortoise Details"
+                    },
+                    "designerId": "a3546506-2e48-4b6b-bbae-cdd39ccb6ead"
+                }
+            ]
+        }
+    ]
+}

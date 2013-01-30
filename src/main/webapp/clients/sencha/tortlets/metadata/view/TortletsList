@@ -1,0 +1,49 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": null,
+        "designer|userClassName": "TortletsList",
+        "designer|userAlias": "tortletsList",
+        "designer|displayName": "TortletsList",
+        "docked": null,
+        "ui": "round",
+        "layout": "fit",
+        "store": "IncompleteTortletsStore",
+        "onItemDisclosure": true
+    },
+    "configAlternates": {
+        "data": "array"
+    },
+    "id": "ExtBox1-ext-gen11968",
+    "designerId": "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "data",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div>{title}</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "9d650fb1-5b46-4a79-8f11-f6cfa818529d"
+        }
+    ]
+}

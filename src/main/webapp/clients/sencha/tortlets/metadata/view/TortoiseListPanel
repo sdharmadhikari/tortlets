@@ -1,0 +1,90 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TortoiseListPanel",
+        "designer|userAlias": "tortoiselistpanel",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen3761",
+    "designerId": "c717694e-2e8e-4855-ba93-2500aa9367bf",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar4",
+                "designer|displayName": "TortoiseListPanelTitleBar",
+                "docked": "top",
+                "title": "Tortoises"
+            },
+            "designerId": "c92b0635-d55f-4fa0-908e-d9a377bb3d0d",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseListPanelBackButton",
+                        "designer|userClassName": "MyButton2",
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "3a3f1956-9239-43a0-90ec-9643f018b018",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseListPanelAddButton",
+                        "align": "right",
+                        "designer|userClassName": "MyButton17",
+                        "iconCls": "add",
+                        "iconMask": true,
+                        "text": ""
+                    },
+                    "designerId": "130a0383-ddfc-45f3-a2ca-f9c209c9c6cf",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "9812fcd3-ef9d-4ad3-a1ff-c26aa1a9be08",
+            "masterInstanceId": "ExtBox1-ext-gen1925"
+        }
+    ]
+}

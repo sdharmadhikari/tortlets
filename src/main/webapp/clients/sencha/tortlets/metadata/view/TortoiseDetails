@@ -1,0 +1,313 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TortoiseDetails",
+        "designer|userAlias": "tortoisedetails",
+        "layout": "vbox"
+    },
+    "id": "ExtBox1-ext-gen16443",
+    "designerId": "dca854bb-a33a-4137-aef2-90d43399589d",
+    "cn": [
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar1",
+                "docked": "top",
+                "title": "Tortoise"
+            },
+            "designerId": "d70911fe-a2c2-4979-8f11-22f2a3864fcf",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseDetailsBackButton",
+                        "designer|userClassName": "MyButton3",
+                        "designer|displayName": "TortletsDetailBack",
+                        "ui": "",
+                        "iconAlign": null,
+                        "iconCls": "arrow_up",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "23149791-3e80-4e50-a961-89f2ee8a27c0",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseDetailsTortletsButton",
+                        "align": "right",
+                        "designer|userClassName": "MyButton18",
+                        "text": "Tortlets"
+                    },
+                    "designerId": "6632b5fa-c613-49f9-bed6-be86ba16b19f",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "textareafield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTextArea",
+                "designer|displayName": "TortoiseTitle",
+                "height": 65,
+                "html": null,
+                "label": null,
+                "labelWidth": "0%",
+                "placeHolder": "Workout In Gym or Go Jogging",
+                "maxRows": 2
+            },
+            "designerId": "36659fb2-3e42-4150-b471-45a137c54e00"
+        },
+        {
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLabel",
+                "designer|displayName": "DreamTitle",
+                "html": "To Realize My Dream",
+                "margin": null
+            },
+            "designerId": "a827e9ba-7d71-4b70-9f4a-1f767b19122b"
+        },
+        {
+            "type": "selectfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySelectField",
+                "designer|displayName": "DreamSelect",
+                "label": "Dream",
+                "options": "[\r\n                    {\r\n                        text: 'Become Healthy, Loose Weight',\r\n                        value: '1'\r\n                    },\r\n                    {\r\n                        text: 'Start my own business',\r\n                        value: '1'\r\n                    }\r\n                ]"
+            },
+            "configAlternates": {
+                "data": "array"
+            },
+            "designerId": "e18983aa-bb29-425b-a074-afe7e83f2a79",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet6",
+                "designer|displayName": "TortoiseDetailsRepeatFieldSet",
+                "title": "Do It On Every"
+            },
+            "designerId": "3254f6bf-be79-4da5-a4ac-b697fcb19929",
+            "cn": [
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField1",
+                        "designer|displayName": "MondayToggle",
+                        "label": "Monday",
+                        "labelWidth": "40%"
+                    },
+                    "designerId": "21ef1e3f-9df2-4995-9d5f-c7d7457d7db4"
+                },
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField1",
+                        "designer|displayName": "TuesdayToggle",
+                        "label": "Tuesday",
+                        "labelWidth": "40%"
+                    },
+                    "designerId": "9f44f8d1-b9d3-4ecc-98fe-bc28e76d04fb"
+                },
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField1",
+                        "designer|displayName": "WednesdayToggle",
+                        "label": "Wednesday",
+                        "labelWidth": "40%"
+                    },
+                    "designerId": "6b64c5cd-3f4a-4220-a63b-4fee2105698b"
+                },
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField1",
+                        "designer|displayName": "ThursdayToggle",
+                        "label": "Thursday",
+                        "labelWidth": "40%"
+                    },
+                    "designerId": "8a10e2d3-cf1e-455b-b454-54ce02734c45"
+                },
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField1",
+                        "designer|displayName": "FridayToggle",
+                        "label": "Friday",
+                        "labelWidth": "40%"
+                    },
+                    "designerId": "45fcd68d-c1e6-484a-a77e-535fb868b02b"
+                },
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField1",
+                        "designer|displayName": "SaturdayToggle",
+                        "label": "Saturday",
+                        "labelWidth": "40%"
+                    },
+                    "designerId": "1f4a08ea-d3ed-427b-94f6-57f6e1b1078b"
+                },
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField1",
+                        "designer|displayName": "SundayToggle",
+                        "label": "Sunday",
+                        "labelWidth": "40%"
+                    },
+                    "designerId": "595acfc2-4f79-45ad-a374-c8bf81a46a75"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet7",
+                "designer|displayName": "TortoiseSaveFieldSet",
+                "title": null
+            },
+            "designerId": "18481e8a-67de-46bb-9139-3ef5d65c09fc",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseDetailsSaveButton",
+                        "designer|userClassName": "MyButton4",
+                        "ui": "confirm",
+                        "text": "Save"
+                    },
+                    "designerId": "e6d4a749-5930-4c01-b4cf-b90dc4e350c7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton11",
+                "ui": "decline",
+                "text": "I am Done, Stop The Tortoise.."
+            },
+            "designerId": "fa9fc892-935d-47b2-a560-b1ad04009981"
+        }
+    ]
+}
