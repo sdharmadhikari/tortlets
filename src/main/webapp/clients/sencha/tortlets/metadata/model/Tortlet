@@ -21,9 +21,38 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "field",
-                "name": "title"
+                "name": "title",
+                "type": "string"
             },
             "designerId": "1b51fab2-4b61-40c4-b82c-69b015e76a8d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "completed",
+                "type": "boolean"
+            },
+            "designerId": "a038140b-4388-48b9-9c00-1f96ca4e2171"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "notes",
+                "type": "string"
+            },
+            "designerId": "0b8d2dd5-2cf7-49c4-ae44-c748f341f459"
         }
     ]
 }

@@ -1,0 +1,63 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TodaysTortletsStore",
+        "autoLoad": true,
+        "autoSync": false,
+        "model": "Tortlet",
+        "storeId": "todaysTortletsStore"
+    },
+    "id": "ExtBox1-ext-gen30632",
+    "designerId": "15eb7579-b7e5-4a31-96e4-4dd8481e7568",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{create: \"POST\", read: \"GET\", update: \"PUT\", destroy : \"GET\"}"
+                ],
+                "designer|userClassName": "MyRestProxy",
+                "enablePagingParams": false,
+                "url": "http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir",
+                "headers": null,
+                "appendId": false
+            },
+            "configAlternates": {
+                "actionMethods": "object"
+            },
+            "designerId": "ce9b222a-0e3e-438f-9bb9-23f8d08eb0ee",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "actionMethods",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "useSimpleAccessors": false
+                    },
+                    "designerId": "8a3dcec9-3544-4be3-a0ec-4f49cd20b814"
+                }
+            ]
+        }
+    ]
+}

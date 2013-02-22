@@ -23,10 +23,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/tortlets")
 @Controller
@@ -167,6 +164,41 @@ public class TortletController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCompleted(userid, completed == null ? Boolean.FALSE : completed).getResultList()), headers, HttpStatus.OK);
+    }
+
+    @RequestMapping( value = "/json",method = RequestMethod.PUT, params = "find=ByUseridEqualsAndCompleted", headers = "Accept=application/json")
+    public ResponseEntity<String> myUpdateFromJson(@RequestBody String json) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+        Tortlet tortlet = Tortlet.fromJsonToTortlet(json);
+
+        Tortlet oldTortlet = populateOldTortlet(tortlet);
+
+        if (oldTortlet.merge() == null) {
+            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<String>(headers, HttpStatus.OK);
+    }
+
+    @RequestMapping(params = "find=ByUseridEqualsAndCreatedOnEqualsAndCompleted", headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String> jsonFindTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(@RequestParam("userid") String userid, @RequestParam("createdOn") @DateTimeFormat(style = "M-") Date createdOn, @RequestParam(value = "completed", required = false) Boolean completed) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(userid, createdOn, completed == null ? Boolean.FALSE : completed).getResultList()), headers, HttpStatus.OK);
+    }
+    private Tortlet populateOldTortlet(Tortlet tortlet) {
+
+        Tortlet oldTortlet = Tortlet.findTortlet(tortlet.getId());
+        oldTortlet.setTitle(tortlet.getTitle());
+        oldTortlet.setNotes(tortlet.getNotes());
+        if(tortlet.getCompleted() == null || tortlet.getCompleted().booleanValue() == false){
+            oldTortlet.setCompleted(null);
+        }else{
+            oldTortlet.setCompleted(Boolean.TRUE);
+        }
+
+        return oldTortlet;
     }
 
 }

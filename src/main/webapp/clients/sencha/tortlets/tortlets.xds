@@ -196,6 +196,22 @@
                 "app/model/Tortlet.js"
             ],
             "className": "Tortlet"
+        },
+        "15eb7579-b7e5-4a31-96e4-4dd8481e7568": {
+            "paths": [
+                "metadata/store/TodaysTortletsStore",
+                "app/store/override/TodaysTortletsStore.js",
+                "app/store/TodaysTortletsStore.js"
+            ],
+            "className": "TodaysTortletsStore"
+        },
+        "8162b955-c1db-4f2f-bcaa-753970ca90eb": {
+            "paths": [
+                "metadata/view/TodaysTortletList",
+                "app/view/override/TodaysTortletList.js",
+                "app/view/TodaysTortletList.js"
+            ],
+            "className": "TodaysTortletList"
         }
     },
     "viewOrderMap": {
@@ -206,6 +222,7 @@
             "811d49e0-92af-414a-9025-4cb5ec728652",
             "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",
             "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0",
+            "8162b955-c1db-4f2f-bcaa-753970ca90eb",
             "dca854bb-a33a-4137-aef2-90d43399589d",
             "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0",
             "3f058fa0-cbf4-4a61-a122-32c6457d8ec4",
@@ -220,7 +237,8 @@
             "0da20323-db08-47ce-9741-64ded49ccb84"
         ],
         "store": [
-            "345107d0-a788-4507-9220-261ec811d61a"
+            "345107d0-a788-4507-9220-261ec811d61a",
+            "15eb7579-b7e5-4a31-96e4-4dd8481e7568"
         ],
         "controller": [
             "f349d5fa-f50b-405e-b80f-e46f09bf9967",

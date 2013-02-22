@@ -35,7 +35,7 @@ Ext.define('MyApp.view.HomeTabCardPanel', {
                 xtype: 'dreamDetails'
             },
             {
-                xtype: 'tortletsDetails'
+                xtype: 'tortletDetails'
             }
         ]
     }

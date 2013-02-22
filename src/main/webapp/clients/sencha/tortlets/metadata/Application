@@ -10,7 +10,8 @@
             "Tortlet"
         ],
         "stores": [
-            "IncompleteTortletsStore"
+            "IncompleteTortletsStore",
+            "TodaysTortletsStore"
         ],
         "views": [
             "MainTabPanel",
@@ -30,7 +31,8 @@
             "AllTortletsPanel",
             "ScoreTabCardPanel",
             "MainScorePanel",
-            "HelpPanel"
+            "HelpPanel",
+            "TodaysTortletList"
         ],
         "name": "MyApp",
         "controllers": [
@@ -39,5 +41,35 @@
         ]
     },
     "id": "ExtBox1-ext-gen1500",
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "if(window.location.host === 'localhost:8080' || window.location.host === ''){\r",
+                    "    \r",
+                    "    //IncompleteTortletsStore\r",
+                    "    var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');\r",
+                    "    var localProxy = incompleteTortletsStore.getProxy();\r",
+                    "    localProxy.setUrl('http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir');\r",
+                    "    \r",
+                    "    //Dreamstore\r",
+                    "    //var dreamStore = Ext.getStore('dreamStore');\r",
+                    "    //localProxy = dreamStore.getProxy();  \r",
+                    "    //localProxy.setUrl('http://localhost:8080/tortlets/dreams/json?find=ByUseridEquals&userid=sudhir');\r",
+                    "\r",
+                    "}"
+                ]
+            },
+            "designerId": "76f38c4f-ef83-4310-8f7f-16cacff11236"
+        }
+    ]
 }

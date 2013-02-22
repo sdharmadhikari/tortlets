@@ -15,13 +15,15 @@
 
 Ext.define('MyApp.view.TortletsDetails', {
     extend: 'Ext.form.Panel',
-    alias: 'widget.tortletsDetails',
+    alias: 'widget.tortletDetails',
 
     config: {
+        name: 'tortletDetailsName',
+        id: 'tortletsDetailsId',
         items: [
             {
                 xtype: 'label',
-                html: 'Read Spring Newsletter to realize my dream - Become Techincally Strong',
+                html: '',
                 margin: 10
             },
             {
@@ -44,13 +46,23 @@ Ext.define('MyApp.view.TortletsDetails', {
                 ]
             },
             {
+                xtype: 'textfield',
+                label: 'Title',
+                name: 'title'
+            },
+            {
+                xtype: 'textareafield',
+                label: 'Notes',
+                name: 'notes'
+            },
+            {
                 xtype: 'fieldset',
                 margin: 10,
                 items: [
                     {
                         xtype: 'togglefield',
                         label: 'Completed',
-                        labelWidth: '50%'
+                        name: 'completed'
                     }
                 ]
             },

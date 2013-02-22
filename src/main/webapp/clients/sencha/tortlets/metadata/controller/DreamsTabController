@@ -273,7 +273,7 @@
                 "fn": "onTortoiseDetailsTortletsButtonTap",
                 "implHandler": [
                     "this.getDreamListCardPanel().\r",
-                    "    animateActiveItem(3, {type : 'slide'});"
+                    "animateActiveItem(3, {type : 'slide'});"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",

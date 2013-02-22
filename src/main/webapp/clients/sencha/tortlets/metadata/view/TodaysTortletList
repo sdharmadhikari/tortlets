@@ -1,0 +1,50 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": null,
+        "designer|userClassName": "TodaysTortletList",
+        "designer|userAlias": "todayTortletsList",
+        "designer|displayName": "TortletsList",
+        "docked": null,
+        "ui": "round",
+        "layout": "fit",
+        "emptyText": "Great ! You are done for today !",
+        "store": "todaysTortletsStore",
+        "onItemDisclosure": true
+    },
+    "configAlternates": {
+        "data": "array"
+    },
+    "id": "ExtBox1-ext-gen31234",
+    "designerId": "8162b955-c1db-4f2f-bcaa-753970ca90eb",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "data",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div>Today - {title}</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "c430cd4f-2fd3-478f-8d35-9b81f613b5e7"
+        }
+    ]
+}

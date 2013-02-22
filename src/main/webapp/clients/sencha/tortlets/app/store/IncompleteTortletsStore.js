@@ -23,12 +23,20 @@ Ext.define('MyApp.store.IncompleteTortletsStore', {
 
     config: {
         autoLoad: true,
-        autoSync: true,
+        autoSync: false,
         model: 'MyApp.model.Tortlet',
-        storeId: 'IncompleteTortletsStore',
+        storeId: 'incompleteTortletsStore',
         proxy: {
             type: 'rest',
-            url: 'http://tortlets.cloudfoundry.com/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir',
+            actionMethods: {
+                create: 'POST',
+                read: 'GET',
+                update: 'PUT',
+                destroy: 'GET'
+            },
+            enablePagingParams: false,
+            url: 'http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir',
+            appendId: false,
             reader: {
                 type: 'json',
                 useSimpleAccessors: false

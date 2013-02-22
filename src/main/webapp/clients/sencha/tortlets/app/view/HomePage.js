@@ -18,7 +18,8 @@ Ext.define('MyApp.view.HomePage', {
     alias: 'widget.homePage',
 
     requires: [
-        'MyApp.view.TortletsList'
+        'MyApp.view.TortletsList',
+        'MyApp.view.TodaysTortletList'
     ],
 
     config: {
@@ -71,10 +72,13 @@ Ext.define('MyApp.view.HomePage', {
                         items: [
                             {
                                 xtype: 'button',
+                                name: 'showTodayListButton',
+                                pressed: true,
                                 text: 'Today'
                             },
                             {
                                 xtype: 'button',
+                                name: 'showPendingListButton',
                                 text: 'Pending'
                             }
                         ]
@@ -90,7 +94,12 @@ Ext.define('MyApp.view.HomePage', {
                 },
                 items: [
                     {
-                        xtype: 'tortletsList'
+                        xtype: 'tortletsList',
+                        hidden: true
+                    },
+                    {
+                        xtype: 'todayTortletsList',
+                        hidden: false
                     }
                 ]
             }

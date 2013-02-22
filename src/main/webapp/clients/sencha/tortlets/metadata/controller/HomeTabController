@@ -22,7 +22,7 @@
                 "designer|userClassName": "onHomePageDreamButtonTap",
                 "fn": "onHomePageDreamButtonTap",
                 "implHandler": [
-                    "console.log(1);\r",
+                    "console.log('inside onHomePageDreamButtonTap');\r",
                     "this.getHomeTabCardPanel().animateActiveItem(this.getDreamDetails(), { type: 'slide'});\r",
                     ""
                 ],
@@ -71,7 +71,12 @@
                 "designer|userClassName": "onTortletsListItemTap",
                 "fn": "onTortletsListItemTap",
                 "implHandler": [
-                    "this.getHomeTabCardPanel().animateActiveItem(3, { type: 'slide'});"
+                    "\r",
+                    "var tortletDetails = this.getTortletDetails();\r",
+                    "\r",
+                    "tortletDetails.setRecord(record);\r",
+                    "\r",
+                    "this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "TortletsList",
@@ -128,14 +133,125 @@
                 "designer|userClassName": "onTortletDetailsSaveButtonTap",
                 "fn": "onTortletDetailsSaveButtonTap",
                 "implHandler": [
+                    "var tortletDetailsForm = this.getTortletDetails();\r",
+                    "console.log('inside onSaveButton record id' + tortletDetailsForm.getRecord());\r",
+                    "\r",
+                    "/// Populate record from form. populateTortletRecordFromForm()\r",
+                    "var record = tortletDetailsForm.getRecord();\r",
+                    "var newValues = tortletDetailsForm.getValues();\r",
+                    "record.set('title', newValues.title);\r",
+                    "record.set('notes', newValues.notes);\r",
+                    "\r",
+                    "if(record.get('completed') === true){\r",
+                    "  record.set('completed', newValues.completed);\r",
+                    "}\r",
+                    "\r",
+                    "//////////////////////////////////////////////\r",
+                    "var store = Ext.getStore(\"incompleteTortletsStore\");\r",
+                    "store.sync();\r",
+                    "\r",
+                    "if(record.get('completed') === true){\r",
+                    "    store.remove(record); // Change \"destroy\" method to GET from DELETE\r",
+                    "    store.sync();\r",
+                    "}\r",
+                    "\r",
+                    "\r",
                     "this.getHomeTabCardPanel().\r",
-                    "    animateActiveItem(0,{type : 'slide', direction : 'right'});"
+                    "animateActiveItem(0,{type : 'slide', direction : 'right'});"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button"
+                "designer|controlQuery": "button[name='tortletDetailsSaveButton']"
             },
             "designerId": "02d9775a-ead2-4cad-9120-9ef137056185"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tortletDetails",
+                "ref": "tortletDetails",
+                "selector": "tortletDetails"
+            },
+            "designerId": "c90cbdcd-24d1-46c9-9513-22e17c7db37b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onShowTodayListButtonTap",
+                "fn": "onShowTodayListButtonTap",
+                "implHandler": [
+                    "console.log('showTodayListButton');\r",
+                    "\r",
+                    "Ext.getStore('todaysTortletsStore').load();\r",
+                    "this.getTortletsList().hide();\r",
+                    "this.getTodayTortletsList().show();\r",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='showTodayListButton']"
+            },
+            "designerId": "425672a8-71ac-4627-b8d6-641f835c3f1c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onShowPendingListButtonTap",
+                "fn": "onShowPendingListButtonTap",
+                "implHandler": [
+                    "console.log('showPendingListButton');\r",
+                    "Ext.getStore('incompleteTortletsStore').load();\r",
+                    "this.getTortletsList().show();\r",
+                    "this.getTodayTortletsList().hide();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='showPendingListButton']"
+            },
+            "designerId": "9a7a6816-b19f-4969-a75e-a7831250a2ed"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "todayTortletsList",
+                "ref": "todayTortletsList",
+                "selector": "todayTortletsList"
+            },
+            "designerId": "2cff6baa-9e3a-49ed-86a3-22483b7dc5d9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tortletsList",
+                "ref": "tortletsList",
+                "selector": "tortletsList"
+            },
+            "designerId": "283f5bed-9b38-4908-bc8d-86b88ab3f73e"
         }
     ]
 }

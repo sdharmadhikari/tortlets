@@ -20,7 +20,16 @@ Ext.define('MyApp.model.Tortlet', {
     config: {
         fields: [
             {
-                name: 'title'
+                name: 'title',
+                type: 'string'
+            },
+            {
+                name: 'completed',
+                type: 'boolean'
+            },
+            {
+                name: 'notes',
+                type: 'string'
             }
         ]
     }

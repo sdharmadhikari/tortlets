@@ -122,11 +122,20 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "name": "showTodayListButton",
+                                "pressed": true,
                                 "designer|userClassName": "MyButton1",
                                 "designer|displayName": "TodayTortlets",
                                 "text": "Today"
                             },
-                            "designerId": "bad4ff33-54f8-4d45-b3e5-da5332f3d146"
+                            "designerId": "bad4ff33-54f8-4d45-b3e5-da5332f3d146",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "name",
+                                    "type": "string"
+                                }
+                            ]
                         },
                         {
                             "type": "button",
@@ -136,11 +145,19 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "name": "showPendingListButton",
                                 "designer|userClassName": "MyButton2",
                                 "designer|displayName": "PendingTortlets",
                                 "text": "Pending"
                             },
-                            "designerId": "72a97f0c-a350-463c-89a2-4088dbd0fa98"
+                            "designerId": "72a97f0c-a350-463c-89a2-4088dbd0fa98",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "name",
+                                    "type": "string"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -170,8 +187,24 @@
                         "type": "array"
                     },
                     "codeClass": null,
+                    "userConfig": {
+                        "hidden": true
+                    },
                     "designerId": "6f2ff861-3109-4305-9752-46dc323c5d09",
                     "masterInstanceId": "ExtBox1-ext-gen11968"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": false
+                    },
+                    "designerId": "85593b68-b2cc-445d-93d6-20a843a137ad",
+                    "masterInstanceId": "ExtBox1-ext-gen31234"
                 }
             ]
         }

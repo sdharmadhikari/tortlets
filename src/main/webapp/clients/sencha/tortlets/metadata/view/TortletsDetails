@@ -6,11 +6,20 @@
     },
     "codeClass": null,
     "userConfig": {
+        "name": "tortletDetailsName",
         "designer|userClassName": "TortletsDetails",
-        "designer|userAlias": "tortletsDetails"
+        "designer|userAlias": "tortletDetails",
+        "id": "tortletsDetailsId"
     },
     "id": "ExtBox1-ext-gen8589",
     "designerId": "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "name",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "label",
@@ -21,7 +30,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyLabel",
-                "html": "Read Spring Newsletter to realize my dream - Become Techincally Strong",
+                "html": "",
                 "margin": 10
             },
             "designerId": "d18152e7-7a49-4a02-ad4e-0b51d0eea3fd"
@@ -88,6 +97,35 @@
             ]
         },
         {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTextField1",
+                "designer|displayName": "TortletTitle",
+                "label": "Title",
+                "name": "title"
+            },
+            "designerId": "8748b3e4-9e45-45de-bba1-c171a736a4ac"
+        },
+        {
+            "type": "textareafield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTextArea3",
+                "label": "Notes",
+                "name": "notes"
+            },
+            "designerId": "33c782fc-6985-4e3d-8388-89642aebe3b3"
+        },
+        {
             "type": "fieldset",
             "reference": {
                 "name": "items",
@@ -114,7 +152,8 @@
                         "designer|displayName": "CompletedToggleField",
                         "margin": null,
                         "label": "Completed",
-                        "labelWidth": "50%"
+                        "labelWidth": null,
+                        "name": "completed"
                     },
                     "designerId": "67184b3b-04cc-46eb-9b47-a5c4bc36ed28"
                 }

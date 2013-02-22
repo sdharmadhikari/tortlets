@@ -19,7 +19,10 @@ Ext.define('MyApp.controller.HomeTabController', {
     config: {
         refs: {
             homeTabCardPanel: 'homeTabCardPanel',
-            dreamDetails: 'dreamDetails'
+            dreamDetails: 'dreamDetails',
+            tortletDetails: 'tortletDetails',
+            todayTortletsList: 'todayTortletsList',
+            tortletsList: 'tortletsList'
         },
 
         control: {
@@ -35,20 +38,31 @@ Ext.define('MyApp.controller.HomeTabController', {
             "button[name='dreamDetailsBackButton']": {
                 tap: 'onDreamDetailBackButtonTap'
             },
-            "button": {
+            "button[name='tortletDetailsSaveButton']": {
                 tap: 'onTortletDetailsSaveButtonTap'
+            },
+            "button[name='showTodayListButton']": {
+                tap: 'onShowTodayListButtonTap'
+            },
+            "button[name='showPendingListButton']": {
+                tap: 'onShowPendingListButtonTap'
             }
         }
     },
 
     onHomePageDreamButtonTap: function(button, e, options) {
-        console.log(1);
+        console.log('inside onHomePageDreamButtonTap');
         this.getHomeTabCardPanel().animateActiveItem(this.getDreamDetails(), { type: 'slide'});
 
     },
 
     onTortletsListItemTap: function(dataview, index, target, record, e, options) {
-        this.getHomeTabCardPanel().animateActiveItem(3, { type: 'slide'});
+
+        var tortletDetails = this.getTortletDetails();
+
+        tortletDetails.setRecord(record);
+
+        this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});
     },
 
     onTortletsDetailsBackButtonTap: function(button, e, options) {
@@ -60,8 +74,47 @@ Ext.define('MyApp.controller.HomeTabController', {
     },
 
     onTortletDetailsSaveButtonTap: function(button, e, options) {
+        var tortletDetailsForm = this.getTortletDetails();
+        console.log('inside onSaveButton record id' + tortletDetailsForm.getRecord());
+
+        /// Populate record from form. populateTortletRecordFromForm()
+        var record = tortletDetailsForm.getRecord();
+        var newValues = tortletDetailsForm.getValues();
+        record.set('title', newValues.title);
+        record.set('notes', newValues.notes);
+
+        if(record.get('completed') === true){
+            record.set('completed', newValues.completed);
+        }
+
+        //////////////////////////////////////////////
+        var store = Ext.getStore("incompleteTortletsStore");
+        store.sync();
+
+        if(record.get('completed') === true){
+            store.remove(record); // Change "destroy" method to GET from DELETE
+            store.sync();
+        }
+
+
         this.getHomeTabCardPanel().
         animateActiveItem(0,{type : 'slide', direction : 'right'});
+    },
+
+    onShowTodayListButtonTap: function(button, e, options) {
+        console.log('showTodayListButton');
+
+        Ext.getStore('todaysTortletsStore').load();
+        this.getTortletsList().hide();
+        this.getTodayTortletsList().show();
+
+    },
+
+    onShowPendingListButtonTap: function(button, e, options) {
+        console.log('showPendingListButton');
+        Ext.getStore('incompleteTortletsStore').load();
+        this.getTortletsList().show();
+        this.getTodayTortletsList().hide();
     }
 
 });

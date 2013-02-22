@@ -22,7 +22,8 @@ Ext.application({
         'Tortlet'
     ],
     stores: [
-        'IncompleteTortletsStore'
+        'IncompleteTortletsStore',
+        'TodaysTortletsStore'
     ],
     views: [
         'MainTabPanel',
@@ -42,7 +43,8 @@ Ext.application({
         'AllTortletsPanel',
         'ScoreTabCardPanel',
         'MainScorePanel',
-        'HelpPanel'
+        'HelpPanel',
+        'TodaysTortletList'
     ],
     name: 'MyApp',
     controllers: [
@@ -51,7 +53,19 @@ Ext.application({
     ],
 
     launch: function() {
+        if(window.location.host === 'localhost:8080' || window.location.host === ''){
 
+            //IncompleteTortletsStore
+            var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');
+            var localProxy = incompleteTortletsStore.getProxy();
+            localProxy.setUrl('http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir');
+
+            //Dreamstore
+            //var dreamStore = Ext.getStore('dreamStore');
+            //localProxy = dreamStore.getProxy();  
+            //localProxy.setUrl('http://localhost:8080/tortlets/dreams/json?find=ByUseridEquals&userid=sudhir');
+
+        }
         Ext.create('MyApp.view.MainTabPanel', {fullscreen: true});
     }
 

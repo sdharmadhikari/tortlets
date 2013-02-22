@@ -9,9 +9,9 @@
         "designer|userClassName": "IncompleteTortletsStore",
         "designer|userAlias": "incompleteTortletsStore",
         "autoLoad": true,
-        "autoSync": true,
+        "autoSync": false,
         "model": "Tortlet",
-        "storeId": "IncompleteTortletsStore"
+        "storeId": "incompleteTortletsStore"
     },
     "id": "ExtBox1-ext-gen2756",
     "designerId": "345107d0-a788-4507-9220-261ec811d61a",
@@ -24,11 +24,26 @@
             },
             "codeClass": null,
             "userConfig": {
+                "actionMethods": [
+                    "{create: \"POST\", read: \"GET\", update: \"PUT\", destroy : \"GET\"}"
+                ],
                 "designer|userClassName": "MyRestProxy",
-                "url": "http://tortlets.cloudfoundry.com/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir",
-                "headers": null
+                "enablePagingParams": false,
+                "url": "http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir",
+                "headers": null,
+                "appendId": false
+            },
+            "configAlternates": {
+                "actionMethods": "object"
             },
             "designerId": "45439594-47f2-42c4-a6a7-b8b5ffe071a7",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "actionMethods",
+                    "type": "string"
+                }
+            ],
             "cn": [
                 {
                     "type": "jsonreader",
