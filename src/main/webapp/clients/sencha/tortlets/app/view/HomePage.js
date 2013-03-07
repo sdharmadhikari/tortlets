@@ -88,18 +88,24 @@ Ext.define('MyApp.view.HomePage', {
             {
                 xtype: 'panel',
                 flex: 3,
-                ui: '',
                 layout: {
                     type: 'fit'
                 },
+                scrollable: 'vertical',
                 items: [
                     {
                         xtype: 'tortletsList',
-                        hidden: true
+                        hidden: true,
+                        layout: {
+                            type: 'default'
+                        }
                     },
                     {
                         xtype: 'todayTortletsList',
-                        hidden: false
+                        hidden: false,
+                        layout: {
+                            type: 'default'
+                        }
                     }
                 ]
             }

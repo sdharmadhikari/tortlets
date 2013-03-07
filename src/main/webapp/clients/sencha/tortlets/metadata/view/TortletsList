@@ -13,6 +13,7 @@
         "docked": null,
         "ui": "round",
         "layout": "fit",
+        "scrollable": null,
         "emptyText": "Wow ! Nothing pending. You are really on top of everything !",
         "store": "incompleteTortletsStore",
         "onItemDisclosure": true
