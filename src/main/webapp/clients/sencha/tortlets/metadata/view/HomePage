@@ -175,8 +175,9 @@
                 "designer|userClassName": "TortletsListPanel",
                 "designer|userAlias": "tortletsListPanel",
                 "designer|displayName": "TortletsListPanel",
-                "ui": "",
-                "layout": "fit"
+                "ui": null,
+                "layout": "fit",
+                "scrollable": "vertical"
             },
             "designerId": "ae93ec94-ccca-4705-870e-a718792530fc",
             "cn": [
@@ -188,7 +189,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "hidden": true
+                        "hidden": true,
+                        "layout": "default"
                     },
                     "designerId": "6f2ff861-3109-4305-9752-46dc323c5d09",
                     "masterInstanceId": "ExtBox1-ext-gen11968"
@@ -201,7 +203,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "hidden": false
+                        "docked": null,
+                        "hidden": false,
+                        "layout": "default"
                     },
                     "designerId": "85593b68-b2cc-445d-93d6-20a843a137ad",
                     "masterInstanceId": "ExtBox1-ext-gen31234"
