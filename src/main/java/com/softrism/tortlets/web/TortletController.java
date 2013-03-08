@@ -39,7 +39,7 @@ public class TortletController {
         return "tortlets/findTortletsByTuserAndCreatedOnEquals";
     }
 
-    @RequestMapping(params = "find=ByTuserAndCreatedOnEquals", method = RequestMethod.GET)
+    @RequestMapping(params = "find=ByTuserAndCreatedOnEquals", method = RequestMethod.GET)       //
     public String findTortletsByTuserAndCreatedOnEquals(@RequestParam("tuser") Tuser tuser, @RequestParam("createdOn") @DateTimeFormat(style = "M-") Date createdOn, Model uiModel) {
         List<Tortlet> resultList = new ArrayList<Tortlet>();
         TypedQuery<Tortlet> q = Tortlet.findTortletsByTuserAndCreatedOnEquals(tuser, createdOn);
@@ -141,19 +141,8 @@ public class TortletController {
         if (createdOn == null) {
             createdOn = new Date();
         }
-        TypedQuery q = Tortlet.findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(userid, createdOn, completed == null ? Boolean.FALSE : completed);
-        List<Tortlet> resultList = new ArrayList<Tortlet>();
-        List<Tortlet> list = q.getResultList();
-        for (Tortlet tortlet : list) {
-            if (tortlet.getCreatedOn() != null) {
-                DateMidnight dt = new DateMidnight(tortlet.getCreatedOn());
-                System.out.println("checking tortlet.." + tortlet.getId());
-                if (dt.isEqual(new DateMidnight(createdOn))) {
-                    resultList.add(tortlet);
-                }
-            }
-        }
-        uiModel.addAttribute("tortlets", resultList);
+
+        uiModel.addAttribute("tortlets", useCreatedOnToSearchTortlets(userid,createdOn,completed));
         addDateTimeFormatPatterns(uiModel);
         return "tortlets/list";
     }
@@ -163,7 +152,7 @@ public class TortletController {
     public ResponseEntity<String> jsonFindTortletsByUseridEqualsAndCompleted(@RequestParam("userid") String userid, @RequestParam(value = "completed", required = false) Boolean completed) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCompleted(userid, completed == null ? Boolean.FALSE : completed).getResultList()), headers, HttpStatus.OK);
+        return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCompleted(userid, completed).getResultList()), headers, HttpStatus.OK);
     }
 
     @RequestMapping( value = "/json",method = RequestMethod.PUT, params = "find=ByUseridEqualsAndCompleted", headers = "Accept=application/json")
@@ -180,13 +169,17 @@ public class TortletController {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
 
-    @RequestMapping(params = "find=ByUseridEqualsAndCreatedOnEqualsAndCompleted", headers = "Accept=application/json")
+    @RequestMapping(value = "/json", params = "find=ByUseridEqualsAndCreatedOnEqualsAndCompleted", headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> jsonFindTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(@RequestParam("userid") String userid, @RequestParam("createdOn") @DateTimeFormat(style = "M-") Date createdOn, @RequestParam(value = "completed", required = false) Boolean completed) {
+    public ResponseEntity<String> jsonFindTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(@RequestParam("userid") String userid, @RequestParam("createdOn")  @DateTimeFormat(pattern = "MM/dd/yyyy") Date createdOn, @RequestParam(value = "completed", required = false) Boolean completed) {
+
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(userid, createdOn, completed == null ? Boolean.FALSE : completed).getResultList()), headers, HttpStatus.OK);
+        //return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(userid, createdOn, completed == null ? Boolean.FALSE : completed).getResultList()), headers, HttpStatus.OK);
+        return new ResponseEntity<String>(Tortlet.toJsonArray(useCreatedOnToSearchTortlets(userid, createdOn, completed == null ? Boolean.FALSE : completed)), headers, HttpStatus.OK);
     }
+
+// Common functions. // Common functions.// Common functions.// Common functions.// Common functions.// Common functions.// Common functions.
     private Tortlet populateOldTortlet(Tortlet tortlet) {
 
         Tortlet oldTortlet = Tortlet.findTortlet(tortlet.getId());
@@ -201,4 +194,21 @@ public class TortletController {
         return oldTortlet;
     }
 
+    private List useCreatedOnToSearchTortlets(String userid, Date createdOn, Boolean completed){
+        TypedQuery q = Tortlet.findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(userid, createdOn, completed == null ? Boolean.FALSE : completed);
+        List<Tortlet> resultList = new ArrayList<Tortlet>();
+        List<Tortlet> list = q.getResultList();
+        for (Tortlet tortlet : list) {
+            if (tortlet.getCreatedOn() != null) {
+                DateMidnight dt = new DateMidnight(tortlet.getCreatedOn());
+                System.out.println("checking tortlet.." + tortlet.getId());
+                if (dt.isEqual(new DateMidnight(createdOn))) {
+                    resultList.add(tortlet);
+                }
+            }
+        }
+
+    return resultList;
+
+    }
 }

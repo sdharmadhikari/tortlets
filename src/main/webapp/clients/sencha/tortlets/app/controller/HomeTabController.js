@@ -46,6 +46,9 @@ Ext.define('MyApp.controller.HomeTabController', {
             },
             "button[name='showPendingListButton']": {
                 tap: 'onShowPendingListButtonTap'
+            },
+            "list": {
+                itemtap: 'onTodaysTortletsListItemTap'
             }
         }
     },
@@ -83,7 +86,7 @@ Ext.define('MyApp.controller.HomeTabController', {
         record.set('title', newValues.title);
         record.set('notes', newValues.notes);
 
-        if(record.get('completed') === true){
+        if(newValues.completed === 1){
             record.set('completed', newValues.completed);
         }
 
@@ -103,8 +106,18 @@ Ext.define('MyApp.controller.HomeTabController', {
 
     onShowTodayListButtonTap: function(button, e, options) {
         console.log('showTodayListButton');
-
-        Ext.getStore('todaysTortletsStore').load();
+        var store = Ext.getStore('todaysTortletsStore');
+        url = store.getProxy().getUrl();
+        var d = new Date();
+        var curr_date = d.getDate();
+        var curr_month = d.getMonth() + 1; //Months are zero based
+        var curr_year = d.getFullYear();
+        var today = (curr_month  + "/" + curr_date + "/" + curr_year);
+        //alert(today);
+        todayUrl = url + '&createdOn=' + today;
+        store.getProxy().setUrl(todayUrl);
+        store.load();
+        store.getProxy().setUrl(url);
         this.getTortletsList().hide();
         this.getTodayTortletsList().show();
 
@@ -115,6 +128,14 @@ Ext.define('MyApp.controller.HomeTabController', {
         Ext.getStore('incompleteTortletsStore').load();
         this.getTortletsList().show();
         this.getTodayTortletsList().hide();
+    },
+
+    onTodaysTortletsListItemTap: function(dataview, index, target, record, e, options) {
+        var tortletDetails = this.getTortletDetails();
+
+        tortletDetails.setRecord(record);
+
+        this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});
     }
 
 });

@@ -142,8 +142,8 @@
                     "record.set('title', newValues.title);\r",
                     "record.set('notes', newValues.notes);\r",
                     "\r",
-                    "if(record.get('completed') === true){\r",
-                    "  record.set('completed', newValues.completed);\r",
+                    "if(newValues.completed === 1){\r",
+                    "    record.set('completed', newValues.completed);\r",
                     "}\r",
                     "\r",
                     "//////////////////////////////////////////////\r",
@@ -191,8 +191,18 @@
                 "fn": "onShowTodayListButtonTap",
                 "implHandler": [
                     "console.log('showTodayListButton');\r",
-                    "\r",
-                    "Ext.getStore('todaysTortletsStore').load();\r",
+                    "var store = Ext.getStore('todaysTortletsStore');\r",
+                    "url = store.getProxy().getUrl();\r",
+                    "var d = new Date();\r",
+                    "var curr_date = d.getDate();\r",
+                    "var curr_month = d.getMonth() + 1; //Months are zero based\r",
+                    "var curr_year = d.getFullYear();\r",
+                    "var today = (curr_month  + \"/\" + curr_date + \"/\" + curr_year);\r",
+                    "//alert(today);\r",
+                    "todayUrl = url + '&createdOn=' + today;\r",
+                    "store.getProxy().setUrl(todayUrl);\r",
+                    "store.load();\r",
+                    "store.getProxy().setUrl(url);\r",
                     "this.getTortletsList().hide();\r",
                     "this.getTodayTortletsList().show();\r",
                     ""
@@ -252,6 +262,29 @@
                 "selector": "tortletsList"
             },
             "designerId": "283f5bed-9b38-4908-bc8d-86b88ab3f73e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTodaysTortletsListItemTap",
+                "fn": "onTodaysTortletsListItemTap",
+                "implHandler": [
+                    "var tortletDetails = this.getTortletDetails();\r",
+                    "\r",
+                    "tortletDetails.setRecord(record);\r",
+                    "\r",
+                    "this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "TodaysTortletList",
+                "designer|controlQuery": "list"
+            },
+            "designerId": "1ce0bcec-8d05-4364-a30f-32ea05e4a5cf"
         }
     ]
 }

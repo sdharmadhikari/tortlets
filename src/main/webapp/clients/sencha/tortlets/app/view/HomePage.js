@@ -95,17 +95,10 @@ Ext.define('MyApp.view.HomePage', {
                 items: [
                     {
                         xtype: 'tortletsList',
-                        hidden: true,
-                        layout: {
-                            type: 'default'
-                        }
+                        hidden: true
                     },
                     {
-                        xtype: 'todayTortletsList',
-                        hidden: false,
-                        layout: {
-                            type: 'default'
-                        }
+                        xtype: 'todayTortletsList'
                     }
                 ]
             }

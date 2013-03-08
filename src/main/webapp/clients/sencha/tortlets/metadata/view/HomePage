@@ -189,8 +189,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "hidden": true,
-                        "layout": "default"
+                        "hidden": true
                     },
                     "designerId": "6f2ff861-3109-4305-9752-46dc323c5d09",
                     "masterInstanceId": "ExtBox1-ext-gen11968"
@@ -203,9 +202,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": null,
-                        "hidden": false,
-                        "layout": "default"
+                        "docked": null
                     },
                     "designerId": "85593b68-b2cc-445d-93d6-20a843a137ad",
                     "masterInstanceId": "ExtBox1-ext-gen31234"
