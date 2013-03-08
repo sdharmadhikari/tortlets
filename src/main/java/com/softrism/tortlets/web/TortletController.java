@@ -69,39 +69,7 @@ public class TortletController {
             return "tortlets/update";
         }
         uiModel.asMap().clear();
-        Tortlet oldTortlet = Tortlet.findTortlet(tortlet.getId());
-        boolean wasCompleted = oldTortlet.getCompleted() == null ? false : oldTortlet.getCompleted().booleanValue();
-        boolean nowCompleted = tortlet.getCompleted() == null ? false : tortlet.getCompleted().booleanValue();
-        Date now = new Date();
-        if (!wasCompleted && nowCompleted) {
-            tortlet.setCompletedOn(now);
-            tortlet.setUpdatedOn(now);
-            Tortoise tortoise = oldTortlet.getTortoise();
-            int tortoiseCompletedCount = tortoise.getTortletsCompletedCount() + 1;
-            int tortoiseCreatedCount = tortoise.getTortletsCreatedCount();
-            int tortoiseScore = (tortoiseCompletedCount * 100) / tortoiseCreatedCount;
-            tortoise.setTortletsCompletedCount(tortoiseCompletedCount);
-            tortoise.setLatestTortoiseScore(tortoiseScore);
-            tortoise.setUpdatedOn(now);
-            tortlet.setTortoise(tortoise);
-            Dream dream = tortoise.getDream();
-            int dreamCompletedCount = dream.getTortletsCompletedCount() + 1;
-            int dreamCreatedCount = dream.getTortletsCreatedCount();
-            int dreamScore = (dreamCompletedCount * 100) / dreamCreatedCount;
-            dream.setTortletsCompletedCount(dreamCompletedCount);
-            dream.setLatestDreamScore(dreamScore);
-            dream.setUpdatedOn(now);
-            tortoise.setDream(dream);
-            Tuser tuser = dream.getTuser();
-            int tuserCompletedCount = tuser.getTortletsCompletedCount() + 1;
-            int tuserCreatedCount = tuser.getTortletsCreatedCount();
-            int tuserScore = (tuserCompletedCount * 100) / tuserCreatedCount;
-            tuser.setTortletsCompletedCount(tuserCompletedCount);
-            tuser.setLatestDreamScore(tuserScore);
-            tuser.setUpdatedON(now);
-            dream.setTuser(tuser);
-        }
-        tortlet.merge();
+        updateTortlet(tortlet);
         return "redirect:/tortlets/" + encodeUrlPathSegment(tortlet.getId().toString(), httpServletRequest);
     }
 
@@ -152,7 +120,7 @@ public class TortletController {
     public ResponseEntity<String> jsonFindTortletsByUseridEqualsAndCompleted(@RequestParam("userid") String userid, @RequestParam(value = "completed", required = false) Boolean completed) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCompleted(userid, completed).getResultList()), headers, HttpStatus.OK);
+        return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCompleted(userid, completed == null ? Boolean.FALSE : completed).getResultList()), headers, HttpStatus.OK);
     }
 
     @RequestMapping( value = "/json",method = RequestMethod.PUT, params = "find=ByUseridEqualsAndCompleted", headers = "Accept=application/json")
@@ -161,11 +129,13 @@ public class TortletController {
         headers.add("Content-Type", "application/json");
         Tortlet tortlet = Tortlet.fromJsonToTortlet(json);
 
-        Tortlet oldTortlet = populateOldTortlet(tortlet);
+        //Tortlet oldTortlet = populateOldTortlet(tortlet);
+        updateTortlet(tortlet);
 
-        if (oldTortlet.merge() == null) {
+        /*if (oldTortlet.merge() == null) {
             return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
         }
+        */
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
 
@@ -180,8 +150,8 @@ public class TortletController {
     }
 
 // Common functions. // Common functions.// Common functions.// Common functions.// Common functions.// Common functions.// Common functions.
+    /*
     private Tortlet populateOldTortlet(Tortlet tortlet) {
-
         Tortlet oldTortlet = Tortlet.findTortlet(tortlet.getId());
         oldTortlet.setTitle(tortlet.getTitle());
         oldTortlet.setNotes(tortlet.getNotes());
@@ -191,9 +161,10 @@ public class TortletController {
             oldTortlet.setCompleted(Boolean.TRUE);
         }
 
+
         return oldTortlet;
     }
-
+     */
     private List useCreatedOnToSearchTortlets(String userid, Date createdOn, Boolean completed){
         TypedQuery q = Tortlet.findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(userid, createdOn, completed == null ? Boolean.FALSE : completed);
         List<Tortlet> resultList = new ArrayList<Tortlet>();
@@ -210,5 +181,51 @@ public class TortletController {
 
     return resultList;
 
+    }
+
+    private void updateTortlet(Tortlet tortletVO) {
+
+        Tortlet tortlet = Tortlet.findTortlet(tortletVO.getId());
+        tortlet.setTitle(tortlet.getTitle());
+        tortlet.setNotes(tortlet.getNotes());
+
+        boolean wasCompleted = tortlet.getCompleted() == null ? false : tortlet.getCompleted().booleanValue();
+        boolean nowCompleted = tortletVO.getCompleted() == null ? false : tortletVO.getCompleted().booleanValue();
+
+        if(tortletVO.getCompleted() == null || tortletVO.getCompleted().booleanValue() == false){
+            tortlet.setCompleted(null);
+        }else{
+            tortlet.setCompleted(Boolean.TRUE);
+        }
+        Date now = new Date();
+        if (!wasCompleted && nowCompleted) {
+            tortlet.setCompletedOn(now);
+            tortlet.setUpdatedOn(now);
+            Tortoise tortoise = tortlet.getTortoise();
+            int tortoiseCompletedCount = tortoise.getTortletsCompletedCount() + 1;
+            int tortoiseCreatedCount = tortoise.getTortletsCreatedCount();
+            int tortoiseScore = (tortoiseCompletedCount * 100) / tortoiseCreatedCount;
+            tortoise.setTortletsCompletedCount(tortoiseCompletedCount);
+            tortoise.setLatestTortoiseScore(tortoiseScore);
+            tortoise.setUpdatedOn(now);
+            tortlet.setTortoise(tortoise);
+            Dream dream = tortoise.getDream();
+            int dreamCompletedCount = dream.getTortletsCompletedCount() + 1;
+            int dreamCreatedCount = dream.getTortletsCreatedCount();
+            int dreamScore = (dreamCompletedCount * 100) / dreamCreatedCount;
+            dream.setTortletsCompletedCount(dreamCompletedCount);
+            dream.setLatestDreamScore(dreamScore);
+            dream.setUpdatedOn(now);
+            tortoise.setDream(dream);
+            Tuser tuser = dream.getTuser();
+            int tuserCompletedCount = tuser.getTortletsCompletedCount() + 1;
+            int tuserCreatedCount = tuser.getTortletsCreatedCount();
+            int tuserScore = (tuserCompletedCount * 100) / tuserCreatedCount;
+            tuser.setTortletsCompletedCount(tuserCompletedCount);
+            tuser.setLatestDreamScore(tuserScore);
+            tuser.setUpdatedON(now);
+            dream.setTuser(tuser);
+        }
+        tortlet.merge();
     }
 }

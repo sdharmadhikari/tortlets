@@ -1,12 +1,13 @@
 {
     "expandedState": {
-        "data": true,
-        "model": true,
-        "component": false,
+        "data": false,
+        "model": false,
+        "component": true,
         "controller": true,
         "resource": true,
         "424d6af0-4bed-488c-bf22-6b9993519c5f": {
             "id": "424d6af0-4bed-488c-bf22-6b9993519c5f",
+            "expanded": false,
             "cn": [
                 {
                     "id": "bcc0ae67-91fd-4d26-85c0-65fe79f35217"
@@ -27,6 +28,7 @@
         },
         "c2bdc653-c608-400e-b209-ef000e5d7997": {
             "id": "c2bdc653-c608-400e-b209-ef000e5d7997",
+            "expanded": false,
             "cn": [
                 {
                     "id": "ca549a70-f78d-4a7c-a328-5aa94a693df7"
@@ -62,6 +64,7 @@
         },
         "811d49e0-92af-414a-9025-4cb5ec728652": {
             "id": "811d49e0-92af-414a-9025-4cb5ec728652",
+            "expanded": false,
             "cn": [
                 {
                     "id": "f2c2fe36-3373-45fd-bb4e-48cfaaa5afff"

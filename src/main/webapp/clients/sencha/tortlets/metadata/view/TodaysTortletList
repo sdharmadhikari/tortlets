@@ -12,7 +12,6 @@
         "designer|displayName": "TortletsList",
         "docked": null,
         "ui": "round",
-        "layout": "fit",
         "emptyText": "Great ! You are done for today !",
         "store": "todaysTortletsStore",
         "onItemDisclosure": true

@@ -19,9 +19,6 @@ Ext.define('MyApp.view.TodaysTortletList', {
 
     config: {
         ui: 'round',
-        layout: {
-            type: 'fit'
-        },
         emptyText: 'Great ! You are done for today !',
         store: 'todaysTortletsStore',
         onItemDisclosure: true,

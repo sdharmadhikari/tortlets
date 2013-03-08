@@ -19,9 +19,6 @@ Ext.define('MyApp.view.TortletsList', {
 
     config: {
         ui: 'round',
-        layout: {
-            type: 'fit'
-        },
         emptyText: 'Wow ! Nothing pending. You are really on top of everything !',
         store: 'incompleteTortletsStore',
         onItemDisclosure: true,
