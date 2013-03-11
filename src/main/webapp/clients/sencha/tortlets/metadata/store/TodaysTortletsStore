@@ -7,7 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "TodaysTortletsStore",
-        "autoLoad": true,
+        "autoLoad": false,
         "autoSync": false,
         "model": "Tortlet",
         "storeId": "todaysTortletsStore"
@@ -28,7 +28,7 @@
                 ],
                 "designer|userClassName": "MyRestProxy",
                 "enablePagingParams": false,
-                "url": "http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=sudhir",
+                "url": "http://dummy.url",
                 "headers": null,
                 "appendId": false
             },

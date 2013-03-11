@@ -19,11 +19,13 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'Tortlet'
+        'Tortlet',
+        'Dream'
     ],
     stores: [
         'IncompleteTortletsStore',
-        'TodaysTortletsStore'
+        'TodaysTortletsStore',
+        'DreamsStore'
     ],
     views: [
         'MainTabPanel',
@@ -53,19 +55,38 @@ Ext.application({
     ],
 
     launch: function() {
-        if(window.location.host === 'localhost:8080' || window.location.host === ''){
+        console.log('application launch');
+        var userid = 'sudhir';
+        var host;
 
-            //IncompleteTortletsStore
-            var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');
-            var localProxy = incompleteTortletsStore.getProxy();
-            localProxy.setUrl('http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir');
-
-            //Dreamstore
-            //var dreamStore = Ext.getStore('dreamStore');
-            //localProxy = dreamStore.getProxy();  
-            //localProxy.setUrl('http://localhost:8080/tortlets/dreams/json?find=ByUseridEquals&userid=sudhir');
-
+        if(window.location.host === ''){  
+            host = 'localhost:8080';    
+        }else{
+            host = window.location.host;
         }
+
+        var d = new Date();
+        var curr_date = d.getDate();
+        var curr_month = d.getMonth() + 1; //Months are zero based
+        var curr_year = d.getFullYear();
+        var today = (curr_month  + "/" + curr_date + "/" + curr_year);
+
+        //todaysTortletsStore
+        var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
+        var proxy = todaysTortletsStore.getProxy();
+        proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid + '&createdOn=' + today);
+        todaysTortletsStore.load();
+
+        //incompleteTortletsStore
+        var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');
+        var proxy = incompleteTortletsStore.getProxy();
+        proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCompleted&userid=' +userid);
+
+        //dreamsStore
+        var dreamsStore = Ext.getStore('dreamsStore');
+        var proxy = dreamsStore.getProxy();
+        proxy.setUrl('http://' + host + '/dreams/json?find=ByUseridEquals&userid=' +userid);
+        dreamsStore.load();
         Ext.create('MyApp.view.MainTabPanel', {fullscreen: true});
     }
 

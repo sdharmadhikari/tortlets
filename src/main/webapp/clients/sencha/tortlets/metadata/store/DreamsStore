@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DreamsStore",
+        "autoLoad": true,
+        "model": "Dream",
+        "storeId": "dreamsStore"
+    },
+    "id": "ExtBox1-ext-gen15484",
+    "designerId": "2a7e2b19-f954-4c5d-a553-29c3ae040071",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy2",
+                "url": "http://dummy.url"
+            },
+            "designerId": "e4c9535a-9efa-443c-a0bb-08593f57296e",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader2"
+                    },
+                    "designerId": "6aec8cda-037b-417a-989d-53dc8773fc43"
+                }
+            ]
+        }
+    ]
+}

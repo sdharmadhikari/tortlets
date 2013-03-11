@@ -7,11 +7,13 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "Tortlet"
+            "Tortlet",
+            "Dream"
         ],
         "stores": [
             "IncompleteTortletsStore",
-            "TodaysTortletsStore"
+            "TodaysTortletsStore",
+            "DreamsStore"
         ],
         "views": [
             "MainTabPanel",
@@ -54,19 +56,38 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
-                    "if(window.location.host === 'localhost:8080' || window.location.host === ''){\r",
+                    "console.log('application launch');\r",
+                    "var userid = 'sudhir';\r",
+                    "var host;\r",
                     "\r",
-                    "    //IncompleteTortletsStore\r",
-                    "    var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');\r",
-                    "    var localProxy = incompleteTortletsStore.getProxy();\r",
-                    "    localProxy.setUrl('http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir');\r",
+                    "if(window.location.host === ''){  \r",
+                    "    host = 'localhost:8080';    \r",
+                    "}else{\r",
+                    "    host = window.location.host;\r",
+                    "}\r",
                     "\r",
-                    "    //Dreamstore\r",
-                    "    //var dreamStore = Ext.getStore('dreamStore');\r",
-                    "    //localProxy = dreamStore.getProxy();  \r",
-                    "    //localProxy.setUrl('http://localhost:8080/tortlets/dreams/json?find=ByUseridEquals&userid=sudhir');\r",
+                    "var d = new Date();\r",
+                    "var curr_date = d.getDate();\r",
+                    "var curr_month = d.getMonth() + 1; //Months are zero based\r",
+                    "var curr_year = d.getFullYear();\r",
+                    "var today = (curr_month  + \"/\" + curr_date + \"/\" + curr_year);\r",
                     "\r",
-                    "}"
+                    "//todaysTortletsStore\r",
+                    "var todaysTortletsStore = Ext.getStore('todaysTortletsStore');\r",
+                    "var proxy = todaysTortletsStore.getProxy();\r",
+                    "proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid + '&createdOn=' + today);\r",
+                    "todaysTortletsStore.load();\r",
+                    "\r",
+                    "//incompleteTortletsStore\r",
+                    "var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');\r",
+                    "var proxy = incompleteTortletsStore.getProxy();\r",
+                    "proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCompleted&userid=' +userid);\r",
+                    "\r",
+                    "//dreamsStore\r",
+                    "var dreamsStore = Ext.getStore('dreamsStore');\r",
+                    "var proxy = dreamsStore.getProxy();\r",
+                    "proxy.setUrl('http://' + host + '/dreams/json?find=ByUseridEquals&userid=' +userid);\r",
+                    "dreamsStore.load();"
                 ]
             },
             "designerId": "76f38c4f-ef83-4310-8f7f-16cacff11236"

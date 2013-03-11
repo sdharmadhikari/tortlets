@@ -212,6 +212,22 @@
                 "app/view/TodaysTortletList.js"
             ],
             "className": "TodaysTortletList"
+        },
+        "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49": {
+            "paths": [
+                "metadata/model/Dream",
+                "app/model/override/Dream.js",
+                "app/model/Dream.js"
+            ],
+            "className": "Dream"
+        },
+        "2a7e2b19-f954-4c5d-a553-29c3ae040071": {
+            "paths": [
+                "metadata/store/DreamsStore",
+                "app/store/override/DreamsStore.js",
+                "app/store/DreamsStore.js"
+            ],
+            "className": "DreamsStore"
         }
     },
     "viewOrderMap": {
@@ -238,14 +254,16 @@
         ],
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",
-            "15eb7579-b7e5-4a31-96e4-4dd8481e7568"
+            "15eb7579-b7e5-4a31-96e4-4dd8481e7568",
+            "2a7e2b19-f954-4c5d-a553-29c3ae040071"
         ],
         "controller": [
             "f349d5fa-f50b-405e-b80f-e46f09bf9967",
             "b4ef4b19-e96a-4128-b08f-83eee4866b5b"
         ],
         "model": [
-            "98103327-6270-4ea5-9055-efe31b2727a6"
+            "98103327-6270-4ea5-9055-efe31b2727a6",
+            "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49"
         ],
         "resource": [
             "8d109db3-8fac-4b27-8512-92766b4975f8"

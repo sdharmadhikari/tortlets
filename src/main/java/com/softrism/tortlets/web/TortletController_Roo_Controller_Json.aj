@@ -5,9 +5,7 @@ package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.web.TortletController;
-import java.util.Date;
 import java.util.List;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -110,7 +108,5 @@ privileged aspect TortletController_Roo_Controller_Json {
         headers.add("Content-Type", "application/json; charset=utf-8");
         return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEquals(userid).getResultList()), headers, HttpStatus.OK);
     }
-    
-
     
 }

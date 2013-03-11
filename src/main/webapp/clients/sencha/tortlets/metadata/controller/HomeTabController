@@ -225,6 +225,10 @@
                 "fn": "onShowPendingListButtonTap",
                 "implHandler": [
                     "console.log('showPendingListButton');\r",
+                    "\r",
+                    "var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');\r",
+                    "var proxy = incompleteTortletsStore.getProxy();\r",
+                    "\r",
                     "Ext.getStore('incompleteTortletsStore').load();\r",
                     "this.getTortletsList().show();\r",
                     "this.getTodayTortletsList().hide();"
@@ -285,6 +289,47 @@
                 "designer|controlQuery": "list"
             },
             "designerId": "1ce0bcec-8d05-4364-a30f-32ea05e4a5cf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onProductionModeButtonTap",
+                "fn": "onProductionModeButtonTap",
+                "implHandler": [
+                    "\r",
+                    "var userid = 'sudhir';\r",
+                    "var host;\r",
+                    "\r",
+                    "if(window.location.host === ''){  \r",
+                    "    host = 'localhost:8080';    \r",
+                    "}else{\r",
+                    "    host = window.location.host;\r",
+                    "}\r",
+                    "\r",
+                    "//todaysTortletsStore\r",
+                    "var todaysTortletsStore = Ext.getStore('todaysTortletsStore');\r",
+                    "var proxy = todaysTortletsStore.getProxy();\r",
+                    "proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid);\r",
+                    "\r",
+                    "//incompleteTortletsStore\r",
+                    "var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');\r",
+                    "var proxy = incompleteTortletsStore.getProxy();\r",
+                    "proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCompleted&userid=' +userid);\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='productionModeButton']"
+            },
+            "designerId": "f87482ce-8e06-4487-921a-7eff85cf68a2"
         }
     ]
 }

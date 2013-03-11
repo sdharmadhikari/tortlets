@@ -30,7 +30,15 @@ Ext.define('MyApp.view.HomePage', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'Tortlets'
+                title: 'Tortlets',
+                items: [
+                    {
+                        xtype: 'button',
+                        name: 'productionModeButton',
+                        ui: 'action',
+                        text: 'P'
+                    }
+                ]
             },
             {
                 xtype: 'panel',

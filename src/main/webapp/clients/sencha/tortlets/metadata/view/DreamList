@@ -6,12 +6,13 @@
     },
     "codeClass": null,
     "userConfig": {
-        "data": "[ { \"string\" : \"Be Healthy, Loose Weight By 20 pounds\" },\r\n { \"string\" : \"Start my own independent business\" },\r\n { \"string\" : \"Find my dream home in the heart of city\"}\r\n ]",
+        "data": null,
         "designer|userClassName": "DreamList",
         "designer|userAlias": "dreamList",
         "designer|displayName": "DreamList",
         "margin": null,
         "ui": "round",
+        "store": "dreamsStore",
         "onItemDisclosure": true
     },
     "configAlternates": {
@@ -37,7 +38,7 @@
             "userConfig": {
                 "designer|userClassName": "itemTpl",
                 "implHandler": [
-                    "<div>{string}</div>\r",
+                    "<div>{title}</div>\r",
                     "<br/>\r",
                     ".........<img src=\"images/tortoise_smaller.gif\"></img>.............!"
                 ],

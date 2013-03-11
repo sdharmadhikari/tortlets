@@ -22,7 +22,7 @@ Ext.define('MyApp.store.IncompleteTortletsStore', {
     ],
 
     config: {
-        autoLoad: true,
+        autoLoad: false,
         autoSync: false,
         model: 'MyApp.model.Tortlet',
         storeId: 'incompleteTortletsStore',
@@ -35,7 +35,7 @@ Ext.define('MyApp.store.IncompleteTortletsStore', {
                 destroy: 'GET'
             },
             enablePagingParams: false,
-            url: 'http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir',
+            url: 'http://dummy.url',
             appendId: false,
             reader: {
                 type: 'json',

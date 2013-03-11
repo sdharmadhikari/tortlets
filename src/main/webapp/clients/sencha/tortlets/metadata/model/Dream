@@ -1,0 +1,43 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Dream"
+    },
+    "id": "ExtBox1-ext-gen15022",
+    "designerId": "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "title",
+                "type": "string"
+            },
+            "designerId": "876dad2a-1f49-4e21-9b10-f5aae9f0e45a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "notes",
+                "type": "string"
+            },
+            "designerId": "118b3b44-f27f-4062-a513-09ed88bf3185"
+        }
+    ]
+}
