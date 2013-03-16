@@ -12,6 +12,7 @@
             <menu:item id="i_tortoise_new" messageCode="global_menu_new" url="/tortoises?form" z="kZspn5GuYIPRVeMUTwPyi8OQhD8="/>
             <menu:item id="i_tortoise_list" messageCode="global_menu_list" render="false" url="/tortoises?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
             <menu:item id="fi_tortoise_useridequals" messageCode="global_menu_find" url="/tortoises?find=ByUseridEquals&amp;userid" z="user-managed"/>
+            <menu:item id="fi_tortoise_dreamanduseridequals" messageCode="global_menu_find" url="/tortoises?find=ByDreamAndUseridEquals&amp;form" z="LncIHJIU0bKHcyNViTJ+C+EiJ9I="/>
         </menu:category>
         <menu:category id="c_tortlet" z="ZWiWmxvOYEF+drCzwEfqRe9rNm0=">
             <menu:item id="fi_tortlet_pending" messageCode="global_menu_find" render="false" url="/tortlets?find=ByCompleted&amp;NoForm" z=""/>

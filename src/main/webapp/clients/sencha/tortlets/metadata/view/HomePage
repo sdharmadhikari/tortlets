@@ -25,31 +25,7 @@
                 "docked": "top",
                 "title": "Tortlets"
             },
-            "designerId": "f2c2fe36-3373-45fd-bb4e-48cfaaa5afff",
-            "cn": [
-                {
-                    "type": "button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "name": "productionModeButton",
-                        "designer|userClassName": "MyButton19",
-                        "ui": "action",
-                        "text": "P"
-                    },
-                    "designerId": "738ef3b5-b7cc-4756-8a54-0642f2a66369",
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "name",
-                            "type": "string"
-                        }
-                    ]
-                }
-            ]
+            "designerId": "f2c2fe36-3373-45fd-bb4e-48cfaaa5afff"
         },
         {
             "type": "panel",

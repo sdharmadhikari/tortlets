@@ -20,12 +20,14 @@ Ext.Loader.setConfig({
 Ext.application({
     models: [
         'Tortlet',
-        'Dream'
+        'Dream',
+        'Tortoise'
     ],
     stores: [
         'IncompleteTortletsStore',
         'TodaysTortletsStore',
-        'DreamsStore'
+        'DreamsStore',
+        'TortoisesStore'
     ],
     views: [
         'MainTabPanel',
@@ -87,6 +89,11 @@ Ext.application({
         var proxy = dreamsStore.getProxy();
         proxy.setUrl('http://' + host + '/dreams/json?find=ByUseridEquals&userid=' +userid);
         dreamsStore.load();
+
+        //tortoisesStore
+        var tortoisesStore = Ext.getStore('tortoisesStore');
+        var proxy = tortoisesStore.getProxy();
+        proxy.setUrl('http://' + host + '/tortoises/json?find=ByDreamAndUseridEquals&userid=' +userid);
         Ext.create('MyApp.view.MainTabPanel', {fullscreen: true});
     }
 

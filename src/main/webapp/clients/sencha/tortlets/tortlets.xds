@@ -228,6 +228,22 @@
                 "app/store/DreamsStore.js"
             ],
             "className": "DreamsStore"
+        },
+        "6224bddc-b988-416c-beca-b6c25b31ac1d": {
+            "paths": [
+                "metadata/model/Tortoise",
+                "app/model/override/Tortoise.js",
+                "app/model/Tortoise.js"
+            ],
+            "className": "Tortoise"
+        },
+        "6ae46be0-527b-4709-b96e-84eb3fb55148": {
+            "paths": [
+                "metadata/store/TortoisesStore",
+                "app/store/override/TortoisesStore.js",
+                "app/store/TortoisesStore.js"
+            ],
+            "className": "TortoisesStore"
         }
     },
     "viewOrderMap": {
@@ -255,7 +271,8 @@
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",
             "15eb7579-b7e5-4a31-96e4-4dd8481e7568",
-            "2a7e2b19-f954-4c5d-a553-29c3ae040071"
+            "2a7e2b19-f954-4c5d-a553-29c3ae040071",
+            "6ae46be0-527b-4709-b96e-84eb3fb55148"
         ],
         "controller": [
             "f349d5fa-f50b-405e-b80f-e46f09bf9967",
@@ -263,7 +280,8 @@
         ],
         "model": [
             "98103327-6270-4ea5-9055-efe31b2727a6",
-            "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49"
+            "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
+            "6224bddc-b988-416c-beca-b6c25b31ac1d"
         ],
         "resource": [
             "8d109db3-8fac-4b27-8512-92766b4975f8"

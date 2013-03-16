@@ -6,12 +6,13 @@
     },
     "codeClass": null,
     "userConfig": {
-        "data": "[ { \"string\" : \"Aerobics class/cardio\" },\r\n { \"string\" : \"Strength training\" },\r\n { \"string\" : \"Check body weight\"}\r\n ]",
+        "data": null,
         "designer|userClassName": "TortoiseList",
         "designer|userAlias": "tortoiseList",
         "designer|displayName": "TortoiseList",
         "margin": null,
         "ui": "round",
+        "store": "tortoisesStore",
         "onItemDisclosure": true
     },
     "configAlternates": {
@@ -37,7 +38,7 @@
             "userConfig": {
                 "designer|userClassName": "itemTpl",
                 "implHandler": [
-                    "<div>{string}</div>\r",
+                    "<div>{title}({latestTortoiseScore})</div>\r",
                     "<br/>\r",
                     ".........<img src=\"images/tortoise_smaller.gif\"></img>.............!"
                 ],

@@ -680,3 +680,11 @@ exit
 exit
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-08 16:10:04
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-10 23:01:11
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-03-11 10:47:20
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-03-15 14:35:36
+focus --class ~.domain.Tortoise
+finder list --depth 2 --filter ByDream
+finder list --depth 2 --filter ByDreamAnd
+finder list --depth 2 --filter ByDreamAndUser
+finder add --finderName findTortoisesByDreamAndUseridEquals

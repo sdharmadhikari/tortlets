@@ -16,6 +16,10 @@
 Ext.define('MyApp.model.Dream', {
     extend: 'Ext.data.Model',
 
+    uses: [
+        'MyApp.model.Tortoise'
+    ],
+
     config: {
         fields: [
             {
@@ -25,7 +29,33 @@ Ext.define('MyApp.model.Dream', {
             {
                 name: 'notes',
                 type: 'string'
+            },
+            {
+                name: 'dreamColor'
+            },
+            {
+                name: 'latestDreamScore',
+                persist: false,
+                type: 'int'
+            },
+            {
+                name: 'userid',
+                allowNull: false
+            },
+            {
+                name: 'dreamStatus'
+            },
+            {
+                name: 'createdOn',
+                dateFormat: 'MM/dd/yyy',
+                persist: false
+            },
+            {
+                name: 'updatedOn'
             }
-        ]
+        ],
+        hasMany: {
+            model: 'MyApp.model.Tortoise'
+        }
     }
 });

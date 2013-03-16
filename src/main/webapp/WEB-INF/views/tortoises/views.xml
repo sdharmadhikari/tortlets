@@ -16,4 +16,7 @@
 <definition extends="default" name="tortoises/findTortoisesByUseridEquals">
         <put-attribute name="body" value="/WEB-INF/views/tortoises/findTortoisesByUseridEquals.jspx"/>
     </definition>
+<definition extends="default" name="tortoises/findTortoisesByDreamAndUseridEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortoises/findTortoisesByDreamAndUseridEquals.jspx"/>
+    </definition>
 </tiles-definitions>

@@ -74,10 +74,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyTextArea1",
-                        "designer|displayName": "DreamTitleTextArea",
+                        "designer|displayName": "dreamTitleTextArea",
                         "height": 74,
                         "html": "",
                         "label": null,
+                        "name": "title",
                         "placeHolder": "Become healthy and loose weight.."
                     },
                     "designerId": "42eedf72-10fb-401d-996f-4d294ec6d9d1"
@@ -107,10 +108,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyTextArea2",
-                        "designer|displayName": "WhyDreamTextArea",
+                        "designer|displayName": "dreamNotesTitleArea",
                         "height": 78,
                         "width": 280,
-                        "label": null
+                        "label": null,
+                        "name": "notes"
                     },
                     "designerId": "c5ea08c1-e697-401c-b8e6-0cf08e04c3d6"
                 },
@@ -122,7 +124,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "name": "dreamDetailsTortoises",
+                        "name": "id",
                         "designer|userClassName": "MyButton12",
                         "designer|displayName": "DreamDetailsTortoises",
                         "ui": "forward",
@@ -231,6 +233,20 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHiddenField",
+                "designer|displayName": "DreamId",
+                "name": "id"
+            },
+            "designerId": "170fcbb0-5657-45b2-89fb-2f0a97cf6a2b"
         }
     ]
 }

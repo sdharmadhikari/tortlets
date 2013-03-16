@@ -36,7 +36,9 @@
                 "designer|userClassName": "onDreamListItemTap",
                 "fn": "onDreamListItemTap",
                 "implHandler": [
-                    "this.getDreamListCardPanel().animateActiveItem(1, { type: 'slide'} );\r",
+                    "var dreamDetails = this.getDreamDetails();\r",
+                    "dreamDetails.setRecord(record);\r",
+                    "this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type: 'slide'} );\r",
                     ""
                 ],
                 "name": "itemtap",
@@ -56,11 +58,23 @@
                 "designer|userClassName": "onDreamDetailsTortoisesButtonTap",
                 "fn": "onDreamDetailsTortoisesButtonTap",
                 "implHandler": [
+                    "var dreamDetailsForm = this.getDreamDetails();\r",
+                    "var newValues = dreamDetailsForm.getValues();\r",
+                    "//alert(newValues.id);\r",
+                    "var tortoisesStore = Ext.getStore('tortoisesStore');\r",
+                    "var proxy = tortoisesStore.getProxy();\r",
+                    "var orgUrl = proxy.getUrl();\r",
+                    "var urlWithDream = orgUrl + '&dream=' + newValues.id;\r",
+                    "proxy.setUrl(urlWithDream);\r",
+                    "tortoisesStore.load();\r",
+                    "proxy.setUrl(orgUrl);\r",
+                    "\r",
+                    "\r",
                     "this.getDreamListCardPanel().animateActiveItem(2, {type : 'slide'});"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='dreamDetailsTortoises']"
+                "designer|controlQuery": "button[name='id']"
             },
             "designerId": "9c51680b-4656-4e4d-b939-c8eeac2e2673"
         },
@@ -151,8 +165,10 @@
                 "designer|userClassName": "onTortoiseListItemTap",
                 "fn": "onTortoiseListItemTap",
                 "implHandler": [
-                    "this.getDreamListCardPanel().\r",
-                    "animateActiveItem(4,{ type : 'slide'});"
+                    "var tortoiseDetailsForm = this.getTortoiseDetails();\r",
+                    "tortoiseDetailsForm.setRecord(record);\r",
+                    "\r",
+                    "this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "TortoiseList",
@@ -280,6 +296,34 @@
                 "designer|controlQuery": "button[name='tortoiseDetailsTortletsButton']"
             },
             "designerId": "0c23b93c-d6a8-422c-a277-105bdaeaa519"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dreamDetails",
+                "ref": "dreamDetails",
+                "selector": "dreamDetails"
+            },
+            "designerId": "02fea2bf-0e5a-4d77-9cdb-28e9aa5b14a3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tortoiseDetails",
+                "ref": "tortoiseDetails",
+                "selector": "tortoiseDetails"
+            },
+            "designerId": "2e52ce66-5384-46d2-9790-f3980756de71"
         }
     ]
 }

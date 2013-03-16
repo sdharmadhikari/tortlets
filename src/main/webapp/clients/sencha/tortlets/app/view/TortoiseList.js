@@ -19,20 +19,10 @@ Ext.define('MyApp.view.TortoiseList', {
 
     config: {
         ui: 'round',
+        store: 'tortoisesStore',
         onItemDisclosure: true,
-        data: [
-            {
-                string: 'Aerobics class/cardio'
-            },
-            {
-                string: 'Strength training'
-            },
-            {
-                string: 'Check body weight'
-            }
-        ],
         itemTpl: [
-            '<div>{string}</div>',
+            '<div>{title}({latestTortoiseScore})</div>',
             '<br/>',
             '.........<img src="images/tortoise_smaller.gif"></img>.............!'
         ]

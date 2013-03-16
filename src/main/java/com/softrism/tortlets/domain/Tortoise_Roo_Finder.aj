@@ -3,11 +3,22 @@
 
 package com.softrism.tortlets.domain;
 
+import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortoise;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 privileged aspect Tortoise_Roo_Finder {
+    
+    public static TypedQuery<Tortoise> Tortoise.findTortoisesByDreamAndUseridEquals(Dream dream, String userid) {
+        if (dream == null) throw new IllegalArgumentException("The dream argument is required");
+        if (userid == null || userid.length() == 0) throw new IllegalArgumentException("The userid argument is required");
+        EntityManager em = Tortoise.entityManager();
+        TypedQuery<Tortoise> q = em.createQuery("SELECT o FROM Tortoise AS o WHERE o.dream = :dream AND o.userid = :userid", Tortoise.class);
+        q.setParameter("dream", dream);
+        q.setParameter("userid", userid);
+        return q;
+    }
     
     public static TypedQuery<Tortoise> Tortoise.findTortoisesByUseridEquals(String userid) {
         if (userid == null || userid.length() == 0) throw new IllegalArgumentException("The userid argument is required");

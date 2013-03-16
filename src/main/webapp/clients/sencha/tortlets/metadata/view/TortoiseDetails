@@ -7,8 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "TortoiseDetails",
-        "designer|userAlias": "tortoisedetails",
-        "layout": "vbox"
+        "designer|userAlias": "tortoiseDetails"
     },
     "id": "ExtBox1-ext-gen16443",
     "designerId": "dca854bb-a33a-4137-aef2-90d43399589d",
@@ -91,50 +90,11 @@
                 "html": null,
                 "label": null,
                 "labelWidth": "0%",
+                "name": "title",
                 "placeHolder": "Workout In Gym or Go Jogging",
                 "maxRows": 2
             },
             "designerId": "36659fb2-3e42-4150-b471-45a137c54e00"
-        },
-        {
-            "type": "label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyLabel",
-                "designer|displayName": "DreamTitle",
-                "html": "To Realize My Dream",
-                "margin": null
-            },
-            "designerId": "a827e9ba-7d71-4b70-9f4a-1f767b19122b"
-        },
-        {
-            "type": "selectfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MySelectField",
-                "designer|displayName": "DreamSelect",
-                "label": "Dream",
-                "options": "[\r\n                    {\r\n                        text: 'Become Healthy, Loose Weight',\r\n                        value: '1'\r\n                    },\r\n                    {\r\n                        text: 'Start my own business',\r\n                        value: '1'\r\n                    }\r\n                ]"
-            },
-            "configAlternates": {
-                "data": "array"
-            },
-            "designerId": "e18983aa-bb29-425b-a074-afe7e83f2a79",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "data",
-                    "type": "string"
-                }
-            ]
         },
         {
             "type": "fieldset",
@@ -161,7 +121,8 @@
                         "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "MondayToggle",
                         "label": "Monday",
-                        "labelWidth": "40%"
+                        "labelWidth": "40%",
+                        "name": "monday"
                     },
                     "designerId": "21ef1e3f-9df2-4995-9d5f-c7d7457d7db4"
                 },
@@ -176,7 +137,8 @@
                         "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "TuesdayToggle",
                         "label": "Tuesday",
-                        "labelWidth": "40%"
+                        "labelWidth": "40%",
+                        "name": "tuesday"
                     },
                     "designerId": "9f44f8d1-b9d3-4ecc-98fe-bc28e76d04fb"
                 },
@@ -191,7 +153,8 @@
                         "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "WednesdayToggle",
                         "label": "Wednesday",
-                        "labelWidth": "40%"
+                        "labelWidth": "40%",
+                        "name": "wednesday"
                     },
                     "designerId": "6b64c5cd-3f4a-4220-a63b-4fee2105698b"
                 },
@@ -206,7 +169,8 @@
                         "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "ThursdayToggle",
                         "label": "Thursday",
-                        "labelWidth": "40%"
+                        "labelWidth": "40%",
+                        "name": "thursday"
                     },
                     "designerId": "8a10e2d3-cf1e-455b-b454-54ce02734c45"
                 },
@@ -221,7 +185,8 @@
                         "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "FridayToggle",
                         "label": "Friday",
-                        "labelWidth": "40%"
+                        "labelWidth": "40%",
+                        "name": "friday"
                     },
                     "designerId": "45fcd68d-c1e6-484a-a77e-535fb868b02b"
                 },
@@ -236,7 +201,8 @@
                         "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "SaturdayToggle",
                         "label": "Saturday",
-                        "labelWidth": "40%"
+                        "labelWidth": "40%",
+                        "name": "saturday"
                     },
                     "designerId": "1f4a08ea-d3ed-427b-94f6-57f6e1b1078b"
                 },
@@ -251,7 +217,8 @@
                         "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "SundayToggle",
                         "label": "Sunday",
-                        "labelWidth": "40%"
+                        "labelWidth": "40%",
+                        "name": "sunday"
                     },
                     "designerId": "595acfc2-4f79-45ad-a374-c8bf81a46a75"
                 }

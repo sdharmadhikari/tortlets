@@ -15,12 +15,9 @@
 
 Ext.define('MyApp.view.TortoiseDetails', {
     extend: 'Ext.form.Panel',
-    alias: 'widget.tortoisedetails',
+    alias: 'widget.tortoiseDetails',
 
     config: {
-        layout: {
-            type: 'vbox'
-        },
         items: [
             {
                 xtype: 'titlebar',
@@ -46,26 +43,9 @@ Ext.define('MyApp.view.TortoiseDetails', {
                 xtype: 'textareafield',
                 height: 65,
                 labelWidth: '0%',
+                name: 'title',
                 placeHolder: 'Workout In Gym or Go Jogging',
                 maxRows: 2
-            },
-            {
-                xtype: 'label',
-                html: 'To Realize My Dream'
-            },
-            {
-                xtype: 'selectfield',
-                label: 'Dream',
-                options: [
-                    {
-                        text: 'Become Healthy, Loose Weight',
-                        value: '1'
-                    },
-                    {
-                        text: 'Start my own business',
-                        value: '1'
-                    }
-                ]
             },
             {
                 xtype: 'fieldset',
@@ -74,37 +54,44 @@ Ext.define('MyApp.view.TortoiseDetails', {
                     {
                         xtype: 'togglefield',
                         label: 'Monday',
-                        labelWidth: '40%'
+                        labelWidth: '40%',
+                        name: 'monday'
                     },
                     {
                         xtype: 'togglefield',
                         label: 'Tuesday',
-                        labelWidth: '40%'
+                        labelWidth: '40%',
+                        name: 'tuesday'
                     },
                     {
                         xtype: 'togglefield',
                         label: 'Wednesday',
-                        labelWidth: '40%'
+                        labelWidth: '40%',
+                        name: 'wednesday'
                     },
                     {
                         xtype: 'togglefield',
                         label: 'Thursday',
-                        labelWidth: '40%'
+                        labelWidth: '40%',
+                        name: 'thursday'
                     },
                     {
                         xtype: 'togglefield',
                         label: 'Friday',
-                        labelWidth: '40%'
+                        labelWidth: '40%',
+                        name: 'friday'
                     },
                     {
                         xtype: 'togglefield',
                         label: 'Saturday',
-                        labelWidth: '40%'
+                        labelWidth: '40%',
+                        name: 'saturday'
                     },
                     {
                         xtype: 'togglefield',
                         label: 'Sunday',
-                        labelWidth: '40%'
+                        labelWidth: '40%',
+                        name: 'sunday'
                     }
                 ]
             },

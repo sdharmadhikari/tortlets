@@ -38,7 +38,9 @@
             "userConfig": {
                 "designer|userClassName": "itemTpl",
                 "implHandler": [
-                    "<div>{title}</div>\r",
+                    "<div>{title}({latestDreamScore})</div>\r",
+                    "<br/> \r",
+                    "Dreaming From : {createdOn}\r",
                     "<br/>\r",
                     ".........<img src=\"images/tortoise_smaller.gif\"></img>.............!"
                 ],

@@ -1,23 +1,23 @@
 package com.softrism.tortlets.domain;
 
 import flexjson.JSONSerializer;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+import javax.*;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "findTortoisesByUseridEquals" })
 @RooJson(deepSerialize = false)
+@RooJpaActiveRecord(finders = { "findTortoisesByUseridEquals", "findTortoisesByDreamAndUseridEquals" })
 public class Tortoise {
 
     @NotNull
@@ -79,5 +79,4 @@ public class Tortoise {
     private TortoiseDurationTypeEnum duration;
 
     private String userid;
-
 }

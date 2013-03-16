@@ -1,5 +1,6 @@
 package com.softrism.tortlets.web;
 
+import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.domain.TortoiseStatusEnum;
 import java.util.Arrays;
@@ -105,4 +106,13 @@ public class TortoiseController {
         headers.add("Content-Type", "application/json; charset=utf-8");
         return new ResponseEntity<String>(Tortoise.toJsonArray(Tortoise.findTortoisesByUseridEquals(userid).getResultList()), headers, HttpStatus.OK);
     }
+
+    @RequestMapping(value= "/json", params = "find=ByDreamAndUseridEquals", headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String> jsonFindTortoisesByDreamAndUseridEquals(@RequestParam("dream") Dream dream, @RequestParam("userid") String userid) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        return new ResponseEntity<String>(Tortoise.toJsonArray(Tortoise.findTortoisesByDreamAndUseridEquals(dream, userid).getResultList()), headers, HttpStatus.OK);
+    }
+
 }

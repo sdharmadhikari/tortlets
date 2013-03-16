@@ -8,12 +8,14 @@
     "userConfig": {
         "models": [
             "Tortlet",
-            "Dream"
+            "Dream",
+            "Tortoise"
         ],
         "stores": [
             "IncompleteTortletsStore",
             "TodaysTortletsStore",
-            "DreamsStore"
+            "DreamsStore",
+            "TortoisesStore"
         ],
         "views": [
             "MainTabPanel",
@@ -87,7 +89,12 @@
                     "var dreamsStore = Ext.getStore('dreamsStore');\r",
                     "var proxy = dreamsStore.getProxy();\r",
                     "proxy.setUrl('http://' + host + '/dreams/json?find=ByUseridEquals&userid=' +userid);\r",
-                    "dreamsStore.load();"
+                    "dreamsStore.load();\r",
+                    "\r",
+                    "//tortoisesStore\r",
+                    "var tortoisesStore = Ext.getStore('tortoisesStore');\r",
+                    "var proxy = tortoisesStore.getProxy();\r",
+                    "proxy.setUrl('http://' + host + '/tortoises/json?find=ByDreamAndUseridEquals&userid=' +userid);"
                 ]
             },
             "designerId": "76f38c4f-ef83-4310-8f7f-16cacff11236"

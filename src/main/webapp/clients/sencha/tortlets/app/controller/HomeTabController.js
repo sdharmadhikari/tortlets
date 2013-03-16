@@ -49,9 +49,6 @@ Ext.define('MyApp.controller.HomeTabController', {
             },
             "list": {
                 itemtap: 'onTodaysTortletsListItemTap'
-            },
-            "button[name='productionModeButton']": {
-                tap: 'onProductionModeButtonTap'
             }
         }
     },
@@ -143,32 +140,6 @@ Ext.define('MyApp.controller.HomeTabController', {
         tortletDetails.setRecord(record);
 
         this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});
-    },
-
-    onProductionModeButtonTap: function(button, e, options) {
-
-        var userid = 'sudhir';
-        var host;
-
-        if(window.location.host === ''){  
-            host = 'localhost:8080';    
-        }else{
-            host = window.location.host;
-        }
-
-        //todaysTortletsStore
-        var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
-        var proxy = todaysTortletsStore.getProxy();
-        proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid);
-
-        //incompleteTortletsStore
-        var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');
-        var proxy = incompleteTortletsStore.getProxy();
-        proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCompleted&userid=' +userid);
-
-
-
-
     }
 
 });

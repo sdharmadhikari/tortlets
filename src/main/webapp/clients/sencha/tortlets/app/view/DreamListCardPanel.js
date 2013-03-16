@@ -43,7 +43,7 @@ Ext.define('MyApp.view.DreamListCardPanel', {
                 xtype: 'allTortletsPanel'
             },
             {
-                xtype: 'tortoisedetails'
+                xtype: 'tortoiseDetails'
             }
         ]
     }

@@ -6,26 +6,25 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "DreamsStore",
-        "autoLoad": false,
-        "model": "Dream",
-        "storeId": "dreamsStore"
+        "designer|userClassName": "TortoisesStore",
+        "model": "Tortoise",
+        "storeId": "tortoisesStore"
     },
-    "id": "ExtBox1-ext-gen15484",
-    "designerId": "2a7e2b19-f954-4c5d-a553-29c3ae040071",
+    "id": "ExtBox1-ext-gen11382",
+    "designerId": "6ae46be0-527b-4709-b96e-84eb3fb55148",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "ajaxproxy",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy2",
+                "designer|userClassName": "MyAjaxProxy",
                 "url": "http://dummy.url"
             },
-            "designerId": "e4c9535a-9efa-443c-a0bb-08593f57296e",
+            "designerId": "57e26ae2-f3b5-4ce4-ac0e-00651a04cc35",
             "cn": [
                 {
                     "type": "jsonreader",
@@ -35,9 +34,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader2"
+                        "designer|userClassName": "MyJsonReader3"
                     },
-                    "designerId": "6aec8cda-037b-417a-989d-53dc8773fc43"
+                    "designerId": "f0f02b37-e7ac-425f-b41a-3f08582cc447"
                 }
             ]
         },
@@ -49,11 +48,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySorter",
-                "direction": "DESC",
-                "property": "createdOn"
+                "designer|userClassName": "MySorter1",
+                "property": "latestTortoiseScore"
             },
-            "designerId": "db70f9e1-4a9d-48f4-b9e3-f0ab0ab65787"
+            "designerId": "4c969974-1375-4995-9c6e-b5af2b1b743e"
         }
     ]
 }

@@ -3,12 +3,27 @@
 
 package com.softrism.tortlets.web;
 
+import com.softrism.tortlets.domain.Dream;
+import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.web.TortoiseController;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 privileged aspect TortoiseController_Roo_Controller_Finder {
+    
+    @RequestMapping(params = { "find=ByDreamAndUseridEquals", "form" }, method = RequestMethod.GET)
+    public String TortoiseController.findTortoisesByDreamAndUseridEqualsForm(Model uiModel) {
+        uiModel.addAttribute("dreams", Dream.findAllDreams());
+        return "tortoises/findTortoisesByDreamAndUseridEquals";
+    }
+    
+    @RequestMapping(params = "find=ByDreamAndUseridEquals", method = RequestMethod.GET)
+    public String TortoiseController.findTortoisesByDreamAndUseridEquals(@RequestParam("dream") Dream dream, @RequestParam("userid") String userid, Model uiModel) {
+        uiModel.addAttribute("tortoises", Tortoise.findTortoisesByDreamAndUseridEquals(dream, userid).getResultList());
+        return "tortoises/list";
+    }
     
     @RequestMapping(params = { "find=ByUseridEquals", "form" }, method = RequestMethod.GET)
     public String TortoiseController.findTortoisesByUseridEqualsForm(Model uiModel) {

@@ -18,14 +18,16 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     config: {
         refs: {
-            dreamListCardPanel: 'dreamListCardPanel'
+            dreamListCardPanel: 'dreamListCardPanel',
+            dreamDetails: 'dreamDetails',
+            tortoiseDetails: 'tortoiseDetails'
         },
 
         control: {
             "dreamList": {
                 itemtap: 'onDreamListItemTap'
             },
-            "button[name='dreamDetailsTortoises']": {
+            "button[name='id']": {
                 tap: 'onDreamDetailsTortoisesButtonTap'
             },
             "button[name='dreamDetailsBackButton']": {
@@ -65,11 +67,25 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onDreamListItemTap: function(dataview, index, target, record, e, options) {
-        this.getDreamListCardPanel().animateActiveItem(1, { type: 'slide'} );
+        var dreamDetails = this.getDreamDetails();
+        dreamDetails.setRecord(record);
+        this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type: 'slide'} );
 
     },
 
     onDreamDetailsTortoisesButtonTap: function(button, e, options) {
+        var dreamDetailsForm = this.getDreamDetails();
+        var newValues = dreamDetailsForm.getValues();
+        //alert(newValues.id);
+        var tortoisesStore = Ext.getStore('tortoisesStore');
+        var proxy = tortoisesStore.getProxy();
+        var orgUrl = proxy.getUrl();
+        var urlWithDream = orgUrl + '&dream=' + newValues.id;
+        proxy.setUrl(urlWithDream);
+        tortoisesStore.load();
+        proxy.setUrl(orgUrl);
+
+
         this.getDreamListCardPanel().animateActiveItem(2, {type : 'slide'});
     },
 
@@ -90,8 +106,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseListItemTap: function(dataview, index, target, record, e, options) {
-        this.getDreamListCardPanel().
-        animateActiveItem(4,{ type : 'slide'});
+        var tortoiseDetailsForm = this.getTortoiseDetails();
+        tortoiseDetailsForm.setRecord(record);
+
+        this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});
     },
 
     onAllTortletsPanelDreamButtonTap: function(button, e, options) {

@@ -38,6 +38,103 @@
                 "type": "string"
             },
             "designerId": "118b3b44-f27f-4062-a513-09ed88bf3185"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field5",
+                "name": "dreamColor"
+            },
+            "designerId": "b538865a-127e-4d04-bbb7-7dc1be175ae5"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field6",
+                "name": "latestDreamScore",
+                "persist": false,
+                "type": "int"
+            },
+            "designerId": "adf05269-1fb6-4b4b-bd72-6143401c1efc"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field9",
+                "name": "userid",
+                "allowNull": false
+            },
+            "designerId": "66f51c11-b25a-4dcc-80f0-fc12ebda9520"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field10",
+                "name": "dreamStatus"
+            },
+            "designerId": "9733078d-0f7f-482a-9784-9eb76b724855"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field7",
+                "name": "createdOn",
+                "dateFormat": "MM/dd/yyy",
+                "persist": false,
+                "type": null
+            },
+            "designerId": "e6085fe9-051d-4532-a2e1-82a2dbc948cb"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field8",
+                "name": "updatedOn"
+            },
+            "designerId": "07f02206-8cd5-4c4e-a329-42b54c37fb33"
+        },
+        {
+            "type": "hasmanyassociation",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHasManyAssociation",
+                "model": "Tortoise"
+            },
+            "designerId": "8ed30ae0-fbe5-42b8-b106-6801bf9273b6"
         }
     ]
 }

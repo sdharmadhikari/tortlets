@@ -40,6 +40,7 @@ Ext.define('MyApp.view.DreamDetails', {
                         xtype: 'textareafield',
                         height: 74,
                         html: '',
+                        name: 'title',
                         placeHolder: 'Become healthy and loose weight..'
                     }
                 ]
@@ -51,11 +52,12 @@ Ext.define('MyApp.view.DreamDetails', {
                     {
                         xtype: 'textareafield',
                         height: 78,
-                        width: 280
+                        width: 280,
+                        name: 'notes'
                     },
                     {
                         xtype: 'button',
-                        name: 'dreamDetailsTortoises',
+                        name: 'id',
                         ui: 'forward',
                         text: 'Tortoises'
                     },
@@ -110,6 +112,10 @@ Ext.define('MyApp.view.DreamDetails', {
                         text: 'I am done ! (Delete)'
                     }
                 ]
+            },
+            {
+                xtype: 'hiddenfield',
+                name: 'id'
             }
         ]
     }
