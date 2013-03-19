@@ -53,12 +53,15 @@ Ext.application({
     name: 'MyApp',
     controllers: [
         'HomeTabController',
-        'DreamsTabController'
+        'DreamsTabController',
+        'SampleOverriddenController',
+        'UtilityController'
     ],
 
     launch: function() {
         console.log('application launch');
         var userid = 'sudhir';
+        this.userid = userid; // Here userid becomes global variable to be accessed using MyApp.app.userid
         var host;
 
         if(window.location.host === ''){  
@@ -90,10 +93,16 @@ Ext.application({
         proxy.setUrl('http://' + host + '/dreams/json?find=ByUseridEquals&userid=' +userid);
         dreamsStore.load();
 
+        var Dream = Ext.ModelMgr.getModel('MyApp.model.Dream');
+        var proxy = Dream.getProxy();
+        proxy.setUrl('http://' + host + '/dreams/json');
+
         //tortoisesStore
         var tortoisesStore = Ext.getStore('tortoisesStore');
         var proxy = tortoisesStore.getProxy();
         proxy.setUrl('http://' + host + '/tortoises/json?find=ByDreamAndUseridEquals&userid=' +userid);
+
+
         Ext.create('MyApp.view.MainTabPanel', {fullscreen: true});
     }
 

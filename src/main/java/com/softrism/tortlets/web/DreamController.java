@@ -90,4 +90,37 @@ public class DreamController {
         headers.add("Content-Type", "application/json; charset=utf-8");
         return new ResponseEntity<String>(Dream.toJsonArray(Dream.findDreamsByUseridEquals(userid).getResultList()), headers, HttpStatus.OK);
     }
+
+    @RequestMapping(value="/json" , method = RequestMethod.POST, headers = "Accept=application/json")
+    public ResponseEntity<String> createFromJson(@RequestBody String json) {
+        Dream dream = Dream.fromJsonToDream(json);
+        Date now = new Date();
+        dream.setCreatedOn(now);
+        dream.setUpdatedOn(now);
+        dream.setStatus(DreamStatusEnum.ACTIVE);
+        dream.persist();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+        return new ResponseEntity<String>(dream.toJson(),headers, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/json", method = RequestMethod.PUT, headers = "Accept=application/json")
+    public ResponseEntity<String> updateFromJson(@RequestBody String json) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+        Dream dream = Dream.fromJsonToDream(json);
+        Dream oldDream = Dream.findDream(dream.getId());
+        if(oldDream == null){
+            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        }
+        oldDream.setTitle(dream.getTitle());
+        oldDream.setNotes(dream.getNotes());
+        oldDream.setDreamColor(dream.getDreamColor());
+        oldDream.setStatus(dream.getStatus());
+        oldDream.setUpdatedOn(new Date());
+        if (oldDream.merge() == null) {
+            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<String>(headers, HttpStatus.OK);
+    }
 }

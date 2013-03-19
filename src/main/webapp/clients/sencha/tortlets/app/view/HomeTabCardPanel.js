@@ -37,7 +37,17 @@ Ext.define('MyApp.view.HomeTabCardPanel', {
             {
                 xtype: 'tortletDetails'
             }
+        ],
+        listeners: [
+            {
+                fn: 'onPanelShow',
+                event: 'show'
+            }
         ]
+    },
+
+    onPanelShow: function(component, options) {
+        component.setActiveItem(0);
     }
 
 });

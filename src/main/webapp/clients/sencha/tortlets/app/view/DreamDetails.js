@@ -56,12 +56,6 @@ Ext.define('MyApp.view.DreamDetails', {
                         name: 'notes'
                     },
                     {
-                        xtype: 'button',
-                        name: 'id',
-                        ui: 'forward',
-                        text: 'Tortoises'
-                    },
-                    {
                         xtype: 'selectfield',
                         label: 'Dream Color',
                         labelWidth: '40%',
@@ -96,9 +90,8 @@ Ext.define('MyApp.view.DreamDetails', {
                 items: [
                     {
                         xtype: 'button',
-                        name: 'dreamDetailsStartDreaming',
-                        ui: 'confirm',
-                        text: 'Make It Happen !'
+                        name: 'dreamDetailsNextButton',
+                        text: 'Next'
                     }
                 ]
             },

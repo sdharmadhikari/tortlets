@@ -38,15 +38,6 @@ privileged aspect DreamController_Roo_Controller_Json {
         return new ResponseEntity<String>(Dream.toJsonArray(result), headers, HttpStatus.OK);
     }
     
-    @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
-    public ResponseEntity<String> DreamController.createFromJson(@RequestBody String json) {
-        Dream dream = Dream.fromJsonToDream(json);
-        dream.persist();
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json");
-        return new ResponseEntity<String>(headers, HttpStatus.CREATED);
-    }
-    
     @RequestMapping(value = "/jsonArray", method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> DreamController.createFromJsonArray(@RequestBody String json) {
         for (Dream dream: Dream.fromJsonArrayToDreams(json)) {
@@ -56,17 +47,7 @@ privileged aspect DreamController_Roo_Controller_Json {
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
-    
-    @RequestMapping(method = RequestMethod.PUT, headers = "Accept=application/json")
-    public ResponseEntity<String> DreamController.updateFromJson(@RequestBody String json) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json");
-        Dream dream = Dream.fromJsonToDream(json);
-        if (dream.merge() == null) {
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<String>(headers, HttpStatus.OK);
-    }
+
     
     @RequestMapping(value = "/jsonArray", method = RequestMethod.PUT, headers = "Accept=application/json")
     public ResponseEntity<String> DreamController.updateFromJsonArray(@RequestBody String json) {

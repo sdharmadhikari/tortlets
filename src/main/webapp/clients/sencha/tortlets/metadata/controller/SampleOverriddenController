@@ -1,0 +1,31 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SampleOverriddenController"
+    },
+    "id": "ExtBox1-ext-gen4194",
+    "designerId": "a6be32fc-255c-4b23-8caf-f80699a22551",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "regularFunction",
+                "fn": "regularFunction",
+                "implHandler": [
+                    "alert('regularFunction will NOT be called because its overridden');"
+                ]
+            },
+            "designerId": "1d76ca0e-fda1-4be2-b324-bcb5471c2866"
+        }
+    ]
+}

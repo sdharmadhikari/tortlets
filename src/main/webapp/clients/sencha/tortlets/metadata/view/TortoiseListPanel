@@ -7,8 +7,8 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "TortoiseListPanel",
-        "designer|userAlias": "tortoiselistpanel",
-        "layout": "fit"
+        "designer|userAlias": "tortoiseListPanel",
+        "layout": "vbox"
     },
     "id": "ExtBox1-ext-gen3761",
     "designerId": "c717694e-2e8e-4855-ba93-2500aa9367bf",
@@ -83,8 +83,33 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "layout|flex": 10
+            },
             "designerId": "9812fcd3-ef9d-4ad3-a1ff-c26aa1a9be08",
             "masterInstanceId": "ExtBox1-ext-gen1925"
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortoiseListStartDreamingButton",
+                "designer|userClassName": "MyButton4",
+                "ui": "confirm",
+                "text": "Make It Happen! (Save)"
+            },
+            "designerId": "0d1842e0-720d-439f-9690-01f93309f3e8",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
         }
     ]
 }

@@ -15,7 +15,7 @@
 
 Ext.define('MyApp.view.TortoiseListPanel', {
     extend: 'Ext.Panel',
-    alias: 'widget.tortoiselistpanel',
+    alias: 'widget.tortoiseListPanel',
 
     requires: [
         'MyApp.view.TortoiseList'
@@ -23,7 +23,7 @@ Ext.define('MyApp.view.TortoiseListPanel', {
 
     config: {
         layout: {
-            type: 'fit'
+            type: 'vbox'
         },
         items: [
             {
@@ -48,7 +48,14 @@ Ext.define('MyApp.view.TortoiseListPanel', {
                 ]
             },
             {
-                xtype: 'tortoiseList'
+                xtype: 'tortoiseList',
+                flex: 10
+            },
+            {
+                xtype: 'button',
+                name: 'tortoiseListStartDreamingButton',
+                ui: 'confirm',
+                text: 'Make It Happen! (Save)'
             }
         ]
     }

@@ -20,21 +20,22 @@ Ext.define('MyApp.controller.DreamsTabController', {
         refs: {
             dreamListCardPanel: 'dreamListCardPanel',
             dreamDetails: 'dreamDetails',
-            tortoiseDetails: 'tortoiseDetails'
+            tortoiseDetails: 'tortoiseDetails',
+            tortoiseListPanel: 'tortoiseListPanel'
         },
 
         control: {
             "dreamList": {
                 itemtap: 'onDreamListItemTap'
             },
-            "button[name='id']": {
-                tap: 'onDreamDetailsTortoisesButtonTap'
+            "button[name='dreamDetailsNextButton']": {
+                tap: 'onDreamDetailsNextButtonTap'
             },
             "button[name='dreamDetailsBackButton']": {
                 tap: 'onDreamDetailsBackButtonTap'
             },
-            "button[name='dreamDetailsStartDreaming']": {
-                tap: 'onDreamDetailsStartDreamingButtonTap'
+            "button[name='tortoiseListStartDreamingButton']": {
+                tap: 'onTortoiseListStartDreamingButtonTap'
             },
             "button[name='dreamDeleteButton']": {
                 tap: 'onDreamDeleteButtonButtonTap'
@@ -73,27 +74,67 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     },
 
-    onDreamDetailsTortoisesButtonTap: function(button, e, options) {
+    onDreamDetailsNextButtonTap: function(button, e, options) {
+        var tortoiseListPanel = this.getTortoiseListPanel();
+
         var dreamDetailsForm = this.getDreamDetails();
         var newValues = dreamDetailsForm.getValues();
-        //alert(newValues.id);
-        var tortoisesStore = Ext.getStore('tortoisesStore');
-        var proxy = tortoisesStore.getProxy();
-        var orgUrl = proxy.getUrl();
-        var urlWithDream = orgUrl + '&dream=' + newValues.id;
-        proxy.setUrl(urlWithDream);
-        tortoisesStore.load();
-        proxy.setUrl(orgUrl);
+        var dreamId = newValues.id;
+        var userid = MyApp.app.userid; // Accessing global variable which has been set in Application launch() function
+        var utility = MyApp.app.getController('UtilityController');
+        var caller = this; // Need this so that this controller is available in callback methods. eg. 
+
+        if(dreamId === null){
+            var newDream = Ext.create('MyApp.model.Dream',{
+                title : newValues.title,
+                notes : newValues.notes,
+                dreamColor : newValues.dreamColor,
+                userid : userid
+            });
+            var now = new Date();
+            tempDreamId = (now.getTime()).toString();
+            newDream.set('id',tempDreamId);// IF u dont this, id will be posted to server as ext-record-<number>
+            newDream.save(function(createdModel){
+                dreamId = createdModel.get('id');
+                console.log('newDream save');
+                var dreamsStore = Ext.getStore('dreamsStore');
+                dreamsStore.load();
+                console.log('loaded dreamsStore');
+                utility.loadTortoises(dreamId);
+                console.log('back to newDream.save method after loadTortoises,calling animateActiveItem');
+
+                caller.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});
+                console.log('called animateActiveItem tortoiseListPanel');
+            });
 
 
-        this.getDreamListCardPanel().animateActiveItem(2, {type : 'slide'});
+        }else{
+            // save the dream (copy all new values)
+            dreamId = newValues.id;
+            console.log('saving old dream updated , old dreamId ' + dreamId);
+            var record = dreamDetailsForm.getRecord();
+            var newValues = dreamDetailsForm.getValues();
+            record.set('title', newValues.title);
+            record.set('notes', newValues.notes);
+            record.save(function(model){
+                console.log('inside oldDream.save');
+                var dreamsStore = Ext.getStore('dreamsStore');
+                dreamsStore.load();
+                console.log('inside oldDream.save, after dreamStore.load'); 
+                utility.loadTortoises(dreamId);
+                console.log('back to OLDDream.save method after loadTortoises,calling animateActiveItem');
+                caller.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});
+            });
+
+        }
+
     },
 
     onDreamDetailsBackButtonTap: function(button, e, options) {
         this.getDreamListCardPanel().animateActiveItem(0, { type : 'slide',direction : 'right'});
     },
 
-    onDreamDetailsStartDreamingButtonTap: function(button, e, options) {
+    onTortoiseListStartDreamingButtonTap: function(button, e, options) {
         this.getDreamListCardPanel().animateActiveItem(0, {type : 'slide', direction : 'right'});
     },
 

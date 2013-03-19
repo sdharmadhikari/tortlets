@@ -1,0 +1,43 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UtilityController"
+    },
+    "id": "ExtBox1-ext-gen9537",
+    "designerId": "b6ca3e62-c929-45fc-9967-87ea6496b91a",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadTortoises",
+                "fn": "loadTortoises",
+                "designer|params": [
+                    "dreamId"
+                ],
+                "implHandler": [
+                    "console.log('inside loadTortoises');\r",
+                    "var tortoisesStore = Ext.getStore('tortoisesStore');\r",
+                    "var proxy = tortoisesStore.getProxy();\r",
+                    "var orgUrl = proxy.getUrl();\r",
+                    "var urlWithDream = orgUrl + '&dream=' + dreamId;\r",
+                    "proxy.setUrl(urlWithDream);\r",
+                    "tortoisesStore.load();\r",
+                    "console.log('loaded tortoisesStore');\r",
+                    "proxy.setUrl(orgUrl);\r",
+                    "console.log('getting out of loadTortoises');"
+                ]
+            },
+            "designerId": "17a71197-203d-402f-a939-b3b6903120ca"
+        }
+    ]
+}

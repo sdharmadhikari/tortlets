@@ -19,6 +19,7 @@ Ext.define('MyApp.view.TortoiseList', {
 
     config: {
         ui: 'round',
+        emptyText: 'You need to at least one Tortoise to realize the dream. Tortoise is nothing but an activity to want to do regularly. Remember, slow and steady tortoise wins !',
         store: 'tortoisesStore',
         onItemDisclosure: true,
         itemTpl: [

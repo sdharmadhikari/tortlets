@@ -12,6 +12,7 @@
         "designer|displayName": "DreamList",
         "margin": null,
         "ui": "round",
+        "emptyText": "",
         "store": "dreamsStore",
         "onItemDisclosure": true
     },

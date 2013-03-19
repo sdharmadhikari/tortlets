@@ -62,6 +62,23 @@
             "codeClass": null,
             "designerId": "f0ed9f77-37cb-4d27-b21f-a7302cae79b3",
             "masterInstanceId": "ExtBox1-ext-gen16443"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onPanelShow",
+                "fn": "onPanelShow",
+                "implHandler": [
+                    "component.setActiveItem(0);"
+                ],
+                "name": "show"
+            },
+            "designerId": "bbfd9a4b-3d8d-4708-bacb-17e9fb8c1911"
         }
     ]
 }

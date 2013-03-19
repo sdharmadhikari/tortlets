@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "myAppCustomReference": null,
         "models": [
             "Tortlet",
             "Dream",
@@ -41,11 +42,20 @@
         "name": "MyApp",
         "controllers": [
             "HomeTabController",
-            "DreamsTabController"
+            "DreamsTabController",
+            "SampleOverriddenController",
+            "UtilityController"
         ]
     },
     "id": "ExtBox1-ext-gen1500",
     "designerId": "application",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "myAppCustomReference",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "fixedfunction",
@@ -60,6 +70,7 @@
                 "implHandler": [
                     "console.log('application launch');\r",
                     "var userid = 'sudhir';\r",
+                    "this.userid = userid; // Here userid becomes global variable to be accessed using MyApp.app.userid\r",
                     "var host;\r",
                     "\r",
                     "if(window.location.host === ''){  \r",
@@ -91,10 +102,16 @@
                     "proxy.setUrl('http://' + host + '/dreams/json?find=ByUseridEquals&userid=' +userid);\r",
                     "dreamsStore.load();\r",
                     "\r",
+                    "var Dream = Ext.ModelMgr.getModel('MyApp.model.Dream');\r",
+                    "var proxy = Dream.getProxy();\r",
+                    "proxy.setUrl('http://' + host + '/dreams/json');\r",
+                    "\r",
                     "//tortoisesStore\r",
                     "var tortoisesStore = Ext.getStore('tortoisesStore');\r",
                     "var proxy = tortoisesStore.getProxy();\r",
-                    "proxy.setUrl('http://' + host + '/tortoises/json?find=ByDreamAndUseridEquals&userid=' +userid);"
+                    "proxy.setUrl('http://' + host + '/tortoises/json?find=ByDreamAndUseridEquals&userid=' +userid);\r",
+                    "\r",
+                    ""
                 ]
             },
             "designerId": "76f38c4f-ef83-4310-8f7f-16cacff11236"

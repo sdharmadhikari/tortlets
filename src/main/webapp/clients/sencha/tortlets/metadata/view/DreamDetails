@@ -117,29 +117,6 @@
                     "designerId": "c5ea08c1-e697-401c-b8e6-0cf08e04c3d6"
                 },
                 {
-                    "type": "button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "name": "id",
-                        "designer|userClassName": "MyButton12",
-                        "designer|displayName": "DreamDetailsTortoises",
-                        "ui": "forward",
-                        "text": "Tortoises"
-                    },
-                    "designerId": "4e6b4041-b148-4c15-b77d-010b80203633",
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "name",
-                            "type": "string"
-                        }
-                    ]
-                },
-                {
                     "type": "selectfield",
                     "reference": {
                         "name": "items",
@@ -178,11 +155,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "name": "dreamDetailsStartDreaming",
+                        "name": "dreamDetailsNextButton",
                         "designer|userClassName": "MyButton13",
-                        "designer|displayName": "DreamDetailsStartDreaming",
-                        "ui": "confirm",
-                        "text": "Make It Happen !"
+                        "designer|displayName": "DreamDetailsNextButton",
+                        "text": "Next"
                     },
                     "designerId": "7dbcbeb9-1f21-4080-9511-14c064886592",
                     "customConfigs": [

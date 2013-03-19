@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Dream"
+        "designer|userClassName": "Dream",
+        "idProperty": null
     },
     "id": "ExtBox1-ext-gen15022",
     "designerId": "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
@@ -135,6 +136,60 @@
                 "model": "Tortoise"
             },
             "designerId": "8ed30ae0-fbe5-42b8-b106-6801bf9273b6"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field25",
+                "name": "id"
+            },
+            "designerId": "230ccfee-c797-40e1-a71e-891824efa410"
+        },
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy3",
+                "designer|displayName": "DreamRestProxy",
+                "url": "http://dummy.url",
+                "appendId": false
+            },
+            "designerId": "220e74c7-5a7b-4762-b0b7-c75bb795347b",
+            "cn": [
+                {
+                    "type": "jsonwriter",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonWriter"
+                    },
+                    "designerId": "88185ffc-cbd8-408c-b6a5-96a92142c107"
+                },
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4"
+                    },
+                    "designerId": "7f7eb1ea-9a76-44ce-965b-1f9f2aa5347e"
+                }
+            ]
         }
     ]
 }

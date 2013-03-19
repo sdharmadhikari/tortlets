@@ -52,10 +52,24 @@ Ext.define('MyApp.model.Dream', {
             },
             {
                 name: 'updatedOn'
+            },
+            {
+                name: 'id'
             }
         ],
         hasMany: {
             model: 'MyApp.model.Tortoise'
+        },
+        proxy: {
+            type: 'rest',
+            url: 'http://dummy.url',
+            appendId: false,
+            writer: {
+                type: 'json'
+            },
+            reader: {
+                type: 'json'
+            }
         }
     }
 });

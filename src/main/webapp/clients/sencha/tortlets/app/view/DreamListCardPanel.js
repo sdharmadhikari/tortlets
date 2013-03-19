@@ -37,7 +37,7 @@ Ext.define('MyApp.view.DreamListCardPanel', {
                 xtype: 'dreamDetails'
             },
             {
-                xtype: 'tortoiselistpanel'
+                xtype: 'tortoiseListPanel'
             },
             {
                 xtype: 'allTortletsPanel'
@@ -45,7 +45,17 @@ Ext.define('MyApp.view.DreamListCardPanel', {
             {
                 xtype: 'tortoiseDetails'
             }
+        ],
+        listeners: [
+            {
+                fn: 'onPanelShow',
+                event: 'show'
+            }
         ]
+    },
+
+    onPanelShow: function(component, options) {
+        component.setActiveItem(0);
     }
 
 });
