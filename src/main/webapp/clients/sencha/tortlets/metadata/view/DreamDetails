@@ -11,6 +11,13 @@
     },
     "id": "ExtBox1-ext-gen25443",
     "designerId": "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "newStatus",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "titlebar",
@@ -66,20 +73,19 @@
             "designerId": "f03f3521-6792-4644-bb78-198870f75137",
             "cn": [
                 {
-                    "type": "textareafield",
+                    "type": "textfield",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTextArea1",
+                        "designer|userClassName": "MyTextField2",
                         "designer|displayName": "dreamTitleTextArea",
                         "height": 74,
-                        "html": "",
+                        "html": null,
                         "label": null,
-                        "name": "title",
-                        "placeHolder": "Become healthy and loose weight.."
+                        "name": "title"
                     },
                     "designerId": "42eedf72-10fb-401d-996f-4d294ec6d9d1"
                 }

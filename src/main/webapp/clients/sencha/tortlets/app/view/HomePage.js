@@ -44,6 +44,7 @@ Ext.define('MyApp.view.HomePage', {
                         xtype: 'textfield',
                         flex: 9,
                         label: '',
+                        name: 'whatsYourDreamTextField',
                         placeHolder: 'What\'s Your Dream ?'
                     },
                     {

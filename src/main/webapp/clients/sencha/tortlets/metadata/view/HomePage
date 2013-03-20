@@ -55,6 +55,7 @@
                         "designer|userClassName": "MyTextField",
                         "designer|displayName": "WhatsYourDreamTextField",
                         "label": "",
+                        "name": "whatsYourDreamTextField",
                         "placeHolder": "What's Your Dream ?"
                     },
                     "designerId": "86c5e48f-6f5a-4f41-b317-74d22ce41445"

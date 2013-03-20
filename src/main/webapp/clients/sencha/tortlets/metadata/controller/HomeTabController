@@ -12,27 +12,6 @@
     "designerId": "f349d5fa-f50b-405e-b80f-e46f09bf9967",
     "cn": [
         {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "onHomePageDreamButtonTap",
-                "fn": "onHomePageDreamButtonTap",
-                "implHandler": [
-                    "console.log('inside onHomePageDreamButtonTap');\r",
-                    "this.getHomeTabCardPanel().animateActiveItem(this.getDreamDetails(), { type: 'slide'});\r",
-                    ""
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='homePageDreamButton']"
-            },
-            "designerId": "f9e7f298-2d53-44a8-b259-bbfb2698deaf"
-        },
-        {
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -45,20 +24,6 @@
                 "selector": "homeTabCardPanel"
             },
             "designerId": "345e27f2-eaae-4385-ab6f-bee6c0fa579f"
-        },
-        {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "dreamDetails",
-                "ref": "dreamDetails",
-                "selector": "dreamDetails"
-            },
-            "designerId": "c36fe289-8522-4e2e-a835-2be6b8e037db"
         },
         {
             "type": "controlleraction",

@@ -12,20 +12,6 @@
     "designerId": "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
     "cn": [
         {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "dreamListCardPanel",
-                "ref": "dreamListCardPanel",
-                "selector": "dreamListCardPanel"
-            },
-            "designerId": "0e003a23-372d-43a2-b5f7-849b3b6ded62"
-        },
-        {
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -37,7 +23,9 @@
                 "fn": "onDreamListItemTap",
                 "implHandler": [
                     "var dreamDetails = this.getDreamDetails();\r",
+                    "dreamDetails.newStatus = 'false';\r",
                     "dreamDetails.setRecord(record);\r",
+                    "this.getDreamDeleteButton().show();\r",
                     "this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type: 'slide'} );\r",
                     ""
                 ],
@@ -63,11 +51,13 @@
                     "var dreamDetailsForm = this.getDreamDetails();\r",
                     "var newValues = dreamDetailsForm.getValues();\r",
                     "var dreamId = newValues.id;\r",
+                    "var newStatus = dreamDetailsForm.newStatus;\r",
                     "var userid = MyApp.app.userid; // Accessing global variable which has been set in Application launch() function\r",
                     "var utility = MyApp.app.getController('UtilityController');\r",
-                    "var caller = this; // Need this so that this controller is available in callback methods. eg. \r",
+                    "var caller = MyApp.app.getController('DreamsTabController'); // Need this so that this controller is available in callback methods. eg. \r",
                     "\r",
-                    "if(dreamId === null){\r",
+                    "if(newStatus === 'true'){\r",
+                    "    alert('newForm');\r",
                     "    var newDream = Ext.create('MyApp.model.Dream',{\r",
                     "        title : newValues.title,\r",
                     "        notes : newValues.notes,\r",
@@ -85,7 +75,7 @@
                     "        console.log('loaded dreamsStore');\r",
                     "        utility.loadTortoises(dreamId);\r",
                     "        console.log('back to newDream.save method after loadTortoises,calling animateActiveItem');\r",
-                    "        \r",
+                    "\r",
                     "        caller.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});\r",
                     "        console.log('called animateActiveItem tortoiseListPanel');\r",
                     "    });\r",
@@ -93,6 +83,7 @@
                     "\r",
                     "}else{\r",
                     "    // save the dream (copy all new values)\r",
+                    "    alert('oldDream');\r",
                     "    dreamId = newValues.id;\r",
                     "    console.log('saving old dream updated , old dreamId ' + dreamId);\r",
                     "    var record = dreamDetailsForm.getRecord();\r",
@@ -378,6 +369,94 @@
                 "selector": "tortoiseListPanel"
             },
             "designerId": "430ba67e-38f0-45d4-bb25-099ff3a22110"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onHomeTabNewDreamButtonTap",
+                "fn": "onHomeTabNewDreamButtonTap",
+                "implHandler": [
+                    "console.log('inside onHomePageDreamButtonTap');\r",
+                    "var dreamForm = this.getDreamDetails();\r",
+                    "var text = this.getWhatsYourDreamTextField().getValue();\r",
+                    "//alert(text);\r",
+                    "var record = Ext.create('MyApp.model.Dream');\r",
+                    "record.set('title', text);\r",
+                    "dreamForm.newStatus='true';\r",
+                    "dreamForm.setRecord(record);\r",
+                    "var mainTabPanel = this.getMainTabPanel();\r",
+                    "mainTabPanel.setActiveItem(1);\r",
+                    "var deleteButton = this.getDreamDeleteButton(); //Ext.ComponentQuery.query(\"button[name='dreamDeleteButton']\");\r",
+                    "deleteButton.hide();\r",
+                    "this.getDreamListCardPanel().animateActiveItem(dreamForm, { type: 'slide'});\r",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='homePageDreamButton']"
+            },
+            "designerId": "eedb6ac0-136c-4956-8e54-a0fa6a277d56"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "whatsYourDreamTextField",
+                "ref": "whatsYourDreamTextField",
+                "selector": "textfield[name='whatsYourDreamTextField']"
+            },
+            "designerId": "dd2a5c23-2709-48af-b2df-9c5d60a86dbe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "mainTabPanel",
+                "ref": "mainTabPanel",
+                "selector": "mainTabPanel"
+            },
+            "designerId": "8e1af953-b11d-49cd-8b5e-b48c96b3aeda"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dreamListCardPanel",
+                "ref": "dreamListCardPanel",
+                "selector": "dreamListCardPanel"
+            },
+            "designerId": "c79beb77-dff9-448f-89f9-7b4ac6403799"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dreamDeleteButton",
+                "ref": "dreamDeleteButton",
+                "selector": "button[name='dreamDeleteButton']"
+            },
+            "designerId": "ef305eb7-5513-4207-9085-41361c671f21"
         }
     ]
 }

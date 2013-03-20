@@ -19,16 +19,12 @@ Ext.define('MyApp.controller.HomeTabController', {
     config: {
         refs: {
             homeTabCardPanel: 'homeTabCardPanel',
-            dreamDetails: 'dreamDetails',
             tortletDetails: 'tortletDetails',
             todayTortletsList: 'todayTortletsList',
             tortletsList: 'tortletsList'
         },
 
         control: {
-            "button[name='homePageDreamButton']": {
-                tap: 'onHomePageDreamButtonTap'
-            },
             "tortletsList": {
                 itemtap: 'onTortletsListItemTap'
             },
@@ -51,12 +47,6 @@ Ext.define('MyApp.controller.HomeTabController', {
                 itemtap: 'onTodaysTortletsListItemTap'
             }
         }
-    },
-
-    onHomePageDreamButtonTap: function(button, e, options) {
-        console.log('inside onHomePageDreamButtonTap');
-        this.getHomeTabCardPanel().animateActiveItem(this.getDreamDetails(), { type: 'slide'});
-
     },
 
     onTortletsListItemTap: function(dataview, index, target, record, e, options) {

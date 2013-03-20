@@ -18,10 +18,13 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     config: {
         refs: {
-            dreamListCardPanel: 'dreamListCardPanel',
             dreamDetails: 'dreamDetails',
             tortoiseDetails: 'tortoiseDetails',
-            tortoiseListPanel: 'tortoiseListPanel'
+            tortoiseListPanel: 'tortoiseListPanel',
+            whatsYourDreamTextField: 'textfield[name=\'whatsYourDreamTextField\']',
+            mainTabPanel: 'mainTabPanel',
+            dreamListCardPanel: 'dreamListCardPanel',
+            dreamDeleteButton: 'button[name=\'dreamDeleteButton\']'
         },
 
         control: {
@@ -63,13 +66,18 @@ Ext.define('MyApp.controller.DreamsTabController', {
             },
             "button[name='tortoiseDetailsTortletsButton']": {
                 tap: 'onTortoiseDetailsTortletsButtonTap'
+            },
+            "button[name='homePageDreamButton']": {
+                tap: 'onHomeTabNewDreamButtonTap'
             }
         }
     },
 
     onDreamListItemTap: function(dataview, index, target, record, e, options) {
         var dreamDetails = this.getDreamDetails();
+        dreamDetails.newStatus = 'false';
         dreamDetails.setRecord(record);
+        this.getDreamDeleteButton().show();
         this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type: 'slide'} );
 
     },
@@ -80,11 +88,13 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var dreamDetailsForm = this.getDreamDetails();
         var newValues = dreamDetailsForm.getValues();
         var dreamId = newValues.id;
+        var newStatus = dreamDetailsForm.newStatus;
         var userid = MyApp.app.userid; // Accessing global variable which has been set in Application launch() function
         var utility = MyApp.app.getController('UtilityController');
-        var caller = this; // Need this so that this controller is available in callback methods. eg. 
+        var caller = MyApp.app.getController('DreamsTabController'); // Need this so that this controller is available in callback methods. eg. 
 
-        if(dreamId === null){
+        if(newStatus === 'true'){
+            alert('newForm');
             var newDream = Ext.create('MyApp.model.Dream',{
                 title : newValues.title,
                 notes : newValues.notes,
@@ -110,6 +120,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         }else{
             // save the dream (copy all new values)
+            alert('oldDream');
             dreamId = newValues.id;
             console.log('saving old dream updated , old dreamId ' + dreamId);
             var record = dreamDetailsForm.getRecord();
@@ -182,6 +193,23 @@ Ext.define('MyApp.controller.DreamsTabController', {
     onTortoiseDetailsTortletsButtonTap: function(button, e, options) {
         this.getDreamListCardPanel().
         animateActiveItem(3, {type : 'slide'});
+    },
+
+    onHomeTabNewDreamButtonTap: function(button, e, options) {
+        console.log('inside onHomePageDreamButtonTap');
+        var dreamForm = this.getDreamDetails();
+        var text = this.getWhatsYourDreamTextField().getValue();
+        //alert(text);
+        var record = Ext.create('MyApp.model.Dream');
+        record.set('title', text);
+        dreamForm.newStatus='true';
+        dreamForm.setRecord(record);
+        var mainTabPanel = this.getMainTabPanel();
+        mainTabPanel.setActiveItem(1);
+        var deleteButton = this.getDreamDeleteButton(); //Ext.ComponentQuery.query("button[name='dreamDeleteButton']");
+        deleteButton.hide();
+        this.getDreamListCardPanel().animateActiveItem(dreamForm, { type: 'slide'});
+
     }
 
 });

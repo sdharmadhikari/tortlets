@@ -37,11 +37,9 @@ Ext.define('MyApp.view.DreamDetails', {
                 title: 'I dream',
                 items: [
                     {
-                        xtype: 'textareafield',
+                        xtype: 'textfield',
                         height: 74,
-                        html: '',
-                        name: 'title',
-                        placeHolder: 'Become healthy and loose weight..'
+                        name: 'title'
                     }
                 ]
             },

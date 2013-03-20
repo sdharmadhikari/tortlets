@@ -25,8 +25,6 @@ Ext.define('MyApp.view.DreamList', {
         itemTpl: [
             '<div>{title}({latestDreamScore})</div>',
             '<br/> ',
-            'Dreaming From : {createdOn}',
-            '<br/>',
             '.........<img src="images/tortoise_smaller.gif"></img>.............!'
         ]
     }
