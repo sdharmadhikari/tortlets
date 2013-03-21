@@ -198,7 +198,10 @@
                 "implHandler": [
                     "var tortoiseDetailsForm = this.getTortoiseDetails();\r",
                     "tortoiseDetailsForm.setRecord(record);\r",
-                    "\r",
+                    "var tortoiseDetailsBackToDreamButton = this.getTortoiseDetailsBackToDreamButton();\r",
+                    "tortoiseDetailsBackToDreamButton.show();\r",
+                    "var tortoiseDetailsBackToListButton = this.getTortoiseDetailsBackToListButton();\r",
+                    "tortoiseDetailsBackToListButton.hide();\r",
                     "this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});"
                 ],
                 "name": "itemtap",
@@ -238,8 +241,15 @@
                 "designer|userClassName": "onTortoiseListPanelAddButtonTap",
                 "fn": "onTortoiseListPanelAddButtonTap",
                 "implHandler": [
-                    "this.getDreamListCardPanel().\r",
-                    "    animateActiveItem(4, { type : 'slide', direction : 'down'});"
+                    "var dreamListCardPanel = this.getDreamListCardPanel();\r",
+                    "var tortoiseDetails = this.getTortoiseDetails();\r",
+                    "var tortoiseDetailsBackToDreamButton \r",
+                    "    = this.getTortoiseDetailsBackToDreamButton();\r",
+                    "tortoiseDetailsBackToDreamButton.hide();\r",
+                    "var tortoiseDetailsBackToListButton \r",
+                    "    = this.getTortoiseDetailsBackToListButton();\r",
+                    "tortoiseDetailsBackToListButton.show();\r",
+                    "dreamListCardPanel.animateActiveItem(tortoiseDetails, { type : 'slide', direction : 'down'});"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -279,7 +289,7 @@
                 "designer|userClassName": "onTortoiseDetailsBackButtonTap",
                 "fn": "onTortoiseDetailsBackButtonTap",
                 "implHandler": [
-                    "alert('tortoseDetailsBack');\r",
+                    "alert('tortoseDetailsBackToDream');\r",
                     "var dreamListCardPanel = this.getDreamListCardPanel();\r",
                     "var tortoiseListPanel = this.getTortoiseListPanel();\r",
                     "dreamListCardPanel.animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'right'});"
@@ -473,6 +483,74 @@
                 "selector": "dreamListPanel"
             },
             "designerId": "252aaa9d-c100-4ba8-904e-67368f9c07c6"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tortoiseDetailsBackToListButton",
+                "ref": "tortoiseDetailsBackToListButton",
+                "selector": "button[name='tortoiseDetailsBackToListButton']"
+            },
+            "designerId": "54ba410d-6f2a-4a53-97eb-77e0e43110e6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseDetailsBackToListButtonTap",
+                "fn": "onTortoiseDetailsBackToListButtonTap",
+                "implHandler": [
+                    "var tortoiseListPanel = this.getTortoiseListPanel();\r",
+                    "var slideConfig =  { type : 'slide', direction : 'up'}; \r",
+                    "this.getDreamListCardPanel().animateActiveItem(tortoiseListPanel,slideConfig);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='tortoiseDetailsBackToListButton']"
+            },
+            "designerId": "7625c2ae-43e1-4acc-8d19-e72de503e3f9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tortoiseDetailsBackToDreamButton",
+                "ref": "tortoiseDetailsBackToDreamButton",
+                "selector": "button[name='tortoiseDetailsBackToDreamButton']"
+            },
+            "designerId": "ee1a7c6f-bb34-4c99-a6e2-7156fe4f1ead"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseDetailsBackToDreamButtonTap",
+                "fn": "onTortoiseDetailsBackToDreamButtonTap",
+                "implHandler": [
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='tortoiseDetailsBackToDreamButton']"
+            },
+            "designerId": "9e0d1c33-a428-4c8e-a723-4a9185188c83"
         }
     ]
 }

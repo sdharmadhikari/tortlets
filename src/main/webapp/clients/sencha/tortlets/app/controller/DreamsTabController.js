@@ -25,7 +25,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
             mainTabPanel: 'mainTabPanel',
             dreamListCardPanel: 'dreamListCardPanel',
             dreamDeleteButton: 'button[name=\'dreamDeleteButton\']',
-            dreamListPanel: 'dreamListPanel'
+            dreamListPanel: 'dreamListPanel',
+            tortoiseDetailsBackToListButton: 'button[name=\'tortoiseDetailsBackToListButton\']',
+            tortoiseDetailsBackToDreamButton: 'button[name=\'tortoiseDetailsBackToDreamButton\']'
         },
 
         control: {
@@ -70,6 +72,12 @@ Ext.define('MyApp.controller.DreamsTabController', {
             },
             "button[name='homePageDreamButton']": {
                 tap: 'onHomeTabNewDreamButtonTap'
+            },
+            "button[name='tortoiseDetailsBackToListButton']": {
+                tap: 'onTortoiseDetailsBackToListButtonTap'
+            },
+            "button[name='tortoiseDetailsBackToDreamButton']": {
+                tap: 'onTortoiseDetailsBackToDreamButtonTap'
             }
         }
     },
@@ -161,7 +169,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
     onTortoiseListItemTap: function(dataview, index, target, record, e, options) {
         var tortoiseDetailsForm = this.getTortoiseDetails();
         tortoiseDetailsForm.setRecord(record);
-
+        var tortoiseDetailsBackToDreamButton = this.getTortoiseDetailsBackToDreamButton();
+        tortoiseDetailsBackToDreamButton.show();
+        var tortoiseDetailsBackToListButton = this.getTortoiseDetailsBackToListButton();
+        tortoiseDetailsBackToListButton.hide();
         this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});
     },
 
@@ -171,8 +182,15 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseListPanelAddButtonTap: function(button, e, options) {
-        this.getDreamListCardPanel().
-        animateActiveItem(4, { type : 'slide', direction : 'down'});
+        var dreamListCardPanel = this.getDreamListCardPanel();
+        var tortoiseDetails = this.getTortoiseDetails();
+        var tortoiseDetailsBackToDreamButton 
+        = this.getTortoiseDetailsBackToDreamButton();
+        tortoiseDetailsBackToDreamButton.hide();
+        var tortoiseDetailsBackToListButton 
+        = this.getTortoiseDetailsBackToListButton();
+        tortoiseDetailsBackToListButton.show();
+        dreamListCardPanel.animateActiveItem(tortoiseDetails, { type : 'slide', direction : 'down'});
     },
 
     onTortoiseDetailsSaveButtonTap: function(button, e, options) {
@@ -182,7 +200,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseDetailsBackButtonTap: function(button, e, options) {
-        alert('tortoseDetailsBack');
+        alert('tortoseDetailsBackToDream');
         var dreamListCardPanel = this.getDreamListCardPanel();
         var tortoiseListPanel = this.getTortoiseListPanel();
         dreamListCardPanel.animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'right'});
@@ -212,6 +230,16 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var deleteButton = this.getDreamDeleteButton(); //Ext.ComponentQuery.query("button[name='dreamDeleteButton']");
         deleteButton.hide();
         this.getDreamListCardPanel().animateActiveItem(dreamForm, { type: 'slide'});
+
+    },
+
+    onTortoiseDetailsBackToListButtonTap: function(button, e, options) {
+        var tortoiseListPanel = this.getTortoiseListPanel();
+        var slideConfig =  { type : 'slide', direction : 'up'}; 
+        this.getDreamListCardPanel().animateActiveItem(tortoiseListPanel,slideConfig);
+    },
+
+    onTortoiseDetailsBackToDreamButtonTap: function(button, e, options) {
 
     }
 

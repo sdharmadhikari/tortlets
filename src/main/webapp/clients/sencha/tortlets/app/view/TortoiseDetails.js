@@ -26,8 +26,16 @@ Ext.define('MyApp.view.TortoiseDetails', {
                 items: [
                     {
                         xtype: 'button',
-                        name: 'tortoiseDetailsBackButton',
-                        ui: 'back'
+                        name: 'tortoiseDetailsBackToDreamButton',
+                        ui: 'back',
+                        text: 'Back'
+                    },
+                    {
+                        xtype: 'button',
+                        align: 'right',
+                        name: 'tortoiseDetailsBackToListButton',
+                        iconCls: 'arrow_up',
+                        iconMask: true
                     }
                 ]
             },

@@ -34,15 +34,41 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "name": "tortoiseDetailsBackButton",
+                        "name": "tortoiseDetailsBackToDreamButton",
                         "designer|userClassName": "MyButton3",
-                        "designer|displayName": "TortoiseDetailsBack",
+                        "designer|displayName": "TortoiseDetailsBackToDream",
                         "ui": "back",
                         "iconAlign": null,
                         "iconCls": null,
-                        "text": null
+                        "text": "Back"
                     },
                     "designerId": "23149791-3e80-4e50-a961-89f2ee8a27c0",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "name": "tortoiseDetailsBackToListButton",
+                        "designer|userClassName": "MyButton10",
+                        "designer|displayName": "TortoiseDtailsBackToListButton",
+                        "docked": null,
+                        "iconCls": "arrow_up",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "1cbf4938-88e5-4276-961f-2df0a7f12dc7",
                     "customConfigs": [
                         {
                             "group": "(Custom Properties)",
