@@ -198,10 +198,14 @@
                 "implHandler": [
                     "var tortoiseDetailsForm = this.getTortoiseDetails();\r",
                     "tortoiseDetailsForm.setRecord(record);\r",
+                    "\r",
                     "var tortoiseDetailsBackToDreamButton = this.getTortoiseDetailsBackToDreamButton();\r",
                     "tortoiseDetailsBackToDreamButton.show();\r",
                     "var tortoiseDetailsBackToListButton = this.getTortoiseDetailsBackToListButton();\r",
                     "tortoiseDetailsBackToListButton.hide();\r",
+                    "var tortoiseDeleteButton =\r",
+                    "    this.getTortoiseDeleteButton();\r",
+                    "tortoiseDeleteButton.show();\r",
                     "this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});"
                 ],
                 "name": "itemtap",
@@ -243,6 +247,10 @@
                 "implHandler": [
                     "var dreamListCardPanel = this.getDreamListCardPanel();\r",
                     "var tortoiseDetails = this.getTortoiseDetails();\r",
+                    "tortoiseDetails.newStatus=true;\r",
+                    "var tortoiseDeleteButton = \r",
+                    "    this.getTortoiseDeleteButton();\r",
+                    "tortoiseDeleteButton.hide();\r",
                     "var tortoiseDetailsBackToDreamButton \r",
                     "    = this.getTortoiseDetailsBackToDreamButton();\r",
                     "tortoiseDetailsBackToDreamButton.hide();\r",
@@ -551,6 +559,39 @@
                 "designer|controlQuery": "button[name='tortoiseDetailsBackToDreamButton']"
             },
             "designerId": "9e0d1c33-a428-4c8e-a723-4a9185188c83"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tortoiseDeleteButton",
+                "ref": "tortoiseDeleteButton",
+                "selector": "button[name='tortoiseDeleteButton']"
+            },
+            "designerId": "78977da9-4e33-4a68-9930-057a9efa5651"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseDeleteButtonTap",
+                "fn": "onTortoiseDeleteButtonTap",
+                "implHandler": [
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='tortoiseDeleteButton']"
+            },
+            "designerId": "53d9a641-9c8a-423b-9d43-e572ba94c8eb"
         }
     ]
 }

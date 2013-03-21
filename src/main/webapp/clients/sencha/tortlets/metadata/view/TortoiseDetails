@@ -11,6 +11,13 @@
     },
     "id": "ExtBox1-ext-gen16443",
     "designerId": "dca854bb-a33a-4137-aef2-90d43399589d",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "newStatus",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "titlebar",
@@ -273,11 +280,20 @@
             },
             "codeClass": null,
             "userConfig": {
+                "name": "tortoiseDeleteButton",
                 "designer|userClassName": "MyButton11",
+                "designer|displayName": "tortoiseDeleteButton",
                 "ui": "decline",
                 "text": "I am Done, Stop The Tortoise.."
             },
-            "designerId": "fa9fc892-935d-47b2-a560-b1ad04009981"
+            "designerId": "fa9fc892-935d-47b2-a560-b1ad04009981",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
         }
     ]
 }

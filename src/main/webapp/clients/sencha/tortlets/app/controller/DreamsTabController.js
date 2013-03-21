@@ -27,7 +27,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
             dreamDeleteButton: 'button[name=\'dreamDeleteButton\']',
             dreamListPanel: 'dreamListPanel',
             tortoiseDetailsBackToListButton: 'button[name=\'tortoiseDetailsBackToListButton\']',
-            tortoiseDetailsBackToDreamButton: 'button[name=\'tortoiseDetailsBackToDreamButton\']'
+            tortoiseDetailsBackToDreamButton: 'button[name=\'tortoiseDetailsBackToDreamButton\']',
+            tortoiseDeleteButton: 'button[name=\'tortoiseDeleteButton\']'
         },
 
         control: {
@@ -78,6 +79,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
             },
             "button[name='tortoiseDetailsBackToDreamButton']": {
                 tap: 'onTortoiseDetailsBackToDreamButtonTap'
+            },
+            "button[name='tortoiseDeleteButton']": {
+                tap: 'onTortoiseDeleteButtonTap'
             }
         }
     },
@@ -169,10 +173,14 @@ Ext.define('MyApp.controller.DreamsTabController', {
     onTortoiseListItemTap: function(dataview, index, target, record, e, options) {
         var tortoiseDetailsForm = this.getTortoiseDetails();
         tortoiseDetailsForm.setRecord(record);
+
         var tortoiseDetailsBackToDreamButton = this.getTortoiseDetailsBackToDreamButton();
         tortoiseDetailsBackToDreamButton.show();
         var tortoiseDetailsBackToListButton = this.getTortoiseDetailsBackToListButton();
         tortoiseDetailsBackToListButton.hide();
+        var tortoiseDeleteButton =
+        this.getTortoiseDeleteButton();
+        tortoiseDeleteButton.show();
         this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});
     },
 
@@ -184,6 +192,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
     onTortoiseListPanelAddButtonTap: function(button, e, options) {
         var dreamListCardPanel = this.getDreamListCardPanel();
         var tortoiseDetails = this.getTortoiseDetails();
+        tortoiseDetails.newStatus=true;
+        var tortoiseDeleteButton = 
+        this.getTortoiseDeleteButton();
+        tortoiseDeleteButton.hide();
         var tortoiseDetailsBackToDreamButton 
         = this.getTortoiseDetailsBackToDreamButton();
         tortoiseDetailsBackToDreamButton.hide();
@@ -240,6 +252,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseDetailsBackToDreamButtonTap: function(button, e, options) {
+
+    },
+
+    onTortoiseDeleteButtonTap: function(button, e, options) {
 
     }
 
