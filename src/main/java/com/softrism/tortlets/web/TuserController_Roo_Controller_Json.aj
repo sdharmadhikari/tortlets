@@ -92,13 +92,6 @@ privileged aspect TuserController_Roo_Controller_Json {
         tuser.remove();
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
-    
-    @RequestMapping(params = "find=ByUseridEquals", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> TuserController.jsonFindTusersByUseridEquals(@RequestParam("userid") String userid) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Tuser.toJsonArray(Tuser.findTusersByUseridEquals(userid).getResultList()), headers, HttpStatus.OK);
-    }
+
     
 }

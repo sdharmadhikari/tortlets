@@ -17,7 +17,7 @@ Ext.define('MyApp.model.Dream', {
     extend: 'Ext.data.Model',
 
     uses: [
-        'MyApp.model.Tortoise'
+        'MyApp.model.Tuser'
     ],
 
     config: {
@@ -52,14 +52,8 @@ Ext.define('MyApp.model.Dream', {
             },
             {
                 name: 'updatedOn'
-            },
-            {
-                name: 'id'
             }
         ],
-        hasMany: {
-            model: 'MyApp.model.Tortoise'
-        },
         proxy: {
             type: 'rest',
             url: 'http://dummy.url',
@@ -70,6 +64,10 @@ Ext.define('MyApp.model.Dream', {
             reader: {
                 type: 'json'
             }
+        },
+        belongsTo: {
+            model: 'MyApp.model.Tuser',
+            foreignKey: 'tuser'
         }
     }
 });

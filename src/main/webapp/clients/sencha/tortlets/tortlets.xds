@@ -260,6 +260,14 @@
                 "app/controller/UtilityController.js"
             ],
             "className": "UtilityController"
+        },
+        "d972eca9-cfd7-429d-8792-8238d5fc4127": {
+            "paths": [
+                "metadata/model/Tuser",
+                "app/model/override/Tuser.js",
+                "app/model/Tuser.js"
+            ],
+            "className": "Tuser"
         }
     },
     "viewOrderMap": {
@@ -299,7 +307,8 @@
         "model": [
             "98103327-6270-4ea5-9055-efe31b2727a6",
             "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
-            "6224bddc-b988-416c-beca-b6c25b31ac1d"
+            "6224bddc-b988-416c-beca-b6c25b31ac1d",
+            "d972eca9-cfd7-429d-8792-8238d5fc4127"
         ],
         "resource": [
             "8d109db3-8fac-4b27-8512-92766b4975f8"

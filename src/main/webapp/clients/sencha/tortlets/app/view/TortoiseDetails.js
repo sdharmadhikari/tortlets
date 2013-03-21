@@ -44,7 +44,7 @@ Ext.define('MyApp.view.TortoiseDetails', {
                 height: 65,
                 labelWidth: '0%',
                 name: 'title',
-                placeHolder: 'Enter title of recurring activity..',
+                placeHolder: 'Enter recurring activity,its slow treading tortoise..',
                 maxRows: 2
             },
             {

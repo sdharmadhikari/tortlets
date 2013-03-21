@@ -10,7 +10,8 @@
         "models": [
             "Tortlet",
             "Dream",
-            "Tortoise"
+            "Tortoise",
+            "Tuser"
         ],
         "stores": [
             "IncompleteTortletsStore",
@@ -69,8 +70,13 @@
                 "fn": "launch",
                 "implHandler": [
                     "console.log('application launch');\r",
+                    "\r",
+                    "var currentUser = Ext.create('MyApp.model.Tuser');\r",
+                    "currentUser.set('id',1);\r",
                     "var userid = 'sudhir';\r",
-                    "this.userid = userid; // Here userid becomes global variable to be accessed using MyApp.app.userid\r",
+                    "currentUser.set('userid',userid);\r",
+                    "\r",
+                    "this.currentUser = currentUser; // Here currentUser becomes global variable to be accessed using MyApp.app.currentUser\r",
                     "var host;\r",
                     "\r",
                     "if(window.location.host === ''){  \r",
@@ -110,6 +116,7 @@
                     "var tortoisesStore = Ext.getStore('tortoisesStore');\r",
                     "var proxy = tortoisesStore.getProxy();\r",
                     "proxy.setUrl('http://' + host + '/tortoises/json?find=ByDreamAndUseridEquals&userid=' +userid);\r",
+                    "\r",
                     "\r",
                     ""
                 ]
