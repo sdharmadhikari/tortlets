@@ -214,6 +214,19 @@
                 "name": "duration"
             },
             "designerId": "8d7b514e-e8f3-4b19-a6cb-7aa7d5932136"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field26",
+                "name": "userid"
+            },
+            "designerId": "d8e011f6-9200-43db-8721-e727779a6ebf"
         }
     ]
 }

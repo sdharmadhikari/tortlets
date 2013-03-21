@@ -27,15 +27,7 @@ Ext.define('MyApp.view.TortoiseDetails', {
                     {
                         xtype: 'button',
                         name: 'tortoiseDetailsBackButton',
-                        ui: '',
-                        iconCls: 'arrow_up',
-                        iconMask: true
-                    },
-                    {
-                        xtype: 'button',
-                        name: 'tortoiseDetailsTortletsButton',
-                        align: 'right',
-                        text: 'Tortlets'
+                        ui: 'back'
                     }
                 ]
             },
@@ -44,7 +36,7 @@ Ext.define('MyApp.view.TortoiseDetails', {
                 height: 65,
                 labelWidth: '0%',
                 name: 'title',
-                placeHolder: 'Workout In Gym or Go Jogging',
+                placeHolder: 'Enter title of recurring activity..',
                 maxRows: 2
             },
             {

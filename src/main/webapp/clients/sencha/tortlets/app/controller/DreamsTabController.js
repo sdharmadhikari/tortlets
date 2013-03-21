@@ -24,7 +24,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
             whatsYourDreamTextField: 'textfield[name=\'whatsYourDreamTextField\']',
             mainTabPanel: 'mainTabPanel',
             dreamListCardPanel: 'dreamListCardPanel',
-            dreamDeleteButton: 'button[name=\'dreamDeleteButton\']'
+            dreamDeleteButton: 'button[name=\'dreamDeleteButton\']',
+            dreamListPanel: 'dreamListPanel'
         },
 
         control: {
@@ -120,7 +121,6 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         }else{
             // save the dream (copy all new values)
-            alert('oldDream');
             dreamId = newValues.id;
             console.log('saving old dream updated , old dreamId ' + dreamId);
             var record = dreamDetailsForm.getRecord();
@@ -154,7 +154,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseListPanelBackButtonTap: function(button, e, options) {
-        this.getDreamListCardPanel().animateActiveItem(1, { type : 'slide', direction : 'right'});
+        var dreamDetails = this.getDreamDetails();
+        this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type : 'slide', direction : 'right'});
     },
 
     onTortoiseListItemTap: function(dataview, index, target, record, e, options) {
@@ -181,8 +182,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseDetailsBackButtonTap: function(button, e, options) {
-        this.getDreamListCardPanel().
-        animateActiveItem(2, {type : 'slide', direction : 'right'});
+        alert('tortoseDetailsBack');
+        var dreamListCardPanel = this.getDreamListCardPanel();
+        var tortoiseListPanel = this.getTortoiseListPanel();
+        dreamListCardPanel.animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'right'});
     },
 
     onAllTortletsPanelBackButtonTap: function(button, e, options) {

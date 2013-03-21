@@ -71,6 +71,9 @@ Ext.define('MyApp.model.Tortoise', {
             },
             {
                 name: 'duration'
+            },
+            {
+                name: 'userid'
             }
         ],
         hasOne: {

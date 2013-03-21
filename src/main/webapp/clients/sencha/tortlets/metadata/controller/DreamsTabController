@@ -83,7 +83,6 @@
                     "\r",
                     "}else{\r",
                     "    // save the dream (copy all new values)\r",
-                    "    alert('oldDream');\r",
                     "    dreamId = newValues.id;\r",
                     "    console.log('saving old dream updated , old dreamId ' + dreamId);\r",
                     "    var record = dreamDetailsForm.getRecord();\r",
@@ -177,7 +176,8 @@
                 "designer|userClassName": "onTortoiseListPanelBackButtonTap",
                 "fn": "onTortoiseListPanelBackButtonTap",
                 "implHandler": [
-                    "this.getDreamListCardPanel().animateActiveItem(1, { type : 'slide', direction : 'right'});"
+                    "var dreamDetails = this.getDreamDetails();\r",
+                    "this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type : 'slide', direction : 'right'});"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -279,8 +279,10 @@
                 "designer|userClassName": "onTortoiseDetailsBackButtonTap",
                 "fn": "onTortoiseDetailsBackButtonTap",
                 "implHandler": [
-                    "this.getDreamListCardPanel().\r",
-                    "    animateActiveItem(2, {type : 'slide', direction : 'right'});"
+                    "alert('tortoseDetailsBack');\r",
+                    "var dreamListCardPanel = this.getDreamListCardPanel();\r",
+                    "var tortoiseListPanel = this.getTortoiseListPanel();\r",
+                    "dreamListCardPanel.animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'right'});"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -300,7 +302,7 @@
                 "fn": "onAllTortletsPanelBackButtonTap",
                 "implHandler": [
                     "this.getDreamListCardPanel().\r",
-                    "    animateActiveItem( 4,{type : 'slide', direction : 'right'});"
+                    "animateActiveItem( 4,{type : 'slide', direction : 'right'});"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -457,6 +459,20 @@
                 "selector": "button[name='dreamDeleteButton']"
             },
             "designerId": "ef305eb7-5513-4207-9085-41361c671f21"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "dreamListPanel",
+                "ref": "dreamListPanel",
+                "selector": "dreamListPanel"
+            },
+            "designerId": "252aaa9d-c100-4ba8-904e-67368f9c07c6"
         }
     ]
 }

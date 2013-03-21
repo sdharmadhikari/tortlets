@@ -36,36 +36,13 @@
                     "userConfig": {
                         "name": "tortoiseDetailsBackButton",
                         "designer|userClassName": "MyButton3",
-                        "designer|displayName": "TortletsDetailBack",
-                        "ui": "",
+                        "designer|displayName": "TortoiseDetailsBack",
+                        "ui": "back",
                         "iconAlign": null,
-                        "iconCls": "arrow_up",
-                        "iconMask": true,
+                        "iconCls": null,
                         "text": null
                     },
                     "designerId": "23149791-3e80-4e50-a961-89f2ee8a27c0",
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "name",
-                            "type": "string"
-                        }
-                    ]
-                },
-                {
-                    "type": "button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "name": "tortoiseDetailsTortletsButton",
-                        "align": "right",
-                        "designer|userClassName": "MyButton18",
-                        "text": "Tortlets"
-                    },
-                    "designerId": "6632b5fa-c613-49f9-bed6-be86ba16b19f",
                     "customConfigs": [
                         {
                             "group": "(Custom Properties)",
@@ -91,7 +68,7 @@
                 "label": null,
                 "labelWidth": "0%",
                 "name": "title",
-                "placeHolder": "Workout In Gym or Go Jogging",
+                "placeHolder": "Enter title of recurring activity..",
                 "maxRows": 2
             },
             "designerId": "36659fb2-3e42-4150-b471-45a137c54e00"
