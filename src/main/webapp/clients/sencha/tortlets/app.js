@@ -21,7 +21,8 @@ Ext.application({
     models: [
         'Tortlet',
         'Dream',
-        'Tortoise'
+        'Tortoise',
+        'Tuser'
     ],
     stores: [
         'IncompleteTortletsStore',
@@ -60,8 +61,13 @@ Ext.application({
 
     launch: function() {
         console.log('application launch');
+
+        var currentUser = Ext.create('MyApp.model.Tuser');
+        currentUser.set('id',1);
         var userid = 'sudhir';
-        this.userid = userid; // Here userid becomes global variable to be accessed using MyApp.app.userid
+        currentUser.set('userid',userid);
+
+        this.currentUser = currentUser; // Here currentUser becomes global variable to be accessed using MyApp.app.currentUser
         var host;
 
         if(window.location.host === ''){  
@@ -101,6 +107,7 @@ Ext.application({
         var tortoisesStore = Ext.getStore('tortoisesStore');
         var proxy = tortoisesStore.getProxy();
         proxy.setUrl('http://' + host + '/tortoises/json?find=ByDreamAndUseridEquals&userid=' +userid);
+
 
 
         Ext.create('MyApp.view.MainTabPanel', {fullscreen: true});

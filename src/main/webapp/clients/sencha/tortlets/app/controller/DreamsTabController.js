@@ -100,25 +100,26 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var dreamDetailsForm = this.getDreamDetails();
         var newValues = dreamDetailsForm.getValues();
-        var dreamId = newValues.id;
         var newStatus = dreamDetailsForm.newStatus;
-        var userid = MyApp.app.userid; // Accessing global variable which has been set in Application launch() function
+        var currentUser = MyApp.app.currentUser;
+        var userid = MyApp.app.currentUser.get('userid'); // Accessing global variable which has been set in Application launch() function
         var utility = MyApp.app.getController('UtilityController');
         var caller = MyApp.app.getController('DreamsTabController'); // Need this so that this controller is available in callback methods. eg. 
 
         if(newStatus === 'true'){
-            alert('newForm');
+
             var newDream = Ext.create('MyApp.model.Dream',{
                 title : newValues.title,
                 notes : newValues.notes,
                 dreamColor : newValues.dreamColor,
                 userid : userid
             });
+            newDream.setTuser(currentUser.getData());
             var now = new Date();
             tempDreamId = (now.getTime()).toString();
             newDream.set('id',tempDreamId);// IF u dont this, id will be posted to server as ext-record-<number>
             newDream.save(function(createdModel){
-                dreamId = createdModel.get('id');
+                var dreamId = createdModel.get('id');
                 console.log('newDream save');
                 var dreamsStore = Ext.getStore('dreamsStore');
                 dreamsStore.load();
@@ -192,6 +193,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
     onTortoiseListPanelAddButtonTap: function(button, e, options) {
         var dreamListCardPanel = this.getDreamListCardPanel();
         var tortoiseDetails = this.getTortoiseDetails();
+        var newTortoise = Ext.create('MyApp.model.Tortoise');
+        newTortoise.set('title', 'myTitple');
+        tortoiseDetails.setRecord(newTortoise);
         tortoiseDetails.newStatus=true;
         var tortoiseDeleteButton = 
         this.getTortoiseDeleteButton();
@@ -206,7 +210,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseDetailsSaveButtonTap: function(button, e, options) {
-
+        var tortoiseDetailsForm = this.getTortoiseDetails();
+        var record = tortoiseDetailsForm.getRecord();
+        tortoiseDetailsForm.updateRecord(record);
+        alert(record.get('title'));     
         this.getDreamListCardPanel().
         animateActiveItem(2,{ type : 'slide', direction : 'up'});
     },

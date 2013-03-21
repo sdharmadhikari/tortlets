@@ -125,32 +125,6 @@
             "designerId": "07f02206-8cd5-4c4e-a329-42b54c37fb33"
         },
         {
-            "type": "hasmanyassociation",
-            "reference": {
-                "name": "hasMany",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyHasManyAssociation",
-                "model": "Tortoise"
-            },
-            "designerId": "8ed30ae0-fbe5-42b8-b106-6801bf9273b6"
-        },
-        {
-            "type": "datafield",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "field25",
-                "name": "id"
-            },
-            "designerId": "230ccfee-c797-40e1-a71e-891824efa410"
-        },
-        {
             "type": "restproxy",
             "reference": {
                 "name": "proxy",
@@ -190,6 +164,22 @@
                     "designerId": "7f7eb1ea-9a76-44ce-965b-1f9f2aa5347e"
                 }
             ]
+        },
+        {
+            "type": "belongstoassociation",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyBelongsToAssociation",
+                "designer|displayName": "BelongsToTuserAssociation",
+                "associationKey": null,
+                "model": "Tuser",
+                "foreignKey": "tuser"
+            },
+            "designerId": "0c603e3e-3bb1-4fcb-adde-35a1f8a55927"
         }
     ]
 }

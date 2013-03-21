@@ -197,8 +197,10 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyHasOneAssociation",
+                "designer|displayName": "HasDreamAssociation",
                 "model": "Dream",
-                "primaryKey": null
+                "primaryKey": null,
+                "getterName": null
             },
             "designerId": "98dd6d5d-0c9d-42b4-a83c-92975cdeb533"
         },

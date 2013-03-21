@@ -93,14 +93,23 @@ public class DreamController {
 
     @RequestMapping(value="/json" , method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> createFromJson(@RequestBody String json) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
         Dream dream = Dream.fromJsonToDream(json);
+        Tuser tuser = dream.getTuser();
+        if(tuser == null ){
+            System.out.println("JSON TUSER IS NULL");
+            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+       }else{
+            tuser = Tuser.findTuser(tuser.getId());
+            dream.setTuser(tuser);
+        }
         Date now = new Date();
         dream.setCreatedOn(now);
         dream.setUpdatedOn(now);
         dream.setStatus(DreamStatusEnum.ACTIVE);
         dream.persist();
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json");
+
         return new ResponseEntity<String>(dream.toJson(),headers, HttpStatus.OK);
     }
 

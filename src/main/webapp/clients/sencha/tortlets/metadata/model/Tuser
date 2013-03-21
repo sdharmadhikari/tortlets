@@ -1,0 +1,148 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Tuser"
+    },
+    "id": "ExtBox1-ext-gen25214",
+    "designerId": "d972eca9-cfd7-429d-8792-8238d5fc4127",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field27",
+                "name": "firstName"
+            },
+            "designerId": "dfb0dae0-d323-4ec3-90f6-5305032443ab"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field28",
+                "name": "lastName"
+            },
+            "designerId": "fc5873c1-1db0-461a-8853-442ae71a5b93"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field29",
+                "name": "userid"
+            },
+            "designerId": "8a34b5d2-1873-482f-88b4-5730be96b5eb"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field30",
+                "name": "password"
+            },
+            "designerId": "55b64d48-cbd3-4b2d-8006-4eecd24bc765"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field31",
+                "name": "latestDreamScore",
+                "persist": false,
+                "type": "int"
+            },
+            "designerId": "930975de-e99a-49a3-b659-e8ac00209318"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field32",
+                "name": "status"
+            },
+            "designerId": "513c72e2-1081-4924-9e28-154898b9b348"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field33",
+                "name": "allowedDelayDays"
+            },
+            "designerId": "7d3ecb17-ea4b-482f-881b-9800738741f9"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field34",
+                "name": "birthDate"
+            },
+            "designerId": "ffb28261-59a2-4d24-8e3c-f37f1ec04522"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field35",
+                "name": "timeZone"
+            },
+            "designerId": "17b01708-53b0-4e69-b24b-0a134f80c033"
+        },
+        {
+            "type": "hasmanyassociation",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHasManyAssociation1",
+                "designer|displayName": "HasManyDreamsAssociation",
+                "model": "Dream"
+            },
+            "designerId": "4ebc7ce4-3f93-4961-8ac2-103a37fdc002"
+        }
+    ]
+}
