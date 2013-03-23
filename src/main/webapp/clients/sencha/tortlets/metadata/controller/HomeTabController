@@ -1,5 +1,5 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,7 +8,6 @@
     "userConfig": {
         "designer|userClassName": "HomeTabController"
     },
-    "id": "ExtBox1-ext-gen6082",
     "designerId": "f349d5fa-f50b-405e-b80f-e46f09bf9967",
     "cn": [
         {

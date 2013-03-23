@@ -1,5 +1,5 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,11 +7,10 @@
     "codeClass": null,
     "userConfig": {
         "name": "tortletDetailsName",
+        "id": "tortletsDetailsId",
         "designer|userClassName": "TortletsDetails",
-        "designer|userAlias": "tortletDetails",
-        "id": "tortletsDetailsId"
+        "designer|userAlias": "tortletDetails"
     },
-    "id": "ExtBox1-ext-gen8589",
     "designerId": "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",
     "customConfigs": [
         {
@@ -22,35 +21,35 @@
     ],
     "cn": [
         {
-            "type": "label",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLabel",
                 "html": "",
-                "margin": 10
+                "margin": 10,
+                "designer|userClassName": "MyLabel"
             },
             "designerId": "d18152e7-7a49-4a02-ad4e-0b51d0eea3fd"
         },
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar1",
                 "docked": "top",
+                "designer|userClassName": "MyTitleBar1",
                 "title": "Tortlet"
             },
             "designerId": "32a67882-8f70-4574-a1ae-6790eb991159",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -58,9 +57,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "name": "tortletsDetailsBackButton",
+                        "ui": "back",
                         "designer|userClassName": "MyButton3",
                         "designer|displayName": "TortletsDetailBack",
-                        "ui": "back",
                         "text": "Back"
                     },
                     "designerId": "52aaa77a-0cf2-448d-b873-0fc7ce3f4c69",
@@ -73,7 +72,7 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -97,7 +96,7 @@
             ]
         },
         {
-            "type": "textfield",
+            "type": "Ext.field.Text",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -112,7 +111,7 @@
             "designerId": "8748b3e4-9e45-45de-bba1-c171a736a4ac"
         },
         {
-            "type": "textareafield",
+            "type": "Ext.field.TextArea",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -126,31 +125,31 @@
             "designerId": "33c782fc-6985-4e3d-8388-89642aebe3b3"
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "margin": 10,
                 "designer|userClassName": "MyFieldSet",
                 "designer|displayName": "CompletedFieldSet",
-                "margin": 10,
                 "title": null
             },
             "designerId": "ec25368c-c38b-47d2-a0ec-3a872bfe971d",
             "cn": [
                 {
-                    "type": "togglefield",
+                    "type": "Ext.field.Toggle",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "margin": null,
                         "designer|userClassName": "MyToggleField",
                         "designer|displayName": "CompletedToggleField",
-                        "margin": null,
                         "label": "Completed",
                         "labelWidth": null,
                         "name": "completed"
@@ -160,30 +159,30 @@
             ]
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "margin": 10,
                 "designer|userClassName": "MyFieldSet1",
                 "designer|displayName": "TortoiseDetailsFieldSet",
-                "margin": 10,
                 "title": null
             },
             "designerId": "c34cb1eb-d7d0-44e8-a708-e85804393db8",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton5",
                         "ui": "plain",
+                        "designer|userClassName": "MyButton5",
                         "text": "Tortoise Details"
                     },
                     "designerId": "a3546506-2e48-4b6b-bbae-cdd39ccb6ead"

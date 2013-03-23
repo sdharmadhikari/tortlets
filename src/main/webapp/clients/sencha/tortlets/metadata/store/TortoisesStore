@@ -6,15 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "TortoisesStore",
         "model": "Tortoise",
-        "storeId": "tortoisesStore"
+        "storeId": "tortoisesStore",
+        "designer|userClassName": "TortoisesStore"
     },
-    "id": "ExtBox1-ext-gen11382",
     "designerId": "6ae46be0-527b-4709-b96e-84eb3fb55148",
     "cn": [
         {
-            "type": "ajaxproxy",
+            "type": "Ext.data.proxy.Ajax",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -27,7 +26,7 @@
             "designerId": "57e26ae2-f3b5-4ce4-ac0e-00651a04cc35",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
@@ -41,15 +40,15 @@
             ]
         },
         {
-            "type": "sorter",
+            "type": "Ext.util.Sorter",
             "reference": {
                 "name": "sorters",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySorter1",
-                "property": "latestTortoiseScore"
+                "property": "latestTortoiseScore",
+                "designer|userClassName": "MySorter1"
             },
             "designerId": "4c969974-1375-4995-9c6e-b5af2b1b743e"
         }

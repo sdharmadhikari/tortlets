@@ -6,17 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "TodaysTortletsStore",
         "autoLoad": false,
-        "autoSync": false,
         "model": "Tortlet",
-        "storeId": "todaysTortletsStore"
+        "storeId": "todaysTortletsStore",
+        "designer|userClassName": "TodaysTortletsStore"
     },
-    "id": "ExtBox1-ext-gen30632",
     "designerId": "15eb7579-b7e5-4a31-96e4-4dd8481e7568",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -45,15 +43,14 @@
             ],
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader",
-                        "useSimpleAccessors": false
+                        "designer|userClassName": "MyJsonReader"
                     },
                     "designerId": "8a3dcec9-3544-4be3-a0ec-4f49cd20b814"
                 }

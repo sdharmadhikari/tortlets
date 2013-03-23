@@ -1,5 +1,5 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,7 +9,6 @@
         "designer|userClassName": "TortoiseDetails",
         "designer|userAlias": "tortoiseDetails"
     },
-    "id": "ExtBox1-ext-gen16443",
     "designerId": "dca854bb-a33a-4137-aef2-90d43399589d",
     "customConfigs": [
         {
@@ -20,21 +19,21 @@
     ],
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar1",
                 "docked": "top",
+                "designer|userClassName": "MyTitleBar1",
                 "title": "Tortoise"
             },
             "designerId": "d70911fe-a2c2-4979-8f11-22f2a3864fcf",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -42,9 +41,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "name": "tortoiseDetailsBackToDreamButton",
+                        "ui": "back",
                         "designer|userClassName": "MyButton3",
                         "designer|displayName": "TortoiseDetailsBackToDream",
-                        "ui": "back",
                         "iconAlign": null,
                         "iconCls": null,
                         "text": "Back"
@@ -59,18 +58,18 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "align": "right",
                         "name": "tortoiseDetailsBackToListButton",
+                        "align": "right",
+                        "docked": null,
                         "designer|userClassName": "MyButton10",
                         "designer|displayName": "TortoiseDtailsBackToListButton",
-                        "docked": null,
                         "iconCls": "arrow_up",
                         "iconMask": true,
                         "text": null
@@ -87,17 +86,17 @@
             ]
         },
         {
-            "type": "textareafield",
+            "type": "Ext.field.TextArea",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTextArea",
-                "designer|displayName": "TortoiseTitle",
                 "height": 65,
                 "html": null,
+                "designer|userClassName": "MyTextArea",
+                "designer|displayName": "TortoiseTitle",
                 "label": null,
                 "labelWidth": "0%",
                 "name": "title",
@@ -107,7 +106,7 @@
             "designerId": "36659fb2-3e42-4150-b471-45a137c54e00"
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -121,7 +120,7 @@
             "designerId": "3254f6bf-be79-4da5-a4ac-b697fcb19929",
             "cn": [
                 {
-                    "type": "togglefield",
+                    "type": "Ext.field.Toggle",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -137,7 +136,7 @@
                     "designerId": "21ef1e3f-9df2-4995-9d5f-c7d7457d7db4"
                 },
                 {
-                    "type": "togglefield",
+                    "type": "Ext.field.Toggle",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -153,7 +152,7 @@
                     "designerId": "9f44f8d1-b9d3-4ecc-98fe-bc28e76d04fb"
                 },
                 {
-                    "type": "togglefield",
+                    "type": "Ext.field.Toggle",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -169,7 +168,7 @@
                     "designerId": "6b64c5cd-3f4a-4220-a63b-4fee2105698b"
                 },
                 {
-                    "type": "togglefield",
+                    "type": "Ext.field.Toggle",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -185,7 +184,7 @@
                     "designerId": "8a10e2d3-cf1e-455b-b454-54ce02734c45"
                 },
                 {
-                    "type": "togglefield",
+                    "type": "Ext.field.Toggle",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -201,7 +200,7 @@
                     "designerId": "45fcd68d-c1e6-484a-a77e-535fb868b02b"
                 },
                 {
-                    "type": "togglefield",
+                    "type": "Ext.field.Toggle",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -217,7 +216,7 @@
                     "designerId": "1f4a08ea-d3ed-427b-94f6-57f6e1b1078b"
                 },
                 {
-                    "type": "togglefield",
+                    "type": "Ext.field.Toggle",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -235,7 +234,7 @@
             ]
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -249,7 +248,7 @@
             "designerId": "18481e8a-67de-46bb-9139-3ef5d65c09fc",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -257,8 +256,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "name": "tortoiseDetailsSaveButton",
-                        "designer|userClassName": "MyButton4",
                         "ui": "confirm",
+                        "designer|userClassName": "MyButton4",
                         "text": "Save"
                     },
                     "designerId": "e6d4a749-5930-4c01-b4cf-b90dc4e350c7",
@@ -273,7 +272,7 @@
             ]
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -281,9 +280,9 @@
             "codeClass": null,
             "userConfig": {
                 "name": "tortoiseDeleteButton",
+                "ui": "decline",
                 "designer|userClassName": "MyButton11",
                 "designer|displayName": "tortoiseDeleteButton",
-                "ui": "decline",
                 "text": "I am Done, Stop The Tortoise.."
             },
             "designerId": "fa9fc892-935d-47b2-a560-b1ad04009981",

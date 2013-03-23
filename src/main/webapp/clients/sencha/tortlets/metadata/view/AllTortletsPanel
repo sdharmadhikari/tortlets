@@ -1,5 +1,5 @@
 {
-    "type": "panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -10,25 +10,24 @@
         "designer|userAlias": "allTortletsPanel",
         "layout": "fit"
     },
-    "id": "ExtBox1-ext-gen48824",
     "designerId": "3a789a20-fef4-4313-b085-1612d07320cf",
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar7",
                 "docked": "top",
+                "designer|userClassName": "MyTitleBar7",
                 "title": "All Completed Tortlets"
             },
             "designerId": "9da951d0-8971-4600-acfa-95458d65ec06",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -36,8 +35,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "name": "allTortletsPanelBackButton",
-                        "designer|userClassName": "MyButton15",
                         "ui": "back",
+                        "designer|userClassName": "MyButton15",
                         "text": "Back"
                     },
                     "designerId": "824855a5-164e-42d3-8db8-3b00b6898ceb",
@@ -50,7 +49,7 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -83,7 +82,7 @@
             },
             "codeClass": null,
             "designerId": "2239a94b-552b-400a-9891-b026a334d19d",
-            "masterInstanceId": "ExtBox1-ext-gen11968"
+            "masterInstanceId": "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0"
         }
     ]
 }

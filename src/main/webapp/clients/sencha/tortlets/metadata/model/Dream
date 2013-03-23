@@ -1,131 +1,130 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Dream",
-        "idProperty": null
+        "idProperty": null,
+        "designer|userClassName": "Dream"
     },
-    "id": "ExtBox1-ext-gen15022",
     "designerId": "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field",
                 "name": "title",
-                "type": "string"
+                "type": "string",
+                "designer|userClassName": "field"
             },
             "designerId": "876dad2a-1f49-4e21-9b10-f5aae9f0e45a"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field2",
                 "name": "notes",
-                "type": "string"
+                "type": "string",
+                "designer|userClassName": "field2"
             },
             "designerId": "118b3b44-f27f-4062-a513-09ed88bf3185"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field5",
-                "name": "dreamColor"
+                "name": "dreamColor",
+                "designer|userClassName": "field5"
             },
             "designerId": "b538865a-127e-4d04-bbb7-7dc1be175ae5"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field6",
                 "name": "latestDreamScore",
                 "persist": false,
-                "type": "int"
+                "type": "int",
+                "designer|userClassName": "field6"
             },
             "designerId": "adf05269-1fb6-4b4b-bd72-6143401c1efc"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field9",
+                "allowNull": false,
                 "name": "userid",
-                "allowNull": false
+                "designer|userClassName": "field9"
             },
             "designerId": "66f51c11-b25a-4dcc-80f0-fc12ebda9520"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field10",
-                "name": "dreamStatus"
+                "name": "dreamStatus",
+                "designer|userClassName": "field10"
             },
             "designerId": "9733078d-0f7f-482a-9784-9eb76b724855"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field7",
-                "name": "createdOn",
                 "dateFormat": "MM/dd/yyy",
+                "name": "createdOn",
                 "persist": false,
-                "type": null
+                "type": null,
+                "designer|userClassName": "field7"
             },
             "designerId": "e6085fe9-051d-4532-a2e1-82a2dbc948cb"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field8",
-                "name": "updatedOn"
+                "name": "updatedOn",
+                "designer|userClassName": "field8"
             },
             "designerId": "07f02206-8cd5-4c4e-a329-42b54c37fb33"
         },
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -140,7 +139,7 @@
             "designerId": "220e74c7-5a7b-4762-b0b7-c75bb795347b",
             "cn": [
                 {
-                    "type": "jsonwriter",
+                    "type": "Ext.data.writer.Json",
                     "reference": {
                         "name": "writer",
                         "type": "object"
@@ -152,7 +151,7 @@
                     "designerId": "88185ffc-cbd8-408c-b6a5-96a92142c107"
                 },
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
@@ -166,16 +165,16 @@
             ]
         },
         {
-            "type": "belongstoassociation",
+            "type": "Ext.data.association.BelongsTo",
             "reference": {
                 "name": "belongsTo",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
+                "associationKey": null,
                 "designer|userClassName": "MyBelongsToAssociation",
                 "designer|displayName": "BelongsToTuserAssociation",
-                "associationKey": null,
                 "model": "Tuser",
                 "foreignKey": "tuser"
             },

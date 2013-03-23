@@ -1,5 +1,5 @@
 {
-    "type": "tabpanel",
+    "type": "Ext.tab.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -10,7 +10,6 @@
         "designer|userAlias": "mainTabPanel",
         "designer|initialView": true
     },
-    "id": "ExtBox1-ext-gen1831",
     "designerId": "424d6af0-4bed-488c-bf22-6b9993519c5f",
     "cn": [
         {
@@ -25,18 +24,18 @@
                 "iconCls": "home"
             },
             "designerId": "bcc0ae67-91fd-4d26-85c0-65fe79f35217",
-            "masterInstanceId": "ExtBox1-ext-gen11868"
+            "masterInstanceId": "c2bdc653-c608-400e-b209-ef000e5d7997"
         },
         {
-            "type": "tabbar",
+            "type": "Ext.tab.Bar",
             "reference": {
                 "name": "tabBar",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTabBar",
-                "docked": "bottom"
+                "docked": "bottom",
+                "designer|userClassName": "MyTabBar"
             },
             "designerId": "e9ea8147-6b1e-44dc-af44-483e1ebd9577"
         },
@@ -52,7 +51,7 @@
                 "iconCls": "star"
             },
             "designerId": "188ee7e3-3e56-4e96-ae66-e940ea174345",
-            "masterInstanceId": "ExtBox1-ext-gen26769"
+            "masterInstanceId": "ccd9f3a8-ae61-4fc6-982b-b0ab91b1a0b9"
         },
         {
             "type": "linkedinstance",
@@ -66,7 +65,7 @@
                 "iconCls": "user"
             },
             "designerId": "44e7eaf8-c360-4200-9227-e36979155a10",
-            "masterInstanceId": "ExtBox1-ext-gen58466"
+            "masterInstanceId": "5aac1687-a779-4ce8-9bce-1cb5d9d3f226"
         },
         {
             "type": "linkedinstance",
@@ -80,7 +79,7 @@
                 "iconCls": "info"
             },
             "designerId": "c681d4f7-2a2a-42e0-85ca-65a63c61e49c",
-            "masterInstanceId": "ExtBox1-ext-gen61739"
+            "masterInstanceId": "0da20323-db08-47ce-9741-64ded49ccb84"
         }
     ]
 }

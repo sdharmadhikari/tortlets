@@ -1,5 +1,5 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,7 +8,6 @@
     "userConfig": {
         "designer|userClassName": "DreamsTabController"
     },
-    "id": "ExtBox1-ext-gen30487",
     "designerId": "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
     "cn": [
         {
@@ -49,56 +48,36 @@
                     "var tortoiseListPanel = this.getTortoiseListPanel();\r",
                     "\r",
                     "var dreamDetailsForm = this.getDreamDetails();\r",
-                    "var newValues = dreamDetailsForm.getValues();\r",
                     "var newStatus = dreamDetailsForm.newStatus;\r",
                     "var currentUser = MyApp.app.currentUser;\r",
-                    "var userid = MyApp.app.currentUser.get('userid'); // Accessing global variable which has been set in Application launch() function\r",
+                    "/* Accessing global variable which has been set \r",
+                    "in Application launch() function */\r",
+                    "var userid = MyApp.app.currentUser.get('userid'); \r",
                     "var utility = MyApp.app.getController('UtilityController');\r",
-                    "var caller = MyApp.app.getController('DreamsTabController'); // Need this so that this controller is available in callback methods. eg. \r",
+                    "/* Need this so that this controller is available in \r",
+                    "callback methods. */\r",
+                    "var caller = MyApp.app.getController('DreamsTabController');\r",
+                    "var tempDreamId = MyApp.app.tempId;\r",
                     "\r",
                     "if(newStatus === 'true'){\r",
-                    "    \r",
-                    "    var newDream = Ext.create('MyApp.model.Dream',{\r",
-                    "        title : newValues.title,\r",
-                    "        notes : newValues.notes,\r",
-                    "        dreamColor : newValues.dreamColor,\r",
-                    "        userid : userid\r",
-                    "    });\r",
+                    "    var newDream = dreamDetailsForm.getRecord();\r",
+                    "    dreamDetailsForm.updateRecord(newDream);\r",
+                    "    newDream.set('userid', userid);\r",
                     "    newDream.setTuser(currentUser.getData());\r",
-                    "    var now = new Date();\r",
-                    "    tempDreamId = (now.getTime()).toString();\r",
-                    "    newDream.set('id',tempDreamId);// IF u dont this, id will be posted to server as ext-record-<number>\r",
-                    "    newDream.save(function(createdModel){\r",
-                    "        var dreamId = createdModel.get('id');\r",
-                    "        console.log('newDream save');\r",
-                    "        var dreamsStore = Ext.getStore('dreamsStore');\r",
-                    "        dreamsStore.load();\r",
-                    "        console.log('loaded dreamsStore');\r",
-                    "        utility.loadTortoises(dreamId);\r",
-                    "        console.log('back to newDream.save method after loadTortoises,calling animateActiveItem');\r",
-                    "\r",
-                    "        caller.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});\r",
-                    "        console.log('called animateActiveItem tortoiseListPanel');\r",
-                    "    });\r",
-                    "\r",
-                    "\r",
+                    "    /* IF u dont do this, id will be posted to server as \r",
+                    "    ext-record-<number>. That will result into exception */\r",
+                    "    newDream.set('id',MyApp.app.tempId);\r",
+                    "    newDream.save(this.newDreamSave);\r",
                     "}else{\r",
-                    "    // save the dream (copy all new values)\r",
-                    "    dreamId = newValues.id;\r",
-                    "    console.log('saving old dream updated , old dreamId ' + dreamId);\r",
                     "    var record = dreamDetailsForm.getRecord();\r",
-                    "    var newValues = dreamDetailsForm.getValues();\r",
-                    "    record.set('title', newValues.title);\r",
-                    "    record.set('notes', newValues.notes);\r",
-                    "    record.save(function(model){\r",
-                    "        console.log('inside oldDream.save');\r",
-                    "        var dreamsStore = Ext.getStore('dreamsStore');\r",
-                    "        dreamsStore.load();\r",
-                    "        console.log('inside oldDream.save, after dreamStore.load'); \r",
+                    "    dreamDetailsForm.updateRecord(record);\r",
+                    "    dreamId = record.get('id');\r",
+                    "    if(record.dirty === true){\r",
+                    "        record.save(this.oldDreamSave);\r",
+                    "    }else{\r",
                     "        utility.loadTortoises(dreamId);\r",
-                    "        console.log('back to OLDDream.save method after loadTortoises,calling animateActiveItem');\r",
                     "        caller.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});\r",
-                    "    });\r",
+                    "    }\r",
                     "\r",
                     "}\r",
                     ""
@@ -199,13 +178,13 @@
                 "implHandler": [
                     "var tortoiseDetailsForm = this.getTortoiseDetails();\r",
                     "tortoiseDetailsForm.setRecord(record);\r",
-                    "\r",
+                    "tortoiseDetailsForm.newStatus='false';\r",
                     "var tortoiseDetailsBackToDreamButton = this.getTortoiseDetailsBackToDreamButton();\r",
                     "tortoiseDetailsBackToDreamButton.show();\r",
                     "var tortoiseDetailsBackToListButton = this.getTortoiseDetailsBackToListButton();\r",
                     "tortoiseDetailsBackToListButton.hide();\r",
                     "var tortoiseDeleteButton =\r",
-                    "    this.getTortoiseDeleteButton();\r",
+                    "this.getTortoiseDeleteButton();\r",
                     "tortoiseDeleteButton.show();\r",
                     "this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});"
                 ],
@@ -248,18 +227,22 @@
                 "implHandler": [
                     "var dreamListCardPanel = this.getDreamListCardPanel();\r",
                     "var tortoiseDetails = this.getTortoiseDetails();\r",
+                    "var dreamDetailsForm = this.getDreamDetails();\r",
+                    "var oldDream = dreamDetailsForm.getRecord();\r",
+                    "dreamDetailsForm.updateRecord(oldDream);\r",
                     "var newTortoise = Ext.create('MyApp.model.Tortoise');\r",
-                    "newTortoise.set('title', 'myTitple');\r",
+                    "newTortoise.setDream(oldDream);\r",
                     "tortoiseDetails.setRecord(newTortoise);\r",
-                    "tortoiseDetails.newStatus=true;\r",
+                    "tortoiseDetails.newStatus='true';\r",
+                    "\r",
                     "var tortoiseDeleteButton = \r",
-                    "    this.getTortoiseDeleteButton();\r",
+                    "this.getTortoiseDeleteButton();\r",
                     "tortoiseDeleteButton.hide();\r",
                     "var tortoiseDetailsBackToDreamButton \r",
-                    "    = this.getTortoiseDetailsBackToDreamButton();\r",
+                    "= this.getTortoiseDetailsBackToDreamButton();\r",
                     "tortoiseDetailsBackToDreamButton.hide();\r",
                     "var tortoiseDetailsBackToListButton \r",
-                    "    = this.getTortoiseDetailsBackToListButton();\r",
+                    "= this.getTortoiseDetailsBackToListButton();\r",
                     "tortoiseDetailsBackToListButton.show();\r",
                     "dreamListCardPanel.animateActiveItem(tortoiseDetails, { type : 'slide', direction : 'down'});"
                 ],
@@ -280,12 +263,39 @@
                 "designer|userClassName": "onTortoiseDetailsSaveButtonTap",
                 "fn": "onTortoiseDetailsSaveButtonTap",
                 "implHandler": [
+                    "var tortoiseListPanel = this.getTortoiseListPanel();\r",
+                    "\r",
                     "var tortoiseDetailsForm = this.getTortoiseDetails();\r",
-                    "var record = tortoiseDetailsForm.getRecord();\r",
-                    "tortoiseDetailsForm.updateRecord(record);\r",
-                    "alert(record.get('title'));     \r",
-                    "this.getDreamListCardPanel().\r",
-                    "animateActiveItem(2,{ type : 'slide', direction : 'up'});"
+                    "var newStatus = tortoiseDetailsForm.newStatus;\r",
+                    "var currentUser = MyApp.app.currentUser;\r",
+                    "\r",
+                    "var userid = MyApp.app.currentUser.get('userid'); \r",
+                    "var utility = MyApp.app.getController('UtilityController');\r",
+                    "var caller = MyApp.app.getController('DreamsTabController');\r",
+                    "var tempDreamId = MyApp.app.tempId;\r",
+                    "if(newStatus === 'true'){\r",
+                    "    var newTortoise = tortoiseDetailsForm.getRecord();\r",
+                    "    tortoiseDetailsForm.updateRecord(newTortoise);\r",
+                    "    newTortoise.set('userid', userid);\r",
+                    "    //alert(newTortoise.getDream().getData());\r",
+                    "    newTortoise.setDream(newTortoise.getDream().getData());\r",
+                    "    newTortoise.set('id',MyApp.app.tempId);\r",
+                    "    newTortoise.save(this.newTortoiseSave);\r",
+                    "}else{\r",
+                    "    alert('old tor');\r",
+                    "    var record = tortoiseDetailsForm.getRecord();\r",
+                    "    tortoiseDetailsForm.updateRecord(record);\r",
+                    "    tortoiseId = record.get('id');\r",
+                    "    if(record.dirty === true){\r",
+                    "        record.save(this.oldTortoiseSave);\r",
+                    "    }else{\r",
+                    "        dreamId = record.getDream().get('id');\r",
+                    "        utility.loadTortoises(dreamId);\r",
+                    "        caller.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});\r",
+                    "    }\r",
+                    "\r",
+                    "}\r",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -599,6 +609,98 @@
                 "designer|controlQuery": "button[name='tortoiseDeleteButton']"
             },
             "designerId": "53d9a641-9c8a-423b-9d43-e572ba94c8eb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newDreamSave",
+                "fn": "newDreamSave",
+                "designer|params": [
+                    "createdModel"
+                ],
+                "implHandler": [
+                    "var utility = MyApp.app.getController('UtilityController');\r",
+                    "var dreamsTabController = MyApp.app.getController('DreamsTabController');\r",
+                    "var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();\r",
+                    "var dreamId = createdModel.get('id');\r",
+                    "var dreamsStore = Ext.getStore('dreamsStore');\r",
+                    "dreamsStore.load();\r",
+                    "utility.loadTortoises(dreamId);\r",
+                    "dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});\r",
+                    ""
+                ]
+            },
+            "designerId": "56914f8a-4333-43fd-a7dd-6fc2bc878425"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "oldDreamSave",
+                "fn": "oldDreamSave",
+                "designer|params": [
+                    "savedModel"
+                ],
+                "implHandler": [
+                    "var utility = MyApp.app.getController('UtilityController');\r",
+                    "var dreamsTabController = MyApp.app.getController('DreamsTabController');\r",
+                    "var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();\r",
+                    "var dreamId = savedModel.get('id');\r",
+                    "var dreamsStore = Ext.getStore('dreamsStore');\r",
+                    "dreamsStore.load();\r",
+                    "utility.loadTortoises(dreamId);\r",
+                    "dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});\r",
+                    ""
+                ]
+            },
+            "designerId": "f15a625d-69b3-4de7-8c83-3e19569c0e97"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newTortoiseSave",
+                "fn": "newTortoiseSave",
+                "designer|params": [
+                    "createdModel"
+                ],
+                "implHandler": [
+                    "alert('new tortoise saved');"
+                ]
+            },
+            "designerId": "a97705c8-43c8-483e-b406-7cffd753d73f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "oldTortoiseSave",
+                "fn": "oldTortoiseSave",
+                "designer|params": [
+                    "savedModel"
+                ],
+                "implHandler": [
+                    "alert('saved old tortoise..');"
+                ]
+            },
+            "designerId": "74ce3c6d-ee9e-4e83-9953-03cbf898245b"
         }
     ]
 }

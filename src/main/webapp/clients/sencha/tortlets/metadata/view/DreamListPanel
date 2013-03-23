@@ -1,5 +1,5 @@
 {
-    "type": "panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -10,20 +10,19 @@
         "designer|userAlias": "dreamListPanel",
         "layout": "fit"
     },
-    "id": "ExtBox1-ext-gen8944",
     "designerId": "eaceb40a-b0c4-4740-a5a5-7c98435c0248",
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "docked": "top",
                 "designer|userClassName": "MyTitleBar4",
                 "designer|displayName": "DreamListPanelTitleBar",
-                "docked": "top",
                 "title": "Your Dreams"
             },
             "designerId": "9bf07779-4091-40ae-9704-b833c9fb87da"
@@ -36,7 +35,7 @@
             },
             "codeClass": null,
             "designerId": "d015d54a-c224-42a9-99c4-c7b112f4e23d",
-            "masterInstanceId": "ExtBox1-ext-gen1871"
+            "masterInstanceId": "3f058fa0-cbf4-4a61-a122-32c6457d8ec4"
         }
     ]
 }

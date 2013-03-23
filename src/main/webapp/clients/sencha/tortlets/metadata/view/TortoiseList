@@ -1,5 +1,5 @@
 {
-    "type": "list",
+    "type": "Ext.dataview.List",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,11 +7,11 @@
     "codeClass": null,
     "userConfig": {
         "data": null,
+        "margin": null,
+        "ui": "round",
         "designer|userClassName": "TortoiseList",
         "designer|userAlias": "tortoiseList",
         "designer|displayName": "TortoiseList",
-        "margin": null,
-        "ui": "round",
         "emptyText": "You need to at least one Tortoise to realize the dream. Tortoise is nothing but an activity to want to do regularly. Remember, slow and steady tortoise wins !",
         "store": "tortoisesStore",
         "onItemDisclosure": true
@@ -19,7 +19,6 @@
     "configAlternates": {
         "data": "array"
     },
-    "id": "ExtBox1-ext-gen1925",
     "designerId": "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
     "customConfigs": [
         {
@@ -30,7 +29,7 @@
     ],
     "cn": [
         {
-            "type": "template",
+            "type": "Ext.XTemplate",
             "reference": {
                 "name": "itemTpl",
                 "type": "object"

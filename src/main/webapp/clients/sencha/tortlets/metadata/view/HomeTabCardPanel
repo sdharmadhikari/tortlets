@@ -1,5 +1,5 @@
 {
-    "type": "panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -10,7 +10,6 @@
         "designer|userAlias": "homeTabCardPanel",
         "layout": "card"
     },
-    "id": "ExtBox1-ext-gen11868",
     "designerId": "c2bdc653-c608-400e-b209-ef000e5d7997",
     "cn": [
         {
@@ -21,7 +20,7 @@
             },
             "codeClass": null,
             "designerId": "ca549a70-f78d-4a7c-a328-5aa94a693df7",
-            "masterInstanceId": "ExtBox1-ext-gen1795"
+            "masterInstanceId": "811d49e0-92af-414a-9025-4cb5ec728652"
         },
         {
             "type": "linkedinstance",
@@ -31,7 +30,7 @@
             },
             "codeClass": null,
             "designerId": "0766883a-6b7a-428e-b2c3-7a88bc68f48d",
-            "masterInstanceId": "ExtBox1-ext-gen25443"
+            "masterInstanceId": "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0"
         },
         {
             "type": "linkedinstance",
@@ -41,7 +40,7 @@
             },
             "codeClass": null,
             "designerId": "084eb44d-be38-4655-91c1-b3548c4fe1ea",
-            "masterInstanceId": "ExtBox1-ext-gen8589"
+            "masterInstanceId": "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d"
         },
         {
             "type": "basiceventbinding",

@@ -1,5 +1,5 @@
 {
-    "type": "panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -10,26 +10,25 @@
         "designer|userAlias": "tortoiseListPanel",
         "layout": "vbox"
     },
-    "id": "ExtBox1-ext-gen3761",
     "designerId": "c717694e-2e8e-4855-ba93-2500aa9367bf",
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "docked": "top",
                 "designer|userClassName": "MyTitleBar4",
                 "designer|displayName": "TortoiseListPanelTitleBar",
-                "docked": "top",
                 "title": "Tortoises"
             },
             "designerId": "c92b0635-d55f-4fa0-908e-d9a377bb3d0d",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -37,8 +36,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "name": "tortoiseListPanelBackButton",
-                        "designer|userClassName": "MyButton2",
                         "ui": "back",
+                        "designer|userClassName": "MyButton2",
                         "text": "Back"
                     },
                     "designerId": "3a3f1956-9239-43a0-90ec-9643f018b018",
@@ -51,7 +50,7 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -87,10 +86,10 @@
                 "layout|flex": 10
             },
             "designerId": "9812fcd3-ef9d-4ad3-a1ff-c26aa1a9be08",
-            "masterInstanceId": "ExtBox1-ext-gen1925"
+            "masterInstanceId": "eccbc6a6-9583-424c-ac72-aef0e7263cdf"
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -98,8 +97,8 @@
             "codeClass": null,
             "userConfig": {
                 "name": "tortoiseListStartDreamingButton",
-                "designer|userClassName": "MyButton4",
                 "ui": "confirm",
+                "designer|userClassName": "MyButton4",
                 "text": "Make It Happen! (Save)"
             },
             "designerId": "0d1842e0-720d-439f-9690-01f93309f3e8",

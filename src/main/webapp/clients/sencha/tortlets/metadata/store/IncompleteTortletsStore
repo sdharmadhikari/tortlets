@@ -6,18 +6,16 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "IncompleteTortletsStore",
-        "designer|userAlias": "incompleteTortletsStore",
         "autoLoad": false,
-        "autoSync": false,
         "model": "Tortlet",
-        "storeId": "incompleteTortletsStore"
+        "storeId": "incompleteTortletsStore",
+        "designer|userClassName": "IncompleteTortletsStore",
+        "designer|userAlias": "incompleteTortletsStore"
     },
-    "id": "ExtBox1-ext-gen2756",
     "designerId": "345107d0-a788-4507-9220-261ec811d61a",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -46,15 +44,14 @@
             ],
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader",
-                        "useSimpleAccessors": false
+                        "designer|userClassName": "MyJsonReader"
                     },
                     "designerId": "207d21af-e6bb-4d25-9c67-1f2d2c2be027"
                 }

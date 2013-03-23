@@ -6,16 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "DreamsStore",
         "autoLoad": false,
         "model": "Dream",
-        "storeId": "dreamsStore"
+        "storeId": "dreamsStore",
+        "designer|userClassName": "DreamsStore"
     },
-    "id": "ExtBox1-ext-gen15484",
     "designerId": "2a7e2b19-f954-4c5d-a553-29c3ae040071",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
@@ -28,7 +27,7 @@
             "designerId": "e4c9535a-9efa-443c-a0bb-08593f57296e",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
@@ -42,16 +41,16 @@
             ]
         },
         {
-            "type": "sorter",
+            "type": "Ext.util.Sorter",
             "reference": {
                 "name": "sorters",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySorter",
                 "direction": "DESC",
-                "property": "createdOn"
+                "property": "createdOn",
+                "designer|userClassName": "MySorter"
             },
             "designerId": "db70f9e1-4a9d-48f4-b9e3-f0ab0ab65787"
         }

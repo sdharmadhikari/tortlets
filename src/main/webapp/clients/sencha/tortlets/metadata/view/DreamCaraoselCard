@@ -1,5 +1,5 @@
 {
-    "type": "panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -11,18 +11,17 @@
             "{ element:'element', tap:function(){ var panel=this; alert(1);} }"
         ],
         "container|pack": "center",
-        "designer|userClassName": "DreamCaraoselCard",
-        "designer|userAlias": "dreamCaraoselCard",
-        "designer|displayName": "Dream1",
         "html": "Dream 1",
         "itemId": "mypanel7",
         "style": "background-color:LightGreen;",
+        "designer|userClassName": "DreamCaraoselCard",
+        "designer|userAlias": "dreamCaraoselCard",
+        "designer|displayName": "Dream1",
         "layout": "vbox"
     },
     "configAlternates": {
         "listeners": "object"
     },
-    "id": "ExtBox1-ext-gen19834",
     "designerId": "a148bbe8-dad7-4c8e-a95a-4081d4b97c6f",
     "customConfigs": [
         {
@@ -38,18 +37,18 @@
     ],
     "cn": [
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton14",
                 "docked": "bottom",
                 "right": null,
                 "ui": "action-small",
                 "width": "10%",
+                "designer|userClassName": "MyButton14",
                 "iconAlign": null,
                 "text": "MyButton14"
             },

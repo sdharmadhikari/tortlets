@@ -1,5 +1,5 @@
 {
-    "type": "list",
+    "type": "Ext.dataview.List",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,11 +7,11 @@
     "codeClass": null,
     "userConfig": {
         "data": null,
+        "margin": null,
+        "ui": "round",
         "designer|userClassName": "DreamList",
         "designer|userAlias": "dreamList",
         "designer|displayName": "DreamList",
-        "margin": null,
-        "ui": "round",
         "emptyText": "",
         "store": "dreamsStore",
         "onItemDisclosure": true
@@ -19,7 +19,6 @@
     "configAlternates": {
         "data": "array"
     },
-    "id": "ExtBox1-ext-gen1871",
     "designerId": "3f058fa0-cbf4-4a61-a122-32c6457d8ec4",
     "customConfigs": [
         {
@@ -30,7 +29,7 @@
     ],
     "cn": [
         {
-            "type": "template",
+            "type": "Ext.XTemplate",
             "reference": {
                 "name": "itemTpl",
                 "type": "object"

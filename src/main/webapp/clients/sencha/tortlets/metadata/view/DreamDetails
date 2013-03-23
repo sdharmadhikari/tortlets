@@ -1,5 +1,5 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,7 +9,6 @@
         "designer|userClassName": "DreamDetails",
         "designer|userAlias": "dreamDetails"
     },
-    "id": "ExtBox1-ext-gen25443",
     "designerId": "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0",
     "customConfigs": [
         {
@@ -20,22 +19,22 @@
     ],
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "docked": "top",
                 "designer|userClassName": "MyTitleBar3",
                 "designer|displayName": "DreamTitleBar",
-                "docked": "top",
                 "title": "Dream"
             },
             "designerId": "db9230b8-3d4b-4985-a332-eecb9a0ae3d9",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -43,9 +42,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "name": "dreamDetailsBackButton",
+                        "ui": "back",
                         "designer|userClassName": "MyButton8",
                         "designer|displayName": "DreamDetailsBackButton",
-                        "ui": "back",
                         "text": "Back"
                     },
                     "designerId": "22f810b3-cfce-45e8-8f7d-ca087e4fb45e",
@@ -60,7 +59,7 @@
             ]
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -73,17 +72,17 @@
             "designerId": "f03f3521-6792-4644-bb78-198870f75137",
             "cn": [
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTextField2",
-                        "designer|displayName": "dreamTitleTextArea",
                         "height": 74,
                         "html": null,
+                        "designer|userClassName": "MyTextField2",
+                        "designer|displayName": "dreamTitleTextArea",
                         "label": null,
                         "name": "title"
                     },
@@ -92,7 +91,7 @@
             ]
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -106,24 +105,24 @@
             "designerId": "3c2c5764-5008-45d2-86e7-85aead566c5b",
             "cn": [
                 {
-                    "type": "textareafield",
+                    "type": "Ext.field.TextArea",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTextArea2",
-                        "designer|displayName": "dreamNotesTitleArea",
                         "height": 78,
                         "width": 280,
+                        "designer|userClassName": "MyTextArea2",
+                        "designer|displayName": "dreamNotesTitleArea",
                         "label": null,
                         "name": "notes"
                     },
                     "designerId": "c5ea08c1-e697-401c-b8e6-0cf08e04c3d6"
                 },
                 {
-                    "type": "selectfield",
+                    "type": "Ext.field.Select",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -134,14 +133,22 @@
                         "designer|displayName": "DreamColorSelectField",
                         "label": "Dream Color",
                         "labelWidth": "40%",
-                        "options": "[\r\n{text: 'White',  value: 'White'},\r\n{text: 'Yellow', value: 'Yellow'},\r\n{text: 'Blue',  value: 'Blue'},\r\n{text: 'Green',  value: 'Green'},\r\n{text: 'Red',  value: 'Red'},\r\n]"
+                        "options": [
+                            "[\r",
+                            "{text: 'White',  value: 'White'},\r",
+                            "{text: 'Yellow', value: 'Yellow'},\r",
+                            "{text: 'Blue',  value: 'Blue'},\r",
+                            "{text: 'Green',  value: 'Green'},\r",
+                            "{text: 'Red',  value: 'Red'},\r",
+                            "]"
+                        ]
                     },
                     "designerId": "75ed7e71-8d1c-4c47-ba32-ba8a669fda9a"
                 }
             ]
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -154,7 +161,7 @@
             "designerId": "83806c65-0127-46e9-94ac-f5cd5a986ad2",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -178,7 +185,7 @@
             ]
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -192,7 +199,7 @@
             "designerId": "3c298db0-c717-467d-a8d5-69241c6471d4",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -200,9 +207,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "name": "dreamDeleteButton",
+                        "ui": "decline",
                         "designer|userClassName": "MyButton10",
                         "designer|displayName": "DreamDeleteButton",
-                        "ui": "decline",
                         "text": "I am done ! (Delete)"
                     },
                     "designerId": "f7569e87-0a20-431f-81b1-203ae453565b",
@@ -217,7 +224,7 @@
             ]
         },
         {
-            "type": "hiddenfield",
+            "type": "Ext.field.Hidden",
             "reference": {
                 "name": "items",
                 "type": "array"

@@ -1,5 +1,5 @@
 {
-    "type": "panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -10,25 +10,24 @@
         "designer|userAlias": "carouselDreamPanel",
         "layout": "vbox"
     },
-    "id": "ExtBox1-ext-gen18149",
     "designerId": "ab390928-6413-4757-9eb4-5023d3291a6c",
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar5",
                 "docked": "top",
+                "designer|userClassName": "MyTitleBar5",
                 "title": "Your Dreams !"
             },
             "designerId": "436fa1ca-a365-447c-8077-f8bd2f8df14c"
         },
         {
-            "type": "carousel",
+            "type": "Ext.carousel.Carousel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -49,20 +48,20 @@
                     },
                     "codeClass": null,
                     "designerId": "7e7eee61-4c85-468c-bd49-ef3d8189e0dd",
-                    "masterInstanceId": "ExtBox1-ext-gen19834"
+                    "masterInstanceId": "a148bbe8-dad7-4c8e-a95a-4081d4b97c6f"
                 },
                 {
-                    "type": "panel",
+                    "type": "Ext.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyPanel7",
-                        "designer|displayName": "Dream2",
                         "html": "I want to start my own business..",
                         "style": "background-color: LightBlue",
+                        "designer|userClassName": "MyPanel7",
+                        "designer|displayName": "Dream2",
                         "layout": "fit"
                     },
                     "designerId": "cbd65411-0e72-4750-b931-00fb14659c27"
@@ -70,7 +69,7 @@
             ]
         },
         {
-            "type": "panel",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -84,16 +83,21 @@
             "designerId": "6200fc3a-7496-4818-a8a2-cd556e23010f",
             "cn": [
                 {
-                    "type": "list",
+                    "type": "Ext.dataview.List",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "data": "[ \r\n    {\"string\" : \"workout in gym\"},\r\n    {\"string\" : \"check calories intake on Fitnesspal\"}\r\n]",
-                        "designer|userClassName": "MyList3",
-                        "ui": "round"
+                        "data": [
+                            "[ \r",
+                            "    {\"string\" : \"workout in gym\"},\r",
+                            "    {\"string\" : \"check calories intake on Fitnesspal\"}\r",
+                            "]"
+                        ],
+                        "ui": "round",
+                        "designer|userClassName": "MyList3"
                     },
                     "configAlternates": {
                         "data": "array"
@@ -108,7 +112,7 @@
                     ],
                     "cn": [
                         {
-                            "type": "template",
+                            "type": "Ext.XTemplate",
                             "reference": {
                                 "name": "itemTpl",
                                 "type": "object"

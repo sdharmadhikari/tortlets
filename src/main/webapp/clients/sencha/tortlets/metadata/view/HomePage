@@ -1,5 +1,5 @@
 {
-    "type": "container",
+    "type": "Ext.Container",
     "reference": {
         "name": "items",
         "type": "array"
@@ -10,25 +10,24 @@
         "designer|userAlias": "homePage",
         "layout": "vbox"
     },
-    "id": "ExtBox1-ext-gen1795",
     "designerId": "811d49e0-92af-414a-9025-4cb5ec728652",
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar",
                 "docked": "top",
+                "designer|userClassName": "MyTitleBar",
                 "title": "Tortlets"
             },
             "designerId": "f2c2fe36-3373-45fd-bb4e-48cfaaa5afff"
         },
         {
-            "type": "panel",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -36,15 +35,15 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": 1,
+                "height": 40,
                 "designer|userClassName": "MyPanel",
                 "designer|displayName": "WhatsYourDreamPanel",
-                "height": 40,
                 "layout": "hbox"
             },
             "designerId": "537f33fa-608e-46b6-a3dd-13b0a11d9ba1",
             "cn": [
                 {
-                    "type": "textfield",
+                    "type": "Ext.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -61,7 +60,7 @@
                     "designerId": "86c5e48f-6f5a-4f41-b317-74d22ce41445"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -85,7 +84,7 @@
             ]
         },
         {
-            "type": "panel",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -93,15 +92,15 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": 1,
+                "height": 40,
                 "designer|userClassName": "MyPanel2",
                 "designer|displayName": "SegementedButtonPanel",
-                "height": 40,
                 "layout": "fit"
             },
             "designerId": "6df3c6b5-3dd9-473f-842a-acea01eeb80d",
             "cn": [
                 {
-                    "type": "segmentedbutton",
+                    "type": "Ext.SegmentedButton",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -116,7 +115,7 @@
                     "designerId": "19fd46fe-4b58-4dc0-aca0-5b959d8a24e3",
                     "cn": [
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -139,7 +138,7 @@
                             ]
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -165,7 +164,7 @@
             ]
         },
         {
-            "type": "panel",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -173,10 +172,10 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": 3,
+                "ui": null,
                 "designer|userClassName": "TortletsListPanel",
                 "designer|userAlias": "tortletsListPanel",
                 "designer|displayName": "TortletsListPanel",
-                "ui": null,
                 "layout": "fit",
                 "scrollable": "vertical"
             },
@@ -193,7 +192,7 @@
                         "hidden": true
                     },
                     "designerId": "6f2ff861-3109-4305-9752-46dc323c5d09",
-                    "masterInstanceId": "ExtBox1-ext-gen11968"
+                    "masterInstanceId": "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0"
                 },
                 {
                     "type": "linkedinstance",
@@ -206,7 +205,7 @@
                         "docked": null
                     },
                     "designerId": "85593b68-b2cc-445d-93d6-20a843a137ad",
-                    "masterInstanceId": "ExtBox1-ext-gen31234"
+                    "masterInstanceId": "8162b955-c1db-4f2f-bcaa-753970ca90eb"
                 }
             ]
         }

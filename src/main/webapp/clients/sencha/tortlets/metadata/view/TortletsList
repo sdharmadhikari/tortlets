@@ -1,5 +1,5 @@
 {
-    "type": "list",
+    "type": "Ext.dataview.List",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,11 +7,11 @@
     "codeClass": null,
     "userConfig": {
         "data": null,
+        "docked": null,
+        "ui": "round",
         "designer|userClassName": "TortletsList",
         "designer|userAlias": "tortletsList",
         "designer|displayName": "TortletsList",
-        "docked": null,
-        "ui": "round",
         "scrollable": null,
         "emptyText": "Wow ! Nothing pending. You are really on top of everything !",
         "store": "incompleteTortletsStore",
@@ -20,7 +20,6 @@
     "configAlternates": {
         "data": "array"
     },
-    "id": "ExtBox1-ext-gen11968",
     "designerId": "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0",
     "customConfigs": [
         {
@@ -31,7 +30,7 @@
     ],
     "cn": [
         {
-            "type": "template",
+            "type": "Ext.XTemplate",
             "reference": {
                 "name": "itemTpl",
                 "type": "object"
