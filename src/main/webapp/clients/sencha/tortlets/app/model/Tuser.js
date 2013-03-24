@@ -50,6 +50,10 @@ Ext.define('MyApp.model.Tuser', {
             },
             {
                 name: 'timeZone'
+            },
+            {
+                name: 'version',
+                type: 'int'
             }
         ],
         hasMany: {

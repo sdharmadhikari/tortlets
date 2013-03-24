@@ -52,6 +52,35 @@
                 "designer|userClassName": "field2"
             },
             "designerId": "0b8d2dd5-2cf7-49c4-ae44-c748f341f459"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "version",
+                "type": "int",
+                "designer|userClassName": "field38"
+            },
+            "designerId": "12163408-d4a8-4ceb-8b29-dbc50f00e365"
+        },
+        {
+            "type": "Ext.data.association.BelongsTo",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyBelongsToAssociation2",
+                "designer|displayName": "BelongsToTortoiseAssociation",
+                "model": "Tortoise",
+                "foreignKey": "tortoise"
+            },
+            "designerId": "c87cc6c5-0936-4fb5-8b51-29e5175ba60d"
         }
     ]
 }

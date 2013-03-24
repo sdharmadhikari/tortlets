@@ -17,6 +17,10 @@ Ext.define('MyApp.model.Tortlet', {
     extend: 'Ext.data.Model',
     alias: 'model.tortlet',
 
+    uses: [
+        'MyApp.model.Tortoise'
+    ],
+
     config: {
         fields: [
             {
@@ -30,7 +34,15 @@ Ext.define('MyApp.model.Tortlet', {
             {
                 name: 'notes',
                 type: 'string'
+            },
+            {
+                name: 'version',
+                type: 'int'
             }
-        ]
+        ],
+        belongsTo: {
+            model: 'MyApp.model.Tortoise',
+            foreignKey: 'tortoise'
+        }
     }
 });

@@ -52,6 +52,10 @@ Ext.define('MyApp.model.Dream', {
             },
             {
                 name: 'updatedOn'
+            },
+            {
+                name: 'version',
+                type: 'int'
             }
         ],
         proxy: {

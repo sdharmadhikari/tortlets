@@ -134,10 +134,6 @@ public class TortoiseController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         Tortoise tortoise = Tortoise.fromJsonToTortoise(json);
-        //tortoise = Tortoise.findTortoise(tortoise.getId());
-        Dream dream = tortoise.getDream();
-        dream = Dream.findDream(dream.getId());
-        tortoise.setDream(dream);
         if (tortoise.merge() == null) {
             return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
         }

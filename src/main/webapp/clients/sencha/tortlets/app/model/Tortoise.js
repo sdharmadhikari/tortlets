@@ -74,6 +74,13 @@ Ext.define('MyApp.model.Tortoise', {
             },
             {
                 name: 'userid'
+            },
+            {
+                name: 'id'
+            },
+            {
+                name: 'version',
+                type: 'int'
             }
         ],
         belongsTo: {

@@ -142,6 +142,20 @@
                 "model": "Dream"
             },
             "designerId": "4ebc7ce4-3f93-4961-8ac2-103a37fdc002"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "version",
+                "type": "int",
+                "designer|userClassName": "field39"
+            },
+            "designerId": "147aa558-24ab-42d4-b7cb-e66f79e90858"
         }
     ]
 }

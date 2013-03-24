@@ -179,6 +179,20 @@
                 "foreignKey": "tuser"
             },
             "designerId": "0c603e3e-3bb1-4fcb-adde-35a1f8a55927"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "version",
+                "type": "int",
+                "designer|userClassName": "field37"
+            },
+            "designerId": "edce9120-9a27-4a4b-b98c-563b44d6aa84"
         }
     ]
 }
