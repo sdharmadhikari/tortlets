@@ -83,6 +83,9 @@ public class DreamController {
         return "redirect:/dreams?find=ByUseridEquals";
     }
 
+    ///---------json-----------------------json-----------------------json-----------------------json-----------------------json--------------
+    //Looks like only reason to override is value /json !!
+
     @RequestMapping(value = "/json",params = "find=ByUseridEquals", headers = "Accept=application/json")
     @ResponseBody
     public ResponseEntity<String> jsonFindDreamsByUseridEquals(@RequestParam("userid") String userid) {
@@ -96,38 +99,19 @@ public class DreamController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         Dream dream = Dream.fromJsonToDream(json);
-        Tuser tuser = dream.getTuser();
-        if(tuser == null ){
-            System.out.println("JSON TUSER IS NULL");
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-       }else{
-            tuser = Tuser.findTuser(tuser.getId());
-            dream.setTuser(tuser);
-        }
-        Date now = new Date();
-        dream.setCreatedOn(now);
-        dream.setUpdatedOn(now);
-        dream.setStatus(DreamStatusEnum.ACTIVE);
         dream.persist();
 
         return new ResponseEntity<String>(dream.toJson(),headers, HttpStatus.OK);
     }
+
+
 
     @RequestMapping(value = "/json", method = RequestMethod.PUT, headers = "Accept=application/json")
     public ResponseEntity<String> updateFromJson(@RequestBody String json) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         Dream dream = Dream.fromJsonToDream(json);
-        Dream oldDream = Dream.findDream(dream.getId());
-        if(oldDream == null){
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-        }
-        oldDream.setTitle(dream.getTitle());
-        oldDream.setNotes(dream.getNotes());
-        oldDream.setDreamColor(dream.getDreamColor());
-        oldDream.setStatus(dream.getStatus());
-        oldDream.setUpdatedOn(new Date());
-        if (oldDream.merge() == null) {
+        if (dream.merge() == null) {
             return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<String>(headers, HttpStatus.OK);

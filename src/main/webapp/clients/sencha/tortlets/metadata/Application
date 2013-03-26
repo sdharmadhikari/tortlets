@@ -72,6 +72,7 @@
                     "\r",
                     "var currentUser = Ext.create('MyApp.model.Tuser');\r",
                     "currentUser.set('id',1);\r",
+                    "currentUser.set('version',42);\r",
                     "var userid = 'sudhir';\r",
                     "currentUser.set('userid',userid);\r",
                     "this.tempId = 0;\r",

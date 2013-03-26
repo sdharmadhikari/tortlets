@@ -2,7 +2,7 @@
     "expandedState": {
         "data": true,
         "model": true,
-        "component": false,
+        "component": true,
         "controller": true,
         "resource": true,
         "424d6af0-4bed-488c-bf22-6b9993519c5f": {
@@ -822,24 +822,18 @@
     },
     "tabState": {
         "openTabs": [
-            "a6be32fc-255c-4b23-8caf-f80699a22551",
-            "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
-            "ccd9f3a8-ae61-4fc6-982b-b0ab91b1a0b9",
-            "6224bddc-b988-416c-beca-b6c25b31ac1d",
-            "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
-            "98103327-6270-4ea5-9055-efe31b2727a6",
-            "d972eca9-cfd7-429d-8792-8238d5fc4127"
+            "application"
         ]
     },
     "canvasState": {
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "98103327-6270-4ea5-9055-efe31b2727a6",
-        "selectedInstance": "c87cc6c5-0936-4fb5-8b51-29e5175ba60d"
+        "topInstance": "application",
+        "selectedInstance": "76f38c4f-ef83-4310-8f7f-16cacff11236"
     },
     "codeState": {
-        "topInstance": "98103327-6270-4ea5-9055-efe31b2727a6"
+        "topInstance": "application"
     },
     "editMode": "code"
 }

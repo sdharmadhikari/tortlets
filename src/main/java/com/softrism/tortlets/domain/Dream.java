@@ -56,4 +56,20 @@ public class Dream {
     private DreamStatusEnum status;
 
     private String userid;
+
+    @PrePersist
+    private void prePersist(){
+
+        Date now = new Date();
+        createdOn = now;
+        updatedOn = now;
+        //status = DreamStatusEnum.ACTIVE;
+
+    }
+
+    @PreUpdate
+    private void preUpdate(){
+        Date now = new Date();
+        updatedOn = now;
+    }
 }

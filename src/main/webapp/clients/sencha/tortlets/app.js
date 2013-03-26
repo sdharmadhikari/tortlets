@@ -65,6 +65,7 @@ Ext.application({
 
         var currentUser = Ext.create('MyApp.model.Tuser');
         currentUser.set('id',1);
+        currentUser.set('version',42);
         var userid = 'sudhir';
         currentUser.set('userid',userid);
         this.tempId = 0;
