@@ -10,7 +10,7 @@
     <file path="/aggregators.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1363024645111" ignored="false" />
     <file path="/TortoiseController.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1364068837707" ignored="false" />
     <file path="/TuserController.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1363899392872" ignored="false" />
-    <file path="/Dream.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1364258281213" ignored="false" />
+    <file path="/Dream.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1364270573268" ignored="false" />
     <file path="/Dream_Roo_Jpa_ActiveRecord.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1364088433383" ignored="false" />
     <file path="/MyDreamAspect.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1364088701179" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,6 +27,40 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortletController.java" line="120" class="com.softrism.tortlets.web.TortletController" package="com.softrism.tortlets.web">
         <option name="ENABLED" value="false" />
@@ -100,40 +134,6 @@
       </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -146,7 +146,7 @@
       <file leaf-file-name="Dream.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Dream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="10" selection-start="1707" selection-end="1707" vertical-scroll-proportion="0.5973378">
+            <state line="58" column="77" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.67528737">
               <folding />
             </state>
           </provider>
@@ -174,10 +174,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Dream_Roo_Jpa_ActiveRecord.aj">
           <provider selected="true" editor-type-id="text-editor">
             <state line="21" column="4" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#2755#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -186,9 +183,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="104" column="86" selection-start="5311" selection-end="5311" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -272,7 +267,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -283,13 +278,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -641,15 +630,15 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3235832" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32216907" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956687" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20259319" sideWeight="0.6471664" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20259319" sideWeight="0.5964912" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32723948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3128039" sideWeight="0.6471664" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35283363" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40350878" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -718,18 +707,21 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController_Roo_Controller_Finder.aj">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+        <state line="104" column="86" selection-start="5311" selection-end="5311" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController_Roo_Controller_Finder.aj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="18" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController_Roo_Controller_Finder.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="18" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="18" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Tortoise.java">
@@ -739,16 +731,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController_Roo_Controller_Json.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="49" column="0" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserController_Roo_Controller_Finder.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="18" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserController.java">
@@ -758,26 +746,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserController_Roo_Controller.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="46" selection-start="4843" selection-end="4843" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="93" column="46" selection-start="4843" selection-end="4843" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserController_Roo_Controller_Json.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="56" selection-start="3134" selection-end="3134" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="64" column="56" selection-start="3134" selection-end="3134" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController_Roo_Controller_Json.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#3564#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="50" column="0" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java">
@@ -802,25 +781,20 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Dream_Roo_Jpa_ActiveRecord.aj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="4" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#2755#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="86" selection-start="5311" selection-end="5311" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Dream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="10" selection-start="1707" selection-end="1707" vertical-scroll-proportion="0.5973378">
+        <state line="58" column="77" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.67528737">
           <folding />
         </state>
       </provider>

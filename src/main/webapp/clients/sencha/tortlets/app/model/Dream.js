@@ -23,6 +23,7 @@ Ext.define('MyApp.model.Dream', {
     config: {
         fields: [
             {
+                allowNull: false,
                 name: 'title',
                 type: 'string'
             },
@@ -51,7 +52,8 @@ Ext.define('MyApp.model.Dream', {
                 persist: false
             },
             {
-                name: 'updatedOn'
+                name: 'updatedOn',
+                persist: false
             },
             {
                 name: 'version',

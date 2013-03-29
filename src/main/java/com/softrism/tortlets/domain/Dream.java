@@ -63,7 +63,7 @@ public class Dream {
         Date now = new Date();
         createdOn = now;
         updatedOn = now;
-        //status = DreamStatusEnum.ACTIVE;
+        status = DreamStatusEnum.ACTIVE; // later need to be removed as Status will come from client.
 
     }
 

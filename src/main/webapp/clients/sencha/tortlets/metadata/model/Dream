@@ -19,6 +19,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowNull": false,
                 "name": "title",
                 "type": "string",
                 "designer|userClassName": "field"
@@ -119,6 +120,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "updatedOn",
+                "persist": false,
                 "designer|userClassName": "field8"
             },
             "designerId": "07f02206-8cd5-4c4e-a329-42b54c37fb33"
