@@ -26,12 +26,6 @@ Ext.define('MyApp.store.TodaysTortletsStore', {
         storeId: 'todaysTortletsStore',
         proxy: {
             type: 'rest',
-            actionMethods: {
-                create: 'POST',
-                read: 'GET',
-                update: 'PUT',
-                destroy: 'GET'
-            },
             enablePagingParams: false,
             url: 'http://dummy.url',
             appendId: false,

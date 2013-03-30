@@ -53,9 +53,12 @@ Ext.define('MyApp.controller.HomeTabController', {
 
         var tortletDetails = this.getTortletDetails();
 
+        var sourceStoreId = record.stores[0].getInitialConfig().storeId;
+
+        record.sourceStoreId=sourceStoreId;
         tortletDetails.setRecord(record);
 
-        this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});
+        this.getHomeTabCardPanel().animateActiveItem(tortletDetails, {type : 'slide'});
     },
 
     onTortletsDetailsBackButtonTap: function(button, e, eOpts) {
@@ -72,21 +75,22 @@ Ext.define('MyApp.controller.HomeTabController', {
 
         /// Populate record from form. populateTortletRecordFromForm()
         var record = tortletDetailsForm.getRecord();
-        var newValues = tortletDetailsForm.getValues();
-        record.set('title', newValues.title);
-        record.set('notes', newValues.notes);
 
-        if(newValues.completed === 1){
-            record.set('completed', newValues.completed);
-        }
+        tortletDetailsForm.updateRecord(record);
+        operation = new Object();
+        operation.success = this.oldTortletSaveSuccess;
+        operation.failure = this.oldTortletSaveFailure;
 
-        //////////////////////////////////////////////
-        var store = Ext.getStore("incompleteTortletsStore");
-        store.sync();
+        if(record.dirty){
+            if(record.get('completed') === true){
 
-        if(record.get('completed') === true){
-            store.remove(record); // Change "destroy" method to GET from DELETE
-            store.sync();
+                eitherOneStore = Ext.getStore(record.sourceStoreId)
+                eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);
+                eitherOneStore.remove(record); 
+
+            }
+
+            record.save(operation);
         }
 
 
@@ -108,7 +112,7 @@ Ext.define('MyApp.controller.HomeTabController', {
         store.getProxy().setUrl(todayUrl);
         store.load();
         store.getProxy().setUrl(url);
-        this.getTortletsList().hide();
+        //this.getTortletsList().hide({type : 'fadeIn'});
         this.getTodayTortletsList().show();
 
     },
@@ -130,6 +134,28 @@ Ext.define('MyApp.controller.HomeTabController', {
         tortletDetails.setRecord(record);
 
         this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});
+    },
+
+    oldTortletSaveSuccess: function(savedEntity, operation) {
+
+        var store = Ext.getStore(entityTried.sourceStoreId);
+        store.removedIndexRecord='';
+
+        console.log('oldTortletSaveSuccesful');
+
+
+    },
+
+    oldTortletSaveFailure: function(entityTried, operation) {
+
+        if(store.removedRecordIndex !== ''){
+            var store = Ext.getStore(entityTried.sourceStoreId);
+            store.insert(store.removedRecordIndex, entityTried);
+            store.removedRecordIndex='';
+        }
+
+        Ext.Msg.alert('Failure','Could not save to server,try again later',Ext.emptyFn);
+
     }
 
 });

@@ -44,6 +44,19 @@ public class Tortlet {
 
     private String userid;
 
+    @PrePersist
+    private void prePersist(){
+        Date now = new Date();
+        createdOn = now;
+        updatedOn = now;
+    }
+
+    @PreUpdate
+    private void preUpdate(){
+        Date now = new Date();
+        updatedOn = now;
+    }
+
     public static TypedQuery<com.softrism.tortlets.domain.Tortlet> findTortletsByTuserAndCreatedOnEquals(Tuser tuser, Date createdOn) {
         if (tuser == null) throw new IllegalArgumentException("The tuser argument is required");
         if (createdOn == null) throw new IllegalArgumentException("The createdOn argument is required");

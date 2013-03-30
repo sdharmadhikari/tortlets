@@ -43,6 +43,17 @@ Ext.define('MyApp.model.Tortlet', {
         belongsTo: {
             model: 'MyApp.model.Tortoise',
             foreignKey: 'tortoise'
+        },
+        proxy: {
+            type: 'rest',
+            url: 'http://dummy.url',
+            appendId: false,
+            reader: {
+                type: 'json'
+            },
+            writer: {
+                type: 'json'
+            }
         }
     }
 });

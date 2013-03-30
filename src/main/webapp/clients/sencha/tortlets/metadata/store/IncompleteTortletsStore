@@ -22,14 +22,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "actionMethods": [
-                    "{create: \"POST\", read: \"GET\", update: \"PUT\", destroy : \"GET\"}"
-                ],
+                "actionMethods": null,
                 "designer|userClassName": "MyRestProxy",
                 "enablePagingParams": false,
                 "url": "http://dummy.url",
                 "headers": null,
-                "appendId": false
+                "appendId": null
             },
             "configAlternates": {
                 "actionMethods": "object"

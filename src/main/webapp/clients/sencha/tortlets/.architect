@@ -2,7 +2,7 @@
     "expandedState": {
         "data": true,
         "model": true,
-        "component": false,
+        "component": true,
         "controller": true,
         "resource": true,
         "424d6af0-4bed-488c-bf22-6b9993519c5f": {
@@ -506,6 +506,17 @@
                 },
                 {
                     "id": "c87cc6c5-0936-4fb5-8b51-29e5175ba60d"
+                },
+                {
+                    "id": "e23ce123-2d53-4c17-ae20-1607b948c042",
+                    "cn": [
+                        {
+                            "id": "2d06a988-2bb8-466a-98a9-7ac11fc362d0"
+                        },
+                        {
+                            "id": "b59474e0-24e3-4c22-8cbe-39e8fc68dad1"
+                        }
+                    ]
                 }
             ]
         },
@@ -539,7 +550,6 @@
                 },
                 {
                     "id": "220e74c7-5a7b-4762-b0b7-c75bb795347b",
-                    "expanded": false,
                     "cn": [
                         {
                             "id": "88185ffc-cbd8-408c-b6a5-96a92142c107"
@@ -695,6 +705,12 @@
                 },
                 {
                     "id": "1ce0bcec-8d05-4364-a30f-32ea05e4a5cf"
+                },
+                {
+                    "id": "61674fa9-8c24-4279-a731-077a56c41904"
+                },
+                {
+                    "id": "f157240a-5de6-4a3c-8bee-d2c45a5ffe2d"
                 }
             ]
         },
@@ -824,18 +840,22 @@
     "tabState": {
         "openTabs": [
             "application",
-            "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49"
+            "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
+            "98103327-6270-4ea5-9055-efe31b2727a6",
+            "345107d0-a788-4507-9220-261ec811d61a",
+            "f349d5fa-f50b-405e-b80f-e46f09bf9967",
+            "15eb7579-b7e5-4a31-96e4-4dd8481e7568"
         ]
     },
     "canvasState": {
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
-        "selectedInstance": "edce9120-9a27-4a4b-b98c-563b44d6aa84"
+        "topInstance": "f349d5fa-f50b-405e-b80f-e46f09bf9967",
+        "selectedInstance": "f349d5fa-f50b-405e-b80f-e46f09bf9967"
     },
     "codeState": {
-        "topInstance": "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49"
+        "topInstance": "f349d5fa-f50b-405e-b80f-e46f09bf9967"
     },
     "editMode": "code"
 }

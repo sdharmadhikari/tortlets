@@ -123,19 +123,15 @@ public class TortletController {
         return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCompleted(userid, completed == null ? Boolean.FALSE : completed).getResultList()), headers, HttpStatus.OK);
     }
 
-    @RequestMapping( value = "/json",method = RequestMethod.PUT, params = "find=ByUseridEqualsAndCompleted", headers = "Accept=application/json")
-    public ResponseEntity<String> myUpdateFromJson(@RequestBody String json) {
+
+    @RequestMapping( value = "/json", method = RequestMethod.PUT, headers = "Accept=application/json")
+    public ResponseEntity<String> updateFromJson(@RequestBody String json) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         Tortlet tortlet = Tortlet.fromJsonToTortlet(json);
-
-        //Tortlet oldTortlet = populateOldTortlet(tortlet);
+        //Calling common method between browser and mobile app
         updateTortlet(tortlet);
 
-        /*if (oldTortlet.merge() == null) {
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-        }
-        */
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
 
@@ -150,21 +146,7 @@ public class TortletController {
     }
 
 // Common functions. // Common functions.// Common functions.// Common functions.// Common functions.// Common functions.// Common functions.
-    /*
-    private Tortlet populateOldTortlet(Tortlet tortlet) {
-        Tortlet oldTortlet = Tortlet.findTortlet(tortlet.getId());
-        oldTortlet.setTitle(tortlet.getTitle());
-        oldTortlet.setNotes(tortlet.getNotes());
-        if(tortlet.getCompleted() == null || tortlet.getCompleted().booleanValue() == false){
-            oldTortlet.setCompleted(null);
-        }else{
-            oldTortlet.setCompleted(Boolean.TRUE);
-        }
 
-
-        return oldTortlet;
-    }
-     */
     private List useCreatedOnToSearchTortlets(String userid, Date createdOn, Boolean completed){
         TypedQuery q = Tortlet.findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(userid, createdOn, completed == null ? Boolean.FALSE : completed);
         List<Tortlet> resultList = new ArrayList<Tortlet>();
@@ -184,10 +166,12 @@ public class TortletController {
     }
 
     private void updateTortlet(Tortlet tortletVO) {
+        // This method still uses old way. Get the old entity using id, set all values on old and call old.merge
+        // This method later can be moved to custom aspect before updateFromJson pointcut.
 
         Tortlet tortlet = Tortlet.findTortlet(tortletVO.getId());
-        tortlet.setTitle(tortlet.getTitle());
-        tortlet.setNotes(tortlet.getNotes());
+        tortlet.setTitle(tortletVO.getTitle());
+        tortlet.setNotes(tortletVO.getNotes());
 
         boolean wasCompleted = tortlet.getCompleted() == null ? false : tortlet.getCompleted().booleanValue();
         boolean nowCompleted = tortletVO.getCompleted() == null ? false : tortletVO.getCompleted().booleanValue();

@@ -27,15 +27,8 @@ Ext.define('MyApp.store.IncompleteTortletsStore', {
         storeId: 'incompleteTortletsStore',
         proxy: {
             type: 'rest',
-            actionMethods: {
-                create: 'POST',
-                read: 'GET',
-                update: 'PUT',
-                destroy: 'GET'
-            },
             enablePagingParams: false,
             url: 'http://dummy.url',
-            appendId: false,
             reader: {
                 type: 'json'
             }

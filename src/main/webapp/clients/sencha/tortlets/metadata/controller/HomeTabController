@@ -38,9 +38,12 @@
                     "\r",
                     "var tortletDetails = this.getTortletDetails();\r",
                     "\r",
+                    "var sourceStoreId = record.stores[0].getInitialConfig().storeId;\r",
+                    "\r",
+                    "record.sourceStoreId=sourceStoreId;\r",
                     "tortletDetails.setRecord(record);\r",
                     "\r",
-                    "this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});"
+                    "this.getHomeTabCardPanel().animateActiveItem(tortletDetails, {type : 'slide'});"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "TortletsList",
@@ -102,21 +105,22 @@
                     "\r",
                     "/// Populate record from form. populateTortletRecordFromForm()\r",
                     "var record = tortletDetailsForm.getRecord();\r",
-                    "var newValues = tortletDetailsForm.getValues();\r",
-                    "record.set('title', newValues.title);\r",
-                    "record.set('notes', newValues.notes);\r",
                     "\r",
-                    "if(newValues.completed === 1){\r",
-                    "    record.set('completed', newValues.completed);\r",
-                    "}\r",
+                    "tortletDetailsForm.updateRecord(record);\r",
+                    "operation = new Object();\r",
+                    "operation.success = this.oldTortletSaveSuccess;\r",
+                    "operation.failure = this.oldTortletSaveFailure;\r",
                     "\r",
-                    "//////////////////////////////////////////////\r",
-                    "var store = Ext.getStore(\"incompleteTortletsStore\");\r",
-                    "store.sync();\r",
+                    "if(record.dirty){\r",
+                    "    if(record.get('completed') === true){\r",
+                    "     \r",
+                    "       eitherOneStore = Ext.getStore(record.sourceStoreId)\r",
+                    "       eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);\r",
+                    "       eitherOneStore.remove(record); \r",
+                    "        \r",
+                    "    }\r",
                     "\r",
-                    "if(record.get('completed') === true){\r",
-                    "    store.remove(record); // Change \"destroy\" method to GET from DELETE\r",
-                    "    store.sync();\r",
+                    "\trecord.save(operation);\r",
                     "}\r",
                     "\r",
                     "\r",
@@ -167,7 +171,7 @@
                     "store.getProxy().setUrl(todayUrl);\r",
                     "store.load();\r",
                     "store.getProxy().setUrl(url);\r",
-                    "this.getTortletsList().hide();\r",
+                    "//this.getTortletsList().hide({type : 'fadeIn'});\r",
                     "this.getTodayTortletsList().show();\r",
                     ""
                 ],
@@ -253,6 +257,60 @@
                 "designer|controlQuery": "list"
             },
             "designerId": "1ce0bcec-8d05-4364-a30f-32ea05e4a5cf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "oldTortletSaveSuccess",
+                "fn": "oldTortletSaveSuccess",
+                "designer|params": [
+                    "savedEntity",
+                    "operation"
+                ],
+                "implHandler": [
+                    "\r",
+                    "var store = Ext.getStore(entityTried.sourceStoreId);\r",
+                    "store.removedIndexRecord='';\r",
+                    "\r",
+                    "console.log('oldTortletSaveSuccesful');\r",
+                    "\r",
+                    "    "
+                ]
+            },
+            "designerId": "61674fa9-8c24-4279-a731-077a56c41904"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "oldTortletSaveFailure",
+                "fn": "oldTortletSaveFailure",
+                "designer|params": [
+                    "entityTried",
+                    "operation"
+                ],
+                "implHandler": [
+                    "\r",
+                    "if(store.removedRecordIndex !== ''){\r",
+                    "    var store = Ext.getStore(entityTried.sourceStoreId);\r",
+                    "    store.insert(store.removedRecordIndex, entityTried);\r",
+                    "    store.removedRecordIndex='';\r",
+                    "}\r",
+                    "\r",
+                    "Ext.Msg.alert('Failure','Could not save to server,try again later',Ext.emptyFn);\r",
+                    ""
+                ]
+            },
+            "designerId": "f157240a-5de6-4a3c-8bee-d2c45a5ffe2d"
         }
     ]
 }

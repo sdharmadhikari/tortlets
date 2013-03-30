@@ -117,6 +117,10 @@ Ext.application({
         proxy = Tortoise.getProxy();
         proxy.setUrl('http://' + host + '/tortoises/json');
 
+        var Tortlet = Ext.ModelMgr.getModel('MyApp.model.Tortlet');
+        proxy = Tortlet.getProxy();
+        proxy.setUrl('http://' + host + '/tortlets/json');
+
 
 
 

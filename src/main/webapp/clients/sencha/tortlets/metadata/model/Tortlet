@@ -81,6 +81,47 @@
                 "foreignKey": "tortoise"
             },
             "designerId": "c87cc6c5-0936-4fb5-8b51-29e5175ba60d"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy3",
+                "designer|displayName": "TortletRestProxy",
+                "url": "http://dummy.url",
+                "appendId": false
+            },
+            "designerId": "e23ce123-2d53-4c17-ae20-1607b948c042",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader2"
+                    },
+                    "designerId": "2d06a988-2bb8-466a-98a9-7ac11fc362d0"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonWriter1"
+                    },
+                    "designerId": "b59474e0-24e3-4c22-8cbe-39e8fc68dad1"
+                }
+            ]
         }
     ]
 }
