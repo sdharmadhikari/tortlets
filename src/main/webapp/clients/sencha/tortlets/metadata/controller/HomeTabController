@@ -39,6 +39,7 @@
                     "var tortletDetails = this.getTortletDetails();\r",
                     "\r",
                     "var sourceStoreId = record.stores[0].getInitialConfig().storeId;\r",
+                    "var tortoise = record.get('tortoise');\r",
                     "\r",
                     "record.sourceStoreId=sourceStoreId;\r",
                     "tortletDetails.setRecord(record);\r",

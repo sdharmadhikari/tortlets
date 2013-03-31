@@ -282,7 +282,7 @@
                     "    newTortoise.set('id',MyApp.app.tempId);\r",
                     "    newTortoise.save(this.newTortoiseSave);\r",
                     "}else{\r",
-                    "    alert('old tor');\r",
+                    "    //alert('old tor');\r",
                     "    var record = tortoiseDetailsForm.getRecord();\r",
                     "    tortoiseDetailsForm.updateRecord(record);\r",
                     "    tortoiseId = record.get('id');\r",
@@ -678,7 +678,14 @@
                     "createdModel"
                 ],
                 "implHandler": [
-                    "alert('new tortoise saved');"
+                    "var utility = MyApp.app.getController('UtilityController');\r",
+                    "var dreamsTabController = MyApp.app.getController('DreamsTabController');\r",
+                    "var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();\r",
+                    "var dream = createdModel.get('dream');\r",
+                    "alert(dream.id);\r",
+                    "utility.loadTortoises(dreamId);\r",
+                    "dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'up'});\r",
+                    ""
                 ]
             },
             "designerId": "a97705c8-43c8-483e-b406-7cffd753d73f"
@@ -701,6 +708,26 @@
                 ]
             },
             "designerId": "74ce3c6d-ee9e-4e83-9953-03cbf898245b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTortoiseListStartDreamingButtonTap",
+                "fn": "onTortoiseListStartDreamingButtonTap",
+                "implHandler": [
+                    "var dreamDetails = this.getDreamDetails();\r",
+                    "this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type : 'slide', direction : 'right'});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button#mybutton2"
+            },
+            "designerId": "3d36555b-4ec9-4582-9c50-f2c67c87fa45"
         }
     ]
 }

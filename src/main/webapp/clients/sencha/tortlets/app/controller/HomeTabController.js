@@ -54,6 +54,7 @@ Ext.define('MyApp.controller.HomeTabController', {
         var tortletDetails = this.getTortletDetails();
 
         var sourceStoreId = record.stores[0].getInitialConfig().storeId;
+        var tortoise = record.get('tortoise');
 
         record.sourceStoreId=sourceStoreId;
         tortletDetails.setRecord(record);

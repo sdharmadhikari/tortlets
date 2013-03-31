@@ -54,6 +54,7 @@ Ext.define('MyApp.view.TortoiseListPanel', {
             {
                 xtype: 'button',
                 name: 'tortoiseListStartDreamingButton',
+                itemId: 'mybutton2',
                 ui: 'confirm',
                 text: 'Make It Happen! (Save)'
             }

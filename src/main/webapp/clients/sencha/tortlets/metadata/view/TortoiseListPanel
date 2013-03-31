@@ -97,6 +97,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "tortoiseListStartDreamingButton",
+                "itemId": "mybutton2",
                 "ui": "confirm",
                 "designer|userClassName": "MyButton4",
                 "text": "Make It Happen! (Save)"

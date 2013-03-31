@@ -25,7 +25,7 @@ Ext.define('MyApp.view.TortoiseList', {
         itemTpl: [
             '<div>{title}({latestTortoiseScore})</div>',
             '<br/>',
-            '.........<img src="images/tortoise_smaller.gif"></img>.............!'
+            '.........<img src="static/images/tortoise_smaller.gif"></img>.............!'
         ]
     }
 

@@ -82,6 +82,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
             },
             "button[name='tortoiseDeleteButton']": {
                 tap: 'onTortoiseDeleteButtonTap'
+            },
+            "button#mybutton2": {
+                tap: 'onTortoiseListStartDreamingButtonTap'
             }
         }
     },
@@ -213,7 +216,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
             newTortoise.set('id',MyApp.app.tempId);
             newTortoise.save(this.newTortoiseSave);
         }else{
-            alert('old tor');
+            //alert('old tor');
             var record = tortoiseDetailsForm.getRecord();
             tortoiseDetailsForm.updateRecord(record);
             tortoiseId = record.get('id');
@@ -277,6 +280,11 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     },
 
+    onTortoiseListStartDreamingButtonTap: function(button, e, eOpts) {
+        var dreamDetails = this.getDreamDetails();
+        this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type : 'slide', direction : 'right'});
+    },
+
     newDreamSave: function(createdModel) {
         var utility = MyApp.app.getController('UtilityController');
         var dreamsTabController = MyApp.app.getController('DreamsTabController');
@@ -302,7 +310,14 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     newTortoiseSave: function(createdModel) {
-        alert('new tortoise saved');
+        var utility = MyApp.app.getController('UtilityController');
+        var dreamsTabController = MyApp.app.getController('DreamsTabController');
+        var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();
+        var dream = createdModel.get('dream');
+        alert(dream.id);
+        utility.loadTortoises(dreamId);
+        dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'up'});
+
     },
 
     oldTortoiseSave: function(savedModel) {

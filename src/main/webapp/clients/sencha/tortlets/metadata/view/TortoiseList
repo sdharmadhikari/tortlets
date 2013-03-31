@@ -40,7 +40,7 @@
                 "implHandler": [
                     "<div>{title}({latestTortoiseScore})</div>\r",
                     "<br/>\r",
-                    ".........<img src=\"images/tortoise_smaller.gif\"></img>.............!"
+                    ".........<img src=\"static/images/tortoise_smaller.gif\"></img>.............!"
                 ],
                 "designer|displayName": "itemTpl"
             },

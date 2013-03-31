@@ -269,6 +269,12 @@
                 "app/model/Tuser.js"
             ],
             "className": "Tuser"
+        },
+        "bc9381e5-fa6a-401c-a12f-d87047f599b7": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
         }
     },
     "viewOrderMap": {
@@ -312,7 +318,8 @@
             "d972eca9-cfd7-429d-8792-8238d5fc4127"
         ],
         "resource": [
-            "8d109db3-8fac-4b27-8512-92766b4975f8"
+            "8d109db3-8fac-4b27-8512-92766b4975f8",
+            "bc9381e5-fa6a-401c-a12f-d87047f599b7"
         ],
         "app": [
             "application"

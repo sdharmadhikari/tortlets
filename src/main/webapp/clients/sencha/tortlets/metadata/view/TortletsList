@@ -39,7 +39,9 @@
             "userConfig": {
                 "designer|userClassName": "itemTpl",
                 "implHandler": [
-                    "<div>{title}</div>"
+                    "{title}\r",
+                    "<br/>\r",
+                    "<span class=\"smallFont\">Dream: {tortoise.dream.title}</span>"
                 ],
                 "designer|displayName": "itemTpl"
             },
