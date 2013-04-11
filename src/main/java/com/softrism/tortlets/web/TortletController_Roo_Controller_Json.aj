@@ -57,7 +57,6 @@ privileged aspect TortletController_Roo_Controller_Json {
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
-
     
     @RequestMapping(value = "/jsonArray", method = RequestMethod.PUT, headers = "Accept=application/json")
     public ResponseEntity<String> TortletController.updateFromJsonArray(@RequestBody String json) {

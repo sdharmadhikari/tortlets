@@ -38,8 +38,7 @@
                     "\r",
                     "var tortletDetails = this.getTortletDetails();\r",
                     "\r",
-                    "var sourceStoreId = record.stores[0].getInitialConfig().storeId;\r",
-                    "var tortoise = record.get('tortoise');\r",
+                    "var sourceStoreId = 'incompleteTortletsStore';\r",
                     "\r",
                     "record.sourceStoreId=sourceStoreId;\r",
                     "tortletDetails.setRecord(record);\r",
@@ -108,22 +107,23 @@
                     "var record = tortletDetailsForm.getRecord();\r",
                     "\r",
                     "tortletDetailsForm.updateRecord(record);\r",
-                    "operation = new Object();\r",
+                    "operation = {};\r",
                     "operation.success = this.oldTortletSaveSuccess;\r",
                     "operation.failure = this.oldTortletSaveFailure;\r",
                     "\r",
                     "if(record.dirty){\r",
+                    "\r",
                     "    if(record.get('completed') === true){\r",
-                    "     \r",
-                    "       eitherOneStore = Ext.getStore(record.sourceStoreId)\r",
-                    "       eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);\r",
-                    "       eitherOneStore.remove(record); \r",
-                    "        \r",
+                    "\t\t\r",
+                    "        eitherOneStore = Ext.getStore(record.sourceStoreId);\r",
+                    "        eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);\r",
+                    "        alert(eitherOneStore.removedRecordIndex); \r",
+                    "        eitherOneStore.remove(record); \r",
+                    "\r",
                     "    }\r",
                     "\r",
-                    "\trecord.save(operation);\r",
+                    "    record.save(operation);\r",
                     "}\r",
-                    "\r",
                     "\r",
                     "this.getHomeTabCardPanel().\r",
                     "animateActiveItem(0,{type : 'slide', direction : 'right'});"
@@ -167,12 +167,11 @@
                     "var curr_month = d.getMonth() + 1; //Months are zero based\r",
                     "var curr_year = d.getFullYear();\r",
                     "var today = (curr_month  + \"/\" + curr_date + \"/\" + curr_year);\r",
-                    "//alert(today);\r",
+                    "\r",
                     "todayUrl = url + '&createdOn=' + today;\r",
                     "store.getProxy().setUrl(todayUrl);\r",
                     "store.load();\r",
                     "store.getProxy().setUrl(url);\r",
-                    "//this.getTortletsList().hide({type : 'fadeIn'});\r",
                     "this.getTodayTortletsList().show();\r",
                     ""
                 ],
@@ -249,13 +248,15 @@
                 "implHandler": [
                     "var tortletDetails = this.getTortletDetails();\r",
                     "\r",
+                    "record.sourceStoreId = 'todaysTortletsStore';\r",
+                    "//alert(record.sourceStoreId);\r",
                     "tortletDetails.setRecord(record);\r",
                     "\r",
                     "this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "TodaysTortletList",
-                "designer|controlQuery": "list"
+                "designer|controlQuery": "todayTortletsList"
             },
             "designerId": "1ce0bcec-8d05-4364-a30f-32ea05e4a5cf"
         },
@@ -275,12 +276,12 @@
                 ],
                 "implHandler": [
                     "\r",
-                    "var store = Ext.getStore(entityTried.sourceStoreId);\r",
+                    "var store = Ext.getStore(savedEntity.sourceStoreId);\r",
                     "store.removedIndexRecord='';\r",
                     "\r",
                     "console.log('oldTortletSaveSuccesful');\r",
                     "\r",
-                    "    "
+                    ""
                 ]
             },
             "designerId": "61674fa9-8c24-4279-a731-077a56c41904"
@@ -301,8 +302,9 @@
                 ],
                 "implHandler": [
                     "\r",
+                    "var store = Ext.getStore(entityTried.sourceStoreId);\r",
                     "if(store.removedRecordIndex !== ''){\r",
-                    "    var store = Ext.getStore(entityTried.sourceStoreId);\r",
+                    "\r",
                     "    store.insert(store.removedRecordIndex, entityTried);\r",
                     "    store.removedRecordIndex='';\r",
                     "}\r",

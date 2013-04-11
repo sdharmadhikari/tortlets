@@ -43,7 +43,7 @@ Ext.define('MyApp.controller.HomeTabController', {
             "button[name='showPendingListButton']": {
                 tap: 'onShowPendingListButtonTap'
             },
-            "list": {
+            "todayTortletsList": {
                 itemtap: 'onTodaysTortletsListItemTap'
             }
         }
@@ -53,8 +53,7 @@ Ext.define('MyApp.controller.HomeTabController', {
 
         var tortletDetails = this.getTortletDetails();
 
-        var sourceStoreId = record.stores[0].getInitialConfig().storeId;
-        var tortoise = record.get('tortoise');
+        var sourceStoreId = 'incompleteTortletsStore';
 
         record.sourceStoreId=sourceStoreId;
         tortletDetails.setRecord(record);
@@ -78,22 +77,23 @@ Ext.define('MyApp.controller.HomeTabController', {
         var record = tortletDetailsForm.getRecord();
 
         tortletDetailsForm.updateRecord(record);
-        operation = new Object();
+        operation = {};
         operation.success = this.oldTortletSaveSuccess;
         operation.failure = this.oldTortletSaveFailure;
 
         if(record.dirty){
+
             if(record.get('completed') === true){
 
-                eitherOneStore = Ext.getStore(record.sourceStoreId)
+                eitherOneStore = Ext.getStore(record.sourceStoreId);
                 eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);
+                alert(eitherOneStore.removedRecordIndex); 
                 eitherOneStore.remove(record); 
 
             }
 
             record.save(operation);
         }
-
 
         this.getHomeTabCardPanel().
         animateActiveItem(0,{type : 'slide', direction : 'right'});
@@ -108,12 +108,11 @@ Ext.define('MyApp.controller.HomeTabController', {
         var curr_month = d.getMonth() + 1; //Months are zero based
         var curr_year = d.getFullYear();
         var today = (curr_month  + "/" + curr_date + "/" + curr_year);
-        //alert(today);
+
         todayUrl = url + '&createdOn=' + today;
         store.getProxy().setUrl(todayUrl);
         store.load();
         store.getProxy().setUrl(url);
-        //this.getTortletsList().hide({type : 'fadeIn'});
         this.getTodayTortletsList().show();
 
     },
@@ -132,6 +131,8 @@ Ext.define('MyApp.controller.HomeTabController', {
     onTodaysTortletsListItemTap: function(dataview, index, target, record, e, eOpts) {
         var tortletDetails = this.getTortletDetails();
 
+        record.sourceStoreId = 'todaysTortletsStore';
+        //alert(record.sourceStoreId);
         tortletDetails.setRecord(record);
 
         this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});
@@ -139,7 +140,7 @@ Ext.define('MyApp.controller.HomeTabController', {
 
     oldTortletSaveSuccess: function(savedEntity, operation) {
 
-        var store = Ext.getStore(entityTried.sourceStoreId);
+        var store = Ext.getStore(savedEntity.sourceStoreId);
         store.removedIndexRecord='';
 
         console.log('oldTortletSaveSuccesful');
@@ -149,8 +150,9 @@ Ext.define('MyApp.controller.HomeTabController', {
 
     oldTortletSaveFailure: function(entityTried, operation) {
 
+        var store = Ext.getStore(entityTried.sourceStoreId);
         if(store.removedRecordIndex !== ''){
-            var store = Ext.getStore(entityTried.sourceStoreId);
+
             store.insert(store.removedRecordIndex, entityTried);
             store.removedRecordIndex='';
         }

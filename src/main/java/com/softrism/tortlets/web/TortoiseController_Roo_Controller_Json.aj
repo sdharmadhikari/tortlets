@@ -37,7 +37,6 @@ privileged aspect TortoiseController_Roo_Controller_Json {
         List<Tortoise> result = Tortoise.findAllTortoises();
         return new ResponseEntity<String>(Tortoise.toJsonArray(result), headers, HttpStatus.OK);
     }
-
     
     @RequestMapping(value = "/jsonArray", method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> TortoiseController.createFromJsonArray(@RequestBody String json) {
@@ -48,7 +47,7 @@ privileged aspect TortoiseController_Roo_Controller_Json {
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
-
+    
     @RequestMapping(value = "/jsonArray", method = RequestMethod.PUT, headers = "Accept=application/json")
     public ResponseEntity<String> TortoiseController.updateFromJsonArray(@RequestBody String json) {
         HttpHeaders headers = new HttpHeaders();
