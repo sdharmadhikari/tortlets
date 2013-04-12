@@ -20,6 +20,7 @@ Ext.define('MyApp.view.TodaysTortletList', {
     config: {
         ui: 'round',
         emptyText: 'Great ! You are done for today !',
+        scrollToTopOnRefresh: false,
         store: 'todaysTortletsStore',
         onItemDisclosure: true,
         itemTpl: [

@@ -13,6 +13,7 @@
         "designer|userAlias": "todayTortletsList",
         "designer|displayName": "TortletsList",
         "emptyText": "Great ! You are done for today !",
+        "scrollToTopOnRefresh": false,
         "store": "todaysTortletsStore",
         "onItemDisclosure": true
     },

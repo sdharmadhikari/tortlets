@@ -6,14 +6,21 @@
     },
     "codeClass": null,
     "userConfig": {
+        "scrollToTopOnRefresh": "true",
         "designer|userClassName": "TortoiseDetails",
-        "designer|userAlias": "tortoiseDetails"
+        "designer|userAlias": "tortoiseDetails",
+        "scrollable": "vertical"
     },
     "designerId": "dca854bb-a33a-4137-aef2-90d43399589d",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
             "name": "newStatus",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "scrollToTopOnRefresh",
             "type": "string"
         }
     ],

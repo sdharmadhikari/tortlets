@@ -20,6 +20,7 @@ Ext.define('MyApp.view.DreamList', {
     config: {
         ui: 'round',
         emptyText: '',
+        scrollToTopOnRefresh: false,
         store: 'dreamsStore',
         onItemDisclosure: true,
         itemTpl: [

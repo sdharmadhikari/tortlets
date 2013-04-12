@@ -157,6 +157,7 @@
                 "fn": "onTortoiseListPanelBackButtonTap",
                 "implHandler": [
                     "var dreamDetails = this.getDreamDetails();\r",
+                    "dreamDetails.getScrollable().getScroller().scrollToTop();\r",
                     "this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type : 'slide', direction : 'right'});"
                 ],
                 "name": "tap",
@@ -186,6 +187,7 @@
                     "var tortoiseDeleteButton =\r",
                     "this.getTortoiseDeleteButton();\r",
                     "tortoiseDeleteButton.show();\r",
+                    "tortoiseDetailsForm.getScrollable().getScroller().scrollToTop();\r",
                     "this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});"
                 ],
                 "name": "itemtap",
@@ -228,13 +230,13 @@
                     "var dreamListCardPanel = this.getDreamListCardPanel();\r",
                     "var tortoiseDetails = this.getTortoiseDetails();\r",
                     "var dreamDetailsForm = this.getDreamDetails();\r",
-                    "var oldDream = dreamDetailsForm.getRecord();\r",
-                    "dreamDetailsForm.updateRecord(oldDream);\r",
-                    "var newTortoise = Ext.create('MyApp.model.Tortoise');\r",
-                    "newTortoise.setDream(oldDream);\r",
+                    "var dream = dreamDetailsForm.getRecord();\r",
+                    "//dreamDetailsForm.updateRecord(oldDream);\r",
+                    "var newTortoise = Ext.create('MyApp.model.Tortoise', { });\r",
+                    "newTortoise.set('dream', dream.get('id'));\r",
+                    "newTortoise.set('title', '');// Otherwise it uses title of old tortoise ! strange\r",
                     "tortoiseDetails.setRecord(newTortoise);\r",
                     "tortoiseDetails.newStatus='true';\r",
-                    "\r",
                     "var tortoiseDeleteButton = \r",
                     "this.getTortoiseDeleteButton();\r",
                     "tortoiseDeleteButton.hide();\r",
@@ -430,6 +432,7 @@
                     "mainTabPanel.setActiveItem(1);\r",
                     "var deleteButton = this.getDreamDeleteButton(); //Ext.ComponentQuery.query(\"button[name='dreamDeleteButton']\");\r",
                     "deleteButton.hide();\r",
+                    "dreamForm.getScrollable().getScroller().scrollToTop();\r",
                     "this.getDreamListCardPanel().animateActiveItem(dreamForm, { type: 'slide'});\r",
                     ""
                 ],
@@ -566,10 +569,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseDetailsBackToDreamButtonTap",
-                "fn": "onTortoiseDetailsBackToDreamButtonTap",
+                "designer|userClassName": "onTortoiseDetailsBackHorizontalButtonTap",
+                "fn": "onTortoiseDetailsBackHorizontalButtonTap",
                 "implHandler": [
-                    ""
+                    "var tortoiseListPanel = this.getTortoiseListPanel();\r",
+                    "var slideConfig =  { type : 'slide', direction : 'right'}; \r",
+                    "this.getDreamListCardPanel().animateActiveItem(tortoiseListPanel,slideConfig);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -628,6 +633,8 @@
                     "var dreamsTabController = MyApp.app.getController('DreamsTabController');\r",
                     "var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();\r",
                     "var dreamId = createdModel.get('id');\r",
+                    "var dreamDetailsForm = dreamsTabController.getDreamDetails();\r",
+                    "dreamDetailsForm.setRecord(createdModel);\r",
                     "var dreamsStore = Ext.getStore('dreamsStore');\r",
                     "dreamsStore.load();\r",
                     "utility.loadTortoises(dreamId);\r",
@@ -682,7 +689,7 @@
                     "var dreamsTabController = MyApp.app.getController('DreamsTabController');\r",
                     "var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();\r",
                     "var dream = createdModel.get('dream');\r",
-                    "alert(dream.id);\r",
+                    "dreamId = dream.id;\r",
                     "utility.loadTortoises(dreamId);\r",
                     "dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'up'});\r",
                     ""
@@ -704,7 +711,14 @@
                     "savedModel"
                 ],
                 "implHandler": [
-                    "alert('saved old tortoise..');"
+                    "var utility = MyApp.app.getController('UtilityController');\r",
+                    "var dreamsTabController = MyApp.app.getController('DreamsTabController');\r",
+                    "var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();\r",
+                    "var dream = savedModel.get('dream');\r",
+                    "dreamId = dream.id;\r",
+                    "utility.loadTortoises(dreamId);\r",
+                    "dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'up'});\r",
+                    ""
                 ]
             },
             "designerId": "74ce3c6d-ee9e-4e83-9953-03cbf898245b"

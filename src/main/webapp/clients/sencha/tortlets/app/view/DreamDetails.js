@@ -18,6 +18,8 @@ Ext.define('MyApp.view.DreamDetails', {
     alias: 'widget.dreamDetails',
 
     config: {
+        scrollToTopOnRefresh: 'true',
+        scrollable: 'vertical',
         items: [
             {
                 xtype: 'titlebar',

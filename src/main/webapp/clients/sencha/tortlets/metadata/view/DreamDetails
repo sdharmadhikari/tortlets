@@ -6,14 +6,21 @@
     },
     "codeClass": null,
     "userConfig": {
+        "scrollToTopOnRefresh": "true",
         "designer|userClassName": "DreamDetails",
-        "designer|userAlias": "dreamDetails"
+        "designer|userAlias": "dreamDetails",
+        "scrollable": "vertical"
     },
     "designerId": "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
             "name": "newStatus",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "scrollToTopOnRefresh",
             "type": "string"
         }
     ],

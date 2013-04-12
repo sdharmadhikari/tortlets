@@ -18,6 +18,8 @@ Ext.define('MyApp.view.TortoiseDetails', {
     alias: 'widget.tortoiseDetails',
 
     config: {
+        scrollToTopOnRefresh: 'true',
+        scrollable: 'vertical',
         items: [
             {
                 xtype: 'titlebar',
