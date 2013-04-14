@@ -23,7 +23,6 @@ Ext.define('MyApp.model.Dream', {
     config: {
         fields: [
             {
-                allowNull: false,
                 name: 'title',
                 type: 'string'
             },
@@ -63,6 +62,9 @@ Ext.define('MyApp.model.Dream', {
         proxy: {
             type: 'rest',
             url: 'http://dummy.url',
+            headers: {
+                Accept: 'application/json'
+            },
             appendId: false,
             writer: {
                 type: 'json'
@@ -74,6 +76,12 @@ Ext.define('MyApp.model.Dream', {
         belongsTo: {
             model: 'MyApp.model.Tuser',
             foreignKey: 'tuser'
-        }
+        },
+        validations: [
+            {
+                type: 'presence',
+                field: 'title'
+            }
+        ]
     }
 });

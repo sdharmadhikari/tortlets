@@ -25,7 +25,9 @@
                 "designer|userClassName": "MyRestProxy",
                 "enablePagingParams": false,
                 "url": "http://dummy.url",
-                "headers": null,
+                "headers": [
+                    "{ 'Accept' : 'application/json'}"
+                ],
                 "appendId": false
             },
             "configAlternates": {

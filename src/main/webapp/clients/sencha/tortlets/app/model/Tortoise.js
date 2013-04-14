@@ -90,7 +90,16 @@ Ext.define('MyApp.model.Tortoise', {
         proxy: {
             type: 'rest',
             url: 'http://dummy.url',
+            headers: {
+                Accept: 'application/json'
+            },
             appendId: false
-        }
+        },
+        validations: [
+            {
+                type: 'presence',
+                field: 'title'
+            }
+        ]
     }
 });

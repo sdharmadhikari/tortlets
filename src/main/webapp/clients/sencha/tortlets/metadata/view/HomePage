@@ -69,6 +69,7 @@
                     "userConfig": {
                         "name": "homePageDreamButton",
                         "layout|flex": 1,
+                        "ui": "action",
                         "designer|userClassName": "MyButton",
                         "text": "Go"
                     },
@@ -109,6 +110,7 @@
                     "userConfig": {
                         "container|align": "center",
                         "container|pack": "center",
+                        "docked": "bottom",
                         "designer|userClassName": "MySegmentedButton",
                         "designer|displayName": "Today+Pending+Tortlets"
                     },
@@ -124,6 +126,7 @@
                             "userConfig": {
                                 "name": "showTodayListButton",
                                 "pressed": true,
+                                "ui": "action",
                                 "designer|userClassName": "MyButton1",
                                 "designer|displayName": "TodayTortlets",
                                 "text": "Today"
@@ -146,6 +149,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "name": "showPendingListButton",
+                                "ui": "action",
                                 "designer|userClassName": "MyButton2",
                                 "designer|displayName": "PendingTortlets",
                                 "text": "Pending"

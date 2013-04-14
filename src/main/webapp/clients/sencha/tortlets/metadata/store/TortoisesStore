@@ -21,7 +21,10 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyAjaxProxy",
-                "url": "http://dummy.url"
+                "url": "http://dummy.url",
+                "headers": [
+                    "{ 'Accept' : 'application/json'}"
+                ]
             },
             "designerId": "57e26ae2-f3b5-4ce4-ac0e-00651a04cc35",
             "cn": [

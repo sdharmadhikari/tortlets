@@ -94,7 +94,7 @@ Ext.application({
         //incompleteTortletsStore
         var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');
         proxy = incompleteTortletsStore.getProxy();
-        proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCompleted&userid=' +userid);
+        proxy.setUrl('http://' + host + '/tortlets?find=ByUseridEqualsAndCompleted&userid=' +userid);
 
         //dreamsStore
         var dreamsStore = Ext.getStore('dreamsStore');

@@ -27,6 +27,9 @@ Ext.define('MyApp.store.DreamsStore', {
         proxy: {
             type: 'rest',
             url: 'http://dummy.url',
+            headers: {
+                Accept: 'application/json'
+            },
             reader: {
                 type: 'json'
             }

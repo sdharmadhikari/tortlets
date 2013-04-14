@@ -239,6 +239,9 @@
                 "designer|userClassName": "MyRestProxy4",
                 "designer|displayName": "TortoiseRestProxy",
                 "url": "http://dummy.url",
+                "headers": [
+                    "{'Accept' : 'application/json'}"
+                ],
                 "appendId": false
             },
             "designerId": "41e5c79d-8c5c-44c1-99e6-0bc45b21c491"
@@ -269,6 +272,20 @@
                 "designer|userClassName": "field36"
             },
             "designerId": "f163d932-cf25-4ea1-acff-e193de438b09"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPresenceValidation1",
+                "designer|displayName": "titlePresence",
+                "field": "title"
+            },
+            "designerId": "d0eac0fd-2b43-4a77-a051-745abf69b06b"
         }
     ]
 }

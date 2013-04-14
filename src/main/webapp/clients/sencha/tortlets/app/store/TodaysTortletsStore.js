@@ -28,6 +28,9 @@ Ext.define('MyApp.store.TodaysTortletsStore', {
             type: 'rest',
             enablePagingParams: false,
             url: 'http://dummy.url',
+            headers: {
+                Accept: 'application/json'
+            },
             appendId: false,
             reader: {
                 type: 'json'

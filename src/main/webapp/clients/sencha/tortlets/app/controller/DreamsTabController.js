@@ -94,6 +94,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         dreamDetails.newStatus = 'false';
         dreamDetails.setRecord(record);
         this.getDreamDeleteButton().show();
+        dreamDetails.getScrollable().getScroller().scrollToTop();
         this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type: 'slide'} );
 
     },
@@ -113,21 +114,27 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var caller = MyApp.app.getController('DreamsTabController');
         var tempDreamId = MyApp.app.tempId;
 
-        if(newStatus === 'true'){
-            var newDream = dreamDetailsForm.getRecord();
-            dreamDetailsForm.updateRecord(newDream);
-            newDream.set('userid', userid);
-            newDream.setTuser(currentUser.getData());
+        var newOrOldDream = dreamDetailsForm.getRecord();
+        dreamDetailsForm.updateRecord(newOrOldDream);
+        var errors = newOrOldDream.validate();
+
+        if (!errors.isValid()) {
+            Ext.Msg.alert('Enter all mandatory fields', '', Ext.emptyFn);
+            newOrOldDream.reject();
+            return;
+        }
+
+        if(newStatus === 'true'){ 
+            newOrOldDream.set('userid', userid);
+            newOrOldDream.setTuser(currentUser.getData());
             /* IF u dont do this, id will be posted to server as 
             ext-record-<number>. That will result into exception */
-            newDream.set('id',MyApp.app.tempId);
-            newDream.save(this.newDreamSave);
+            newOrOldDream.set('id',MyApp.app.tempId);
+            newOrOldDream.save(this.newDreamSave);
         }else{
-            var record = dreamDetailsForm.getRecord();
-            dreamDetailsForm.updateRecord(record);
-            dreamId = record.get('id');
-            if(record.dirty === true){
-                record.save(this.oldDreamSave);
+            dreamId = newOrOldDream.get('id');
+            if(newOrOldDream.dirty === true){
+                newOrOldDream.save(this.oldDreamSave);
             }else{
                 utility.loadTortoises(dreamId);
                 caller.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});
@@ -195,6 +202,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var tortoiseDetailsBackToListButton 
         = this.getTortoiseDetailsBackToListButton();
         tortoiseDetailsBackToListButton.show();
+        tortoiseDetails.getScrollable().getScroller().scrollToTop();
         dreamListCardPanel.animateActiveItem(tortoiseDetails, { type : 'slide', direction : 'down'});
     },
 
@@ -209,23 +217,27 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var utility = MyApp.app.getController('UtilityController');
         var caller = MyApp.app.getController('DreamsTabController');
         var tempDreamId = MyApp.app.tempId;
-        if(newStatus === 'true'){
-            var newTortoise = tortoiseDetailsForm.getRecord();
-            tortoiseDetailsForm.updateRecord(newTortoise);
-            newTortoise.set('userid', userid);
-            //alert(newTortoise.getDream().getData());
-            newTortoise.setDream(newTortoise.getDream().getData());
-            newTortoise.set('id',MyApp.app.tempId);
-            newTortoise.save(this.newTortoiseSave);
+
+        var newOrOldTortoise = tortoiseDetailsForm.getRecord();
+        tortoiseDetailsForm.updateRecord(newOrOldTortoise);
+        var errors = newOrOldTortoise.validate();
+        if (!errors.isValid()) {
+            Ext.Msg.alert('Enter all mandatory fields', '', Ext.emptyFn);
+            newOrOldTortoise.reject();
+            return;
+        }
+
+        if(newStatus === 'true'){    
+            newOrOldTortoise.set('userid', userid);
+            newOrOldTortoise.setDream(newOrOldTortoise.getDream().getData());
+            newOrOldTortoise.set('id',MyApp.app.tempId);
+            newOrOldTortoise.save(this.newTortoiseSave);
         }else{
-            //alert('old tor');
-            var record = tortoiseDetailsForm.getRecord();
-            tortoiseDetailsForm.updateRecord(record);
-            tortoiseId = record.get('id');
-            if(record.dirty === true){
-                record.save(this.oldTortoiseSave);
+            tortoiseId = newOrOldTortoise.get('id');
+            if(newOrOldTortoise.dirty === true){
+                newOrOldTortoise.save(this.oldTortoiseSave);
             }else{
-                dreamId = record.getDream().get('id');
+                dreamId = newOrOldTortoise.getDream().get('id');
                 utility.loadTortoises(dreamId);
                 caller.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});
             }

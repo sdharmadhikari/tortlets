@@ -101,7 +101,7 @@
                     "//incompleteTortletsStore\r",
                     "var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');\r",
                     "proxy = incompleteTortletsStore.getProxy();\r",
-                    "proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCompleted&userid=' +userid);\r",
+                    "proxy.setUrl('http://' + host + '/tortlets?find=ByUseridEqualsAndCompleted&userid=' +userid);\r",
                     "\r",
                     "//dreamsStore\r",
                     "var dreamsStore = Ext.getStore('dreamsStore');\r",

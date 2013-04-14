@@ -22,7 +22,10 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyRestProxy2",
-                "url": "http://dummy.url"
+                "url": "http://dummy.url",
+                "headers": [
+                    "{ 'Accept' : 'application/json'}"
+                ]
             },
             "designerId": "e4c9535a-9efa-443c-a0bb-08593f57296e",
             "cn": [

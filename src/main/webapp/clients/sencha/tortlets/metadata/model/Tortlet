@@ -93,6 +93,9 @@
                 "designer|userClassName": "MyRestProxy3",
                 "designer|displayName": "TortletRestProxy",
                 "url": "http://dummy.url",
+                "headers": [
+                    "{ 'Accept' : 'application/json'}"
+                ],
                 "appendId": false
             },
             "designerId": "e23ce123-2d53-4c17-ae20-1607b948c042",

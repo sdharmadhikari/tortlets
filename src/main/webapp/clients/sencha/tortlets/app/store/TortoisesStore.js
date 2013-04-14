@@ -26,6 +26,9 @@ Ext.define('MyApp.store.TortoisesStore', {
         proxy: {
             type: 'ajax',
             url: 'http://dummy.url',
+            headers: {
+                Accept: 'application/json'
+            },
             reader: {
                 type: 'json'
             }

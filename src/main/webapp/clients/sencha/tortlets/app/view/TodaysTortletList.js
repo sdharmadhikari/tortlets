@@ -24,7 +24,9 @@ Ext.define('MyApp.view.TodaysTortletList', {
         store: 'todaysTortletsStore',
         onItemDisclosure: true,
         itemTpl: [
-            '<div>Today - {title}</div>'
+            'Today - {title}',
+            '<br/>',
+            '<span class="smallFont">Dream: {tortoise.dream.title}</span>'
         ]
     }
 

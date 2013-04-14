@@ -29,6 +29,9 @@ Ext.define('MyApp.store.IncompleteTortletsStore', {
             type: 'rest',
             enablePagingParams: false,
             url: 'http://dummy.url',
+            headers: {
+                Accept: 'application/json'
+            },
             reader: {
                 type: 'json'
             }

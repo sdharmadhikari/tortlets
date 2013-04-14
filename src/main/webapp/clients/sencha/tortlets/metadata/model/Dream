@@ -19,7 +19,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "allowNull": false,
                 "name": "title",
                 "type": "string",
                 "designer|userClassName": "field"
@@ -136,6 +135,9 @@
                 "designer|userClassName": "MyRestProxy3",
                 "designer|displayName": "DreamRestProxy",
                 "url": "http://dummy.url",
+                "headers": [
+                    "{'Accept' : 'application/json'}"
+                ],
                 "appendId": false
             },
             "designerId": "220e74c7-5a7b-4762-b0b7-c75bb795347b",
@@ -195,6 +197,20 @@
                 "designer|userClassName": "field37"
             },
             "designerId": "edce9120-9a27-4a4b-b98c-563b44d6aa84"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPresenceValidation",
+                "designer|displayName": "titlePresenceValidation",
+                "field": "title"
+            },
+            "designerId": "e003d008-da74-438c-b623-570eeff7c8f8"
         }
     ]
 }

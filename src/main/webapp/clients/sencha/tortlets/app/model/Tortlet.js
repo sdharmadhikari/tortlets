@@ -47,6 +47,9 @@ Ext.define('MyApp.model.Tortlet', {
         proxy: {
             type: 'rest',
             url: 'http://dummy.url',
+            headers: {
+                Accept: 'application/json'
+            },
             appendId: false,
             reader: {
                 type: 'json'

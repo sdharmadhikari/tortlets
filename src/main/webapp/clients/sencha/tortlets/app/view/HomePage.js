@@ -51,6 +51,7 @@ Ext.define('MyApp.view.HomePage', {
                         xtype: 'button',
                         name: 'homePageDreamButton',
                         flex: 1,
+                        ui: 'action',
                         text: 'Go'
                     }
                 ]
@@ -65,6 +66,7 @@ Ext.define('MyApp.view.HomePage', {
                 items: [
                     {
                         xtype: 'segmentedbutton',
+                        docked: 'bottom',
                         layout: {
                             align: 'center',
                             pack: 'center',
@@ -75,11 +77,13 @@ Ext.define('MyApp.view.HomePage', {
                                 xtype: 'button',
                                 name: 'showTodayListButton',
                                 pressed: true,
+                                ui: 'action',
                                 text: 'Today'
                             },
                             {
                                 xtype: 'button',
                                 name: 'showPendingListButton',
+                                ui: 'action',
                                 text: 'Pending'
                             }
                         ]
