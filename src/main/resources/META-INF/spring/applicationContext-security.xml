@@ -30,7 +30,7 @@
         <beans:constructor-arg value="hasHeader('Accept','application/json')"/>
     </beans:bean>
 
-    <!--beans:bean id="jsonRequestMatcher" class="com.softrism.tortlets.web.CustomRequestmatcher">
+    <!--beans:bean id="jsonRequestMatcher" class="com.softrism.tortlets.web.SampleRequestmatcher">
     </beans:bean-->
     <!-- Configure Authentication mechanism ! -->
     <authentication-manager alias="authenticationManager">
