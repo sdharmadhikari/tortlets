@@ -27,7 +27,7 @@ public class SampleRequestmatcher implements RequestMatcher {
                 }
             }
         }
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        return false;
     }
 
         private String normalize(String value)
