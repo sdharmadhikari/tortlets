@@ -10,10 +10,10 @@
         "cacheBust": false,
         "buildShouldOverwriteIndex": true
     },
-    "xdsVersion": "2.2.0",
-    "xdsBuild": 908,
+    "xdsVersion": "2.2.1",
+    "xdsBuild": 951,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000499,
+    "upgradeVersion": 210000000500,
     "framework": "touch20",
     "topInstanceFileMap": {
         "424d6af0-4bed-488c-bf22-6b9993519c5f": {
