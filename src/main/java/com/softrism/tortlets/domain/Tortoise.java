@@ -79,4 +79,18 @@ public class Tortoise {
     private TortoiseDurationTypeEnum duration;
 
     private String userid;
+
+    @PrePersist
+    private void prePersist(){
+        Date now = new Date();
+        createdOn = now;
+        updatedOn = now;
+    }
+
+    @PreUpdate
+    private void preUpdate(){
+
+        Date now = new Date();
+        updatedOn = now;
+    }
 }

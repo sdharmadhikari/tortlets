@@ -115,16 +115,8 @@ public class TortletController {
         return "tortlets/list";
     }
     //////////////////////////////json////////////////////////////////////json////////////////////////////
-    @RequestMapping( params = "find=ByUseridEqualsAndCompleted", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> jsonFindTortletsByUseridEqualsAndCompleted(@RequestParam("userid") String userid, @RequestParam(value = "completed", required = false) Boolean completed) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Tortlet.toJsonArray(Tortlet.findTortletsByUseridEqualsAndCompleted(userid, completed == null ? Boolean.FALSE : completed).getResultList()), headers, HttpStatus.OK);
-    }
 
-
-    @RequestMapping( value = "/json", method = RequestMethod.PUT, headers = "Accept=application/json")
+    @RequestMapping( method = RequestMethod.PUT, headers = "Accept=application/json")
     public ResponseEntity<String> updateFromJson(@RequestBody String json) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
@@ -135,7 +127,7 @@ public class TortletController {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
 
-    @RequestMapping( value = "/json", params = "find=ByUseridEqualsAndCreatedOnEqualsAndCompleted", headers = "Accept=application/json")
+    @RequestMapping(params = "find=ByUseridEqualsAndCreatedOnEqualsAndCompleted", headers = "Accept=application/json")
     @ResponseBody
     public ResponseEntity<String> jsonFindTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted(@RequestParam("userid") String userid, @RequestParam("createdOn")  @DateTimeFormat(pattern = "MM/dd/yyyy") Date createdOn, @RequestParam(value = "completed", required = false) Boolean completed) {
 

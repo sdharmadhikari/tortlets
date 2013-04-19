@@ -84,36 +84,14 @@ public class DreamController {
     }
 
     ///---------json-----------------------json-----------------------json-----------------------json-----------------------json--------------
-    //Looks like only reason to override is value /json !!
 
-    @RequestMapping(value = "/json",params = "find=ByUseridEquals", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> jsonFindDreamsByUseridEquals(@RequestParam("userid") String userid) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Dream.toJsonArray(Dream.findDreamsByUseridEquals(userid).getResultList()), headers, HttpStatus.OK);
-    }
+        @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
+        public ResponseEntity<String> createFromJson(@RequestBody String json) {
+                HttpHeaders headers = new HttpHeaders();
+                headers.add("Content-Type", "application/json");
+                Dream dream = Dream.fromJsonToDream(json);
+                dream.persist();
 
-    @RequestMapping(value="/json" , method = RequestMethod.POST, headers = "Accept=application/json")
-    public ResponseEntity<String> createFromJson(@RequestBody String json) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json");
-        Dream dream = Dream.fromJsonToDream(json);
-        dream.persist();
-
-        return new ResponseEntity<String>(dream.toJson(),headers, HttpStatus.OK);
-    }
-
-
-
-    @RequestMapping(value = "/json", method = RequestMethod.PUT, headers = "Accept=application/json")
-    public ResponseEntity<String> updateFromJson(@RequestBody String json) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json");
-        Dream dream = Dream.fromJsonToDream(json);
-        if (dream.merge() == null) {
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<String>(headers, HttpStatus.OK);
-    }
+                return new ResponseEntity<String>(dream.toJson(),headers, HttpStatus.OK);
+            }
 }

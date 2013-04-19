@@ -87,7 +87,6 @@ Ext.define('MyApp.controller.HomeTabController', {
 
                 eitherOneStore = Ext.getStore(record.sourceStoreId);
                 eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);
-                alert(eitherOneStore.removedRecordIndex); 
                 eitherOneStore.remove(record); 
 
             }

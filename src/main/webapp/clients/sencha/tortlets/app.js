@@ -88,7 +88,7 @@ Ext.application({
         //todaysTortletsStore
         var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
         var proxy = todaysTortletsStore.getProxy();
-        proxy.setUrl('http://' + host + '/tortlets/json?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid + '&createdOn=' + today);
+        proxy.setUrl('http://' + host + '/tortlets?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid + '&createdOn=' + today);
         todaysTortletsStore.load();
 
         //incompleteTortletsStore
@@ -99,27 +99,27 @@ Ext.application({
         //dreamsStore
         var dreamsStore = Ext.getStore('dreamsStore');
         proxy = dreamsStore.getProxy();
-        proxy.setUrl('http://' + host + '/dreams/json?find=ByUseridEquals&userid=' +userid);
+        proxy.setUrl('http://' + host + '/dreams?find=ByUseridEquals&userid=' +userid);
         dreamsStore.load();
 
         //tortoisesStore
         var tortoisesStore = Ext.getStore('tortoisesStore');
         proxy = tortoisesStore.getProxy();
-        proxy.setUrl('http://' + host + '/tortoises/json?find=ByDreamAndUseridEquals&userid=' +userid);
+        proxy.setUrl('http://' + host + '/tortoises?find=ByDreamAndUseridEquals&userid=' +userid);
 
         ////////////////////////////////////////////////////
 
         var Dream = Ext.ModelMgr.getModel('MyApp.model.Dream');
         proxy = Dream.getProxy();
-        proxy.setUrl('http://' + host + '/dreams/json');
+        proxy.setUrl('http://' + host + '/dreams');
 
         var Tortoise = Ext.ModelMgr.getModel('MyApp.model.Tortoise');
         proxy = Tortoise.getProxy();
-        proxy.setUrl('http://' + host + '/tortoises/json');
+        proxy.setUrl('http://' + host + '/tortoises');
 
         var Tortlet = Ext.ModelMgr.getModel('MyApp.model.Tortlet');
         proxy = Tortlet.getProxy();
-        proxy.setUrl('http://' + host + '/tortlets/json');
+        proxy.setUrl('http://' + host + '/tortlets');
 
 
 

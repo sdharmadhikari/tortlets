@@ -99,45 +99,14 @@ public class TortoiseController {
 
     ///////json///////////////////////////json///////////////////////////json//////////////////////////
 
-    @RequestMapping(value = "/json", params = "find=ByUseridEquals", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> jsonFindTortoisesByUseridEquals(@RequestParam("userid") String userid) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Tortoise.toJsonArray(Tortoise.findTortoisesByUseridEquals(userid).getResultList()), headers, HttpStatus.OK);
-    }
-
-    @RequestMapping(value= "/json", params = "find=ByDreamAndUseridEquals", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> jsonFindTortoisesByDreamAndUseridEquals(@RequestParam("dream") Dream dream, @RequestParam("userid") String userid) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Tortoise.toJsonArray(Tortoise.findTortoisesByDreamAndUseridEquals(dream, userid).getResultList()), headers, HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/json",method = RequestMethod.POST, headers = "Accept=application/json")
+    @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> createFromJson(@RequestBody String json) {
         Tortoise tortoise = Tortoise.fromJsonToTortoise(json);
         Dream dream = tortoise.getDream();
-        dream = Dream.findDream(dream.getId());
-        tortoise.setDream(dream);
-        tortoise.setCreatedOn(new Date());
         tortoise.persist();
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(tortoise.toJson(),headers, HttpStatus.OK);
-    }
-
-
-    @RequestMapping(value = "/json", method = RequestMethod.PUT, headers = "Accept=application/json")
-    public ResponseEntity<String> updateFromJson(@RequestBody String json) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json");
-        Tortoise tortoise = Tortoise.fromJsonToTortoise(json);
-        if (tortoise.merge() == null) {
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
 
 

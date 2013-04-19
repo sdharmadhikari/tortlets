@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect DreamController_Roo_Controller_Json {
@@ -48,6 +49,17 @@ privileged aspect DreamController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
     
+    @RequestMapping(method = RequestMethod.PUT, headers = "Accept=application/json")
+    public ResponseEntity<String> DreamController.updateFromJson(@RequestBody String json) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+        Dream dream = Dream.fromJsonToDream(json);
+        if (dream.merge() == null) {
+            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<String>(headers, HttpStatus.OK);
+    }
+    
     @RequestMapping(value = "/jsonArray", method = RequestMethod.PUT, headers = "Accept=application/json")
     public ResponseEntity<String> DreamController.updateFromJsonArray(@RequestBody String json) {
         HttpHeaders headers = new HttpHeaders();
@@ -70,6 +82,14 @@ privileged aspect DreamController_Roo_Controller_Json {
         }
         dream.remove();
         return new ResponseEntity<String>(headers, HttpStatus.OK);
+    }
+    
+    @RequestMapping(params = "find=ByUseridEquals", headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String> DreamController.jsonFindDreamsByUseridEquals(@RequestParam("userid") String userid) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        return new ResponseEntity<String>(Dream.toJsonArray(Dream.findDreamsByUseridEquals(userid).getResultList()), headers, HttpStatus.OK);
     }
     
 }

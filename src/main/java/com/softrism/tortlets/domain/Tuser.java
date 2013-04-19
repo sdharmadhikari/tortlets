@@ -84,6 +84,21 @@ public class Tuser {
     @Enumerated(EnumType.STRING)
     private TuserTimezoneEnum timezone;
 
+    @PrePersist
+    private void prePersist(){
+
+        Date now = new Date();
+        createdOn = now;
+        updatedON = now;
+
+    }
+
+    @PreUpdate
+    private void preUpdate(){
+        Date now = new Date();
+        updatedON = now;
+    }
+
     @Transactional
     public static com.softrism.tortlets.domain.Tuser generateTortlets(String userid) {
         Tuser tuser = Tuser.findTusersByUseridEquals(userid).getResultList().get(0);
