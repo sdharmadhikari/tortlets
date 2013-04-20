@@ -275,6 +275,12 @@
                 "metadata/resource/css"
             ],
             "className": "css"
+        },
+        "5197d1d2-b9ae-4186-8349-752497e93cb4": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
         }
     },
     "viewOrderMap": {
@@ -319,7 +325,8 @@
         ],
         "resource": [
             "8d109db3-8fac-4b27-8512-92766b4975f8",
-            "bc9381e5-fa6a-401c-a12f-d87047f599b7"
+            "bc9381e5-fa6a-401c-a12f-d87047f599b7",
+            "5197d1d2-b9ae-4186-8349-752497e93cb4"
         ],
         "app": [
             "application"

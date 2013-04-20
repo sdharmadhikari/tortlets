@@ -2,7 +2,7 @@
     "expandedState": {
         "data": true,
         "model": true,
-        "component": true,
+        "component": false,
         "controller": true,
         "resource": true,
         "424d6af0-4bed-488c-bf22-6b9993519c5f": {
@@ -440,6 +440,7 @@
         },
         "15eb7579-b7e5-4a31-96e4-4dd8481e7568": {
             "id": "15eb7579-b7e5-4a31-96e4-4dd8481e7568",
+            "expanded": false,
             "cn": [
                 {
                     "id": "ce9b222a-0e3e-438f-9bb9-23f8d08eb0ee",
@@ -674,7 +675,6 @@
         },
         "f349d5fa-f50b-405e-b80f-e46f09bf9967": {
             "id": "f349d5fa-f50b-405e-b80f-e46f09bf9967",
-            "expanded": false,
             "cn": [
                 {
                     "id": "345e27f2-eaae-4385-ab6f-bee6c0fa579f"
@@ -844,31 +844,25 @@
         },
         "bc9381e5-fa6a-401c-a12f-d87047f599b7": {
             "id": "bc9381e5-fa6a-401c-a12f-d87047f599b7"
+        },
+        "5197d1d2-b9ae-4186-8349-752497e93cb4": {
+            "id": "5197d1d2-b9ae-4186-8349-752497e93cb4"
         }
     },
     "tabState": {
         "openTabs": [
-            "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
-            "6224bddc-b988-416c-beca-b6c25b31ac1d",
-            "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
-            "8162b955-c1db-4f2f-bcaa-753970ca90eb",
-            "15eb7579-b7e5-4a31-96e4-4dd8481e7568",
-            "345107d0-a788-4507-9220-261ec811d61a",
-            "application",
-            "2a7e2b19-f954-4c5d-a553-29c3ae040071",
-            "6ae46be0-527b-4709-b96e-84eb3fb55148",
-            "98103327-6270-4ea5-9055-efe31b2727a6"
+            "application"
         ]
     },
     "canvasState": {
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "f349d5fa-f50b-405e-b80f-e46f09bf9967",
-        "selectedInstance": "f349d5fa-f50b-405e-b80f-e46f09bf9967"
+        "topInstance": "application",
+        "selectedInstance": "76f38c4f-ef83-4310-8f7f-16cacff11236"
     },
     "codeState": {
-        "topInstance": "f349d5fa-f50b-405e-b80f-e46f09bf9967"
+        "topInstance": "application"
     },
     "editMode": "code"
 }

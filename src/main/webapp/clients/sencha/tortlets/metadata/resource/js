@@ -1,0 +1,12 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "static/js/Base64.js"
+    },
+    "designerId": "5197d1d2-b9ae-4186-8349-752497e93cb4"
+}
