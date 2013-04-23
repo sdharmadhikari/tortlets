@@ -191,8 +191,6 @@ public class Tuser {
                     Tortlet tortlet = new Tortlet();
                     tortlet.setUserid(tuser.getUserid());
                     tortlet.setTitle(tortoise.getTitle() + " - " + jdTime.dayOfWeek().getAsShortText() + "," + jdTime.toString(org.joda.time.format.DateTimeFormat.forPattern("MM/dd")));
-                    tortlet.setCreatedOn(new Date());
-                    tortlet.setUpdatedOn(new Date());
                     int tortoiseCreatedCount = tortoise.getTortletsCreatedCount() + 1;
                     int tortoiseCompletedCount = tortoise.getTortletsCompletedCount();
                     int tortoiseScore = (tortoiseCompletedCount * 100) / tortoiseCreatedCount;

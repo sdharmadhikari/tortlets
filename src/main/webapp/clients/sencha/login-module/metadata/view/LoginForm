@@ -1,0 +1,208 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "listeners": [
+            "[",
+            "    {",
+            "        ",
+            "            delegate: '#loginButtonItemId',",
+            "    \t\tevent: 'tap',",
+            "    \t\tfn: 'onLogInButtonTap'",
+            "",
+            "    }",
+            "",
+            "",
+            "]   ",
+            "    "
+        ],
+        "loginUrl": "http://localhost:8080/tusers?findByUseridAndPasswordEquals",
+        "itemId": "loginFormItemId",
+        "designer|userClassName": "LoginForm",
+        "designer|initialView": true
+    },
+    "configAlternates": {
+        "listeners": "array"
+    },
+    "designerId": "c7c66f97-f1f9-47ad-9df3-cfc4ff945ad7",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "listeners",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "loginUrl",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "hideAnimation": "fadeOut",
+                "html": "Login failed, try again..",
+                "itemId": "signInFailedLabel",
+                "showAnimation": "fadeIn",
+                "style": "color:#990000;",
+                "designer|userClassName": "MyLabel"
+            },
+            "designerId": "49673aa3-4632-4729-b78e-3fd749b1a1ce"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet",
+                "title": null
+            },
+            "designerId": "0b86bd7b-a3c3-4d68-a22c-4275fd438000",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "userIdItemId",
+                        "designer|userClassName": "MyTextField",
+                        "label": null,
+                        "name": "userid",
+                        "required": true,
+                        "placeHolder": "Userid.."
+                    },
+                    "designerId": "204d6927-cfa7-4261-85b2-6cc2f2eeec56"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "passwordItemId",
+                        "designer|userClassName": "MyTextField1",
+                        "label": null,
+                        "name": "userid",
+                        "required": true,
+                        "placeHolder": "Password.."
+                    },
+                    "designerId": "0f963a1c-64fe-4c67-9d65-4e42b5be30e6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "loginButtonItemId",
+                "ui": "action",
+                "designer|userClassName": "MyButton",
+                "text": "Log In"
+            },
+            "designerId": "e591496a-63b7-4efb-9b42-4e683f5b9100"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLogInButtonTap",
+                "fn": "onLogInButtonTap",
+                "implHandler": [
+                    "var me = this,",
+                    "",
+                    "    userIdField = me.down('#userIdItemId'),",
+                    "    passwordField = me.down('#passwordItemId'),",
+                    "    label = me.down('#signInFailedLabel'),",
+                    "",
+                    "    userid = userIdField.getValue(),",
+                    "    password = passwordField.getValue();",
+                    "",
+                    "if(userid.length === 0 || password.length === 0) {",
+                    "    me.showSignInFailedMessage('Please enter your username and password.');",
+                    "    return;",
+                    "}  ",
+                    "",
+                    "//alert(userid + ' ' + password);",
+                    "",
+                    "label.setHtml('');",
+                    "userIdField.setValue('');",
+                    "passwordField.setValue('');",
+                    "var loginUrl = me.getInitialConfig().loginUrl;",
+                    "Ext.Ajax.request({",
+                    "    url: loginUrl,",
+                    "    method: 'get',",
+                    "    headers : { ",
+                    "        Accept : 'application/json' ",
+                    "    },",
+                    "    params: {",
+                    "        userid: userid,",
+                    "        password: password",
+                    "    },",
+                    "    success: function (response) {",
+                    "        alert('response back');",
+                    "        var loginResponse = Ext.JSON.decode(response.responseText);",
+                    "        if (loginResponse.userid === userid) {",
+                    "            me.fireEvent('signInSuccess',loginResponse);",
+                    "        } else {",
+                    "            me.showSignInFailedMessage('Bad Credentials');",
+                    "        }",
+                    "    },",
+                    "    failure: function (response) {",
+                    "        alert('failire response back');",
+                    "        me.showSignInFailedMessage('Server error. Please try again later.');",
+                    "    }",
+                    "});"
+                ]
+            },
+            "designerId": "3c77a81e-03f1-4848-946f-e29b111ed4d0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showSignInFailedMessage",
+                "fn": "showSignInFailedMessage",
+                "designer|params": [
+                    "message"
+                ],
+                "implHandler": [
+                    "var label = this.down('#signInFailedLabel');",
+                    "label.setHtml(message);",
+                    "label.show();"
+                ]
+            },
+            "designerId": "b3bbbd56-9f87-48f6-b7ee-c795c44e3bdf"
+        }
+    ]
+}
