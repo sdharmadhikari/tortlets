@@ -11,8 +11,9 @@
         <intercept-url pattern="/json/**" access="isAuthenticated()" />
         <http-basic/>
     </http-->
-    <http request-matcher-ref="jsonRequestMatcher" create-session="never" authentication-manager-ref="authenticationManager" use-expressions="true">
-         <intercept-url pattern="/**" access="isAuthenticated()" />
+    <http request-matcher-ref="jsonRequestMatcher" use-expressions="true" path-type="regex" create-session="never" authentication-manager-ref="authenticationManager" >
+         <intercept-url pattern="/tusers\?find=ByUseridEqualsAndPasswordEquals.*" access="permitAll"/>
+         <intercept-url pattern="/.*" access="isAuthenticated()" />
          <http-basic />
     </http>
 

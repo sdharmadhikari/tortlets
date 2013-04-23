@@ -16,4 +16,7 @@
 <definition extends="default" name="tusers/findTusersByUseridEquals">
         <put-attribute name="body" value="/WEB-INF/views/tusers/findTusersByUseridEquals.jspx"/>
     </definition>
+<definition extends="default" name="tusers/findTusersByUseridEqualsAndPasswordEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tusers/findTusersByUseridEqualsAndPasswordEquals.jspx"/>
+    </definition>
 </tiles-definitions>

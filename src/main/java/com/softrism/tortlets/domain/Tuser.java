@@ -24,8 +24,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "findTusersByUseridEquals" })
 @RooJson(deepSerialize = false)
+@RooJpaActiveRecord(finders = { "findTusersByUseridEquals", "findTusersByUseridEqualsAndPasswordEquals" })
 public class Tuser {
 
     @NotNull
@@ -85,16 +85,14 @@ public class Tuser {
     private TuserTimezoneEnum timezone;
 
     @PrePersist
-    private void prePersist(){
-
+    private void prePersist() {
         Date now = new Date();
         createdOn = now;
         updatedON = now;
-
     }
 
     @PreUpdate
-    private void preUpdate(){
+    private void preUpdate() {
         Date now = new Date();
         updatedON = now;
     }

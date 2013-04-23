@@ -694,3 +694,10 @@ exit
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-04-11 10:22:43
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-04-11 10:53:38
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-04-17 20:02:50
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-04-23 11:47:08
+focus --class ~.domain.Tuser
+finder list --filter findTuserByUserId
+finder list 
+finder list --depth 2 --filter findTusersByUseridEquals
+finder list --depth 2 --filter findTusersByUseridEqualsAndPassword
+finder add --finderName findTusersByUseridEqualsAndPasswordEquals

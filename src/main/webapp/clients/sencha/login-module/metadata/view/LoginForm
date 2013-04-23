@@ -20,9 +20,10 @@
             "]   ",
             "    "
         ],
-        "loginUrl": "http://localhost:8080/tusers?findByUseridAndPasswordEquals",
+        "loginUrl": "http://localhost:8080/tusers?find=ByUseridEqualsAndPasswordEquals",
         "itemId": "loginFormItemId",
         "designer|userClassName": "LoginForm",
+        "designer|userAlias": "genericLoginForm",
         "designer|initialView": true
     },
     "configAlternates": {
@@ -91,7 +92,7 @@
                     "designerId": "204d6927-cfa7-4261-85b2-6cc2f2eeec56"
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Password",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -99,7 +100,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "passwordItemId",
-                        "designer|userClassName": "MyTextField1",
+                        "designer|userClassName": "MyPasswordField",
                         "label": null,
                         "name": "userid",
                         "required": true,
@@ -149,12 +150,12 @@
                     "    return;",
                     "}  ",
                     "",
-                    "//alert(userid + ' ' + password);",
-                    "",
                     "label.setHtml('');",
                     "userIdField.setValue('');",
                     "passwordField.setValue('');",
+                    "",
                     "var loginUrl = me.getInitialConfig().loginUrl;",
+                    "",
                     "Ext.Ajax.request({",
                     "    url: loginUrl,",
                     "    method: 'get',",
@@ -165,17 +166,15 @@
                     "        userid: userid,",
                     "        password: password",
                     "    },",
-                    "    success: function (response) {",
-                    "        alert('response back');",
+                    "    success: function (response) {        ",
                     "        var loginResponse = Ext.JSON.decode(response.responseText);",
-                    "        if (loginResponse.userid === userid) {",
+                    "        if (loginResponse.length === 1 && loginResponse[0].userid === userid) {",
                     "            me.fireEvent('signInSuccess',loginResponse);",
                     "        } else {",
                     "            me.showSignInFailedMessage('Bad Credentials');",
                     "        }",
                     "    },",
                     "    failure: function (response) {",
-                    "        alert('failire response back');",
                     "        me.showSignInFailedMessage('Server error. Please try again later.');",
                     "    }",
                     "});"

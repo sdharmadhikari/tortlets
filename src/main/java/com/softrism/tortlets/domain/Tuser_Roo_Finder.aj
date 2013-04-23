@@ -17,4 +17,14 @@ privileged aspect Tuser_Roo_Finder {
         return q;
     }
     
+    public static TypedQuery<Tuser> Tuser.findTusersByUseridEqualsAndPasswordEquals(String userid, String password) {
+        if (userid == null || userid.length() == 0) throw new IllegalArgumentException("The userid argument is required");
+        if (password == null || password.length() == 0) throw new IllegalArgumentException("The password argument is required");
+        EntityManager em = Tuser.entityManager();
+        TypedQuery<Tuser> q = em.createQuery("SELECT o FROM Tuser AS o WHERE o.userid = :userid  AND o.password = :password", Tuser.class);
+        q.setParameter("userid", userid);
+        q.setParameter("password", password);
+        return q;
+    }
+    
 }
