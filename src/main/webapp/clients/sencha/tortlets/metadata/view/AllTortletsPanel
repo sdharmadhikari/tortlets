@@ -60,7 +60,6 @@
                         "align": "right",
                         "designer|userClassName": "MyButton16",
                         "iconCls": "action",
-                        "iconMask": true,
                         "text": ""
                     },
                     "designerId": "0f4465db-1d6b-439c-ba50-55992154f910",

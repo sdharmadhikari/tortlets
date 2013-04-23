@@ -6,7 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": false,
         "model": "Tortlet",
         "storeId": "incompleteTortletsStore",
         "designer|userClassName": "IncompleteTortletsStore",

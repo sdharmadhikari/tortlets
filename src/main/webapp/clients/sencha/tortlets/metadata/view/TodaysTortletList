@@ -15,7 +15,8 @@
         "emptyText": "Great ! You are done for today !",
         "scrollToTopOnRefresh": false,
         "store": "todaysTortletsStore",
-        "onItemDisclosure": true
+        "onItemDisclosure": true,
+        "variableHeights": true
     },
     "configAlternates": {
         "data": "array"

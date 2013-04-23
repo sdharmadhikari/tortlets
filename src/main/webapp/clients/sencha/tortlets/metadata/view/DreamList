@@ -15,7 +15,8 @@
         "emptyText": "",
         "scrollToTopOnRefresh": false,
         "store": "dreamsStore",
-        "onItemDisclosure": true
+        "onItemDisclosure": true,
+        "variableHeights": true
     },
     "configAlternates": {
         "data": "array"

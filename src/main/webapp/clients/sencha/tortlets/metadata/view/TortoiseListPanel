@@ -61,7 +61,6 @@
                         "align": "right",
                         "designer|userClassName": "MyButton17",
                         "iconCls": "add",
-                        "iconMask": true,
                         "text": ""
                     },
                     "designerId": "130a0383-ddfc-45f3-a2ca-f9c209c9c6cf",

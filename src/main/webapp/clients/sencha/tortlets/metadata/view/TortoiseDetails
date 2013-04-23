@@ -78,7 +78,6 @@
                         "designer|userClassName": "MyButton10",
                         "designer|displayName": "TortoiseDtailsBackToListButton",
                         "iconCls": "arrow_up",
-                        "iconMask": true,
                         "text": null
                     },
                     "designerId": "1cbf4938-88e5-4276-961f-2df0a7f12dc7",

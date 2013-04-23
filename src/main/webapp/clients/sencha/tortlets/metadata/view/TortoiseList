@@ -7,7 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "data": null,
+        "hideAnimation": "wipe",
         "margin": null,
+        "showAnimation": "slide",
         "ui": "round",
         "designer|userClassName": "TortoiseList",
         "designer|userAlias": "tortoiseList",
@@ -15,7 +17,8 @@
         "emptyText": "You need to at least one Tortoise to realize the dream. Tortoise is nothing but an activity to want to do regularly. Remember, slow and steady tortoise wins !",
         "scrollToTopOnRefresh": false,
         "store": "tortoisesStore",
-        "onItemDisclosure": true
+        "onItemDisclosure": true,
+        "variableHeights": true
     },
     "configAlternates": {
         "data": "array"

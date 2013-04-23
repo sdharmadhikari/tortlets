@@ -2,7 +2,7 @@
     "expandedState": {
         "data": true,
         "model": true,
-        "component": false,
+        "component": true,
         "controller": true,
         "resource": true,
         "424d6af0-4bed-488c-bf22-6b9993519c5f": {
@@ -27,7 +27,6 @@
         },
         "c2bdc653-c608-400e-b209-ef000e5d7997": {
             "id": "c2bdc653-c608-400e-b209-ef000e5d7997",
-            "expanded": false,
             "cn": [
                 {
                     "id": "ca549a70-f78d-4a7c-a328-5aa94a693df7"
@@ -69,7 +68,6 @@
         },
         "811d49e0-92af-414a-9025-4cb5ec728652": {
             "id": "811d49e0-92af-414a-9025-4cb5ec728652",
-            "expanded": false,
             "cn": [
                 {
                     "id": "f2c2fe36-3373-45fd-bb4e-48cfaaa5afff"
@@ -167,6 +165,7 @@
         },
         "8162b955-c1db-4f2f-bcaa-753970ca90eb": {
             "id": "8162b955-c1db-4f2f-bcaa-753970ca90eb",
+            "expanded": false,
             "cn": [
                 {
                     "id": "c430cd4f-2fd3-478f-8d35-9b81f613b5e7"
@@ -427,6 +426,7 @@
         },
         "345107d0-a788-4507-9220-261ec811d61a": {
             "id": "345107d0-a788-4507-9220-261ec811d61a",
+            "expanded": false,
             "cn": [
                 {
                     "id": "45439594-47f2-42c4-a6a7-b8b5ffe071a7",
@@ -851,18 +851,23 @@
     },
     "tabState": {
         "openTabs": [
-            "application"
+            "application",
+            "811d49e0-92af-414a-9025-4cb5ec728652",
+            "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0",
+            "8162b955-c1db-4f2f-bcaa-753970ca90eb",
+            "3f058fa0-cbf4-4a61-a122-32c6457d8ec4",
+            "eccbc6a6-9583-424c-ac72-aef0e7263cdf"
         ]
     },
     "canvasState": {
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "application",
-        "selectedInstance": "76f38c4f-ef83-4310-8f7f-16cacff11236"
+        "topInstance": "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
+        "selectedInstance": "eccbc6a6-9583-424c-ac72-aef0e7263cdf"
     },
     "codeState": {
-        "topInstance": "application"
+        "topInstance": "eccbc6a6-9583-424c-ac72-aef0e7263cdf"
     },
     "editMode": "code"
 }
