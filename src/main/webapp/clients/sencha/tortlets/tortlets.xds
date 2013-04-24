@@ -281,6 +281,22 @@
                 "metadata/resource/js"
             ],
             "className": "js"
+        },
+        "64ff5863-3efe-4ca0-b6aa-e3028c44615b": {
+            "paths": [
+                "metadata/view/LoginModule",
+                "app/view/override/LoginModule.js",
+                "app/view/LoginModule.js"
+            ],
+            "className": "LoginModule"
+        },
+        "4fd5c999-6918-471c-87b8-96d68a98489a": {
+            "paths": [
+                "metadata/controller/UserCredentialsController",
+                "app/controller/override/UserCredentialsController.js",
+                "app/controller/UserCredentialsController.js"
+            ],
+            "className": "UserCredentialsController"
         }
     },
     "viewOrderMap": {
@@ -303,7 +319,8 @@
             "a148bbe8-dad7-4c8e-a95a-4081d4b97c6f",
             "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
             "0e3fa1af-7c66-4370-bf0e-45af7191d28e",
-            "0da20323-db08-47ce-9741-64ded49ccb84"
+            "0da20323-db08-47ce-9741-64ded49ccb84",
+            "64ff5863-3efe-4ca0-b6aa-e3028c44615b"
         ],
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",
@@ -315,7 +332,8 @@
             "f349d5fa-f50b-405e-b80f-e46f09bf9967",
             "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
             "a6be32fc-255c-4b23-8caf-f80699a22551",
-            "b6ca3e62-c929-45fc-9967-87ea6496b91a"
+            "b6ca3e62-c929-45fc-9967-87ea6496b91a",
+            "4fd5c999-6918-471c-87b8-96d68a98489a"
         ],
         "model": [
             "98103327-6270-4ea5-9055-efe31b2727a6",

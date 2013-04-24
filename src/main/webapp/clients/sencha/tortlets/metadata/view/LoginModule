@@ -21,15 +21,18 @@
             "    "
         ],
         "loginUrl": "http://localhost:8080/tusers?find=ByUseridEqualsAndPasswordEquals",
+        "centered": false,
+        "docked": null,
         "itemId": "loginFormItemId",
-        "designer|userClassName": "LoginForm",
+        "designer|userClassName": "LoginModule",
         "designer|userAlias": "genericLoginForm",
-        "designer|initialView": true
+        "designer|initialView": true,
+        "modal": true
     },
     "configAlternates": {
         "listeners": "array"
     },
-    "designerId": "c7c66f97-f1f9-47ad-9df3-cfc4ff945ad7",
+    "designerId": "64ff5863-3efe-4ca0-b6aa-e3028c44615b",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
@@ -59,7 +62,7 @@
                 "style": "color:#990000;",
                 "designer|userClassName": "MyLabel"
             },
-            "designerId": "49673aa3-4632-4729-b78e-3fd749b1a1ce"
+            "designerId": "da938614-a0f5-41b0-b4a5-73d852dfcd36"
         },
         {
             "type": "Ext.form.FieldSet",
@@ -72,7 +75,7 @@
                 "designer|userClassName": "MyFieldSet",
                 "title": null
             },
-            "designerId": "0b86bd7b-a3c3-4d68-a22c-4275fd438000",
+            "designerId": "5ac05b0f-a4fe-45e3-b5c9-5636514a2b90",
             "cn": [
                 {
                     "type": "Ext.field.Text",
@@ -89,7 +92,7 @@
                         "required": true,
                         "placeHolder": "Userid.."
                     },
-                    "designerId": "204d6927-cfa7-4261-85b2-6cc2f2eeec56"
+                    "designerId": "b8244970-8fe8-46cb-b68e-e130f4ee9d41"
                 },
                 {
                     "type": "Ext.field.Password",
@@ -106,7 +109,7 @@
                         "required": true,
                         "placeHolder": "Password.."
                     },
-                    "designerId": "0f963a1c-64fe-4c67-9d65-4e42b5be30e6"
+                    "designerId": "b2bf80da-2466-4acd-b900-02dbefe99dc0"
                 }
             ]
         },
@@ -123,7 +126,7 @@
                 "designer|userClassName": "MyButton",
                 "text": "Log In"
             },
-            "designerId": "e591496a-63b7-4efb-9b42-4e683f5b9100"
+            "designerId": "71ab1d7b-d536-4b60-86d6-09ed454fae89"
         },
         {
             "type": "basicfunction",
@@ -136,51 +139,51 @@
                 "designer|userClassName": "onLogInButtonTap",
                 "fn": "onLogInButtonTap",
                 "implHandler": [
-                    "var me = this,",
-                    "",
-                    "    userIdField = me.down('#userIdItemId'),",
-                    "    passwordField = me.down('#passwordItemId'),",
-                    "    label = me.down('#signInFailedLabel'),",
-                    "",
-                    "    userid = userIdField.getValue(),",
-                    "    password = passwordField.getValue();",
-                    "",
-                    "if(userid.length === 0 || password.length === 0) {",
-                    "    me.showSignInFailedMessage('Please enter your username and password.');",
-                    "    return;",
-                    "}  ",
-                    "",
-                    "label.setHtml('');",
-                    "userIdField.setValue('');",
-                    "passwordField.setValue('');",
-                    "",
-                    "var loginUrl = me.getInitialConfig().loginUrl;",
-                    "",
-                    "Ext.Ajax.request({",
-                    "    url: loginUrl,",
-                    "    method: 'get',",
-                    "    headers : { ",
-                    "        Accept : 'application/json' ",
-                    "    },",
-                    "    params: {",
-                    "        userid: userid,",
-                    "        password: password",
-                    "    },",
-                    "    success: function (response) {        ",
-                    "        var loginResponse = Ext.JSON.decode(response.responseText);",
-                    "        if (loginResponse.length === 1 && loginResponse[0].userid === userid) {",
-                    "            me.fireEvent('signInSuccess',loginResponse[0]);",
-                    "        } else {",
-                    "            me.showSignInFailedMessage('Bad Credentials');",
-                    "        }",
-                    "    },",
-                    "    failure: function (response) {",
-                    "        me.showSignInFailedMessage('Server error. Please try again later.');",
-                    "    }",
+                    "var me = this,\r",
+                    "\r",
+                    "    userIdField = me.down('#userIdItemId'),\r",
+                    "    passwordField = me.down('#passwordItemId'),\r",
+                    "    label = me.down('#signInFailedLabel'),\r",
+                    "\r",
+                    "    userid = userIdField.getValue(),\r",
+                    "    password = passwordField.getValue();\r",
+                    "\r",
+                    "if(userid.length === 0 || password.length === 0) {\r",
+                    "    me.showSignInFailedMessage('Please enter your username and password.');\r",
+                    "    return;\r",
+                    "}  \r",
+                    "\r",
+                    "label.setHtml('');\r",
+                    "userIdField.setValue('');\r",
+                    "passwordField.setValue('');\r",
+                    "\r",
+                    "var loginUrl = me.getInitialConfig().loginUrl;\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: loginUrl,\r",
+                    "    method: 'get',\r",
+                    "    headers : { \r",
+                    "        Accept : 'application/json' \r",
+                    "    },\r",
+                    "    params: {\r",
+                    "        userid: userid,\r",
+                    "        password: password\r",
+                    "    },\r",
+                    "    success: function (response) {        \r",
+                    "        var loginResponse = Ext.JSON.decode(response.responseText);\r",
+                    "        if (loginResponse.length === 1 && loginResponse[0].userid === userid) {\r",
+                    "            me.fireEvent('signInSuccess',loginResponse[0]);\r",
+                    "        } else {\r",
+                    "            me.showSignInFailedMessage('Bad Credentials');\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function (response) {\r",
+                    "        me.showSignInFailedMessage('Server error. Please try again later.');\r",
+                    "    }\r",
                     "});"
                 ]
             },
-            "designerId": "3c77a81e-03f1-4848-946f-e29b111ed4d0"
+            "designerId": "a5e37c05-8745-4746-9318-540bd0f90382"
         },
         {
             "type": "basicfunction",
@@ -201,7 +204,7 @@
                     "label.show();"
                 ]
             },
-            "designerId": "b3bbbd56-9f87-48f6-b7ee-c795c44e3bdf"
+            "designerId": "1c57d06c-8893-4c16-9ff6-e9feaec4c516"
         }
     ]
 }

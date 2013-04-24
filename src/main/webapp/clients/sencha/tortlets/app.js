@@ -50,13 +50,15 @@ Ext.application({
         'ScoreTabCardPanel',
         'MainScorePanel',
         'HelpPanel',
-        'TodaysTortletList'
+        'TodaysTortletList',
+        'LoginModule'
     ],
     controllers: [
         'HomeTabController',
         'DreamsTabController',
         'SampleOverriddenController',
-        'UtilityController'
+        'UtilityController',
+        'UserCredentialsController'
     ],
     name: 'MyApp',
 
@@ -141,10 +143,7 @@ Ext.application({
         headers.Authorization = authHeaderValue;
         proxy.setUrl('http://' + host + '/tortlets');
 
-
-
-
-        Ext.create('MyApp.view.MainTabPanel', {fullscreen: true});
+        Ext.create('MyApp.view.LoginModule', {fullscreen: true});
     }
 
 });

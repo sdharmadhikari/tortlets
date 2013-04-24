@@ -1,6 +1,6 @@
 {
     "xdsVersion": "2.2.1",
-    "frameworkVersion": "touch21",
+    "frameworkVersion": "touch22",
     "internals": {
         "type": "Ext.form.Panel",
         "reference": {
@@ -166,7 +166,7 @@
                         "    success: function (response) {        ",
                         "        var loginResponse = Ext.JSON.decode(response.responseText);",
                         "        if (loginResponse.length === 1 && loginResponse[0].userid === userid) {",
-                        "            me.fireEvent('signInSuccess',loginResponse);",
+                        "            me.fireEvent('signInSuccess',loginResponse[0]);",
                         "        } else {",
                         "            me.showSignInFailedMessage('Bad Credentials');",
                         "        }",

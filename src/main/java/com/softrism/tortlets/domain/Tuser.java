@@ -34,7 +34,7 @@ public class Tuser {
     private String userid;
 
     @NotNull
-    @Size(min = 6, max = 16)
+    @Size(min = 6, max = 1024)
     private String password;
 
     @Size(min = 6, max = 16)

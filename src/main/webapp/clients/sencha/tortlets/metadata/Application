@@ -38,13 +38,15 @@
             "ScoreTabCardPanel",
             "MainScorePanel",
             "HelpPanel",
-            "TodaysTortletList"
+            "TodaysTortletList",
+            "LoginModule"
         ],
         "controllers": [
             "HomeTabController",
             "DreamsTabController",
             "SampleOverriddenController",
-            "UtilityController"
+            "UtilityController",
+            "UserCredentialsController"
         ],
         "name": "MyApp"
     },
@@ -147,9 +149,6 @@
                     "headers = proxy.getHeaders();\r",
                     "headers.Authorization = authHeaderValue;\r",
                     "proxy.setUrl('http://' + host + '/tortlets');\r",
-                    "\r",
-                    "\r",
-                    "\r",
                     ""
                 ]
             },
