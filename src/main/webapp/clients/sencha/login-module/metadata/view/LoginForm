@@ -29,7 +29,7 @@
     "configAlternates": {
         "listeners": "array"
     },
-    "designerId": "c7c66f97-f1f9-47ad-9df3-cfc4ff945ad7",
+    "designerId": "554f99b0-5e80-4602-88c3-97fd405ebd93",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
@@ -168,7 +168,9 @@
                     "    },",
                     "    success: function (response) {        ",
                     "        var loginResponse = Ext.JSON.decode(response.responseText);",
-                    "        if (loginResponse.length === 1 && loginResponse[0].userid === userid) {",
+                    "        var userObject = loginResponse[0];",
+                    "        if (loginResponse.length === 1 && userObject.userid === userid) {",
+                    "            userObject.plainPassword = password;",
                     "            me.fireEvent('signInSuccess',loginResponse[0]);",
                     "        } else {",
                     "            me.showSignInFailedMessage('Bad Credentials');",
@@ -180,7 +182,7 @@
                     "});"
                 ]
             },
-            "designerId": "3c77a81e-03f1-4848-946f-e29b111ed4d0"
+            "designerId": "29298f78-e7ac-49de-b6ac-f5d4d03844ba"
         },
         {
             "type": "basicfunction",
@@ -201,7 +203,7 @@
                     "label.show();"
                 ]
             },
-            "designerId": "b3bbbd56-9f87-48f6-b7ee-c795c44e3bdf"
+            "designerId": "4b9922e4-6c81-49b9-945f-c4835330620b"
         }
     ]
 }

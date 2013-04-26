@@ -171,7 +171,9 @@
                     "    },\r",
                     "    success: function (response) {        \r",
                     "        var loginResponse = Ext.JSON.decode(response.responseText);\r",
-                    "        if (loginResponse.length === 1 && loginResponse[0].userid === userid) {\r",
+                    "        var userObject = loginResponse[0];\r",
+                    "        if (loginResponse.length === 1 && userObject.userid === userid) {\r",
+                    "            userObject.plainPassword = password;\r",
                     "            me.fireEvent('signInSuccess',loginResponse[0]);\r",
                     "        } else {\r",
                     "            me.showSignInFailedMessage('Bad Credentials');\r",
@@ -199,8 +201,8 @@
                     "message"
                 ],
                 "implHandler": [
-                    "var label = this.down('#signInFailedLabel');",
-                    "label.setHtml(message);",
+                    "var label = this.down('#signInFailedLabel');\r",
+                    "label.setHtml(message);\r",
                     "label.show();"
                 ]
             },

@@ -1,0 +1,36 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyController"
+    },
+    "designerId": "7949a575-14b3-4d1f-9991-2b846f87e7df",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onRegistrationCardPanelItemIdSignUpSuccess",
+                "fn": "onRegistrationCardPanelItemIdSignUpSuccess",
+                "designer|params": [
+                    "panel"
+                ],
+                "implHandler": [
+                    "alert('real success');"
+                ],
+                "name": "signUpSuccess",
+                "designer|targetType": "RegistrationCardPanel",
+                "designer|controlQuery": "panel"
+            },
+            "designerId": "254f58f0-59f7-4f5b-b570-ef7829d66fc3"
+        }
+    ]
+}

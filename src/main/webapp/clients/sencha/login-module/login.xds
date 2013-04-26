@@ -15,24 +15,24 @@
     "upgradeVersion": 210000000500,
     "framework": "touch22",
     "topInstanceFileMap": {
-        "c7c66f97-f1f9-47ad-9df3-cfc4ff945ad7": {
+        "83dba2db-3767-4ecb-bdfc-c057b94f4f3f": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "554f99b0-5e80-4602-88c3-97fd405ebd93": {
             "paths": [
                 "metadata/view/LoginForm",
                 "app/view/override/LoginForm.js",
                 "app/view/LoginForm.js"
             ],
             "className": "LoginForm"
-        },
-        "83dba2db-3767-4ecb-bdfc-c057b94f4f3f": {
-            "paths": [
-                "metadata/resource/Library"
-            ],
-            "className": "Library"
         }
     },
     "viewOrderMap": {
         "view": [
-            "c7c66f97-f1f9-47ad-9df3-cfc4ff945ad7"
+            "554f99b0-5e80-4602-88c3-97fd405ebd93"
         ],
         "store": [],
         "controller": [],

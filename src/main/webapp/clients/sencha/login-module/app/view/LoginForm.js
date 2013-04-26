@@ -98,7 +98,9 @@ Ext.define('MyApp.view.LoginForm', {
             },
             success: function (response) {        
                 var loginResponse = Ext.JSON.decode(response.responseText);
-                if (loginResponse.length === 1 && loginResponse[0].userid === userid) {
+                var userObject = loginResponse[0];
+                if (loginResponse.length === 1 && userObject.userid === userid) {
+                    userObject.plainPassword = password;
                     me.fireEvent('signInSuccess',loginResponse[0]);
                 } else {
                     me.showSignInFailedMessage('Bad Credentials');

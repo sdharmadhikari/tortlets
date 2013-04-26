@@ -72,6 +72,7 @@
                 "implHandler": [
                     "console.log('application launch');\r",
                     "\r",
+                    "/*\r",
                     "var currentUser = Ext.create('MyApp.model.Tuser');\r",
                     "currentUser.set('id',1);\r",
                     "currentUser.set('version',42);\r",
@@ -149,6 +150,7 @@
                     "headers = proxy.getHeaders();\r",
                     "headers.Authorization = authHeaderValue;\r",
                     "proxy.setUrl('http://' + host + '/tortlets');\r",
+                    "*/\r",
                     ""
                 ]
             },

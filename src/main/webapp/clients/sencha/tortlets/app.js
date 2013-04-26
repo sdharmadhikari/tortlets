@@ -65,6 +65,7 @@ Ext.application({
     launch: function() {
         console.log('application launch');
 
+        /*
         var currentUser = Ext.create('MyApp.model.Tuser');
         currentUser.set('id',1);
         currentUser.set('version',42);
@@ -81,9 +82,9 @@ Ext.application({
         var host;
 
         if(window.location.host === ''){  
-            host = 'localhost:8080';    
+        host = 'localhost:8080';    
         }else{
-            host = window.location.host;
+        host = window.location.host;
         }
 
         var d = new Date();
@@ -142,6 +143,7 @@ Ext.application({
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
         proxy.setUrl('http://' + host + '/tortlets');
+        */
 
         Ext.create('MyApp.view.LoginModule', {fullscreen: true});
     }
