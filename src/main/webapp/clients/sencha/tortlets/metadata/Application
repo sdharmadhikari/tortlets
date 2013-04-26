@@ -39,7 +39,9 @@
             "MainScorePanel",
             "HelpPanel",
             "TodaysTortletList",
-            "LoginModule"
+            "LoginModule",
+            "LandingCardPanel",
+            "registrationmodule"
         ],
         "controllers": [
             "HomeTabController",

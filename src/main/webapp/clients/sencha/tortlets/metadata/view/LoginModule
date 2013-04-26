@@ -26,7 +26,6 @@
         "itemId": "loginFormItemId",
         "designer|userClassName": "LoginModule",
         "designer|userAlias": "genericLoginForm",
-        "designer|initialView": true,
         "modal": true
     },
     "configAlternates": {
@@ -207,6 +206,43 @@
                 ]
             },
             "designerId": "1c57d06c-8893-4c16-9ff6-e9feaec4c516"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ui": "confirm",
+                "designer|userClassName": "MyButton6",
+                "text": "Sign Up !"
+            },
+            "designerId": "da3edcf0-eefe-47b0-bce2-6752efdc9059",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "handler",
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "var landingCardPanel = this.up('#landingCardPanel');\r",
+                            "landingCardPanel.animateActiveItem(1,{ type: 'slide'});"
+                        ]
+                    },
+                    "designerId": "d1c4d597-d197-492c-a93e-416f3c40e803"
+                }
+            ]
         }
     ]
 }

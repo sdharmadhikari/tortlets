@@ -297,6 +297,22 @@
                 "app/controller/UserCredentialsController.js"
             ],
             "className": "UserCredentialsController"
+        },
+        "1cc19794-36b6-4e82-baae-38a39a5ce5ec": {
+            "paths": [
+                "metadata/view/LandingCardPanel",
+                "app/view/override/LandingCardPanel.js",
+                "app/view/LandingCardPanel.js"
+            ],
+            "className": "LandingCardPanel"
+        },
+        "7c6adc22-df22-4959-bf7b-fc61002cbc22": {
+            "paths": [
+                "metadata/view/registrationmodule",
+                "app/view/override/registrationmodule.js",
+                "app/view/registrationmodule.js"
+            ],
+            "className": "registrationmodule"
         }
     },
     "viewOrderMap": {
@@ -320,7 +336,9 @@
             "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
             "0e3fa1af-7c66-4370-bf0e-45af7191d28e",
             "0da20323-db08-47ce-9741-64ded49ccb84",
-            "64ff5863-3efe-4ca0-b6aa-e3028c44615b"
+            "64ff5863-3efe-4ca0-b6aa-e3028c44615b",
+            "1cc19794-36b6-4e82-baae-38a39a5ce5ec",
+            "7c6adc22-df22-4959-bf7b-fc61002cbc22"
         ],
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",

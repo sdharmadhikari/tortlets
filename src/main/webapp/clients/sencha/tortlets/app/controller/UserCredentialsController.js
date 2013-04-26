@@ -18,7 +18,8 @@ Ext.define('MyApp.controller.UserCredentialsController', {
 
     config: {
         refs: {
-            homeTabCardPanel: 'homeTabCardPanel'
+            homeTabCardPanel: 'homeTabCardPanel',
+            landingCardPanel: 'landingCardPanel'
         },
 
         control: {
@@ -30,9 +31,12 @@ Ext.define('MyApp.controller.UserCredentialsController', {
 
     onLoginFormSignInSuccess: function(userObject) {
         //alert(userObject.plainPassword);
-        var currentUser = Ext.create('MyApp.model.Tuser',userObject);
-        //currentUser.set('id',userObject.id);
-        //currentUser.set('version',42);
+        var currentUser = Ext.create('MyApp.model.Tuser');
+        currentUser.set('id',userObject.id);
+        currentUser.set('firstName',userObject.firstName);
+        currentUser.set('lastName',userObject.lastName);
+        currentUser.set('userid',userObject.userid);
+        currentUser.set('version',userObject.version);
         var userid = userObject.userid;
         //currentUser.set('userid',userid);
         var password = userObject.plainPassword;
@@ -41,8 +45,8 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var hash = Base64.encode(tok);
         var authHeaderValue = "Basic " + hash;
 
-        this.currentUser = currentUser; // Here currentUser becomes global variable to be accessed using MyApp.app.currentUser
-        this.tempId = 0;
+        MyApp.app.currentUser = currentUser; // Here currentUser becomes global variable to be accessed using MyApp.app.currentUser
+        MyApp.app.currentUser.tempId = 0;
         var host;
 
         if(window.location.host === ''){  
@@ -109,8 +113,9 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         proxy.setUrl('http://' + host + '/tortlets');
 
         var homeTabCardPanel = this.getHomeTabCardPanel();
-        Ext.Viewport.add({ xtype: 'homeTabCardPanel' });
-        Ext.Viewport.setActiveItem(1);
+
+        var landingCardPanel = this.getLandingCardPanel();
+        landingCardPanel.animateActiveItem(2, { type: 'slide'});
     }
 
 });

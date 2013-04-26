@@ -63,6 +63,15 @@ Ext.define('MyApp.view.LoginModule', {
                 itemId: 'loginButtonItemId',
                 ui: 'action',
                 text: 'Log In'
+            },
+            {
+                xtype: 'button',
+                handler: function(button, event) {
+                    var landingCardPanel = this.up('#landingCardPanel');
+                    landingCardPanel.animateActiveItem(1,{ type: 'slide'});
+                },
+                ui: 'confirm',
+                text: 'Sign Up !'
             }
         ]
     },

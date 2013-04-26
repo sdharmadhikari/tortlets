@@ -12,7 +12,7 @@
         "designer|userClassName": "DreamList",
         "designer|userAlias": "dreamList",
         "designer|displayName": "DreamList",
-        "emptyText": "",
+        "emptyText": "We know you have big dreams for yourself. Declare it ! ",
         "scrollToTopOnRefresh": false,
         "store": "dreamsStore",
         "onItemDisclosure": true,

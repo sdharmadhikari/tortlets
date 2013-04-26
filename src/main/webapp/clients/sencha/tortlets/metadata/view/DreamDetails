@@ -176,6 +176,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "name": "dreamDetailsNextButton",
+                        "ui": "action",
                         "designer|userClassName": "MyButton13",
                         "designer|displayName": "DreamDetailsNextButton",
                         "text": "Next"

@@ -273,7 +273,7 @@
       <file leaf-file-name="applicationContext-security.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="78" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.2064057">
+            <state line="21" column="77" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.569395">
               <folding />
             </state>
           </provider>
@@ -1164,7 +1164,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="78" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.2064057">
+        <state line="21" column="77" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.569395">
           <folding />
         </state>
       </provider>

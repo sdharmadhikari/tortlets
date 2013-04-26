@@ -91,6 +91,7 @@ Ext.define('MyApp.view.DreamDetails', {
                     {
                         xtype: 'button',
                         name: 'dreamDetailsNextButton',
+                        ui: 'action',
                         text: 'Next'
                     }
                 ]

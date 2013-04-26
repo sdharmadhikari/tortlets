@@ -51,7 +51,9 @@ Ext.application({
         'MainScorePanel',
         'HelpPanel',
         'TodaysTortletList',
-        'LoginModule'
+        'LoginModule',
+        'LandingCardPanel',
+        'registrationmodule'
     ],
     controllers: [
         'HomeTabController',
@@ -145,7 +147,7 @@ Ext.application({
         proxy.setUrl('http://' + host + '/tortlets');
         */
 
-        Ext.create('MyApp.view.LoginModule', {fullscreen: true});
+        Ext.create('MyApp.view.LandingCardPanel', {fullscreen: true});
     }
 
 });
