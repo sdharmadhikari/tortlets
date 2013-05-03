@@ -21,7 +21,6 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "designer|userClassName": "MyTitleBar4",
                 "designer|displayName": "DreamListPanelTitleBar",
                 "title": "Your Dreams"
             },

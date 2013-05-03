@@ -10,10 +10,10 @@
         "cacheBust": false,
         "buildShouldOverwriteIndex": true
     },
-    "xdsVersion": "2.2.1",
-    "xdsBuild": 951,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 971,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000500,
+    "upgradeVersion": 210000000501,
     "framework": "touch22",
     "topInstanceFileMap": {
         "424d6af0-4bed-488c-bf22-6b9993519c5f": {
@@ -23,12 +23,6 @@
                 "app/view/MainTabPanel.js"
             ],
             "className": "MainTabPanel"
-        },
-        "8d109db3-8fac-4b27-8512-92766b4975f8": {
-            "paths": [
-                "metadata/resource/Library"
-            ],
-            "className": "Library"
         },
         "811d49e0-92af-414a-9025-4cb5ec728652": {
             "paths": [
@@ -282,14 +276,6 @@
             ],
             "className": "js"
         },
-        "64ff5863-3efe-4ca0-b6aa-e3028c44615b": {
-            "paths": [
-                "metadata/view/LoginModule",
-                "app/view/override/LoginModule.js",
-                "app/view/LoginModule.js"
-            ],
-            "className": "LoginModule"
-        },
         "4fd5c999-6918-471c-87b8-96d68a98489a": {
             "paths": [
                 "metadata/controller/UserCredentialsController",
@@ -313,6 +299,20 @@
                 "app/view/registrationmodule.js"
             ],
             "className": "registrationmodule"
+        },
+        "7e277a5b-0624-4aa7-941e-c927df2fcc01": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "0774d05e-de9d-4085-bd90-9758034e790b": {
+            "paths": [
+                "metadata/view/loginmodule",
+                "app/view/override/loginmodule.js",
+                "app/view/loginmodule.js"
+            ],
+            "className": "loginmodule"
         }
     },
     "viewOrderMap": {
@@ -336,9 +336,9 @@
             "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
             "0e3fa1af-7c66-4370-bf0e-45af7191d28e",
             "0da20323-db08-47ce-9741-64ded49ccb84",
-            "64ff5863-3efe-4ca0-b6aa-e3028c44615b",
             "1cc19794-36b6-4e82-baae-38a39a5ce5ec",
-            "7c6adc22-df22-4959-bf7b-fc61002cbc22"
+            "7c6adc22-df22-4959-bf7b-fc61002cbc22",
+            "0774d05e-de9d-4085-bd90-9758034e790b"
         ],
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",
@@ -360,7 +360,7 @@
             "d972eca9-cfd7-429d-8792-8238d5fc4127"
         ],
         "resource": [
-            "8d109db3-8fac-4b27-8512-92766b4975f8",
+            "7e277a5b-0624-4aa7-941e-c927df2fcc01",
             "bc9381e5-fa6a-401c-a12f-d87047f599b7",
             "5197d1d2-b9ae-4186-8349-752497e93cb4"
         ],

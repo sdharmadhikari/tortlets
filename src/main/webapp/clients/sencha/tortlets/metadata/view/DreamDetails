@@ -34,7 +34,6 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "designer|userClassName": "MyTitleBar3",
                 "designer|displayName": "DreamTitleBar",
                 "title": "Dream"
             },
@@ -50,7 +49,6 @@
                     "userConfig": {
                         "name": "dreamDetailsBackButton",
                         "ui": "back",
-                        "designer|userClassName": "MyButton8",
                         "designer|displayName": "DreamDetailsBackButton",
                         "text": "Back"
                     },
@@ -73,7 +71,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet4",
                 "title": "I dream"
             },
             "designerId": "f03f3521-6792-4644-bb78-198870f75137",
@@ -88,7 +85,6 @@
                     "userConfig": {
                         "height": 74,
                         "html": null,
-                        "designer|userClassName": "MyTextField2",
                         "designer|displayName": "dreamTitleTextArea",
                         "label": null,
                         "name": "title"
@@ -105,7 +101,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet5",
                 "designer|displayName": "DreamNotesFieldSet",
                 "title": "Bit More On This Dream"
             },
@@ -121,7 +116,6 @@
                     "userConfig": {
                         "height": 78,
                         "width": 280,
-                        "designer|userClassName": "MyTextArea2",
                         "designer|displayName": "dreamNotesTitleArea",
                         "label": null,
                         "name": "notes"
@@ -136,7 +130,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySelectField1",
                         "designer|displayName": "DreamColorSelectField",
                         "label": "Dream Color",
                         "labelWidth": "40%",
@@ -162,7 +155,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet6",
                 "title": null
             },
             "designerId": "83806c65-0127-46e9-94ac-f5cd5a986ad2",
@@ -177,7 +169,6 @@
                     "userConfig": {
                         "name": "dreamDetailsNextButton",
                         "ui": "action",
-                        "designer|userClassName": "MyButton13",
                         "designer|displayName": "DreamDetailsNextButton",
                         "text": "Next"
                     },
@@ -200,7 +191,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet3",
                 "designer|displayName": "DreamDetailsDeleteFieldSet",
                 "title": null
             },
@@ -216,7 +206,6 @@
                     "userConfig": {
                         "name": "dreamDeleteButton",
                         "ui": "decline",
-                        "designer|userClassName": "MyButton10",
                         "designer|displayName": "DreamDeleteButton",
                         "text": "I am done ! (Delete)"
                     },
@@ -239,7 +228,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyHiddenField",
                 "designer|displayName": "DreamId",
                 "name": "id"
             },

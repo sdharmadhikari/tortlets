@@ -37,7 +37,7 @@ public class Tuser {
     @Size(min = 6, max = 1024)
     private String password;
 
-    @Size(min = 6, max = 16)
+    @Size(min = 0, max = 16)
     private String retypePassword;
 
     @NotNull
@@ -89,6 +89,7 @@ public class Tuser {
         Date now = new Date();
         createdOn = now;
         updatedON = now;
+        timezone = TuserTimezoneEnum.PST; // This needs to be removed later and come from client.
     }
 
     @PreUpdate
@@ -212,5 +213,17 @@ public class Tuser {
             }
         }
         return tuser;
+    }
+
+    public static TypedQuery<Tuser> findTusersByUseridEqualsAndPasswordEquals(String userid, String password) {
+        if (userid == null || userid.length() == 0) throw new IllegalArgumentException("The userid argument is required");
+        if (password == null || password.length() == 0) throw new IllegalArgumentException("The password argument is required");
+        EntityManager em = Tuser.entityManager();
+        TypedQuery<Tuser> q = em.createQuery("SELECT o FROM Tuser AS o WHERE o.userid = :userid  AND o.password = :password", Tuser.class);
+        System.out.println("userid in q" +  userid);
+        System.out.println("password " + password);
+        q.setParameter("userid", userid);
+        q.setParameter("password", password);
+        return q;
     }
 }

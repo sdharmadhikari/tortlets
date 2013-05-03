@@ -20,8 +20,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "title",
-                "type": "string",
-                "designer|userClassName": "field"
+                "type": "string"
             },
             "designerId": "876dad2a-1f49-4e21-9b10-f5aae9f0e45a"
         },
@@ -34,8 +33,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "notes",
-                "type": "string",
-                "designer|userClassName": "field2"
+                "type": "string"
             },
             "designerId": "118b3b44-f27f-4062-a513-09ed88bf3185"
         },
@@ -47,8 +45,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "dreamColor",
-                "designer|userClassName": "field5"
+                "name": "dreamColor"
             },
             "designerId": "b538865a-127e-4d04-bbb7-7dc1be175ae5"
         },
@@ -62,8 +59,7 @@
             "userConfig": {
                 "name": "latestDreamScore",
                 "persist": false,
-                "type": "int",
-                "designer|userClassName": "field6"
+                "type": "int"
             },
             "designerId": "adf05269-1fb6-4b4b-bd72-6143401c1efc"
         },
@@ -76,8 +72,7 @@
             "codeClass": null,
             "userConfig": {
                 "allowNull": false,
-                "name": "userid",
-                "designer|userClassName": "field9"
+                "name": "userid"
             },
             "designerId": "66f51c11-b25a-4dcc-80f0-fc12ebda9520"
         },
@@ -89,8 +84,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "dreamStatus",
-                "designer|userClassName": "field10"
+                "name": "dreamStatus"
             },
             "designerId": "9733078d-0f7f-482a-9784-9eb76b724855"
         },
@@ -105,8 +99,7 @@
                 "dateFormat": "MM/dd/yyy",
                 "name": "createdOn",
                 "persist": false,
-                "type": null,
-                "designer|userClassName": "field7"
+                "type": null
             },
             "designerId": "e6085fe9-051d-4532-a2e1-82a2dbc948cb"
         },
@@ -119,8 +112,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "updatedOn",
-                "persist": false,
-                "designer|userClassName": "field8"
+                "persist": false
             },
             "designerId": "07f02206-8cd5-4c4e-a329-42b54c37fb33"
         },
@@ -132,7 +124,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy3",
                 "designer|displayName": "DreamRestProxy",
                 "url": "http://dummy.url",
                 "headers": [
@@ -149,9 +140,6 @@
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonWriter"
-                    },
                     "designerId": "88185ffc-cbd8-408c-b6a5-96a92142c107"
                 },
                 {
@@ -161,9 +149,6 @@
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader4"
-                    },
                     "designerId": "7f7eb1ea-9a76-44ce-965b-1f9f2aa5347e"
                 }
             ]
@@ -177,7 +162,6 @@
             "codeClass": null,
             "userConfig": {
                 "associationKey": null,
-                "designer|userClassName": "MyBelongsToAssociation",
                 "designer|displayName": "BelongsToTuserAssociation",
                 "model": "Tuser",
                 "foreignKey": "tuser"
@@ -193,8 +177,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "version",
-                "type": "int",
-                "designer|userClassName": "field37"
+                "type": "int"
             },
             "designerId": "edce9120-9a27-4a4b-b98c-563b44d6aa84"
         },
@@ -206,7 +189,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyPresenceValidation",
                 "designer|displayName": "titlePresenceValidation",
                 "field": "title"
             },

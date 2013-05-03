@@ -11,7 +11,6 @@
         "ui": "round",
         "designer|userClassName": "DreamList",
         "designer|userAlias": "dreamList",
-        "designer|displayName": "DreamList",
         "emptyText": "We know you have big dreams for yourself. Declare it ! ",
         "scrollToTopOnRefresh": false,
         "store": "dreamsStore",
@@ -38,7 +37,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "itemTpl",
                 "implHandler": [
                     "<div>{title}({latestDreamScore})</div>\r",
                     "<br/> \r",

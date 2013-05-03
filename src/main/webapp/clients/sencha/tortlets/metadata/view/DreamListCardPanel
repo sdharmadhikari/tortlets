@@ -70,7 +70,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onPanelShow",
                 "fn": "onPanelShow",
                 "implHandler": [
                     "component.setActiveItem(0);"

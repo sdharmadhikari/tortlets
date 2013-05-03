@@ -40,7 +40,10 @@ public aspect TuserControllerAspectj {
     Object around(String userid, String password) : authUser(userid,password){
         ShaPasswordEncoder encoder = new ShaPasswordEncoder(256);
         String encoded = encoder.encodePassword(password,null);
+        System.out.println("userid " + userid);
         System.out.println("encoded " + encoded);
         return proceed(userid,encoded) ;
     }
+
+
 }

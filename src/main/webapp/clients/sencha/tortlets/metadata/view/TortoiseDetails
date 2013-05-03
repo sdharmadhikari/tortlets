@@ -34,7 +34,6 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "designer|userClassName": "MyTitleBar1",
                 "title": "Tortoise"
             },
             "designerId": "d70911fe-a2c2-4979-8f11-22f2a3864fcf",
@@ -49,7 +48,6 @@
                     "userConfig": {
                         "name": "tortoiseDetailsBackToDreamButton",
                         "ui": "back",
-                        "designer|userClassName": "MyButton3",
                         "designer|displayName": "TortoiseDetailsBackToDream",
                         "iconAlign": null,
                         "iconCls": null,
@@ -75,7 +73,6 @@
                         "name": "tortoiseDetailsBackToListButton",
                         "align": "right",
                         "docked": null,
-                        "designer|userClassName": "MyButton10",
                         "designer|displayName": "TortoiseDtailsBackToListButton",
                         "iconCls": "arrow_up",
                         "text": null
@@ -101,7 +98,6 @@
             "userConfig": {
                 "height": 65,
                 "html": null,
-                "designer|userClassName": "MyTextArea",
                 "designer|displayName": "TortoiseTitle",
                 "label": null,
                 "labelWidth": "0%",
@@ -119,7 +115,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet6",
                 "designer|displayName": "TortoiseDetailsRepeatFieldSet",
                 "title": "Do It On Every"
             },
@@ -133,7 +128,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "MondayToggle",
                         "label": "Monday",
                         "labelWidth": "40%",
@@ -149,7 +143,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "TuesdayToggle",
                         "label": "Tuesday",
                         "labelWidth": "40%",
@@ -165,7 +158,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "WednesdayToggle",
                         "label": "Wednesday",
                         "labelWidth": "40%",
@@ -181,7 +173,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "ThursdayToggle",
                         "label": "Thursday",
                         "labelWidth": "40%",
@@ -197,7 +188,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "FridayToggle",
                         "label": "Friday",
                         "labelWidth": "40%",
@@ -213,7 +203,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "SaturdayToggle",
                         "label": "Saturday",
                         "labelWidth": "40%",
@@ -229,7 +218,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyToggleField1",
                         "designer|displayName": "SundayToggle",
                         "label": "Sunday",
                         "labelWidth": "40%",
@@ -247,7 +235,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet7",
                 "designer|displayName": "TortoiseSaveFieldSet",
                 "title": null
             },
@@ -263,7 +250,6 @@
                     "userConfig": {
                         "name": "tortoiseDetailsSaveButton",
                         "ui": "confirm",
-                        "designer|userClassName": "MyButton4",
                         "text": "Save"
                     },
                     "designerId": "e6d4a749-5930-4c01-b4cf-b90dc4e350c7",
@@ -287,7 +273,6 @@
             "userConfig": {
                 "name": "tortoiseDeleteButton",
                 "ui": "decline",
-                "designer|userClassName": "MyButton11",
                 "designer|displayName": "tortoiseDeleteButton",
                 "text": "I am Done, Stop The Tortoise.."
             },

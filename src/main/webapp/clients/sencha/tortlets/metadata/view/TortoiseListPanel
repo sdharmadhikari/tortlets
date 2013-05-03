@@ -21,7 +21,6 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "designer|userClassName": "MyTitleBar4",
                 "designer|displayName": "TortoiseListPanelTitleBar",
                 "title": "Tortoises"
             },
@@ -37,7 +36,6 @@
                     "userConfig": {
                         "name": "tortoiseListPanelBackButton",
                         "ui": "back",
-                        "designer|userClassName": "MyButton2",
                         "text": "Back"
                     },
                     "designerId": "3a3f1956-9239-43a0-90ec-9643f018b018",
@@ -59,7 +57,6 @@
                     "userConfig": {
                         "name": "tortoiseListPanelAddButton",
                         "align": "right",
-                        "designer|userClassName": "MyButton17",
                         "iconCls": "add",
                         "text": ""
                     },
@@ -98,7 +95,6 @@
                 "name": "tortoiseListStartDreamingButton",
                 "itemId": "mybutton2",
                 "ui": "confirm",
-                "designer|userClassName": "MyButton4",
                 "text": "Make It Happen! (Save)"
             },
             "designerId": "0d1842e0-720d-439f-9690-01f93309f3e8",

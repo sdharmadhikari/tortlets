@@ -56,8 +56,7 @@
                 "html": "Login failed, try again..",
                 "itemId": "signInFailedLabel",
                 "showAnimation": "fadeIn",
-                "style": "color:#990000;",
-                "designer|userClassName": "MyLabel"
+                "style": "color:#990000;"
             },
             "designerId": "49673aa3-4632-4729-b78e-3fd749b1a1ce"
         },
@@ -69,7 +68,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet",
                 "title": null
             },
             "designerId": "0b86bd7b-a3c3-4d68-a22c-4275fd438000",
@@ -83,7 +81,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "userIdItemId",
-                        "designer|userClassName": "MyTextField",
                         "label": null,
                         "name": "userid",
                         "required": true,
@@ -100,7 +97,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "passwordItemId",
-                        "designer|userClassName": "MyPasswordField",
                         "label": null,
                         "name": "userid",
                         "required": true,
@@ -120,7 +116,6 @@
             "userConfig": {
                 "itemId": "loginButtonItemId",
                 "ui": "action",
-                "designer|userClassName": "MyButton",
                 "text": "Log In"
             },
             "designerId": "e591496a-63b7-4efb-9b42-4e683f5b9100"
@@ -133,7 +128,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onLogInButtonTap",
                 "fn": "onLogInButtonTap",
                 "implHandler": [
                     "var me = this,",
@@ -192,7 +186,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "showSignInFailedMessage",
                 "fn": "showSignInFailedMessage",
                 "designer|params": [
                     "message"
@@ -204,6 +197,41 @@
                 ]
             },
             "designerId": "4b9922e4-6c81-49b9-945f-c4835330620b"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ui": "confirm",
+                "text": "Sign Up !"
+            },
+            "designerId": "a936079e-a844-4185-8e36-822c6b61eeeb",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "var loginForm = this.up('#loginFormItemId');",
+                            "loginForm.fireEvent('signUpRequested');"
+                        ]
+                    },
+                    "designerId": "57fd8efe-498e-4789-b2f5-c4c0ba969a8f"
+                }
+            ]
         }
     ]
 }

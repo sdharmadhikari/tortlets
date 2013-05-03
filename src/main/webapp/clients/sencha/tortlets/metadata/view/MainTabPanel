@@ -33,8 +33,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "bottom",
-                "designer|userClassName": "MyTabBar"
+                "docked": "bottom"
             },
             "designerId": "e9ea8147-6b1e-44dc-af44-483e1ebd9577"
         },

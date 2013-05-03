@@ -11,7 +11,6 @@
         "ui": "round",
         "designer|userClassName": "TortletsList",
         "designer|userAlias": "tortletsList",
-        "designer|displayName": "TortletsList",
         "scrollable": null,
         "emptyText": "Wow ! Nothing pending. You are really on top of everything !",
         "store": "incompleteTortletsStore",
@@ -38,7 +37,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "itemTpl",
                 "implHandler": [
                     "{title}\r",
                     "<br/>\r",

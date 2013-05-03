@@ -20,7 +20,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyAjaxProxy",
                 "url": "http://dummy.url",
                 "headers": [
                     "{ 'Accept' : 'application/json'}"
@@ -35,9 +34,6 @@
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader3"
-                    },
                     "designerId": "f0f02b37-e7ac-425f-b41a-3f08582cc447"
                 }
             ]
@@ -50,8 +46,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "property": "latestTortoiseScore",
-                "designer|userClassName": "MySorter1"
+                "property": "latestTortoiseScore"
             },
             "designerId": "4c969974-1375-4995-9c6e-b5af2b1b743e"
         }

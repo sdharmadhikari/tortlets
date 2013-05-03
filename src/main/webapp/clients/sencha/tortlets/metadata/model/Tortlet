@@ -20,8 +20,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "title",
-                "type": "string",
-                "designer|userClassName": "field"
+                "type": "string"
             },
             "designerId": "1b51fab2-4b61-40c4-b82c-69b015e76a8d"
         },
@@ -34,8 +33,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "completed",
-                "type": "boolean",
-                "designer|userClassName": "field1"
+                "type": "boolean"
             },
             "designerId": "a038140b-4388-48b9-9c00-1f96ca4e2171"
         },
@@ -48,8 +46,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "notes",
-                "type": "string",
-                "designer|userClassName": "field2"
+                "type": "string"
             },
             "designerId": "0b8d2dd5-2cf7-49c4-ae44-c748f341f459"
         },
@@ -62,8 +59,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "version",
-                "type": "int",
-                "designer|userClassName": "field38"
+                "type": "int"
             },
             "designerId": "12163408-d4a8-4ceb-8b29-dbc50f00e365"
         },
@@ -75,7 +71,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyBelongsToAssociation2",
                 "designer|displayName": "BelongsToTortoiseAssociation",
                 "model": "Tortoise",
                 "foreignKey": "tortoise"
@@ -90,7 +85,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy3",
                 "designer|displayName": "TortletRestProxy",
                 "url": "http://dummy.url",
                 "headers": [
@@ -107,9 +101,6 @@
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader2"
-                    },
                     "designerId": "2d06a988-2bb8-466a-98a9-7ac11fc362d0"
                 },
                 {
@@ -119,9 +110,6 @@
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonWriter1"
-                    },
                     "designerId": "b59474e0-24e3-4c22-8cbe-39e8fc68dad1"
                 }
             ]

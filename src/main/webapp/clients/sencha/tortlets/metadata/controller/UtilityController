@@ -18,7 +18,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "loadTortoises",
                 "fn": "loadTortoises",
                 "designer|params": [
                     "dreamId"

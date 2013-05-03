@@ -22,7 +22,6 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "designer|userClassName": "MyTitleBar",
                 "title": "Sign Up !"
             },
             "designerId": "2a4803b6-7b5b-42dd-a00c-825dc7b61e5a"
@@ -35,8 +34,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "registrationPage1",
-                "designer|userClassName": "MyFormPanel"
+                "itemId": "registrationPage1"
             },
             "designerId": "76578294-8b17-4b1c-a0de-94489cf5e434",
             "cn": [
@@ -48,7 +46,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyFieldSet",
                         "title": "Personal Details"
                     },
                     "designerId": "c28b6446-28e9-430c-afeb-039734c4c32d",
@@ -62,7 +59,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "firstName",
-                                "designer|userClassName": "MyTextField",
                                 "label": "First Name",
                                 "labelWidth": "37%",
                                 "name": null
@@ -78,7 +74,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "lastName",
-                                "designer|userClassName": "MyTextField1",
                                 "label": "Last Name",
                                 "labelWidth": "37%",
                                 "name": null
@@ -94,7 +89,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "userEmail",
-                                "designer|userClassName": "MyEmailField",
                                 "label": "Email",
                                 "labelWidth": "37%",
                                 "name": null,
@@ -111,7 +105,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "confirmEmail",
-                                "designer|userClassName": "MyEmailField1",
                                 "label": "Confirm Email",
                                 "labelWidth": "37%",
                                 "name": null,
@@ -129,7 +122,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyFieldSet1",
                         "title": "Credentials"
                     },
                     "designerId": "e740414a-475d-4545-b4fc-1a4c06e782d3",
@@ -143,7 +135,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "userid",
-                                "designer|userClassName": "MyTextField2",
                                 "label": "User Id",
                                 "labelWidth": "37%",
                                 "name": null
@@ -159,7 +150,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "password",
-                                "designer|userClassName": "MyPasswordField",
                                 "label": "Password",
                                 "labelWidth": "37%",
                                 "name": null
@@ -175,7 +165,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "itemId": "confirmedPassword",
-                                "designer|userClassName": "MyTextField4",
                                 "label": "Confirm",
                                 "labelWidth": "37%",
                                 "name": null
@@ -193,7 +182,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "myfieldset2",
-                        "designer|userClassName": "MyFieldSet2",
                         "designer|displayName": "NextButtonFieldSet",
                         "title": null
                     },
@@ -209,7 +197,6 @@
                             "userConfig": {
                                 "itemId": "signUpNextButton",
                                 "ui": "action",
-                                "designer|userClassName": "MyButton",
                                 "text": "Next"
                             },
                             "designerId": "cdbfb87d-adcf-4336-b6ce-84d262273d37",
@@ -222,7 +209,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "handler",
                                         "fn": "handler",
                                         "designer|params": [
                                             "button",
@@ -256,8 +242,7 @@
             "codeClass": null,
             "userConfig": {
                 "html": "Registration Successful !",
-                "itemId": "registrationPage2",
-                "designer|userClassName": "MyPanel1"
+                "itemId": "registrationPage2"
             },
             "designerId": "97ea2497-ae24-435a-9ede-14a7778e3d0c",
             "cn": [
@@ -269,7 +254,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton1",
                         "text": "Go To Sign In"
                     },
                     "designerId": "ec5cbfd9-9133-4f67-a93e-897544ecaf6a",
@@ -282,7 +266,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "handler",
                                 "fn": "handler",
                                 "designer|params": [
                                     "button",

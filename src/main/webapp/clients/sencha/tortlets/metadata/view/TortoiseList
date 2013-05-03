@@ -13,7 +13,6 @@
         "ui": "round",
         "designer|userClassName": "TortoiseList",
         "designer|userAlias": "tortoiseList",
-        "designer|displayName": "TortoiseList",
         "emptyText": "You need to at least one Tortoise to realize the dream. Tortoise is nothing but an activity to want to do regularly. Remember, slow and steady tortoise wins !",
         "scrollToTopOnRefresh": false,
         "store": "tortoisesStore",
@@ -40,7 +39,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "itemTpl",
                 "implHandler": [
                     "<div>{title}({latestTortoiseScore})</div>\r",
                     "<br/>\r",

@@ -1,18 +1,12 @@
 {
     "name": "registration",
     "settings": {},
-    "xdsVersion": "2.2.1",
-    "xdsBuild": 951,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 971,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000500,
+    "upgradeVersion": 210000000501,
     "framework": "touch22",
     "topInstanceFileMap": {
-        "0ad469e6-ab23-41cd-b367-235116c750e3": {
-            "paths": [
-                "metadata/resource/Library"
-            ],
-            "className": "Library"
-        },
         "b1eb75fc-1f7c-4b0c-8765-75107c58b008": {
             "paths": [
                 "metadata/view/RegistrationCardPanel",
@@ -28,6 +22,12 @@
                 "app/controller/MyController.js"
             ],
             "className": "MyController"
+        },
+        "a598bd29-910a-4a96-8b5e-9663202da0e7": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
         }
     },
     "viewOrderMap": {
@@ -40,7 +40,7 @@
         ],
         "model": [],
         "resource": [
-            "0ad469e6-ab23-41cd-b367-235116c750e3"
+            "a598bd29-910a-4a96-8b5e-9663202da0e7"
         ],
         "app": [
             "application"

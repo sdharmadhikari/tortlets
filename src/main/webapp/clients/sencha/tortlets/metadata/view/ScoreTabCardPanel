@@ -21,7 +21,6 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "designer|userClassName": "MyTitleBar8",
                 "title": "Your Score"
             },
             "designerId": "35d96897-69ce-4875-8b5f-283f45a0d2cf"

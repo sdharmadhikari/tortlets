@@ -18,7 +18,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onRegistrationCardPanelItemIdSignUpSuccess",
                 "fn": "onRegistrationCardPanelItemIdSignUpSuccess",
                 "designer|params": [
                     "panel"

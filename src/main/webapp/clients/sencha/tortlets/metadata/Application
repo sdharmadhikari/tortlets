@@ -39,9 +39,9 @@
             "MainScorePanel",
             "HelpPanel",
             "TodaysTortletList",
-            "LoginModule",
             "LandingCardPanel",
-            "registrationmodule"
+            "registrationmodule",
+            "loginmodule"
         ],
         "controllers": [
             "HomeTabController",
@@ -69,7 +69,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
                     "console.log('application launch');\r",

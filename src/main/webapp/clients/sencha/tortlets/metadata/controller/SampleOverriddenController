@@ -18,7 +18,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "regularFunction",
                 "fn": "regularFunction",
                 "implHandler": [
                     "alert('regularFunction will NOT be called because its overridden');"

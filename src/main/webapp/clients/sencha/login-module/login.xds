@@ -9,18 +9,12 @@
         "exportPath": "",
         "buildShouldOverwriteIndex": true
     },
-    "xdsVersion": "2.2.1",
-    "xdsBuild": 951,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 971,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000500,
+    "upgradeVersion": 210000000501,
     "framework": "touch22",
     "topInstanceFileMap": {
-        "83dba2db-3767-4ecb-bdfc-c057b94f4f3f": {
-            "paths": [
-                "metadata/resource/Library"
-            ],
-            "className": "Library"
-        },
         "554f99b0-5e80-4602-88c3-97fd405ebd93": {
             "paths": [
                 "metadata/view/LoginForm",
@@ -28,6 +22,12 @@
                 "app/view/LoginForm.js"
             ],
             "className": "LoginForm"
+        },
+        "6b1bcf6d-cfdc-4487-8be3-c2b2f2917a71": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
         }
     },
     "viewOrderMap": {
@@ -38,7 +38,7 @@
         "controller": [],
         "model": [],
         "resource": [
-            "83dba2db-3767-4ecb-bdfc-c057b94f4f3f"
+            "6b1bcf6d-cfdc-4487-8be3-c2b2f2917a71"
         ],
         "app": [
             "application"

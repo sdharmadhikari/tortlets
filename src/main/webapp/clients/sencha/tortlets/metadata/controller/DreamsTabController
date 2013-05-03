@@ -18,7 +18,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onDreamListItemTap",
                 "fn": "onDreamListItemTap",
                 "implHandler": [
                     "var dreamDetails = this.getDreamDetails();\r",
@@ -43,7 +42,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onDreamDetailsNextButtonTap",
                 "fn": "onDreamDetailsNextButtonTap",
                 "implHandler": [
                     "var tortoiseListPanel = this.getTortoiseListPanel();\r",
@@ -103,7 +101,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onDreamDetailsBackButtonTap",
                 "fn": "onDreamDetailsBackButtonTap",
                 "implHandler": [
                     "this.getDreamListCardPanel().animateActiveItem(0, { type : 'slide',direction : 'right'});"
@@ -122,7 +119,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseListStartDreamingButtonTap",
                 "fn": "onTortoiseListStartDreamingButtonTap",
                 "implHandler": [
                     "this.getDreamListCardPanel().animateActiveItem(0, {type : 'slide', direction : 'right'});"
@@ -141,7 +137,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onDreamDeleteButtonButtonTap",
                 "fn": "onDreamDeleteButtonButtonTap",
                 "implHandler": [
                     "this.getDreamListCardPanel().animateActiveItem(0, { type : 'slide', direction : 'right'});"
@@ -160,7 +155,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseListPanelBackButtonTap",
                 "fn": "onTortoiseListPanelBackButtonTap",
                 "implHandler": [
                     "var dreamDetails = this.getDreamDetails();\r",
@@ -181,7 +175,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseListItemTap",
                 "fn": "onTortoiseListItemTap",
                 "implHandler": [
                     "var tortoiseDetailsForm = this.getTortoiseDetails();\r",
@@ -211,7 +204,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onAllTortletsPanelDreamButtonTap",
                 "fn": "onAllTortletsPanelDreamButtonTap",
                 "implHandler": [
                     "this.getDreamListCardPanel()\r",
@@ -231,7 +223,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseListPanelAddButtonTap",
                 "fn": "onTortoiseListPanelAddButtonTap",
                 "implHandler": [
                     "var dreamListCardPanel = this.getDreamListCardPanel();\r",
@@ -270,7 +261,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseDetailsSaveButtonTap",
                 "fn": "onTortoiseDetailsSaveButtonTap",
                 "implHandler": [
                     "var tortoiseListPanel = this.getTortoiseListPanel();\r",
@@ -325,7 +315,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseDetailsBackButtonTap",
                 "fn": "onTortoiseDetailsBackButtonTap",
                 "implHandler": [
                     "alert('tortoseDetailsBackToDream');\r",
@@ -347,7 +336,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onAllTortletsPanelBackButtonTap",
                 "fn": "onAllTortletsPanelBackButtonTap",
                 "implHandler": [
                     "this.getDreamListCardPanel().\r",
@@ -367,7 +355,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseDetailsTortletsButtonTap",
                 "fn": "onTortoiseDetailsTortletsButtonTap",
                 "implHandler": [
                     "this.getDreamListCardPanel().\r",
@@ -387,7 +374,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "dreamDetails",
                 "ref": "dreamDetails",
                 "selector": "dreamDetails"
             },
@@ -401,7 +387,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "tortoiseDetails",
                 "ref": "tortoiseDetails",
                 "selector": "tortoiseDetails"
             },
@@ -415,7 +400,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "tortoiseListPanel",
                 "ref": "tortoiseListPanel",
                 "selector": "tortoiseListPanel"
             },
@@ -429,7 +413,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onHomeTabNewDreamButtonTap",
                 "fn": "onHomeTabNewDreamButtonTap",
                 "implHandler": [
                     "console.log('inside onHomePageDreamButtonTap');\r",
@@ -462,7 +445,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "whatsYourDreamTextField",
                 "ref": "whatsYourDreamTextField",
                 "selector": "textfield[name='whatsYourDreamTextField']"
             },
@@ -476,7 +458,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "mainTabPanel",
                 "ref": "mainTabPanel",
                 "selector": "mainTabPanel"
             },
@@ -490,7 +471,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "dreamListCardPanel",
                 "ref": "dreamListCardPanel",
                 "selector": "dreamListCardPanel"
             },
@@ -504,7 +484,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "dreamDeleteButton",
                 "ref": "dreamDeleteButton",
                 "selector": "button[name='dreamDeleteButton']"
             },
@@ -518,7 +497,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "dreamListPanel",
                 "ref": "dreamListPanel",
                 "selector": "dreamListPanel"
             },
@@ -532,7 +510,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "tortoiseDetailsBackToListButton",
                 "ref": "tortoiseDetailsBackToListButton",
                 "selector": "button[name='tortoiseDetailsBackToListButton']"
             },
@@ -546,7 +523,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseDetailsBackToListButtonTap",
                 "fn": "onTortoiseDetailsBackToListButtonTap",
                 "implHandler": [
                     "var tortoiseListPanel = this.getTortoiseListPanel();\r",
@@ -567,7 +543,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "tortoiseDetailsBackToDreamButton",
                 "ref": "tortoiseDetailsBackToDreamButton",
                 "selector": "button[name='tortoiseDetailsBackToDreamButton']"
             },
@@ -581,7 +556,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseDetailsBackHorizontalButtonTap",
                 "fn": "onTortoiseDetailsBackHorizontalButtonTap",
                 "implHandler": [
                     "var tortoiseListPanel = this.getTortoiseListPanel();\r",
@@ -602,7 +576,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "tortoiseDeleteButton",
                 "ref": "tortoiseDeleteButton",
                 "selector": "button[name='tortoiseDeleteButton']"
             },
@@ -616,7 +589,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseDeleteButtonTap",
                 "fn": "onTortoiseDeleteButtonTap",
                 "implHandler": [
                     ""
@@ -635,7 +607,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "newDreamSave",
                 "fn": "newDreamSave",
                 "designer|params": [
                     "createdModel"
@@ -664,7 +635,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "oldDreamSave",
                 "fn": "oldDreamSave",
                 "designer|params": [
                     "savedModel"
@@ -691,7 +661,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "newTortoiseSave",
                 "fn": "newTortoiseSave",
                 "designer|params": [
                     "createdModel"
@@ -717,7 +686,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "oldTortoiseSave",
                 "fn": "oldTortoiseSave",
                 "designer|params": [
                     "savedModel"
@@ -743,7 +711,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTortoiseListStartDreamingButtonTap",
                 "fn": "onTortoiseListStartDreamingButtonTap",
                 "implHandler": [
                     "var dreamDetails = this.getDreamDetails();\r",

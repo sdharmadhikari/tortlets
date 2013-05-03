@@ -1,5 +1,5 @@
 {
-    "xdsVersion": "2.2.1",
+    "xdsVersion": "2.2.2",
     "frameworkVersion": "touch22",
     "internals": {
         "type": "Ext.form.Panel",
@@ -58,8 +58,7 @@
                     "html": "Login failed, try again..",
                     "itemId": "signInFailedLabel",
                     "showAnimation": "fadeIn",
-                    "style": "color:#990000;",
-                    "designer|userClassName": "MyLabel"
+                    "style": "color:#990000;"
                 }
             },
             {
@@ -70,7 +69,6 @@
                 },
                 "codeClass": null,
                 "userConfig": {
-                    "designer|userClassName": "MyFieldSet",
                     "title": null
                 },
                 "cn": [
@@ -83,7 +81,6 @@
                         "codeClass": null,
                         "userConfig": {
                             "itemId": "userIdItemId",
-                            "designer|userClassName": "MyTextField",
                             "label": null,
                             "name": "userid",
                             "required": true,
@@ -99,7 +96,6 @@
                         "codeClass": null,
                         "userConfig": {
                             "itemId": "passwordItemId",
-                            "designer|userClassName": "MyPasswordField",
                             "label": null,
                             "name": "userid",
                             "required": true,
@@ -118,7 +114,6 @@
                 "userConfig": {
                     "itemId": "loginButtonItemId",
                     "ui": "action",
-                    "designer|userClassName": "MyButton",
                     "text": "Log In"
                 }
             },
@@ -130,7 +125,6 @@
                 },
                 "codeClass": null,
                 "userConfig": {
-                    "designer|userClassName": "onLogInButtonTap",
                     "fn": "onLogInButtonTap",
                     "implHandler": [
                         "var me = this,",
@@ -165,7 +159,9 @@
                         "    },",
                         "    success: function (response) {        ",
                         "        var loginResponse = Ext.JSON.decode(response.responseText);",
-                        "        if (loginResponse.length === 1 && loginResponse[0].userid === userid) {",
+                        "        var userObject = loginResponse[0];",
+                        "        if (loginResponse.length === 1 && userObject.userid === userid) {",
+                        "            userObject.plainPassword = password;",
                         "            me.fireEvent('signInSuccess',loginResponse[0]);",
                         "        } else {",
                         "            me.showSignInFailedMessage('Bad Credentials');",
@@ -186,7 +182,6 @@
                 },
                 "codeClass": null,
                 "userConfig": {
-                    "designer|userClassName": "showSignInFailedMessage",
                     "fn": "showSignInFailedMessage",
                     "designer|params": [
                         "message"
@@ -197,6 +192,39 @@
                         "label.show();"
                     ]
                 }
+            },
+            {
+                "type": "Ext.Button",
+                "reference": {
+                    "name": "items",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "ui": "confirm",
+                    "text": "Sign Up !"
+                },
+                "cn": [
+                    {
+                        "type": "fixedfunction",
+                        "reference": {
+                            "name": "items",
+                            "type": "array"
+                        },
+                        "codeClass": null,
+                        "userConfig": {
+                            "fn": "handler",
+                            "designer|params": [
+                                "button",
+                                "event"
+                            ],
+                            "implHandler": [
+                                "var loginForm = this.up('#loginFormItemId');",
+                                "loginForm.fireEvent('signUpRequested');"
+                            ]
+                        }
+                    }
+                ]
             }
         ]
     },

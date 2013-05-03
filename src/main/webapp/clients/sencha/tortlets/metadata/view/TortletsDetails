@@ -29,8 +29,7 @@
             "codeClass": null,
             "userConfig": {
                 "html": "",
-                "margin": 10,
-                "designer|userClassName": "MyLabel"
+                "margin": 10
             },
             "designerId": "d18152e7-7a49-4a02-ad4e-0b51d0eea3fd"
         },
@@ -43,7 +42,6 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "designer|userClassName": "MyTitleBar1",
                 "title": "Tortlet"
             },
             "designerId": "32a67882-8f70-4574-a1ae-6790eb991159",
@@ -58,7 +56,6 @@
                     "userConfig": {
                         "name": "tortletsDetailsBackButton",
                         "ui": "back",
-                        "designer|userClassName": "MyButton3",
                         "designer|displayName": "TortletsDetailBack",
                         "text": "Back"
                     },
@@ -81,7 +78,6 @@
                     "userConfig": {
                         "name": "tortletDetailsSaveButton",
                         "align": "right",
-                        "designer|userClassName": "MyButton4",
                         "text": "Save"
                     },
                     "designerId": "07af0886-2d9e-453b-93ad-7485abd11357",
@@ -103,7 +99,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTextField1",
                 "designer|displayName": "TortletTitle",
                 "label": "Title",
                 "name": "title"
@@ -118,7 +113,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTextArea3",
                 "label": "Notes",
                 "name": "notes"
             },
@@ -133,7 +127,6 @@
             "codeClass": null,
             "userConfig": {
                 "margin": 10,
-                "designer|userClassName": "MyFieldSet",
                 "designer|displayName": "CompletedFieldSet",
                 "title": null
             },
@@ -148,7 +141,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "margin": null,
-                        "designer|userClassName": "MyToggleField",
                         "designer|displayName": "CompletedToggleField",
                         "label": "Completed",
                         "labelWidth": null,
@@ -167,7 +159,6 @@
             "codeClass": null,
             "userConfig": {
                 "margin": 10,
-                "designer|userClassName": "MyFieldSet1",
                 "designer|displayName": "TortoiseDetailsFieldSet",
                 "title": null
             },
@@ -182,7 +173,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "ui": "plain",
-                        "designer|userClassName": "MyButton5",
                         "text": "Tortoise Details"
                     },
                     "designerId": "a3546506-2e48-4b6b-bbae-cdd39ccb6ead"

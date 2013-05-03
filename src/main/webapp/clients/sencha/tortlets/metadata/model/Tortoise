@@ -18,8 +18,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "title",
-                "designer|userClassName": "field11"
+                "name": "title"
             },
             "designerId": "16dd2bb5-b3c5-45fe-806b-0148292e23aa"
         },
@@ -31,8 +30,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "notes",
-                "designer|userClassName": "field12"
+                "name": "notes"
             },
             "designerId": "084f01a4-eb32-48db-b943-3479ca96207c"
         },
@@ -44,8 +42,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "startDate",
-                "designer|userClassName": "field13"
+                "name": "startDate"
             },
             "designerId": "0cbef821-c1ec-427c-a61b-00dde6fb2d8f"
         },
@@ -57,8 +54,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "endDate",
-                "designer|userClassName": "field14"
+                "name": "endDate"
             },
             "designerId": "e4602ea8-9532-4b7b-8d2e-66f922eaad14"
         },
@@ -71,8 +67,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "latestTortoiseScore",
-                "type": "int",
-                "designer|userClassName": "field15"
+                "type": "int"
             },
             "designerId": "65fa356d-be24-4a36-a934-5cc5bf01f81f"
         },
@@ -84,8 +79,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "createdOn",
-                "designer|userClassName": "field16"
+                "name": "createdOn"
             },
             "designerId": "3f30b410-3c6f-46b0-936b-359a5ad5e87e"
         },
@@ -98,8 +92,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "monday",
-                "type": "boolean",
-                "designer|userClassName": "field17"
+                "type": "boolean"
             },
             "designerId": "ced0842b-8d71-4e35-9c53-60af4ea481c1"
         },
@@ -112,8 +105,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "tuesday",
-                "type": "boolean",
-                "designer|userClassName": "field17"
+                "type": "boolean"
             },
             "designerId": "a768c03d-4278-4b99-80f1-135a0d30da2e"
         },
@@ -126,8 +118,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "wednesday",
-                "type": "boolean",
-                "designer|userClassName": "field17"
+                "type": "boolean"
             },
             "designerId": "529c5029-13a5-428a-aa54-84472e879fa0"
         },
@@ -140,8 +131,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "thursday",
-                "type": "boolean",
-                "designer|userClassName": "field17"
+                "type": "boolean"
             },
             "designerId": "1daee70a-b4a0-43bc-8913-f91084c480ec"
         },
@@ -154,8 +144,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "friday",
-                "type": "boolean",
-                "designer|userClassName": "field17"
+                "type": "boolean"
             },
             "designerId": "f1dadb24-0b80-4365-b74b-d08edbecee6e"
         },
@@ -168,8 +157,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "saturday",
-                "type": "boolean",
-                "designer|userClassName": "field17"
+                "type": "boolean"
             },
             "designerId": "097c9adf-846c-4d6e-993f-72790868c3da"
         },
@@ -182,8 +170,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "sunday",
-                "type": "boolean",
-                "designer|userClassName": "field17"
+                "type": "boolean"
             },
             "designerId": "9df4422e-f1d1-4955-8fa9-cdb3c0f7cb8f"
         },
@@ -195,8 +182,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "duration",
-                "designer|userClassName": "field24"
+                "name": "duration"
             },
             "designerId": "8d7b514e-e8f3-4b19-a6cb-7aa7d5932136"
         },
@@ -208,8 +194,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "userid",
-                "designer|userClassName": "field26"
+                "name": "userid"
             },
             "designerId": "d8e011f6-9200-43db-8721-e727779a6ebf"
         },
@@ -221,7 +206,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyBelongsToAssociation1",
                 "designer|displayName": "BelongsToDreamAssociation",
                 "model": "Dream",
                 "foreignKey": "dream"
@@ -236,7 +220,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy4",
                 "designer|displayName": "TortoiseRestProxy",
                 "url": "http://dummy.url",
                 "headers": [
@@ -254,8 +237,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "id",
-                "designer|userClassName": "field35"
+                "name": "id"
             },
             "designerId": "f04fc566-4466-4981-8164-1e9604611391"
         },
@@ -268,8 +250,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "version",
-                "type": "int",
-                "designer|userClassName": "field36"
+                "type": "int"
             },
             "designerId": "f163d932-cf25-4ea1-acff-e193de438b09"
         },
@@ -281,7 +262,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyPresenceValidation1",
                 "designer|displayName": "titlePresence",
                 "field": "title"
             },

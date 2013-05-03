@@ -22,7 +22,6 @@
             "codeClass": null,
             "userConfig": {
                 "actionMethods": null,
-                "designer|userClassName": "MyRestProxy",
                 "enablePagingParams": false,
                 "url": "http://dummy.url",
                 "headers": [
@@ -49,9 +48,6 @@
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader"
-                    },
                     "designerId": "207d21af-e6bb-4d25-9c67-1f2d2c2be027"
                 }
             ]

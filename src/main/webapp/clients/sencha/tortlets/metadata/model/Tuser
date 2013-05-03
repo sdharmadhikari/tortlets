@@ -18,8 +18,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "firstName",
-                "designer|userClassName": "field27"
+                "name": "firstName"
             },
             "designerId": "dfb0dae0-d323-4ec3-90f6-5305032443ab"
         },
@@ -31,8 +30,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "lastName",
-                "designer|userClassName": "field28"
+                "name": "lastName"
             },
             "designerId": "fc5873c1-1db0-461a-8853-442ae71a5b93"
         },
@@ -44,8 +42,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "userid",
-                "designer|userClassName": "field29"
+                "name": "userid"
             },
             "designerId": "8a34b5d2-1873-482f-88b4-5730be96b5eb"
         },
@@ -57,8 +54,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "password",
-                "designer|userClassName": "field30"
+                "name": "password"
             },
             "designerId": "55b64d48-cbd3-4b2d-8006-4eecd24bc765"
         },
@@ -72,8 +68,7 @@
             "userConfig": {
                 "name": "latestDreamScore",
                 "persist": false,
-                "type": "int",
-                "designer|userClassName": "field31"
+                "type": "int"
             },
             "designerId": "930975de-e99a-49a3-b659-e8ac00209318"
         },
@@ -85,8 +80,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "status",
-                "designer|userClassName": "field32"
+                "name": "status"
             },
             "designerId": "513c72e2-1081-4924-9e28-154898b9b348"
         },
@@ -98,8 +92,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "allowedDelayDays",
-                "designer|userClassName": "field33"
+                "name": "allowedDelayDays"
             },
             "designerId": "7d3ecb17-ea4b-482f-881b-9800738741f9"
         },
@@ -111,8 +104,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "birthDate",
-                "designer|userClassName": "field34"
+                "name": "birthDate"
             },
             "designerId": "ffb28261-59a2-4d24-8e3c-f37f1ec04522"
         },
@@ -124,8 +116,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "timeZone",
-                "designer|userClassName": "field35"
+                "name": "timeZone"
             },
             "designerId": "17b01708-53b0-4e69-b24b-0a134f80c033"
         },
@@ -137,7 +128,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyHasManyAssociation1",
                 "designer|displayName": "HasManyDreamsAssociation",
                 "model": "Dream"
             },
@@ -152,8 +142,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "version",
-                "type": "int",
-                "designer|userClassName": "field39"
+                "type": "int"
             },
             "designerId": "147aa558-24ab-42d4-b7cb-e66f79e90858"
         }

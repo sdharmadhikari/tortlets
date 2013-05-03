@@ -16,7 +16,6 @@
         "style": "background-color:LightGreen;",
         "designer|userClassName": "DreamCaraoselCard",
         "designer|userAlias": "dreamCaraoselCard",
-        "designer|displayName": "Dream1",
         "layout": "vbox"
     },
     "configAlternates": {
@@ -48,7 +47,6 @@
                 "right": null,
                 "ui": "action-small",
                 "width": "10%",
-                "designer|userClassName": "MyButton14",
                 "iconAlign": null,
                 "text": "MyButton14"
             },
