@@ -69,7 +69,7 @@ Ext.define('MyApp.view.loginmodule', {
                     loginForm.fireEvent('signUpRequested');
                 },
                 ui: 'confirm',
-                text: 'Sign Up !'
+                text: '3 Seconds Sign Up !'
             }
         ]
     },

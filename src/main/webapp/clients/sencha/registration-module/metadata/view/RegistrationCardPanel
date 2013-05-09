@@ -43,6 +43,207 @@
             },
             "codeClass": null,
             "userConfig": {
+                "itemId": "whatsYourNameForm"
+            },
+            "designerId": "11048450-c0bd-4b46-9764-42d9e809afd0",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Whats Your Name, Buddy !"
+                    },
+                    "designerId": "07f7be06-32e7-400f-a86c-7d131732bec6",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "firstNameAsUserId",
+                                "label": null,
+                                "placeHolder": "Enter your first name.."
+                            },
+                            "designerId": "8363c5aa-e7b3-46a1-a94b-eeacc10938a7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Type any word you like .."
+                    },
+                    "designerId": "ef49c0eb-c090-419a-9c49-ac4ba0b0df8d",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "wordYouLike",
+                                "label": null,
+                                "labelWidth": "0%",
+                                "placeHolder": "Temporary password.."
+                            },
+                            "designerId": "1c8e66b0-2182-459c-8732-4c6a2272d4bc"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "whatsYourNameFormSubmit",
+                        "title": null
+                    },
+                    "designerId": "e320a67a-ea68-43b4-9508-14fc122d9304",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "whatsYourNameFormButton",
+                                "ui": "action",
+                                "text": "Sign Up !"
+                            },
+                            "designerId": "656ed86b-82da-42e9-beeb-70fd8837da54",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var registrationCardPanel = this.up('registrationCardPanel');",
+                                            "",
+                                            "var whatsYourNameForm = registrationCardPanel.down('#whatsYourNameForm');",
+                                            "",
+                                            "var firstNameAsUserid = whatsYourNameForm.down('#firstNameAsUserId');",
+                                            "var wordYouLike = whatsYourNameForm.down('#wordYouLike');",
+                                            "",
+                                            "firstNameAsUserid = firstNameAsUserid.getValue();",
+                                            "wordYouLike = wordYouLike.getValue();",
+                                            "",
+                                            "",
+                                            "var userObject = {};",
+                                            "",
+                                            "userObject.userid = firstNameAsUserid;",
+                                            "userObject.password = wordYouLike;",
+                                            "",
+                                            "var nameRgx = /^[A-Za-z ]{3,20}$/;",
+                                            "var errors = [];",
+                                            "",
+                                            "for(var field in userObject){",
+                                            "    console.log(field + ': ' + userObject[field]);",
+                                            "    if(userObject[field] === ''){",
+                                            "        var msg = 'Fields Are Mandatory !';",
+                                            "        Ext.Msg.alert('',msg,Ext.emptyFn);",
+                                            "        errors[errors.length] = msg;",
+                                            "        return;",
+                                            "    }",
+                                            "}",
+                                            "",
+                                            "if(! nameRgx.test(userObject.userid)){",
+                                            "    var msg = 'Name is invalid ! At least 3 in length and no spaces. You could append last name';",
+                                            "    Ext.Msg.alert('',msg,Ext.emptyFn); ",
+                                            "    errors[errors.length] = msg;",
+                                            "    return;",
+                                            "}",
+                                            "",
+                                            "//TODO : Need to add validation for worldYouLike",
+                                            "",
+                                            "",
+                                            "userObject.firstName = firstNameAsUserid;",
+                                            "",
+                                            "userObject.status = 'ACTIVE';",
+                                            "",
+                                            "var userObjectJson = Ext.JSON.encode(userObject);",
+                                            "",
+                                            "",
+                                            "var registrationUrl = registrationCardPanel.getInitialConfig().registrationUrl;",
+                                            "",
+                                            "Ext.Ajax.request({",
+                                            "    url: registrationUrl,",
+                                            "    method: 'post',",
+                                            "    jsonData : userObjectJson,",
+                                            "    headers : { ",
+                                            "        Accept : 'application/json' ",
+                                            "    },",
+                                            "    success: function (response) { ",
+                                            "        var userObject = Ext.JSON.decode(response.responseText);       ",
+                                            "        userObject.plainPassword = wordYouLike;",
+                                            "",
+                                            "        if (userObject.createdOn !== null) {",
+                                            "            //registrationCardPanel.fireEvent('signUpSuccess',userObject);",
+                                            "            var quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');",
+                                            "            var generatedUserId = quickSignUpDoneForm.down('#generatedUserId');",
+                                            "            generatedUserId.setValue(userObject.userid);",
+                                            "            var wordAsPassword = quickSignUpDoneForm.down('#wordAsPassword');",
+                                            "            wordAsPassword.setValue(userObject.plainPassword);",
+                                            "",
+                                            "            registrationCardPanel.setActiveItem(2);",
+                                            "        } else {",
+                                            "            alert('Either return userObject had no same userid or two objects returned');",
+                                            "        }",
+                                            "    },",
+                                            "    failure: function (response) {",
+                                            "        //me.showSignInFailedMessage('Server error. Please try again later.');",
+                                            "        var msg = 'Server error, try later';",
+                                            "        Ext.Msg.alert('',msg,Ext.emptyFn);",
+                                            "    }",
+                                            "});",
+                                            "",
+                                            "",
+                                            ""
+                                        ]
+                                    },
+                                    "designerId": "b475fd16-672a-4c8d-a8cf-4c328f25f5a7"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "itemId": "registrationPage1"
             },
             "designerId": "de4e8d8a-aab2-4445-aa2a-2225648874c7",
@@ -244,7 +445,7 @@
                                             "",
                                             "userObject.userid = userid.getValue();",
                                             "userObject.password = password.getValue();",
-                                            "userObject.retypePassword = confirmedPassword.getValue();",
+                                            "userObject.confirmedPassword = confirmedPassword.getValue();",
                                             "userObject.status = 'ACTIVE';",
                                             "",
                                             "//////////////////////Validations////////////////////////////////",
@@ -303,14 +504,12 @@
                                             "}",
                                             "",
                                             "",
-                                            "if(userObject.password !== userObject.confirmPassword) {",
+                                            "if(userObject.password !== userObject.confirmedPassword) {",
                                             "    Ext.Msg.alert('','Passwords do not match !',Ext.emptyFn);",
                                             "    errors[errors.length] = 'Passwords do not match !';",
                                             "    return;",
                                             "}",
                                             "",
-                                            "Ext.Msg.alert('','testing mode',Ext.emptyFn);",
-                                            "return;",
                                             "/*",
                                             "// Remember in order to report all errors at once, you have to remove all return statements.",
                                             "var msg = \"Please Enter Valide Data...\\n\";",
@@ -335,14 +534,14 @@
                                             "    },",
                                             "    success: function (response) { ",
                                             "        alert('signUpSuccess');",
-                                            "        //var loginResponse = Ext.JSON.decode(response.responseText);",
-                                            "        //var userObject = loginResponse[0];",
-                                            "        //if (loginResponse.length === 1 && userObject.userid === userid) {",
-                                            "        //    userObject.plainPassword = password;",
-                                            "        //   me.fireEvent('signUpSuccess',loginResponse[0]);",
-                                            "        //} else {",
-                                            "        //    me.showSignInFailedMessage('Bad Credentials');",
-                                            "        //}",
+                                            "        var loginResponse = Ext.JSON.decode(response.responseText);",
+                                            "        var userObject = loginResponse[0];",
+                                            "        if (loginResponse.length === 1 && userObject.userid === userid) {",
+                                            "           userObject.plainPassword = password;",
+                                            "           registrationCardPanel.fireEvent('signUpSuccess',loginResponse[0]);",
+                                            "        } else {",
+                                            "            alert('Either return userObject had no same userid or two objects returned');",
+                                            "        }",
                                             "    },",
                                             "    failure: function (response) {",
                                             "        //me.showSignInFailedMessage('Server error. Please try again later.');",
@@ -361,49 +560,162 @@
             ]
         },
         {
-            "type": "Ext.Panel",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "html": "Registration Successful !",
-                "itemId": "registrationPage2"
+                "itemId": "quickSignUpDoneForm"
             },
-            "designerId": "49bed7f7-365e-49e2-9e55-707aecca6a14",
+            "designerId": "9fa3d238-d358-4073-aed1-62f4572906ea",
             "cn": [
                 {
-                    "type": "Ext.Button",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "text": "Go To Sign In"
+                        "html": "<h1>Quick Sign Up Done !</h1> <br/> <p style=\"font-size:small\">You can now use following auto-generated credentials on any device. This screen is shown only once ! </p>",
+                        "ui": "light",
+                        "designer|displayName": "quickSignUpDoneLabel"
                     },
-                    "designerId": "4a9b3a27-6712-479e-aa2d-b98446dd2afb",
+                    "designerId": "98bf40c7-dfd0-49c2-aa1e-668425a2e5ca"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "generatedUserIdFieldSet",
+                        "title": ""
+                    },
+                    "designerId": "e8d98759-be5a-449b-afe2-4caee4fce34c",
                     "cn": [
                         {
-                            "type": "fixedfunction",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "handler",
-                                "designer|params": [
-                                    "button",
-                                    "event"
-                                ],
-                                "implHandler": [
-                                    "var registrationCardPanel = this.up('registrationCardPanel');",
-                                    "registrationCardPanel.fireEvent('signUpSuccess',button);"
-                                ]
+                                "disabled": true,
+                                "itemId": "generatedUserId",
+                                "label": "Userid",
+                                "labelWidth": "40%"
                             },
-                            "designerId": "920b1857-bf6b-42ad-a48f-fab0e0c5c77b"
+                            "designerId": "6b39004e-3efc-4a6f-92c3-21c6c7be3a1e"
+                        },
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "itemId": "wordAsPassword",
+                                "label": "Password",
+                                "labelWidth": "40%"
+                            },
+                            "designerId": "5f10cf78-1fed-4557-9402-b510d71d683f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": null
+                    },
+                    "designerId": "e86ee0c0-b546-4d67-aaef-248f0e26485b",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "ui": "action",
+                                "text": "Start Using App !"
+                            },
+                            "designerId": "4a9b3a27-6712-479e-aa2d-b98446dd2afb",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var registrationCardPanel = this.up('registrationCardPanel');",
+                                            "registrationCardPanel.fireEvent('signUpSuccess',button);"
+                                        ]
+                                    },
+                                    "designerId": "920b1857-bf6b-42ad-a48f-fab0e0c5c77b"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<p style=\"font-size:small\"> Click here, If you want to edit credentials and continue to full-fledge secure registration. </p>",
+                        "designer|displayName": "continueSecureRegLabel"
+                    },
+                    "designerId": "274f83ca-995e-40ef-a398-6d0bed78624b"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": ""
+                    },
+                    "designerId": "8353836c-5dbc-4e3f-8ebf-c5ff56ea911d",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "ui": "confirm",
+                                "text": "Secure Sign Up !"
+                            },
+                            "designerId": "ca10cafd-4bc8-468d-998d-28324a7fa2da"
                         }
                     ]
                 }

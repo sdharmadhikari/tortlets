@@ -1,14 +1,17 @@
 package com.softrism.tortlets.web;
 
+import com.softrism.tortlets.domain.Tuser;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,22 +22,7 @@ import java.util.Arrays;
  */
 
 public aspect TuserControllerAspectj {
-  /*
-    @Around("execution(* com.softrism.tortlets.web.TuserController.jsonFindTusersByUseridEqualsAndPasswordEquals(..))")
-    public Object interceptedMethod(ProceedingJoinPoint joinPoint)  {
 
-        Object[] args =   joinPoint.getArgs();
-        System.out.println("HICHECKED ARGUMENTS : " + Arrays.toString(args));
-
-        try {
-            return joinPoint.proceed(args);
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-            return null;//To change body of catch statement use File | Settings | File Templates.
-        }
-
-    }
-   */
     pointcut authUser(String userid, String password) :  execution(* com.softrism.tortlets.web.TuserController.jsonFindTusersByUseridEqualsAndPasswordEquals(..)) && args(userid,password);
 
     Object around(String userid, String password) : authUser(userid,password){
@@ -44,6 +32,55 @@ public aspect TuserControllerAspectj {
         System.out.println("encoded " + encoded);
         return proceed(userid,encoded) ;
     }
+
+    pointcut aroundCreateUSer(String jsonUserString) : execution(* com.softrism.tortlets.web.TuserController.createFromJson(..)) && args(jsonUserString);
+
+    Object around(String jsonUserString) : aroundCreateUSer(jsonUserString){
+
+        Tuser tuser = Tuser.fromJsonToTuser(jsonUserString);
+
+        String userid = tuser.getUserid();
+        List tuserList = Tuser.findTusersByUseridEquals(userid.trim()).getResultList();
+        while(tuserList.size() > 0){
+            double random = Math.random();
+            int count = (int)(random * 1000);
+            userid = userid + count;
+            tuserList = Tuser.findTusersByUseridEquals(userid.trim()).getResultList();
+        }
+
+        tuser.setUserid(userid);
+        ShaPasswordEncoder encoder = new ShaPasswordEncoder(256);
+        String password = tuser.getPassword() ;
+        /*
+        if(userid.length() <= 6){
+            double random = Math.random();
+            int count = (int)(random * 1000);
+            password = userid + count;
+        } else {
+             password = userid;
+        }
+        */
+        String encoded = encoder.encodePassword(password,null);
+        tuser.setPassword(encoded);
+        String finalJsonUser = tuser.toJson();
+
+        ResponseEntity responseEntity = (ResponseEntity)proceed(finalJsonUser);
+
+        tuser = Tuser.findTusersByUseridEquals(userid).getSingleResult();
+        return new ResponseEntity<String>(tuser.toJson(),responseEntity.getHeaders(), responseEntity.getStatusCode());
+    }
+    /*
+    This does not work, neither if I move throws close with try/catch
+     @Around("execution(* com.softrism.tortlets.web.TuserController.jsonFindTusersByUseridEqualsAndPasswordEquals(..)) && args(userid,password)")
+     public Object myMethod(ProceedingJoinPoint jointPoint, String userid, String password) throws Throwable {
+         ShaPasswordEncoder encoder = new ShaPasswordEncoder(256);
+         String encoded = encoder.encodePassword(password,null);
+         System.out.println("userid " + userid);
+         System.out.println("encoded " + encoded);
+
+         return jointPoint.proceed(new Object[] {userid,encoded}) ;
+     }
+     */
 
 
 }

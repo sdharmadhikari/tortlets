@@ -31,6 +31,130 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
             },
             {
                 xtype: 'formpanel',
+                itemId: 'whatsYourNameForm',
+                items: [
+                    {
+                        xtype: 'fieldset',
+                        title: 'Whats Your Name, Buddy !',
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                itemId: 'firstNameAsUserId',
+                                placeHolder: 'Enter your first name..'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'fieldset',
+                        title: 'Type any word you like ..',
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                itemId: 'wordYouLike',
+                                labelWidth: '0%',
+                                placeHolder: 'Temporary password..'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'fieldset',
+                        itemId: 'whatsYourNameFormSubmit',
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var registrationCardPanel = this.up('registrationCardPanel');
+
+                                    var whatsYourNameForm = registrationCardPanel.down('#whatsYourNameForm');
+
+                                    var firstNameAsUserid = whatsYourNameForm.down('#firstNameAsUserId');
+                                    var wordYouLike = whatsYourNameForm.down('#wordYouLike');
+
+                                    firstNameAsUserid = firstNameAsUserid.getValue();
+                                    wordYouLike = wordYouLike.getValue();
+
+
+                                    var userObject = {};
+
+                                    userObject.userid = firstNameAsUserid;
+                                    userObject.password = wordYouLike;
+
+                                    var nameRgx = /^[A-Za-z ]{3,20}$/;
+                                    var errors = [];
+
+                                    for(var field in userObject){
+                                        console.log(field + ': ' + userObject[field]);
+                                        if(userObject[field] === ''){
+                                            var msg = 'Fields Are Mandatory !';
+                                            Ext.Msg.alert('',msg,Ext.emptyFn);
+                                            errors[errors.length] = msg;
+                                            return;
+                                        }
+                                    }
+
+                                    if(! nameRgx.test(userObject.userid)){
+                                        var msg = 'Name is invalid ! At least 3 in length and no spaces. You could append last name';
+                                        Ext.Msg.alert('',msg,Ext.emptyFn); 
+                                        errors[errors.length] = msg;
+                                        return;
+                                    }
+
+                                    //TODO : Need to add validation for worldYouLike
+
+
+                                    userObject.firstName = firstNameAsUserid;
+
+                                    userObject.status = 'ACTIVE';
+
+                                    var userObjectJson = Ext.JSON.encode(userObject);
+
+
+                                    var registrationUrl = registrationCardPanel.getInitialConfig().registrationUrl;
+
+                                    Ext.Ajax.request({
+                                        url: registrationUrl,
+                                        method: 'post',
+                                        jsonData : userObjectJson,
+                                        headers : { 
+                                            Accept : 'application/json' 
+                                        },
+                                        success: function (response) { 
+                                            var userObject = Ext.JSON.decode(response.responseText);       
+                                            userObject.plainPassword = wordYouLike;
+
+                                            if (userObject.createdOn !== null) {
+                                                //registrationCardPanel.fireEvent('signUpSuccess',userObject);
+                                                var quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
+                                                var generatedUserId = quickSignUpDoneForm.down('#generatedUserId');
+                                                generatedUserId.setValue(userObject.userid);
+                                                var wordAsPassword = quickSignUpDoneForm.down('#wordAsPassword');
+                                                wordAsPassword.setValue(userObject.plainPassword);
+
+                                                registrationCardPanel.setActiveItem(2);
+                                            } else {
+                                                alert('Either return userObject had no same userid or two objects returned');
+                                            }
+                                        },
+                                        failure: function (response) {
+                                            //me.showSignInFailedMessage('Server error. Please try again later.');
+                                            var msg = 'Server error, try later';
+                                            Ext.Msg.alert('',msg,Ext.emptyFn);
+                                        }
+                                    });
+
+
+
+                                },
+                                itemId: 'whatsYourNameFormButton',
+                                ui: 'action',
+                                text: 'Sign Up !'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'formpanel',
                 itemId: 'registrationPage1',
                 items: [
                     {
@@ -116,7 +240,7 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
 
                                     userObject.userid = userid.getValue();
                                     userObject.password = password.getValue();
-                                    userObject.retypePassword = confirmedPassword.getValue();
+                                    userObject.confirmedPassword = confirmedPassword.getValue();
                                     userObject.status = 'ACTIVE';
 
                                     //////////////////////Validations////////////////////////////////
@@ -175,14 +299,12 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                     }
 
 
-                                    if(userObject.password !== userObject.confirmPassword) {
+                                    if(userObject.password !== userObject.confirmedPassword) {
                                         Ext.Msg.alert('','Passwords do not match !',Ext.emptyFn);
                                         errors[errors.length] = 'Passwords do not match !';
                                         return;
                                     }
 
-                                    Ext.Msg.alert('','testing mode',Ext.emptyFn);
-                                    return;
                                     /*
                                     // Remember in order to report all errors at once, you have to remove all return statements.
                                     var msg = "Please Enter Valide Data...\n";
@@ -207,14 +329,14 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                         },
                                         success: function (response) { 
                                             alert('signUpSuccess');
-                                            //var loginResponse = Ext.JSON.decode(response.responseText);
-                                            //var userObject = loginResponse[0];
-                                            //if (loginResponse.length === 1 && userObject.userid === userid) {
-                                            //    userObject.plainPassword = password;
-                                            //   me.fireEvent('signUpSuccess',loginResponse[0]);
-                                            //} else {
-                                            //    me.showSignInFailedMessage('Bad Credentials');
-                                            //}
+                                            var loginResponse = Ext.JSON.decode(response.responseText);
+                                            var userObject = loginResponse[0];
+                                            if (loginResponse.length === 1 && userObject.userid === userid) {
+                                                userObject.plainPassword = password;
+                                                registrationCardPanel.fireEvent('signUpSuccess',loginResponse[0]);
+                                            } else {
+                                                alert('Either return userObject had no same userid or two objects returned');
+                                            }
                                         },
                                         failure: function (response) {
                                             //me.showSignInFailedMessage('Server error. Please try again later.');
@@ -232,17 +354,63 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                 ]
             },
             {
-                xtype: 'panel',
-                html: 'Registration Successful !',
-                itemId: 'registrationPage2',
+                xtype: 'formpanel',
+                itemId: 'quickSignUpDoneForm',
                 items: [
                     {
-                        xtype: 'button',
-                        handler: function(button, event) {
-                            var registrationCardPanel = this.up('registrationCardPanel');
-                            registrationCardPanel.fireEvent('signUpSuccess',button);
-                        },
-                        text: 'Go To Sign In'
+                        xtype: 'label',
+                        html: '<h1>Quick Sign Up Done !</h1> <br/> <p style="font-size:small">You can now use following auto-generated credentials on any device. This screen is shown only once ! </p>',
+                        ui: 'light'
+                    },
+                    {
+                        xtype: 'fieldset',
+                        itemId: 'generatedUserIdFieldSet',
+                        title: '',
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                disabled: true,
+                                itemId: 'generatedUserId',
+                                label: 'Userid',
+                                labelWidth: '40%'
+                            },
+                            {
+                                xtype: 'textfield',
+                                disabled: true,
+                                itemId: 'wordAsPassword',
+                                label: 'Password',
+                                labelWidth: '40%'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'fieldset',
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var registrationCardPanel = this.up('registrationCardPanel');
+                                    registrationCardPanel.fireEvent('signUpSuccess',button);
+                                },
+                                ui: 'action',
+                                text: 'Start Using App !'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'label',
+                        html: '<p style="font-size:small"> Click here, If you want to edit credentials and continue to full-fledge secure registration. </p>'
+                    },
+                    {
+                        xtype: 'fieldset',
+                        title: '',
+                        items: [
+                            {
+                                xtype: 'button',
+                                ui: 'confirm',
+                                text: 'Secure Sign Up !'
+                            }
+                        ]
                     }
                 ]
             }

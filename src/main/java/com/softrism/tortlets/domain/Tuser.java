@@ -20,6 +20,7 @@ import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
+import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
 @RooJavaBean
@@ -29,7 +30,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class Tuser {
 
     @NotNull
-    @Size(min = 6, max = 16)
+    @Size(min = 3, max = 23)
     @Column(unique = true)
     private String userid;
 
@@ -40,12 +41,10 @@ public class Tuser {
     @Size(min = 0, max = 16)
     private String retypePassword;
 
-    @NotNull
-    @Size(min = 1, max = 25)
+    @Size(min = 0, max = 25)
     private String firstName;
 
-    @NotNull
-    @Size(min = 1, max = 25)
+    @Size(min = 0, max = 25)
     private String lastName;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -89,6 +88,7 @@ public class Tuser {
         Date now = new Date();
         createdOn = now;
         updatedON = now;
+
         timezone = TuserTimezoneEnum.PST; // This needs to be removed later and come from client.
     }
 
@@ -96,6 +96,9 @@ public class Tuser {
     private void preUpdate() {
         Date now = new Date();
         updatedON = now;
+        ShaPasswordEncoder encoder = new ShaPasswordEncoder(256);
+        String encoded = encoder.encodePassword(password,null);
+        password = encoded;
     }
 
     @Transactional
