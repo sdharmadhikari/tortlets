@@ -19,6 +19,7 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
 
     config: {
         registrationUrl: 'http://localhost:8080/tusers',
+        base64JsLocation: 'static/js/Base64.js',
         itemId: 'registrationCardPanelItemId',
         layout: {
             type: 'card'
@@ -121,7 +122,12 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                         success: function (response) { 
                                             var userObject = Ext.JSON.decode(response.responseText);       
                                             userObject.plainPassword = wordYouLike;
-
+                                            /*
+                                            var tok = userObject.userid + ':' + userObject.plainPassword;
+                                            var hash = atob(tok);
+                                            var authHeaderValue = "Basic " + hash;
+                                            alert(authHeaderValue);
+                                            */
                                             if (userObject.createdOn !== null) {
                                                 //registrationCardPanel.fireEvent('signUpSuccess',userObject);
                                                 var quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
@@ -129,8 +135,9 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                                 generatedUserId.setValue(userObject.userid);
                                                 var wordAsPassword = quickSignUpDoneForm.down('#wordAsPassword');
                                                 wordAsPassword.setValue(userObject.plainPassword);
-
-                                                registrationCardPanel.setActiveItem(2);
+                                                quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
+                                                quickSignUpDoneForm.setRecord(userObject);
+                                                registrationCardPanel.animateActiveItem(quickSignUpDoneForm, { type : 'slide'});
                                             } else {
                                                 alert('Either return userObject had no same userid or two objects returned');
                                             }
@@ -165,7 +172,8 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                 xtype: 'textfield',
                                 itemId: 'firstName',
                                 label: 'First Name',
-                                labelWidth: '37%'
+                                labelWidth: '37%',
+                                name: 'firstName'
                             },
                             {
                                 xtype: 'textfield',
@@ -206,10 +214,17 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                 labelWidth: '37%'
                             },
                             {
-                                xtype: 'passwordfield',
-                                itemId: 'confirmedPassword',
-                                label: 'Confirm',
+                                xtype: 'textfield',
+                                hidden: true,
+                                itemId: 'readablePassword',
+                                label: 'Password',
                                 labelWidth: '37%'
+                            },
+                            {
+                                xtype: 'checkboxfield',
+                                itemId: 'showPasswordCheckBox',
+                                label: 'Show Password in Clear Text',
+                                labelWidth: '50%'
                             }
                         ]
                     },
@@ -225,22 +240,28 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                     var firstName = registrationCardPanel.down('#firstName');
                                     var lastName = registrationCardPanel.down('#lastName');
                                     var userEmail = registrationCardPanel.down('#userEmail');
-                                    var confirmEmail = registrationCardPanel.down('#confirmEmail');
+                                    //var confirmEmail = registrationCardPanel.down('#confirmEmail');
 
                                     var userid = registrationCardPanel.down('#userid');
                                     var password = registrationCardPanel.down('#password');
-                                    var confirmedPassword = registrationCardPanel.down('#confirmedPassword');
+                                    var readablePassword = registrationCardPanel.down('#readablePassword');
+                                    var showPasswordCheckBox = registrationCardPanel.down('#showPasswordCheckBox');
 
                                     var userObject = {};
 
                                     userObject.firstName = firstName.getValue();
                                     userObject.lastName = lastName.getValue();
                                     userObject.userEmail = userEmail.getValue();
-                                    userObject.confirmEmail = confirmEmail.getValue();
-
+                                    //userObject.confirmEmail = confirmEmail.getValue();
                                     userObject.userid = userid.getValue();
-                                    userObject.password = password.getValue();
-                                    userObject.confirmedPassword = confirmedPassword.getValue();
+
+                                    if(showPasswordCheckBox.getSubmitValue() === null) {
+                                        userObject.password = password.getValue();
+                                    }else {
+                                        userObject.password = readablePassword.getValue();
+                                    }
+
+
                                     userObject.status = 'ACTIVE';
 
                                     //////////////////////Validations////////////////////////////////
@@ -278,13 +299,13 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                         errors[errors.length] = 'Email format invalid';
                                         return;
                                     }
-
+                                    /*
                                     if(userObject.userEmail !== userObject.confirmEmail) {
-                                        Ext.Msg.alert('','Emails do not match !',Ext.emptyFn);
-                                        errors[errors.length] =  'Emails do not match !';
-                                        return;
+                                    Ext.Msg.alert('','Emails do not match !',Ext.emptyFn);
+                                    errors[errors.length] =  'Emails do not match !';
+                                    return;
                                     }
-
+                                    */
 
                                     if(! useridRgx.test(userObject.userid)){
                                         Ext.Msg.alert('','Userid Invalid, must be 6 in length, no special symbols',Ext.emptyFn); 
@@ -295,13 +316,6 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                     if(! useridRgx.test(userObject.password)){
                                         Ext.Msg.alert('','Password invalid, Min 6 in length, allowed a-z,0-9 and symbols !@#$%^&*()_',Ext.emptyFn); 
                                         errors[errors.length] = 'Password invalid, Min 6 in length, allowed a-z,0-9 and symbols !@#$%^&*()_';
-                                        return;
-                                    }
-
-
-                                    if(userObject.password !== userObject.confirmedPassword) {
-                                        Ext.Msg.alert('','Passwords do not match !',Ext.emptyFn);
-                                        errors[errors.length] = 'Passwords do not match !';
                                         return;
                                     }
 
@@ -322,7 +336,7 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
 
                                     Ext.Ajax.request({
                                         url: registrationUrl,
-                                        method: 'post',
+                                        method: 'put',
                                         jsonData : userObjectJson,
                                         headers : { 
                                             Accept : 'application/json' 
@@ -369,17 +383,19 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                         items: [
                             {
                                 xtype: 'textfield',
-                                disabled: true,
+                                disabled: false,
                                 itemId: 'generatedUserId',
                                 label: 'Userid',
-                                labelWidth: '40%'
+                                labelWidth: '40%',
+                                readOnly: true
                             },
                             {
                                 xtype: 'textfield',
-                                disabled: true,
+                                disabled: false,
                                 itemId: 'wordAsPassword',
                                 label: 'Password',
-                                labelWidth: '40%'
+                                labelWidth: '40%',
+                                readOnly: true
                             }
                         ]
                     },
@@ -403,10 +419,39 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                     },
                     {
                         xtype: 'fieldset',
+                        itemId: 'secureSignUpButtonFieldSet',
                         title: '',
                         items: [
                             {
                                 xtype: 'button',
+                                handler: function(button, event) {
+                                    var registrationCardPanel = this.up('registrationCardPanel');
+                                    var registrationPage1 = registrationCardPanel.down('#registrationPage1');
+                                    var quickSignUpDoneForm = this.up('#quickSignUpDoneForm');
+                                    var userObject = quickSignUpDoneForm.getRecord();
+
+                                    var firstName = registrationPage1.down('#firstName');
+                                    var lastName = registrationPage1.down('#lastName');
+                                    var userEmail = registrationPage1.down('#userEmail');
+                                    var confirmEmail = registrationPage1.down('#confirmEmail');
+
+                                    var userid = registrationPage1.down('#userid');
+                                    var password = registrationPage1.down('#password');
+                                    var readablePassword = registrationPage1.down('#readablePassword');
+
+                                    firstName.setValue(userObject.firstName);
+                                    lastName.setValue(userObject.lastName);
+                                    userEmail.setValue(userObject.email);
+                                    confirmEmail.setValue(userObject.confirmEmail);
+
+                                    userid.setValue(userObject.userid);
+                                    password.setValue(userObject.plainPassword);
+                                    readablePassword.setValue(userObject.plainPassword);
+
+                                    registrationCardPanel.animateActiveItem(registrationPage1, { type : 'slide' });
+
+
+                                },
                                 ui: 'confirm',
                                 text: 'Secure Sign Up !'
                             }
@@ -414,7 +459,39 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onShowPasswordCheckBoxCheck',
+                event: 'check',
+                delegate: '#showPasswordCheckBox'
+            },
+            {
+                fn: 'onShowPasswordCheckBoxUncheck',
+                event: 'uncheck',
+                delegate: '#showPasswordCheckBox'
+            }
         ]
+    },
+
+    onShowPasswordCheckBoxCheck: function(checkboxfield, e, eOpts) {
+        var registrationPage1 = checkboxfield.up('#registrationPage1');
+
+        var password = registrationPage1.down('#password');
+        var readablePassword = registrationPage1.down('#readablePassword');
+        readablePassword.setValue(password.getValue());
+        password.hide();
+        readablePassword.show();
+    },
+
+    onShowPasswordCheckBoxUncheck: function(checkboxfield, e, eOpts) {
+        var registrationPage1 = checkboxfield.up('#registrationPage1');
+
+        var password = registrationPage1.down('#password');
+        var readablePassword = registrationPage1.down('#readablePassword');
+        password.setValue(readablePassword.getValue());
+        password.show();
+        readablePassword.hide();
     }
 
 });

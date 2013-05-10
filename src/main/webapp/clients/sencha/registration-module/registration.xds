@@ -28,6 +28,12 @@
                 "metadata/resource/Library"
             ],
             "className": "Library"
+        },
+        "af1de5c9-eb00-4e9e-963e-dab033b6f9d3": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
         }
     },
     "viewOrderMap": {
@@ -40,7 +46,8 @@
         ],
         "model": [],
         "resource": [
-            "a598bd29-910a-4a96-8b5e-9663202da0e7"
+            "a598bd29-910a-4a96-8b5e-9663202da0e7",
+            "af1de5c9-eb00-4e9e-963e-dab033b6f9d3"
         ],
         "app": [
             "application"

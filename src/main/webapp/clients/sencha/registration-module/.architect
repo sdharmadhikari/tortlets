@@ -47,7 +47,6 @@
                 },
                 {
                     "id": "de4e8d8a-aab2-4445-aa2a-2225648874c7",
-                    "expanded": false,
                     "cn": [
                         {
                             "id": "ad9f8329-e14a-4724-a2f6-1f8cb18b6ad9",
@@ -77,6 +76,17 @@
                                 },
                                 {
                                     "id": "7668c4d9-f3be-4e5c-b228-a653cfa20431"
+                                },
+                                {
+                                    "id": "75ec1816-7c7c-4b24-bfdb-155cc0253f17",
+                                    "cn": [
+                                        {
+                                            "id": "1e59a185-7a01-41d0-8318-c3959bb37ec7"
+                                        },
+                                        {
+                                            "id": "b9b5c2d9-bb7b-4017-9851-89774ff0b284"
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -97,6 +107,7 @@
                 },
                 {
                     "id": "9fa3d238-d358-4073-aed1-62f4572906ea",
+                    "expanded": false,
                     "cn": [
                         {
                             "id": "98bf40c7-dfd0-49c2-aa1e-668425a2e5ca"
@@ -132,7 +143,12 @@
                             "id": "8353836c-5dbc-4e3f-8ebf-c5ff56ea911d",
                             "cn": [
                                 {
-                                    "id": "ca10cafd-4bc8-468d-998d-28324a7fa2da"
+                                    "id": "ca10cafd-4bc8-468d-998d-28324a7fa2da",
+                                    "cn": [
+                                        {
+                                            "id": "65df3088-cc65-4100-af21-a758a8e64fa0"
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -150,6 +166,9 @@
         },
         "a598bd29-910a-4a96-8b5e-9663202da0e7": {
             "id": "a598bd29-910a-4a96-8b5e-9663202da0e7"
+        },
+        "af1de5c9-eb00-4e9e-963e-dab033b6f9d3": {
+            "id": "af1de5c9-eb00-4e9e-963e-dab033b6f9d3"
         }
     },
     "tabState": {
