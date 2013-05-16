@@ -24,8 +24,9 @@ Ext.define('MyApp.controller.MyController', {
         }
     },
 
-    onRegistrationCardPanelItemIdSignUpSuccess: function(panel) {
-        alert('real success');
+    onRegistrationCardPanelItemIdSignUpSuccess: function(userObject) {
+        var json1 = Ext.JSON.encode(userObject);
+        alert(json1);
     }
 
 });

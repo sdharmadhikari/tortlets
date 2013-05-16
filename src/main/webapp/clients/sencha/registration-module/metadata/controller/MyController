@@ -20,10 +20,11 @@
             "userConfig": {
                 "fn": "onRegistrationCardPanelItemIdSignUpSuccess",
                 "designer|params": [
-                    "panel"
+                    "userObject"
                 ],
                 "implHandler": [
-                    "alert('real success');"
+                    "var json1 = Ext.JSON.encode(userObject);",
+                    "alert(json1);"
                 ],
                 "name": "signUpSuccess",
                 "designer|targetType": "RegistrationCardPanel",

@@ -75,7 +75,11 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                     wordYouLike = wordYouLike.getValue();
 
 
-                                    var userObject = {};
+                                    var userObject = {};// Could have used Ext.define('MyApp.model.User') but
+                                    // want to avoid inline defining Ext classes as it really deserve 
+                                    // separate file. This is exportable component, so want to avoid 
+                                    // separate file too !
+
 
                                     userObject.userid = firstNameAsUserid;
                                     userObject.password = wordYouLike;
@@ -110,7 +114,7 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
 
                                     userObject.firstName = firstNameAsUserid;
 
-                                    userObject.status = 'ACTIVE';
+                                    userObject.status = 'ACTIVE'; // If server has user status
 
                                     var userObjectJson = Ext.JSON.encode(userObject);
 
@@ -125,24 +129,24 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                             Accept : 'application/json' 
                                         },
                                         success: function (response) { 
-                                            var userObject = Ext.JSON.decode(response.responseText);       
-                                            userObject.plainPassword = wordYouLike;
+                                            var createdUserObject = Ext.JSON.decode(response.responseText);       
+                                            createdUserObject.plainPassword = wordYouLike;
 
-                                            var tok = userObject.userid + ':' + userObject.plainPassword;
+                                            var tok = createdUserObject.userid + ':' + createdUserObject.plainPassword;
                                             var hash = Base64.encode(tok);
                                             var authHeaderValue = "Basic " + hash;
-                                            //alert(authHeaderValue);
-                                            userObject.authHeaderValue = authHeaderValue ;
+                                            createdUserObject.authHeaderValue = authHeaderValue ;
 
-                                            if (userObject.createdOn !== null) {
-                                                //registrationCardPanel.fireEvent('signUpSuccess',userObject);
+                                            if (createdUserObject.createdOn !== null) { // Here anything can be used which confirms server has behaved good
+
                                                 var quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
                                                 var generatedUserId = quickSignUpDoneForm.down('#generatedUserId');
-                                                generatedUserId.setValue(userObject.userid);
+                                                generatedUserId.setValue(createdUserObject.userid);
                                                 var wordAsPassword = quickSignUpDoneForm.down('#wordAsPassword');
-                                                wordAsPassword.setValue(userObject.plainPassword);
+                                                wordAsPassword.setValue(createdUserObject.plainPassword);
+
+                                                quickSignUpDoneForm.createdUserObject = createdUserObject;
                                                 quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
-                                                quickSignUpDoneForm.setRecord(userObject);
                                                 registrationCardPanel.animateActiveItem(quickSignUpDoneForm, { type : 'slide'});
                                             } else {
                                                 alert('Either return userObject had no same userid or two objects returned');
@@ -205,7 +209,9 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                 xtype: 'button',
                                 handler: function(button, event) {
                                     var registrationCardPanel = this.up('registrationCardPanel');
-                                    registrationCardPanel.fireEvent('signUpSuccess',button);
+                                    var quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
+                                    var userObject = quickSignUpDoneForm.createdUserObject;
+                                    registrationCardPanel.fireEvent('signUpSuccess',userObject);
                                 },
                                 ui: 'action',
                                 text: 'Start Using App !'
@@ -228,8 +234,7 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                     var registrationPage1 = registrationCardPanel.down('#registrationPage1');
                                     var quickSignUpDoneForm = this.up('#quickSignUpDoneForm');
 
-                                    var userObject = quickSignUpDoneForm.getRecord();// Actually this should be
-                                    // just quickSignUpDoneForm.userObject , change should be made
+                                    var userObject = quickSignUpDoneForm.createdUserObject;
 
                                     var firstName = registrationPage1.down('#firstName');
                                     var lastName = registrationPage1.down('#lastName');
@@ -240,8 +245,9 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                     var readablePassword = registrationPage1.down('#readablePassword');
 
 
-                                    registrationPage1.userObject = userObject; // Assigning userObject to registration
-                                    // page because will need things like authValue
+                                    registrationPage1.userObject = userObject; // Assigning userObject to 
+                                    // registration page because will need things like current authValue
+                                    // while updating the user
 
                                     firstName.setValue(userObject.firstName);
                                     lastName.setValue(userObject.lastName);
@@ -350,9 +356,7 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                     userObject.lastName = lastName.getValue();
                                     userObject.userEmail = userEmail.getValue();
                                     //userObject.confirmEmail = confirmEmail.getValue();
-                                    if(userObject.userid !== userid.getValue()) {
-                                        alert ('user wants to change userid');  
-                                    }
+
                                     userObject.userid = userid.getValue();
 
                                     if(showPasswordCheckBox.getSubmitValue() === null) {
@@ -438,23 +442,25 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                         jsonData : userObjectJson,
                                         headers : { 
                                             Accept : 'application/json' ,
-                                            Authorization : currentAuthHeaderValue
+                                            Authorization : currentAuthHeaderValue // User needs to use current
+                                            // authHeader value based on current password
                                         },
                                         success: function (response) { 
-                                            alert('user update success');
+
                                             var updatedUserObject = Ext.JSON.decode(response.responseText);
 
-                                            if (updatedUserObject.updatedOn !== null) {
+                                            if (updatedUserObject.updatedON > userObject.updatedON) {
                                                 updatedUserObject.plainPassword = userObject.password;
                                                 var tok = updatedUserObject.userid + ':' + updatedUserObject.plainPassword ;
                                                 var hash = Base64.encode(tok);
                                                 var authHeaderValue = "Basic " + hash;
 
-                                                updatedUserObject.authHeaderValue = authHeaderValue ;            
+                                                updatedUserObject.authHeaderValue = authHeaderValue ; 
 
-                                                registrationCardPanel.fireEvent('signUpSuccess',loginResponse[0]);
+                                                registrationCardPanel.fireEvent('signUpSuccess',updatedUserObject);
                                             } else {
-                                                alert('Either return userObject had no same userid or two objects returned');
+                                                var msg = 'Server error, please try later';
+                                                Ext.Msg.alert('',msg,Ext.emptyFn);  
                                             }
                                         },
                                         failure: function (response) {
@@ -462,16 +468,16 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                                 var msg = 'User id taken';
                                                 Ext.Msg.alert('',msg,Ext.emptyFn); 
                                             }else{
-                                                var msg = 'Server errored out, try later';
+                                                var msg = 'Server error, please try later';
                                                 Ext.Msg.alert('',msg,Ext.emptyFn);    
                                             }
                                         }
                                     });
 
                                 },
-                                itemId: 'signUpNextButton',
+                                itemId: 'updateProfile',
                                 ui: 'action',
-                                text: 'Next'
+                                text: 'Save And Go To App'
                             }
                         ]
                     }

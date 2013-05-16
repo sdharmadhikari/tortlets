@@ -52,15 +52,7 @@ public aspect TuserControllerAspectj {
         tuser.setUserid(userid);
         ShaPasswordEncoder encoder = new ShaPasswordEncoder(256);
         String password = tuser.getPassword() ;
-        /*
-        if(userid.length() <= 6){
-            double random = Math.random();
-            int count = (int)(random * 1000);
-            password = userid + count;
-        } else {
-             password = userid;
-        }
-        */
+
         String encoded = encoder.encodePassword(password,null);
         tuser.setPassword(encoded);
         String finalJsonUser = tuser.toJson();
@@ -89,7 +81,16 @@ public aspect TuserControllerAspectj {
 
         }
 
-        return proceed(jsonUserString);
+        ShaPasswordEncoder encoder = new ShaPasswordEncoder(256);
+        String password = tuser.getPassword() ;
+        String encoded = encoder.encodePassword(password,null);
+        tuser.setPassword(encoded);
+
+        String finalJsonUser = tuser.toJson();
+        ResponseEntity responseEntity = (ResponseEntity)proceed(finalJsonUser);
+
+        tuser = Tuser.findTuser(tuser.getId());
+        return new ResponseEntity<String>(tuser.toJson(),responseEntity.getHeaders(), responseEntity.getStatusCode());
 
     }
     /*

@@ -5,10 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/.architect" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/.architect" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app/view/RegistrationCardPanel.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app/view/RegistrationCardPanel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/metadata/view/RegistrationCardPanel" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/metadata/view/RegistrationCardPanel" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Tuser.java" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Tuser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspectj.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspectj.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app-mac-local-st2.2.html" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app-mac-local-st2.2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tortlets.iws" />
@@ -88,7 +85,7 @@
     <file path="/APSettlementFileProcessorCtp.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1366238636177" ignored="false" />
     <file path="/Tortoise.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1366256487127" ignored="false" />
     <file path="/TuserAspect.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1366773827777" ignored="false" />
-    <file path="/TuserControllerAspectj.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368667945116" ignored="false" />
+    <file path="/TuserControllerAspectj.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368737819774" ignored="false" />
     <file path="/Tuser.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368656139547" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/WebServices/lib/WebServices.jar!/schemas/wsdl11_mimebinding.xsd" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367006691838" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/SpringSecurity/lib/spring-security-support.jar!/resources/schemas/spring-security-3.1.xsd" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367006691838" ignored="false" />
@@ -327,6 +324,8 @@
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement/core/target/src/com/verient/infinipay/domain/transactional/FundingCard_120DaoImpl.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367017291715" ignored="false" />
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement/core/target/src/com/verient/infinipay/domain/transactional/FundingCard_120DaoBase.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367017291715" ignored="false" />
     <file path="/Dummy.txt" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368651458666" ignored="false" />
+    <file path="$PROJECT_DIR$/../../verient/ach-batch/ach-launcher/src/main/java/com/verient/batch/ach/processors/AchProcessor.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368726549125" ignored="false" />
+    <file path="/AchProcessor.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368726549125" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -506,7 +505,7 @@
       <file leaf-file-name="TuserControllerAspectj.aj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspectj.aj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="13" selection-start="3211" selection-end="3211" vertical-scroll-proportion="1.5263158">
+            <state line="89" column="80" selection-start="3746" selection-end="3746" vertical-scroll-proportion="1.6809524">
               <folding />
             </state>
           </provider>
@@ -1125,11 +1124,11 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956687" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1169687" sideWeight="0.33732876" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1169687" sideWeight="0.46917808" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32534248" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37479407" sideWeight="0.33732876" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6626712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5308219" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1313,7 +1312,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspectj.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="13" selection-start="3211" selection-end="3211" vertical-scroll-proportion="1.5263158">
+        <state line="89" column="80" selection-start="3746" selection-end="3746" vertical-scroll-proportion="1.6809524">
           <folding />
         </state>
       </provider>
