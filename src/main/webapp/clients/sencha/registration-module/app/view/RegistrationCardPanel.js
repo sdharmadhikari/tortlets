@@ -81,10 +81,10 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                     userObject.password = wordYouLike;
 
                                     var nameRgx = /^[A-Za-z ]{3,20}$/;
+                                    var passwordRgx =  /^[A-Za-z0-9!@#$%^&*()_]{6,100}$/;
                                     var errors = [];
 
                                     for(var field in userObject){
-                                        console.log(field + ': ' + userObject[field]);
                                         if(userObject[field] === ''){
                                             var msg = 'Fields Are Mandatory !';
                                             Ext.Msg.alert('',msg,Ext.emptyFn);
@@ -100,7 +100,12 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                         return;
                                     }
 
-                                    //TODO : Need to add validation for worldYouLike
+                                    if(! passwordRgx.test(userObject.password)){
+                                        var msg = 'Password invalid, Min 6 in length, allowed a-z,0-9 and symbols !@#$%^&*()_';
+                                        Ext.Msg.alert('',msg,Ext.emptyFn); 
+                                        errors[errors.length] = msg;
+                                        return;
+                                    }
 
 
                                     userObject.firstName = firstNameAsUserid;
@@ -122,12 +127,13 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                         success: function (response) { 
                                             var userObject = Ext.JSON.decode(response.responseText);       
                                             userObject.plainPassword = wordYouLike;
-                                            /*
+
                                             var tok = userObject.userid + ':' + userObject.plainPassword;
-                                            var hash = atob(tok);
+                                            var hash = Base64.encode(tok);
                                             var authHeaderValue = "Basic " + hash;
-                                            alert(authHeaderValue);
-                                            */
+                                            //alert(authHeaderValue);
+                                            userObject.authHeaderValue = authHeaderValue ;
+
                                             if (userObject.createdOn !== null) {
                                                 //registrationCardPanel.fireEvent('signUpSuccess',userObject);
                                                 var quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
@@ -155,213 +161,6 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                 itemId: 'whatsYourNameFormButton',
                                 ui: 'action',
                                 text: 'Sign Up !'
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                xtype: 'formpanel',
-                itemId: 'registrationPage1',
-                items: [
-                    {
-                        xtype: 'fieldset',
-                        title: 'Personal Details',
-                        items: [
-                            {
-                                xtype: 'textfield',
-                                itemId: 'firstName',
-                                label: 'First Name',
-                                labelWidth: '37%',
-                                name: 'firstName'
-                            },
-                            {
-                                xtype: 'textfield',
-                                itemId: 'lastName',
-                                label: 'Last Name',
-                                labelWidth: '37%'
-                            },
-                            {
-                                xtype: 'emailfield',
-                                itemId: 'userEmail',
-                                label: 'Email',
-                                labelWidth: '37%',
-                                placeHolder: 'email@example.com'
-                            },
-                            {
-                                xtype: 'emailfield',
-                                itemId: 'confirmEmail',
-                                label: 'Confirm Email',
-                                labelWidth: '37%',
-                                placeHolder: 'email@example.com'
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'fieldset',
-                        title: 'Credentials',
-                        items: [
-                            {
-                                xtype: 'textfield',
-                                itemId: 'userid',
-                                label: 'User Id',
-                                labelWidth: '37%'
-                            },
-                            {
-                                xtype: 'passwordfield',
-                                itemId: 'password',
-                                label: 'Password',
-                                labelWidth: '37%'
-                            },
-                            {
-                                xtype: 'textfield',
-                                hidden: true,
-                                itemId: 'readablePassword',
-                                label: 'Password',
-                                labelWidth: '37%'
-                            },
-                            {
-                                xtype: 'checkboxfield',
-                                itemId: 'showPasswordCheckBox',
-                                label: 'Show Password in Clear Text',
-                                labelWidth: '50%'
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'fieldset',
-                        itemId: 'myfieldset2',
-                        items: [
-                            {
-                                xtype: 'button',
-                                handler: function(button, event) {
-                                    var registrationCardPanel = this.up('registrationCardPanel');
-
-                                    var firstName = registrationCardPanel.down('#firstName');
-                                    var lastName = registrationCardPanel.down('#lastName');
-                                    var userEmail = registrationCardPanel.down('#userEmail');
-                                    //var confirmEmail = registrationCardPanel.down('#confirmEmail');
-
-                                    var userid = registrationCardPanel.down('#userid');
-                                    var password = registrationCardPanel.down('#password');
-                                    var readablePassword = registrationCardPanel.down('#readablePassword');
-                                    var showPasswordCheckBox = registrationCardPanel.down('#showPasswordCheckBox');
-
-                                    var userObject = {};
-
-                                    userObject.firstName = firstName.getValue();
-                                    userObject.lastName = lastName.getValue();
-                                    userObject.userEmail = userEmail.getValue();
-                                    //userObject.confirmEmail = confirmEmail.getValue();
-                                    userObject.userid = userid.getValue();
-
-                                    if(showPasswordCheckBox.getSubmitValue() === null) {
-                                        userObject.password = password.getValue();
-                                    }else {
-                                        userObject.password = readablePassword.getValue();
-                                    }
-
-
-                                    userObject.status = 'ACTIVE';
-
-                                    //////////////////////Validations////////////////////////////////
-                                    var nameRgx = /^[A-Za-z ]{3,20}$/;
-                                    var emailRgx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                                    var useridRgx = /^[A-Za-z0-9_]{6,16}$/;
-                                    var passwordRgx =  /^[A-Za-z0-9!@#$%^&*()_]{6,100}$/;
-                                    var errors = [];
-
-                                    for(var field in userObject){
-                                        console.log(field + ': ' + userObject[field]);
-                                        if(userObject[field] === ''){
-                                            Ext.Msg.alert('','All fields are mandatory !',Ext.emptyFn);
-                                            errors[errors.length] = 'All fields are mandatory !';
-                                            return;
-                                        }
-                                    }
-
-                                    if(! nameRgx.test(userObject.firstName)){
-                                        Ext.Msg.alert('','First Name format invalid',Ext.emptyFn); 
-                                        errors[errors.length] = 'First Name format invalid !';
-                                        return;
-                                    }
-
-
-                                    if(! nameRgx.test(userObject.lastName)){
-                                        Ext.Msg.alert('','Last Name format invalid',Ext.emptyFn);
-                                        errors[errors.length] = 'Last Name format invalid !';
-                                        return;
-                                    }
-
-
-                                    if(! emailRgx.test(userObject.userEmail)){
-                                        Ext.Msg.alert('','Email format invalid',Ext.emptyFn); 
-                                        errors[errors.length] = 'Email format invalid';
-                                        return;
-                                    }
-                                    /*
-                                    if(userObject.userEmail !== userObject.confirmEmail) {
-                                    Ext.Msg.alert('','Emails do not match !',Ext.emptyFn);
-                                    errors[errors.length] =  'Emails do not match !';
-                                    return;
-                                    }
-                                    */
-
-                                    if(! useridRgx.test(userObject.userid)){
-                                        Ext.Msg.alert('','Userid Invalid, must be 6 in length, no special symbols',Ext.emptyFn); 
-                                        errors[errors.length] =  'Userid Invalid, must be 6 in length, no special symbols';
-                                        return;
-                                    }
-
-                                    if(! useridRgx.test(userObject.password)){
-                                        Ext.Msg.alert('','Password invalid, Min 6 in length, allowed a-z,0-9 and symbols !@#$%^&*()_',Ext.emptyFn); 
-                                        errors[errors.length] = 'Password invalid, Min 6 in length, allowed a-z,0-9 and symbols !@#$%^&*()_';
-                                        return;
-                                    }
-
-                                    /*
-                                    // Remember in order to report all errors at once, you have to remove all return statements.
-                                    var msg = "Please Enter Valide Data...\n";
-                                    for (var i = 0; i<errors.length; i++) {
-                                        var numError = i + 1;
-                                        msg += "\n" + numError + ". " + errors[i];
-                                    }
-                                    alert(msg);
-                                    */
-                                    /////////////////////////////////////////////////////////////////
-                                    var userObjectJson = Ext.JSON.encode(userObject);
-
-
-                                    var registrationUrl = registrationCardPanel.getInitialConfig().registrationUrl;
-
-                                    Ext.Ajax.request({
-                                        url: registrationUrl,
-                                        method: 'put',
-                                        jsonData : userObjectJson,
-                                        headers : { 
-                                            Accept : 'application/json' 
-                                        },
-                                        success: function (response) { 
-                                            alert('signUpSuccess');
-                                            var loginResponse = Ext.JSON.decode(response.responseText);
-                                            var userObject = loginResponse[0];
-                                            if (loginResponse.length === 1 && userObject.userid === userid) {
-                                                userObject.plainPassword = password;
-                                                registrationCardPanel.fireEvent('signUpSuccess',loginResponse[0]);
-                                            } else {
-                                                alert('Either return userObject had no same userid or two objects returned');
-                                            }
-                                        },
-                                        failure: function (response) {
-                                            //me.showSignInFailedMessage('Server error. Please try again later.');
-                                            alert('signUpFailure');
-                                        }
-                                    });
-
-                                },
-                                itemId: 'signUpNextButton',
-                                ui: 'action',
-                                text: 'Next'
                             }
                         ]
                     }
@@ -428,21 +227,25 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                     var registrationCardPanel = this.up('registrationCardPanel');
                                     var registrationPage1 = registrationCardPanel.down('#registrationPage1');
                                     var quickSignUpDoneForm = this.up('#quickSignUpDoneForm');
-                                    var userObject = quickSignUpDoneForm.getRecord();
+
+                                    var userObject = quickSignUpDoneForm.getRecord();// Actually this should be
+                                    // just quickSignUpDoneForm.userObject , change should be made
 
                                     var firstName = registrationPage1.down('#firstName');
                                     var lastName = registrationPage1.down('#lastName');
                                     var userEmail = registrationPage1.down('#userEmail');
-                                    var confirmEmail = registrationPage1.down('#confirmEmail');
 
                                     var userid = registrationPage1.down('#userid');
                                     var password = registrationPage1.down('#password');
                                     var readablePassword = registrationPage1.down('#readablePassword');
 
+
+                                    registrationPage1.userObject = userObject; // Assigning userObject to registration
+                                    // page because will need things like authValue
+
                                     firstName.setValue(userObject.firstName);
                                     lastName.setValue(userObject.lastName);
-                                    userEmail.setValue(userObject.email);
-                                    confirmEmail.setValue(userObject.confirmEmail);
+                                    userEmail.setValue(userObject.userEmail);
 
                                     userid.setValue(userObject.userid);
                                     password.setValue(userObject.plainPassword);
@@ -454,6 +257,221 @@ Ext.define('MyApp.view.RegistrationCardPanel', {
                                 },
                                 ui: 'confirm',
                                 text: 'Secure Sign Up !'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'formpanel',
+                itemId: 'registrationPage1',
+                items: [
+                    {
+                        xtype: 'fieldset',
+                        title: 'Personal Details',
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                itemId: 'firstName',
+                                label: 'First Name',
+                                labelWidth: '37%',
+                                name: 'firstName'
+                            },
+                            {
+                                xtype: 'textfield',
+                                itemId: 'lastName',
+                                label: 'Last Name',
+                                labelWidth: '37%'
+                            },
+                            {
+                                xtype: 'emailfield',
+                                itemId: 'userEmail',
+                                label: 'Email',
+                                labelWidth: '37%',
+                                placeHolder: 'email@example.com'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'fieldset',
+                        title: 'Credentials',
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                itemId: 'userid',
+                                label: 'User Id',
+                                labelWidth: '37%'
+                            },
+                            {
+                                xtype: 'passwordfield',
+                                itemId: 'password',
+                                label: 'Password',
+                                labelWidth: '37%'
+                            },
+                            {
+                                xtype: 'textfield',
+                                hidden: true,
+                                itemId: 'readablePassword',
+                                label: 'Password',
+                                labelWidth: '37%'
+                            },
+                            {
+                                xtype: 'checkboxfield',
+                                itemId: 'showPasswordCheckBox',
+                                label: 'Show Password in Clear Text',
+                                labelWidth: '50%'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'fieldset',
+                        itemId: 'myfieldset2',
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var registrationCardPanel = this.up('registrationCardPanel');
+                                    var registrationPage1 = registrationCardPanel.down('#registrationPage1');
+
+                                    var firstName = registrationPage1.down('#firstName');
+                                    var lastName = registrationPage1.down('#lastName');
+                                    var userEmail = registrationPage1.down('#userEmail');
+                                    //var confirmEmail = registrationCardPanel.down('#confirmEmail');
+
+                                    var userid = registrationPage1.down('#userid');
+                                    var password = registrationPage1.down('#password');
+                                    var readablePassword = registrationPage1.down('#readablePassword');
+                                    var showPasswordCheckBox = registrationPage1.down('#showPasswordCheckBox');
+
+                                    var userObject = registrationPage1.userObject;
+                                    var currentAuthHeaderValue = userObject.authHeaderValue;
+
+                                    userObject.firstName = firstName.getValue();
+                                    userObject.lastName = lastName.getValue();
+                                    userObject.userEmail = userEmail.getValue();
+                                    //userObject.confirmEmail = confirmEmail.getValue();
+                                    if(userObject.userid !== userid.getValue()) {
+                                        alert ('user wants to change userid');  
+                                    }
+                                    userObject.userid = userid.getValue();
+
+                                    if(showPasswordCheckBox.getSubmitValue() === null) {
+                                        userObject.password = password.getValue();
+                                    }else {
+                                        userObject.password = readablePassword.getValue();
+                                    }
+
+
+                                    //////////////////////Validations////////////////////////////////
+                                    var nameRgx = /^[A-Za-z ]{3,20}$/;
+                                    var emailRgx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                                    var useridRgx = /^[A-Za-z0-9_]{6,16}$/;
+                                    var passwordRgx =  /^[A-Za-z0-9!@#$%^&*()_]{6,100}$/;
+                                    var errors = [];
+
+                                    for(var field in userObject){
+                                        console.log(field + ': ' + userObject[field]);
+                                        if(userObject[field] === ''){
+                                            Ext.Msg.alert('','All fields are mandatory !',Ext.emptyFn);
+                                            errors[errors.length] = 'All fields are mandatory !';
+                                            return;
+                                        }
+                                    }
+
+                                    if(! nameRgx.test(userObject.firstName)){
+                                        Ext.Msg.alert('','First Name format invalid',Ext.emptyFn); 
+                                        errors[errors.length] = 'First Name format invalid !';
+                                        return;
+                                    }
+
+
+                                    if(! nameRgx.test(userObject.lastName)){
+                                        Ext.Msg.alert('','Last Name format invalid',Ext.emptyFn);
+                                        errors[errors.length] = 'Last Name format invalid !';
+                                        return;
+                                    }
+
+
+                                    if(! emailRgx.test(userObject.userEmail)){
+                                        Ext.Msg.alert('','Email format invalid',Ext.emptyFn); 
+                                        errors[errors.length] = 'Email format invalid';
+                                        return;
+                                    }
+                                    /*
+                                    if(userObject.userEmail !== userObject.confirmEmail) {
+                                    Ext.Msg.alert('','Emails do not match !',Ext.emptyFn);
+                                    errors[errors.length] =  'Emails do not match !';
+                                    return;
+                                    }
+                                    */
+
+                                    if(! useridRgx.test(userObject.userid)){
+                                        Ext.Msg.alert('','Userid Invalid, must be 6 in length, no special symbols',Ext.emptyFn); 
+                                        errors[errors.length] =  'Userid Invalid, must be 6 in length, no special symbols';
+                                        return;
+                                    }
+
+                                    if(! passwordRgx.test(userObject.password)){
+                                        Ext.Msg.alert('','Password invalid, Min 6 in length, allowed a-z,0-9 and symbols !@#$%^&*()_',Ext.emptyFn); 
+                                        errors[errors.length] = 'Password invalid, Min 6 in length, allowed a-z,0-9 and symbols !@#$%^&*()_';
+                                        return;
+                                    }
+
+                                    /*
+                                    // Remember in order to report all errors at once, you have to remove all return statements.
+                                    var msg = "Please Enter Valide Data...\n";
+                                    for (var i = 0; i<errors.length; i++) {
+                                        var numError = i + 1;
+                                        msg += "\n" + numError + ". " + errors[i];
+                                    }
+                                    alert(msg);
+                                    */
+                                    /////////////////////////////////////////////////////////////////
+                                    var userObjectJson = Ext.JSON.encode(userObject);
+
+
+                                    var registrationUrl = registrationCardPanel.getInitialConfig().registrationUrl;
+
+                                    Ext.Ajax.request({
+                                        url: registrationUrl,
+                                        method: 'put',
+                                        jsonData : userObjectJson,
+                                        headers : { 
+                                            Accept : 'application/json' ,
+                                            Authorization : currentAuthHeaderValue
+                                        },
+                                        success: function (response) { 
+                                            alert('user update success');
+                                            var updatedUserObject = Ext.JSON.decode(response.responseText);
+
+                                            if (updatedUserObject.updatedOn !== null) {
+                                                updatedUserObject.plainPassword = userObject.password;
+                                                var tok = updatedUserObject.userid + ':' + updatedUserObject.plainPassword ;
+                                                var hash = Base64.encode(tok);
+                                                var authHeaderValue = "Basic " + hash;
+
+                                                updatedUserObject.authHeaderValue = authHeaderValue ;            
+
+                                                registrationCardPanel.fireEvent('signUpSuccess',loginResponse[0]);
+                                            } else {
+                                                alert('Either return userObject had no same userid or two objects returned');
+                                            }
+                                        },
+                                        failure: function (response) {
+                                            if(response.status === 409) {
+                                                var msg = 'User id taken';
+                                                Ext.Msg.alert('',msg,Ext.emptyFn); 
+                                            }else{
+                                                var msg = 'Server errored out, try later';
+                                                Ext.Msg.alert('',msg,Ext.emptyFn);    
+                                            }
+                                        }
+                                    });
+
+                                },
+                                itemId: 'signUpNextButton',
+                                ui: 'action',
+                                text: 'Next'
                             }
                         ]
                     }

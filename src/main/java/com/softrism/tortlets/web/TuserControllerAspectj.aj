@@ -6,6 +6,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
@@ -68,6 +69,28 @@ public aspect TuserControllerAspectj {
 
         tuser = Tuser.findTusersByUseridEquals(userid).getSingleResult();
         return new ResponseEntity<String>(tuser.toJson(),responseEntity.getHeaders(), responseEntity.getStatusCode());
+    }
+
+    pointcut aroundUpdateUSer(String jsonUserString) : execution(* com.softrism.tortlets.web.TuserController.updateFromJson(..)) && args(jsonUserString);
+
+    Object around(String jsonUserString) : aroundUpdateUSer(jsonUserString){
+        Tuser tuser = Tuser.fromJsonToTuser(jsonUserString);
+
+        String newUserId = tuser.getUserid();
+        Tuser oldTuser = Tuser.findTuser(tuser.getId());
+
+        if(! oldTuser.getUserid().equalsIgnoreCase(tuser.getUserid())){
+            List<Tuser> alreadyTusers= Tuser.findTusersByUseridEquals(tuser.getUserid()).getResultList();
+            if(alreadyTusers.size() > 0){
+                HttpHeaders headers = new HttpHeaders();
+                headers.add("Content-Type", "application/json");
+                return new ResponseEntity<String>(headers, HttpStatus.CONFLICT);
+            }
+
+        }
+
+        return proceed(jsonUserString);
+
     }
     /*
     This does not work, neither if I move throws close with try/catch

@@ -83,6 +83,10 @@ public class Tuser {
     @Enumerated(EnumType.STRING)
     private TuserTimezoneEnum timezone;
 
+    @NotNull
+    @Value("USER")
+    private String roleName;
+
     @PrePersist
     private void prePersist() {
         Date now = new Date();
