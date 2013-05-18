@@ -19,7 +19,7 @@ Ext.define('MyApp.view.LandingCardPanel', {
 
     requires: [
         'MyApp.view.loginmodule',
-        'MyApp.view.registrationmodule',
+        'MyApp.view.signupmodule',
         'MyApp.view.MainTabPanel'
     ],
 

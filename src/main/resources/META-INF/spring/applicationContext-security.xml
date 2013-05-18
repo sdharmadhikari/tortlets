@@ -10,7 +10,7 @@
          <intercept-url pattern="/tusers\?find=ByUseridEqualsAndPasswordEquals.*" access="permitAll" />
          <intercept-url pattern="/tusers.*" method="POST" access="permitAll"/>
          <intercept-url pattern="/.*" access="isAuthenticated()" />
-         <http-basic />
+         <http-basic/>
     </http>
 
     <beans:bean id="jsonRequestMatcher" class="org.springframework.security.web.util.ELRequestMatcher">

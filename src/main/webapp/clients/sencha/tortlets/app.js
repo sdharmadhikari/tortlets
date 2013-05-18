@@ -52,8 +52,8 @@ Ext.application({
         'HelpPanel',
         'TodaysTortletList',
         'LandingCardPanel',
-        'registrationmodule',
-        'loginmodule'
+        'loginmodule',
+        'signupmodule'
     ],
     controllers: [
         'HomeTabController',

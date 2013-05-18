@@ -29,7 +29,15 @@ Ext.define('MyApp.view.ScoreTabCardPanel', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'Your Score'
+                title: 'Your Score',
+                items: [
+                    {
+                        xtype: 'button',
+                        align: 'right',
+                        itemId: 'userProfileButton',
+                        iconCls: 'settings'
+                    }
+                ]
             },
             {
                 xtype: 'mainScorePanel'

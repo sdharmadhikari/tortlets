@@ -9,10 +9,17 @@
             "id": "554f99b0-5e80-4602-88c3-97fd405ebd93",
             "cn": [
                 {
+                    "id": "2c46f8a1-6909-4eac-be4f-2c7a61a13b66"
+                },
+                {
+                    "id": "413e7753-67cb-42a3-9d77-65e58bbc46e5"
+                },
+                {
                     "id": "49673aa3-4632-4729-b78e-3fd749b1a1ce"
                 },
                 {
                     "id": "0b86bd7b-a3c3-4d68-a22c-4275fd438000",
+                    "expanded": false,
                     "cn": [
                         {
                             "id": "204d6927-cfa7-4261-85b2-6cc2f2eeec56"
@@ -23,19 +30,29 @@
                     ]
                 },
                 {
-                    "id": "e591496a-63b7-4efb-9b42-4e683f5b9100"
-                },
-                {
                     "id": "29298f78-e7ac-49de-b6ac-f5d4d03844ba"
                 },
                 {
                     "id": "4b9922e4-6c81-49b9-945f-c4835330620b"
                 },
                 {
-                    "id": "a936079e-a844-4185-8e36-822c6b61eeeb",
+                    "id": "5df9b3c8-5261-4b09-abfb-ed6a817d0cdd",
                     "cn": [
                         {
-                            "id": "57fd8efe-498e-4789-b2f5-c4c0ba969a8f"
+                            "id": "e591496a-63b7-4efb-9b42-4e683f5b9100"
+                        }
+                    ]
+                },
+                {
+                    "id": "60befd05-706d-401b-9048-1fdf1d9d9781",
+                    "cn": [
+                        {
+                            "id": "a936079e-a844-4185-8e36-822c6b61eeeb",
+                            "cn": [
+                                {
+                                    "id": "57fd8efe-498e-4789-b2f5-c4c0ba969a8f"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -53,7 +70,7 @@
     },
     "inspectorState": {
         "topInstance": "554f99b0-5e80-4602-88c3-97fd405ebd93",
-        "selectedInstance": "554f99b0-5e80-4602-88c3-97fd405ebd93"
+        "selectedInstance": "29298f78-e7ac-49de-b6ac-f5d4d03844ba"
     },
     "codeState": {
         "topInstance": "554f99b0-5e80-4602-88c3-97fd405ebd93"

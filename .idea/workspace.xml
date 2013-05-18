@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9726801d-b3bd-455e-bef1-fa29786b8c4c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/.architect" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/.architect" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app/view/RegistrationCardPanel.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app/view/RegistrationCardPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/metadata/view/RegistrationCardPanel" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/metadata/view/RegistrationCardPanel" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspectj.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspectj.aj" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/app-st2.2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/registrationmodule.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/registrationmodule" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/LoginModule.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/loginmodule.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/LoginModule" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/loginmodule" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/.architect" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/.architect" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/.architect" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/.architect" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/Application" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/Application" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/LandingCardPanel.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/LandingCardPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/LandingCardPanel" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/LandingCardPanel" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/app/view/LoginForm.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/app/view/LoginForm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/metadata/view/LoginForm" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/metadata/view/LoginForm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UserCredentialsController.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UserCredentialsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UserCredentialsController" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UserCredentialsController" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/registration-module.xdc" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/registration-module.xdc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/tortlets.xds" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/tortlets.xds" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tortlets.iws" />
@@ -78,7 +92,7 @@
     <file path="/index.jspx" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365364915228" ignored="false" />
     <file path="$PROJECT_DIR$/../gweek/src/main/webapp/WEB-INF/views/footer.jspx" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365366038496" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/jsp/lib/jsp-impl.jar!/standardSchemas/jspxml2.xsd" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365724121136" ignored="false" />
-    <file path="/applicationContext-security.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368658251539" ignored="false" />
+    <file path="/applicationContext-security.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368825014584" ignored="false" />
     <file path="/CustomRequestmatcher.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365956822158" ignored="false" />
     <file path="/fragment.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365963492842" ignored="false" />
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement-launcher/src/main/java/com/verient/batch/apsettlement/processor/APSettlementFileProcessorCtp.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1366238639434" ignored="false" />
@@ -323,7 +337,7 @@
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement/core/target/src/com/verient/infinipay/domain/transactional/FundingCard_120Impl.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367017291715" ignored="false" />
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement/core/target/src/com/verient/infinipay/domain/transactional/FundingCard_120DaoImpl.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367017291715" ignored="false" />
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement/core/target/src/com/verient/infinipay/domain/transactional/FundingCard_120DaoBase.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367017291715" ignored="false" />
-    <file path="/Dummy.txt" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368651458666" ignored="false" />
+    <file path="/Dummy.txt" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368747720510" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/ach-batch/ach-launcher/src/main/java/com/verient/batch/ach/processors/AchProcessor.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368726549125" ignored="false" />
     <file path="/AchProcessor.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368726549125" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -502,10 +516,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TuserControllerAspectj.aj" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TuserControllerAspectj.aj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspectj.aj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="80" selection-start="3746" selection-end="3746" vertical-scroll-proportion="1.6809524">
+            <state line="89" column="80" selection-start="3746" selection-end="3746" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -524,15 +538,18 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserController_Roo_Controller_Json.aj">
           <provider selected="true" editor-type-id="text-editor">
             <state line="55" column="0" selection-start="2611" selection-end="2716" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="e#0#5113#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext-security.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="applicationContext-security.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="40" selection-start="3522" selection-end="3522" vertical-scroll-proportion="-12.88">
+            <state line="7" column="26" selection-start="533" selection-end="533" vertical-scroll-proportion="0.38492063">
               <folding />
             </state>
           </provider>
@@ -570,8 +587,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Tuser_Roo_Finder.aj" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Tuser.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspectj.aj" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml" />
       </list>
     </option>
   </component>
@@ -1124,11 +1141,11 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956687" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1169687" sideWeight="0.46917808" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1169687" sideWeight="0.5839041" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32534248" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37479407" sideWeight="0.33732876" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5308219" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41609588" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1289,13 +1306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="40" selection-start="3522" selection-end="3522" vertical-scroll-proportion="-12.88">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Tuser_Roo_Finder.aj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
@@ -1306,13 +1316,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserController_Roo_Controller_Json.aj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="0" selection-start="2611" selection-end="2716" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#5113#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspectj.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="80" selection-start="3746" selection-end="3746" vertical-scroll-proportion="1.6809524">
+        <state line="89" column="80" selection-start="3746" selection-end="3746" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="533" selection-end="533" vertical-scroll-proportion="0.38492063">
           <folding />
         </state>
       </provider>

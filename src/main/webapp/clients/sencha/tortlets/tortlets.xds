@@ -292,14 +292,6 @@
             ],
             "className": "LandingCardPanel"
         },
-        "7c6adc22-df22-4959-bf7b-fc61002cbc22": {
-            "paths": [
-                "metadata/view/registrationmodule",
-                "app/view/override/registrationmodule.js",
-                "app/view/registrationmodule.js"
-            ],
-            "className": "registrationmodule"
-        },
         "7e277a5b-0624-4aa7-941e-c927df2fcc01": {
             "paths": [
                 "metadata/resource/Library"
@@ -313,6 +305,14 @@
                 "app/view/loginmodule.js"
             ],
             "className": "loginmodule"
+        },
+        "15444b93-1202-4a0e-8cbe-b9820ac02a0e": {
+            "paths": [
+                "metadata/view/signupmodule",
+                "app/view/override/signupmodule.js",
+                "app/view/signupmodule.js"
+            ],
+            "className": "signupmodule"
         }
     },
     "viewOrderMap": {
@@ -337,8 +337,8 @@
             "0e3fa1af-7c66-4370-bf0e-45af7191d28e",
             "0da20323-db08-47ce-9741-64ded49ccb84",
             "1cc19794-36b6-4e82-baae-38a39a5ce5ec",
-            "7c6adc22-df22-4959-bf7b-fc61002cbc22",
-            "0774d05e-de9d-4085-bd90-9758034e790b"
+            "0774d05e-de9d-4085-bd90-9758034e790b",
+            "15444b93-1202-4a0e-8cbe-b9820ac02a0e"
         ],
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",

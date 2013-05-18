@@ -29,6 +29,15 @@ Ext.define('MyApp.view.LoginForm', {
         ],
         items: [
             {
+                xtype: 'titlebar',
+                docked: 'top',
+                title: 'App Name'
+            },
+            {
+                xtype: 'image',
+                height: 101
+            },
+            {
                 xtype: 'label',
                 hidden: true,
                 hideAnimation: 'fadeOut',
@@ -57,19 +66,29 @@ Ext.define('MyApp.view.LoginForm', {
                 ]
             },
             {
-                xtype: 'button',
-                itemId: 'loginButtonItemId',
-                ui: 'action',
-                text: 'Log In'
+                xtype: 'fieldset',
+                items: [
+                    {
+                        xtype: 'button',
+                        itemId: 'loginButtonItemId',
+                        ui: 'action',
+                        text: 'Log In'
+                    }
+                ]
             },
             {
-                xtype: 'button',
-                handler: function(button, event) {
-                    var loginForm = this.up('#loginFormItemId');
-                    loginForm.fireEvent('signUpRequested');
-                },
-                ui: 'confirm',
-                text: 'Sign Up !'
+                xtype: 'fieldset',
+                items: [
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            var loginForm = this.up('#loginFormItemId');
+                            loginForm.fireEvent('signUpRequested');
+                        },
+                        ui: 'confirm',
+                        text: 'Snap Sign Up !'
+                    }
+                ]
             }
         ]
     },
@@ -109,8 +128,13 @@ Ext.define('MyApp.view.LoginForm', {
                 var loginResponse = Ext.JSON.decode(response.responseText);
                 var userObject = loginResponse[0];
                 if (loginResponse.length === 1 && userObject.userid === userid) {
-                    userObject.plainPassword = password;
-                    me.fireEvent('signInSuccess',loginResponse[0]);
+
+                    var tok = userid + ':' + password;
+                    var hash = Base64.encode(tok);
+                    var authHeaderValue = "Basic " + hash;
+                    userObject.authHeaderValue = authHeaderValue ;
+
+                    me.fireEvent('signInSuccess',userObject);
                 } else {
                     me.showSignInFailedMessage('Bad Credentials');
                 }

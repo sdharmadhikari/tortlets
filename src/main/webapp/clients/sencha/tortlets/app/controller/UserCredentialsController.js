@@ -21,7 +21,9 @@ Ext.define('MyApp.controller.UserCredentialsController', {
             homeTabCardPanel: 'homeTabCardPanel',
             landingCardPanel: 'landingCardPanel',
             genericLoginForm: 'genericLoginForm',
-            registrationCardPanel: 'registrationCardPanel'
+            registrationCardPanel: 'registrationCardPanel',
+            mainTabPanel: 'mainTabPanel',
+            registrationPage1: '#registrationPage1'
         },
 
         control: {
@@ -31,18 +33,24 @@ Ext.define('MyApp.controller.UserCredentialsController', {
             "formpanel": {
                 signUpRequested: 'onLoginFormItemIdSignUpRequested',
                 signInSuccess: 'onLoginFormItemIdSignInSuccess'
+            },
+            "button#userProfileButton": {
+                tap: 'onUserProfileButtonTap'
             }
         }
     },
 
-    onRegistrationCardPanelItemIdSignUpSuccess: function(panel) {
-        var landingCardPanel = this.getLandingCardPanel();
-        var genericLoginForm = this.getGenericLoginForm();
+    onRegistrationCardPanelItemIdSignUpSuccess: function(userObject) {
+        this.populateUserAndResources(userObject);
 
-        landingCardPanel.animateActiveItem(genericLoginForm, { type: 'slide'});
+        var landingCardPanel = this.getLandingCardPanel();
+        var mainTabPanel = this.getMainTabPanel();
+
+        landingCardPanel.animateActiveItem(mainTabPanel, { type: 'slide'});
     },
 
     onLoginFormItemIdSignUpRequested: function(formpanel) {
+
         var landingCardPanel = this.getLandingCardPanel();
         var registrationCardPanel = this.getRegistrationCardPanel();
         registrationCardPanel.setActiveItem(0);
@@ -50,20 +58,32 @@ Ext.define('MyApp.controller.UserCredentialsController', {
     },
 
     onLoginFormItemIdSignInSuccess: function(userObject) {
+        this.populateUserAndResources(userObject);
 
+        var landingCardPanel = this.getLandingCardPanel();
+        var mainTabPanel = this.getMainTabPanel();
+        landingCardPanel.animateActiveItem(mainTabPanel, { type: 'slide'});
+    },
+
+    onUserProfileButtonTap: function(button, e, eOpts) {
+        var landingCardPanel = this.getLandingCardPanel();
+        var registrationCardPanel = this.getRegistrationCardPanel();
+        var registrationPage1 = this.getRegistrationPage1();
+        registrationCardPanel.setActiveItem(registrationPage1);
+        landingCardPanel.animateActiveItem(registrationCardPanel, { type: 'slide'});
+    },
+
+    populateUserAndResources: function(userObject) {
         var currentUser = Ext.create('MyApp.model.Tuser');
         currentUser.set('id',userObject.id);
         currentUser.set('firstName',userObject.firstName);
         currentUser.set('lastName',userObject.lastName);
         currentUser.set('userid',userObject.userid);
         currentUser.set('version',userObject.version);
-        var userid = userObject.userid;
-        //currentUser.set('userid',userid);
-        var password = userObject.plainPassword;
 
-        var tok = userid + ':' + password;
-        var hash = Base64.encode(tok);
-        var authHeaderValue = "Basic " + hash;
+        var userid = userObject.userid;
+        var authHeaderValue = userObject.authHeaderValue;
+
 
         MyApp.app.currentUser = currentUser; // Here currentUser becomes global variable to be accessed using MyApp.app.currentUser
         MyApp.app.currentUser.tempId = 0;
@@ -131,11 +151,6 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
         proxy.setUrl('http://' + host + '/tortlets');
-
-        var homeTabCardPanel = this.getHomeTabCardPanel();
-
-        var landingCardPanel = this.getLandingCardPanel();
-        landingCardPanel.animateActiveItem(2, { type: 'slide'});
     }
 
 });

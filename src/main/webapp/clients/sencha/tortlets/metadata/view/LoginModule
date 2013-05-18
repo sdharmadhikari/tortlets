@@ -43,6 +43,31 @@
     ],
     "cn": [
         {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Tortlets"
+            },
+            "designerId": "7eaac8f5-1384-4583-9f2e-7c21b4c442d7"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 101
+            },
+            "designerId": "e7e3c30f-cee6-4cbd-9f93-2534e7b74729"
+        },
+        {
             "type": "Ext.Label",
             "reference": {
                 "name": "items",
@@ -106,18 +131,32 @@
             ]
         },
         {
-            "type": "Ext.Button",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "loginButtonItemId",
-                "ui": "action",
-                "text": "Log In"
+                "title": null
             },
-            "designerId": "6956c73c-3be5-4656-b65e-cb3651619492"
+            "designerId": "1ea7f7a3-70cc-4091-a385-1bf984f0f978",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "loginButtonItemId",
+                        "ui": "action",
+                        "text": "Log In"
+                    },
+                    "designerId": "6956c73c-3be5-4656-b65e-cb3651619492"
+                }
+            ]
         },
         {
             "type": "basicfunction",
@@ -163,8 +202,13 @@
                     "        var loginResponse = Ext.JSON.decode(response.responseText);\r",
                     "        var userObject = loginResponse[0];\r",
                     "        if (loginResponse.length === 1 && userObject.userid === userid) {\r",
-                    "            userObject.plainPassword = password;         \r",
-                    "            me.fireEvent('signInSuccess',loginResponse[0]);\r",
+                    "\r",
+                    "            var tok = userid + ':' + password;\r",
+                    "            var hash = Base64.encode(tok);\r",
+                    "            var authHeaderValue = \"Basic \" + hash;\r",
+                    "            userObject.authHeaderValue = authHeaderValue ;\r",
+                    "\r",
+                    "            me.fireEvent('signInSuccess',userObject);\r",
                     "        } else {\r",
                     "            me.showSignInFailedMessage('Bad Credentials');\r",
                     "        }\r",
@@ -190,45 +234,59 @@
                     "message"
                 ],
                 "implHandler": [
-                    "var label = this.down('#signInFailedLabel');",
-                    "label.setHtml(message);",
+                    "var label = this.down('#signInFailedLabel');\r",
+                    "label.setHtml(message);\r",
                     "label.show();"
                 ]
             },
             "designerId": "56e726b6-c75f-479c-be4b-8c53dcf53ebf"
         },
         {
-            "type": "Ext.Button",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "ui": "confirm",
-                "text": "3 Seconds Sign Up !"
+                "title": null
             },
-            "designerId": "0ffb91c7-f4df-4d8e-99d1-a815fa3e9d62",
+            "designerId": "3d842c1f-7a73-41e9-972d-49d63deebe10",
             "cn": [
                 {
-                    "type": "fixedfunction",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "handler",
-                        "designer|params": [
-                            "button",
-                            "event"
-                        ],
-                        "implHandler": [
-                            "var loginForm = this.up('#loginFormItemId');",
-                            "loginForm.fireEvent('signUpRequested');"
-                        ]
+                        "ui": "confirm",
+                        "text": "Snap Sign Up !"
                     },
-                    "designerId": "0d0caea5-39e7-4cad-b667-4b062696ca7e"
+                    "designerId": "0ffb91c7-f4df-4d8e-99d1-a815fa3e9d62",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var loginForm = this.up('#loginFormItemId');\r",
+                                    "loginForm.fireEvent('signUpRequested');"
+                                ]
+                            },
+                            "designerId": "0d0caea5-39e7-4cad-b667-4b062696ca7e"
+                        }
+                    ]
                 }
             ]
         }
