@@ -9,7 +9,6 @@
         "itemId": "landingCardPanel",
         "designer|userClassName": "LandingCardPanel",
         "designer|userAlias": "landingCardPanel",
-        "designer|initialView": true,
         "layout": "card"
     },
     "designerId": "1cc19794-36b6-4e82-baae-38a39a5ce5ec",

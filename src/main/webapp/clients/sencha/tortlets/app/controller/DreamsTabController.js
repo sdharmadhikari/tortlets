@@ -348,6 +348,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
         utility.loadTortoises(dreamId);
         dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'up'});
 
+    },
+
+    init: function(application) {
+        console.log('initing DreamsTabController');
     }
 
 });

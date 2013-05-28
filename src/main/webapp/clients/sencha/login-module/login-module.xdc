@@ -46,6 +46,29 @@
         ],
         "cn": [
             {
+                "type": "Ext.TitleBar",
+                "reference": {
+                    "name": "items",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "docked": "top",
+                    "title": "App Name"
+                }
+            },
+            {
+                "type": "Ext.Img",
+                "reference": {
+                    "name": "items",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "height": 101
+                }
+            },
+            {
                 "type": "Ext.Label",
                 "reference": {
                     "name": "items",
@@ -105,19 +128,6 @@
                 ]
             },
             {
-                "type": "Ext.Button",
-                "reference": {
-                    "name": "items",
-                    "type": "array"
-                },
-                "codeClass": null,
-                "userConfig": {
-                    "itemId": "loginButtonItemId",
-                    "ui": "action",
-                    "text": "Log In"
-                }
-            },
-            {
                 "type": "basicfunction",
                 "reference": {
                     "name": "items",
@@ -161,8 +171,13 @@
                         "        var loginResponse = Ext.JSON.decode(response.responseText);",
                         "        var userObject = loginResponse[0];",
                         "        if (loginResponse.length === 1 && userObject.userid === userid) {",
-                        "            userObject.plainPassword = password;",
-                        "            me.fireEvent('signInSuccess',loginResponse[0]);",
+                        "            ",
+                        "            var tok = userid + ':' + password;",
+                        "            var hash = Base64.encode(tok);",
+                        "            var authHeaderValue = \"Basic \" + hash;",
+                        "            userObject.authHeaderValue = authHeaderValue ;",
+                        "            ",
+                        "            me.fireEvent('signInSuccess',userObject);",
                         "        } else {",
                         "            me.showSignInFailedMessage('Bad Credentials');",
                         "        }",
@@ -194,35 +209,74 @@
                 }
             },
             {
-                "type": "Ext.Button",
+                "type": "Ext.form.FieldSet",
                 "reference": {
                     "name": "items",
                     "type": "array"
                 },
                 "codeClass": null,
                 "userConfig": {
-                    "ui": "confirm",
-                    "text": "Sign Up !"
+                    "title": null
                 },
                 "cn": [
                     {
-                        "type": "fixedfunction",
+                        "type": "Ext.Button",
                         "reference": {
                             "name": "items",
                             "type": "array"
                         },
                         "codeClass": null,
                         "userConfig": {
-                            "fn": "handler",
-                            "designer|params": [
-                                "button",
-                                "event"
-                            ],
-                            "implHandler": [
-                                "var loginForm = this.up('#loginFormItemId');",
-                                "loginForm.fireEvent('signUpRequested');"
-                            ]
+                            "itemId": "loginButtonItemId",
+                            "ui": "action",
+                            "text": "Log In"
                         }
+                    }
+                ]
+            },
+            {
+                "type": "Ext.form.FieldSet",
+                "reference": {
+                    "name": "items",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "title": null
+                },
+                "cn": [
+                    {
+                        "type": "Ext.Button",
+                        "reference": {
+                            "name": "items",
+                            "type": "array"
+                        },
+                        "codeClass": null,
+                        "userConfig": {
+                            "ui": "confirm",
+                            "text": "Snap Sign Up !"
+                        },
+                        "cn": [
+                            {
+                                "type": "fixedfunction",
+                                "reference": {
+                                    "name": "items",
+                                    "type": "array"
+                                },
+                                "codeClass": null,
+                                "userConfig": {
+                                    "fn": "handler",
+                                    "designer|params": [
+                                        "button",
+                                        "event"
+                                    ],
+                                    "implHandler": [
+                                        "var loginForm = this.up('#loginFormItemId');",
+                                        "loginForm.fireEvent('signUpRequested');"
+                                    ]
+                                }
+                            }
+                        ]
                     }
                 ]
             }

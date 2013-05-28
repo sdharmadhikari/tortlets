@@ -173,17 +173,13 @@ public class TortletController {
         }else{
             tortlet.setCompleted(Boolean.TRUE);
         }
-        Date now = new Date();
         if (!wasCompleted && nowCompleted) {
-            tortlet.setCompletedOn(now);
-            tortlet.setUpdatedOn(now);
             Tortoise tortoise = tortlet.getTortoise();
             int tortoiseCompletedCount = tortoise.getTortletsCompletedCount() + 1;
             int tortoiseCreatedCount = tortoise.getTortletsCreatedCount();
             int tortoiseScore = (tortoiseCompletedCount * 100) / tortoiseCreatedCount;
             tortoise.setTortletsCompletedCount(tortoiseCompletedCount);
             tortoise.setLatestTortoiseScore(tortoiseScore);
-            tortoise.setUpdatedOn(now);
             tortlet.setTortoise(tortoise);
             Dream dream = tortoise.getDream();
             int dreamCompletedCount = dream.getTortletsCompletedCount() + 1;
@@ -191,7 +187,6 @@ public class TortletController {
             int dreamScore = (dreamCompletedCount * 100) / dreamCreatedCount;
             dream.setTortletsCompletedCount(dreamCompletedCount);
             dream.setLatestDreamScore(dreamScore);
-            dream.setUpdatedOn(now);
             tortoise.setDream(dream);
             Tuser tuser = dream.getTuser();
             int tuserCompletedCount = tuser.getTortletsCompletedCount() + 1;
@@ -199,7 +194,6 @@ public class TortletController {
             int tuserScore = (tuserCompletedCount * 100) / tuserCreatedCount;
             tuser.setTortletsCompletedCount(tuserCompletedCount);
             tuser.setLatestDreamScore(tuserScore);
-            tuser.setUpdatedON(now);
             dream.setTuser(tuser);
         }
         tortlet.merge();

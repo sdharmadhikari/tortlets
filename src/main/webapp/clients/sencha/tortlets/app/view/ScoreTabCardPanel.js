@@ -33,6 +33,7 @@ Ext.define('MyApp.view.ScoreTabCardPanel', {
                 items: [
                     {
                         xtype: 'button',
+                        name: 'userProfileButton',
                         align: 'right',
                         itemId: 'userProfileButton',
                         iconCls: 'settings'

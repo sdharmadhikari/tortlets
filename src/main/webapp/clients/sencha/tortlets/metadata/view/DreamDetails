@@ -130,6 +130,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "hidden": true,
                         "designer|displayName": "DreamColorSelectField",
                         "label": "Dream Color",
                         "labelWidth": "40%",

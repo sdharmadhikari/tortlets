@@ -721,6 +721,24 @@
                 "designer|controlQuery": "button#mybutton2"
             },
             "designerId": "3d36555b-4ec9-4582-9c50-f2c67c87fa45"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "console.log('initing DreamsTabController');"
+                ]
+            },
+            "designerId": "155d2bba-d4f5-411c-b852-dbaee0354028"
         }
     ]
 }

@@ -60,6 +60,8 @@ public aspect TuserControllerAspectj {
         ResponseEntity responseEntity = (ResponseEntity)proceed(finalJsonUser);
 
         tuser = Tuser.findTusersByUseridEquals(userid).getSingleResult();
+        tuser.setPassword(null);
+
         return new ResponseEntity<String>(tuser.toJson(),responseEntity.getHeaders(), responseEntity.getStatusCode());
     }
 
@@ -90,6 +92,7 @@ public aspect TuserControllerAspectj {
         ResponseEntity responseEntity = (ResponseEntity)proceed(finalJsonUser);
 
         tuser = Tuser.findTuser(tuser.getId());
+        tuser.setPassword(null);
         return new ResponseEntity<String>(tuser.toJson(),responseEntity.getHeaders(), responseEntity.getStatusCode());
 
     }

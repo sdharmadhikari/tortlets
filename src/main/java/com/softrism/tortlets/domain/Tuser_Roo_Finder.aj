@@ -17,6 +17,4 @@ privileged aspect Tuser_Roo_Finder {
         return q;
     }
     
-
-    
 }

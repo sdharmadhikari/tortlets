@@ -300,6 +300,24 @@
                 ]
             },
             "designerId": "f157240a-5de6-4a3c-8bee-d2c45a5ffe2d"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "console.log('initing HomeTabController');"
+                ]
+            },
+            "designerId": "11ac7812-b9f5-48df-98e8-cbd3ec699389"
         }
     ]
 }

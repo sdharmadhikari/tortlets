@@ -149,35 +149,6 @@
                     "designerId": "67184b3b-04cc-46eb-9b47-a5c4bc36ed28"
                 }
             ]
-        },
-        {
-            "type": "Ext.form.FieldSet",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "margin": 10,
-                "designer|displayName": "TortoiseDetailsFieldSet",
-                "title": null
-            },
-            "designerId": "c34cb1eb-d7d0-44e8-a708-e85804393db8",
-            "cn": [
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "ui": "plain",
-                        "text": "Tortoise Details"
-                    },
-                    "designerId": "a3546506-2e48-4b6b-bbae-cdd39ccb6ead"
-                }
-            ]
         }
     ]
 }

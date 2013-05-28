@@ -30,6 +30,14 @@ Ext.define('MyApp.controller.UtilityController', {
         console.log('loaded tortoisesStore');
         proxy.setUrl(orgUrl);
         console.log('getting out of loadTortoises');
+    },
+
+    init: function(application) {
+        console.log('initing UtilityController');
+    },
+
+    launch: function() {
+        console.log('launching UtilityController');
     }
 
 });

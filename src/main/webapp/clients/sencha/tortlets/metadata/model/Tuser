@@ -145,6 +145,23 @@
                 "type": "int"
             },
             "designerId": "147aa558-24ab-42d4-b7cb-e66f79e90858"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://dummy.url",
+                "headers": [
+                    "{\r",
+                    "   Accept: 'application/json'\r",
+                    "}"
+                ]
+            },
+            "designerId": "ce5cb664-f6e1-4305-a47d-055c20825f09"
         }
     ]
 }

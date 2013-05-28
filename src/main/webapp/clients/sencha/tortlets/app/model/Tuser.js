@@ -58,6 +58,13 @@ Ext.define('MyApp.model.Tuser', {
         ],
         hasMany: {
             model: 'MyApp.model.Dream'
+        },
+        proxy: {
+            type: 'rest',
+            url: 'http://dummy.url',
+            headers: {
+                Accept: 'application/json'
+            }
         }
     }
 });

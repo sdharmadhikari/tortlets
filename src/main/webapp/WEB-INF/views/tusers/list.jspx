@@ -8,8 +8,8 @@
             <table:column id="c_com_softrism_tortlets_domain_Tuser_firstName" property="firstName" z="MKYT0U+5Nszs2Tj+HCvDbUDY5Io="/>
             <table:column id="c_com_softrism_tortlets_domain_Tuser_lastName" property="lastName" z="trN2vFkV58tszo6lVqmgJEUdmzc="/>
             <table:column id="c_com_softrism_tortlets_domain_Tuser_password" property="password" render="false" z="user-managed"/>
-            <table:column id="c_com_softrism_tortlets_domain_Tuser_retypePassword" property="retypePassword" z="q9Zihi/e3BUOS9LlqM7MFTO9jNc="/>
             <table:column date="true" dateTimePattern="${tuser_birthdate_date_format}" id="c_com_softrism_tortlets_domain_Tuser_birthDate" property="birthDate" z="o4VzryHJCIguf9V3Op7pBBX7Ywg="/>
+            <table:column id="c_com_softrism_tortlets_domain_Tuser_userEmail" property="userEmail" z="+UyMXlvUuHalZKxAl5L0e3fpPTw="/>
         </table:table>
     </page:list>
 </div>

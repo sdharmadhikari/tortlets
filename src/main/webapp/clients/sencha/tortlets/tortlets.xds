@@ -11,9 +11,9 @@
         "buildShouldOverwriteIndex": true
     },
     "xdsVersion": "2.2.2",
-    "xdsBuild": 971,
+    "xdsBuild": 991,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000501,
+    "upgradeVersion": 210000000503,
     "framework": "touch22",
     "topInstanceFileMap": {
         "424d6af0-4bed-488c-bf22-6b9993519c5f": {
@@ -313,6 +313,14 @@
                 "app/view/signupmodule.js"
             ],
             "className": "signupmodule"
+        },
+        "8cfbebf1-bed2-4c1e-be30-bc068876d3a0": {
+            "paths": [
+                "metadata/view/BlankContainer",
+                "app/view/override/BlankContainer.js",
+                "app/view/BlankContainer.js"
+            ],
+            "className": "BlankContainer"
         }
     },
     "viewOrderMap": {
@@ -338,7 +346,8 @@
             "0da20323-db08-47ce-9741-64ded49ccb84",
             "1cc19794-36b6-4e82-baae-38a39a5ce5ec",
             "0774d05e-de9d-4085-bd90-9758034e790b",
-            "15444b93-1202-4a0e-8cbe-b9820ac02a0e"
+            "15444b93-1202-4a0e-8cbe-b9820ac02a0e",
+            "8cfbebf1-bed2-4c1e-be30-bc068876d3a0"
         ],
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",

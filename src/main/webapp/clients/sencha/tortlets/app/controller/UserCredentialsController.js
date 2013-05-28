@@ -28,20 +28,25 @@ Ext.define('MyApp.controller.UserCredentialsController', {
 
         control: {
             "panel": {
-                signUpSuccess: 'onRegistrationCardPanelItemIdSignUpSuccess'
+                signUpSuccess: 'onRegistrationCardPanelItemIdSignUpSuccess',
+                signOut: 'onRegistrationCardPanelItemIdSignOut'
             },
             "formpanel": {
                 signUpRequested: 'onLoginFormItemIdSignUpRequested',
                 signInSuccess: 'onLoginFormItemIdSignInSuccess'
             },
-            "button#userProfileButton": {
+            "tabpanel": {
+                activeitemchange: 'onTabpanelActiveItemChange'
+            },
+            "button[name='userProfileButton']": {
                 tap: 'onUserProfileButtonTap'
             }
         }
     },
 
     onRegistrationCardPanelItemIdSignUpSuccess: function(userObject) {
-        this.populateUserAndResources(userObject);
+        this.populateUserInfo(userObject);
+        this.populateUserResources(userObject);
 
         var landingCardPanel = this.getLandingCardPanel();
         var mainTabPanel = this.getMainTabPanel();
@@ -58,11 +63,32 @@ Ext.define('MyApp.controller.UserCredentialsController', {
     },
 
     onLoginFormItemIdSignInSuccess: function(userObject) {
-        this.populateUserAndResources(userObject);
+        this.populateUserInfo(userObject);
+        this.populateUserResources(userObject);
 
         var landingCardPanel = this.getLandingCardPanel();
         var mainTabPanel = this.getMainTabPanel();
         landingCardPanel.animateActiveItem(mainTabPanel, { type: 'slide'});
+    },
+
+    onTabpanelActiveItemChange: function(container, value, oldValue, eOpts) {
+        if(value.xtype === 'scoretabcardpanel') {
+
+            var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
+            MyApp.model.Tuser.load(userObject.id, {
+
+                success : function(record, operation) { 
+
+                    MyApp.app.currentUser = record;
+
+                },
+                failure : function(record, operation) { 
+                    alert ('tuser read failed');
+                }
+
+            });
+
+        }
     },
 
     onUserProfileButtonTap: function(button, e, eOpts) {
@@ -70,10 +96,36 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var registrationCardPanel = this.getRegistrationCardPanel();
         var registrationPage1 = this.getRegistrationPage1();
         registrationCardPanel.setActiveItem(registrationPage1);
-        landingCardPanel.animateActiveItem(registrationCardPanel, { type: 'slide'});
+
+        var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
+        MyApp.model.Tuser.load(userObject.id, {
+
+            success : function(record, operation) { 
+                MyApp.app.currentUser = record;
+                MyApp.app.getController('MyApp.controller.UserCredentialsController').populateUserSettingsForm(registrationPage1);
+                landingCardPanel.animateActiveItem(registrationCardPanel, { type: 'slide'});
+
+            },
+            failure : function(record, operation) { 
+                Ext.Msg.alert('','Server error');
+            }
+
+        });
+
     },
 
-    populateUserAndResources: function(userObject) {
+    onRegistrationCardPanelItemIdSignOut: function(panel) {
+        alert('sign out');
+
+        sessionStorage.setItem('userInfo', null);
+        var landingcardPanel = this.getLandingCardPanel();
+        landingcardPanel.setActiveItem(0);
+        var useridField = landingcardPanel.down('#userIdItemId');
+        useridField.setValue(lastUserId);
+
+    },
+
+    populateUserInfo: function(userObject) {
         var currentUser = Ext.create('MyApp.model.Tuser');
         currentUser.set('id',userObject.id);
         currentUser.set('firstName',userObject.firstName);
@@ -84,9 +136,18 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var userid = userObject.userid;
         var authHeaderValue = userObject.authHeaderValue;
 
+        localStorage.setItem('userid',userid);
+        sessionStorage.setItem('userInfo', JSON.stringify(userObject));
 
         MyApp.app.currentUser = currentUser; // Here currentUser becomes global variable to be accessed using MyApp.app.currentUser
         MyApp.app.currentUser.tempId = 0;
+
+    },
+
+    populateUserResources: function(userObject) {
+        var userid = userObject.userid;
+        var authHeaderValue = userObject.authHeaderValue;
+
         var host;
 
         if(window.location.host === '' || window.location.host === 'localhost'){  
@@ -134,6 +195,12 @@ Ext.define('MyApp.controller.UserCredentialsController', {
 
         ////////////////////////////////////////////////////
 
+        var Tuser = Ext.ModelMgr.getModel('MyApp.model.Tuser');
+        proxy = Tuser.getProxy();
+        headers = proxy.getHeaders();
+        headers.Authorization = authHeaderValue;
+        proxy.setUrl('http://' + host + '/tusers');
+
         var Dream = Ext.ModelMgr.getModel('MyApp.model.Dream');
         proxy = Dream.getProxy();
         headers = proxy.getHeaders();
@@ -151,6 +218,54 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
         proxy.setUrl('http://' + host + '/tortlets');
+
+        console.log('coming out populate user resources');
+    },
+
+    populateUserSettingsForm: function(form) {
+        registrationPage1 = form;
+
+        var firstName = registrationPage1.down('#firstName');
+        var lastName = registrationPage1.down('#lastName');
+        var userEmail = registrationPage1.down('#userEmail');
+
+        var userid = registrationPage1.down('#userid');
+        var password = registrationPage1.down('#password');
+        var readablePassword = registrationPage1.down('#readablePassword');
+
+        var userObject =  JSON.parse(sessionStorage.getItem('userInfo'));
+
+        registrationPage1.userObject = userObject; // Assigning userObject to 
+        // registration page because will need things like current authValue
+        // while updating the user
+
+        firstName.setValue(userObject.firstName);
+        lastName.setValue(userObject.lastName);
+        userEmail.setValue(userObject.userEmail);
+
+        userid.setValue(userObject.userid);
+        password.setValue(userObject.plainPassword);
+        readablePassword.setValue(userObject.plainPassword);
+    },
+
+    launch: function() {
+        console.log('usercredential controller launch');
+        /*
+        var lastUserId = localStorage.getItem('userid');
+        var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
+
+        if( userObject !== null ){
+
+        this.populateUserResources(userObject);
+        Ext.create('MyApp.view.MainTabPanel', {fullscreen: true});
+        //Ext.Viewport.setActiveItem({xtype : 'mainTabPanel' });
+    }else {
+        var landingCardPanel = Ext.create('MyApp.view.LandingCardPanel', {fullscreen: true});
+        //Ext.Viewport.setActiveItem({xtype : 'landingCardPanel' });
+        var useridField = landingCardPanel.down('#userIdItemId');
+        useridField.setValue(lastUserId);
+    }
+    */
     }
 
 });

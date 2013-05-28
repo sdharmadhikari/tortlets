@@ -33,9 +33,6 @@ public class TuserController {
             return "tusers/create";
         }
         uiModel.asMap().clear();
-        Date now = new Date();
-        tuser.setCreatedOn(now);
-        tuser.setUpdatedON(now);
         tuser.persist();
         return "redirect:/tusers/" + encodeUrlPathSegment(tuser.getId().toString(), httpServletRequest);
     }

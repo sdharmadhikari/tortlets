@@ -57,6 +57,7 @@ Ext.define('MyApp.view.DreamDetails', {
                     },
                     {
                         xtype: 'selectfield',
+                        hidden: true,
                         label: 'Dream Color',
                         labelWidth: '40%',
                         options: [

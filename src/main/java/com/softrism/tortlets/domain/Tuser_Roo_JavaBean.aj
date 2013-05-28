@@ -28,14 +28,6 @@ privileged aspect Tuser_Roo_JavaBean {
         this.password = password;
     }
     
-    public String Tuser.getRetypePassword() {
-        return this.retypePassword;
-    }
-    
-    public void Tuser.setRetypePassword(String retypePassword) {
-        this.retypePassword = retypePassword;
-    }
-    
     public String Tuser.getFirstName() {
         return this.firstName;
     }
@@ -52,12 +44,60 @@ privileged aspect Tuser_Roo_JavaBean {
         this.lastName = lastName;
     }
     
+    public String Tuser.getUserEmail() {
+        return this.userEmail;
+    }
+    
+    public void Tuser.setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+    
     public Date Tuser.getBirthDate() {
         return this.birthDate;
     }
     
     public void Tuser.setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+    
+    public TuserStatusEnum Tuser.getStatus() {
+        return this.status;
+    }
+    
+    public void Tuser.setStatus(TuserStatusEnum status) {
+        this.status = status;
+    }
+    
+    public TuserTimezoneEnum Tuser.getTimezone() {
+        return this.timezone;
+    }
+    
+    public void Tuser.setTimezone(TuserTimezoneEnum timezone) {
+        this.timezone = timezone;
+    }
+    
+    public String Tuser.getRoleName() {
+        return this.roleName;
+    }
+    
+    public void Tuser.setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+    
+    public Date Tuser.getCreatedOn() {
+        return this.createdOn;
+    }
+    
+    public void Tuser.setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
+    }
+    
+    public Date Tuser.getUpdatedOn() {
+        return this.updatedOn;
+    }
+    
+    public void Tuser.setUpdatedOn(Date updatedOn) {
+        this.updatedOn = updatedOn;
     }
     
     public int Tuser.getAllowedDelayDays() {
@@ -100,44 +140,12 @@ privileged aspect Tuser_Roo_JavaBean {
         this.tortletsCompletedCount = tortletsCompletedCount;
     }
     
-    public Date Tuser.getCreatedOn() {
-        return this.createdOn;
-    }
-    
-    public void Tuser.setCreatedOn(Date createdOn) {
-        this.createdOn = createdOn;
-    }
-    
-    public Date Tuser.getUpdatedON() {
-        return this.updatedON;
-    }
-    
-    public void Tuser.setUpdatedON(Date updatedON) {
-        this.updatedON = updatedON;
-    }
-    
     public Set<Dream> Tuser.getDreams() {
         return this.dreams;
     }
     
     public void Tuser.setDreams(Set<Dream> dreams) {
         this.dreams = dreams;
-    }
-    
-    public TuserStatusEnum Tuser.getStatus() {
-        return this.status;
-    }
-    
-    public void Tuser.setStatus(TuserStatusEnum status) {
-        this.status = status;
-    }
-    
-    public TuserTimezoneEnum Tuser.getTimezone() {
-        return this.timezone;
-    }
-    
-    public void Tuser.setTimezone(TuserTimezoneEnum timezone) {
-        this.timezone = timezone;
     }
     
 }

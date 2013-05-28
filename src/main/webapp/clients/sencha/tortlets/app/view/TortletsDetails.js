@@ -65,17 +65,6 @@ Ext.define('MyApp.view.TortletsDetails', {
                         name: 'completed'
                     }
                 ]
-            },
-            {
-                xtype: 'fieldset',
-                margin: 10,
-                items: [
-                    {
-                        xtype: 'button',
-                        ui: 'plain',
-                        text: 'Tortoise Details'
-                    }
-                ]
             }
         ]
     }

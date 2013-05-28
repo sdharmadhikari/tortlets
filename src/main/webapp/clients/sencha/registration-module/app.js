@@ -20,7 +20,7 @@ Ext.Loader.setConfig({
 
 Ext.application({
     views: [
-        'RegistrationCardPanel'
+        'SignUpsignInCardPanel'
     ],
     controllers: [
         'MyController'
@@ -29,7 +29,7 @@ Ext.application({
 
     launch: function() {
 
-        Ext.create('MyApp.view.RegistrationCardPanel', {fullscreen: true});
+        Ext.create('MyApp.view.SignUpsignInCardPanel', {fullscreen: true});
     }
 
 });

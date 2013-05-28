@@ -101,9 +101,9 @@ Ext.define('MyApp.view.loginmodule', {
             label = me.down('#signInFailedLabel'),
 
             userid = userIdField.getValue(),
-            password = passwordField.getValue();
+            plainPassword = passwordField.getValue();
 
-        if(userid.length === 0 || password.length === 0) {
+        if(userid.length === 0 || plainPassword.length === 0) {
             me.showSignInFailedMessage('Please enter your username and password.');
             return;
         }  
@@ -122,14 +122,16 @@ Ext.define('MyApp.view.loginmodule', {
             },
             params: {
                 userid: userid,
-                password: password
+                password: plainPassword
             },
             success: function (response) {        
                 var loginResponse = Ext.JSON.decode(response.responseText);
                 var userObject = loginResponse[0];
                 if (loginResponse.length === 1 && userObject.userid === userid) {
 
-                    var tok = userid + ':' + password;
+                    userObject.plainPassword = plainPassword;
+
+                    var tok = userid + ':' + plainPassword;
                     var hash = Base64.encode(tok);
                     var authHeaderValue = "Basic " + hash;
                     userObject.authHeaderValue = authHeaderValue ;

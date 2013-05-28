@@ -29,6 +29,8 @@ import org.springframework.transaction.annotation.Transactional;
 @RooJpaActiveRecord(finders = { "findTusersByUseridEquals", "findTusersByUseridEqualsAndPasswordEquals" })
 public class Tuser {
 
+    private static final Log log = LogFactory.getLog(Tuser.class);
+
     @NotNull
     @Size(min = 3, max = 23)
     @Column(unique = true)
@@ -38,42 +40,17 @@ public class Tuser {
     @Size(min = 6, max = 1024)
     private String password;
 
-    @Size(min = 0, max = 16)
-    private String retypePassword;
-
     @Size(min = 0, max = 25)
     private String firstName;
 
     @Size(min = 0, max = 25)
     private String lastName;
 
+    private String userEmail;
+
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date birthDate;
-
-    @Value("7")
-    private int allowedDelayDays;
-
-    private int latestDreamScore;
-
-    private int tortletsCreatedCount;
-
-    private int tortletsDeletedCount;
-
-    private int tortletsCompletedCount;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date createdOn;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date updatedON;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tuser", fetch = FetchType.LAZY)
-    private Set<Dream> dreams = new HashSet<Dream>();
-
-    private static final Log log = LogFactory.getLog(Tuser.class);
 
     @NotNull
     @Enumerated(EnumType.STRING)
@@ -87,11 +64,34 @@ public class Tuser {
     @Value("USER")
     private String roleName;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+    private Date createdOn;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+    private Date updatedOn;
+
+    @Value("7")
+    private int allowedDelayDays;
+
+    private int latestDreamScore;
+
+    private int tortletsCreatedCount;
+
+    private int tortletsDeletedCount;
+
+    private int tortletsCompletedCount;
+
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tuser", fetch = FetchType.LAZY)
+    private Set<Dream> dreams = new HashSet<Dream>();
+
     @PrePersist
     private void prePersist() {
         Date now = new Date();
         createdOn = now;
-        updatedON = now;
+        updatedOn = now;
 
         timezone = TuserTimezoneEnum.PST; // This needs to be removed later and come from client.
     }
@@ -99,10 +99,7 @@ public class Tuser {
     @PreUpdate
     private void preUpdate() {
         Date now = new Date();
-        updatedON = now;
-        ShaPasswordEncoder encoder = new ShaPasswordEncoder(256);
-        String encoded = encoder.encodePassword(password,null);
-        password = encoded;
+        updatedOn = now;
     }
 
     @Transactional

@@ -28,7 +28,18 @@ Ext.define('MyApp.view.signupmodule', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
-                title: 'Sign Up !'
+                title: 'User Info',
+                items: [
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            var registrationCardPanel = this.up('registrationCardPanel');
+                            registrationCardPanel.fireEvent('signOut');
+                        },
+                        ui: 'small',
+                        text: 'Log Out'
+                    }
+                ]
             },
             {
                 xtype: 'formpanel',
@@ -36,7 +47,7 @@ Ext.define('MyApp.view.signupmodule', {
                 items: [
                     {
                         xtype: 'fieldset',
-                        title: 'Whats Your Name, Buddy !',
+                        title: 'Whats Your Name ?',
                         items: [
                             {
                                 xtype: 'textfield',
@@ -351,6 +362,7 @@ Ext.define('MyApp.view.signupmodule', {
 
                                     var userObject = registrationPage1.userObject;
                                     var currentAuthHeaderValue = userObject.authHeaderValue;
+                                    alert('currentAuthHeaderValue ' + currentAuthHeaderValue);
 
                                     userObject.firstName = firstName.getValue();
                                     userObject.lastName = lastName.getValue();
@@ -449,7 +461,7 @@ Ext.define('MyApp.view.signupmodule', {
 
                                             var updatedUserObject = Ext.JSON.decode(response.responseText);
 
-                                            if (updatedUserObject.updatedON > userObject.updatedON) {
+                                            if (updatedUserObject.updatedOn > userObject.updatedOn) {
                                                 updatedUserObject.plainPassword = userObject.password;
                                                 var tok = updatedUserObject.userid + ':' + updatedUserObject.plainPassword ;
                                                 var hash = Base64.encode(tok);

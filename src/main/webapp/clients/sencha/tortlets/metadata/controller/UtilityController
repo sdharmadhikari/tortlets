@@ -36,6 +36,39 @@
                 ]
             },
             "designerId": "17a71197-203d-402f-a939-b3b6903120ca"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "console.log('initing UtilityController');"
+                ]
+            },
+            "designerId": "0b44b527-8bc2-4852-b3fe-d856d434db7d"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "console.log('launching UtilityController');"
+                ]
+            },
+            "designerId": "202a837c-8208-4ac6-a2a3-24b08536ec83"
         }
     ]
 }

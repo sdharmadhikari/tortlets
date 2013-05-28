@@ -17,16 +17,29 @@ Ext.define('MyApp.controller.MyController', {
     extend: 'Ext.app.Controller',
 
     config: {
+        refs: {
+            signUpsignInCardPanel: 'signUpsignInCardPanel'
+        },
+
         control: {
             "panel": {
-                signUpSuccess: 'onRegistrationCardPanelItemIdSignUpSuccess'
+                signUpSuccess: 'onSignUpsignInCardPanelSignUpSuccess',
+                signInSuccess: 'onSignUpsignInCardPanelSignInSuccess'
             }
         }
     },
 
-    onRegistrationCardPanelItemIdSignUpSuccess: function(userObject) {
-        var json1 = Ext.JSON.encode(userObject);
-        alert(json1);
+    onSignUpsignInCardPanelSignUpSuccess: function(panel) {
+        alert('signUpSuccess fired. This event should be honored in main application');
+    },
+
+    onSignUpsignInCardPanelSignInSuccess: function(panel) {
+        alert('sign In Success fired. This event should be honored in main application');
+
+        var signUpsignInCardPanel = this.getsignUpsignInCardPanel();
+        alert(signUpsignInCardPanel);
+        var dummyUserAppPanel = signUpsignInCardPanel.down('#dummyUserAppPanel');
+        signUpsignInCardPanel.setActiveItem(dummyUserAppPanel);
     }
 
 });

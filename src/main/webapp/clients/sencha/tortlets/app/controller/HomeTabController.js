@@ -158,6 +158,10 @@ Ext.define('MyApp.controller.HomeTabController', {
 
         Ext.Msg.alert('Failure','Could not save to server,try again later',Ext.emptyFn);
 
+    },
+
+    init: function(application) {
+        console.log('initing HomeTabController');
     }
 
 });
