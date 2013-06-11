@@ -81,6 +81,15 @@ Ext.define('MyApp.model.Tortoise', {
             {
                 name: 'version',
                 type: 'int'
+            },
+            {
+                name: 'tortletsCreatedCount'
+            },
+            {
+                name: 'tortletsDeletedCount'
+            },
+            {
+                name: 'tortletsCompletedCount'
             }
         ],
         belongsTo: {

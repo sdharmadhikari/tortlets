@@ -266,6 +266,42 @@
                 "field": "title"
             },
             "designerId": "d0eac0fd-2b43-4a77-a051-745abf69b06b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortletsCreatedCount"
+            },
+            "designerId": "f78eb9e2-8196-4d6e-bf3a-b8c0704ead69"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortletsDeletedCount"
+            },
+            "designerId": "a6561ad0-79d0-4edc-bafc-8415579f7135"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortletsCompletedCount"
+            },
+            "designerId": "fbf99743-ccd4-476f-86ff-327ff205ab9f"
         }
     ]
 }

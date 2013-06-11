@@ -68,6 +68,8 @@ Ext.define('MyApp.controller.UserCredentialsController', {
 
         var landingCardPanel = this.getLandingCardPanel();
         var mainTabPanel = this.getMainTabPanel();
+        var homeTabCardPanel = this.getHomeTabCardPanel();
+        mainTabPanel.setActiveItem(homeTabCardPanel);
         landingCardPanel.animateActiveItem(mainTabPanel, { type: 'slide'});
     },
 
@@ -95,6 +97,8 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var landingCardPanel = this.getLandingCardPanel();
         var registrationCardPanel = this.getRegistrationCardPanel();
         var registrationPage1 = this.getRegistrationPage1();
+        registrationPage1.getScrollable().getScroller().scrollToTop();
+
         registrationCardPanel.setActiveItem(registrationPage1);
 
         var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
@@ -115,7 +119,6 @@ Ext.define('MyApp.controller.UserCredentialsController', {
     },
 
     onRegistrationCardPanelItemIdSignOut: function(panel) {
-        alert('sign out');
 
         sessionStorage.setItem('userInfo', null);
         var landingcardPanel = this.getLandingCardPanel();

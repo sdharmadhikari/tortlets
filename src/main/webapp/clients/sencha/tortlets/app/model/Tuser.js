@@ -36,7 +36,6 @@ Ext.define('MyApp.model.Tuser', {
             },
             {
                 name: 'latestDreamScore',
-                persist: false,
                 type: 'int'
             },
             {
@@ -54,6 +53,18 @@ Ext.define('MyApp.model.Tuser', {
             {
                 name: 'version',
                 type: 'int'
+            },
+            {
+                name: 'roleName'
+            },
+            {
+                name: 'tortletsCreatedCount'
+            },
+            {
+                name: 'tortletsDeletedCount'
+            },
+            {
+                name: 'tortletsCompletedCount'
             }
         ],
         hasMany: {

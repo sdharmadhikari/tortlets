@@ -19,7 +19,7 @@ Ext.define('MyApp.view.DreamList', {
 
     config: {
         ui: 'round',
-        emptyText: 'We know you have big dreams for yourself. Declare it ! ',
+        emptyText: 'You have big dreams for yourself. Declare it ! ',
         scrollToTopOnRefresh: false,
         store: 'dreamsStore',
         onItemDisclosure: true,

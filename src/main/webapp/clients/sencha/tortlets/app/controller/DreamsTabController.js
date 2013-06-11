@@ -28,7 +28,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
             dreamListPanel: 'dreamListPanel',
             tortoiseDetailsBackToListButton: 'button[name=\'tortoiseDetailsBackToListButton\']',
             tortoiseDetailsBackToDreamButton: 'button[name=\'tortoiseDetailsBackToDreamButton\']',
-            tortoiseDeleteButton: 'button[name=\'tortoiseDeleteButton\']'
+            tortoiseDeleteButton: 'button[name=\'tortoiseDeleteButton\']',
+            homeTabCardPanel: 'homeTabCardPanel',
+            tortoiseList: 'tortoiseList'
         },
 
         control: {
@@ -93,6 +95,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var dreamDetails = this.getDreamDetails();
         dreamDetails.newStatus = 'false';
         dreamDetails.setRecord(record);
+        //alert(record.get('id'));
+        MyApp.app.currentDreamId = record.get('id');
         this.getDreamDeleteButton().show();
         dreamDetails.getScrollable().getScroller().scrollToTop();
         this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type: 'slide'} );
@@ -101,13 +105,13 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     onDreamDetailsNextButtonTap: function(button, e, eOpts) {
         var tortoiseListPanel = this.getTortoiseListPanel();
-
+        var tortoiseList = this.getTortoiseList();
         var dreamDetailsForm = this.getDreamDetails();
         var newStatus = dreamDetailsForm.newStatus;
         var currentUser = MyApp.app.currentUser;
         /* Accessing global variable which has been set 
         in Application launch() function */
-        var userid = MyApp.app.currentUser.get('userid'); 
+        var userid = MyApp.app.currentUser.get('userid');; 
         var utility = MyApp.app.getController('UtilityController');
         /* Need this so that this controller is available in 
         callback methods. */
@@ -131,21 +135,17 @@ Ext.define('MyApp.controller.DreamsTabController', {
             ext-record-<number>. That will result into exception */
             newOrOldDream.set('id',MyApp.app.tempId);
             newOrOldDream.save(this.newDreamSave);
-        }else{
-            dreamId = newOrOldDream.get('id');
-            if(newOrOldDream.dirty === true){
-                newOrOldDream.save(this.oldDreamSave);
-            }else{
-                utility.loadTortoises(dreamId);
-                caller.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});
-            }
 
+        }else{
+            newOrOldDream.save(this.oldDreamSave);
         }
 
     },
 
     onDreamDetailsBackButtonTap: function(button, e, eOpts) {
-        this.getDreamListCardPanel().animateActiveItem(0, { type : 'slide',direction : 'right'});
+        homeTabCardPanel = this.getHomeTabCardPanel();
+
+        this.getMainTabPanel().setActiveItem(homeTabCardPanel);
     },
 
     onTortoiseListStartDreamingButtonTap: function(button, e, eOpts) {
@@ -158,6 +158,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     onTortoiseListPanelBackButtonTap: function(button, e, eOpts) {
         var dreamDetails = this.getDreamDetails();
+        dreamDetails.newStatus = 'false';
         dreamDetails.getScrollable().getScroller().scrollToTop();
         this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type : 'slide', direction : 'right'});
     },
@@ -220,9 +221,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var newOrOldTortoise = tortoiseDetailsForm.getRecord();
         tortoiseDetailsForm.updateRecord(newOrOldTortoise);
-        var errors = newOrOldTortoise.validate();
-        if (!errors.isValid()) {
-            Ext.Msg.alert('Enter all mandatory fields', '', Ext.emptyFn);
+
+        var errorMessage = this.validateTortoise(newOrOldTortoise);
+        if(errorMessage !== ''){
+            Ext.Msg.alert(errorMessage, '', Ext.emptyFn);
             newOrOldTortoise.reject();
             return;
         }
@@ -278,6 +280,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         deleteButton.hide();
         dreamForm.getScrollable().getScroller().scrollToTop();
         this.getDreamListCardPanel().animateActiveItem(dreamForm, { type: 'slide'});
+        this.getWhatsYourDreamTextField().setValue('');
 
     },
 
@@ -298,8 +301,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseListStartDreamingButtonTap: function(button, e, eOpts) {
-        var dreamDetails = this.getDreamDetails();
-        this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type : 'slide', direction : 'right'});
+        //var dreamDetails = this.getDreamDetails();
+        var dreamListPanel = this.getDreamListPanel();
+        this.getDreamListCardPanel().setActiveItem(dreamListPanel);
     },
 
     newDreamSave: function(createdModel) {
@@ -307,6 +311,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var dreamsTabController = MyApp.app.getController('DreamsTabController');
         var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();
         var dreamId = createdModel.get('id');
+        MyApp.app.tempDreamId = dreamId;
         var dreamDetailsForm = dreamsTabController.getDreamDetails();
         dreamDetailsForm.setRecord(createdModel);
         var dreamsStore = Ext.getStore('dreamsStore');
@@ -319,12 +324,31 @@ Ext.define('MyApp.controller.DreamsTabController', {
     oldDreamSave: function(savedModel) {
         var utility = MyApp.app.getController('UtilityController');
         var dreamsTabController = MyApp.app.getController('DreamsTabController');
+        var dreamDetails = dreamsTabController.getDreamDetails();
+        dreamDetails.setRecord(savedModel); // So that if anybody clicks back,
+        // form is updated with entity from server.
         var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();
+        var tortoiseList = dreamsTabController.getTortoiseList();
         var dreamId = savedModel.get('id');
         var dreamsStore = Ext.getStore('dreamsStore');
         dreamsStore.load();
-        utility.loadTortoises(dreamId);
-        dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});
+        //utility.loadTortoises(dreamId);
+        var tortoisesStore = Ext.getStore('tortoisesStore');
+        var proxy = tortoisesStore.getProxy();
+        var orgUrl = proxy.getUrl();
+        var urlWithDream = orgUrl + '&dream=' + dreamId;
+        proxy.setUrl(urlWithDream);
+        tortoisesStore.load(function(records, operation, success) {
+            //tortoiseList.refresh();    
+            //if(records.length === 0) {
+            //     tortoiseList.removeAll();
+            //}
+
+            dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});  
+            proxy.setUrl(orgUrl);
+        },this);
+
+
 
     },
 
@@ -352,6 +376,29 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     init: function(application) {
         console.log('initing DreamsTabController');
+    },
+
+    validateTortoise: function(tortoise) {
+        var errorMessage = '';
+        var errors = tortoise.validate();
+        if (!errors.isValid()) {
+            errorMessage = 'Enter all mandatory fields'  ;
+
+        }
+
+        if(tortoise.get('monday') === false &&
+        tortoise.get('tuesday') === false && 
+        tortoise.get('wednesday') === false && 
+        tortoise.get('thursday') === false &&
+        tortoise.get('friday') === false &&
+        tortoise.get('saturday') === false &&
+        tortoise.get('sunday') === false
+        ){
+
+            errorMessage = 'Select at least one day';   
+        }
+
+        return errorMessage;
     }
 
 });

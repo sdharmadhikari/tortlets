@@ -17,6 +17,7 @@ import java.util.List;
 @RooToString
 @RooJpaActiveRecord(finders = { "ByTuserAndCreatedOnEquals", "findTortletsByCompleted", "findTortletsByUseridEquals", "findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted", "findTortletsByUseridEqualsAndCompleted" })
 @RooJson
+
 public class Tortlet {
 
     @NotNull
@@ -27,6 +28,7 @@ public class Tortlet {
     @Size(min = 0, max = 5000)
     private String notes;
 
+    @Column(updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date createdOn;

@@ -78,6 +78,49 @@
             },
             "designerId": "c681d4f7-2a2a-42e0-85ca-65a63c61e49c",
             "masterInstanceId": "0da20323-db08-47ce-9741-64ded49ccb84"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTabpanelActiveItemChange",
+                "implHandler": [
+                    "\r",
+                    "if(value.xtype === 'dreamListCardPanel'){\r",
+                    "   var dreamsStore = Ext.getStore('dreamsStore');\r",
+                    "   dreamsStore.load();\r",
+                    "}else if(value.xtype === 'homeTabCardPanel'){\r",
+                    "   var tortletsStore = Ext.getStore('incompleteTortletsStore');\r",
+                    "   tortletsStore.load();\r",
+                    "   var todaysTortletsStore = Ext.getStore('todaysTortletsStore');\r",
+                    "   todaysTortletsStore.load();\r",
+                    "    \r",
+                    "}else if(value.xtype === 'scoreTabCardPanel') {\r",
+                    "    \r",
+                    "   MyApp.model.Tuser.load(MyApp.app.currentUser.get('id'), {\r",
+                    "    scope: this,\r",
+                    "    failure: function(record, operation) {\r",
+                    "        //do something if the load failed\r",
+                    "    },\r",
+                    "    success: function(record, operation) {\r",
+                    "        MyApp.app.currentUser = record;\r",
+                    "        alert('user dream score ' + MyApp.app.currentUser.get('latestDreamScore'));\r",
+                    "    },\r",
+                    "    callback: function(record, operation) {\r",
+                    "        //do something whether the load succeeded or failed\r",
+                    "    }\r",
+                    "});\r",
+                    "                          \r",
+                    "    \r",
+                    "}"
+                ],
+                "name": "activeitemchange"
+            },
+            "designerId": "6c1295ef-f42f-4f99-a448-365ad4175039"
         }
     ]
 }

@@ -362,7 +362,6 @@ Ext.define('MyApp.view.signupmodule', {
 
                                     var userObject = registrationPage1.userObject;
                                     var currentAuthHeaderValue = userObject.authHeaderValue;
-                                    alert('currentAuthHeaderValue ' + currentAuthHeaderValue);
 
                                     userObject.firstName = firstName.getValue();
                                     userObject.lastName = lastName.getValue();

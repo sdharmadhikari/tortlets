@@ -37,7 +37,7 @@ Ext.define('MyApp.view.MainTabPanel', {
                 iconCls: 'star'
             },
             {
-                xtype: 'scoretabcardpanel',
+                xtype: 'scoreTabCardPanel',
                 title: 'Your Score',
                 iconCls: 'user'
             },
@@ -49,6 +49,43 @@ Ext.define('MyApp.view.MainTabPanel', {
         ],
         tabBar: {
             docked: 'bottom'
+        },
+        listeners: [
+            {
+                fn: 'onTabpanelActiveItemChange',
+                event: 'activeitemchange'
+            }
+        ]
+    },
+
+    onTabpanelActiveItemChange: function(container, value, oldValue, eOpts) {
+
+        if(value.xtype === 'dreamListCardPanel'){
+            var dreamsStore = Ext.getStore('dreamsStore');
+            dreamsStore.load();
+        }else if(value.xtype === 'homeTabCardPanel'){
+            var tortletsStore = Ext.getStore('incompleteTortletsStore');
+            tortletsStore.load();
+            var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
+            todaysTortletsStore.load();
+
+        }else if(value.xtype === 'scoreTabCardPanel') {
+
+            MyApp.model.Tuser.load(MyApp.app.currentUser.get('id'), {
+                scope: this,
+                failure: function(record, operation) {
+                    //do something if the load failed
+                },
+                success: function(record, operation) {
+                    MyApp.app.currentUser = record;
+                    alert('user dream score ' + MyApp.app.currentUser.get('latestDreamScore'));
+                },
+                callback: function(record, operation) {
+                    //do something whether the load succeeded or failed
+                }
+            });
+
+
         }
     }
 

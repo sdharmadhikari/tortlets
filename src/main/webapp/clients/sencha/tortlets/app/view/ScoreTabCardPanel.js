@@ -15,7 +15,7 @@
 
 Ext.define('MyApp.view.ScoreTabCardPanel', {
     extend: 'Ext.Panel',
-    alias: 'widget.scoretabcardpanel',
+    alias: 'widget.scoreTabCardPanel',
 
     requires: [
         'MyApp.view.MainScorePanel'

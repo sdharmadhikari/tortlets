@@ -64,6 +64,7 @@ public class Tuser {
     @Value("USER")
     private String roleName;
 
+    @Column(updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date createdOn;

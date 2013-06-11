@@ -7,7 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "ScoreTabCardPanel",
-        "designer|userAlias": "scoretabcardpanel",
+        "designer|userAlias": "scoreTabCardPanel",
         "layout": "card"
     },
     "designerId": "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",

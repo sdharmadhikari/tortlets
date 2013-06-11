@@ -89,23 +89,38 @@
             ]
         },
         {
-            "type": "Ext.field.TextArea",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "height": 65,
-                "html": null,
-                "designer|displayName": "TortoiseTitle",
-                "label": null,
-                "labelWidth": "0%",
-                "name": "title",
-                "placeHolder": "Enter recurring activity,its slow treading tortoise..",
-                "maxRows": 2
+                "designer|displayName": "TortoiseTiteFieldSet",
+                "title": null
             },
-            "designerId": "36659fb2-3e42-4150-b471-45a137c54e00"
+            "designerId": "bc9c221e-9788-46e0-b186-1ac25cc22217",
+            "cn": [
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 65,
+                        "html": null,
+                        "designer|displayName": "TortoiseTitle",
+                        "label": null,
+                        "labelWidth": "0%",
+                        "name": "title",
+                        "placeHolder": "Recurring activity title..",
+                        "maxRows": 2
+                    },
+                    "designerId": "36659fb2-3e42-4150-b471-45a137c54e00"
+                }
+            ]
         },
         {
             "type": "Ext.form.FieldSet",

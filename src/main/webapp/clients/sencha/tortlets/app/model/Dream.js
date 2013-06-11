@@ -35,7 +35,6 @@ Ext.define('MyApp.model.Dream', {
             },
             {
                 name: 'latestDreamScore',
-                persist: false,
                 type: 'int'
             },
             {
@@ -43,20 +42,23 @@ Ext.define('MyApp.model.Dream', {
                 name: 'userid'
             },
             {
-                name: 'dreamStatus'
-            },
-            {
-                dateFormat: 'MM/dd/yyy',
-                name: 'createdOn',
-                persist: false
-            },
-            {
-                name: 'updatedOn',
-                persist: false
+                name: 'status'
             },
             {
                 name: 'version',
                 type: 'int'
+            },
+            {
+                name: 'tortletsCreatedCount'
+            },
+            {
+                name: 'tortletsDeletedCount'
+            },
+            {
+                name: 'tortletsCompletedCount'
+            },
+            {
+                name: 'createdOn'
             }
         ],
         proxy: {

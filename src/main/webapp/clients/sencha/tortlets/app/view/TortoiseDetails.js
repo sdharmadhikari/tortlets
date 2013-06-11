@@ -41,12 +41,17 @@ Ext.define('MyApp.view.TortoiseDetails', {
                 ]
             },
             {
-                xtype: 'textareafield',
-                height: 65,
-                labelWidth: '0%',
-                name: 'title',
-                placeHolder: 'Enter recurring activity,its slow treading tortoise..',
-                maxRows: 2
+                xtype: 'fieldset',
+                items: [
+                    {
+                        xtype: 'textareafield',
+                        height: 65,
+                        labelWidth: '0%',
+                        name: 'title',
+                        placeHolder: 'Recurring activity title..',
+                        maxRows: 2
+                    }
+                ]
             },
             {
                 xtype: 'fieldset',

@@ -767,7 +767,6 @@
                                             "\r",
                                             "var userObject = registrationPage1.userObject;\r",
                                             "var currentAuthHeaderValue = userObject.authHeaderValue;\r",
-                                            "alert('currentAuthHeaderValue ' + currentAuthHeaderValue);\r",
                                             "\r",
                                             "userObject.firstName = firstName.getValue();\r",
                                             "userObject.lastName = lastName.getValue();\r",

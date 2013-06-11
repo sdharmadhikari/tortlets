@@ -24,12 +24,19 @@
                 ],
                 "implHandler": [
                     "console.log('inside loadTortoises');\r",
+                    "tortoiseList = this.getTortoiseList();\r",
                     "var tortoisesStore = Ext.getStore('tortoisesStore');\r",
                     "var proxy = tortoisesStore.getProxy();\r",
                     "var orgUrl = proxy.getUrl();\r",
                     "var urlWithDream = orgUrl + '&dream=' + dreamId;\r",
                     "proxy.setUrl(urlWithDream);\r",
-                    "tortoisesStore.load();\r",
+                    "//tortoisesStore.load();\r",
+                    "tortoisesStore.load(function(records, operation, success) {\r",
+                    "    tortoiseList.refresh();\r",
+                    "    //alert('loaded records');\r",
+                    "}, this);\r",
+                    "\r",
+                    "\r",
                     "console.log('loaded tortoisesStore');\r",
                     "proxy.setUrl(orgUrl);\r",
                     "console.log('getting out of loadTortoises');"
@@ -69,6 +76,19 @@
                 ]
             },
             "designerId": "202a837c-8208-4ac6-a2a3-24b08536ec83"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "tortoiseList",
+                "selector": "tortoiseList"
+            },
+            "designerId": "a056b727-94d0-4f3f-9c5f-a74bfdff0d8b"
         }
     ]
 }

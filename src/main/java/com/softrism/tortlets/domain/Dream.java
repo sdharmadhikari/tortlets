@@ -38,6 +38,7 @@ public class Dream {
 
     private int tortletsCompletedCount;
 
+    @Column(updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date createdOn;

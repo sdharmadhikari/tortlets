@@ -174,6 +174,8 @@ public class TortletController {
             tortlet.setCompleted(Boolean.TRUE);
         }
         if (!wasCompleted && nowCompleted) {
+            Date now = new Date();
+            tortlet.setCompletedOn(now);
             Tortoise tortoise = tortlet.getTortoise();
             int tortoiseCompletedCount = tortoise.getTortletsCompletedCount() + 1;
             int tortoiseCreatedCount = tortoise.getTortletsCreatedCount();

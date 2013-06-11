@@ -17,16 +17,26 @@ Ext.define('MyApp.controller.UtilityController', {
     extend: 'Ext.app.Controller',
 
     config: {
+        refs: {
+            tortoiseList: 'tortoiseList'
+        }
     },
 
     loadTortoises: function(dreamId) {
         console.log('inside loadTortoises');
+        tortoiseList = this.getTortoiseList();
         var tortoisesStore = Ext.getStore('tortoisesStore');
         var proxy = tortoisesStore.getProxy();
         var orgUrl = proxy.getUrl();
         var urlWithDream = orgUrl + '&dream=' + dreamId;
         proxy.setUrl(urlWithDream);
-        tortoisesStore.load();
+        //tortoisesStore.load();
+        tortoisesStore.load(function(records, operation, success) {
+            tortoiseList.refresh();
+            //alert('loaded records');
+        }, this);
+
+
         console.log('loaded tortoisesStore');
         proxy.setUrl(orgUrl);
         console.log('getting out of loadTortoises');

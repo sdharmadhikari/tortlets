@@ -59,8 +59,7 @@ Ext.application({
         'TodaysTortletList',
         'LandingCardPanel',
         'loginmodule',
-        'signupmodule',
-        'BlankContainer'
+        'signupmodule'
     ],
     controllers: [
         'HomeTabController',
@@ -80,8 +79,18 @@ Ext.application({
         if( userObject !== null ){
             var credentialController = MyApp.app.getController('MyApp.controller.UserCredentialsController');
             credentialController.populateUserResources(userObject);
+            var currentUser = Ext.create('MyApp.model.Tuser');
+            currentUser.set('id',userObject.id);
+            currentUser.set('firstName',userObject.firstName);
+            currentUser.set('lastName',userObject.lastName);
+            currentUser.set('userid',userObject.userid);
+            currentUser.set('version',userObject.version); 
+            MyApp.app.currentUser = currentUser; // Here currentUser becomes global variable to be accessed using MyApp.app.currentUser
+            MyApp.app.currentUser.tempId = 0;
+
             var landingCardPanel = Ext.create('MyApp.view.LandingCardPanel', {fullscreen: true});
-            landingCardPanel.setActiveItem(2);
+            var mainTabPanel = credentialController.getMainTabPanel();
+            landingCardPanel.setActiveItem(mainTabPanel);
         }else {
             var landingCardPanel = Ext.create('MyApp.view.LandingCardPanel', {fullscreen: true});
             var useridField = landingCardPanel.down('#userIdItemId');

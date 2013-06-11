@@ -313,41 +313,32 @@
                 "app/view/signupmodule.js"
             ],
             "className": "signupmodule"
-        },
-        "8cfbebf1-bed2-4c1e-be30-bc068876d3a0": {
-            "paths": [
-                "metadata/view/BlankContainer",
-                "app/view/override/BlankContainer.js",
-                "app/view/BlankContainer.js"
-            ],
-            "className": "BlankContainer"
         }
     },
     "viewOrderMap": {
         "view": [
+            "1cc19794-36b6-4e82-baae-38a39a5ce5ec",
             "424d6af0-4bed-488c-bf22-6b9993519c5f",
             "c2bdc653-c608-400e-b209-ef000e5d7997",
             "ccd9f3a8-ae61-4fc6-982b-b0ab91b1a0b9",
-            "811d49e0-92af-414a-9025-4cb5ec728652",
-            "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",
+            "0774d05e-de9d-4085-bd90-9758034e790b",
+            "15444b93-1202-4a0e-8cbe-b9820ac02a0e",
+            "3f058fa0-cbf4-4a61-a122-32c6457d8ec4",
+            "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
             "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0",
             "8162b955-c1db-4f2f-bcaa-753970ca90eb",
-            "dca854bb-a33a-4137-aef2-90d43399589d",
             "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0",
-            "3f058fa0-cbf4-4a61-a122-32c6457d8ec4",
+            "dca854bb-a33a-4137-aef2-90d43399589d",
+            "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",
+            "811d49e0-92af-414a-9025-4cb5ec728652",
             "eaceb40a-b0c4-4740-a5a5-7c98435c0248",
             "3a789a20-fef4-4313-b085-1612d07320cf",
-            "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
             "c717694e-2e8e-4855-ba93-2500aa9367bf",
             "ab390928-6413-4757-9eb4-5023d3291a6c",
             "a148bbe8-dad7-4c8e-a95a-4081d4b97c6f",
             "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
             "0e3fa1af-7c66-4370-bf0e-45af7191d28e",
-            "0da20323-db08-47ce-9741-64ded49ccb84",
-            "1cc19794-36b6-4e82-baae-38a39a5ce5ec",
-            "0774d05e-de9d-4085-bd90-9758034e790b",
-            "15444b93-1202-4a0e-8cbe-b9820ac02a0e",
-            "8cfbebf1-bed2-4c1e-be30-bc068876d3a0"
+            "0da20323-db08-47ce-9741-64ded49ccb84"
         ],
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",

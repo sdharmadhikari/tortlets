@@ -67,7 +67,6 @@
             "codeClass": null,
             "userConfig": {
                 "name": "latestDreamScore",
-                "persist": false,
                 "type": "int"
             },
             "designerId": "930975de-e99a-49a3-b659-e8ac00209318"
@@ -162,6 +161,54 @@
                 ]
             },
             "designerId": "ce5cb664-f6e1-4305-a47d-055c20825f09"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "roleName"
+            },
+            "designerId": "513571b5-9511-4eb1-b58d-6be97e2abe2b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortletsCreatedCount"
+            },
+            "designerId": "ca85872f-0d1c-43b3-b993-1a742062a3cb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortletsDeletedCount"
+            },
+            "designerId": "f7e16fcb-3f8f-4b65-9f2f-1bd168d9d9a0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortletsCompletedCount"
+            },
+            "designerId": "cc9e3047-1723-4505-b876-0517b61dee90"
         }
     ]
 }
