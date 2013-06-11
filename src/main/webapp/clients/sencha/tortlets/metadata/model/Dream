@@ -213,6 +213,19 @@
                 "type": null
             },
             "designerId": "bf521e01-0073-43c6-bb90-8dd2e9f2c198"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": null
+            },
+            "designerId": "1eef7223-4e6b-4402-9173-059b6888721f"
         }
     ]
 }

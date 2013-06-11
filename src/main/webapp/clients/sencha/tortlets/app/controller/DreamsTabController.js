@@ -30,7 +30,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
             tortoiseDetailsBackToDreamButton: 'button[name=\'tortoiseDetailsBackToDreamButton\']',
             tortoiseDeleteButton: 'button[name=\'tortoiseDeleteButton\']',
             homeTabCardPanel: 'homeTabCardPanel',
-            tortoiseList: 'tortoiseList'
+            tortoiseList: 'tortoiseList',
+            dreamList: 'dreamList'
         },
 
         control: {
@@ -153,7 +154,36 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onDreamDeleteButtonButtonTap: function(button, e, eOpts) {
-        this.getDreamListCardPanel().animateActiveItem(0, { type : 'slide', direction : 'right'});
+        var dreamListPanel = this.getDreamListPanel();
+        var dreamListCardPanel = this.getDreamListCardPanel();
+        var dreamDetails = this.getDreamDetails();
+        var dreamList = this.getDreamList();
+        var dream = dreamDetails.getRecord();
+        dreamDetails.updateRecord(dream);
+
+
+        Ext.Msg.confirm('', "Dream and it's tortoises will be deleted !", function(buttonId,value,opt) {
+
+            if(buttonId === 'yes') { 
+                dream.getProxy().setAppendId(true);
+                dream.erase({ 
+                    scope : this,
+                    success : function(record, operation) { 
+                        dream.getProxy().setAppendId(false);
+                        var dreamsStore = Ext.getStore('dreamsStore');
+                        dreamsStore.load();// Have to load again otherwise
+                        // store list does not get refreshed.                
+                        dreamListCardPanel.animateActiveItem(dreamListPanel, { type : 'slide', direction : 'right'});
+                    },
+                    failure : function(record, operation) { alert('delete failed');}
+
+                });
+
+            }
+
+        });
+
+
     },
 
     onTortoiseListPanelBackButtonTap: function(button, e, eOpts) {
@@ -297,7 +327,39 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseDeleteButtonTap: function(button, e, eOpts) {
+        var tortoiseListPanel = this.getTortoiseListPanel();
+        var dreamListCardPanel = this.getDreamListCardPanel();
+        var tortoiseDetails = this.getTortoiseDetails();
+        //var dreamList = this.getDreamList();
+        var tortoise = tortoiseDetails.getRecord();
+        tortoiseDetails.updateRecord(tortoise);
 
+
+        Ext.Msg.confirm('', "Tortoise will be deleted !", function(buttonId,value,opt) {
+
+            if(buttonId === 'yes') { 
+                tortoise.getProxy().setAppendId(true);
+                tortoise.erase({ 
+                    scope : this,
+                    success : function(record, operation) { 
+                        tortoise.getProxy().setAppendId(false);
+                        var tortoisesStore = Ext.getStore('tortoisesStore');
+                        var proxy = tortoisesStore.getProxy();
+                        var orgUrl = proxy.getUrl();
+                        var urlWithDream = orgUrl + '&dream=' + dreamId;
+                        proxy.setUrl(urlWithDream);
+                        tortoisesStore.load();// Have to load again otherwise
+                        // store list does not get refreshed. 
+
+                        dreamListCardPanel.animateActiveItem(tortoiseListPanel, { type : 'slide', direction : 'right'});
+                    },
+                    failure : function(record, operation) { alert('delete failed');}
+
+                });
+
+            }
+
+        });
     },
 
     onTortoiseListStartDreamingButtonTap: function(button, e, eOpts) {

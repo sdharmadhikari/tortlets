@@ -71,7 +71,7 @@ privileged aspect DreamController_Roo_Controller_Json {
         }
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
-    
+
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")
     public ResponseEntity<String> DreamController.deleteFromJson(@PathVariable("id") Long id) {
         Dream dream = Dream.findDream(id);

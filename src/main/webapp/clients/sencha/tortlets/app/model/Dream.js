@@ -59,6 +59,9 @@ Ext.define('MyApp.model.Dream', {
             },
             {
                 name: 'createdOn'
+            },
+            {
+                name: 'id'
             }
         ],
         proxy: {
