@@ -21,10 +21,16 @@ Ext.define('MyApp.controller.HomeTabController', {
             homeTabCardPanel: 'homeTabCardPanel',
             tortletDetails: 'tortletDetails',
             todayTortletsList: 'todayTortletsList',
-            tortletsList: 'tortletsList'
+            tortletsList: 'tortletsList',
+            todaysTortletListPanel: 'todaysTortletListPanel',
+            tortletListPanel: 'tortletListPanel',
+            tortletsListsContainerPanel: 'tortletsListsContainerPanel'
         },
 
         control: {
+            "todayTortletsList": {
+                itemtap: 'onTodaysTortletsListItemTap'
+            },
             "tortletsList": {
                 itemtap: 'onTortletsListItemTap'
             },
@@ -42,23 +48,60 @@ Ext.define('MyApp.controller.HomeTabController', {
             },
             "button[name='showPendingListButton']": {
                 tap: 'onShowPendingListButtonTap'
-            },
-            "todayTortletsList": {
-                itemtap: 'onTodaysTortletsListItemTap'
             }
         }
     },
 
+    onTodaysTortletsListItemTap: function(dataview, index, target, record, e, eOpts) {
+        var homeTabController = this;
+        Ext.Msg.confirm('', 'Done with Tortlet ?', function(buttonId,value,opt) { 
+
+            if(buttonId === 'yes') {
+
+                record.sourceStoreId = 'todaysTortletsStore';
+                homeTabController.saveTortlet(homeTabController, record);        
+            }
+
+        });
+
+
+        //var tortletDetails = this.getTortletDetails();
+
+
+        //alert(record.sourceStoreId);
+        //tortletDetails.setRecord(record);
+
+        //this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});
+
+        /// Populate record from form. populateTortletRecordFromForm()
+
+
+
+        //this.getHomeTabCardPanel().
+        //animateActiveItem(0,{type : 'slide', direction : 'right'});
+    },
+
     onTortletsListItemTap: function(dataview, index, target, record, e, eOpts) {
+        var homeTabController = this;
+        Ext.Msg.confirm('', 'Done with Tortlet ?', function(buttonId,value,opt) { 
 
-        var tortletDetails = this.getTortletDetails();
+            if(buttonId === 'yes') {
 
-        var sourceStoreId = 'incompleteTortletsStore';
+                record.sourceStoreId = 'incompleteTortletsStore';
+                homeTabController.saveTortlet(homeTabController, record) ;       
+            }
 
-        record.sourceStoreId=sourceStoreId;
-        tortletDetails.setRecord(record);
+        });
 
-        this.getHomeTabCardPanel().animateActiveItem(tortletDetails, {type : 'slide'});
+
+        //var tortletDetails = this.getTortletDetails();
+
+        //var sourceStoreId = 'incompleteTortletsStore';
+
+        //record.sourceStoreId=sourceStoreId;
+        //tortletDetails.setRecord(record);
+
+        //this.getHomeTabCardPanel().animateActiveItem(tortletDetails, {type : 'slide'});
     },
 
     onTortletsDetailsBackButtonTap: function(button, e, eOpts) {
@@ -112,7 +155,10 @@ Ext.define('MyApp.controller.HomeTabController', {
         store.getProxy().setUrl(todayUrl);
         store.load();
         store.getProxy().setUrl(url);
-        this.getTodayTortletsList().show();
+        var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();
+        var todaysTortletListPanel = this.getTodaysTortletListPanel();
+        tortletsListsContainerPanel.setActiveItem(todaysTortletListPanel);
+        //this.getTodayTortletsList().show();
 
     },
 
@@ -123,18 +169,13 @@ Ext.define('MyApp.controller.HomeTabController', {
         var proxy = incompleteTortletsStore.getProxy();
 
         Ext.getStore('incompleteTortletsStore').load();
-        this.getTortletsList().show();
-        this.getTodayTortletsList().hide();
-    },
 
-    onTodaysTortletsListItemTap: function(dataview, index, target, record, e, eOpts) {
-        var tortletDetails = this.getTortletDetails();
+        var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();
+        var tortletListPanel = this.getTortletListPanel();
 
-        record.sourceStoreId = 'todaysTortletsStore';
-        //alert(record.sourceStoreId);
-        tortletDetails.setRecord(record);
-
-        this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});
+        tortletsListsContainerPanel.setActiveItem(tortletListPanel);
+        //this.getTortletsList().show();
+        //this.getTodayTortletsList().hide();
     },
 
     oldTortletSaveSuccess: function(savedEntity, operation) {
@@ -162,6 +203,18 @@ Ext.define('MyApp.controller.HomeTabController', {
 
     init: function(application) {
         console.log('initing HomeTabController');
+    },
+
+    saveTortlet: function(homeTabController, record) {
+        operation = {};
+        operation.success = homeTabController.oldTortletSaveSuccess;
+        operation.failure = homeTabController.oldTortletSaveFailure;
+
+        eitherOneStore = Ext.getStore(record.sourceStoreId);
+        eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);
+        eitherOneStore.remove(record); 
+        record.set('completed', true);
+        record.save(operation);
     }
 
 });

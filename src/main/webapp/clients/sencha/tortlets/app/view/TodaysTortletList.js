@@ -22,7 +22,7 @@ Ext.define('MyApp.view.TodaysTortletList', {
         emptyText: 'Great ! You are done for today !',
         scrollToTopOnRefresh: false,
         store: 'todaysTortletsStore',
-        onItemDisclosure: true,
+        onItemDisclosure: false,
         variableHeights: true,
         itemTpl: [
             'Today - {title}',

@@ -18,8 +18,7 @@ Ext.define('MyApp.view.HomePage', {
     alias: 'widget.homePage',
 
     requires: [
-        'MyApp.view.TortletsList',
-        'MyApp.view.TodaysTortletList'
+        'MyApp.view.TortletsListsContainerPanel'
     ],
 
     config: {
@@ -91,21 +90,8 @@ Ext.define('MyApp.view.HomePage', {
                 ]
             },
             {
-                xtype: 'panel',
-                flex: 6,
-                layout: {
-                    type: 'fit'
-                },
-                scrollable: 'vertical',
-                items: [
-                    {
-                        xtype: 'tortletsList',
-                        hidden: true
-                    },
-                    {
-                        xtype: 'todayTortletsList'
-                    }
-                ]
+                xtype: 'tortletsListsContainerPanel',
+                flex: 6
             }
         ]
     }

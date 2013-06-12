@@ -313,6 +313,30 @@
                 "app/view/signupmodule.js"
             ],
             "className": "signupmodule"
+        },
+        "96dc9ea9-4fbc-405e-96e2-47a36defae14": {
+            "paths": [
+                "metadata/view/TodaysTortletListPanel",
+                "app/view/override/TodaysTortletListPanel.js",
+                "app/view/TodaysTortletListPanel.js"
+            ],
+            "className": "TodaysTortletListPanel"
+        },
+        "c4a261f1-da65-4acd-8b6c-851fd3eaf2e6": {
+            "paths": [
+                "metadata/view/TortletListPanel",
+                "app/view/override/TortletListPanel.js",
+                "app/view/TortletListPanel.js"
+            ],
+            "className": "TortletListPanel"
+        },
+        "af38c8d3-9dd0-4cc3-ae15-a0abe4d641fc": {
+            "paths": [
+                "metadata/view/TortletsListsContainerPanel",
+                "app/view/override/TortletsListsContainerPanel.js",
+                "app/view/TortletsListsContainerPanel.js"
+            ],
+            "className": "TortletsListsContainerPanel"
         }
     },
     "viewOrderMap": {
@@ -324,9 +348,12 @@
             "0774d05e-de9d-4085-bd90-9758034e790b",
             "15444b93-1202-4a0e-8cbe-b9820ac02a0e",
             "3f058fa0-cbf4-4a61-a122-32c6457d8ec4",
+            "af38c8d3-9dd0-4cc3-ae15-a0abe4d641fc",
+            "96dc9ea9-4fbc-405e-96e2-47a36defae14",
+            "c4a261f1-da65-4acd-8b6c-851fd3eaf2e6",
+            "8162b955-c1db-4f2f-bcaa-753970ca90eb",
             "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
             "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0",
-            "8162b955-c1db-4f2f-bcaa-753970ca90eb",
             "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0",
             "dca854bb-a33a-4137-aef2-90d43399589d",
             "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",

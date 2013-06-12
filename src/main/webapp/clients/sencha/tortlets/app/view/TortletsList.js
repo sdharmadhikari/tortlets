@@ -21,7 +21,7 @@ Ext.define('MyApp.view.TortletsList', {
         ui: 'round',
         emptyText: 'Wow ! Nothing pending. You are really on top of everything !',
         store: 'incompleteTortletsStore',
-        onItemDisclosure: true,
+        onItemDisclosure: false,
         variableHeights: true,
         itemTpl: [
             '{title}',

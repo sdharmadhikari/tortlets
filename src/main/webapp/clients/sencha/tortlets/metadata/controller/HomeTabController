@@ -31,17 +31,71 @@
             },
             "codeClass": null,
             "userConfig": {
+                "fn": "onTodaysTortletsListItemTap",
+                "implHandler": [
+                    "var homeTabController = this;\r",
+                    "Ext.Msg.confirm('', 'Done with Tortlet ?', function(buttonId,value,opt) { \r",
+                    "    \r",
+                    "    if(buttonId === 'yes') {\r",
+                    "    \r",
+                    "        record.sourceStoreId = 'todaysTortletsStore';\r",
+                    "        homeTabController.saveTortlet(homeTabController, record);        \r",
+                    "    }\r",
+                    "\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "//var tortletDetails = this.getTortletDetails();\r",
+                    "\r",
+                    "\r",
+                    "//alert(record.sourceStoreId);\r",
+                    "//tortletDetails.setRecord(record);\r",
+                    "\r",
+                    "//this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});\r",
+                    "\r",
+                    "/// Populate record from form. populateTortletRecordFromForm()\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "//this.getHomeTabCardPanel().\r",
+                    "//animateActiveItem(0,{type : 'slide', direction : 'right'});"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "TodaysTortletList",
+                "designer|controlQuery": "todayTortletsList"
+            },
+            "designerId": "1ce0bcec-8d05-4364-a30f-32ea05e4a5cf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "fn": "onTortletsListItemTap",
                 "implHandler": [
+                    "var homeTabController = this;\r",
+                    "Ext.Msg.confirm('', 'Done with Tortlet ?', function(buttonId,value,opt) { \r",
+                    "    \r",
+                    "    if(buttonId === 'yes') {\r",
+                    "    \r",
+                    "        record.sourceStoreId = 'incompleteTortletsStore';\r",
+                    "        homeTabController.saveTortlet(homeTabController, record) ;       \r",
+                    "    }\r",
                     "\r",
-                    "var tortletDetails = this.getTortletDetails();\r",
+                    "});\r",
                     "\r",
-                    "var sourceStoreId = 'incompleteTortletsStore';\r",
                     "\r",
-                    "record.sourceStoreId=sourceStoreId;\r",
-                    "tortletDetails.setRecord(record);\r",
+                    "//var tortletDetails = this.getTortletDetails();\r",
                     "\r",
-                    "this.getHomeTabCardPanel().animateActiveItem(tortletDetails, {type : 'slide'});"
+                    "//var sourceStoreId = 'incompleteTortletsStore';\r",
+                    "\r",
+                    "//record.sourceStoreId=sourceStoreId;\r",
+                    "//tortletDetails.setRecord(record);\r",
+                    "\r",
+                    "//this.getHomeTabCardPanel().animateActiveItem(tortletDetails, {type : 'slide'});"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "TortletsList",
@@ -164,7 +218,10 @@
                     "store.getProxy().setUrl(todayUrl);\r",
                     "store.load();\r",
                     "store.getProxy().setUrl(url);\r",
-                    "this.getTodayTortletsList().show();\r",
+                    "var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();\r",
+                    "var todaysTortletListPanel = this.getTodaysTortletListPanel();\r",
+                    "tortletsListsContainerPanel.setActiveItem(todaysTortletListPanel);\r",
+                    "//this.getTodayTortletsList().show();\r",
                     ""
                 ],
                 "name": "tap",
@@ -189,8 +246,13 @@
                     "var proxy = incompleteTortletsStore.getProxy();\r",
                     "\r",
                     "Ext.getStore('incompleteTortletsStore').load();\r",
-                    "this.getTortletsList().show();\r",
-                    "this.getTodayTortletsList().hide();"
+                    "\r",
+                    "var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();\r",
+                    "var tortletListPanel = this.getTortletListPanel();\r",
+                    "\r",
+                    "tortletsListsContainerPanel.setActiveItem(tortletListPanel);\r",
+                    "//this.getTortletsList().show();\r",
+                    "//this.getTodayTortletsList().hide();"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -223,30 +285,6 @@
                 "selector": "tortletsList"
             },
             "designerId": "283f5bed-9b38-4908-bc8d-86b88ab3f73e"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onTodaysTortletsListItemTap",
-                "implHandler": [
-                    "var tortletDetails = this.getTortletDetails();\r",
-                    "\r",
-                    "record.sourceStoreId = 'todaysTortletsStore';\r",
-                    "//alert(record.sourceStoreId);\r",
-                    "tortletDetails.setRecord(record);\r",
-                    "\r",
-                    "this.getHomeTabCardPanel().animateActiveItem(tortletDetails, { type: 'slide'});"
-                ],
-                "name": "itemtap",
-                "designer|targetType": "TodaysTortletList",
-                "designer|controlQuery": "todayTortletsList"
-            },
-            "designerId": "1ce0bcec-8d05-4364-a30f-32ea05e4a5cf"
         },
         {
             "type": "basicfunction",
@@ -318,6 +356,72 @@
                 ]
             },
             "designerId": "11ac7812-b9f5-48df-98e8-cbd3ec699389"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "saveTortlet",
+                "designer|params": [
+                    "homeTabController",
+                    "record"
+                ],
+                "implHandler": [
+                    "operation = {};\r",
+                    "operation.success = homeTabController.oldTortletSaveSuccess;\r",
+                    "operation.failure = homeTabController.oldTortletSaveFailure;\r",
+                    "\r",
+                    "eitherOneStore = Ext.getStore(record.sourceStoreId);\r",
+                    "eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);\r",
+                    "eitherOneStore.remove(record); \r",
+                    "record.set('completed', true);\r",
+                    "record.save(operation);"
+                ]
+            },
+            "designerId": "650aa750-313e-4784-894e-9050d5acef85"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "todaysTortletListPanel",
+                "selector": "todaysTortletListPanel"
+            },
+            "designerId": "66796ffe-8149-417c-ae39-c13a16d6300a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "tortletListPanel",
+                "selector": "tortletListPanel"
+            },
+            "designerId": "edd8f34c-b384-4eae-a40c-e31d906d2d28"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "tortletsListsContainerPanel",
+                "selector": "tortletsListsContainerPanel"
+            },
+            "designerId": "4a64c1ee-9659-4331-9e89-9fb6fb559cab"
         }
     ]
 }

@@ -59,7 +59,10 @@ Ext.application({
         'TodaysTortletList',
         'LandingCardPanel',
         'loginmodule',
-        'signupmodule'
+        'signupmodule',
+        'TodaysTortletListPanel',
+        'TortletListPanel',
+        'TortletsListsContainerPanel'
     ],
     controllers: [
         'HomeTabController',

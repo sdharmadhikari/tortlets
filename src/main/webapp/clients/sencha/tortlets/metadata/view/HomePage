@@ -160,48 +160,17 @@
             ]
         },
         {
-            "type": "Ext.Panel",
+            "type": "linkedinstance",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 6,
-                "ui": null,
-                "designer|displayName": "TortletsListPanel",
-                "layout": "fit",
-                "scrollable": "vertical"
+                "layout|flex": 6
             },
-            "designerId": "ae93ec94-ccca-4705-870e-a718792530fc",
-            "cn": [
-                {
-                    "type": "linkedinstance",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "hidden": true
-                    },
-                    "designerId": "6f2ff861-3109-4305-9752-46dc323c5d09",
-                    "masterInstanceId": "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0"
-                },
-                {
-                    "type": "linkedinstance",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null
-                    },
-                    "designerId": "85593b68-b2cc-445d-93d6-20a843a137ad",
-                    "masterInstanceId": "8162b955-c1db-4f2f-bcaa-753970ca90eb"
-                }
-            ]
+            "designerId": "8b1caa4c-08f1-4740-b267-527e74e997e7",
+            "masterInstanceId": "af38c8d3-9dd0-4cc3-ae15-a0abe4d641fc"
         }
     ]
 }
