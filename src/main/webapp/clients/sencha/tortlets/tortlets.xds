@@ -144,14 +144,6 @@
             ],
             "className": "TortoiseList"
         },
-        "3a789a20-fef4-4313-b085-1612d07320cf": {
-            "paths": [
-                "metadata/view/AllTortletsPanel",
-                "app/view/override/AllTortletsPanel.js",
-                "app/view/AllTortletsPanel.js"
-            ],
-            "className": "AllTortletsPanel"
-        },
         "5aac1687-a779-4ce8-9bce-1cb5d9d3f226": {
             "paths": [
                 "metadata/view/ScoreTabCardPanel",
@@ -352,14 +344,13 @@
             "96dc9ea9-4fbc-405e-96e2-47a36defae14",
             "c4a261f1-da65-4acd-8b6c-851fd3eaf2e6",
             "8162b955-c1db-4f2f-bcaa-753970ca90eb",
-            "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
             "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0",
+            "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
             "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0",
             "dca854bb-a33a-4137-aef2-90d43399589d",
             "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",
             "811d49e0-92af-414a-9025-4cb5ec728652",
             "eaceb40a-b0c4-4740-a5a5-7c98435c0248",
-            "3a789a20-fef4-4313-b085-1612d07320cf",
             "c717694e-2e8e-4855-ba93-2500aa9367bf",
             "ab390928-6413-4757-9eb4-5023d3291a6c",
             "a148bbe8-dad7-4c8e-a95a-4081d4b97c6f",

@@ -58,32 +58,58 @@ Ext.define('MyApp.view.HomePage', {
             {
                 xtype: 'panel',
                 flex: 1,
+                centered: false,
                 height: 40,
                 layout: {
-                    type: 'fit'
+                    type: 'hbox'
                 },
                 items: [
                     {
-                        xtype: 'segmentedbutton',
-                        docked: 'bottom',
-                        layout: {
-                            align: 'center',
-                            pack: 'center',
-                            type: 'hbox'
-                        },
+                        xtype: 'panel',
+                        flex: 1
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 3,
+                        items: [
+                            {
+                                xtype: 'segmentedbutton',
+                                centered: true,
+                                docked: 'bottom',
+                                layout: {
+                                    align: 'center',
+                                    pack: 'center',
+                                    type: 'hbox'
+                                },
+                                items: [
+                                    {
+                                        xtype: 'button',
+                                        name: 'showTodayListButton',
+                                        pressed: true,
+                                        ui: 'action',
+                                        text: 'Today'
+                                    },
+                                    {
+                                        xtype: 'button',
+                                        name: 'showPendingListButton',
+                                        ui: 'action',
+                                        text: 'Pending'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 1,
                         items: [
                             {
                                 xtype: 'button',
-                                name: 'showTodayListButton',
-                                pressed: true,
-                                ui: 'action',
-                                text: 'Today'
-                            },
-                            {
-                                xtype: 'button',
-                                name: 'showPendingListButton',
-                                ui: 'action',
-                                text: 'Pending'
+                                name: 'homePageHelpButton',
+                                centered: true,
+                                docked: 'bottom',
+                                ui: 'action-small',
+                                text: '?'
                             }
                         ]
                     }
@@ -91,7 +117,7 @@ Ext.define('MyApp.view.HomePage', {
             },
             {
                 xtype: 'tortletsListsContainerPanel',
-                flex: 6
+                flex: 8
             }
         ]
     }

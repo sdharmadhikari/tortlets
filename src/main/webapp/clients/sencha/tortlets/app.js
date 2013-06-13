@@ -52,7 +52,6 @@ Ext.application({
         'DreamListCardPanel',
         'DreamList',
         'TortoiseList',
-        'AllTortletsPanel',
         'ScoreTabCardPanel',
         'MainScorePanel',
         'HelpPanel',

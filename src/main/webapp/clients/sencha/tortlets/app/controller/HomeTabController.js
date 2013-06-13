@@ -18,7 +18,6 @@ Ext.define('MyApp.controller.HomeTabController', {
 
     config: {
         refs: {
-            homeTabCardPanel: 'homeTabCardPanel',
             tortletDetails: 'tortletDetails',
             todayTortletsList: 'todayTortletsList',
             tortletsList: 'tortletsList',
@@ -48,6 +47,9 @@ Ext.define('MyApp.controller.HomeTabController', {
             },
             "button[name='showPendingListButton']": {
                 tap: 'onShowPendingListButtonTap'
+            },
+            "button[name='homePageHelpButton']": {
+                tap: 'onHomePageHelpButtonTap'
             }
         }
     },
@@ -176,6 +178,10 @@ Ext.define('MyApp.controller.HomeTabController', {
         tortletsListsContainerPanel.setActiveItem(tortletListPanel);
         //this.getTortletsList().show();
         //this.getTodayTortletsList().hide();
+    },
+
+    onHomePageHelpButtonTap: function(button, e, eOpts) {
+        Ext.Msg.alert('','Pending tortlets older than 7 days get permanently deleted. <br/> You have to complete it before that to keep your score as high as possible', Ext.emptyFn);
     },
 
     oldTortletSaveSuccess: function(savedEntity, operation) {

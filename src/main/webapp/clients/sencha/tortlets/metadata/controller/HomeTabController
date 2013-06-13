@@ -11,19 +11,6 @@
     "designerId": "f349d5fa-f50b-405e-b80f-e46f09bf9967",
     "cn": [
         {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "homeTabCardPanel",
-                "selector": "homeTabCardPanel"
-            },
-            "designerId": "345e27f2-eaae-4385-ab6f-bee6c0fa579f"
-        },
-        {
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -35,9 +22,9 @@
                 "implHandler": [
                     "var homeTabController = this;\r",
                     "Ext.Msg.confirm('', 'Done with Tortlet ?', function(buttonId,value,opt) { \r",
-                    "    \r",
+                    "\r",
                     "    if(buttonId === 'yes') {\r",
-                    "    \r",
+                    "\r",
                     "        record.sourceStoreId = 'todaysTortletsStore';\r",
                     "        homeTabController.saveTortlet(homeTabController, record);        \r",
                     "    }\r",
@@ -422,6 +409,24 @@
                 "selector": "tortletsListsContainerPanel"
             },
             "designerId": "4a64c1ee-9659-4331-9e89-9fb6fb559cab"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onHomePageHelpButtonTap",
+                "implHandler": [
+                    "Ext.Msg.alert('','Pending tortlets older than 7 days get permanently deleted. <br/> You have to complete it before that to keep your score as high as possible', Ext.emptyFn);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='homePageHelpButton']"
+            },
+            "designerId": "f35dd244-b963-4557-908a-175112442347"
         }
     ]
 }

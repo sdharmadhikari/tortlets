@@ -21,7 +21,6 @@ Ext.define('MyApp.view.DreamListCardPanel', {
         'MyApp.view.DreamListPanel',
         'MyApp.view.DreamDetails',
         'MyApp.view.TortoiseListPanel',
-        'MyApp.view.AllTortletsPanel',
         'MyApp.view.TortoiseDetails'
     ],
 
@@ -38,9 +37,6 @@ Ext.define('MyApp.view.DreamListCardPanel', {
             },
             {
                 xtype: 'tortoiseListPanel'
-            },
-            {
-                xtype: 'allTortletsPanel'
             },
             {
                 xtype: 'tortoiseDetails'

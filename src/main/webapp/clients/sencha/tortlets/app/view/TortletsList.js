@@ -19,7 +19,6 @@ Ext.define('MyApp.view.TortletsList', {
 
     config: {
         ui: 'round',
-        emptyText: 'Wow ! Nothing pending. You are really on top of everything !',
         store: 'incompleteTortletsStore',
         onItemDisclosure: false,
         variableHeights: true,
@@ -27,7 +26,25 @@ Ext.define('MyApp.view.TortletsList', {
             '{title}',
             '<br/>',
             '<span class="smallFont">Dream: {tortoise.dream.title}</span>'
+        ],
+        listeners: [
+            {
+                fn: 'onListPainted',
+                event: 'painted'
+            }
         ]
+    },
+
+    onListPainted: function(element, eOpts) {
+        var tortletList = this;
+        var dreamStore = Ext.getStore('dreamsStore');
+        dreamStore.load(function(records, operation, success) {
+            if(records.length === 0){
+                tortletList.setEmptyText('You need to have dreams to have Tortlets');
+            }else{
+                tortletList.setEmptyText('Wow ! Nothing pending. You are really on top of everything !');
+            }   
+        }, this);
     }
 
 });

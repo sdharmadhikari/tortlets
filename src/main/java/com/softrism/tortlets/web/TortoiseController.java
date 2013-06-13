@@ -8,6 +8,7 @@ import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import com.softrism.tortlets.domain.Tuser;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -102,8 +103,8 @@ public class TortoiseController {
     @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> createFromJson(@RequestBody String json) {
         Tortoise tortoise = Tortoise.fromJsonToTortoise(json);
-        Dream dream = tortoise.getDream();
         tortoise.persist();
+        Tuser.processTortoise(tortoise);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(tortoise.toJson(),headers, HttpStatus.OK);

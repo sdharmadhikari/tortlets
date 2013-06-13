@@ -12,7 +12,7 @@
         "designer|userClassName": "TortletsList",
         "designer|userAlias": "tortletsList",
         "scrollable": null,
-        "emptyText": "Wow ! Nothing pending. You are really on top of everything !",
+        "emptyText": null,
         "store": "incompleteTortletsStore",
         "onItemDisclosure": false,
         "variableHeights": true
@@ -45,6 +45,30 @@
                 "designer|displayName": "itemTpl"
             },
             "designerId": "9d650fb1-5b46-4a79-8f11-f6cfa818529d"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListPainted",
+                "implHandler": [
+                    "var tortletList = this;\r",
+                    "var dreamStore = Ext.getStore('dreamsStore');\r",
+                    "dreamStore.load(function(records, operation, success) {\r",
+                    " if(records.length === 0){\r",
+                    "    tortletList.setEmptyText('You need to have dreams to have Tortlets');\r",
+                    "}else{\r",
+                    "\ttortletList.setEmptyText('Wow ! Nothing pending. You are really on top of everything !');\r",
+                    "}   \r",
+                    "}, this);"
+                ],
+                "name": "painted"
+            },
+            "designerId": "e657dbd5-5f58-492a-a979-38d55bd9b7b1"
         }
     ]
 }

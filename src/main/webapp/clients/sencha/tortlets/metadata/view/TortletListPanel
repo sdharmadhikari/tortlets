@@ -1,0 +1,27 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "docked": null,
+        "designer|userClassName": "TortletListPanel",
+        "designer|userAlias": "tortletListPanel",
+        "layout": "fit"
+    },
+    "designerId": "c4a261f1-da65-4acd-8b6c-851fd3eaf2e6",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "cfbfd3d0-222a-466e-8429-970c5746aae3",
+            "masterInstanceId": "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0"
+        }
+    ]
+}
