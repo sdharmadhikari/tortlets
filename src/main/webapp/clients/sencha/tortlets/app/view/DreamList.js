@@ -26,8 +26,33 @@ Ext.define('MyApp.view.DreamList', {
         variableHeights: true,
         itemTpl: [
             '<div>{title}({latestDreamScore})</div>',
-            '<br/> ',
-            '.........<img src="static/images/tortoise_smaller.gif"></img>.............!'
+            '',
+            '',
+            '{%',
+            'var maxScore = 850;',
+            'var done = \'\';',
+            'for(i=85; i < maxScore+1; i=i+85) {    ',
+            '	if(i <= values.latestDreamScore) {',
+            '%}',
+            '        .',
+            '{%',
+            '     }else{',
+            '        if(done !== \'true\'){',
+            '%}',
+            '           <img src="static/images/tortoise_smaller.gif"></img>',
+            '{%',
+            '            done = \'true\';',
+            '        }else{',
+            '%}',
+            '          &nbsp; ',
+            '{%',
+            '        }',
+            '	}',
+            '}',
+            '%}',
+            '<img src="static/images/race-finish-small.png"></img>',
+            '',
+            ''
         ]
     }
 

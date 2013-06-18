@@ -22,7 +22,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 
-public aspect TuserControllerAspectj {
+public aspect TuserControllerAspect {
 
     pointcut authUser(String userid, String password) :  execution(* com.softrism.tortlets.web.TuserController.jsonFindTusersByUseridEqualsAndPasswordEquals(..)) && args(userid,password);
 

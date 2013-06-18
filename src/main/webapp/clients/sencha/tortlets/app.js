@@ -53,7 +53,6 @@ Ext.application({
         'DreamList',
         'TortoiseList',
         'ScoreTabCardPanel',
-        'MainScorePanel',
         'HelpPanel',
         'TodaysTortletList',
         'LandingCardPanel',
@@ -61,14 +60,16 @@ Ext.application({
         'signupmodule',
         'TodaysTortletListPanel',
         'TortletListPanel',
-        'TortletsListsContainerPanel'
+        'TortletsListsContainerPanel',
+        'UserScoreGuageChart'
     ],
     controllers: [
         'HomeTabController',
         'DreamsTabController',
         'SampleOverriddenController',
         'UtilityController',
-        'UserCredentialsController'
+        'UserCredentialsController',
+        'UserScoreTabController'
     ],
     name: 'MyApp',
 

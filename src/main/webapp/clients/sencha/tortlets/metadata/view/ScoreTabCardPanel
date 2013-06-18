@@ -8,7 +8,7 @@
     "userConfig": {
         "designer|userClassName": "ScoreTabCardPanel",
         "designer|userAlias": "scoreTabCardPanel",
-        "layout": "card"
+        "layout": "fit"
     },
     "designerId": "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
     "cn": [
@@ -50,16 +50,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "type": "linkedinstance",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "designerId": "e53cb628-906d-48d8-b301-66560b7eb214",
-            "masterInstanceId": "0e3fa1af-7c66-4370-bf0e-45af7191d28e"
         }
     ]
 }

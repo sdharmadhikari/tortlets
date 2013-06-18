@@ -1,0 +1,65 @@
+{
+    "type": "Ext.chart.SpaceFillingChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UserScoreGuageChart",
+        "designer|userAlias": "userScoreGuageChart",
+        "colors": [
+            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+        ]
+    },
+    "designerId": "95d937cc-2252-4abb-b179-b99c259bb007",
+    "isBuiltIn": true,
+    "iconCls": "icon-gauge-chart",
+    "autoName": "MyGaugeChart",
+    "cn": [
+        {
+            "type": "Ext.chart.series.Gauge",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "totalAngle": 3.141592653589793,
+                "title": null,
+                "field": null,
+                "maximum": 850,
+                "needle": true,
+                "sectors": null,
+                "value": 10
+            },
+            "configAlternates": {
+                "totalAngle": "number"
+            },
+            "designerId": "404e90d0-064c-487c-af83-aec3c461174e",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "totalAngle",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSpacefillingPainted",
+                "implHandler": [
+                    "// wanted to set series.setConfig( { sectors : [ ] }; to show zones."
+                ],
+                "name": "painted"
+            },
+            "designerId": "c41d46cc-04fc-4441-92b5-cfa32c11196b"
+        }
+    ]
+}

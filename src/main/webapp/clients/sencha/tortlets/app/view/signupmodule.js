@@ -47,24 +47,24 @@ Ext.define('MyApp.view.signupmodule', {
                 items: [
                     {
                         xtype: 'fieldset',
-                        title: 'Whats Your Name ?',
+                        title: 'Whats your name ?',
                         items: [
                             {
                                 xtype: 'textfield',
                                 itemId: 'firstNameAsUserId',
-                                placeHolder: 'Enter your first name..'
+                                placeHolder: 'Userid will be auto-generated'
                             }
                         ]
                     },
                     {
                         xtype: 'fieldset',
-                        title: 'Type any word you like ..',
+                        title: 'Temporary password',
                         items: [
                             {
                                 xtype: 'textfield',
                                 itemId: 'wordYouLike',
                                 labelWidth: '0%',
-                                placeHolder: 'Temporary password..'
+                                placeHolder: 'Any word you can remember..'
                             }
                         ]
                     },
@@ -92,10 +92,10 @@ Ext.define('MyApp.view.signupmodule', {
                                     // separate file too !
 
 
-                                    userObject.userid = firstNameAsUserid;
+                                    userObject.userid = firstNameAsUserid.toLowerCase();
                                     userObject.password = wordYouLike;
 
-                                    var nameRgx = /^[A-Za-z ]{3,20}$/;
+                                    var nameRgx = /^[A-Za-z]{3,20}$/;
                                     var passwordRgx =  /^[A-Za-z0-9!@#$%^&*()_]{6,100}$/;
                                     var errors = [];
 
@@ -109,7 +109,7 @@ Ext.define('MyApp.view.signupmodule', {
                                     }
 
                                     if(! nameRgx.test(userObject.userid)){
-                                        var msg = 'Name is invalid ! At least 3 in length and no spaces. You could append last name';
+                                        var msg = 'Name is invalid ! At least 3 in length and no spaces.';
                                         Ext.Msg.alert('',msg,Ext.emptyFn); 
                                         errors[errors.length] = msg;
                                         return;
@@ -368,7 +368,7 @@ Ext.define('MyApp.view.signupmodule', {
                                     userObject.userEmail = userEmail.getValue();
                                     //userObject.confirmEmail = confirmEmail.getValue();
 
-                                    userObject.userid = userid.getValue();
+                                    userObject.userid = userid.getValue().toLowerCase();
 
                                     if(showPasswordCheckBox.getSubmitValue() === null) {
                                         userObject.password = password.getValue();

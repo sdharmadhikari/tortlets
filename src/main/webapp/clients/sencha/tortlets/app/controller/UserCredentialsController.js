@@ -35,9 +35,6 @@ Ext.define('MyApp.controller.UserCredentialsController', {
                 signUpRequested: 'onLoginFormItemIdSignUpRequested',
                 signInSuccess: 'onLoginFormItemIdSignInSuccess'
             },
-            "tabpanel": {
-                activeitemchange: 'onTabpanelActiveItemChange'
-            },
             "button[name='userProfileButton']": {
                 tap: 'onUserProfileButtonTap'
             }
@@ -73,26 +70,6 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         landingCardPanel.animateActiveItem(mainTabPanel, { type: 'slide'});
     },
 
-    onTabpanelActiveItemChange: function(container, value, oldValue, eOpts) {
-        if(value.xtype === 'scoretabcardpanel') {
-
-            var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
-            MyApp.model.Tuser.load(userObject.id, {
-
-                success : function(record, operation) { 
-
-                    MyApp.app.currentUser = record;
-
-                },
-                failure : function(record, operation) { 
-                    alert ('tuser read failed');
-                }
-
-            });
-
-        }
-    },
-
     onUserProfileButtonTap: function(button, e, eOpts) {
         var landingCardPanel = this.getLandingCardPanel();
         var registrationCardPanel = this.getRegistrationCardPanel();
@@ -124,6 +101,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var landingcardPanel = this.getLandingCardPanel();
         landingcardPanel.setActiveItem(0);
         var useridField = landingcardPanel.down('#userIdItemId');
+        var lastUserId = localStorage.getItem('userid');
         useridField.setValue(lastUserId);
 
     },

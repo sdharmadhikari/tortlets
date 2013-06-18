@@ -152,14 +152,6 @@
             ],
             "className": "ScoreTabCardPanel"
         },
-        "0e3fa1af-7c66-4370-bf0e-45af7191d28e": {
-            "paths": [
-                "metadata/view/MainScorePanel",
-                "app/view/override/MainScorePanel.js",
-                "app/view/MainScorePanel.js"
-            ],
-            "className": "MainScorePanel"
-        },
         "0da20323-db08-47ce-9741-64ded49ccb84": {
             "paths": [
                 "metadata/view/HelpPanel",
@@ -329,6 +321,22 @@
                 "app/view/TortletsListsContainerPanel.js"
             ],
             "className": "TortletsListsContainerPanel"
+        },
+        "fb82b0dc-98c1-4cf9-942b-88944e268c27": {
+            "paths": [
+                "metadata/controller/UserScoreTabController",
+                "app/controller/override/UserScoreTabController.js",
+                "app/controller/UserScoreTabController.js"
+            ],
+            "className": "UserScoreTabController"
+        },
+        "95d937cc-2252-4abb-b179-b99c259bb007": {
+            "paths": [
+                "metadata/view/UserScoreGuageChart",
+                "app/view/override/UserScoreGuageChart.js",
+                "app/view/UserScoreGuageChart.js"
+            ],
+            "className": "UserScoreGuageChart"
         }
     },
     "viewOrderMap": {
@@ -355,7 +363,7 @@
             "ab390928-6413-4757-9eb4-5023d3291a6c",
             "a148bbe8-dad7-4c8e-a95a-4081d4b97c6f",
             "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
-            "0e3fa1af-7c66-4370-bf0e-45af7191d28e",
+            "95d937cc-2252-4abb-b179-b99c259bb007",
             "0da20323-db08-47ce-9741-64ded49ccb84"
         ],
         "store": [
@@ -369,7 +377,8 @@
             "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
             "a6be32fc-255c-4b23-8caf-f80699a22551",
             "b6ca3e62-c929-45fc-9967-87ea6496b91a",
-            "4fd5c999-6918-471c-87b8-96d68a98489a"
+            "4fd5c999-6918-471c-87b8-96d68a98489a",
+            "fb82b0dc-98c1-4cf9-942b-88944e268c27"
         ],
         "model": [
             "98103327-6270-4ea5-9055-efe31b2727a6",

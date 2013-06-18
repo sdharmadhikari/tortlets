@@ -26,7 +26,7 @@ public class TortletsCreationProcessor<O, I> implements ItemProcessor<I, O> {
 		// I did not have to reload tuser because (i believe) entityManager travels with tuser object.
 		Tuser tuser = (Tuser)item;
 		//Tuser tuser = Tuser.findAllTusers().get(0);
-		log.info("PROCESSING TUSER : " + tuser.getLastName());
+		log.info("PROCESSING TUSER : " + tuser.getUserid());
 		Tuser.generateTortlets(tuser.getUserid());
 		TuserStatusEnum userStatus = tuser.getStatus();
 		

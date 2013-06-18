@@ -35,7 +35,6 @@
             "DreamList",
             "TortoiseList",
             "ScoreTabCardPanel",
-            "MainScorePanel",
             "HelpPanel",
             "TodaysTortletList",
             "LandingCardPanel",
@@ -43,14 +42,16 @@
             "signupmodule",
             "TodaysTortletListPanel",
             "TortletListPanel",
-            "TortletsListsContainerPanel"
+            "TortletsListsContainerPanel",
+            "UserScoreGuageChart"
         ],
         "controllers": [
             "HomeTabController",
             "DreamsTabController",
             "SampleOverriddenController",
             "UtilityController",
-            "UserCredentialsController"
+            "UserCredentialsController",
+            "UserScoreTabController"
         ],
         "name": "MyApp"
     },

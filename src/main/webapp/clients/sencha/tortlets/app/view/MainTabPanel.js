@@ -78,7 +78,15 @@ Ext.define('MyApp.view.MainTabPanel', {
                 },
                 success: function(record, operation) {
                     MyApp.app.currentUser = record;
-                    alert('user dream score ' + MyApp.app.currentUser.get('latestDreamScore'));
+                    var score =  MyApp.app.currentUser.get('latestDreamScore');
+                    var userScoreTabController = MyApp.app.getController('UserScoreTabController');
+                    var scoreTabCardPanel = userScoreTabController.getScoreTabCardPanel();
+                    var userScoreGuageChart = userScoreTabController.getUserScoreGuageChart();
+                    userScoreGuageChart.getSeries()[0].setValue(score);
+
+                    scoreTabCardPanel.add(userScoreGuageChart);// I believe add
+                    // is needed to repaint the gauge.
+
                 },
                 callback: function(record, operation) {
                     //do something whether the load succeeded or failed

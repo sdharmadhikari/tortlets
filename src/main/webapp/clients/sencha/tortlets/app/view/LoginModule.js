@@ -106,7 +106,9 @@ Ext.define('MyApp.view.loginmodule', {
         if(userid.length === 0 || plainPassword.length === 0) {
             me.showSignInFailedMessage('Please enter your username and password.');
             return;
-        }  
+        } 
+
+        userid = userid.toLowerCase();
 
         label.setHtml('');
         userIdField.setValue('');

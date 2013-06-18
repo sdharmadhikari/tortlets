@@ -17,13 +17,9 @@ Ext.define('MyApp.view.ScoreTabCardPanel', {
     extend: 'Ext.Panel',
     alias: 'widget.scoreTabCardPanel',
 
-    requires: [
-        'MyApp.view.MainScorePanel'
-    ],
-
     config: {
         layout: {
-            type: 'card'
+            type: 'fit'
         },
         items: [
             {
@@ -39,9 +35,6 @@ Ext.define('MyApp.view.ScoreTabCardPanel', {
                         iconCls: 'settings'
                     }
                 ]
-            },
-            {
-                xtype: 'mainScorePanel'
             }
         ]
     }
