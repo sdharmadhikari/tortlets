@@ -85,16 +85,4 @@ public class DreamController {
 
     ///---------json-----------------------json-----------------------json-----------------------json-----------------------json--------------
 
-        @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
-        public ResponseEntity<String> createFromJson(@RequestBody String json) {
-            UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-            System.out.println("Logged in user creating dream on json : " + userDetails.getUsername() );
-                HttpHeaders headers = new HttpHeaders();
-                headers.add("Content-Type", "application/json");
-                Dream dream = Dream.fromJsonToDream(json);
-                dream.persist();
-
-                return new ResponseEntity<String>(dream.toJson(),headers, HttpStatus.OK);
-            }
-
 }

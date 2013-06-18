@@ -102,15 +102,5 @@ public class TortoiseController {
 
     ///////json///////////////////////////json///////////////////////////json//////////////////////////
 
-    @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
-    public ResponseEntity<String> createFromJson(@RequestBody String json) {
-        Tortoise tortoise = Tortoise.fromJsonToTortoise(json);
-        tortoise.persist();
-        Tuser.processTortoise(tortoise);
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json");
-        return new ResponseEntity<String>(tortoise.toJson(),headers, HttpStatus.OK);
-    }
-
 
 }
