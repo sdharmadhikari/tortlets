@@ -36,9 +36,6 @@ Ext.define('MyApp.controller.HomeTabController', {
             "button[name='tortletsDetailsBackButton']": {
                 tap: 'onTortletsDetailsBackButtonTap'
             },
-            "button[name='dreamDetailsBackButton']": {
-                tap: 'onDreamDetailBackButtonTap'
-            },
             "button[name='tortletDetailsSaveButton']": {
                 tap: 'onTortletDetailsSaveButtonTap'
             },
@@ -107,10 +104,6 @@ Ext.define('MyApp.controller.HomeTabController', {
     },
 
     onTortletsDetailsBackButtonTap: function(button, e, eOpts) {
-        this.getHomeTabCardPanel().animateActiveItem(0, { type: 'slide', direction : 'right'});
-    },
-
-    onDreamDetailBackButtonTap: function(button, e, eOpts) {
         this.getHomeTabCardPanel().animateActiveItem(0, { type: 'slide', direction : 'right'});
     },
 

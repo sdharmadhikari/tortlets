@@ -116,24 +116,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onDreamDetailBackButtonTap",
-                "implHandler": [
-                    "this.getHomeTabCardPanel().animateActiveItem(0, { type: 'slide', direction : 'right'});"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='dreamDetailsBackButton']"
-            },
-            "designerId": "5d03803e-69ad-4808-921b-00a2af3bf411"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "fn": "onTortletDetailsSaveButtonTap",
                 "implHandler": [
                     "var tortletDetailsForm = this.getTortletDetails();\r",

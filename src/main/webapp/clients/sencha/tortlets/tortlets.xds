@@ -232,14 +232,6 @@
             ],
             "className": "SampleOverriddenController"
         },
-        "b6ca3e62-c929-45fc-9967-87ea6496b91a": {
-            "paths": [
-                "metadata/controller/UtilityController",
-                "app/controller/override/UtilityController.js",
-                "app/controller/UtilityController.js"
-            ],
-            "className": "UtilityController"
-        },
         "d972eca9-cfd7-429d-8792-8238d5fc4127": {
             "paths": [
                 "metadata/model/Tuser",
@@ -376,7 +368,6 @@
             "f349d5fa-f50b-405e-b80f-e46f09bf9967",
             "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
             "a6be32fc-255c-4b23-8caf-f80699a22551",
-            "b6ca3e62-c929-45fc-9967-87ea6496b91a",
             "4fd5c999-6918-471c-87b8-96d68a98489a",
             "fb82b0dc-98c1-4cf9-942b-88944e268c27"
         ],

@@ -26,11 +26,10 @@ public aspect TortoiseControllerAspect {
             System.out.println("Userid does not match with logged in user while creating tortoise !!!");
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Type", "application/json");
-            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND); // Currently not being
-            // handled on client side.
+            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
         }
-        ResponseEntity responseEntity = (ResponseEntity)proceed(jsonTortoiseString);
+        return (ResponseEntity)proceed(jsonTortoiseString);
 
-        return new ResponseEntity<String>(tortoise.toJson(),responseEntity.getHeaders(), responseEntity.getStatusCode());
+
     }
 }

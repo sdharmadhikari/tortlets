@@ -26,11 +26,10 @@ public aspect DreamControllerAspect {
             System.out.println("Userid does not match with logged in user while creating dream !!!");
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Type", "application/json");
-            return new ResponseEntity <String>(headers, HttpStatus.NOT_FOUND); // Currently not being
-            // handled on client side.
+            return new ResponseEntity <String>(headers, HttpStatus.NOT_FOUND);
         }
-        ResponseEntity responseEntity = (ResponseEntity)proceed(jsonDreamString);
+        return (ResponseEntity)proceed(jsonDreamString);
 
-        return new ResponseEntity<String>(dream.toJson(),responseEntity.getHeaders(), responseEntity.getStatusCode());
+
     }
 }

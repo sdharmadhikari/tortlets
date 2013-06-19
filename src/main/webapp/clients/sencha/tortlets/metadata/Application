@@ -49,7 +49,6 @@
             "HomeTabController",
             "DreamsTabController",
             "SampleOverriddenController",
-            "UtilityController",
             "UserCredentialsController",
             "UserScoreTabController"
         ],

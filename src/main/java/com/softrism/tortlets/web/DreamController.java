@@ -85,4 +85,16 @@ public class DreamController {
 
     ///---------json-----------------------json-----------------------json-----------------------json-----------------------json--------------
 
+
+    // Really dont want to have this method and want to handle everything in aspect but
+    // i can not access dream object after persist (with id populated) in aspect !
+    @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
+    public ResponseEntity<String> createFromJson(@RequestBody String json) {
+        Dream dream = Dream.fromJsonToDream(json);
+        dream.persist();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+        return new ResponseEntity<String>(dream.toJson(),headers, HttpStatus.CREATED);
+    }
+
 }
