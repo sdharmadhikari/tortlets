@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9726801d-b3bd-455e-bef1-fa29786b8c4c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/CarouselDreamPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/DreamCaraoselCard.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/CarouselDreamPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/DreamCaraoselCard" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/.architect" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/.architect" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/Application" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/Application" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/DreamsTabController.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/DreamsTabController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/DreamsTabController" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/DreamsTabController" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/HomeTabController.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/HomeTabController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/HomeTabController" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/HomeTabController" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortoiseListPanel.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortoiseListPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortoiseListPanel" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortoiseListPanel" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UserCredentialsController.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UserCredentialsController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UserCredentialsController" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UserCredentialsController" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/signupmodule.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/signupmodule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/signupmodule" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/signupmodule" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/tortlets.xds" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/tortlets.xds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tortlets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -775,8 +762,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1480" />
-    <option name="y" value="308" />
+    <option name="x" value="1422" />
+    <option name="y" value="341" />
     <option name="width" value="1406" />
     <option name="height" value="704" />
   </component>
@@ -1382,7 +1369,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1480" y="308" width="1406" height="704" extended-state="0" />
+    <frame x="1422" y="341" width="1406" height="704" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

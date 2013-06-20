@@ -83,31 +83,38 @@ Ext.define('MyApp.controller.DreamsTabController', {
     onHomeTabNewDreamButtonTap: function(button, e, eOpts) {
         console.log('inside onHomePageDreamButtonTap');
         var dreamForm = this.getDreamDetails();
+        var mainTabPanel = this.getMainTabPanel();
+        var deleteButton = this.getDreamDeleteButton(); 
+        var dreamListCardPanel = this.getDreamListCardPanel();
+        var whatsYourDreamTextField = this.getWhatsYourDreamTextField();
+
         var text = this.getWhatsYourDreamTextField().getValue();
         //alert(text);
         var record = Ext.create('MyApp.model.Dream');
         record.set('title', text);
         dreamForm.newStatus='true';
         dreamForm.setRecord(record);
-        var mainTabPanel = this.getMainTabPanel();
+
         mainTabPanel.setActiveItem(1);
-        var deleteButton = this.getDreamDeleteButton(); //Ext.ComponentQuery.query("button[name='dreamDeleteButton']");
+
         deleteButton.hide();
         dreamForm.getScrollable().getScroller().scrollToTop();
-        this.getDreamListCardPanel().animateActiveItem(dreamForm, { type: 'slide'});
-        this.getWhatsYourDreamTextField().setValue('');
+        dreamListCardPanel.animateActiveItem(dreamForm, { type: 'slide'});
+        whatsYourDreamTextField.setValue('');
 
     },
 
     onDreamListItemTap: function(dataview, index, target, record, e, eOpts) {
         var dreamDetails = this.getDreamDetails();
+        var dreamListCardPanel = this.getDreamListCardPanel();
+
         dreamDetails.newStatus = 'false';
         dreamDetails.setRecord(record);
-        //alert(record.get('id'));
+
         MyApp.app.currentDreamId = record.get('id');
         this.getDreamDeleteButton().show();
         dreamDetails.getScrollable().getScroller().scrollToTop();
-        this.getDreamListCardPanel().animateActiveItem(dreamDetails, { type: 'slide'} );
+        dreamListCardPanel.animateActiveItem(dreamDetails, { type: 'slide'} );
 
     },
 
@@ -176,6 +183,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var dreamDetails = this.getDreamDetails();
         var dreamList = this.getDreamList();
         var dream = dreamDetails.getRecord();
+        var dreamsStore = Ext.getStore('dreamsStore');
+        var utility = MyApp.app.getController('UtilityController');
+        var storeLoadCallback = utility.storeLoadCallback;
+
         dreamDetails.updateRecord(dream);
 
 
@@ -187,12 +198,11 @@ Ext.define('MyApp.controller.DreamsTabController', {
                     scope : this,
                     success : function(record, operation) { 
                         dream.getProxy().setAppendId(false);
-                        var dreamsStore = Ext.getStore('dreamsStore');
-                        dreamsStore.load();// Have to load again otherwise
+                        dreamsStore.load(storeLoadCallback);// Have to load again otherwise
                         // store list does not get refreshed.                
                         dreamListCardPanel.animateActiveItem(dreamListPanel, { type : 'slide', direction : 'right'});
                     },
-                    failure : function(record, operation) { alert('delete failed');}
+                    failure : function(record, operation) { Ext.Msg.alert('','Server error, try later',Ext.emptyFn);}
 
                 });
 
@@ -212,15 +222,17 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     onTortoiseListItemTap: function(dataview, index, target, record, e, eOpts) {
         var tortoiseDetailsForm = this.getTortoiseDetails();
+        var tortoiseDetailsBackToDreamButton = this.getTortoiseDetailsBackToDreamButton();
+        var tortoiseDetailsBackToListButton = this.getTortoiseDetailsBackToListButton();
+        var tortoiseDeleteButton = this.getTortoiseDeleteButton();
+
         tortoiseDetailsForm.setRecord(record);
         tortoiseDetailsForm.newStatus='false';
-        var tortoiseDetailsBackToDreamButton = this.getTortoiseDetailsBackToDreamButton();
+
         tortoiseDetailsBackToDreamButton.show();
-        var tortoiseDetailsBackToListButton = this.getTortoiseDetailsBackToListButton();
         tortoiseDetailsBackToListButton.hide();
-        var tortoiseDeleteButton =
-        this.getTortoiseDeleteButton();
         tortoiseDeleteButton.show();
+
         tortoiseDetailsForm.getScrollable().getScroller().scrollToTop();
         this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});
     },
@@ -230,20 +242,20 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var tortoiseDetails = this.getTortoiseDetails();
         var dreamDetailsForm = this.getDreamDetails();
         var dream = dreamDetailsForm.getRecord();
-        //dreamDetailsForm.updateRecord(oldDream);
+        var tortoiseDeleteButton = this.getTortoiseDeleteButton();
+        var tortoiseDetailsBackToDreamButton = this.getTortoiseDetailsBackToDreamButton();
+        var tortoiseDetailsBackToListButton = this.getTortoiseDetailsBackToListButton();
+
         var newTortoise = Ext.create('MyApp.model.Tortoise', { });
         newTortoise.set('dream', dream.get('id'));
         newTortoise.set('title', '');// Otherwise it uses title of old tortoise ! strange
         tortoiseDetails.setRecord(newTortoise);
         tortoiseDetails.newStatus='true';
-        var tortoiseDeleteButton = 
-        this.getTortoiseDeleteButton();
+
         tortoiseDeleteButton.hide();
-        var tortoiseDetailsBackToDreamButton 
-        = this.getTortoiseDetailsBackToDreamButton();
         tortoiseDetailsBackToDreamButton.hide();
-        var tortoiseDetailsBackToListButton 
-        = this.getTortoiseDetailsBackToListButton();
+
+
         tortoiseDetailsBackToListButton.show();
         tortoiseDetails.getScrollable().getScroller().scrollToTop();
         dreamListCardPanel.animateActiveItem(tortoiseDetails, { type : 'slide', direction : 'down'});
@@ -251,14 +263,13 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     onTortoiseDetailsSaveButtonTap: function(button, e, eOpts) {
         var tortoiseListPanel = this.getTortoiseListPanel();
-
         var tortoiseDetailsForm = this.getTortoiseDetails();
-        var newStatus = tortoiseDetailsForm.newStatus;
-        var currentUser = MyApp.app.currentUser;
-
-        var userid = MyApp.app.currentUser.get('userid'); 
         var utility = MyApp.app.getController('UtilityController');
         var caller = MyApp.app.getController('DreamsTabController');
+
+        var newStatus = tortoiseDetailsForm.newStatus;
+        var currentUser = MyApp.app.currentUser;
+        var userid = MyApp.app.currentUser.get('userid'); 
         var tempDreamId = MyApp.app.tempId;
 
         var newOrOldTortoise = tortoiseDetailsForm.getRecord();
@@ -291,9 +302,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseDetailsBackButtonTap: function(button, e, eOpts) {
-        alert('tortoseDetailsBackToDream');
         var dreamListCardPanel = this.getDreamListCardPanel();
         var tortoiseListPanel = this.getTortoiseListPanel();
+
         dreamListCardPanel.animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'right'});
     },
 
@@ -308,6 +319,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
     onTortoiseDetailsBackHorizontalButtonTap: function(button, e, eOpts) {
         var tortoiseListPanel = this.getTortoiseListPanel();
         var slideConfig =  { type : 'slide', direction : 'right'}; 
+
         this.getDreamListCardPanel().animateActiveItem(tortoiseListPanel,slideConfig);
     },
 
@@ -315,9 +327,15 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var tortoiseListPanel = this.getTortoiseListPanel();
         var dreamListCardPanel = this.getDreamListCardPanel();
         var tortoiseDetails = this.getTortoiseDetails();
-        //var dreamList = this.getDreamList();
+        var utility = MyApp.app.getController('UtilityController');
+        var storeLoadCallback = utility.storeLoadCallback;
+        var tortoisesStore = Ext.getStore('tortoisesStore');
+        var proxy = tortoisesStore.getProxy();
+        var orgUrl = proxy.getUrl();
+
         var tortoise = tortoiseDetails.getRecord();
         tortoiseDetails.updateRecord(tortoise);
+        var dreamId = tortoise.getDream().get('id');
 
 
         Ext.Msg.confirm('', "Tortoise will be deleted !", function(buttonId,value,opt) {
@@ -328,12 +346,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
                     scope : this,
                     success : function(record, operation) { 
                         tortoise.getProxy().setAppendId(false);
-                        var tortoisesStore = Ext.getStore('tortoisesStore');
-                        var proxy = tortoisesStore.getProxy();
-                        var orgUrl = proxy.getUrl();
                         var urlWithDream = orgUrl + '&dream=' + dreamId;
                         proxy.setUrl(urlWithDream);
-                        tortoisesStore.load();// Have to load again otherwise
+                        tortoisesStore.load(storeLoadCallback);// Have to load again otherwise
                         // store list does not get refreshed. 
 
                         dreamListCardPanel.animateActiveItem(tortoiseListPanel, { type : 'slide', direction : 'right'});
@@ -349,6 +364,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
     onTortoiseListBackToDreamButtonTap: function(button, e, eOpts) {
         var dreamListPanel = this.getDreamListPanel();
+
         this.getDreamListCardPanel().setActiveItem(dreamListPanel);
 
     },

@@ -136,6 +136,9 @@ Ext.define('MyApp.controller.UserCredentialsController', {
     },
 
     populateUserResources: function(userObject) {
+        var utility = MyApp.app.getController('UtilityController');
+        var storeLoadCallback = utility.storeLoadCallback;
+
         var userid = userObject.userid;
         var authHeaderValue = userObject.authHeaderValue;
 
@@ -159,16 +162,8 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         proxy.setUrl('http://' + host + '/tortlets?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid + '&createdOn=' + today);
         var headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        var operation = {};
-        operation = function(records,operation,success) {
-            alert(operation.wasSuccessful());
-            console.log(operation);
-            if(success === false){
-                Ext.Msg.alert('Server error, check connectivity or try later','',Ext.emptyFn);
-                return;
-            }
-        };
-        todaysTortletsStore.load(operation);
+
+        todaysTortletsStore.load(storeLoadCallback);
 
         //incompleteTortletsStore
         var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');
@@ -184,7 +179,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         headers.Authorization = authHeaderValue;
         proxy.setUrl('http://' + host + '/dreams?find=ByUseridEquals&userid=' +userid);
 
-        dreamsStore.load();
+        dreamsStore.load(storeLoadCallback);
 
         //tortoisesStore
         var tortoisesStore = Ext.getStore('tortoisesStore');

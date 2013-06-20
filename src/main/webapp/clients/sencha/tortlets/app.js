@@ -66,7 +66,8 @@ Ext.application({
         'DreamsTabController',
         'SampleOverriddenController',
         'UserCredentialsController',
-        'UserScoreTabController'
+        'UserScoreTabController',
+        'UtilityController'
     ],
     name: 'MyApp',
 

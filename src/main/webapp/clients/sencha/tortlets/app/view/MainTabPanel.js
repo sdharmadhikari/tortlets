@@ -59,15 +59,17 @@ Ext.define('MyApp.view.MainTabPanel', {
     },
 
     onTabpanelActiveItemChange: function(container, value, oldValue, eOpts) {
+        var utility = MyApp.app.getController('UtilityController');
+        var storeLoadCallBack = utility.storeLoadCallBack;
 
         if(value.xtype === 'dreamListCardPanel'){
             var dreamsStore = Ext.getStore('dreamsStore');
-            dreamsStore.load();
+            dreamsStore.load(storeLoadCallBack);
         }else if(value.xtype === 'homeTabCardPanel'){
             var tortletsStore = Ext.getStore('incompleteTortletsStore');
-            tortletsStore.load();
+            tortletsStore.load(storeLoadCallBack);
             var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
-            todaysTortletsStore.load();
+            todaysTortletsStore.load(storeLoadCallBack);
 
         }else if(value.xtype === 'scoreTabCardPanel') {
 

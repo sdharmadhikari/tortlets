@@ -313,6 +313,14 @@
                 "app/view/UserScoreGuageChart.js"
             ],
             "className": "UserScoreGuageChart"
+        },
+        "3a2719a1-f0a2-4d6d-9e54-4acd611b7ddc": {
+            "paths": [
+                "metadata/controller/UtilityController",
+                "app/controller/override/UtilityController.js",
+                "app/controller/UtilityController.js"
+            ],
+            "className": "UtilityController"
         }
     },
     "viewOrderMap": {
@@ -347,6 +355,7 @@
             "6ae46be0-527b-4709-b96e-84eb3fb55148"
         ],
         "controller": [
+            "3a2719a1-f0a2-4d6d-9e54-4acd611b7ddc",
             "f349d5fa-f50b-405e-b80f-e46f09bf9967",
             "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
             "a6be32fc-255c-4b23-8caf-f80699a22551",

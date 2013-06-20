@@ -108,6 +108,7 @@ Ext.define('MyApp.controller.HomeTabController', {
     },
 
     onTortletDetailsSaveButtonTap: function(button, e, eOpts) {
+        alert('Current this method is not being used, as not showing tortlet form');
         var tortletDetailsForm = this.getTortletDetails();
         console.log('inside onSaveButton record id' + tortletDetailsForm.getRecord());
 
@@ -139,7 +140,10 @@ Ext.define('MyApp.controller.HomeTabController', {
     onShowTodayListButtonTap: function(button, e, eOpts) {
         console.log('showTodayListButton');
         var store = Ext.getStore('todaysTortletsStore');
-        url = store.getProxy().getUrl();
+        var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();
+        var todaysTortletListPanel = this.getTodaysTortletListPanel();
+
+        var url = store.getProxy().getUrl();
         var d = new Date();
         var curr_date = d.getDate();
         var curr_month = d.getMonth() + 1; //Months are zero based
@@ -150,10 +154,9 @@ Ext.define('MyApp.controller.HomeTabController', {
         store.getProxy().setUrl(todayUrl);
         store.load();
         store.getProxy().setUrl(url);
-        var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();
-        var todaysTortletListPanel = this.getTodaysTortletListPanel();
+
         tortletsListsContainerPanel.setActiveItem(todaysTortletListPanel);
-        //this.getTodayTortletsList().show();
+
 
     },
 
@@ -161,16 +164,14 @@ Ext.define('MyApp.controller.HomeTabController', {
         console.log('showPendingListButton');
 
         var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');
-        var proxy = incompleteTortletsStore.getProxy();
-
-        Ext.getStore('incompleteTortletsStore').load();
-
         var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();
         var tortletListPanel = this.getTortletListPanel();
+        var utility = MyApp.app.getController('UtilityController');
+        var storeLoadCallback = utility.storeLoadCallback;
 
+        incompleteTortletsStore.load(storeLoadCallback);
         tortletsListsContainerPanel.setActiveItem(tortletListPanel);
-        //this.getTortletsList().show();
-        //this.getTodayTortletsList().hide();
+
     },
 
     onHomePageHelpButtonTap: function(button, e, eOpts) {
