@@ -302,7 +302,7 @@
                     "    store.removedRecordIndex='';\r",
                     "}\r",
                     "\r",
-                    "Ext.Msg.alert('Failure','Could not save to server,try again later',Ext.emptyFn);\r",
+                    "Ext.Msg.alert('Server error,try again later','',Ext.emptyFn);\r",
                     ""
                 ]
             },

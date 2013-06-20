@@ -2,26 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9726801d-b3bd-455e-bef1-fa29786b8c4c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UtilityController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UtilityController" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/CarouselDreamPanel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/DreamCaraoselCard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/CarouselDreamPanel" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/DreamCaraoselCard" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/.architect" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/.architect" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/Application" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/Application" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController.java" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController_Roo_Controller_Json.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController_Roo_Controller_Json.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/DreamList.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/DreamList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/DreamList" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/DreamList" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/DreamsTabController.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/DreamsTabController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/DreamsTabController" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/DreamsTabController" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/HomeTabController.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/HomeTabController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/HomeTabController" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/HomeTabController" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController_Roo_Controller_Json.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController_Roo_Controller_Json.aj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortoiseListPanel.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortoiseListPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortoiseListPanel" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortoiseListPanel" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UserCredentialsController.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UserCredentialsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UserCredentialsController" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UserCredentialsController" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.roo" afterPath="$PROJECT_DIR$/log.roo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/signupmodule.js" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/signupmodule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/signupmodule" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/signupmodule" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/tortlets.xds" afterPath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/tortlets.xds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tortlets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -486,7 +485,7 @@
     <file path="/Processor.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1371584774899" ignored="false" />
     <file path="/LineObject.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1371583472730" ignored="false" />
     <file path="/DreamControllerAspect.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1371667616073" ignored="false" />
-    <file path="/TortoiseControllerAspect.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1371667650789" ignored="false" />
+    <file path="/TortoiseControllerAspect.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1371685753117" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -609,10 +608,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <file leaf-file-name="quartz-job-launcher-context.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/batch/quartz-job-launcher-context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="65" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0">
+            <state line="22" column="76" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-4.28">
               <folding />
             </state>
           </provider>
@@ -630,7 +629,7 @@
       <file leaf-file-name="TortoiseController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="32" selection-start="5370" selection-end="5370" vertical-scroll-proportion="0.0">
+            <state line="109" column="28" selection-start="5677" selection-end="5677" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -639,7 +638,7 @@
       <file leaf-file-name="TortoiseControllerAspect.aj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="47" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.41050118">
+            <state line="33" column="47" selection-start="1706" selection-end="1706" vertical-scroll-proportion="1.7466667">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -893,6 +892,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tortlets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tortlets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tortlets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tortlets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1320,7 +1383,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1480" y="308" width="1406" height="704" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1341,7 +1404,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32534248" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2904412" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1429,13 +1492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/batch/quartz-job-launcher-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="76" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/batch/simple-job-launcher-context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1506,13 +1562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="32" selection-start="5370" selection-end="5370" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="78" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.0">
@@ -1529,9 +1578,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/batch/quartz-job-launcher-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="76" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-4.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="28" selection-start="5677" selection-end="5677" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="47" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.41050118">
+        <state line="33" column="47" selection-start="1706" selection-end="1706" vertical-scroll-proportion="1.7466667">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

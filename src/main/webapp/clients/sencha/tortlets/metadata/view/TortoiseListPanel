@@ -92,7 +92,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "tortoiseListStartDreamingButton",
+                "name": "tortoiseListBackToDreamButton",
                 "itemId": "mybutton2",
                 "ui": "confirm",
                 "text": "Back To Dreams"

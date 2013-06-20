@@ -36,8 +36,11 @@ Ext.define('MyApp.view.signupmodule', {
                             var registrationCardPanel = this.up('registrationCardPanel');
                             registrationCardPanel.fireEvent('signOut');
                         },
+                        name: 'signOutButton',
+                        hidden: true,
+                        itemId: 'signOutButton',
                         ui: 'small',
-                        text: 'Log Out'
+                        text: 'Sign Out'
                     }
                 ]
             },

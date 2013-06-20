@@ -1,6 +1,7 @@
 package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Tortoise;
+import com.softrism.tortlets.domain.Tuser;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,7 +29,10 @@ public aspect TortoiseControllerAspect {
             headers.add("Content-Type", "application/json");
             return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
         }
-        return (ResponseEntity)proceed(jsonTortoiseString);
+        ResponseEntity responseEntity = (ResponseEntity)proceed(jsonTortoiseString);
+        Tortoise tortoisePersisted = Tortoise.fromJsonToTortoise((String)responseEntity.getBody());
+        Tuser.processTortoise(tortoisePersisted);
+        return responseEntity;
 
 
     }

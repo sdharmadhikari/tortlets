@@ -64,22 +64,6 @@
             ],
             "className": "DreamListPanel"
         },
-        "ab390928-6413-4757-9eb4-5023d3291a6c": {
-            "paths": [
-                "metadata/view/CarouselDreamPanel",
-                "app/view/override/CarouselDreamPanel.js",
-                "app/view/CarouselDreamPanel.js"
-            ],
-            "className": "CarouselDreamPanel"
-        },
-        "a148bbe8-dad7-4c8e-a95a-4081d4b97c6f": {
-            "paths": [
-                "metadata/view/DreamCaraoselCard",
-                "app/view/override/DreamCaraoselCard.js",
-                "app/view/DreamCaraoselCard.js"
-            ],
-            "className": "DreamCaraoselCard"
-        },
         "c717694e-2e8e-4855-ba93-2500aa9367bf": {
             "paths": [
                 "metadata/view/TortoiseListPanel",
@@ -352,8 +336,6 @@
             "811d49e0-92af-414a-9025-4cb5ec728652",
             "eaceb40a-b0c4-4740-a5a5-7c98435c0248",
             "c717694e-2e8e-4855-ba93-2500aa9367bf",
-            "ab390928-6413-4757-9eb4-5023d3291a6c",
-            "a148bbe8-dad7-4c8e-a95a-4081d4b97c6f",
             "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
             "95d937cc-2252-4abb-b179-b99c259bb007",
             "0da20323-db08-47ce-9741-64ded49ccb84"

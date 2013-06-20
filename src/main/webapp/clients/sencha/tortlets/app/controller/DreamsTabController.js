@@ -47,9 +47,6 @@ Ext.define('MyApp.controller.DreamsTabController', {
             "button[name='dreamDetailsBackButton']": {
                 tap: 'onDreamDetailsBackButtonTap'
             },
-            "button[name='tortoiseListStartDreamingButton']": {
-                tap: 'onTortoiseListStartDreamingButtonTap'
-            },
             "button[name='dreamDeleteButton']": {
                 tap: 'onDreamDeleteButtonButtonTap'
             },
@@ -58,9 +55,6 @@ Ext.define('MyApp.controller.DreamsTabController', {
             },
             "tortoiseList": {
                 itemtap: 'onTortoiseListItemTap'
-            },
-            "button[name='allTortletsPanelDreamButton']": {
-                tap: 'onAllTortletsPanelDreamButtonTap'
             },
             "button[name='tortoiseListPanelAddButton']": {
                 tap: 'onTortoiseListPanelAddButtonTap'
@@ -71,9 +65,6 @@ Ext.define('MyApp.controller.DreamsTabController', {
             "button[name='tortoiseDetailsBackButton']": {
                 tap: 'onTortoiseDetailsBackButtonTap'
             },
-            "button[name='tortoiseDetailsTortletsButton']": {
-                tap: 'onTortoiseDetailsTortletsButtonTap'
-            },
             "button[name='tortoiseDetailsBackToListButton']": {
                 tap: 'onTortoiseDetailsBackToListButtonTap'
             },
@@ -83,8 +74,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
             "button[name='tortoiseDeleteButton']": {
                 tap: 'onTortoiseDeleteButtonTap'
             },
-            "button#mybutton2": {
-                tap: 'onTortoiseListStartDreamingButtonTap'
+            "button[name='tortoiseListBackToDreamButton']": {
+                tap: 'onTortoiseListBackToDreamButtonTap'
             }
         }
     },
@@ -179,10 +170,6 @@ Ext.define('MyApp.controller.DreamsTabController', {
         }
     },
 
-    onTortoiseListStartDreamingButtonTap: function(button, e, eOpts) {
-        this.getDreamListCardPanel().animateActiveItem(0, {type : 'slide', direction : 'right'});
-    },
-
     onDreamDeleteButtonButtonTap: function(button, e, eOpts) {
         var dreamListPanel = this.getDreamListPanel();
         var dreamListCardPanel = this.getDreamListCardPanel();
@@ -236,11 +223,6 @@ Ext.define('MyApp.controller.DreamsTabController', {
         tortoiseDeleteButton.show();
         tortoiseDetailsForm.getScrollable().getScroller().scrollToTop();
         this.getDreamListCardPanel().animateActiveItem(tortoiseDetailsForm,{ type : 'slide'});
-    },
-
-    onAllTortletsPanelDreamButtonTap: function(button, e, eOpts) {
-        this.getDreamListCardPanel()
-        .animateActiveItem(0,{ type : 'slide', direction : 'right'});
     },
 
     onTortoiseListPanelAddButtonTap: function(button, e, eOpts) {
@@ -315,15 +297,12 @@ Ext.define('MyApp.controller.DreamsTabController', {
         dreamListCardPanel.animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'right'});
     },
 
-    onTortoiseDetailsTortletsButtonTap: function(button, e, eOpts) {
-        this.getDreamListCardPanel().
-        animateActiveItem(3, {type : 'slide'});
-    },
-
     onTortoiseDetailsBackToListButtonTap: function(button, e, eOpts) {
+        alert('if this never shows up, delete method onTortoiseDetails...ListButtonTap');
         var tortoiseListPanel = this.getTortoiseListPanel();
         var slideConfig =  { type : 'slide', direction : 'up'}; 
         this.getDreamListCardPanel().animateActiveItem(tortoiseListPanel,slideConfig);
+
     },
 
     onTortoiseDetailsBackHorizontalButtonTap: function(button, e, eOpts) {
@@ -368,10 +347,10 @@ Ext.define('MyApp.controller.DreamsTabController', {
         });
     },
 
-    onTortoiseListStartDreamingButtonTap: function(button, e, eOpts) {
-        //var dreamDetails = this.getDreamDetails();
+    onTortoiseListBackToDreamButtonTap: function(button, e, eOpts) {
         var dreamListPanel = this.getDreamListPanel();
         this.getDreamListCardPanel().setActiveItem(dreamListPanel);
+
     },
 
     dreamSave: function(savedModel) {

@@ -196,7 +196,7 @@ Ext.define('MyApp.controller.HomeTabController', {
             store.removedRecordIndex='';
         }
 
-        Ext.Msg.alert('Failure','Could not save to server,try again later',Ext.emptyFn);
+        Ext.Msg.alert('Server error,try again later','',Ext.emptyFn);
 
     },
 

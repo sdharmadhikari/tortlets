@@ -164,24 +164,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onTortoiseListStartDreamingButtonTap",
-                "implHandler": [
-                    "this.getDreamListCardPanel().animateActiveItem(0, {type : 'slide', direction : 'right'});"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='tortoiseListStartDreamingButton']"
-            },
-            "designerId": "c186816a-c7a5-442a-a87c-ac31985b4fec"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "fn": "onDreamDeleteButtonButtonTap",
                 "implHandler": [
                     "var dreamListPanel = this.getDreamListPanel();\r",
@@ -193,22 +175,22 @@
                     "\r",
                     "\r",
                     "Ext.Msg.confirm('', \"Dream and it's tortoises will be deleted !\", function(buttonId,value,opt) {\r",
-                    "   \r",
+                    "\r",
                     "    if(buttonId === 'yes') { \r",
                     "        dream.getProxy().setAppendId(true);\r",
                     "        dream.erase({ \r",
-                    "        \tscope : this,\r",
-                    "        \tsuccess : function(record, operation) { \r",
-                    "            \tdream.getProxy().setAppendId(false);\r",
+                    "            scope : this,\r",
+                    "            success : function(record, operation) { \r",
+                    "                dream.getProxy().setAppendId(false);\r",
                     "                var dreamsStore = Ext.getStore('dreamsStore');\r",
                     "                dreamsStore.load();// Have to load again otherwise\r",
-                    "\t\t\t\t// store list does not get refreshed.                \r",
-                    "             \tdreamListCardPanel.animateActiveItem(dreamListPanel, { type : 'slide', direction : 'right'});\r",
-                    "        \t},\r",
-                    "        \tfailure : function(record, operation) { alert('delete failed');}\r",
+                    "                // store list does not get refreshed.                \r",
+                    "                dreamListCardPanel.animateActiveItem(dreamListPanel, { type : 'slide', direction : 'right'});\r",
+                    "            },\r",
+                    "            failure : function(record, operation) { alert('delete failed');}\r",
                     "\r",
-                    "\t\t});\r",
-                    "    \r",
+                    "        });\r",
+                    "\r",
                     "    }\r",
                     "\r",
                     "});\r",
@@ -270,25 +252,6 @@
                 "designer|controlQuery": "tortoiseList"
             },
             "designerId": "cbe11079-1bc5-4c39-8c6d-32aa80e3894a"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onAllTortletsPanelDreamButtonTap",
-                "implHandler": [
-                    "this.getDreamListCardPanel()\r",
-                    ".animateActiveItem(0,{ type : 'slide', direction : 'right'});"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='allTortletsPanelDreamButton']"
-            },
-            "designerId": "e4a862f1-7e07-489d-9218-dc7429d887ff"
         },
         {
             "type": "controlleraction",
@@ -403,25 +366,6 @@
                 "designer|controlQuery": "button[name='tortoiseDetailsBackButton']"
             },
             "designerId": "edd5ef49-a3e4-491f-9dae-92d7aa9a1fd1"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onTortoiseDetailsTortletsButtonTap",
-                "implHandler": [
-                    "this.getDreamListCardPanel().\r",
-                    "animateActiveItem(3, {type : 'slide'});"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='tortoiseDetailsTortletsButton']"
-            },
-            "designerId": "0c23b93c-d6a8-422c-a277-105bdaeaa519"
         },
         {
             "type": "controllerref",
@@ -550,9 +494,11 @@
             "userConfig": {
                 "fn": "onTortoiseDetailsBackToListButtonTap",
                 "implHandler": [
+                    "alert('if this never shows up, delete method onTortoiseDetails...ListButtonTap');\r",
                     "var tortoiseListPanel = this.getTortoiseListPanel();\r",
                     "var slideConfig =  { type : 'slide', direction : 'up'}; \r",
-                    "this.getDreamListCardPanel().animateActiveItem(tortoiseListPanel,slideConfig);"
+                    "this.getDreamListCardPanel().animateActiveItem(tortoiseListPanel,slideConfig);\r",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -781,15 +727,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onTortoiseListStartDreamingButtonTap",
+                "fn": "onTortoiseListBackToDreamButtonTap",
                 "implHandler": [
-                    "//var dreamDetails = this.getDreamDetails();\r",
                     "var dreamListPanel = this.getDreamListPanel();\r",
-                    "this.getDreamListCardPanel().setActiveItem(dreamListPanel);"
+                    "this.getDreamListCardPanel().setActiveItem(dreamListPanel);\r",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button#mybutton2"
+                "designer|controlQuery": "button[name='tortoiseListBackToDreamButton']"
             },
             "designerId": "3d36555b-4ec9-4582-9c50-f2c67c87fa45"
         },

@@ -52,7 +52,7 @@ Ext.define('MyApp.view.TortoiseListPanel', {
             },
             {
                 xtype: 'button',
-                name: 'tortoiseListStartDreamingButton',
+                name: 'tortoiseListBackToDreamButton',
                 itemId: 'mybutton2',
                 ui: 'confirm',
                 text: 'Back To Dreams'

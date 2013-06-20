@@ -44,8 +44,6 @@ Ext.application({
         'TortoiseDetails',
         'DreamDetails',
         'DreamListPanel',
-        'CarouselDreamPanel',
-        'DreamCaraoselCard',
         'TortoiseListPanel',
         'HomeTabCardPanel',
         'TortletsList',

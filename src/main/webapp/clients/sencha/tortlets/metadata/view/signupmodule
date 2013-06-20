@@ -48,10 +48,20 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "name": "signOutButton",
+                        "hidden": true,
+                        "itemId": "signOutButton",
                         "ui": "small",
-                        "text": "Log Out"
+                        "text": "Sign Out"
                     },
                     "designerId": "6ee24e19-255b-4bc3-bf8f-e02b9e4318ca",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ],
                     "cn": [
                         {
                             "type": "fixedfunction",

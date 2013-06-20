@@ -55,6 +55,14 @@ Ext.define('MyApp.controller.UserCredentialsController', {
 
         var landingCardPanel = this.getLandingCardPanel();
         var registrationCardPanel = this.getRegistrationCardPanel();
+        var signOutButton = registrationCardPanel.down('#signOutButton');
+        signOutButton.hide();
+        var quickSignupForm = registrationCardPanel.down('#whatsYourNameForm');
+        var userid = quickSignupForm.down('#firstNameAsUserId');
+        var wordYouLike = quickSignupForm.down('#wordYouLike');
+        userid.setValue('');
+        wordYouLike.setValue('');
+
         registrationCardPanel.setActiveItem(0);
         landingCardPanel.animateActiveItem(registrationCardPanel, { type: 'slide'});
     },
@@ -74,6 +82,8 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var landingCardPanel = this.getLandingCardPanel();
         var registrationCardPanel = this.getRegistrationCardPanel();
         var registrationPage1 = this.getRegistrationPage1();
+        var signOutButton = registrationCardPanel.down('#signOutButton');
+        signOutButton.show();
         registrationPage1.getScrollable().getScroller().scrollToTop();
 
         registrationCardPanel.setActiveItem(registrationPage1);
@@ -88,7 +98,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
 
             },
             failure : function(record, operation) { 
-                Ext.Msg.alert('','Server error');
+                Ext.Msg.alert('','Server error,try again later');
             }
 
         });
@@ -149,7 +159,16 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         proxy.setUrl('http://' + host + '/tortlets?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid + '&createdOn=' + today);
         var headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        todaysTortletsStore.load();
+        var operation = {};
+        operation = function(records,operation,success) {
+            alert(operation.wasSuccessful());
+            console.log(operation);
+            if(success === false){
+                Ext.Msg.alert('Server error, check connectivity or try later','',Ext.emptyFn);
+                return;
+            }
+        };
+        todaysTortletsStore.load(operation);
 
         //incompleteTortletsStore
         var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');
