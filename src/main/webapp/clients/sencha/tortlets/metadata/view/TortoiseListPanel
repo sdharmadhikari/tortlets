@@ -21,6 +21,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
+                "itemId": "tortoiseListTitleBar",
                 "designer|displayName": "TortoiseListPanelTitleBar",
                 "title": "Tortoises"
             },

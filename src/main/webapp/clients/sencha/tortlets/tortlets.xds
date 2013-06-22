@@ -298,14 +298,6 @@
             ],
             "className": "TortletsListsContainerPanel"
         },
-        "fb82b0dc-98c1-4cf9-942b-88944e268c27": {
-            "paths": [
-                "metadata/controller/UserScoreTabController",
-                "app/controller/override/UserScoreTabController.js",
-                "app/controller/UserScoreTabController.js"
-            ],
-            "className": "UserScoreTabController"
-        },
         "95d937cc-2252-4abb-b179-b99c259bb007": {
             "paths": [
                 "metadata/view/UserScoreGuageChart",
@@ -321,6 +313,14 @@
                 "app/controller/UtilityController.js"
             ],
             "className": "UtilityController"
+        },
+        "4adb5b1a-4440-495e-9df1-40af054479bd": {
+            "paths": [
+                "metadata/controller/UserScoreTabController",
+                "app/controller/override/UserScoreTabController.js",
+                "app/controller/UserScoreTabController.js"
+            ],
+            "className": "UserScoreTabController"
         }
     },
     "viewOrderMap": {
@@ -360,7 +360,7 @@
             "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
             "a6be32fc-255c-4b23-8caf-f80699a22551",
             "4fd5c999-6918-471c-87b8-96d68a98489a",
-            "fb82b0dc-98c1-4cf9-942b-88944e268c27"
+            "4adb5b1a-4440-495e-9df1-40af054479bd"
         ],
         "model": [
             "98103327-6270-4ea5-9055-efe31b2727a6",

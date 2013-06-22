@@ -30,9 +30,9 @@ Ext.define('MyApp.view.DreamList', {
             '',
             '{%',
             '',
-            'var maxScore = 850;',
+            'var maxScore = 100;',
             'var done = \'\';',
-            'for(i=85; i < maxScore+1; i=i+85) {    ',
+            'for(i=1; i < maxScore+1; i=i+10) {    ',
             '	if(i <= values.latestDreamScore) {',
             '%}',
             '        ...',
@@ -52,10 +52,27 @@ Ext.define('MyApp.view.DreamList', {
             '}',
             '%}',
             '<img src="static/images/race-finish-small.png"></img>',
+            '{%',
+            'if(values.latestDreamScore >= 100) {',
+            '%}',
+            '	<img src="static/images/tortoise_smaller.gif"></img>',
+            '{%',
+            '}',
+            '%}',
             '<span class="smallFont">(Score:{latestDreamScore})</span>',
             '',
             ''
+        ],
+        listeners: [
+            {
+                fn: 'onListRefresh',
+                event: 'refresh'
+            }
         ]
+    },
+
+    onListRefresh: function(dataview, eOpts) {
+        console.log(this);
     }
 
 });

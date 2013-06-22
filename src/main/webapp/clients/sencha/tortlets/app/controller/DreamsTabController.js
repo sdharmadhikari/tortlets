@@ -309,7 +309,6 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseDetailsBackToListButtonTap: function(button, e, eOpts) {
-        alert('if this never shows up, delete method onTortoiseDetails...ListButtonTap');
         var tortoiseListPanel = this.getTortoiseListPanel();
         var slideConfig =  { type : 'slide', direction : 'up'}; 
         this.getDreamListCardPanel().animateActiveItem(tortoiseListPanel,slideConfig);
@@ -317,6 +316,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseDetailsBackHorizontalButtonTap: function(button, e, eOpts) {
+        alert('remove this alert if you see this');
         var tortoiseListPanel = this.getTortoiseListPanel();
         var slideConfig =  { type : 'slide', direction : 'right'}; 
 
@@ -375,6 +375,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var tortoiseListPanel = dreamsTabController.getTortoiseListPanel();
         var dreamsStore = Ext.getStore('dreamsStore');
         var tortoisesStore = Ext.getStore('tortoisesStore');
+        var utility = MyApp.app.getController('UtilityController');
+        var storeLoadCallback = utility.storeLoadCallback;
         var proxy = tortoisesStore.getProxy();
         var orgUrl = proxy.getUrl();
 
@@ -384,13 +386,19 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var dreamId = savedModel.get('id');
 
-        dreamsStore.load();// Looks like this call can be async, so no
+        dreamsStore.load(storeLoadCallback);// Looks like this call can be async, so no
         // no callback function is passed.
 
         var urlWithDream = orgUrl + '&dream=' + dreamId;
         proxy.setUrl(urlWithDream);
         tortoisesStore.load(function(records, operation, success) {
-
+            if(operation.hasException()) {
+                Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
+                return;
+            }else if(records.length === 0){
+                tortoisesStore.removeAll(); 
+            }
+            tortoiseListPanel.down('#tortoiseListTitleBar').setTitle(savedModel.get('title'));
             dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});  
             proxy.setUrl(orgUrl);
         },this);
@@ -409,10 +417,16 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var dream = savedModel.get('dream');
         var dreamId = dream.id;
-
         var urlWithDream = orgUrl + '&dream=' + dreamId;
         proxy.setUrl(urlWithDream);
         tortoisesStore.load(function(records, operation, success) {
+            // Ideally wantto remove this block and reuse storeLoadCallback
+            if(operation.hasException()) {
+                Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
+                return;
+            }else if(records.length === 0){
+                tortoisesStore.removeAll(); 
+            }
             dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'up'});
 
             proxy.setUrl(orgUrl);

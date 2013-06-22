@@ -33,12 +33,6 @@ Ext.define('MyApp.controller.HomeTabController', {
             "tortletsList": {
                 itemtap: 'onTortletsListItemTap'
             },
-            "button[name='tortletsDetailsBackButton']": {
-                tap: 'onTortletsDetailsBackButtonTap'
-            },
-            "button[name='tortletDetailsSaveButton']": {
-                tap: 'onTortletDetailsSaveButtonTap'
-            },
             "button[name='showTodayListButton']": {
                 tap: 'onShowTodayListButtonTap'
             },
@@ -103,45 +97,13 @@ Ext.define('MyApp.controller.HomeTabController', {
         //this.getHomeTabCardPanel().animateActiveItem(tortletDetails, {type : 'slide'});
     },
 
-    onTortletsDetailsBackButtonTap: function(button, e, eOpts) {
-        this.getHomeTabCardPanel().animateActiveItem(0, { type: 'slide', direction : 'right'});
-    },
-
-    onTortletDetailsSaveButtonTap: function(button, e, eOpts) {
-        alert('Current this method is not being used, as not showing tortlet form');
-        var tortletDetailsForm = this.getTortletDetails();
-        console.log('inside onSaveButton record id' + tortletDetailsForm.getRecord());
-
-        /// Populate record from form. populateTortletRecordFromForm()
-        var record = tortletDetailsForm.getRecord();
-
-        tortletDetailsForm.updateRecord(record);
-        operation = {};
-        operation.success = this.oldTortletSaveSuccess;
-        operation.failure = this.oldTortletSaveFailure;
-
-        if(record.dirty){
-
-            if(record.get('completed') === true){
-
-                eitherOneStore = Ext.getStore(record.sourceStoreId);
-                eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);
-                eitherOneStore.remove(record); 
-
-            }
-
-            record.save(operation);
-        }
-
-        this.getHomeTabCardPanel().
-        animateActiveItem(0,{type : 'slide', direction : 'right'});
-    },
-
     onShowTodayListButtonTap: function(button, e, eOpts) {
         console.log('showTodayListButton');
         var store = Ext.getStore('todaysTortletsStore');
         var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();
         var todaysTortletListPanel = this.getTodaysTortletListPanel();
+        var utility = MyApp.app.getController('UtilityController');
+        var storeLoadCallback = utility.storeLoadCallback;
 
         var url = store.getProxy().getUrl();
         var d = new Date();
@@ -152,7 +114,7 @@ Ext.define('MyApp.controller.HomeTabController', {
 
         todayUrl = url + '&createdOn=' + today;
         store.getProxy().setUrl(todayUrl);
-        store.load();
+        store.load(storeLoadCallback);
         store.getProxy().setUrl(url);
 
         tortletsListsContainerPanel.setActiveItem(todaysTortletListPanel);
@@ -199,10 +161,6 @@ Ext.define('MyApp.controller.HomeTabController', {
 
         Ext.Msg.alert('Server error,try again later','',Ext.emptyFn);
 
-    },
-
-    init: function(application) {
-        console.log('initing HomeTabController');
     },
 
     saveTortlet: function(homeTabController, record) {

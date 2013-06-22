@@ -29,6 +29,7 @@ Ext.define('MyApp.view.TortoiseListPanel', {
             {
                 xtype: 'titlebar',
                 docked: 'top',
+                itemId: 'tortoiseListTitleBar',
                 title: 'Tortoises',
                 items: [
                     {

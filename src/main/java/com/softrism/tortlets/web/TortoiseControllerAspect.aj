@@ -31,6 +31,7 @@ public aspect TortoiseControllerAspect {
         }
         ResponseEntity responseEntity = (ResponseEntity)proceed(jsonTortoiseString);
         Tortoise tortoisePersisted = Tortoise.fromJsonToTortoise((String)responseEntity.getBody());
+        tortoisePersisted = Tortoise.findTortoise(tortoisePersisted.getId());
         Tuser.processTortoise(tortoisePersisted);
         return responseEntity;
 

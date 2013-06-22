@@ -86,6 +86,24 @@ Ext.define('MyApp.view.MainTabPanel', {
                     var userScoreGuageChart = userScoreTabController.getUserScoreGuageChart();
                     userScoreGuageChart.getSeries()[0].setValue(score);
 
+                    /////////////////////////////////////////////////
+
+
+                    var scoreTextOnChart = Ext.create('Ext.draw.sprite.Text', {
+                        type : 'text',
+                        text : 'Tortlets Score :' + score + '%',
+                        font : 'bold 20px Arial',
+                        x: 1,
+                        y: 20
+                    });
+
+                    userScoreGuageChart.getSurface().removeAll();
+                    userScoreGuageChart.getSurface().add(scoreTextOnChart);
+                    scoreTextOnChart.show(true);
+
+
+                    /////////////////////////////////////////////////            
+
                     scoreTabCardPanel.add(userScoreGuageChart);// I believe add
                     // is needed to repaint the gauge.
 

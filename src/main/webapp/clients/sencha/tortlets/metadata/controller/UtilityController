@@ -1,0 +1,50 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UtilityController"
+    },
+    "designerId": "3a2719a1-f0a2-4d6d-9e54-4acd611b7ddc",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "storeLoadCallback",
+                "designer|params": [
+                    "records",
+                    "operation",
+                    "success"
+                ],
+                "implHandler": [
+                    "//console.log(records);\r",
+                    "//console.log('operation.wasSuccessful() ' + operation.wasSuccessful());\r",
+                    "//console.log('operation.getError() '+ operation.getError());\r",
+                    "//console.log('operation.getResponse '+ operation.getResponse());\r",
+                    "//console.log('operation.getResultSet() '+ operation.getResultSet());\r",
+                    "//console.log('operation.hasException() '+ operation.hasException());\r",
+                    "\r",
+                    "if(operation.hasException()) {\r",
+                    "    \r",
+                    "    Ext.Msg.alert('','Server error, try later',Ext.emptyFn);\r",
+                    "    return;\r",
+                    "}else if(records.length === 0){\r",
+                    "\r",
+                    "    this.removeAll(); \r",
+                    "    return;\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "a4bf3333-3598-4833-a34d-3f740a728ba6"
+        }
+    ]
+}

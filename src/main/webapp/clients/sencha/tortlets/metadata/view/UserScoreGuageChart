@@ -28,9 +28,17 @@
                 "totalAngle": 3.141592653589793,
                 "title": null,
                 "field": null,
-                "maximum": 850,
                 "needle": true,
-                "sectors": null,
+                "needleWidth": null,
+                "sectors": [
+                    "[\r",
+                    "    {end : 25, label : 'Forgot Dreams?', color : 'red'},\r",
+                    "    {end : 50, label : 'Average', color : 'yellow'},\r",
+                    "    {end : 75, label : 'Good', color : 'lightgreen'},\r",
+                    "    {end : 100, label : 'Great!', color : 'green'}\r",
+                    "\r",
+                    "]"
+                ],
                 "value": 10
             },
             "configAlternates": {
@@ -55,7 +63,8 @@
             "userConfig": {
                 "fn": "onSpacefillingPainted",
                 "implHandler": [
-                    "// wanted to set series.setConfig( { sectors : [ ] }; to show zones."
+                    "// wanted to set series.setConfig( { sectors : [ ] }; to show zones.\r",
+                    ""
                 ],
                 "name": "painted"
             },

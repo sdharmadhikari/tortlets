@@ -33,8 +33,29 @@ Ext.define('MyApp.view.UserScoreGuageChart', {
             {
                 type: 'gauge',
                 totalAngle: 3.141592653589793,
-                maximum: 850,
                 needle: true,
+                sectors: [
+                    {
+                        end: 25,
+                        label: 'Forgot Dreams?',
+                        color: 'red'
+                    },
+                    {
+                        end: 50,
+                        label: 'Average',
+                        color: 'yellow'
+                    },
+                    {
+                        end: 75,
+                        label: 'Good',
+                        color: 'lightgreen'
+                    },
+                    {
+                        end: 100,
+                        label: 'Great!',
+                        color: 'green'
+                    }
+                ],
                 value: 10
             }
         ],
@@ -48,6 +69,7 @@ Ext.define('MyApp.view.UserScoreGuageChart', {
 
     onSpacefillingPainted: function(element, eOpts) {
         // wanted to set series.setConfig( { sectors : [ ] }; to show zones.
+
     }
 
 });

@@ -1,5 +1,6 @@
 package com.softrism.tortlets.web;
 
+import com.softrism.tortlets.TortletsConstants;
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.domain.Tortoise;
@@ -179,21 +180,21 @@ public class TortletController {
             Tortoise tortoise = tortlet.getTortoise();
             int tortoiseCompletedCount = tortoise.getTortletsCompletedCount() + 1;
             int tortoiseCreatedCount = tortoise.getTortletsCreatedCount();
-            int tortoiseScore = (tortoiseCompletedCount * 850) / tortoiseCreatedCount;
+            int tortoiseScore = (tortoiseCompletedCount * TortletsConstants.MAX_SCORE_VALUE) / tortoiseCreatedCount;
             tortoise.setTortletsCompletedCount(tortoiseCompletedCount);
             tortoise.setLatestTortoiseScore(tortoiseScore);
             tortlet.setTortoise(tortoise);
             Dream dream = tortoise.getDream();
             int dreamCompletedCount = dream.getTortletsCompletedCount() + 1;
             int dreamCreatedCount = dream.getTortletsCreatedCount();
-            int dreamScore = (dreamCompletedCount * 850) / dreamCreatedCount;
+            int dreamScore = (dreamCompletedCount * TortletsConstants.MAX_SCORE_VALUE) / dreamCreatedCount;
             dream.setTortletsCompletedCount(dreamCompletedCount);
             dream.setLatestDreamScore(dreamScore);
             tortoise.setDream(dream);
             Tuser tuser = dream.getTuser();
             int tuserCompletedCount = tuser.getTortletsCompletedCount() + 1;
             int tuserCreatedCount = tuser.getTortletsCreatedCount();
-            int tuserScore = (tuserCompletedCount * 850) / tuserCreatedCount;
+            int tuserScore = (tuserCompletedCount * TortletsConstants.MAX_SCORE_VALUE) / tuserCreatedCount;
             tuser.setTortletsCompletedCount(tuserCompletedCount);
             tuser.setLatestDreamScore(tuserScore);
             dream.setTuser(tuser);

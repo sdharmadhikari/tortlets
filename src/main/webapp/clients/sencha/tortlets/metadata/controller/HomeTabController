@@ -91,68 +91,6 @@
             "designerId": "1acb295d-6f6b-429c-9e32-2ae72f6c3aef"
         },
         {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onTortletsDetailsBackButtonTap",
-                "implHandler": [
-                    "this.getHomeTabCardPanel().animateActiveItem(0, { type: 'slide', direction : 'right'});"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='tortletsDetailsBackButton']"
-            },
-            "designerId": "f9954aa4-486a-4ba8-bbe9-7f0df46d7c9e"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onTortletDetailsSaveButtonTap",
-                "implHandler": [
-                    "alert('Current this method is not being used, as not showing tortlet form');\r",
-                    "var tortletDetailsForm = this.getTortletDetails();\r",
-                    "console.log('inside onSaveButton record id' + tortletDetailsForm.getRecord());\r",
-                    "\r",
-                    "/// Populate record from form. populateTortletRecordFromForm()\r",
-                    "var record = tortletDetailsForm.getRecord();\r",
-                    "\r",
-                    "tortletDetailsForm.updateRecord(record);\r",
-                    "operation = {};\r",
-                    "operation.success = this.oldTortletSaveSuccess;\r",
-                    "operation.failure = this.oldTortletSaveFailure;\r",
-                    "\r",
-                    "if(record.dirty){\r",
-                    "\r",
-                    "    if(record.get('completed') === true){\r",
-                    "\r",
-                    "        eitherOneStore = Ext.getStore(record.sourceStoreId);\r",
-                    "        eitherOneStore.removedRecordIndex = eitherOneStore.indexOf(record);\r",
-                    "        eitherOneStore.remove(record); \r",
-                    "\r",
-                    "    }\r",
-                    "\r",
-                    "    record.save(operation);\r",
-                    "}\r",
-                    "\r",
-                    "this.getHomeTabCardPanel().\r",
-                    "animateActiveItem(0,{type : 'slide', direction : 'right'});"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='tortletDetailsSaveButton']"
-            },
-            "designerId": "02d9775a-ead2-4cad-9120-9ef137056185"
-        },
-        {
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -179,6 +117,8 @@
                     "var store = Ext.getStore('todaysTortletsStore');\r",
                     "var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();\r",
                     "var todaysTortletListPanel = this.getTodaysTortletListPanel();\r",
+                    "var utility = MyApp.app.getController('UtilityController');\r",
+                    "var storeLoadCallback = utility.storeLoadCallback;\r",
                     "\r",
                     "var url = store.getProxy().getUrl();\r",
                     "var d = new Date();\r",
@@ -189,7 +129,7 @@
                     "\r",
                     "todayUrl = url + '&createdOn=' + today;\r",
                     "store.getProxy().setUrl(todayUrl);\r",
-                    "store.load();\r",
+                    "store.load(storeLoadCallback);\r",
                     "store.getProxy().setUrl(url);\r",
                     "\r",
                     "tortletsListsContainerPanel.setActiveItem(todaysTortletListPanel);\r",
@@ -308,24 +248,6 @@
                 ]
             },
             "designerId": "f157240a-5de6-4a3c-8bee-d2c45a5ffe2d"
-        },
-        {
-            "type": "fixedfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "init",
-                "designer|params": [
-                    "application"
-                ],
-                "implHandler": [
-                    "console.log('initing HomeTabController');"
-                ]
-            },
-            "designerId": "11ac7812-b9f5-48df-98e8-cbd3ec699389"
         },
         {
             "type": "basicfunction",

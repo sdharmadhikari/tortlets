@@ -43,9 +43,9 @@
                     "\r",
                     "{%\r",
                     "\r",
-                    "var maxScore = 850;\r",
+                    "var maxScore = 100;\r",
                     "var done = '';\r",
-                    "for(i=85; i < maxScore+1; i=i+85) {    \r",
+                    "for(i=1; i < maxScore+1; i=i+10) {    \r",
                     "\tif(i <= values.latestDreamScore) {\r",
                     "%}\r",
                     "        ...\r",
@@ -65,6 +65,13 @@
                     "}\r",
                     "%}\r",
                     "<img src=\"static/images/race-finish-small.png\"></img>\r",
+                    "{%\r",
+                    "if(values.latestDreamScore >= 100) {\r",
+                    "%}\r",
+                    "\t<img src=\"static/images/tortoise_smaller.gif\"></img>\r",
+                    "{%\r",
+                    "}\r",
+                    "%}\r",
                     "<span class=\"smallFont\">(Score:{latestDreamScore})</span>\r",
                     "\r",
                     ""
@@ -82,6 +89,22 @@
                     "type": "string"
                 }
             ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListRefresh",
+                "implHandler": [
+                    "console.log(this);"
+                ],
+                "name": "refresh"
+            },
+            "designerId": "4155d541-c16b-4995-aed0-53db5bd13053"
         }
     ]
 }

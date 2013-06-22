@@ -8,7 +8,7 @@
     "userConfig": {
         "designer|userClassName": "UserScoreTabController"
     },
-    "designerId": "fb82b0dc-98c1-4cf9-942b-88944e268c27",
+    "designerId": "4adb5b1a-4440-495e-9df1-40af054479bd",
     "cn": [
         {
             "type": "controllerref",
@@ -21,7 +21,7 @@
                 "ref": "scoreTabCardPanel",
                 "selector": "scoreTabCardPanel"
             },
-            "designerId": "28f5ba72-1488-42a3-b001-d7acba989096"
+            "designerId": "d3d07d58-abbb-462d-a8bb-08e2ba43e2bb"
         },
         {
             "type": "controllerref",
@@ -36,7 +36,7 @@
                 "selector": "userScoreGuageChart",
                 "xtype": "userScoreGuageChart"
             },
-            "designerId": "bf661a42-05e8-4177-a009-2c269727e683"
+            "designerId": "215014e8-fd42-4c27-bfab-6de54d3fb0bc"
         }
     ]
 }

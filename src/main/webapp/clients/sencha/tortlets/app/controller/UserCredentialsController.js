@@ -42,24 +42,24 @@ Ext.define('MyApp.controller.UserCredentialsController', {
     },
 
     onRegistrationCardPanelItemIdSignUpSuccess: function(userObject) {
-        this.populateUserInfo(userObject);
-        this.populateUserResources(userObject);
-
         var landingCardPanel = this.getLandingCardPanel();
         var mainTabPanel = this.getMainTabPanel();
+
+        this.populateUserInfo(userObject);
+        this.populateUserResources(userObject);
 
         landingCardPanel.animateActiveItem(mainTabPanel, { type: 'slide'});
     },
 
     onLoginFormItemIdSignUpRequested: function(formpanel) {
-
         var landingCardPanel = this.getLandingCardPanel();
         var registrationCardPanel = this.getRegistrationCardPanel();
         var signOutButton = registrationCardPanel.down('#signOutButton');
-        signOutButton.hide();
         var quickSignupForm = registrationCardPanel.down('#whatsYourNameForm');
         var userid = quickSignupForm.down('#firstNameAsUserId');
         var wordYouLike = quickSignupForm.down('#wordYouLike');
+
+        signOutButton.hide();
         userid.setValue('');
         wordYouLike.setValue('');
 
@@ -68,12 +68,13 @@ Ext.define('MyApp.controller.UserCredentialsController', {
     },
 
     onLoginFormItemIdSignInSuccess: function(userObject) {
-        this.populateUserInfo(userObject);
-        this.populateUserResources(userObject);
-
         var landingCardPanel = this.getLandingCardPanel();
         var mainTabPanel = this.getMainTabPanel();
         var homeTabCardPanel = this.getHomeTabCardPanel();
+
+        this.populateUserInfo(userObject);
+        this.populateUserResources(userObject);
+
         mainTabPanel.setActiveItem(homeTabCardPanel);
         landingCardPanel.animateActiveItem(mainTabPanel, { type: 'slide'});
     },
@@ -83,12 +84,13 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var registrationCardPanel = this.getRegistrationCardPanel();
         var registrationPage1 = this.getRegistrationPage1();
         var signOutButton = registrationCardPanel.down('#signOutButton');
+        var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
+
         signOutButton.show();
         registrationPage1.getScrollable().getScroller().scrollToTop();
 
         registrationCardPanel.setActiveItem(registrationPage1);
 
-        var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
         MyApp.model.Tuser.load(userObject.id, {
 
             success : function(record, operation) { 
@@ -106,12 +108,14 @@ Ext.define('MyApp.controller.UserCredentialsController', {
     },
 
     onRegistrationCardPanelItemIdSignOut: function(panel) {
-
-        sessionStorage.setItem('userInfo', null);
         var landingcardPanel = this.getLandingCardPanel();
-        landingcardPanel.setActiveItem(0);
         var useridField = landingcardPanel.down('#userIdItemId');
         var lastUserId = localStorage.getItem('userid');
+
+        sessionStorage.setItem('userInfo', null);
+
+        landingcardPanel.setActiveItem(0);
+
         useridField.setValue(lastUserId);
 
     },
