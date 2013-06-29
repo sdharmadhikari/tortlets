@@ -69,6 +69,84 @@
                 "name": "painted"
             },
             "designerId": "e657dbd5-5f58-492a-a979-38d55bd9b7b1"
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "pullRefreshText": "Pull to refresh, updated once a day"
+            },
+            "designerId": "514755ba-f8af-463f-bf11-2829aca15696",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPullRefreshPainted",
+                        "implHandler": [
+                            "alert('painted');"
+                        ],
+                        "name": "painted"
+                    },
+                    "designerId": "fe066c3c-e1b1-48ad-909a-11bf464cc346"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPullRefreshLatestfetched",
+                        "implHandler": [
+                            "alert('asdf');"
+                        ],
+                        "name": "latestfetched"
+                    },
+                    "designerId": "f4c33b23-f156-4dc1-939e-8fdeb35e1d0b"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPullRefreshShow",
+                        "implHandler": [
+                            "alert('show');"
+                        ],
+                        "name": "show"
+                    },
+                    "designerId": "58e0c0c3-9942-4e8f-8c8b-9e542edae2e9"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPullRefreshUpdatedata",
+                        "implHandler": [
+                            "alert('uopdated');"
+                        ],
+                        "name": "updatedata"
+                    },
+                    "designerId": "36011739-ad1a-4485-b5f9-7a01af074d5a"
+                }
+            ]
         }
     ]
 }

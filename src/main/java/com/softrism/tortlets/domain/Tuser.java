@@ -138,11 +138,13 @@ public class Tuser {
         return tuser;
     }
 
+    @Transactional
     public static void processTortoise(Tortoise tortoise){
         DateTime jdTime = new DateTime();
         int dayOfWeek = jdTime.getDayOfWeek();
         boolean shouldCreate = false;
-        Dream dream = tortoise.getDream();
+        Dream dream = Dream.findDream(tortoise.getDream().getId()); // Have to do this again because if calling from
+        // TortoiseController, dream is detached. (even if I get tortoise persisted from using findTortoise !
         Tuser tuser = dream.getTuser();
         boolean tortoiseStarted = tortoise.getStartDate() == null ? true : jdTime.isAfter(tortoise.getStartDate().getTime());
         DateMidnight tortoiseEndMidnight = tortoise.getEndDate() == null ? new DateMidnight() : new DateMidnight(tortoise.getEndDate());

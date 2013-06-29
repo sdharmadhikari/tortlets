@@ -32,6 +32,20 @@ Ext.define('MyApp.view.TortletsList', {
                 fn: 'onListPainted',
                 event: 'painted'
             }
+        ],
+        plugins: [
+            {
+                pullRefreshText: 'Pull to refresh, updated once a day',
+                type: 'pullrefresh',
+                listeners: [
+                    {
+                        fn: function(element, eOpts) {
+                            alert('painted');
+                        },
+                        event: 'painted'
+                    }
+                ]
+            }
         ]
     },
 
@@ -45,6 +59,18 @@ Ext.define('MyApp.view.TortletsList', {
                 tortletList.setEmptyText('Wow ! Nothing pending. You are really on top of everything !');
             }   
         }, this);
+    },
+
+    onPullRefreshLatestfetched: function(eOpts) {
+        alert('asdf');
+    },
+
+    onPullRefreshShow: function(component, eOpts) {
+        alert('show');
+    },
+
+    onPullRefreshUpdatedata: function(component, newData, eOpts) {
+        alert('uopdated');
     }
 
 });

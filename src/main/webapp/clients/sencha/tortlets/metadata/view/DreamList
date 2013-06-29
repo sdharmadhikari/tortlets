@@ -89,22 +89,6 @@
                     "type": "string"
                 }
             ]
-        },
-        {
-            "type": "basiceventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onListRefresh",
-                "implHandler": [
-                    "console.log(this);"
-                ],
-                "name": "refresh"
-            },
-            "designerId": "4155d541-c16b-4995-aed0-53db5bd13053"
         }
     ]
 }

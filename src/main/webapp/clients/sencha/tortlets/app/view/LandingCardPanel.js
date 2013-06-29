@@ -20,7 +20,8 @@ Ext.define('MyApp.view.LandingCardPanel', {
     requires: [
         'MyApp.view.loginmodule',
         'MyApp.view.signupmodule',
-        'MyApp.view.MainTabPanel'
+        'MyApp.view.MainTabPanel',
+        'MyApp.view.HomePageHelpModal'
     ],
 
     config: {
@@ -37,6 +38,9 @@ Ext.define('MyApp.view.LandingCardPanel', {
             },
             {
                 xtype: 'mainTabPanel'
+            },
+            {
+                xtype: 'homePageHelpModal'
             }
         ]
     }

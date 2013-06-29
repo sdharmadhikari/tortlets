@@ -23,7 +23,8 @@ Ext.define('MyApp.controller.HomeTabController', {
             tortletsList: 'tortletsList',
             todaysTortletListPanel: 'todaysTortletListPanel',
             tortletListPanel: 'tortletListPanel',
-            tortletsListsContainerPanel: 'tortletsListsContainerPanel'
+            tortletsListsContainerPanel: 'tortletsListsContainerPanel',
+            homePageHelpModal: 'homePageHelpModal'
         },
 
         control: {
@@ -106,13 +107,9 @@ Ext.define('MyApp.controller.HomeTabController', {
         var storeLoadCallback = utility.storeLoadCallback;
 
         var url = store.getProxy().getUrl();
-        var d = new Date();
-        var curr_date = d.getDate();
-        var curr_month = d.getMonth() + 1; //Months are zero based
-        var curr_year = d.getFullYear();
-        var today = (curr_month  + "/" + curr_date + "/" + curr_year);
+        var today = MyApp.app.getToday();
 
-        todayUrl = url + '&createdOn=' + today;
+        var todayUrl = url + '&createdOn=' + today;
         store.getProxy().setUrl(todayUrl);
         store.load(storeLoadCallback);
         store.getProxy().setUrl(url);
@@ -137,7 +134,52 @@ Ext.define('MyApp.controller.HomeTabController', {
     },
 
     onHomePageHelpButtonTap: function(button, e, eOpts) {
-        Ext.Msg.alert('','Pending tortlets older than 7 days get permanently deleted. <br/> You have to complete it before that to keep your score as high as possible', Ext.emptyFn);
+
+
+        /*
+        This is how I wanted to implement. But for this I need to move
+        the panel inside landingCardPanel and complications start.
+
+        var homePageHelpModal = this.getHomePageHelpModal();
+        homePageHelpModal.show();
+
+        */
+
+        var homePageHelpModal = this.getHomePageHelpModal();
+
+        var myMsgObj = Ext.create('Ext.MessageBox');
+        /*
+        var myMsgObj = Ext.create('Ext.MessageBox', {
+        layout: {
+        type: 'hbox',
+        align: 'middle'
+        },
+        items: [
+        {
+        xtype: 'panel',
+        flex: 1,
+        style: 'background-color: red;'
+        },
+        {
+        xtype: 'panel',
+        flex: 2,
+        style: 'background-color: green'
+        }
+        ]
+        });
+
+
+        */
+
+        //var layout = { align : 'start'};
+        //myMsgObj.setLayout(layout);
+
+        //myMsgObj.show();
+        myMsgObj.setCls('smallFont');
+        myMsgObj.alert('','Pending tortlets older than 7 days get permanently deleted. <br/> You have to complete it before that to keep your score as high as possible', Ext.emptyFn);
+
+        //myMsgObj.destroy ??
+
     },
 
     oldTortletSaveSuccess: function(savedEntity, operation) {

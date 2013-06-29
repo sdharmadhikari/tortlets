@@ -69,7 +69,12 @@ Ext.define('MyApp.view.MainTabPanel', {
             var tortletsStore = Ext.getStore('incompleteTortletsStore');
             tortletsStore.load(storeLoadCallBack);
             var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
+            var todayOrgUrl = todaysTortletsStore.getProxy().getUrl();
+            var today = MyApp.app.getToday();
+            var todayUrl = todayOrgUrl + '&createdOn=' + today;
+            todaysTortletsStore.getProxy().setUrl(todayUrl);
             todaysTortletsStore.load(storeLoadCallBack);
+            todaysTortletsStore.getProxy().setUrl(todayOrgUrl);
 
         }else if(value.xtype === 'scoreTabCardPanel') {
 

@@ -62,17 +62,7 @@ Ext.define('MyApp.view.DreamList', {
             '<span class="smallFont">(Score:{latestDreamScore})</span>',
             '',
             ''
-        ],
-        listeners: [
-            {
-                fn: 'onListRefresh',
-                event: 'refresh'
-            }
         ]
-    },
-
-    onListRefresh: function(dataview, eOpts) {
-        console.log(this);
     }
 
 });

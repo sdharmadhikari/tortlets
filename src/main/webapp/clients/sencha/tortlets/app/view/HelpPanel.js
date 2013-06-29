@@ -18,9 +18,45 @@ Ext.define('MyApp.view.HelpPanel', {
     alias: 'widget.helpPanel',
 
     config: {
-        html: 'You keep on self-declaring your dreams. I want to do this, I want to do that, where are you now ? Do you want win like TORToise against that hare ? Use TORTlets and realize your dreams !  <br/> Did you really try as you promised yourself ? You said, I will do this every day . You said, I would do it at least once a week. Did you really do it ? <br/> What inspires you ? Calvin Coolidge words “Nothing in this world can take a place of persistence, talent will not ! Persistence and determination alone are omnipotent “ Or is hare-tortoise story is enough for you ?  <br/> TORTlets lets you find out how much you just talk and how much you really on it !  <br/> <ul> <li>Declare your dream to yourself.</li> <li>Create a TORToise to win for your dream.</li> <li>The app will automatically generate TORTlets and will be ready for you every morning.</li> <li>When you are done with TORTlet, mark it complete.</li> <li>If you miss TORTlet, you just have 7 days to catch up. Or miss it.</li> <li>If you have too many TORTlets pending, sacrifice a weekend and complete it. If you have that camping over weekend, take a leave. Don’t sleep like hare ! </li> <li>The app will show you how much you were tortoise or hare ! </li> <br/> Whether you are college student, home-maker mom or professional. You have dreams, Do It !  <br/> Want to share your dream with close friend ? Want to get a spank from a friend for not doing it ? Send email to need-friends-help@softrism.com ',
         styleHtmlContent: true,
         scrollable: 'vertical',
+        data: {
+            appName: 'Tortlets',
+            allowedDelayDays: 7,
+            smallTseImg: '<img src="static/images/tortoise_smaller.gif"></img>'
+        },
+        tpl: [
+            '{appName} helps you declare your dream or goal to yourself, ',
+            'It lets you create weekly recurring activities (Tortoises) and ',
+            'based on that creates "Tortlets" everyday. ',
+            '<br/>',
+            '<br/>',
+            'It keeps record of how much you are doing and gives you',
+            'score of each of your dream and you, as a dreamer. ',
+            '<br/>',
+            '<br/>',
+            '{smallTseImg} Declare your dream/goal to yourself using Home tab and "Go" Button',
+            '<br/>',
+            '{smallTseImg} Create weekly “Tortoises”(recurring activities) for your dream',
+            '<br/>',
+            '{smallTseImg}The app will automatically generate Tortlets (Tortoise + Tasklet) ',
+            'and will be ready for you every morning to work on that day',
+            '<br/>',
+            '{smallTseImg} Mark those Tortlets which you complete. ',
+            'Just tap on the tortlets list item',
+            '<br/>',
+            '{smallTseImg} If you miss Tortlet to finish that day, you do have default {allowedDelayDays} ',
+            'days to catch up. You will see pending list using "Pending" button ',
+            'on Home tab',
+            '<br/>',
+            '{smallTseImg} If you dont finish Tortlets from you pending list, ',
+            'those will be deleted automatically after {allowedDelayDays} days',
+            '<br/>',
+            '{smallTseImg} As you finish your Tortlets, your score for each dream keeps on increasing.',
+            ' Use Dreams tab to see your dream scores.',
+            '<br/>',
+            '{smallTseImg} Use "Your Score" tab to see your "Tortlets-Score"'
+        ],
         items: [
             {
                 xtype: 'titlebar',

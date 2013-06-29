@@ -154,20 +154,19 @@ Ext.define('MyApp.controller.UserCredentialsController', {
             host = window.location.host;
         }
 
-        var d = new Date();
-        var curr_date = d.getDate();
-        var curr_month = d.getMonth() + 1; //Months are zero based
-        var curr_year = d.getFullYear();
-        var today = (curr_month  + "/" + curr_date + "/" + curr_year);
+
+        var today = MyApp.app.getToday();
 
         //todaysTortletsStore
         var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
         var proxy = todaysTortletsStore.getProxy();
-        proxy.setUrl('http://' + host + '/tortlets?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid + '&createdOn=' + today);
+        var todayOrgUrl = 'http://' + host + '/tortlets?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid ;
+        proxy.setUrl(todayOrgUrl + '&createdOn=' + today);
         var headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
 
         todaysTortletsStore.load(storeLoadCallback);
+        proxy.setUrl(todayOrgUrl);
 
         //incompleteTortletsStore
         var incompleteTortletsStore = Ext.getStore('incompleteTortletsStore');

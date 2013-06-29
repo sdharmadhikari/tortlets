@@ -190,7 +190,14 @@ Ext.define('MyApp.view.signupmodule', {
                 items: [
                     {
                         xtype: 'label',
-                        html: '<h1>Quick Sign Up Done !</h1> <br/> <p style="font-size:small">You can now use following auto-generated credentials on any device. This screen is shown only once ! </p>',
+                        data: {
+                            appName: 'Tortlets'
+                        },
+                        tpl: [
+                            '<h1>Snap Sign Up Done !</h1> <br/> <p style="font-size:small">',
+                            'You can now use following auto-generated credentials on any device. ',
+                            'This screen is shown only once ! </p>'
+                        ],
                         ui: 'light'
                     },
                     {
@@ -234,7 +241,14 @@ Ext.define('MyApp.view.signupmodule', {
                     },
                     {
                         xtype: 'label',
-                        html: '<p style="font-size:small"> Click here, If you want to edit credentials and continue to full-fledge secure registration. </p>'
+                        data: {
+                            appName: 'Tortlets'
+                        },
+                        html: '<p style="font-size:small"> Click here, If you want to edit credentials and continue to full-fledge secure registration. </p>',
+                        tpl: [
+                            '<p style="font-size:small"> ',
+                            '    Click here, If you want to edit credentials and continue to full-fledge secure registration. </p>'
+                        ]
                     },
                     {
                         xtype: 'fieldset',

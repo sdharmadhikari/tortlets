@@ -321,6 +321,14 @@
                 "app/controller/UserScoreTabController.js"
             ],
             "className": "UserScoreTabController"
+        },
+        "9ec7c3d5-c386-4db0-af50-aa3c1b0cd6c6": {
+            "paths": [
+                "metadata/view/HomePageHelpModal",
+                "app/view/override/HomePageHelpModal.js",
+                "app/view/HomePageHelpModal.js"
+            ],
+            "className": "HomePageHelpModal"
         }
     },
     "viewOrderMap": {
@@ -346,7 +354,8 @@
             "c717694e-2e8e-4855-ba93-2500aa9367bf",
             "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
             "95d937cc-2252-4abb-b179-b99c259bb007",
-            "0da20323-db08-47ce-9741-64ded49ccb84"
+            "0da20323-db08-47ce-9741-64ded49ccb84",
+            "9ec7c3d5-c386-4db0-af50-aa3c1b0cd6c6"
         ],
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",

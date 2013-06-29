@@ -121,13 +121,9 @@
                     "var storeLoadCallback = utility.storeLoadCallback;\r",
                     "\r",
                     "var url = store.getProxy().getUrl();\r",
-                    "var d = new Date();\r",
-                    "var curr_date = d.getDate();\r",
-                    "var curr_month = d.getMonth() + 1; //Months are zero based\r",
-                    "var curr_year = d.getFullYear();\r",
-                    "var today = (curr_month  + \"/\" + curr_date + \"/\" + curr_year);\r",
+                    "var today = MyApp.app.getToday();\r",
                     "\r",
-                    "todayUrl = url + '&createdOn=' + today;\r",
+                    "var todayUrl = url + '&createdOn=' + today;\r",
                     "store.getProxy().setUrl(todayUrl);\r",
                     "store.load(storeLoadCallback);\r",
                     "store.getProxy().setUrl(url);\r",
@@ -325,13 +321,71 @@
             "userConfig": {
                 "fn": "onHomePageHelpButtonTap",
                 "implHandler": [
-                    "Ext.Msg.alert('','Pending tortlets older than 7 days get permanently deleted. <br/> You have to complete it before that to keep your score as high as possible', Ext.emptyFn);"
+                    "\r",
+                    "\r",
+                    "/*\r",
+                    "This is how I wanted to implement. But for this I need to move\r",
+                    "the panel inside landingCardPanel and complications start.\r",
+                    "\r",
+                    "var homePageHelpModal = this.getHomePageHelpModal();\r",
+                    "homePageHelpModal.show();\r",
+                    "\r",
+                    "*/\r",
+                    "\r",
+                    "var homePageHelpModal = this.getHomePageHelpModal();\r",
+                    "\r",
+                    "var myMsgObj = Ext.create('Ext.MessageBox');\r",
+                    "/*\r",
+                    "var myMsgObj = Ext.create('Ext.MessageBox', {\r",
+                    "    layout: {\r",
+                    "        type: 'hbox',\r",
+                    "        align: 'middle'\r",
+                    "    },\r",
+                    "    items: [\r",
+                    "        {\r",
+                    "            xtype: 'panel',\r",
+                    "            flex: 1,\r",
+                    "            style: 'background-color: red;'\r",
+                    "        },\r",
+                    "        {\r",
+                    "            xtype: 'panel',\r",
+                    "            flex: 2,\r",
+                    "            style: 'background-color: green'\r",
+                    "        }\r",
+                    "    ]\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "*/\r",
+                    "\r",
+                    "//var layout = { align : 'start'};\r",
+                    "//myMsgObj.setLayout(layout);\r",
+                    "\r",
+                    "//myMsgObj.show();\r",
+                    "myMsgObj.setCls('smallFont');\r",
+                    "myMsgObj.alert('','Pending tortlets older than 7 days get permanently deleted. <br/> You have to complete it before that to keep your score as high as possible', Ext.emptyFn);\r",
+                    "\r",
+                    "//myMsgObj.destroy ??\r",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
                 "designer|controlQuery": "button[name='homePageHelpButton']"
             },
             "designerId": "f35dd244-b963-4557-908a-175112442347"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "homePageHelpModal",
+                "selector": "homePageHelpModal"
+            },
+            "designerId": "2388173c-2cbf-4cb9-9728-c4b8af0a320e"
         }
     ]
 }

@@ -331,11 +331,36 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<h1>Quick Sign Up Done !</h1> <br/> <p style=\"font-size:small\">You can now use following auto-generated credentials on any device. This screen is shown only once ! </p>",
+                        "data": [
+                            "{\r",
+                            "    \r",
+                            "    appName : 'Tortlets'   \r",
+                            "}"
+                        ],
+                        "html": null,
                         "ui": "light",
                         "designer|displayName": "quickSignUpDoneLabel"
                     },
-                    "designerId": "d25802f8-7708-46d5-ab4d-7dcc2e8d1002"
+                    "designerId": "d25802f8-7708-46d5-ab4d-7dcc2e8d1002",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<h1>Snap Sign Up Done !</h1> <br/> <p style=\"font-size:small\">\r",
+                                    "You can now use following auto-generated credentials on any device. \r",
+                                    "This screen is shown only once ! </p>"
+                                ],
+                                "designer|displayName": "tpl"
+                            },
+                            "designerId": "80af568c-f5b3-46eb-8146-6f30cdf2a5c7"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.form.FieldSet",
@@ -443,10 +468,35 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "data": [
+                            "{ \r",
+                            "    \r",
+                            "    appName : 'Tortlets'\r",
+                            "    \r",
+                            "}"
+                        ],
                         "html": "<p style=\"font-size:small\"> Click here, If you want to edit credentials and continue to full-fledge secure registration. </p>",
                         "designer|displayName": "continueSecureRegLabel"
                     },
-                    "designerId": "6bfdee4c-3b22-486f-9994-b2e84ce79e96"
+                    "designerId": "6bfdee4c-3b22-486f-9994-b2e84ce79e96",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<p style=\"font-size:small\"> \r",
+                                    "    Click here, If you want to edit credentials and continue to full-fledge secure registration. </p>"
+                                ],
+                                "designer|displayName": "tpl"
+                            },
+                            "designerId": "69ec7a6e-82ab-434a-9f30-d31b413eccc3"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.form.FieldSet",

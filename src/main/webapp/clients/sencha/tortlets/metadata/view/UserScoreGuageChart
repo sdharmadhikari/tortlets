@@ -29,7 +29,7 @@
                 "title": null,
                 "field": null,
                 "needle": true,
-                "needleWidth": null,
+                "needleWidth": 10,
                 "sectors": [
                     "[\r",
                     "    {end : 25, label : 'Forgot Dreams?', color : 'red'},\r",
@@ -52,23 +52,6 @@
                     "type": "string"
                 }
             ]
-        },
-        {
-            "type": "basiceventbinding",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "onSpacefillingPainted",
-                "implHandler": [
-                    "// wanted to set series.setConfig( { sectors : [ ] }; to show zones.\r",
-                    ""
-                ],
-                "name": "painted"
-            },
-            "designerId": "c41d46cc-04fc-4441-92b5-cfa32c11196b"
         }
     ]
 }

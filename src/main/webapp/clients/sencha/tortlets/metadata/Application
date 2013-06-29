@@ -41,7 +41,8 @@
             "TodaysTortletListPanel",
             "TortletListPanel",
             "TortletsListsContainerPanel",
-            "UserScoreGuageChart"
+            "UserScoreGuageChart",
+            "HomePageHelpModal"
         ],
         "controllers": [
             "HomeTabController",
@@ -113,6 +114,26 @@
                 "layout": "fit"
             },
             "designerId": "596d0014-86e2-4f9e-800c-9b3c96b970d7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getToday",
+                "implHandler": [
+                    "var d = new Date();\r",
+                    "var curr_date = d.getDate();\r",
+                    "var curr_month = d.getMonth() + 1; //Months are zero based\r",
+                    "var curr_year = d.getFullYear();\r",
+                    "var today = (curr_month  + \"/\" + curr_date + \"/\" + curr_year);\r",
+                    "return today;"
+                ]
+            },
+            "designerId": "c51f9ceb-66d4-4c8c-a7f1-80d84df64303"
         }
     ]
 }

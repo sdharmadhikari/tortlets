@@ -30,9 +30,9 @@ public aspect TortoiseControllerAspect {
             return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
         }
         ResponseEntity responseEntity = (ResponseEntity)proceed(jsonTortoiseString);
-        Tortoise tortoisePersisted = Tortoise.fromJsonToTortoise((String)responseEntity.getBody());
-        tortoisePersisted = Tortoise.findTortoise(tortoisePersisted.getId());
-        Tuser.processTortoise(tortoisePersisted);
+        //Tortoise tortoisePersisted = Tortoise.fromJsonToTortoise((String)responseEntity.getBody());
+        //tortoisePersisted = Tortoise.findTortoise(tortoisePersisted.getId());
+        //Tuser.processTortoise(tortoisePersisted);
         return responseEntity;
 
 

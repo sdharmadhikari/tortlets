@@ -59,7 +59,8 @@ Ext.application({
         'TodaysTortletListPanel',
         'TortletListPanel',
         'TortletsListsContainerPanel',
-        'UserScoreGuageChart'
+        'UserScoreGuageChart',
+        'HomePageHelpModal'
     ],
     controllers: [
         'HomeTabController',
@@ -98,6 +99,15 @@ Ext.application({
             useridField.setValue(lastUserId);
         }
 
+    },
+
+    getToday: function() {
+        var d = new Date();
+        var curr_date = d.getDate();
+        var curr_month = d.getMonth() + 1; //Months are zero based
+        var curr_year = d.getFullYear();
+        var today = (curr_month  + "/" + curr_date + "/" + curr_year);
+        return today;
     }
 
 });

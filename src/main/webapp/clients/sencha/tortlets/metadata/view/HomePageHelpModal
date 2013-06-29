@@ -1,0 +1,21 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "hidden": true,
+        "html": "This is help",
+        "designer|userClassName": "HomePageHelpModal",
+        "designer|userAlias": "homePageHelpModal",
+        "masked": false,
+        "modal": false
+    },
+    "configAlternates": {
+        "masked": "boolean"
+    },
+    "designerId": "9ec7c3d5-c386-4db0-af50-aa3c1b0cd6c6"
+}

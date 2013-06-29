@@ -6,8 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
-        "data": null,
-        "html": "You keep on self-declaring your dreams. I want to do this, I want to do that, where are you now ? Do you want win like TORToise against that hare ? Use TORTlets and realize your dreams !  <br/> Did you really try as you promised yourself ? You said, I will do this every day . You said, I would do it at least once a week. Did you really do it ? <br/> What inspires you ? Calvin Coolidge words “Nothing in this world can take a place of persistence, talent will not ! Persistence and determination alone are omnipotent “ Or is hare-tortoise story is enough for you ?  <br/> TORTlets lets you find out how much you just talk and how much you really on it !  <br/> <ul> <li>Declare your dream to yourself.</li> <li>Create a TORToise to win for your dream.</li> <li>The app will automatically generate TORTlets and will be ready for you every morning.</li> <li>When you are done with TORTlet, mark it complete.</li> <li>If you miss TORTlet, you just have 7 days to catch up. Or miss it.</li> <li>If you have too many TORTlets pending, sacrifice a weekend and complete it. If you have that camping over weekend, take a leave. Don’t sleep like hare ! </li> <li>The app will show you how much you were tortoise or hare ! </li> <br/> Whether you are college student, home-maker mom or professional. You have dreams, Do It !  <br/> Want to share your dream with close friend ? Want to get a spank from a friend for not doing it ? Send email to need-friends-help@softrism.com ",
+        "data": [
+            "{\r",
+            "    \r",
+            "    appName : 'Tortlets',\r",
+            "    allowedDelayDays : 7,\r",
+            "    smallTseImg : '<img src=\"static/images/tortoise_smaller.gif\"></img>'\r",
+            "}"
+        ],
+        "html": null,
         "styleHtmlContent": true,
         "designer|userClassName": "HelpPanel",
         "designer|userAlias": "helpPanel",
@@ -27,6 +34,50 @@
                 "title": "What Are Tortlets"
             },
             "designerId": "04f4dd2a-76f8-4e70-8351-598b6fcff7e1"
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "{appName} helps you declare your dream or goal to yourself, \r",
+                    "It lets you create weekly recurring activities (Tortoises) and \r",
+                    "based on that creates \"Tortlets\" everyday. \r",
+                    "<br/>\r",
+                    "<br/>\r",
+                    "It keeps record of how much you are doing and gives you\r",
+                    "score of each of your dream and you, as a dreamer. \r",
+                    "<br/>\r",
+                    "<br/>\r",
+                    "{smallTseImg} Declare your dream/goal to yourself using Home tab and \"Go\" Button\r",
+                    "<br/>\r",
+                    "{smallTseImg} Create weekly “Tortoises”(recurring activities) for your dream\r",
+                    "<br/>\r",
+                    "{smallTseImg}The app will automatically generate Tortlets (Tortoise + Tasklet) \r",
+                    "and will be ready for you every morning to work on that day\r",
+                    "<br/>\r",
+                    "{smallTseImg} Mark those Tortlets which you complete. \r",
+                    "Just tap on the tortlets list item\r",
+                    "<br/>\r",
+                    "{smallTseImg} If you miss Tortlet to finish that day, you do have default {allowedDelayDays} \r",
+                    "days to catch up. You will see pending list using \"Pending\" button \r",
+                    "on Home tab\r",
+                    "<br/>\r",
+                    "{smallTseImg} If you dont finish Tortlets from you pending list, \r",
+                    "those will be deleted automatically after {allowedDelayDays} days\r",
+                    "<br/>\r",
+                    "{smallTseImg} As you finish your Tortlets, your score for each dream keeps on increasing.\r",
+                    " Use Dreams tab to see your dream scores.\r",
+                    "<br/>\r",
+                    "{smallTseImg} Use \"Your Score\" tab to see your \"Tortlets-Score\""
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "fb062017-9095-4908-80f1-32dc18a828ea"
         }
     ]
 }
