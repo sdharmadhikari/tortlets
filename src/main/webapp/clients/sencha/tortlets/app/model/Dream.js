@@ -16,6 +16,10 @@
 Ext.define('MyApp.model.Dream', {
     extend: 'Ext.data.Model',
 
+    requires: [
+        'Ext.data.*',
+        'Ext.data.*.*'
+    ],
     uses: [
         'MyApp.model.Tuser'
     ],
@@ -78,15 +82,15 @@ Ext.define('MyApp.model.Dream', {
                 type: 'json'
             }
         },
-        belongsTo: {
-            model: 'MyApp.model.Tuser',
-            foreignKey: 'tuser'
-        },
         validations: [
             {
                 type: 'presence',
                 field: 'title'
             }
-        ]
+        ],
+        belongsTo: {
+            model: 'MyApp.model.Tuser',
+            foreignKey: 'tuser'
+        }
     }
 });

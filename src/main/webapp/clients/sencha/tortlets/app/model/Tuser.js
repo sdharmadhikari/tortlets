@@ -16,6 +16,10 @@
 Ext.define('MyApp.model.Tuser', {
     extend: 'Ext.data.Model',
 
+    requires: [
+        'Ext.data.*',
+        'Ext.data.*.*'
+    ],
     uses: [
         'MyApp.model.Dream'
     ],
@@ -67,15 +71,15 @@ Ext.define('MyApp.model.Tuser', {
                 name: 'tortletsCompletedCount'
             }
         ],
-        hasMany: {
-            model: 'MyApp.model.Dream'
-        },
         proxy: {
             type: 'rest',
             url: 'http://dummy.url',
             headers: {
                 Accept: 'application/json'
             }
+        },
+        hasMany: {
+            model: 'MyApp.model.Dream'
         }
     }
 });

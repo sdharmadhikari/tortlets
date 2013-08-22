@@ -80,8 +80,7 @@ Ext.define('MyApp.view.DreamDetails', {
                             {
                                 text: 'Red',
                                 value: 'Red'
-                            },
-                            
+                            }
                         ]
                     }
                 ]

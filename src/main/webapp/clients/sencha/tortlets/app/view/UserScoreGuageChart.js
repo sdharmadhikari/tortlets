@@ -39,22 +39,22 @@ Ext.define('MyApp.view.UserScoreGuageChart', {
                     {
                         end: 25,
                         label: 'Forgot Dreams?',
-                        color: 'red'
+                        color: '#FF7272'
                     },
                     {
                         end: 50,
                         label: 'Average',
-                        color: 'yellow'
+                        color: '#FEECA1'
                     },
                     {
                         end: 75,
                         label: 'Good',
-                        color: 'lightgreen'
+                        color: '#BCD7A9'
                     },
                     {
                         end: 100,
                         label: 'Great!',
-                        color: 'green'
+                        color: '#567E3A'
                     }
                 ],
                 value: 10

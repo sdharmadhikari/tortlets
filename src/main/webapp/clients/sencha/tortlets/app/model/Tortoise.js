@@ -16,6 +16,10 @@
 Ext.define('MyApp.model.Tortoise', {
     extend: 'Ext.data.Model',
 
+    requires: [
+        'Ext.data.*',
+        'Ext.data.*.*'
+    ],
     uses: [
         'MyApp.model.Dream'
     ],
@@ -92,10 +96,6 @@ Ext.define('MyApp.model.Tortoise', {
                 name: 'tortletsCompletedCount'
             }
         ],
-        belongsTo: {
-            model: 'MyApp.model.Dream',
-            foreignKey: 'dream'
-        },
         proxy: {
             type: 'rest',
             url: 'http://dummy.url',
@@ -109,6 +109,10 @@ Ext.define('MyApp.model.Tortoise', {
                 type: 'presence',
                 field: 'title'
             }
-        ]
+        ],
+        belongsTo: {
+            model: 'MyApp.model.Dream',
+            foreignKey: 'dream'
+        }
     }
 });

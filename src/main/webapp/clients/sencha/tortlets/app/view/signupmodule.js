@@ -104,24 +104,24 @@ Ext.define('MyApp.view.signupmodule', {
 
                                     for(var field in userObject){
                                         if(userObject[field] === ''){
-                                            var msg = 'Fields Are Mandatory !';
-                                            Ext.Msg.alert('',msg,Ext.emptyFn);
-                                            errors[errors.length] = msg;
+                                            var msgMandatory = 'Fields Are Mandatory !';
+                                            Ext.Msg.alert('',msgMandatory,Ext.emptyFn);
+                                            errors[errors.length] = msgMandatory;
                                             return;
                                         }
                                     }
 
                                     if(! nameRgx.test(userObject.userid)){
-                                        var msg = 'Name is invalid ! At least 3 in length and no spaces.';
-                                        Ext.Msg.alert('',msg,Ext.emptyFn); 
-                                        errors[errors.length] = msg;
+                                        var msgName = 'Name is invalid ! At least 3 in length and no spaces.';
+                                        Ext.Msg.alert('',msgName,Ext.emptyFn); 
+                                        errors[errors.length] = msgName;
                                         return;
                                     }
 
                                     if(! passwordRgx.test(userObject.password)){
-                                        var msg = 'Password invalid, Min 6 in length, allowed a-z,0-9 and symbols !@#$%^&*()_';
-                                        Ext.Msg.alert('',msg,Ext.emptyFn); 
-                                        errors[errors.length] = msg;
+                                        var msgPassword = 'Password invalid, Min 6 in length, allowed a-z,0-9 and symbols !@#$%^&*()_';
+                                        Ext.Msg.alert('',msgPassword,Ext.emptyFn); 
+                                        errors[errors.length] = msgPassword;
                                         return;
                                     }
 
@@ -168,8 +168,8 @@ Ext.define('MyApp.view.signupmodule', {
                                         },
                                         failure: function (response) {
                                             //me.showSignInFailedMessage('Server error. Please try again later.');
-                                            var msg = 'Server error, try later';
-                                            Ext.Msg.alert('',msg,Ext.emptyFn);
+                                            var msgServer = 'Server error, try later';
+                                            Ext.Msg.alert('',msgServer,Ext.emptyFn);
                                         }
                                     });
 

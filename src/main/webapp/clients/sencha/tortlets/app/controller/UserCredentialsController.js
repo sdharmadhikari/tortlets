@@ -147,7 +147,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var authHeaderValue = userObject.authHeaderValue;
 
         var host;
-
+        //alert(window.location.host);
         if(window.location.host === '' || window.location.host === 'localhost'){  
             host = 'localhost:8080';    
         }else{

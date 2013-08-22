@@ -15,10 +15,24 @@
 
 //@require @packageOverrides
 Ext.Loader.setConfig({
-
+    paths: {
+        Ext: 'touch/src',
+        MyApp: '.'
+    }
 });
 
 Ext.application({
+
+    requires: [
+        'MyApp.controller.*',
+        'MyApp.model.*',
+        'MyApp.view.UserScoreGuageChart',
+        'MyApp.store.*',
+        'Ext.draw.sprite.Text',
+        'Ext.ModelMgr',
+        'Ext.chart.*',
+        'Ext.draw.*'
+    ],
     viewport: {
         layout: {
             type: 'fit'
@@ -74,13 +88,17 @@ Ext.application({
 
     launch: function() {
         console.log('application launch');
+        // Destroy the #appLoadingIndicator element
+        Ext.fly('appLoadingIndicator').destroy();
 
         var lastUserId = localStorage.getItem('userid');
         var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
 
         if( userObject !== null ){
             var credentialController = MyApp.app.getController('MyApp.controller.UserCredentialsController');
+            console.log('populate user resources');
             credentialController.populateUserResources(userObject);
+            console.log('done populte user resoures');
             var currentUser = Ext.create('MyApp.model.Tuser');
             currentUser.set('id',userObject.id);
             currentUser.set('firstName',userObject.firstName);
@@ -94,10 +112,13 @@ Ext.application({
             var mainTabPanel = credentialController.getMainTabPanel();
             landingCardPanel.setActiveItem(mainTabPanel);
         }else {
-            var landingCardPanel = Ext.create('MyApp.view.LandingCardPanel', {fullscreen: true});
-            var useridField = landingCardPanel.down('#userIdItemId');
+            console.log('generating landingcardpanel');
+            var landingCardPanelLogin = Ext.create('MyApp.view.LandingCardPanel', {fullscreen: true});
+            console.log('done generating landingcardpanel');
+            var useridField = landingCardPanelLogin.down('#userIdItemId');
             useridField.setValue(lastUserId);
         }
+        console.log('done application launch');
 
     },
 

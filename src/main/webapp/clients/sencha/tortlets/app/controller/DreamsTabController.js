@@ -126,7 +126,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var currentUser = MyApp.app.currentUser;
         /* Accessing global variable which has been set 
         in Application launch() function */
-        var userid = MyApp.app.currentUser.get('userid');; 
+        var userid = MyApp.app.currentUser.get('userid');
         var utility = MyApp.app.getController('UtilityController');
         /* Need this so that this controller is available in 
         callback methods. */

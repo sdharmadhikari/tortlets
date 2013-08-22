@@ -17,6 +17,10 @@ Ext.define('MyApp.model.Tortlet', {
     extend: 'Ext.data.Model',
     alias: 'model.tortlet',
 
+    requires: [
+        'Ext.data.*',
+        'Ext.data.*.*'
+    ],
     uses: [
         'MyApp.model.Tortoise'
     ],
@@ -40,10 +44,6 @@ Ext.define('MyApp.model.Tortlet', {
                 type: 'int'
             }
         ],
-        belongsTo: {
-            model: 'MyApp.model.Tortoise',
-            foreignKey: 'tortoise'
-        },
         proxy: {
             type: 'rest',
             url: 'http://dummy.url',
@@ -57,6 +57,10 @@ Ext.define('MyApp.model.Tortlet', {
             writer: {
                 type: 'json'
             }
+        },
+        belongsTo: {
+            model: 'MyApp.model.Tortoise',
+            foreignKey: 'tortoise'
         }
     }
 });
