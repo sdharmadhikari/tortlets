@@ -37,14 +37,14 @@
 	<!-- Set up or detect a System property called "ENVIRONMENT" used to construct a properties file on the classpath.  The default is "hsql".  -->
 	<bean id="environment"
 		class="org.springframework.batch.support.SystemPropertyInitializer">
-		<property name="defaultValue" value="mysql"/>
+		<property name="defaultValue" value="postgresql"/>
 		<property name="keyName" value="ENVIRONMENT"/>
 	</bean>
 
 	<!--  Use this to set additional properties on beans at run time -->
 	<bean id="overrideProperties" class="org.springframework.beans.factory.config.PropertyOverrideConfigurer"
 		depends-on="environment">
-		<property name="location" value="classpath:META-INF/spring/batch-${ENVIRONMENT}.properties" />
+		<property name="location" value="classpath:META-INF/spring/batch-postgresql.properties" />
 		<!-- Allow system properties (-D) to override those from file -->
 		<property name="localOverride" value="true" />
 		<property name="properties">
@@ -58,7 +58,7 @@
 		depends-on="environment">
 		<property name="locations">
 			<list>
-				<value>classpath:META-INF/spring/batch-${ENVIRONMENT}.properties</value>
+				<value>classpath:META-INF/spring/batch-postgresql.properties</value>
 			</list>
 		</property>
 		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
@@ -71,7 +71,7 @@
 	</bean>
 
 	<bean id="columnIncrementerParent" class="${batch.database.incrementer.class}" abstract="true" parent="sequenceIncrementerParent">
-		<property name="columnName" value="ID" />
+		<!-- requried for MySQL ? property name="columnName" value="ID" /-->
 	</bean>
 
 	<bean id="incrementerParent" parent="${batch.database.incrementer.parent}">
