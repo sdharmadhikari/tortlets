@@ -125,21 +125,6 @@
             ]
         },
         {
-            "type": "Ext.data.association.BelongsTo",
-            "reference": {
-                "name": "belongsTo",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "associationKey": null,
-                "designer|displayName": "BelongsToTuserAssociation",
-                "model": "Tuser",
-                "foreignKey": "tuser"
-            },
-            "designerId": "0c603e3e-3bb1-4fcb-adde-35a1f8a55927"
-        },
-        {
             "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
@@ -226,6 +211,20 @@
                 "type": null
             },
             "designerId": "1eef7223-4e6b-4402-9173-059b6888721f"
+        },
+        {
+            "type": "Ext.data.association.BelongsTo",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "belongsToTuser",
+                "model": "Tuser",
+                "foreignKey": "tuser"
+            },
+            "designerId": "bca7910e-1c58-40f1-bd2e-b541d457899b"
         }
     ]
 }

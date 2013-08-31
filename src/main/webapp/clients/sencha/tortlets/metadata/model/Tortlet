@@ -64,20 +64,6 @@
             "designerId": "12163408-d4a8-4ceb-8b29-dbc50f00e365"
         },
         {
-            "type": "Ext.data.association.BelongsTo",
-            "reference": {
-                "name": "belongsTo",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|displayName": "BelongsToTortoiseAssociation",
-                "model": "Tortoise",
-                "foreignKey": "tortoise"
-            },
-            "designerId": "c87cc6c5-0936-4fb5-8b51-29e5175ba60d"
-        },
-        {
             "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
@@ -113,6 +99,20 @@
                     "designerId": "b59474e0-24e3-4c22-8cbe-39e8fc68dad1"
                 }
             ]
+        },
+        {
+            "type": "Ext.data.association.BelongsTo",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "belongsToTortoise",
+                "model": "Tortoise",
+                "foreignKey": "tortoise"
+            },
+            "designerId": "51b19fec-6f63-4042-b1e1-6554376305f7"
         }
     ]
 }

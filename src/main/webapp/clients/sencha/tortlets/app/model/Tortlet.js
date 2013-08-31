@@ -17,10 +17,6 @@ Ext.define('MyApp.model.Tortlet', {
     extend: 'Ext.data.Model',
     alias: 'model.tortlet',
 
-    requires: [
-        'Ext.data.*',
-        'Ext.data.*.*'
-    ],
     uses: [
         'MyApp.model.Tortoise'
     ],

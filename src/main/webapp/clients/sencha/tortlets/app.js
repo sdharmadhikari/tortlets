@@ -16,22 +16,16 @@
 //@require @packageOverrides
 Ext.Loader.setConfig({
     paths: {
-        Ext: 'touch/src',
-        MyApp: '.'
+        Ext: 'touch/src'
     }
 });
 
 Ext.application({
 
     requires: [
-        'MyApp.controller.*',
-        'MyApp.model.*',
-        'MyApp.view.UserScoreGuageChart',
-        'MyApp.store.*',
-        'Ext.draw.sprite.Text',
-        'Ext.ModelMgr',
-        'Ext.chart.*',
-        'Ext.draw.*'
+        'Ext.chart.series.Gauge',
+        'Ext.chart.series.sprite.PieSlice',
+        'Ext.MessageBox'
     ],
     viewport: {
         layout: {
@@ -118,6 +112,8 @@ Ext.application({
             var useridField = landingCardPanelLogin.down('#userIdItemId');
             useridField.setValue(lastUserId);
         }
+
+        Ext.create('Ext.MessageBox');
         console.log('done application launch');
 
     },

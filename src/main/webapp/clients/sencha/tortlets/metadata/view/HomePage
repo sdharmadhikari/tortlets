@@ -33,7 +33,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
+                "layout|flex": 2,
+                "docked": "top",
                 "height": 40,
                 "designer|displayName": "WhatsYourDreamPanel",
                 "layout": "hbox"
@@ -51,6 +52,7 @@
                         "layout|flex": 9,
                         "designer|displayName": "WhatsYourDreamTextField",
                         "label": "",
+                        "labelWidth": 0,
                         "name": "whatsYourDreamTextField",
                         "placeHolder": "What's Your Dream ?"
                     },
@@ -66,6 +68,7 @@
                     "userConfig": {
                         "name": "homePageDreamButton",
                         "layout|flex": 1,
+                        "docked": "right",
                         "ui": "action",
                         "text": "Go"
                     },
@@ -88,7 +91,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 1,
+                "layout|flex": 2,
                 "centered": false,
                 "docked": null,
                 "height": 40,
@@ -117,7 +120,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 3
+                        "layout|flex": 3,
+                        "docked": null
                     },
                     "designerId": "8283ecef-0e44-4891-9702-7b60114c1968",
                     "cn": [
@@ -129,10 +133,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "container|align": "center",
-                                "container|pack": "center",
+                                "container|align": "end",
+                                "container|pack": "end",
                                 "centered": true,
                                 "docked": "bottom",
+                                "margin": null,
+                                "ui": "",
                                 "designer|displayName": "Today+Pending+Tortlets"
                             },
                             "designerId": "19fd46fe-4b58-4dc0-aca0-5b959d8a24e3",
@@ -234,7 +240,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 8
+                "layout|flex": 16
             },
             "designerId": "8b1caa4c-08f1-4740-b267-527e74e997e7",
             "masterInstanceId": "af38c8d3-9dd0-4cc3-ae15-a0abe4d641fc"

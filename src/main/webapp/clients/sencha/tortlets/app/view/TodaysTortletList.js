@@ -33,19 +33,6 @@ Ext.define('MyApp.view.TodaysTortletList', {
                 fn: 'onListPainted',
                 event: 'painted'
             }
-        ],
-        plugins: [
-            {
-                type: 'pullrefresh',
-                listeners: [
-                    {
-                        fn: function(element, eOpts) {
-                            alert('painted');
-                        },
-                        event: 'painted'
-                    }
-                ]
-            }
         ]
     },
 
@@ -62,18 +49,6 @@ Ext.define('MyApp.view.TodaysTortletList', {
 
 
 
-    },
-
-    onPullRefreshLatestfetched: function(eOpts) {
-        alert('latest fetched');
-    },
-
-    onPullRefreshShow: function(component, eOpts) {
-        alert('show');
-    },
-
-    onPullRefreshUpdatedata: function(component, newData, eOpts) {
-        alert('updatedata');
     }
 
 });

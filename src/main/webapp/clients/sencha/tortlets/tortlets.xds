@@ -4,7 +4,7 @@
         "urlPrefix": "C:\\Users\\sudhir\\workspace\\mytrunk\\tortlets-mobile\\sencha\\tortlets",
         "spacesToIndent": 4,
         "exportPath": "",
-        "sdkPath": "",
+        "sdkPath": "/Users/sudhir/MyPrograms/touch-2.2.0",
         "lineEnding": "CRLF",
         "genTimestamps": false,
         "cacheBust": false,
@@ -329,6 +329,14 @@
                 "app/view/HomePageHelpModal.js"
             ],
             "className": "HomePageHelpModal"
+        },
+        "c31e4165-12fc-4982-9703-76949582a9df": {
+            "paths": [
+                "metadata/resource/packager",
+                "",
+                "packager.json"
+            ],
+            "className": "packager"
         }
     },
     "viewOrderMap": {
@@ -380,7 +388,8 @@
         "resource": [
             "7e277a5b-0624-4aa7-941e-c927df2fcc01",
             "bc9381e5-fa6a-401c-a12f-d87047f599b7",
-            "5197d1d2-b9ae-4186-8349-752497e93cb4"
+            "5197d1d2-b9ae-4186-8349-752497e93cb4",
+            "c31e4165-12fc-4982-9703-76949582a9df"
         ],
         "app": [
             "application"

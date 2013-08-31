@@ -44,6 +44,11 @@
             "UserScoreGuageChart",
             "HomePageHelpModal"
         ],
+        "requires": [
+            "Ext.chart.series.Gauge",
+            "Ext.chart.series.sprite.PieSlice",
+            "Ext.MessageBox"
+        ],
         "controllers": [
             "HomeTabController",
             "DreamsTabController",
@@ -74,13 +79,17 @@
                 "fn": "launch",
                 "implHandler": [
                     "console.log('application launch');\r",
+                    "// Destroy the #appLoadingIndicator element\r",
+                    "Ext.fly('appLoadingIndicator').destroy();\r",
                     "\r",
                     "var lastUserId = localStorage.getItem('userid');\r",
                     "var userObject = JSON.parse(sessionStorage.getItem('userInfo'));\r",
                     "\r",
                     "if( userObject !== null ){\r",
                     "    var credentialController = MyApp.app.getController('MyApp.controller.UserCredentialsController');\r",
+                    "    console.log('populate user resources');\r",
                     "    credentialController.populateUserResources(userObject);\r",
+                    "    console.log('done populte user resoures');\r",
                     "    var currentUser = Ext.create('MyApp.model.Tuser');\r",
                     "    currentUser.set('id',userObject.id);\r",
                     "    currentUser.set('firstName',userObject.firstName);\r",
@@ -94,10 +103,15 @@
                     "    var mainTabPanel = credentialController.getMainTabPanel();\r",
                     "    landingCardPanel.setActiveItem(mainTabPanel);\r",
                     "}else {\r",
-                    "    var landingCardPanel = Ext.create('MyApp.view.LandingCardPanel', {fullscreen: true});\r",
-                    "    var useridField = landingCardPanel.down('#userIdItemId');\r",
+                    "    console.log('generating landingcardpanel');\r",
+                    "    var landingCardPanelLogin = Ext.create('MyApp.view.LandingCardPanel', {fullscreen: true});\r",
+                    "    console.log('done generating landingcardpanel');\r",
+                    "    var useridField = landingCardPanelLogin.down('#userIdItemId');\r",
                     "    useridField.setValue(lastUserId);\r",
                     "}\r",
+                    "\r",
+                    "Ext.create('Ext.MessageBox');\r",
+                    "console.log('done application launch');\r",
                     ""
                 ]
             },
@@ -134,6 +148,29 @@
                 ]
             },
             "designerId": "c51f9ceb-66d4-4c8c-a7f1-80d84df64303"
+        },
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "App": null,
+                "paths": [
+                    "{ 'Ext':'touch/src'\r",
+                    "}"
+                ]
+            },
+            "designerId": "7e28d998-1730-476f-8904-2c20c60cf3c2",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "App",
+                    "type": "string"
+                }
+            ]
         }
     ]
 }

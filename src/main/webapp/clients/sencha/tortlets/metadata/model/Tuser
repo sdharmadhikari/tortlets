@@ -120,19 +120,6 @@
             "designerId": "17b01708-53b0-4e69-b24b-0a134f80c033"
         },
         {
-            "type": "Ext.data.association.HasMany",
-            "reference": {
-                "name": "hasMany",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|displayName": "HasManyDreamsAssociation",
-                "model": "Dream"
-            },
-            "designerId": "4ebc7ce4-3f93-4961-8ac2-103a37fdc002"
-        },
-        {
             "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
@@ -209,6 +196,19 @@
                 "name": "tortletsCompletedCount"
             },
             "designerId": "cc9e3047-1723-4505-b876-0517b61dee90"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "hasManyDream",
+                "model": "Dream"
+            },
+            "designerId": "5f7869c3-059e-40bb-bd4d-f82386e1ebe0"
         }
     ]
 }

@@ -199,20 +199,6 @@
             "designerId": "d8e011f6-9200-43db-8721-e727779a6ebf"
         },
         {
-            "type": "Ext.data.association.BelongsTo",
-            "reference": {
-                "name": "belongsTo",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|displayName": "BelongsToDreamAssociation",
-                "model": "Dream",
-                "foreignKey": "dream"
-            },
-            "designerId": "3af93fe0-bba2-4d67-8a1e-0c390bed5d4d"
-        },
-        {
             "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
@@ -302,6 +288,20 @@
                 "name": "tortletsCompletedCount"
             },
             "designerId": "fbf99743-ccd4-476f-86ff-327ff205ab9f"
+        },
+        {
+            "type": "Ext.data.association.BelongsTo",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "belongsToDream",
+                "model": "Dream",
+                "foreignKey": "dream"
+            },
+            "designerId": "ae3349be-8022-44bb-86bc-4a1a26db5984"
         }
     ]
 }

@@ -140,7 +140,7 @@
                             "{text: 'Yellow', value: 'Yellow'},\r",
                             "{text: 'Blue',  value: 'Blue'},\r",
                             "{text: 'Green',  value: 'Green'},\r",
-                            "{text: 'Red',  value: 'Red'},\r",
+                            "{text: 'Red',  value: 'Red'}\r",
                             "]"
                         ]
                     },

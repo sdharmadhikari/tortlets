@@ -33,7 +33,8 @@ Ext.define('MyApp.view.HomePage', {
             },
             {
                 xtype: 'panel',
-                flex: 1,
+                flex: 2,
+                docked: 'top',
                 height: 40,
                 layout: {
                     type: 'hbox'
@@ -43,6 +44,7 @@ Ext.define('MyApp.view.HomePage', {
                         xtype: 'textfield',
                         flex: 9,
                         label: '',
+                        labelWidth: 0,
                         name: 'whatsYourDreamTextField',
                         placeHolder: 'What\'s Your Dream ?'
                     },
@@ -50,6 +52,7 @@ Ext.define('MyApp.view.HomePage', {
                         xtype: 'button',
                         name: 'homePageDreamButton',
                         flex: 1,
+                        docked: 'right',
                         ui: 'action',
                         text: 'Go'
                     }
@@ -57,7 +60,7 @@ Ext.define('MyApp.view.HomePage', {
             },
             {
                 xtype: 'panel',
-                flex: 1,
+                flex: 2,
                 centered: false,
                 height: 40,
                 layout: {
@@ -76,9 +79,10 @@ Ext.define('MyApp.view.HomePage', {
                                 xtype: 'segmentedbutton',
                                 centered: true,
                                 docked: 'bottom',
+                                ui: '',
                                 layout: {
-                                    align: 'center',
-                                    pack: 'center',
+                                    align: 'end',
+                                    pack: 'end',
                                     type: 'hbox'
                                 },
                                 items: [
@@ -117,7 +121,7 @@ Ext.define('MyApp.view.HomePage', {
             },
             {
                 xtype: 'tortletsListsContainerPanel',
-                flex: 8
+                flex: 16
             }
         ]
     }

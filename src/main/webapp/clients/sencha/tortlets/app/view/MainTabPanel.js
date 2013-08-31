@@ -25,6 +25,7 @@ Ext.define('MyApp.view.MainTabPanel', {
     ],
 
     config: {
+        modal: false,
         items: [
             {
                 xtype: 'homeTabCardPanel',
@@ -88,24 +89,24 @@ Ext.define('MyApp.view.MainTabPanel', {
                     var score =  MyApp.app.currentUser.get('latestDreamScore');
                     var userScoreTabController = MyApp.app.getController('UserScoreTabController');
                     var scoreTabCardPanel = userScoreTabController.getScoreTabCardPanel();
-                    //var userScoreGuageChart = userScoreTabController.getUserScoreGuageChart();
+                    var userScoreGuageChart = userScoreTabController.getUserScoreGuageChart();
                     userScoreGuageChart.getSeries()[0].setValue(score);
 
                     /////////////////////////////////////////////////
 
-                    /*
+
                     var scoreTextOnChart = Ext.create('Ext.draw.sprite.Text', {
-                    type : 'text',
-                    text : 'Tortlets Score :' + score + '%',
-                    font : 'bold 20px Arial',
-                    x: 1,
-                    y: 20
+                        type : 'text',
+                        text : 'Tortlets Score :' + score + '%',
+                        font : 'bold 20px Arial',
+                        x: 1,
+                        y: 20
                     });
 
                     userScoreGuageChart.getSurface().removeAll();
                     userScoreGuageChart.getSurface().add(scoreTextOnChart);
                     scoreTextOnChart.show(true);
-                    */
+
 
                     /////////////////////////////////////////////////            
 

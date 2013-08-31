@@ -16,10 +16,6 @@
 Ext.define('MyApp.model.Tortoise', {
     extend: 'Ext.data.Model',
 
-    requires: [
-        'Ext.data.*',
-        'Ext.data.*.*'
-    ],
     uses: [
         'MyApp.model.Dream'
     ],

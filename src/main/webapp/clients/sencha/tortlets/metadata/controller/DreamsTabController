@@ -93,7 +93,7 @@
                     "var currentUser = MyApp.app.currentUser;\r",
                     "/* Accessing global variable which has been set \r",
                     "in Application launch() function */\r",
-                    "var userid = MyApp.app.currentUser.get('userid');; \r",
+                    "var userid = MyApp.app.currentUser.get('userid');\r",
                     "var utility = MyApp.app.getController('UtilityController');\r",
                     "/* Need this so that this controller is available in \r",
                     "callback methods. */\r",

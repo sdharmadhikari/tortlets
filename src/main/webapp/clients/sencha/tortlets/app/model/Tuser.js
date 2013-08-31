@@ -16,10 +16,6 @@
 Ext.define('MyApp.model.Tuser', {
     extend: 'Ext.data.Model',
 
-    requires: [
-        'Ext.data.*',
-        'Ext.data.*.*'
-    ],
     uses: [
         'MyApp.model.Dream'
     ],
