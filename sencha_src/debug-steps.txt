@@ -1,0 +1,56 @@
+Some solutions to try:
+
+
+
+Uncaught TypeError: Cannot call method 'substring' of undefined 
+-- hmm.. Namespace related problem, search search ! 
+-- now i have Ext.chart.* in requires, try deleting .sencha etc and sencha generate again.
+ 
+
+
+
+Read complete thread which is on Architect for setting up CMD + Architect.
+
+Done
+* Comment creating piechart temporarily.
+* See if i can downgrade sencha cmd to 3.0 (get it from sencha cmd forum post)
+* Review each class in Architect itself, JSHint is already enabled in it.
+* Try sencha-all-debug
+* Uncaught TypeError: Cannot call method 'error' of undefined (add keywords sencha cmd, sencha architect,
+* Fix comma/semicolon issue.
+* search "sencha architect does not add requires property"
+* Look into debug.txt again and see if anythng should be appeneded before landingPanel
+* Try sencha-touch-debug for production build and see
+* try again testing build beause app was upgraded to 4.x CMD
+
+UtilityController
+todaysTortletsStore
+MyApp.model.Dream
+MyApp.model.Tortoise
+MyApp.model.Tortlet
+allstores
+
+. My prod
+
+
+The property you find in the app config object is models, which is an array that
+contains the name of your recently created contact model. It’s here because whenever
+you generate a class via Sencha Cmd it generates the associated keys for models, views,
+controllers, and profiles. At first glance this seems like an awesome feature, but don’t
+use this pattern for a few reasons.
+First is that the number of items—all of your views, apps, controllers, and profiles—
+can get rather large and unmanageable as your application grows. How we (and many
+other experts) use app.js is to bootstrap the application and potentially deal with application-
+level events. The requirements of views, models, and stores should always begin
+via profiles or controllers if you have no device profiles in your application.
+
+
+Second, the way your required items are laid out may not be conducive to selfdocumenting
+code, which is something that the best programmers practice religiously.
+When you’re done you won’t be requiring models, stores, or application views from
+app.js. The rule of thumb we follow is that only global models, stores, utility classes,
+and overrides are required via app.js. Anything specific to a view should be required
+by that view or that view’s controller.
+
+// Destroy the #appLoadingIndicator element
+Ext.fly('appLoadingIndicator').destroy();

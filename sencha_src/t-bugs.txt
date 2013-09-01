@@ -1,0 +1,49 @@
+t-bugs
+
+Done touch action not working sometimes.
+layout problem of home tab.
+
+try changing some code and see if only partial file getting loaded.
+Try alert mechanism "App is updated, do you want to update"
+touch/src directory should not be part of web app.
+
+
+
+
+Bugs
+http://localhost:8080/tusers?_dc=1377219786603 405 (Method Not Allowed)  When updating user profile.
+Are tortlets really getting deleted ?
+When new user is genearated after sign out, pie chart shows same data.
+Does Tuser save has failure handling ?
+When dream tab is selected, and server down, it does not show error.
+When Your score tab is shown, it does not show, server error.
+Back to dreams now scrolls in direction "up", i think that is only in one condition, either old or new dream.
+Pull to refresh - which event to capture to change todaysStore url change ?
+Not using ellipse anywhere to cut the longer sentence
+Row was updated by another transaction : When I start adding details to snap created user.
+
+org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.softrism.tortlets.domain.Dream#26]; nested exception is javax.persistence.OptimisticLockException: 
+
+enahancment
+
+must have
+Functionality :
+deploy on cloud foundry
+packaging. (iphone android)
+Look-n-feel
+tortoise score tse positon.
+must have great introductory image at login page, splash screen and thumb icon
+You can try getting this.el() to getElement and then getWidth of the element.
+nice to have
+status
+add allowed delay days
+add start date and end date
+dream color
+
+Guage ideas to try later:
+-	try chart background for image/gradient or color
+
+SignInSignOutModule pending things
+userid toLowerCase while registering and signing in
+LogOut button should be disabled by default.
+

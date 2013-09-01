@@ -1,0 +1,14 @@
+Sencha CMD 3.1.242
+Architect 2.2
+
+- Run in simulator
+sencha  app package run packager.iphone.simulator.json 
+
+- Create native app
+
+sencha app build native ( packager.json has to be there)
+
+- Create production build
+
+sencha app build  --destination  /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/phone production
+

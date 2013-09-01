@@ -1,0 +1,33 @@
+        plugins: [
+            {
+                pullRefreshText: 'Pull to refresh, updated once a day',
+                type: 'pullrefresh',
+                listeners: [
+                    {
+                        fn: function(element, eOpts) {
+                            alert('painted');
+                        },
+                        event: 'painted'
+                    }
+                ]
+            }
+        ]
+        
+        
+todays
+
+        plugins: [
+            {
+                type: 'pullrefresh',
+                listeners: [
+                    {
+                        fn: function(element, eOpts) {
+                            alert('painted');
+                        },
+                        event: 'painted'
+                    }
+                ]
+            }
+        ]
+        
+        
