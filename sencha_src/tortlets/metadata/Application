@@ -171,6 +171,32 @@
                     "type": "string"
                 }
             ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getHost",
+                "implHandler": [
+                    "var env = 'home' ; \r",
+                    "\r",
+                    "var host = '';\r",
+                    "if( env === 'home'){\r",
+                    "    host = '192.168.0.105:8080';   \r",
+                    "}else if(env === 'office'){\r",
+                    "    host = '172.26.0.151:8080';   \r",
+                    "}else{\r",
+                    "    host = 'tortlets.aws.af.cm';  \r",
+                    "}\r",
+                    "\r",
+                    "return host;"
+                ]
+            },
+            "designerId": "9283d71a-e18f-4a4b-82ce-7bcd8644ff10"
         }
     ]
 }

@@ -5,8 +5,6 @@
   "versionString": "1.0",
   "versionCode": "1",
   "icon": {
-    "36": "resources/icons/Icon_Android36.png",
-    "48": "resources/icons/Icon_Android48.png",
     "57": "resources/icons/Icon.png",
     "72": "resources/icons/Icon~ipad.png",
     "114": "resources/icons/Icon@2x.png",
@@ -17,13 +15,6 @@
   "configuration": "Debug",
   "platform": "iOS",
   "deviceType": "iPhone",
-  "certificatePath": "/Users/sudhir/Projects/trials/tortlets/sencha_src/keys_certificates/Sudhir_Dharmadhikari_Dev_Private_Key.p12",
-  "certificateAlias": "iPhone Developer: Sudhir Dharmadhikari (3Q79QSCHHE)",
-  "certificatePassword": "",
-  "provisionProfile": "/Users/sudhir/Projects/trials/tortlets/sencha_src/keys_certificates/profiles/tortlets_development_profile.mobileprovision",
-  "URLScheme": "",
-  "notificationConfiguration": "",
-  "sdkPath": "/path/to/android-sdk",
   "androidAPILevel": "8",
   "permissions": [
     "INTERNET",

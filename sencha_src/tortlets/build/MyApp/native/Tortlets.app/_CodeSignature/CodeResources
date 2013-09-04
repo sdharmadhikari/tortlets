@@ -52,29 +52,41 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
-		<key>embedded.mobileprovision</key>
-		<data>
-		EnwCWAI9CaImA+UGmpT/Je+u6zo=
-		</data>
 		<key>iTunesArtwork</key>
 		<data>
 		ytuwHbp3ia19o9yHbcwbc9TIgq0=
 		</data>
 		<key>icon.png</key>
 		<data>
-		K7bsjP9rKk4p2NOBsifpsh7mp3k=
+		W5d9kjbzvelIWk+qTwtyWwa+Lg4=
 		</data>
 		<key>icon@2x.png</key>
 		<data>
-		YppWB02Wjj12M2B2rI0D8uhDasQ=
+		Ff3maCW2yFgj42rLCLNk6o3q0yw=
 		</data>
-		<key>webapp/Icon.png</key>
+		<key>webapp/Icon copy.png</key>
 		<data>
 		K7bsjP9rKk4p2NOBsifpsh7mp3k=
 		</data>
-		<key>webapp/Icon@2x.png</key>
+		<key>webapp/Icon.png</key>
+		<data>
+		W5d9kjbzvelIWk+qTwtyWwa+Lg4=
+		</data>
+		<key>webapp/Icon.xcf</key>
+		<data>
+		f7yOEFgQW4d+pnU4ol9tPnTjlfc=
+		</data>
+		<key>webapp/Icon@2x copy.png</key>
 		<data>
 		YppWB02Wjj12M2B2rI0D8uhDasQ=
+		</data>
+		<key>webapp/Icon@2x.png</key>
+		<data>
+		Ff3maCW2yFgj42rLCLNk6o3q0yw=
+		</data>
+		<key>webapp/Icon@2x.xcf</key>
+		<data>
+		1b6C7FQuwl+LwQGQ89KNi1iUrBQ=
 		</data>
 		<key>webapp/Icon~ipad.png</key>
 		<data>
@@ -86,7 +98,7 @@
 		</data>
 		<key>webapp/app.js</key>
 		<data>
-		cWfxEyq+aozeecmVoVBnSzEkBI8=
+		1u4bskuZBGnz29ktLgAMVOKVH/c=
 		</data>
 		<key>webapp/app.json</key>
 		<data>
@@ -108,13 +120,29 @@
 		<data>
 		tYaLZ9FxRFTO/9OYdJ3rk04FrU8=
 		</data>
-		<key>webapp/resources/icons/Icon.png</key>
+		<key>webapp/resources/icons/Icon copy.png</key>
 		<data>
 		K7bsjP9rKk4p2NOBsifpsh7mp3k=
 		</data>
-		<key>webapp/resources/icons/Icon@2x.png</key>
+		<key>webapp/resources/icons/Icon.png</key>
+		<data>
+		W5d9kjbzvelIWk+qTwtyWwa+Lg4=
+		</data>
+		<key>webapp/resources/icons/Icon.xcf</key>
+		<data>
+		f7yOEFgQW4d+pnU4ol9tPnTjlfc=
+		</data>
+		<key>webapp/resources/icons/Icon@2x copy.png</key>
 		<data>
 		YppWB02Wjj12M2B2rI0D8uhDasQ=
+		</data>
+		<key>webapp/resources/icons/Icon@2x.png</key>
+		<data>
+		Ff3maCW2yFgj42rLCLNk6o3q0yw=
+		</data>
+		<key>webapp/resources/icons/Icon@2x.xcf</key>
+		<data>
+		1b6C7FQuwl+LwQGQ89KNi1iUrBQ=
 		</data>
 		<key>webapp/resources/icons/Icon~ipad.png</key>
 		<data>

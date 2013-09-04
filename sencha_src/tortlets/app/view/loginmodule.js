@@ -18,7 +18,7 @@ Ext.define('MyApp.view.loginmodule', {
     alias: 'widget.genericLoginForm',
 
     config: {
-        loginUrl: 'http://localhost:8080/tusers?find=ByUseridEqualsAndPasswordEquals',
+        loginUrl: 'dummy',
         itemId: 'loginFormItemId',
         listeners: [
             {

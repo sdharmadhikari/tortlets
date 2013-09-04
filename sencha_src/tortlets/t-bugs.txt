@@ -5,23 +5,30 @@ layout problem of home tab.
 
 try changing some code and see if only partial file getting loaded.
 Try alert mechanism "App is updated, do you want to update"
-touch/src directory should not be part of web app.
+
 
 
 
 
 Bugs
 http://localhost:8080/tusers?_dc=1377219786603 405 (Method Not Allowed)  When updating user profile.
-Are tortlets really getting deleted ?
 When new user is genearated after sign out, pie chart shows same data.
 Does Tuser save has failure handling ?
 When dream tab is selected, and server down, it does not show error.
 When Your score tab is shown, it does not show, server error.
 Back to dreams now scrolls in direction "up", i think that is only in one condition, either old or new dream.
-Pull to refresh - which event to capture to change todaysStore url change ?
 Not using ellipse anywhere to cut the longer sentence
-Row was updated by another transaction : When I start adding details to snap created user.
+Has to be Back button when snap sign on is selected.
+Tse score not yet implemented (with tse images)
+Login i not ready
+Flash i not ready
+small tse bg color change
+build location redesign
+Upload on appFog
+Does appFog have postGres ?
 
+
+Row was updated by another transaction : When I start adding details to snap created user.
 org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.softrism.tortlets.domain.Dream#26]; nested exception is javax.persistence.OptimisticLockException: 
 
 enahancment

@@ -125,6 +125,21 @@ Ext.application({
         var curr_year = d.getFullYear();
         var today = (curr_month  + "/" + curr_date + "/" + curr_year);
         return today;
+    },
+
+    getHost: function() {
+        var env = 'home' ; 
+
+        var host = '';
+        if( env === 'home'){
+            host = '192.168.0.105:8080';   
+        }else if(env === 'office'){
+            host = '172.26.0.151:8080';   
+        }else{
+            host = 'tortlets.aws.af.cm';  
+        }
+
+        return host;
     }
 
 });

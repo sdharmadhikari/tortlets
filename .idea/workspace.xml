@@ -2,188 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9726801d-b3bd-455e-bef1-fa29786b8c4c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module-st-2.1.xda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/.architect" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/app-local-st2.2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/app-mac-local-st2.2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/app.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/app/view/LoginForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/debug.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/login-module.xdc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/login.xds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/metadata/Application" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/metadata/resource/Library" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login-module/metadata/view/LoginForm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/login20130503094429.xda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/.architect" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app-local-st2.2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app-mac-local-st2.2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app/controller/MyController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/app/view/SignUpsignInCardPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/metadata/Application" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/metadata/controller/MyController" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/metadata/resource/Library" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/metadata/resource/js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/metadata/view/SignUpsignInCardPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/registration-module.xdc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/registration.xds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration-module/static/js/Base64.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/registration20130503090452.xda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets-st-2.0.x.xda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/.architect" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/Importing Reimporting components " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app-mac-local-st2.2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app-remote-st2.2.1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app-win-local-st2.2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/DreamsTabController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/HomeTabController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/SampleOverriddenController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UserCredentialsController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UserScoreTabController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/UtilityController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/controller/override/SampleOverriddenController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/model/Dream.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/model/Tortlet.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/model/Tortoise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/model/Tuser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/store/DreamsStore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/store/IncompleteTortletsStore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/store/TodaysTortletsStore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/store/TortoisesStore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/DreamDetails.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/DreamList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/DreamListCardPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/DreamListPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/HelpPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/HomePage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/HomePageHelpModal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/HomeTabCardPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/LandingCardPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/LoginModule.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/MainTabPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/ScoreTabCardPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TodaysTortletList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TodaysTortletListPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortletListPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortletsDetails.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortletsList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortletsListsContainerPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortoiseDetails.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortoiseList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/TortoiseListPanel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/UserScoreGuageChart.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/app/view/signupmodule.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/log.roo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/Application" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/DreamsTabController" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/HomeTabController" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/SampleOverriddenController" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UserCredentialsController" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UserScoreTabController" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/controller/UtilityController" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/model/Dream" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/model/Tortlet" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/model/Tortoise" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/model/Tuser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/resource/Library" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/resource/css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/resource/js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/resource/packager" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/store/DreamsStore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/store/IncompleteTortletsStore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/store/TodaysTortletsStore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/store/TortoisesStore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/DreamDetails" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/DreamList" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/DreamListCardPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/DreamListPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/HelpPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/HomePage" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/HomePageHelpModal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/HomeTabCardPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/LandingCardPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/LoginModule" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/MainTabPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/ScoreTabCardPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TodaysTortletList" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TodaysTortletListPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortletListPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortletsDetails" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortletsList" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortletsListsContainerPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortoiseDetails" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortoiseList" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/TortoiseListPanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/UserScoreGuageChart" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/metadata/view/signupmodule" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/no-connectivity-app.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/packager.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/packager.temp.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/css/sencha-touch.2.2.0.tortlets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/icons/Icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/icons/Icon@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/icons/Icon~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/icons/Icon~ipad@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/icons/iTunesArtwork.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/icons/icon-spot~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default-Landscape@2x~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default-LandscapeLeft~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default-LandscapeRight~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default-Landscape~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default-Portrait@2x~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default-PortraitUpsideDown~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default-Portrait~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/loading/Default~ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/sass/app.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/sass/app.scss.org" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/sass/config.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/sass/stylesheets/fonts/pictos/pictos-web.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/sass/stylesheets/fonts/pictos/pictos-web.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/sass/stylesheets/fonts/pictos/pictos-web.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/sass/stylesheets/fonts/pictos/pictos-web.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/startup/1496x2048.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/startup/1536x2008.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/startup/320x460.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/startup/640x920.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/startup/748x1024.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/resources/startup/768x1004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/additional.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/base.2.2.0.tortlets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/base.2.2.0.tortlets.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/bb10.2.2.0.tortlets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/bb10.2.2.0.tortlets.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/config.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/config.rb.org" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/sencha-touch.2.2.0.tortlets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/sencha-touch.2.2.0.tortlets.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/wp.2.2.0.tortlets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/css/wp.2.2.0.tortlets.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/images/race-finish-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/images/tortoise_smaller.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/js/Base64.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/trial_images/auto_racing_chequered.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/trial_images/em_hand_01.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/trial_images/raceFinishFlag.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/trial_images/thumbs_down.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/trial_images/thumbs_up.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/trial_images/tortoise-race-finish-small.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/trial_images/tortoise-race-finish.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/static/trial_images/tortoise_smaller_grey.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets/tortlets.xds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets20130322200642.xda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets20130417142402.xda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets20130501164838.xda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/sencha/tortlets20130523153326.xda" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/t-bugs.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/embedded.mobileprovision" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/metadata/resource/packager" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/app.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/cache.appcache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/deltas/app.js/477a847fc454d99734fad91e6531862c852351ca.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/deltas/app.js/5f9ea65ac05bb9c22cce2d4501263f2092fb48da.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/deltas/app.js/b061e33b04e437040f577418c228ebd55f85c54e.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/css/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/icons/Icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/icons/Icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/icons/Icon~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/icons/Icon~ipad@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/icons/iTunesArtwork.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/icons/icon-spot~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/startup/1496x2048.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/startup/1536x2008.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/startup/320x460.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/startup/640x920.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/startup/748x1024.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/resources/startup/768x1004.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/static/css/additional.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/static/images/race-finish-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/static/images/tortoise_smaller.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/clients/phone/production/static/js/Base64.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/Icon.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/Icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/resources/icons/Icon.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/resources/icons/Icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/resources/icons/Icon.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/resources/icons/Icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon@2x.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon@2x.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/Icon@2x.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/Icon@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/resources/icons/Icon@2x.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/resources/icons/Icon@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/resources/icons/Icon@2x.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/resources/icons/Icon@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/icon.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/icon@2x.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/icon@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/stbuild_template" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/stbuild_template" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/.architect" afterPath="$PROJECT_DIR$/sencha_src/tortlets/.architect" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/metadata/Application" afterPath="$PROJECT_DIR$/sencha_src/tortlets/metadata/Application" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/_CodeSignature/CodeResources" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/_CodeSignature/CodeResources" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/app/controller/HomeTabController.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/app/controller/HomeTabController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/app/controller/UserCredentialsController.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/app/controller/UserCredentialsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/metadata/controller/UserCredentialsController" afterPath="$PROJECT_DIR$/sencha_src/tortlets/metadata/controller/UserCredentialsController" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/app.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/app.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/app.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/batch-postgresql.properties" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/batch-postgresql.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build_commands.txt" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build_commands.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/app/view/loginmodule.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/app/view/loginmodule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/metadata/view/loginmodule" afterPath="$PROJECT_DIR$/sencha_src/tortlets/metadata/view/loginmodule" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/packager.json" afterPath="$PROJECT_DIR$/sencha_src/tortlets/packager.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/packager.temp.json" afterPath="$PROJECT_DIR$/sencha_src/tortlets/packager.temp.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/app/view/signupmodule.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/app/view/signupmodule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/metadata/view/signupmodule" afterPath="$PROJECT_DIR$/sencha_src/tortlets/metadata/view/signupmodule" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/tortlets.xds" afterPath="$PROJECT_DIR$/sencha_src/tortlets/tortlets.xds" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tortlets.iws" />
@@ -256,7 +133,7 @@
     <file path="/index.jspx" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365364915228" ignored="false" />
     <file path="$PROJECT_DIR$/../gweek/src/main/webapp/WEB-INF/views/footer.jspx" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365366038496" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/jsp/lib/jsp-impl.jar!/standardSchemas/jspxml2.xsd" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365724121136" ignored="false" />
-    <file path="/applicationContext-security.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1368825014584" ignored="false" />
+    <file path="/applicationContext-security.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1378185272361" ignored="false" />
     <file path="/CustomRequestmatcher.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365956822158" ignored="false" />
     <file path="/fragment.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1365963492842" ignored="false" />
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement-launcher/src/main/java/com/verient/batch/apsettlement/processor/APSettlementFileProcessorCtp.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1366238639434" ignored="false" />
@@ -665,6 +542,7 @@
     <file path="$PROJECT_DIR$/../roopostgress/log.roo" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1377826475151" ignored="false" />
     <file path="/data-source-context.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1377908816175" ignored="false" />
     <file path="/batch-postgress.properties" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1377827310502" ignored="false" />
+    <file path="/batch-postgresql.properties" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1378184905920" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -847,7 +725,16 @@
       <file leaf-file-name="batch-postgresql.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/batch-postgresql.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="33" selection-start="417" selection-end="499" vertical-scroll-proportion="-5.1923075">
+            <state line="16" column="28" selection-start="742" selection-end="742" vertical-scroll-proportion="-9.230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-security.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="100" selection-start="1172" selection-end="1172" vertical-scroll-proportion="-2.72549">
               <folding />
             </state>
           </provider>
@@ -862,10 +749,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data-source-context.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="data-source-context.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/batch/data-source-context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="75" selection-start="3642" selection-end="3642" vertical-scroll-proportion="0.628">
+            <state line="75" column="79" selection-start="3653" selection-end="3653" vertical-scroll-proportion="-39.6">
               <folding>
                 <element signature="e#3691#3729#0" expanded="true" />
                 <element signature="e#3821#3849#0" expanded="true" />
@@ -874,16 +761,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webapp-dataSource.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="webapp-dataSource.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/webapp-dataSource.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="73" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-8.4">
-              <folding>
-                <element signature="e#1119#1148#0" expanded="false" />
-                <element signature="e#1186#1203#0" expanded="false" />
-                <element signature="e#1246#1268#0" expanded="false" />
-                <element signature="e#1311#1333#0" expanded="false" />
-              </folding>
+            <state line="11" column="28" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.8088235">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -907,7 +789,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController_Roo_Controller_Json.aj" />
         <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController_Roo_Controller_Json.aj" />
         <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj" />
@@ -919,10 +800,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/database.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/batch-postgress.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/batch-postgresql.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/webapp-dataSource.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/batch/data-source-context.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/batch-postgresql.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml" />
       </list>
     </option>
   </component>
@@ -1516,8 +1398,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12283737" sideWeight="0.5631229" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32534248" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45415226" sideWeight="0.51328903" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32392028" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45415226" sideWeight="0.5631229" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43687707" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1599,13 +1481,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="38" selection-start="5717" selection-end="5717" vertical-scroll-proportion="0.40509915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="10" selection-start="1751" selection-end="1792" vertical-scroll-proportion="0.5212766">
@@ -1675,29 +1550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="95" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/batch-mysql.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="86" selection-start="303" selection-end="303" vertical-scroll-proportion="-3.0384614">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/webapp-dataSource.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="73" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-8.4">
-          <folding>
-            <element signature="e#1119#1148#0" expanded="false" />
-            <element signature="e#1186#1203#0" expanded="false" />
-            <element signature="e#1246#1268#0" expanded="false" />
-            <element signature="e#1311#1333#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1708,20 +1564,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="95" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/batch-postgresql.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="417" selection-end="499" vertical-scroll-proportion="-5.1923075">
+        <state line="16" column="28" selection-start="742" selection-end="742" vertical-scroll-proportion="-9.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="100" selection-start="1172" selection-end="1172" vertical-scroll-proportion="-2.72549">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/batch/data-source-context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="75" selection-start="3642" selection-end="3642" vertical-scroll-proportion="0.628">
+        <state line="75" column="79" selection-start="3653" selection-end="3653" vertical-scroll-proportion="-39.6">
           <folding>
             <element signature="e#3691#3729#0" expanded="true" />
             <element signature="e#3821#3849#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/webapp-dataSource.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="28" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.8088235">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -20,7 +20,7 @@
             "]   ",
             "    "
         ],
-        "loginUrl": "http://localhost:8080/tusers?find=ByUseridEqualsAndPasswordEquals",
+        "loginUrl": "dummy",
         "itemId": "loginFormItemId",
         "designer|userClassName": "loginmodule",
         "designer|userAlias": "genericLoginForm"

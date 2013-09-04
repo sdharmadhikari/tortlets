@@ -146,16 +146,9 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var userid = userObject.userid;
         var authHeaderValue = userObject.authHeaderValue;
 
-        var host;
-        //alert(window.location.host);
-        if(window.location.host === '' || window.location.host === 'localhost'){  
-            host = 'localhost:8080';    
-        }else{
-            host = window.location.host;
-        }
-
-
         var today = MyApp.app.getToday();
+
+        var host = MyApp.app.getHost();
 
         //todaysTortletsStore
         var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
@@ -248,22 +241,19 @@ Ext.define('MyApp.controller.UserCredentialsController', {
 
     launch: function() {
         console.log('usercredential controller launch');
-        /*
-        var lastUserId = localStorage.getItem('userid');
-        var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
 
-        if( userObject !== null ){
+        loginmodule = this.getGenericLoginForm();
+        registrationCardPanel = this.getRegistrationCardPanel();
+        var host = MyApp.app.getHost();
+        var loginUrl = 'http://' + host + '/tusers?find=ByUseridEqualsAndPasswordEquals';
+        loginmodule.getInitialConfig().loginUrl = loginUrl;
 
-        this.populateUserResources(userObject);
-        Ext.create('MyApp.view.MainTabPanel', {fullscreen: true});
-        //Ext.Viewport.setActiveItem({xtype : 'mainTabPanel' });
-    }else {
-        var landingCardPanel = Ext.create('MyApp.view.LandingCardPanel', {fullscreen: true});
-        //Ext.Viewport.setActiveItem({xtype : 'landingCardPanel' });
-        var useridField = landingCardPanel.down('#userIdItemId');
-        useridField.setValue(lastUserId);
-    }
-    */
+        var registrationUrl = 'http://' + host + '/tusers';
+
+        registrationCardPanel.getInitialConfig().registrationUrl = registrationUrl;
+
+
+
     }
 
 });

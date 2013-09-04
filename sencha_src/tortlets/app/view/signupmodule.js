@@ -18,7 +18,7 @@ Ext.define('MyApp.view.signupmodule', {
     alias: 'widget.registrationCardPanel',
 
     config: {
-        registrationUrl: 'http://localhost:8080/tusers',
+        registrationUrl: 'dummy',
         base64JsLocation: 'static/js/Base64.js',
         itemId: 'registrationCardPanelItemId',
         layout: {
