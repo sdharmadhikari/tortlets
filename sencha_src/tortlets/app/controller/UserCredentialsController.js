@@ -59,6 +59,11 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var userid = quickSignupForm.down('#firstNameAsUserId');
         var wordYouLike = quickSignupForm.down('#wordYouLike');
 
+        var host = MyApp.app.getHost();
+        var registrationUrl = 'http://' + host + registrationCardPanel.getInitialConfig().registrationUrl;
+
+        registrationCardPanel.getInitialConfig().registrationUrl = registrationUrl;
+
         signOutButton.hide();
         userid.setValue('');
         wordYouLike.setValue('');
@@ -237,23 +242,6 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         userid.setValue(userObject.userid);
         password.setValue(userObject.plainPassword);
         readablePassword.setValue(userObject.plainPassword);
-    },
-
-    launch: function() {
-        console.log('usercredential controller launch');
-
-        loginmodule = this.getGenericLoginForm();
-        registrationCardPanel = this.getRegistrationCardPanel();
-        var host = MyApp.app.getHost();
-        var loginUrl = 'http://' + host + '/tusers?find=ByUseridEqualsAndPasswordEquals';
-        loginmodule.getInitialConfig().loginUrl = loginUrl;
-
-        var registrationUrl = 'http://' + host + '/tusers';
-
-        registrationCardPanel.getInitialConfig().registrationUrl = registrationUrl;
-
-
-
     }
 
 });

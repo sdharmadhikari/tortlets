@@ -209,7 +209,8 @@
                 "designer|displayName": "TortoiseRestProxy",
                 "url": "http://dummy.url",
                 "headers": [
-                    "{'Accept' : 'application/json'}"
+                    "{'Accept' : 'application/json'\r",
+                    "}"
                 ],
                 "appendId": false
             },

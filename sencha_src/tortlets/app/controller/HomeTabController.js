@@ -48,6 +48,7 @@ Ext.define('MyApp.controller.HomeTabController', {
 
     onTodaysTortletsListItemTap: function(dataview, index, target, record, e, eOpts) {
         var homeTabController = this;
+
         Ext.Msg.confirm('', 'Done with Tortlet ?', function(buttonId,value,opt) { 
 
             if(buttonId === 'yes') {

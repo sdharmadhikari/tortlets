@@ -105,11 +105,12 @@ public class TortoiseController {
     // Really dont want to have this method and want to handle everything in aspect but
     // i can not access tortoise object after persist (with id populated) in aspect !
     @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
-    public ResponseEntity<String> createFromJson(@RequestBody String json) {
+    public ResponseEntity<String> createFromJson(@RequestBody String json, @RequestHeader("Today-Day") Integer todayDay ) {
+        System.out.println("Today-Day : " + todayDay);
         Tortoise tortoise = Tortoise.fromJsonToTortoise(json);
         tortoise.persist();
 
-        Tuser.processTortoise(tortoise);
+        Tuser.processTortoise(tortoise,todayDay);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(tortoise.toJson(),headers, HttpStatus.CREATED);

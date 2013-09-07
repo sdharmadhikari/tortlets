@@ -28,6 +28,7 @@ Ext.application({
         'Ext.MessageBox'
     ],
     viewport: {
+        itemId: 'viewport',
         layout: {
             type: 'fit'
         }
@@ -88,8 +89,10 @@ Ext.application({
         var lastUserId = localStorage.getItem('userid');
         var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
 
-        if( userObject !== null ){
-            var credentialController = MyApp.app.getController('MyApp.controller.UserCredentialsController');
+        var credentialController = MyApp.app.getController('MyApp.controller.UserCredentialsController');
+
+        if( userObject !== null ){ 
+
             console.log('populate user resources');
             credentialController.populateUserResources(userObject);
             console.log('done populte user resoures');
@@ -128,15 +131,17 @@ Ext.application({
     },
 
     getHost: function() {
-        var env = 'home' ; 
+        var env = 'home' ; // Change this as required.
 
         var host = '';
         if( env === 'home'){
             host = '192.168.0.105:8080';   
         }else if(env === 'office'){
             host = '172.26.0.151:8080';   
-        }else{
+        }else if(env === 'appfog'){
             host = 'tortlets.aws.af.cm';  
+        }else if(env === 'cloudfoundry'){
+            host = 'tortlets.cfapps.io';     
         }
 
         return host;

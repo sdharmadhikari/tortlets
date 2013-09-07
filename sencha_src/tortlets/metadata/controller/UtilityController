@@ -33,7 +33,7 @@
                     "//console.log('operation.hasException() '+ operation.hasException());\r",
                     "\r",
                     "if(operation.hasException()) {\r",
-                    "    \r",
+                    "\r",
                     "    Ext.Msg.alert('','Server error, try later',Ext.emptyFn);\r",
                     "    return;\r",
                     "}else if(records.length === 0){\r",

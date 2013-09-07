@@ -337,6 +337,12 @@
                     "operation.success = this.tortoiseSave;\r",
                     "operation.failure = function() {Ext.Msg.alert('Server error, try later','',Ext.emptyFn);return;};\r",
                     "\r",
+                    "var tProxy = newOrOldTortoise.getProxy();\r",
+                    "var headers = tProxy.getHeaders();\r",
+                    "var intDay = new Date().getDay();\r",
+                    "intDay = intDay === 0 ? 7 : intDay; // On server side sunday is 7 not zero, rest is same\r",
+                    "headers[\"Today-Day\"] = intDay;\r",
+                    "tProxy.setHeaders(headers);\r",
                     "\r",
                     "if(newStatus === 'true'){    \r",
                     "    newOrOldTortoise.set('userid', userid);\r",
@@ -539,7 +545,7 @@
             "userConfig": {
                 "fn": "onTortoiseDetailsBackHorizontalButtonTap",
                 "implHandler": [
-                    "alert('remove this alert if you see this');\r",
+                    "\r",
                     "var tortoiseListPanel = this.getTortoiseListPanel();\r",
                     "var slideConfig =  { type : 'slide', direction : 'right'}; \r",
                     "\r",

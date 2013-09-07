@@ -129,8 +129,8 @@
      */
     "orientations": [
         "portrait",
-        "landscapeLeft",
-        "landscapeRight",
+     /*   "landscapeLeft", */
+     /*   "landscapeRight",*/
         "portraitUpsideDown"
     ]
 }

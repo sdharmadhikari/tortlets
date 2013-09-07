@@ -131,7 +131,7 @@ public class Tuser {
                     }
                 }
 
-                processTortoise(tortoise);
+                processTortoise(tortoise,null);
 
             }
         }
@@ -139,9 +139,14 @@ public class Tuser {
     }
 
     @Transactional
-    public static void processTortoise(Tortoise tortoise){
+    public static void processTortoise(Tortoise tortoise, Integer today){
         DateTime jdTime = new DateTime();
-        int dayOfWeek = jdTime.getDayOfWeek();
+        int dayOfWeek = 0;
+        if(today == null){
+            dayOfWeek = jdTime.getDayOfWeek();
+        }else{
+            dayOfWeek = today.intValue();
+        }
         boolean shouldCreate = false;
         Dream dream = Dream.findDream(tortoise.getDream().getId()); // Have to do this again because if calling from
         // TortoiseController, dream is detached. (even if I get tortoise persisted from using findTortoise !

@@ -1,9 +1,9 @@
 t-bugs
 
-Done touch action not working sometimes.
 layout problem of home tab.
+Today or Pending tabs must be refreshed when app pops up.
+Ahh - Fix the problem of day cretion. If today here wednesday, it should create today . 
 
-try changing some code and see if only partial file getting loaded.
 Try alert mechanism "App is updated, do you want to update"
 
 
@@ -11,15 +11,19 @@ Try alert mechanism "App is updated, do you want to update"
 
 
 Bugs
-http://localhost:8080/tusers?_dc=1377219786603 405 (Method Not Allowed)  When updating user profile.
+
+Has to be Back button when snap sign on is selected.
+Tse score not yet implemented (with tse images)
+Not using ellipse anywhere to cut the longer sentence
+
 When new user is genearated after sign out, pie chart shows same data.
 Does Tuser save has failure handling ?
 When dream tab is selected, and server down, it does not show error.
 When Your score tab is shown, it does not show, server error.
 Back to dreams now scrolls in direction "up", i think that is only in one condition, either old or new dream.
-Not using ellipse anywhere to cut the longer sentence
-Has to be Back button when snap sign on is selected.
-Tse score not yet implemented (with tse images)
+
+
+
 Login i not ready
 Flash i not ready
 small tse bg color change

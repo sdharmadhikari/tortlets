@@ -1,0 +1,13 @@
+--- 
+applications: 
+- name: tortlets
+  path: target/tortlets-0.1.war
+  url: tortlets.cfapps.io
+  instances: 1
+  services: 
+    mypostgresql: 
+      label: elephantsql
+      plan: turtle
+      provider: elephantsql
+      version: n/a
+  memory: 512M

@@ -286,6 +286,12 @@ Ext.define('MyApp.controller.DreamsTabController', {
         operation.success = this.tortoiseSave;
         operation.failure = function() {Ext.Msg.alert('Server error, try later','',Ext.emptyFn);return;};
 
+        var tProxy = newOrOldTortoise.getProxy();
+        var headers = tProxy.getHeaders();
+        var intDay = new Date().getDay();
+        intDay = intDay === 0 ? 7 : intDay; // On server side sunday is 7 not zero, rest is same
+        headers["Today-Day"] = intDay;
+        tProxy.setHeaders(headers);
 
         if(newStatus === 'true'){    
             newOrOldTortoise.set('userid', userid);
@@ -316,7 +322,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
     },
 
     onTortoiseDetailsBackHorizontalButtonTap: function(button, e, eOpts) {
-        alert('remove this alert if you see this');
+
         var tortoiseListPanel = this.getTortoiseListPanel();
         var slideConfig =  { type : 'slide', direction : 'right'}; 
 

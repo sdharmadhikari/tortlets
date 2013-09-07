@@ -18,7 +18,7 @@ Ext.define('MyApp.view.loginmodule', {
     alias: 'widget.genericLoginForm',
 
     config: {
-        loginUrl: 'dummy',
+        loginUrl: '/tusers?find=ByUseridEqualsAndPasswordEquals',
         itemId: 'loginFormItemId',
         listeners: [
             {
@@ -114,8 +114,11 @@ Ext.define('MyApp.view.loginmodule', {
         userIdField.setValue('');
         passwordField.setValue('');
 
-        var loginUrl = me.getInitialConfig().loginUrl;
+        var host = MyApp.app.getHost();
+        var loginUrl = 'http://' + host + me.getInitialConfig().loginUrl;
+        me.getInitialConfig().loginUrl = loginUrl;
 
+        Ext.Viewport.setMasked({xtype: 'loadmask'});
         Ext.Ajax.request({
             url: loginUrl,
             method: 'get',
@@ -126,7 +129,8 @@ Ext.define('MyApp.view.loginmodule', {
                 userid: userid,
                 password: plainPassword
             },
-            success: function (response) {        
+            success: function (response) { 
+                Ext.Viewport.setMasked(false);
                 var loginResponse = Ext.JSON.decode(response.responseText);
                 var userObject = loginResponse[0];
                 if (loginResponse.length === 1 && userObject.userid === userid) {
