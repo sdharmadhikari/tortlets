@@ -77,6 +77,7 @@ Ext.define('MyApp.view.HomePage', {
                         items: [
                             {
                                 xtype: 'segmentedbutton',
+                                name: 'mainPageSegmentedButton',
                                 centered: true,
                                 docked: 'bottom',
                                 ui: '',

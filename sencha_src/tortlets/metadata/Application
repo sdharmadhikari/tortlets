@@ -185,7 +185,7 @@
             "userConfig": {
                 "fn": "getHost",
                 "implHandler": [
-                    "var env = 'home' ; // Change this as required.\r",
+                    "var env = 'cloudfoundry' ; // Change this as required.\r",
                     "\r",
                     "var host = '';\r",
                     "if( env === 'home'){\r",

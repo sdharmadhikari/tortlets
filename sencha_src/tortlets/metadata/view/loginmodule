@@ -190,7 +190,7 @@
                     "\r",
                     "var host = MyApp.app.getHost();\r",
                     "var loginUrl = 'http://' + host + me.getInitialConfig().loginUrl;\r",
-                    "me.getInitialConfig().loginUrl = loginUrl;\r",
+                    "//me.getInitialConfig().loginUrl = loginUrl;\r",
                     "\r",
                     "Ext.Viewport.setMasked({xtype: 'loadmask'});\r",
                     "Ext.Ajax.request({\r",
@@ -222,6 +222,7 @@
                     "        }\r",
                     "    },\r",
                     "    failure: function (response) {\r",
+                    "        Ext.Viewport.setMasked(false);\r",
                     "        me.showSignInFailedMessage('Server error. Please try again later.');\r",
                     "    }\r",
                     "});"

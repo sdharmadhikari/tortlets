@@ -107,9 +107,10 @@ Ext.define('MyApp.controller.HomeTabController', {
         var utility = MyApp.app.getController('UtilityController');
         var storeLoadCallback = utility.storeLoadCallback;
 
+        Ext.Viewport.setMasked({xtype: 'loadmask'});
+
         var url = store.getProxy().getUrl();
         var today = MyApp.app.getToday();
-
         var todayUrl = url + '&createdOn=' + today;
         store.getProxy().setUrl(todayUrl);
         store.load(storeLoadCallback);
@@ -128,6 +129,8 @@ Ext.define('MyApp.controller.HomeTabController', {
         var tortletListPanel = this.getTortletListPanel();
         var utility = MyApp.app.getController('UtilityController');
         var storeLoadCallback = utility.storeLoadCallback;
+
+        Ext.Viewport.setMasked({xtype: 'loadmask'});
 
         incompleteTortletsStore.load(storeLoadCallback);
         tortletsListsContainerPanel.setActiveItem(tortletListPanel);

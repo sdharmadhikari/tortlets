@@ -32,6 +32,8 @@
                     "//console.log('operation.getResultSet() '+ operation.getResultSet());\r",
                     "//console.log('operation.hasException() '+ operation.hasException());\r",
                     "\r",
+                    "Ext.Viewport.setMasked(false);\r",
+                    "\r",
                     "if(operation.hasException()) {\r",
                     "\r",
                     "    Ext.Msg.alert('','Server error, try later',Ext.emptyFn);\r",

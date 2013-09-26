@@ -23,7 +23,11 @@ Ext.define('MyApp.controller.UserCredentialsController', {
             genericLoginForm: 'genericLoginForm',
             registrationCardPanel: 'registrationCardPanel',
             mainTabPanel: 'mainTabPanel',
-            registrationPage1: '#registrationPage1'
+            registrationPage1: '#registrationPage1',
+            tortletsListsContainerPanel: 'tortletsListsContainerPanel',
+            todaysTortletListPanel: 'todaysTortletListPanel',
+            showTodayListButton: 'button[name=\'showTodayListButton\']',
+            mainPageSegmentedButton: 'segmentedbutton[name=\'mainPageSegmentedButton\']'
         },
 
         control: {
@@ -76,10 +80,16 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var landingCardPanel = this.getLandingCardPanel();
         var mainTabPanel = this.getMainTabPanel();
         var homeTabCardPanel = this.getHomeTabCardPanel();
+        var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();
+        var todaysTortletListPanel = this.getTodaysTortletListPanel();
+        var mainPageSegmentedButton = this.getMainPageSegmentedButton();
+        var showTodayListButton = this.getShowTodayListButton();
 
         this.populateUserInfo(userObject);
         this.populateUserResources(userObject);
 
+        mainPageSegmentedButton.setPressedButtons(showTodayListButton);
+        tortletsListsContainerPanel.setActiveItem(todaysTortletListPanel);
         mainTabPanel.setActiveItem(homeTabCardPanel);
         landingCardPanel.animateActiveItem(mainTabPanel, { type: 'slide'});
     },
@@ -172,6 +182,8 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
         proxy.setUrl('http://' + host + '/tortlets?find=ByUseridEqualsAndCompleted&userid=' +userid);
+
+        //incompleteTortletsStore.load(storeLoadCallback);
 
         //dreamsStore
         var dreamsStore = Ext.getStore('dreamsStore');

@@ -131,7 +131,7 @@ Ext.application({
     },
 
     getHost: function() {
-        var env = 'home' ; // Change this as required.
+        var env = 'cloudfoundry' ; // Change this as required.
 
         var host = '';
         if( env === 'home'){

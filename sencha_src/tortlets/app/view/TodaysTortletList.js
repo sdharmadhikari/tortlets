@@ -43,7 +43,7 @@ Ext.define('MyApp.view.TodaysTortletList', {
             if(records.length === 0){
                 todaysTortletList.setEmptyText('You need to have dreams to have Tortlets');
             }else{
-                todaysTortletList.setEmptyText('Great ! You are done for today !');
+                todaysTortletList.setEmptyText('Great ! You are done for today ! Check your pending list to make up');
             }   
         }, this);
 

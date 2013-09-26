@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="tortlets/list">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/list.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/show">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/show.jspx"/>
+    </definition>
+
+
+<definition extends="default" name="tortlets/findTortletsByTuserAndCreatedOnEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByTuserAndCreatedOnEquals.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByCreatedOnEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByCreatedOnEquals.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByTortoiseAndCreatedOnEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByTortoiseAndCreatedOnEquals.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByCompletedNot">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByCompletedNot.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/update">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/update.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByCompleted">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByCompleted.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByUseridEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByUseridEquals.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByUseridEqualsAndCreatedOnEquals">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByUseridEqualsAndCreatedOnEquals.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByUseridEqualsAndCreatedOnEqualsAndCompleted.jspx"/>
+    </definition>
+<definition extends="default" name="tortlets/findTortletsByUseridEqualsAndCompleted">
+        <put-attribute name="body" value="/WEB-INF/views/tortlets/findTortletsByUseridEqualsAndCompleted.jspx"/>
+    </definition>
+</tiles-definitions>

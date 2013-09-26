@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_softrism_tortlets_domain_Dream" items="${dreams}" z="hZ07JiSWj7553B+kM8H+V6zC6+E=">
+        <table:table data="${dreams}" id="l_com_softrism_tortlets_domain_Dream" path="/dreams" z="uCSCxHaQWKOIs7jcxTx5iVVSptQ=">
+            <table:column id="c_com_softrism_tortlets_domain_Dream_title" property="title" z="+zoFzjEt3dxzLcRBxbd2DgPrexk="/>
+            <table:column id="c_com_softrism_tortlets_domain_Dream_notes" property="notes" z="X9JuVTAjDIowxBk5Mif1dgCaADQ="/>
+            <table:column id="c_com_softrism_tortlets_domain_Dream_dreamColor" property="dreamColor" render="false" z="user-managed"/>
+            <table:column id="c_com_softrism_tortlets_domain_Dream_latestDreamScore" property="latestDreamScore" z="HgdtLOkSsVo/JIZN5or2dk+PCyw="/>
+            <table:column id="c_com_softrism_tortlets_domain_Dream_tortletsCreatedCount" property="tortletsCreatedCount" render="false" z="user-managed"/>
+            <table:column id="c_com_softrism_tortlets_domain_Dream_tortletsDeletedCount" property="tortletsDeletedCount" render="false" z="user-managed"/>
+        </table:table>
+    </page:list>
+</div>

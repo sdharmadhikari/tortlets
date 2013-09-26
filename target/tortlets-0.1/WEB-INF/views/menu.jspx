@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="user-managed">
+        <menu:category id="c_dream" z="ChwMvSsc4Uu/0MGutZMXVjK3Ex8=">
+            <menu:item id="i_dream_new" messageCode="global_menu_new" url="/dreams?form" z="WmXMGa8pyAAmGZIFgPtnIxODfJA="/>
+            <menu:item id="i_dream_list" messageCode="global_menu_list" render="false" url="/dreams?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
+            <menu:item id="fi_dream_useridequals" messageCode="global_menu_find" url="/dreams?find=ByUseridEquals&amp;userid" z="user-managed"/>
+        </menu:category>
+        <menu:category id="c_tortoise" z="sfGASZ0b2/JD6vmc8Yutp6c4Zk8=">
+            <menu:item id="i_tortoise_new" messageCode="global_menu_new" url="/tortoises?form" z="kZspn5GuYIPRVeMUTwPyi8OQhD8="/>
+            <menu:item id="i_tortoise_list" messageCode="global_menu_list" render="false" url="/tortoises?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
+            <menu:item id="fi_tortoise_useridequals" messageCode="global_menu_find" url="/tortoises?find=ByUseridEquals&amp;userid" z="user-managed"/>
+            <menu:item id="fi_tortoise_dreamanduseridequals" messageCode="global_menu_find" url="/tortoises?find=ByDreamAndUseridEquals&amp;form" z="LncIHJIU0bKHcyNViTJ+C+EiJ9I="/>
+        </menu:category>
+        <menu:category id="c_tortlet" z="ZWiWmxvOYEF+drCzwEfqRe9rNm0=">
+            <menu:item id="fi_tortlet_pending" messageCode="global_menu_find" render="false" url="/tortlets?find=ByCompleted&amp;NoForm" z=""/>
+            <menu:item id="fi_tortlet_completed" messageCode="global_menu_find" render="false" url="/tortlets?find=ByCompleted&amp;form" z=""/>
+            <menu:item id="fi_tortlet_tuserandcreatedonequals" messageCode="global_menu_find" render="false" url="/tortlets?find=ByTuserAndCreatedOnEquals&amp;form" z="user-managed"/>
+            <menu:item id="i_tortlet_list" messageCode="global_menu_list" render="false" url="/tortlets?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
+            <menu:item id="fi_tortlet_useridequals" messageCode="global_menu_find" render="false" url="/tortlets?find=ByUseridEquals&amp;form" z="user-managed"/>
+            <menu:item id="fi_tortlet_useridequalsandcreatedonequalsandcompleted_today" messageCode="global_menu_find" url="/tortlets?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted" z="user-managed"/>
+            <menu:item id="fi_tortlet_useridequalsandcompleted" messageCode="global_menu_find" url="/tortlets?find=ByUseridEqualsAndCompleted" z="user-managed"/>
+            <menu:item id="fi_tortlet_useridequalsandcreatedonequalsandcompleted" messageCode="global_menu_find" url="/tortlets?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&amp;form" z="1sHWc27qtWVl3ewR69FhGTjycqM="/>
+        </menu:category>
+        <menu:category id="c_tuser" z="2gdtQJwRJ1Y8PXU0RzJg6xHnRaU=">
+            <menu:item id="i_tuser_new" messageCode="global_menu_show" url="/tusers/9999" z="user-managed"/>
+            <menu:item id="i_tuser_list" messageCode="global_menu_list" render="false" url="/tusers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
+            <menu:item id="i_tuser_new" messageCode="global_menu_new" url="/tusers?form" z="user-managed"/>
+            <menu:item id="fi_tuser_useridequals" messageCode="global_menu_find" render="false" url="/tusers?find=ByUseridEquals&amp;form" z="user-managed"/>
+            <menu:item id="fi_tuser_useridequalsandpasswordequals" messageCode="global_menu_find" url="/tusers?find=ByUseridEqualsAndPasswordEquals&amp;form" z="F4LOljiz3dc1mYaF3V+DCEs19TA="/>
+        </menu:category>
+    </menu:menu>
+</div>

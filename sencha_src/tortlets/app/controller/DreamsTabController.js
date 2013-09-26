@@ -144,7 +144,12 @@ Ext.define('MyApp.controller.DreamsTabController', {
         }
         var operation = {};
         operation.success = this.dreamSave;
-        operation.failure = function() {Ext.Msg.alert('Server error, try later','',Ext.emptyFn);return;};
+        operation.failure = function() {
+            Ext.Msg.alert('Server error, try later','',Ext.emptyFn);
+            Ext.Viewport.setMasked(false);
+        return;};
+
+        Ext.Viewport.setMasked({xtype: 'loadmask'});
 
         if(newStatus === 'true'){ 
             newOrOldDream.set('userid', userid);
@@ -189,6 +194,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         dreamDetails.updateRecord(dream);
 
+        Ext.Viewport.setMasked({xtype: 'loadmask'});
 
         Ext.Msg.confirm('', "Dream and it's tortoises will be deleted !", function(buttonId,value,opt) {
 
@@ -202,13 +208,14 @@ Ext.define('MyApp.controller.DreamsTabController', {
                         // store list does not get refreshed.                
                         dreamListCardPanel.animateActiveItem(dreamListPanel, { type : 'slide', direction : 'right'});
                     },
-                    failure : function(record, operation) { Ext.Msg.alert('','Server error, try later',Ext.emptyFn);}
+                    failure : function(record, operation) { Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
+                        Ext.Viewport.setMasked({xtype: 'loadmask'});}
 
-                });
+                    });
 
-            }
+                }
 
-        });
+            });
 
 
     },
@@ -284,7 +291,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var operation = {};
         operation.success = this.tortoiseSave;
-        operation.failure = function() {Ext.Msg.alert('Server error, try later','',Ext.emptyFn);return;};
+        operation.failure = function() {Ext.Msg.alert('Server error, try later','',Ext.emptyFn);
+            Ext.Viewport.setMasked(false);
+        return;};
 
         var tProxy = newOrOldTortoise.getProxy();
         var headers = tProxy.getHeaders();
@@ -292,6 +301,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
         intDay = intDay === 0 ? 7 : intDay; // On server side sunday is 7 not zero, rest is same
         headers["Today-Day"] = intDay;
         tProxy.setHeaders(headers);
+
+        Ext.Viewport.setMasked({xtype: 'loadmask'});
 
         if(newStatus === 'true'){    
             newOrOldTortoise.set('userid', userid);
@@ -347,6 +358,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         Ext.Msg.confirm('', "Tortoise will be deleted !", function(buttonId,value,opt) {
 
             if(buttonId === 'yes') { 
+                Ext.Viewport.setMasked({xtype: 'loadmask'});
                 tortoise.getProxy().setAppendId(true);
                 tortoise.erase({ 
                     scope : this,
@@ -359,7 +371,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
                         dreamListCardPanel.animateActiveItem(tortoiseListPanel, { type : 'slide', direction : 'right'});
                     },
-                    failure : function(record, operation) { alert('delete failed');}
+                    failure : function(record, operation) { Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
+                    Ext.Viewport.setMasked(false);}
 
                 });
 
@@ -400,9 +413,11 @@ Ext.define('MyApp.controller.DreamsTabController', {
         tortoisesStore.load(function(records, operation, success) {
             if(operation.hasException()) {
                 Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
+                Ext.Viewport.setMasked(false);
                 return;
             }else if(records.length === 0){
-                tortoisesStore.removeAll(); 
+                tortoisesStore.removeAll();
+                Ext.Viewport.setMasked(false);
             }
             tortoiseListPanel.down('#tortoiseListTitleBar').setTitle(savedModel.get('title'));
             dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});  
@@ -427,6 +442,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         proxy.setUrl(urlWithDream);
         tortoisesStore.load(function(records, operation, success) {
             // Ideally wantto remove this block and reuse storeLoadCallback
+            Ext.Viewport.setMasked(false);
             if(operation.hasException()) {
                 Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
                 return;

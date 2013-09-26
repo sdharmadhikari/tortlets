@@ -27,6 +27,8 @@ Ext.define('MyApp.controller.UtilityController', {
         //console.log('operation.getResultSet() '+ operation.getResultSet());
         //console.log('operation.hasException() '+ operation.hasException());
 
+        Ext.Viewport.setMasked(false);
+
         if(operation.hasException()) {
 
             Ext.Msg.alert('','Server error, try later',Ext.emptyFn);

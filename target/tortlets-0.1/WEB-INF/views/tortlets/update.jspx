@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_softrism_tortlets_domain_Tortlet" modelAttribute="tortlet" path="/tortlets" versionField="Version" z="R9QtGZFC7/0mp3AK0JJGCBfP5s0=">
+        <field:input field="title" id="c_com_softrism_tortlets_domain_Tortlet_title" required="true" z="a1sosTQxxAb3yAmXgIxEobSVvAQ="/>
+        <field:textarea field="notes" id="c_com_softrism_tortlets_domain_Tortlet_notes" z="jXHkdLRDatZq0FTgX5OaLQ1hI40="/>
+        <field:datetime dateTimePattern="${tortlet_createdon_date_format}" field="createdOn" id="c_com_softrism_tortlets_domain_Tortlet_createdOn" type="hidden" z="user-managed"/>
+        <field:datetime dateTimePattern="${tortlet_updatedon_date_format}" field="updatedOn" id="c_com_softrism_tortlets_domain_Tortlet_updatedOn" type="hidden" z="user-managed"/>
+        <field:datetime dateTimePattern="${tortlet_completedon_date_format}" field="completedOn" id="c_com_softrism_tortlets_domain_Tortlet_completedOn" type="hidden" z="user-managed"/>
+        <field:select field="tortoise" id="c_com_softrism_tortlets_domain_Tortlet_tortoise" itemValue="id" items="${tortoises}" path="/tortoises" z="user-managed"/>
+        <field:checkbox field="completed" id="c_com_softrism_tortlets_domain_Tortlet_completed" z="Zlck5MXov3r6ciERUKQsmUOPMFo="/>
+        <field:input field="userid" id="c_com_softrism_tortlets_domain_Tortlet_userid" render="false" z="user-managed"/>
+    </form:update>
+</div>

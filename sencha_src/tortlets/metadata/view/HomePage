@@ -135,6 +135,7 @@
                             "userConfig": {
                                 "container|align": "end",
                                 "container|pack": "end",
+                                "name": "mainPageSegmentedButton",
                                 "centered": true,
                                 "docked": "bottom",
                                 "margin": null,
@@ -142,6 +143,13 @@
                                 "designer|displayName": "Today+Pending+Tortlets"
                             },
                             "designerId": "19fd46fe-4b58-4dc0-aca0-5b959d8a24e3",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "name",
+                                    "type": "string"
+                                }
+                            ],
                             "cn": [
                                 {
                                     "type": "Ext.Button",

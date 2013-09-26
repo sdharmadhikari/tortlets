@@ -116,7 +116,7 @@ Ext.define('MyApp.view.loginmodule', {
 
         var host = MyApp.app.getHost();
         var loginUrl = 'http://' + host + me.getInitialConfig().loginUrl;
-        me.getInitialConfig().loginUrl = loginUrl;
+        //me.getInitialConfig().loginUrl = loginUrl;
 
         Ext.Viewport.setMasked({xtype: 'loadmask'});
         Ext.Ajax.request({
@@ -148,6 +148,7 @@ Ext.define('MyApp.view.loginmodule', {
                 }
             },
             failure: function (response) {
+                Ext.Viewport.setMasked(false);
                 me.showSignInFailedMessage('Server error. Please try again later.');
             }
         });

@@ -65,8 +65,9 @@ Ext.define('MyApp.view.MainTabPanel', {
 
         if(value.xtype === 'dreamListCardPanel'){
             var dreamsStore = Ext.getStore('dreamsStore');
-            dreamsStore.load(storeLoadCallBack);
+            //dreamsStore.load(storeLoadCallBack);
         }else if(value.xtype === 'homeTabCardPanel'){
+            /* this is commented, too many uncessary server calls
             var tortletsStore = Ext.getStore('incompleteTortletsStore');
             tortletsStore.load(storeLoadCallBack);
             var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
@@ -76,13 +77,17 @@ Ext.define('MyApp.view.MainTabPanel', {
             todaysTortletsStore.getProxy().setUrl(todayUrl);
             todaysTortletsStore.load(storeLoadCallBack);
             todaysTortletsStore.getProxy().setUrl(todayOrgUrl);
+            */
 
         }else if(value.xtype === 'scoreTabCardPanel') {
 
+            Ext.Viewport.setMasked({xtype: 'loadmask'});
             MyApp.model.Tuser.load(MyApp.app.currentUser.get('id'), {
                 scope: this,
                 failure: function(record, operation) {
-                    //do something if the load failed
+                    Ext.Viewport.setMasked(false);
+                    Ext.Msg.alert('Server error, try later','',Ext.emptyFn);
+
                 },
                 success: function(record, operation) {
                     MyApp.app.currentUser = record;
@@ -103,6 +108,7 @@ Ext.define('MyApp.view.MainTabPanel', {
                         y: 20
                     });
 
+                    Ext.Viewport.setMasked(false);
                     userScoreGuageChart.getSurface().removeAll();
                     userScoreGuageChart.getSurface().add(scoreTextOnChart);
                     scoreTextOnChart.show(true);

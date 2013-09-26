@@ -1,16 +1,11 @@
 t-bugs
 
+user update does not work any more - giving server error.
+tortlets got mixed up with other dr (check for day 09/22/13, scratch programming got into maintain health.)
+If dream lenght is longer, next page shows bad title.(can i use ellipse)
 layout problem of home tab.
 Today or Pending tabs must be refreshed when app pops up.
-Ahh - Fix the problem of day cretion. If today here wednesday, it should create today . 
-
-Try alert mechanism "App is updated, do you want to update"
-
-
-
-
-
-Bugs
+Try several times sign in with other users, sometimes shows server error.
 
 Has to be Back button when snap sign on is selected.
 Tse score not yet implemented (with tse images)
@@ -21,6 +16,7 @@ Does Tuser save has failure handling ?
 When dream tab is selected, and server down, it does not show error.
 When Your score tab is shown, it does not show, server error.
 Back to dreams now scrolls in direction "up", i think that is only in one condition, either old or new dream.
+Try alert mechanism "App is updated, do you want to update"
 
 
 

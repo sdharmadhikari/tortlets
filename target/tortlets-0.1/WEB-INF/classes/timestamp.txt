@@ -1,0 +1,24 @@
+<insert into APAUTOMATION.VENDOR (ACQUIRER_MERCHANT_ID, ACQUIRER_TERMINAL_ID, CLIENT_FK, CONTACT_INFO_FK, CREATED_BY, CREATED_ON, EMAIL_NOTIFICATION, EXACT_PAY, FAX_NOTIFICATION, OPERATOR_ID, OPERATOR_PASSWORD, PAYMENT_GATEWAY_FK, PUSH_PAY, STATUS, TAX_PAYER_ID, UPDATED_BY, UPDATED_ON, VENDOR_ID, VENDOR_NAME, VENDOR_PAYMENT_TYPE, ID) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)>
+2012-12-26 14:04:34,915 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [1] as [VARCHAR] - <null>> acq_merchant_id
+2012-12-26 14:04:34,915 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [2] as [VARCHAR] - <null>> acq_terminal_id
+2012-12-26 14:04:34,915 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [3] as [NUMERIC] - 1000> client_fk (good)
+2012-12-26 14:04:34,915 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [4] as [NUMERIC] - 8715> confact-info_fk (good)
+2012-12-26 14:04:34,915 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [5] as [VARCHAR] - MerchantUploaderBatch> createby
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [6] as [VARCHAR] - Wed Dec 26 14:04:34 PST 2012> cratedOn
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [7] as [NUMERIC] - 1> email_notification (good)
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [8] as [NUMERIC] - 0> exact_pay (good)
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [9] as [NUMERIC] - 1> fax_notification (good)
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [10] as [VARCHAR] - <null>>
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [11] as [VARCHAR] - <null>>
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [12] as [NUMERIC] - <null>>
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [13] as [NUMERIC] - <null>>
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [14] as [VARCHAR] - ACTIVE> status
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [15] as [VARCHAR] - <null>> 
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [16] as [VARCHAR] - MerchantUploaderBatch> updatedBy
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [17] as [VARCHAR] - Wed Dec 26 14:04:34 PST 2012> updatedOn
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [18] as [VARCHAR] - 1111> vendorId
+2012-12-26 14:04:34,916 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [19] as [VARCHAR] - Merchant Name 1111> vendorName
+2012-12-26 14:04:34,917 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [20] as [VARCHAR] - > vendorPaymentType
+2012-12-26 14:04:34,917 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] - <binding parameter [21] as [NUMERIC] - 10467> id
+
+ORA-01858: a non-numeric character was found where a numeric was expected

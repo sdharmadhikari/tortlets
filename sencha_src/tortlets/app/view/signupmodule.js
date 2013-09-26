@@ -135,6 +135,7 @@ Ext.define('MyApp.view.signupmodule', {
 
                                     var registrationUrl = registrationCardPanel.getInitialConfig().registrationUrl;
 
+                                    Ext.Viewport.setMasked({xtype: 'loadmask'});
                                     Ext.Ajax.request({
                                         url: registrationUrl,
                                         method: 'post',
@@ -161,9 +162,12 @@ Ext.define('MyApp.view.signupmodule', {
 
                                                 quickSignUpDoneForm.createdUserObject = createdUserObject;
                                                 quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
+                                                Ext.Viewport.setMasked(false);
                                                 registrationCardPanel.animateActiveItem(quickSignUpDoneForm, { type : 'slide'});
                                             } else {
-                                                alert('Either return userObject had no same userid or two objects returned');
+                                                Ext.Viewport.setMasked(false);
+                                                var errMsg = 'Server error, try later';
+                                                Ext.Msg.alert('',errMsg,Ext.emptyFn);
                                             }
                                         },
                                         failure: function (response) {
@@ -461,9 +465,11 @@ Ext.define('MyApp.view.signupmodule', {
                                     /////////////////////////////////////////////////////////////////
                                     var userObjectJson = Ext.JSON.encode(userObject);
 
-
+                                    var host = MyApp.app.getHost();
                                     var registrationUrl = registrationCardPanel.getInitialConfig().registrationUrl;
+                                    registrationUrl = 'http://' + host + registrationUrl;
 
+                                    Ext.Viewport.setMasked({xtype: 'loadmask'});
                                     Ext.Ajax.request({
                                         url: registrationUrl,
                                         method: 'put',
@@ -476,7 +482,7 @@ Ext.define('MyApp.view.signupmodule', {
                                         success: function (response) { 
 
                                             var updatedUserObject = Ext.JSON.decode(response.responseText);
-
+                                            Ext.Viewport.setMasked(false);
                                             if (updatedUserObject.updatedOn > userObject.updatedOn) {
                                                 updatedUserObject.plainPassword = userObject.password;
                                                 var tok = updatedUserObject.userid + ':' + updatedUserObject.plainPassword ;
@@ -487,15 +493,18 @@ Ext.define('MyApp.view.signupmodule', {
 
                                                 registrationCardPanel.fireEvent('signUpSuccess',updatedUserObject);
                                             } else {
+
                                                 var msg = 'Server error, please try later';
                                                 Ext.Msg.alert('',msg,Ext.emptyFn);  
                                             }
                                         },
                                         failure: function (response) {
                                             if(response.status === 409) {
+                                                Ext.Viewport.setMasked(false);
                                                 var msg = 'User id taken';
                                                 Ext.Msg.alert('',msg,Ext.emptyFn); 
                                             }else{
+                                                Ext.Viewport.setMasked(false);
                                                 var msg = 'Server error, please try later';
                                                 Ext.Msg.alert('',msg,Ext.emptyFn);    
                                             }
