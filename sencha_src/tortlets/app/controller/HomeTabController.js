@@ -24,7 +24,9 @@ Ext.define('MyApp.controller.HomeTabController', {
             todaysTortletListPanel: 'todaysTortletListPanel',
             tortletListPanel: 'tortletListPanel',
             tortletsListsContainerPanel: 'tortletsListsContainerPanel',
-            homePageHelpModal: 'homePageHelpModal'
+            homePageHelpModal: 'homePageHelpModal',
+            mainPageSegmentedButton: 'segmentedbutton[name=\'mainPageSegmentedButton\']',
+            showTodayListButton: 'button[name=\'showTodayListButton\']'
         },
 
         control: {
@@ -42,6 +44,9 @@ Ext.define('MyApp.controller.HomeTabController', {
             },
             "button[name='homePageHelpButton']": {
                 tap: 'onHomePageHelpButtonTap'
+            },
+            "button[name='homePageRefreshButton']": {
+                tap: 'onHomePageRefreshButtonTap'
             }
         }
     },
@@ -107,8 +112,6 @@ Ext.define('MyApp.controller.HomeTabController', {
         var utility = MyApp.app.getController('UtilityController');
         var storeLoadCallback = utility.storeLoadCallback;
 
-        Ext.Viewport.setMasked({xtype: 'loadmask'});
-
         var url = store.getProxy().getUrl();
         var today = MyApp.app.getToday();
         var todayUrl = url + '&createdOn=' + today;
@@ -129,8 +132,6 @@ Ext.define('MyApp.controller.HomeTabController', {
         var tortletListPanel = this.getTortletListPanel();
         var utility = MyApp.app.getController('UtilityController');
         var storeLoadCallback = utility.storeLoadCallback;
-
-        Ext.Viewport.setMasked({xtype: 'loadmask'});
 
         incompleteTortletsStore.load(storeLoadCallback);
         tortletsListsContainerPanel.setActiveItem(tortletListPanel);
@@ -183,6 +184,28 @@ Ext.define('MyApp.controller.HomeTabController', {
         myMsgObj.alert('','Pending tortlets older than 7 days get permanently deleted. <br/> You have to complete it before that to keep your score as high as possible', Ext.emptyFn);
 
         //myMsgObj.destroy ??
+
+    },
+
+    onHomePageRefreshButtonTap: function(button, e, eOpts) {
+        Ext.Viewport.setMasked({xtype: 'loadmask'});
+        var utility = MyApp.app.getController('UtilityController');
+        var storeLoadCallback = utility.storeLoadCallback;
+        var store = Ext.getStore('todaysTortletsStore');
+        var mainPageSegmentedButton = this.getMainPageSegmentedButton();
+        var showTodayListButton = this.getShowTodayListButton();
+        var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();
+        var todaysTortletListPanel = this.getTodaysTortletListPanel();
+
+        var url = store.getProxy().getUrl();
+        var today = MyApp.app.getToday();
+        var todayUrl = url + '&createdOn=' + today;
+        store.getProxy().setUrl(todayUrl);
+        store.load(storeLoadCallback);
+        store.getProxy().setUrl(url);
+
+        mainPageSegmentedButton.setPressedButtons(showTodayListButton);
+        tortletsListsContainerPanel.setActiveItem(todaysTortletListPanel);
 
     },
 

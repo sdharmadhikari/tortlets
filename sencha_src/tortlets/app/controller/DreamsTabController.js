@@ -134,7 +134,9 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var tempDreamId = MyApp.app.tempId;
 
         var newOrOldDream = dreamDetailsForm.getRecord();
+
         dreamDetailsForm.updateRecord(newOrOldDream);
+        alert(newOrOldDream.dirty);
         var errors = newOrOldDream.validate();
 
         if (!errors.isValid()) {
@@ -154,7 +156,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         if(newStatus === 'true'){ 
             newOrOldDream.set('userid', userid);
             newOrOldDream.setTuser(currentUser.getData());
-            /* IF u dont do this, id will be posted to server as 
+            /* IF u dont do following, id will be posted to server as 
             ext-record-<number>. That will result into exception */
             newOrOldDream.set('id',MyApp.app.tempId);
             newOrOldDream.save(operation);
@@ -395,7 +397,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var dreamsStore = Ext.getStore('dreamsStore');
         var tortoisesStore = Ext.getStore('tortoisesStore');
         var utility = MyApp.app.getController('UtilityController');
-        var storeLoadCallback = utility.storeLoadCallback;
+        var storeLoadCallback = dreamsTabController.dreamsLoadTortoiseLoad;
         var proxy = tortoisesStore.getProxy();
         var orgUrl = proxy.getUrl();
 
@@ -405,26 +407,23 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var dreamId = savedModel.get('id');
 
-        dreamsStore.load(storeLoadCallback);// Looks like this call can be async, so no
-        // no callback function is passed.
-
         var urlWithDream = orgUrl + '&dream=' + dreamId;
         proxy.setUrl(urlWithDream);
         tortoisesStore.load(function(records, operation, success) {
+            Ext.Viewport.setMasked(false);
             if(operation.hasException()) {
-                Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
-                Ext.Viewport.setMasked(false);
+                Ext.Msg.alert('','Server error, try later',Ext.emptyFn);        
                 return;
             }else if(records.length === 0){
-                tortoisesStore.removeAll();
-                Ext.Viewport.setMasked(false);
+                tortoisesStore.removeAll();        
             }
+            dreamsStore.load(storeLoadCallback);// Looks like this call can be async, so no
+            // no callback function is passed. And it is needed so that server data will return back 
+            // in case specifically new dream. 
             tortoiseListPanel.down('#tortoiseListTitleBar').setTitle(savedModel.get('title'));
             dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});  
             proxy.setUrl(orgUrl);
         },this);
-
-
 
     },
 
@@ -434,7 +433,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var tortoisesStore = Ext.getStore('tortoisesStore');
         var proxy = tortoisesStore.getProxy();
         var orgUrl = proxy.getUrl();
-
+        var utility = MyApp.app.getController('UtilityController');
+        var storeLoadCallBack = utility.storeLoadCallback;
 
         var dream = savedModel.get('dream');
         var dreamId = dream.id;
@@ -449,6 +449,17 @@ Ext.define('MyApp.controller.DreamsTabController', {
             }else if(records.length === 0){
                 tortoisesStore.removeAll(); 
             }
+            /* This one is needed if tortoise is created for today, front page should be refreshed right away */
+            var tortletsStore = Ext.getStore('incompleteTortletsStore');
+            tortletsStore.load(storeLoadCallBack);
+            var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
+            var todayOrgUrl = todaysTortletsStore.getProxy().getUrl();
+            var today = MyApp.app.getToday();
+            var todayUrl = todayOrgUrl + '&createdOn=' + today;
+            todaysTortletsStore.getProxy().setUrl(todayUrl);
+            todaysTortletsStore.load(storeLoadCallBack);
+            todaysTortletsStore.getProxy().setUrl(todayOrgUrl);
+            /* Closing comment above */
             dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide', direction : 'up'});
 
             proxy.setUrl(orgUrl);

@@ -113,6 +113,18 @@
                 "foreignKey": "tortoise"
             },
             "designerId": "51b19fec-6f63-4042-b1e1-6554376305f7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createdOn"
+            },
+            "designerId": "63e83c36-59db-426b-8511-ade1c8367edb"
         }
     ]
 }

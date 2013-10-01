@@ -50,6 +50,42 @@
                     "designerId": "8a3dcec9-3544-4be3-a0ec-4f49cd20b814"
                 }
             ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "tortoise.dream.latestDreamScore"
+            },
+            "designerId": "a7d83a4b-62c5-43ba-aee0-65095a0e2f83",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "sorterFn",
+                        "designer|params": [
+                            "first",
+                            "second"
+                        ],
+                        "implHandler": [
+                            "var name1 = first.data.tortoise.latestTortoiseScore;\r",
+                            "var name2 = second.data.tortoise.latestTortoiseScore;\r",
+                            "\r",
+                            "return name1 > name2 ? 1 : (name1 === name2 ? 0 : -1);"
+                        ]
+                    },
+                    "designerId": "44a2cce4-407d-4f34-a679-cac9d71883a0"
+                }
+            ]
         }
     ]
 }

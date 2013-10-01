@@ -24,9 +24,14 @@ Ext.define('MyApp.view.TodaysTortletList', {
         onItemDisclosure: false,
         variableHeights: true,
         itemTpl: [
-            'Today - {title}',
+            '{title}',
             '<br/>',
-            '<span class="smallFont">Dream: {tortoise.dream.title}</span>'
+            '<span class="smallFont">Dream: {tortoise.dream.title}</span>',
+            '<br/>',
+            '<span class="smallFont">{tortoise.tortletsCompletedCount} out of {tortoise.tortletsCreatedCount} completed</span>',
+            '',
+            '',
+            ''
         ],
         listeners: [
             {
@@ -39,8 +44,9 @@ Ext.define('MyApp.view.TodaysTortletList', {
     onListPainted: function(element, eOpts) {
         var todaysTortletList = this;
         var dreamStore = Ext.getStore('dreamsStore');
+        //var records = dreamStore.getAllCount(); was trying to remove following server call but bringing in bugs
         dreamStore.load(function(records, operation, success) {
-            if(records.length === 0){
+            if(records.length === 0){ 
                 todaysTortletList.setEmptyText('You need to have dreams to have Tortlets');
             }else{
                 todaysTortletList.setEmptyText('Great ! You are done for today ! Check your pending list to make up');

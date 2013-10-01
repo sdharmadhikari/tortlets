@@ -69,7 +69,17 @@ Ext.define('MyApp.view.HomePage', {
                 items: [
                     {
                         xtype: 'panel',
-                        flex: 1
+                        flex: 1,
+                        items: [
+                            {
+                                xtype: 'button',
+                                name: 'homePageRefreshButton',
+                                centered: true,
+                                docked: 'bottom',
+                                ui: 'action-small',
+                                iconCls: 'refresh'
+                            }
+                        ]
                     },
                     {
                         xtype: 'panel',
@@ -114,7 +124,7 @@ Ext.define('MyApp.view.HomePage', {
                                 centered: true,
                                 docked: 'bottom',
                                 ui: 'action-small',
-                                text: '?'
+                                text: '<b>?</b>'
                             }
                         ]
                     }

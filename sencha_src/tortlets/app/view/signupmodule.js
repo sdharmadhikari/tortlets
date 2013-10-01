@@ -467,7 +467,7 @@ Ext.define('MyApp.view.signupmodule', {
 
                                     var host = MyApp.app.getHost();
                                     var registrationUrl = registrationCardPanel.getInitialConfig().registrationUrl;
-                                    registrationUrl = 'http://' + host + registrationUrl;
+                                    //registrationUrl = 'http://' + host + registrationUrl;
 
                                     Ext.Viewport.setMasked({xtype: 'loadmask'});
                                     Ext.Ajax.request({

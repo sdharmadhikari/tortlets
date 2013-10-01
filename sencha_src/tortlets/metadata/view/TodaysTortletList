@@ -38,9 +38,14 @@
             "codeClass": null,
             "userConfig": {
                 "implHandler": [
-                    "Today - {title}\r",
+                    "{title}\r",
                     "<br/>\r",
-                    "<span class=\"smallFont\">Dream: {tortoise.dream.title}</span>"
+                    "<span class=\"smallFont\">Dream: {tortoise.dream.title}</span>\r",
+                    "<br/>\r",
+                    "<span class=\"smallFont\">{tortoise.tortletsCompletedCount} out of {tortoise.tortletsCreatedCount} completed</span>\r",
+                    "\r",
+                    "\r",
+                    ""
                 ],
                 "designer|displayName": "itemTpl"
             },
@@ -58,8 +63,9 @@
                 "implHandler": [
                     "var todaysTortletList = this;\r",
                     "var dreamStore = Ext.getStore('dreamsStore');\r",
+                    "//var records = dreamStore.getAllCount(); was trying to remove following server call but bringing in bugs\r",
                     "dreamStore.load(function(records, operation, success) {\r",
-                    "    if(records.length === 0){\r",
+                    "    if(records.length === 0){ \r",
                     "        todaysTortletList.setEmptyText('You need to have dreams to have Tortlets');\r",
                     "    }else{\r",
                     "        todaysTortletList.setEmptyText('Great ! You are done for today ! Check your pending list to make up');\r",

@@ -46,8 +46,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "direction": "DESC",
-                "property": "createdOn"
+                "property": "latestDreamScore"
             },
             "designerId": "db70f9e1-4a9d-48f4-b9e3-f0ab0ab65787"
         }

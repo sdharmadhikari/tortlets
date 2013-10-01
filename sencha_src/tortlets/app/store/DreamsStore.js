@@ -34,8 +34,7 @@ Ext.define('MyApp.store.DreamsStore', {
             }
         },
         sorters: {
-            direction: 'DESC',
-            property: 'createdOn'
+            property: 'latestDreamScore'
         }
     }
 });

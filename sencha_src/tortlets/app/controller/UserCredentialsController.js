@@ -48,11 +48,14 @@ Ext.define('MyApp.controller.UserCredentialsController', {
     onRegistrationCardPanelItemIdSignUpSuccess: function(userObject) {
         var landingCardPanel = this.getLandingCardPanel();
         var mainTabPanel = this.getMainTabPanel();
+        var homeTabCardPanel = this.getHomeTabCardPanel();
 
         this.populateUserInfo(userObject);
         this.populateUserResources(userObject);
 
+        mainTabPanel.setActiveItem(homeTabCardPanel);
         landingCardPanel.animateActiveItem(mainTabPanel, { type: 'slide'});
+
     },
 
     onLoginFormItemIdSignUpRequested: function(formpanel) {
@@ -126,6 +129,8 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var landingcardPanel = this.getLandingCardPanel();
         var useridField = landingcardPanel.down('#userIdItemId');
         var lastUserId = localStorage.getItem('userid');
+        var dreamsStore = Ext.getStore('dreamsStore');
+
 
         sessionStorage.setItem('userInfo', null);
 

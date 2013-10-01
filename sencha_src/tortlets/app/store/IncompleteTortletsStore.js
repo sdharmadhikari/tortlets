@@ -34,6 +34,16 @@ Ext.define('MyApp.store.IncompleteTortletsStore', {
             reader: {
                 type: 'json'
             }
+        },
+        grouper: {
+            groupFn: function(item) {
+                var d = new Date(item.get('createdOn'));
+                var datePart = d.getDate();
+                var monthPart = d.getMonth() + 1; //Months are zero based
+                var today = monthPart  + "/" + datePart + "," + MyApp.app.weekdayArray[d.getDay()];
+
+                return today;
+            }
         }
     }
 });

@@ -51,6 +51,40 @@
                     "designerId": "207d21af-e6bb-4d25-9c67-1f2d2c2be027"
                 }
             ]
+        },
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "21067caa-164d-4f1e-a793-f48de117f483",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "item"
+                        ],
+                        "implHandler": [
+                            "var d = new Date(item.get('createdOn'));\r",
+                            "var datePart = d.getDate();\r",
+                            "var monthPart = d.getMonth() + 1; //Months are zero based\r",
+                            "var today = monthPart  + \"/\" + datePart + \",\" + MyApp.app.weekdayArray[d.getDay()];\r",
+                            "\r",
+                            "return today;"
+                        ]
+                    },
+                    "designerId": "99f9334c-9e83-4aa1-af3d-41a351d2602d"
+                }
+            ]
         }
     ]
 }

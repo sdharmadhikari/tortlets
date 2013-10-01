@@ -121,8 +121,6 @@
                     "var utility = MyApp.app.getController('UtilityController');\r",
                     "var storeLoadCallback = utility.storeLoadCallback;\r",
                     "\r",
-                    "Ext.Viewport.setMasked({xtype: 'loadmask'});\r",
-                    "\r",
                     "var url = store.getProxy().getUrl();\r",
                     "var today = MyApp.app.getToday();\r",
                     "var todayUrl = url + '&createdOn=' + today;\r",
@@ -157,8 +155,6 @@
                     "var tortletListPanel = this.getTortletListPanel();\r",
                     "var utility = MyApp.app.getController('UtilityController');\r",
                     "var storeLoadCallback = utility.storeLoadCallback;\r",
-                    "\r",
-                    "Ext.Viewport.setMasked({xtype: 'loadmask'});\r",
                     "\r",
                     "incompleteTortletsStore.load(storeLoadCallback);\r",
                     "tortletsListsContainerPanel.setActiveItem(tortletListPanel);\r",
@@ -390,6 +386,68 @@
                 "selector": "homePageHelpModal"
             },
             "designerId": "2388173c-2cbf-4cb9-9728-c4b8af0a320e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onHomePageRefreshButtonTap",
+                "implHandler": [
+                    "Ext.Viewport.setMasked({xtype: 'loadmask'});\r",
+                    "var utility = MyApp.app.getController('UtilityController');\r",
+                    "var storeLoadCallback = utility.storeLoadCallback;\r",
+                    "var store = Ext.getStore('todaysTortletsStore');\r",
+                    "var mainPageSegmentedButton = this.getMainPageSegmentedButton();\r",
+                    "var showTodayListButton = this.getShowTodayListButton();\r",
+                    "var tortletsListsContainerPanel = this.getTortletsListsContainerPanel();\r",
+                    "var todaysTortletListPanel = this.getTodaysTortletListPanel();\r",
+                    "\r",
+                    "var url = store.getProxy().getUrl();\r",
+                    "var today = MyApp.app.getToday();\r",
+                    "var todayUrl = url + '&createdOn=' + today;\r",
+                    "store.getProxy().setUrl(todayUrl);\r",
+                    "store.load(storeLoadCallback);\r",
+                    "store.getProxy().setUrl(url);\r",
+                    "\r",
+                    "mainPageSegmentedButton.setPressedButtons(showTodayListButton);\r",
+                    "tortletsListsContainerPanel.setActiveItem(todaysTortletListPanel);\r",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='homePageRefreshButton']"
+            },
+            "designerId": "a40e55fd-37a3-4337-8f65-faba2e427645"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainPageSegmentedButton",
+                "selector": "segmentedbutton[name='mainPageSegmentedButton']"
+            },
+            "designerId": "ccc73ede-106f-4863-91f5-3ade1187efd3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "showTodayListButton",
+                "selector": "button[name='showTodayListButton']"
+            },
+            "designerId": "d2ef9bea-be4e-4529-bc3e-62ae8e9c6803"
         }
     ]
 }

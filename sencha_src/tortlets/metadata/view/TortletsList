@@ -13,7 +13,9 @@
         "designer|userAlias": "tortletsList",
         "scrollable": null,
         "emptyText": null,
+        "scrollToTopOnRefresh": false,
         "store": "incompleteTortletsStore",
+        "grouped": true,
         "onItemDisclosure": false,
         "variableHeights": true
     },

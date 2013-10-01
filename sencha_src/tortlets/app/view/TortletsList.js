@@ -19,7 +19,9 @@ Ext.define('MyApp.view.TortletsList', {
 
     config: {
         ui: 'round',
+        scrollToTopOnRefresh: false,
         store: 'incompleteTortletsStore',
+        grouped: true,
         onItemDisclosure: false,
         variableHeights: true,
         itemTpl: [

@@ -110,7 +110,33 @@
                     "userConfig": {
                         "layout|flex": 1
                     },
-                    "designerId": "f3abde88-ac87-49f8-bbd8-e798cac02f86"
+                    "designerId": "2f535d46-a15d-49ca-835e-c01615714afc",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "name": "homePageRefreshButton",
+                                "centered": true,
+                                "docked": "bottom",
+                                "ui": "action-small",
+                                "iconCls": "refresh",
+                                "text": null
+                            },
+                            "designerId": "eb8e29fc-5468-4e17-8b73-960b04f857be",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "name",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Panel",
@@ -133,9 +159,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "name": "mainPageSegmentedButton",
                                 "container|align": "end",
                                 "container|pack": "end",
-                                "name": "mainPageSegmentedButton",
                                 "centered": true,
                                 "docked": "bottom",
                                 "margin": null,
@@ -225,7 +251,8 @@
                                 "centered": true,
                                 "docked": "bottom",
                                 "ui": "action-small",
-                                "text": "?"
+                                "iconCls": null,
+                                "text": "<b>?</b>"
                             },
                             "designerId": "97824a0d-db70-47fb-adf6-5c6b829b2b0d",
                             "customConfigs": [

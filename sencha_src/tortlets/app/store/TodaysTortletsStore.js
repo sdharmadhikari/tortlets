@@ -34,6 +34,15 @@ Ext.define('MyApp.store.TodaysTortletsStore', {
             reader: {
                 type: 'json'
             }
+        },
+        sorters: {
+            sorterFn: function(first, second) {
+                var name1 = first.data.tortoise.latestTortoiseScore;
+                var name2 = second.data.tortoise.latestTortoiseScore;
+
+                return name1 > name2 ? 1 : (name1 === name2 ? 0 : -1);
+            },
+            property: 'tortoise.dream.latestDreamScore'
         }
     }
 });

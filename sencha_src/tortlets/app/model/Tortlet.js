@@ -38,6 +38,9 @@ Ext.define('MyApp.model.Tortlet', {
             {
                 name: 'version',
                 type: 'int'
+            },
+            {
+                name: 'createdOn'
             }
         ],
         proxy: {

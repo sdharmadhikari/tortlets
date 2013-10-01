@@ -67,7 +67,7 @@ Ext.define('MyApp.view.MainTabPanel', {
             var dreamsStore = Ext.getStore('dreamsStore');
             //dreamsStore.load(storeLoadCallBack);
         }else if(value.xtype === 'homeTabCardPanel'){
-            /* this is commented, too many uncessary server calls
+            /* this is commented, too many server calls
             var tortletsStore = Ext.getStore('incompleteTortletsStore');
             tortletsStore.load(storeLoadCallBack);
             var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
