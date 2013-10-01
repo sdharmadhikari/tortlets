@@ -188,7 +188,7 @@ Ext.define('MyApp.controller.HomeTabController', {
     },
 
     onHomePageRefreshButtonTap: function(button, e, eOpts) {
-        Ext.Viewport.setMasked({xtype: 'loadmask'});
+        //Ext.Viewport.setMasked({xtype: 'loadmask'});
         var utility = MyApp.app.getController('UtilityController');
         var storeLoadCallback = utility.storeLoadCallback;
         var store = Ext.getStore('todaysTortletsStore');
@@ -228,7 +228,7 @@ Ext.define('MyApp.controller.HomeTabController', {
             store.removedRecordIndex='';
         }
 
-        Ext.Msg.alert('Server error,try again later','',Ext.emptyFn);
+        Ext.Msg.alert(MyApp.app.getServerErrorMessage(),'',Ext.emptyFn);
 
     },
 

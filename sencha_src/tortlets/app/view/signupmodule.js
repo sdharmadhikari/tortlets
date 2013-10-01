@@ -166,14 +166,13 @@ Ext.define('MyApp.view.signupmodule', {
                                                 registrationCardPanel.animateActiveItem(quickSignUpDoneForm, { type : 'slide'});
                                             } else {
                                                 Ext.Viewport.setMasked(false);
-                                                var errMsg = 'Server error, try later';
-                                                Ext.Msg.alert('',errMsg,Ext.emptyFn);
+
+                                                Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);
                                             }
                                         },
                                         failure: function (response) {
-                                            //me.showSignInFailedMessage('Server error. Please try again later.');
-                                            var msgServer = 'Server error, try later';
-                                            Ext.Msg.alert('',msgServer,Ext.emptyFn);
+
+                                            Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);
                                         }
                                     });
 
@@ -406,7 +405,7 @@ Ext.define('MyApp.view.signupmodule', {
                                     var errors = [];
 
                                     for(var field in userObject){
-                                        console.log(field + ': ' + userObject[field]);
+
                                         if(userObject[field] === ''){
                                             Ext.Msg.alert('','All fields are mandatory !',Ext.emptyFn);
                                             errors[errors.length] = 'All fields are mandatory !';
@@ -466,12 +465,12 @@ Ext.define('MyApp.view.signupmodule', {
                                     var userObjectJson = Ext.JSON.encode(userObject);
 
                                     var host = MyApp.app.getHost();
-                                    var registrationUrl = registrationCardPanel.getInitialConfig().registrationUrl;
-                                    //registrationUrl = 'http://' + host + registrationUrl;
+                                    var regUrl = registrationCardPanel.getInitialConfig().registrationUrl;
+                                    regUrl = 'http://' + host + regUrl;
 
                                     Ext.Viewport.setMasked({xtype: 'loadmask'});
                                     Ext.Ajax.request({
-                                        url: registrationUrl,
+                                        url: regUrl,
                                         method: 'put',
                                         jsonData : userObjectJson,
                                         headers : { 
@@ -493,9 +492,7 @@ Ext.define('MyApp.view.signupmodule', {
 
                                                 registrationCardPanel.fireEvent('signUpSuccess',updatedUserObject);
                                             } else {
-
-                                                var msg = 'Server error, please try later';
-                                                Ext.Msg.alert('',msg,Ext.emptyFn);  
+                                                Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);  
                                             }
                                         },
                                         failure: function (response) {

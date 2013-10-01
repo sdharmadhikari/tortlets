@@ -40,9 +40,22 @@ Ext.define('MyApp.store.IncompleteTortletsStore', {
                 var d = new Date(item.get('createdOn'));
                 var datePart = d.getDate();
                 var monthPart = d.getMonth() + 1; //Months are zero based
-                var today = monthPart  + "/" + datePart + "," + MyApp.app.weekdayArray[d.getDay()];
+                var today = MyApp.app.weekdayArray[d.getDay()] + "," + monthPart  + "/" + datePart;
 
                 return today;
+            },
+            sortProperty: 'createdOn'
+        },
+        filters: {
+            filterFn: function(item) {
+                var d = new Date(item.get('createdOn'));
+                var createdDate = d.getDate();
+                var createdMonth = d.getMonth() + 1; //Months are zero based
+                var createdYear = d.getFullYear();
+                var createdOn = createdMonth  + "/" + createdDate + "/" + createdYear;
+
+                var today = MyApp.app.getToday();
+                return !(today === createdOn);
             }
         }
     }

@@ -149,7 +149,7 @@ Ext.define('MyApp.view.loginmodule', {
             },
             failure: function (response) {
                 Ext.Viewport.setMasked(false);
-                me.showSignInFailedMessage('Server error. Please try again later.');
+                me.showSignInFailedMessage(MyApp.app.getServerErrorMessage());
             }
         });
     },

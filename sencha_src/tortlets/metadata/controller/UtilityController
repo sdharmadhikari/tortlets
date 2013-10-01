@@ -36,7 +36,7 @@
                     "\r",
                     "if(operation.hasException()) {\r",
                     "\r",
-                    "    Ext.Msg.alert('','Server error, try later',Ext.emptyFn);\r",
+                    "    Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);\r",
                     "    return;\r",
                     "}else if(records.length === 0){\r",
                     "\r",

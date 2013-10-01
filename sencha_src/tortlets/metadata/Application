@@ -212,6 +212,21 @@
                 ]
             },
             "designerId": "9283d71a-e18f-4a4b-82ce-7bcd8644ff10"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getServerErrorMessage",
+                "implHandler": [
+                    "return \"Connectivity Error, try again later.\";"
+                ]
+            },
+            "designerId": "d537fe62-d424-4072-8f14-c32ff965217d"
         }
     ]
 }

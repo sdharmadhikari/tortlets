@@ -1,15 +1,15 @@
 t-bugs sequence ( fix client, move to aws , then work on server) 
 
-Simulate D save issue and fix
+No connectivity message should be given. check what error code you get.	MyApp.app.getServerErrorMessage()
 Make transaction NEW_PROPOGATE
 Remove static method or make sychronized.
 
-Show how many tortlets were completed for tse
-Try javascript for createdOn
+Sort using date pending.
 layout problem of home tab.
 Not using ellipse anywhere to cut the longer sentence
-Extra dr list call when click dr to save.
 When signed in , calls two times for dr list, 
+Dr save only make call if data is changed.
+Why two circles of Loading when refreshed for today.
 
 
 Does Tuser save has failure handling ?

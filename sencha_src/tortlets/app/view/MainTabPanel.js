@@ -86,7 +86,7 @@ Ext.define('MyApp.view.MainTabPanel', {
                 scope: this,
                 failure: function(record, operation) {
                     Ext.Viewport.setMasked(false);
-                    Ext.Msg.alert('Server error, try later','',Ext.emptyFn);
+                    Ext.Msg.alert(MyApp.app.getServerErrorMessage(),'',Ext.emptyFn);
 
                 },
                 success: function(record, operation) {

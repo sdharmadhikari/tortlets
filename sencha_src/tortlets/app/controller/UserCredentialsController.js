@@ -118,7 +118,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
 
             },
             failure : function(record, operation) { 
-                Ext.Msg.alert('','Server error,try again later');
+                Ext.Msg.alert('',MyApp.app.getServerErrorMessage());
             }
 
         });

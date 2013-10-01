@@ -279,24 +279,39 @@
             ]
         },
         {
-            "type": "Ext.Button",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "name": "tortoiseDeleteButton",
-                "ui": "decline",
-                "designer|displayName": "tortoiseDeleteButton",
-                "text": "I am Done, Stop The Tortoise.."
+                "designer|displayName": "stopTortoiseFieldSet",
+                "title": null
             },
-            "designerId": "fa9fc892-935d-47b2-a560-b1ad04009981",
-            "customConfigs": [
+            "designerId": "34e20e8f-0ee1-48db-bb75-030d1784fd6b",
+            "cn": [
                 {
-                    "group": "(Custom Properties)",
-                    "name": "name",
-                    "type": "string"
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseDeleteButton",
+                        "ui": "decline",
+                        "designer|displayName": "tortoiseDeleteButton",
+                        "text": "I am Done, Stop The Tortoise.."
+                    },
+                    "designerId": "fa9fc892-935d-47b2-a560-b1ad04009981",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
                 }
             ]
         }

@@ -155,6 +155,10 @@ Ext.application({
         }
 
         return host;
+    },
+
+    getServerErrorMessage: function() {
+        return "Connectivity Error, try again later.";
     }
 
 });

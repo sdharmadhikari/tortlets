@@ -223,7 +223,7 @@
                     "    },\r",
                     "    failure: function (response) {\r",
                     "        Ext.Viewport.setMasked(false);\r",
-                    "        me.showSignInFailedMessage('Server error. Please try again later.');\r",
+                    "        me.showSignInFailedMessage(MyApp.app.getServerErrorMessage());\r",
                     "    }\r",
                     "});"
                 ]

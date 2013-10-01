@@ -95,6 +95,7 @@
                 "centered": false,
                 "docked": null,
                 "height": 40,
+                "margin": "",
                 "designer|displayName": "SegementedButtonPanel",
                 "layout": "hbox"
             },

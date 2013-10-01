@@ -31,7 +31,7 @@ Ext.define('MyApp.controller.UtilityController', {
 
         if(operation.hasException()) {
 
-            Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
+            Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);
             return;
         }else if(records.length === 0){
 

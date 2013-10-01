@@ -239,7 +239,7 @@
                     "    store.removedRecordIndex='';\r",
                     "}\r",
                     "\r",
-                    "Ext.Msg.alert('Server error,try again later','',Ext.emptyFn);\r",
+                    "Ext.Msg.alert(MyApp.app.getServerErrorMessage(),'',Ext.emptyFn);\r",
                     ""
                 ]
             },
@@ -397,7 +397,7 @@
             "userConfig": {
                 "fn": "onHomePageRefreshButtonTap",
                 "implHandler": [
-                    "Ext.Viewport.setMasked({xtype: 'loadmask'});\r",
+                    "//Ext.Viewport.setMasked({xtype: 'loadmask'});\r",
                     "var utility = MyApp.app.getController('UtilityController');\r",
                     "var storeLoadCallback = utility.storeLoadCallback;\r",
                     "var store = Ext.getStore('todaysTortletsStore');\r",

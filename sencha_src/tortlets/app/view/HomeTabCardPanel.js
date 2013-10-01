@@ -27,6 +27,12 @@ Ext.define('MyApp.view.HomeTabCardPanel', {
         layout: {
             type: 'card'
         },
+        listeners: [
+            {
+                fn: 'onPanelShow',
+                event: 'show'
+            }
+        ],
         items: [
             {
                 xtype: 'homePage'
@@ -36,12 +42,6 @@ Ext.define('MyApp.view.HomeTabCardPanel', {
             },
             {
                 xtype: 'tortletDetails'
-            }
-        ],
-        listeners: [
-            {
-                fn: 'onPanelShow',
-                event: 'show'
             }
         ]
     },

@@ -136,7 +136,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var newOrOldDream = dreamDetailsForm.getRecord();
 
         dreamDetailsForm.updateRecord(newOrOldDream);
-        alert(newOrOldDream.dirty);
+
         var errors = newOrOldDream.validate();
 
         if (!errors.isValid()) {
@@ -147,7 +147,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var operation = {};
         operation.success = this.dreamSave;
         operation.failure = function() {
-            Ext.Msg.alert('Server error, try later','',Ext.emptyFn);
+            Ext.Msg.alert(MyApp.app.getServerErrorMessage(),'',Ext.emptyFn);
             Ext.Viewport.setMasked(false);
         return;};
 
@@ -210,7 +210,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
                         // store list does not get refreshed.                
                         dreamListCardPanel.animateActiveItem(dreamListPanel, { type : 'slide', direction : 'right'});
                     },
-                    failure : function(record, operation) { Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
+                    failure : function(record, operation) { Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);
                         Ext.Viewport.setMasked({xtype: 'loadmask'});}
 
                     });
@@ -293,7 +293,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var operation = {};
         operation.success = this.tortoiseSave;
-        operation.failure = function() {Ext.Msg.alert('Server error, try later','',Ext.emptyFn);
+        operation.failure = function() {Ext.Msg.alert(MyApp.app.getServerErrorMessage(),'',Ext.emptyFn);
             Ext.Viewport.setMasked(false);
         return;};
 
@@ -373,7 +373,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
                         dreamListCardPanel.animateActiveItem(tortoiseListPanel, { type : 'slide', direction : 'right'});
                     },
-                    failure : function(record, operation) { Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
+                    failure : function(record, operation) { Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);
                     Ext.Viewport.setMasked(false);}
 
                 });
@@ -412,7 +412,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         tortoisesStore.load(function(records, operation, success) {
             Ext.Viewport.setMasked(false);
             if(operation.hasException()) {
-                Ext.Msg.alert('','Server error, try later',Ext.emptyFn);        
+                Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);        
                 return;
             }else if(records.length === 0){
                 tortoisesStore.removeAll();        
@@ -444,7 +444,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
             // Ideally wantto remove this block and reuse storeLoadCallback
             Ext.Viewport.setMasked(false);
             if(operation.hasException()) {
-                Ext.Msg.alert('','Server error, try later',Ext.emptyFn);
+                Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);
                 return;
             }else if(records.length === 0){
                 tortoisesStore.removeAll(); 

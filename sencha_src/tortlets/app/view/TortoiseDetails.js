@@ -113,10 +113,15 @@ Ext.define('MyApp.view.TortoiseDetails', {
                 ]
             },
             {
-                xtype: 'button',
-                name: 'tortoiseDeleteButton',
-                ui: 'decline',
-                text: 'I am Done, Stop The Tortoise..'
+                xtype: 'fieldset',
+                items: [
+                    {
+                        xtype: 'button',
+                        name: 'tortoiseDeleteButton',
+                        ui: 'decline',
+                        text: 'I am Done, Stop The Tortoise..'
+                    }
+                ]
             }
         ]
     }

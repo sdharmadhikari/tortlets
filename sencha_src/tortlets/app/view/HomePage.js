@@ -63,6 +63,7 @@ Ext.define('MyApp.view.HomePage', {
                 flex: 2,
                 centered: false,
                 height: 40,
+                margin: '',
                 layout: {
                     type: 'hbox'
                 },

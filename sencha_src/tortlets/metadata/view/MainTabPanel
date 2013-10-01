@@ -116,7 +116,7 @@
                     "        scope: this,\r",
                     "        failure: function(record, operation) {\r",
                     "            Ext.Viewport.setMasked(false);\r",
-                    "            Ext.Msg.alert('Server error, try later','',Ext.emptyFn);\r",
+                    "            Ext.Msg.alert(MyApp.app.getServerErrorMessage(),'',Ext.emptyFn);\r",
                     "\r",
                     "        },\r",
                     "        success: function(record, operation) {\r",
