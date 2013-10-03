@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "margin": null,
         "designer|userClassName": "MainTabPanel",
         "designer|userAlias": "mainTabPanel",
         "modal": false

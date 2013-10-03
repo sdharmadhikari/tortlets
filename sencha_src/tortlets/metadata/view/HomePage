@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "padding": null,
         "designer|userClassName": "HomePage",
         "designer|userAlias": "homePage",
         "layout": "vbox"
@@ -36,6 +37,8 @@
                 "layout|flex": 2,
                 "docked": "top",
                 "height": 40,
+                "margin": 10,
+                "padding": null,
                 "designer|displayName": "WhatsYourDreamPanel",
                 "layout": "hbox"
             },
@@ -69,6 +72,7 @@
                         "name": "homePageDreamButton",
                         "layout|flex": 1,
                         "docked": "right",
+                        "margin": 2,
                         "ui": "action",
                         "text": "Go"
                     },
@@ -95,7 +99,7 @@
                 "centered": false,
                 "docked": null,
                 "height": 40,
-                "margin": "",
+                "margin": 10,
                 "designer|displayName": "SegementedButtonPanel",
                 "layout": "hbox"
             },
@@ -109,7 +113,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 1
+                        "layout|flex": 1,
+                        "padding": null,
+                        "layout": "fit"
                     },
                     "designerId": "2f535d46-a15d-49ca-835e-c01615714afc",
                     "cn": [
@@ -123,8 +129,11 @@
                             "userConfig": {
                                 "name": "homePageRefreshButton",
                                 "centered": true,
-                                "docked": "bottom",
-                                "ui": "action-small",
+                                "docked": "top",
+                                "margin": null,
+                                "padding": null,
+                                "ui": "action-round",
+                                "iconAlign": "top",
                                 "iconCls": "refresh",
                                 "text": null
                             },
@@ -147,7 +156,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 3,
+                        "layout|flex": 4,
                         "docked": null
                     },
                     "designerId": "8283ecef-0e44-4891-9702-7b60114c1968",
@@ -251,9 +260,9 @@
                                 "name": "homePageHelpButton",
                                 "centered": true,
                                 "docked": "bottom",
-                                "ui": "action-small",
-                                "iconCls": null,
-                                "text": "<b>?</b>"
+                                "ui": "action-round",
+                                "iconCls": "info",
+                                "text": ""
                             },
                             "designerId": "97824a0d-db70-47fb-adf6-5c6b829b2b0d",
                             "customConfigs": [

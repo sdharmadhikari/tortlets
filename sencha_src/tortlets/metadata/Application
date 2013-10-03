@@ -195,7 +195,7 @@
             "userConfig": {
                 "fn": "getHost",
                 "implHandler": [
-                    "var env = 'cloudfoundry' ; // Change this as required.\r",
+                    "var env = 'ec2' ; // Change this as required.\r",
                     "\r",
                     "var host = '';\r",
                     "if( env === 'home'){\r",
@@ -206,6 +206,8 @@
                     "    host = 'tortlets.aws.af.cm';  \r",
                     "}else if(env === 'cloudfoundry'){\r",
                     "    host = 'tortlets.cfapps.io';     \r",
+                    "}else if(env === 'ec2') {\r",
+                    "    host = 'ec2-54-200-65-103.us-west-2.compute.amazonaws.com';\r",
                     "}\r",
                     "\r",
                     "return host;"

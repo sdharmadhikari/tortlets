@@ -36,7 +36,7 @@ Ext.define('MyApp.view.DreamDetails', {
             },
             {
                 xtype: 'fieldset',
-                title: 'I dream',
+                title: 'I Want To..',
                 items: [
                     {
                         xtype: 'textfield',

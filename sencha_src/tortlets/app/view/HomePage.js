@@ -36,6 +36,7 @@ Ext.define('MyApp.view.HomePage', {
                 flex: 2,
                 docked: 'top',
                 height: 40,
+                margin: 10,
                 layout: {
                     type: 'hbox'
                 },
@@ -53,6 +54,7 @@ Ext.define('MyApp.view.HomePage', {
                         name: 'homePageDreamButton',
                         flex: 1,
                         docked: 'right',
+                        margin: 2,
                         ui: 'action',
                         text: 'Go'
                     }
@@ -63,7 +65,7 @@ Ext.define('MyApp.view.HomePage', {
                 flex: 2,
                 centered: false,
                 height: 40,
-                margin: '',
+                margin: 10,
                 layout: {
                     type: 'hbox'
                 },
@@ -71,20 +73,24 @@ Ext.define('MyApp.view.HomePage', {
                     {
                         xtype: 'panel',
                         flex: 1,
+                        layout: {
+                            type: 'fit'
+                        },
                         items: [
                             {
                                 xtype: 'button',
                                 name: 'homePageRefreshButton',
                                 centered: true,
-                                docked: 'bottom',
-                                ui: 'action-small',
+                                docked: 'top',
+                                ui: 'action-round',
+                                iconAlign: 'top',
                                 iconCls: 'refresh'
                             }
                         ]
                     },
                     {
                         xtype: 'panel',
-                        flex: 3,
+                        flex: 4,
                         items: [
                             {
                                 xtype: 'segmentedbutton',
@@ -124,8 +130,9 @@ Ext.define('MyApp.view.HomePage', {
                                 name: 'homePageHelpButton',
                                 centered: true,
                                 docked: 'bottom',
-                                ui: 'action-small',
-                                text: '<b>?</b>'
+                                ui: 'action-round',
+                                iconCls: 'info',
+                                text: ''
                             }
                         ]
                     }

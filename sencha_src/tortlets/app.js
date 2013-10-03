@@ -141,7 +141,7 @@ Ext.application({
     },
 
     getHost: function() {
-        var env = 'cloudfoundry' ; // Change this as required.
+        var env = 'ec2' ; // Change this as required.
 
         var host = '';
         if( env === 'home'){
@@ -152,6 +152,8 @@ Ext.application({
             host = 'tortlets.aws.af.cm';  
         }else if(env === 'cloudfoundry'){
             host = 'tortlets.cfapps.io';     
+        }else if(env === 'ec2') {
+            host = 'ec2-54-200-65-103.us-west-2.compute.amazonaws.com';
         }
 
         return host;
