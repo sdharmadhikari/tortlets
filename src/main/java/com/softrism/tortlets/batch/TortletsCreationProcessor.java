@@ -27,7 +27,7 @@ public class TortletsCreationProcessor<O, I> implements ItemProcessor<I, O> {
 		Tuser tuser = (Tuser)item;
 		//Tuser tuser = Tuser.findAllTusers().get(0);
 		log.info("PROCESSING TUSER : " + tuser.getUserid());
-		Tuser.generateTortlets(tuser.getUserid());
+		tuser.generateTortlets();
 		TuserStatusEnum userStatus = tuser.getStatus();
 		
 		return null;

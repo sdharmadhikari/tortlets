@@ -44,7 +44,6 @@ public class TuserController {
             userid = userDetails.getUsername();
         }
         uiModel.addAttribute("tusers", Tuser.findTusersByUseridEquals(userid).getResultList());
-        Tuser.generateTortlets(userid);
         return "tusers/list";
     }
 

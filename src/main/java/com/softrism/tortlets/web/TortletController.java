@@ -49,7 +49,6 @@ public class TortletController {
             for (Tortlet tortlet : list) {
                 if (tortlet.getCreatedOn() != null) {
                     DateMidnight dt = new DateMidnight(tortlet.getCreatedOn());
-                    System.out.println("checking tortlet.." + tortlet.getId());
                     if (dt.isEqual(new DateMidnight(createdOn))) {
                         resultList.add(tortlet);
                     }
@@ -147,7 +146,6 @@ public class TortletController {
         for (Tortlet tortlet : list) {
             if (tortlet.getCreatedOn() != null) {
                 DateMidnight dt = new DateMidnight(tortlet.getCreatedOn());
-                System.out.println("checking tortlet.." + tortlet.getId());
                 if (dt.isEqual(new DateMidnight(createdOn))) {
                     resultList.add(tortlet);
                 }

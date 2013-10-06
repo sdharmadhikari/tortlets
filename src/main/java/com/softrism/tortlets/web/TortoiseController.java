@@ -110,7 +110,7 @@ public class TortoiseController {
         Tortoise tortoise = Tortoise.fromJsonToTortoise(json);
         tortoise.persist();
 
-        Tuser.processTortoise(tortoise,todayDay);
+        tortoise.processForTortletGeneration(todayDay);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(tortoise.toJson(),headers, HttpStatus.CREATED);

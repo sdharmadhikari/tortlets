@@ -106,7 +106,8 @@ public class Tuser {
     }
 
     @Transactional
-    public static com.softrism.tortlets.domain.Tuser generateTortlets(String userid) {
+    public com.softrism.tortlets.domain.Tuser generateTortlets() {
+        String userid = this.getUserid();
         Tuser tuser = Tuser.findTusersByUseridEquals(userid).getResultList().get(0);
         if (!tuser.getStatus().equals(TuserStatusEnum.ACTIVE)) {
             System.out.println("Tuser " + tuser.getUserid() + " is not in active status, skipping generating and deleting tortlets");
@@ -122,7 +123,7 @@ public class Tuser {
                     boolean delayed = todayMidnight.isAfter(expiresMidnight);
                     boolean completed = deleteIt.getCompleted() == null ? false : deleteIt.getCompleted().booleanValue();
                     if (delayed && !completed) {
-                        System.out.println("deleting tortlet id : " + deleteIt.getId());
+                        System.out.println("Deleting tortlet : " + deleteIt.getTitle() + " for tuser : " + tuser.getUserid());
                         tortoise.setTortletsDeletedCount(tortoise.getTortletsDeletedCount() + 1);
                         dream.setTortletsDeletedCount(dream.getTortletsDeletedCount() + 1);
                         tuser.setTortletsDeletedCount(tuser.getTortletsDeletedCount() + 1);
@@ -131,112 +132,11 @@ public class Tuser {
                     }
                 }
 
-                processTortoise(tortoise,null);
+                tortoise.processForTortletGeneration(null);
 
             }
         }
         return tuser;
-    }
-
-    @Transactional
-    public static void processTortoise(Tortoise tortoise, Integer today){
-        DateTime jdTime = new DateTime();
-        int dayOfWeek = 0;
-        if(today == null){
-            dayOfWeek = jdTime.getDayOfWeek();
-        }else{
-            dayOfWeek = today.intValue();
-        }
-        boolean shouldCreate = false;
-        Dream dream = Dream.findDream(tortoise.getDream().getId()); // Have to do this again because if calling from
-        // TortoiseController, dream is detached. (even if I get tortoise persisted from using findTortoise !
-        Tuser tuser = dream.getTuser();
-        boolean tortoiseStarted = tortoise.getStartDate() == null ? true : jdTime.isAfter(tortoise.getStartDate().getTime());
-        DateMidnight tortoiseEndMidnight = tortoise.getEndDate() == null ? new DateMidnight() : new DateMidnight(tortoise.getEndDate());
-        tortoiseEndMidnight = tortoiseEndMidnight.plusDays(1);
-        boolean tortoiseAlive = jdTime.isBefore(tortoiseEndMidnight.getMillis());
-        if (tortoiseStarted && tortoiseAlive) {
-            switch(dayOfWeek) {
-                case (DateTimeConstants.MONDAY):
-                    if (tortoise.getMonday() == null ? false : tortoise.getMonday().booleanValue()) {
-                        shouldCreate = true;
-                        break;
-                    } else {
-                        break;
-                    }
-                case (DateTimeConstants.TUESDAY):
-                    if (tortoise.getTuesday() == null ? false : tortoise.getTuesday().booleanValue()) {
-                        shouldCreate = true;
-                        break;
-                    } else {
-                        break;
-                    }
-                case (DateTimeConstants.WEDNESDAY):
-                    if (tortoise.getWednesday() == null ? false : tortoise.getWednesday().booleanValue()) {
-                        shouldCreate = true;
-                        break;
-                    } else {
-                        break;
-                    }
-                case (DateTimeConstants.THURSDAY):
-                    if (tortoise.getThursday() == null ? false : tortoise.getThursday().booleanValue()) {
-                        shouldCreate = true;
-                        break;
-                    } else {
-                        break;
-                    }
-                case (DateTimeConstants.FRIDAY):
-                    if (tortoise.getFriday() == null ? false : tortoise.getFriday().booleanValue()) {
-                        shouldCreate = true;
-                        break;
-                    } else {
-                        break;
-                    }
-                case (DateTimeConstants.SATURDAY):
-                    if (tortoise.getSaturday() == null ? false : tortoise.getSaturday().booleanValue()) {
-                        shouldCreate = true;
-                        break;
-                    } else {
-                        break;
-                    }
-                case (DateTimeConstants.SUNDAY):
-                    if (tortoise.getSunday() == null ? false : tortoise.getSunday().booleanValue()) {
-                        shouldCreate = true;
-                        break;
-                    } else {
-                        break;
-                    }
-            }
-        } else {
-            log.info("Skipping creating tortlet for tuser : " + tuser.getId() + " for tortoise " + tortoise.getTitle());
-            log.info("because tortoise has startDate " + tortoise.getStartDate() + " and end date " + tortoise.getEndDate());
-        }
-        if (shouldCreate) {
-            log.info("Creating new tortlet for tortoise : " + tortoise.getTitle());
-            Tortlet tortlet = new Tortlet();
-            tortlet.setUserid(tuser.getUserid());
-            tortlet.setTitle(tortoise.getTitle() + " - " + jdTime.dayOfWeek().getAsShortText() + "," + jdTime.toString(org.joda.time.format.DateTimeFormat.forPattern("MM/dd")));
-            int tortoiseCreatedCount = tortoise.getTortletsCreatedCount() + 1;
-            int tortoiseCompletedCount = tortoise.getTortletsCompletedCount();
-            int tortoiseScore = (tortoiseCompletedCount * TortletsConstants.MAX_SCORE_VALUE) / tortoiseCreatedCount;
-            tortoise.setTortletsCreatedCount(tortoiseCreatedCount);
-            tortoise.setLatestTortoiseScore(tortoiseScore);
-            int dreamCreatedCount = dream.getTortletsCreatedCount() + 1;
-            int dreamCompletedCount = dream.getTortletsCompletedCount();
-            int dreamScore = (dreamCompletedCount * TortletsConstants.MAX_SCORE_VALUE) / dreamCreatedCount;
-            dream.setTortletsCreatedCount(dreamCreatedCount);
-            dream.setLatestDreamScore(dreamScore);
-            int tuserCreatedCount = tuser.getTortletsCreatedCount() + 1;
-            int tuserCompletedCount = tuser.getTortletsCompletedCount();
-            int tuserScore = (tuserCompletedCount * TortletsConstants.MAX_SCORE_VALUE) / tuserCreatedCount;
-            tuser.setTortletsCreatedCount(tuserCreatedCount);
-            tuser.setLatestDreamScore(tuserScore);
-            tortlet.setTortoise(tortoise);
-            tortoise.setDream(dream);
-            dream.setTuser(tuser);
-            tortlet.persist();
-        }
-
     }
 
     public static TypedQuery<Tuser> findTusersByUseridEqualsAndPasswordEquals(String userid, String password) {
@@ -250,4 +150,5 @@ public class Tuser {
         q.setParameter("password", password);
         return q;
     }
+
 }
