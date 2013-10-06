@@ -102,7 +102,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var registrationCardPanel = this.getRegistrationCardPanel();
         var registrationPage1 = this.getRegistrationPage1();
         var signOutButton = registrationCardPanel.down('#signOutButton');
-        var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
+        var userObject = JSON.parse(localStorage.getItem('userInfo'));
 
         signOutButton.show();
         registrationPage1.getScrollable().getScroller().scrollToTop();
@@ -132,7 +132,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var dreamsStore = Ext.getStore('dreamsStore');
 
 
-        sessionStorage.setItem('userInfo', null);
+        localStorage.setItem('userInfo', null);
 
         landingcardPanel.setActiveItem(0);
 
@@ -152,7 +152,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var authHeaderValue = userObject.authHeaderValue;
 
         localStorage.setItem('userid',userid);
-        sessionStorage.setItem('userInfo', JSON.stringify(userObject));
+        localStorage.setItem('userInfo', JSON.stringify(userObject));
 
         MyApp.app.currentUser = currentUser; // Here currentUser becomes global variable to be accessed using MyApp.app.currentUser
         MyApp.app.currentUser.tempId = 0;
@@ -246,7 +246,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var password = registrationPage1.down('#password');
         var readablePassword = registrationPage1.down('#readablePassword');
 
-        var userObject =  JSON.parse(sessionStorage.getItem('userInfo'));
+        var userObject =  JSON.parse(localStorage.getItem('userInfo'));
 
         registrationPage1.userObject = userObject; // Assigning userObject to 
         // registration page because will need things like current authValue

@@ -87,7 +87,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         var lastUserId = localStorage.getItem('userid');
-        var userObject = JSON.parse(sessionStorage.getItem('userInfo'));
+        var userObject = JSON.parse(localStorage.getItem('userInfo'));
 
         var credentialController = MyApp.app.getController('MyApp.controller.UserCredentialsController');
 

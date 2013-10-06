@@ -855,7 +855,7 @@
                                             "var errors = [];\r",
                                             "\r",
                                             "for(var field in userObject){\r",
-                                            "    \r",
+                                            "\r",
                                             "    if(userObject[field] === ''){\r",
                                             "        Ext.Msg.alert('','All fields are mandatory !',Ext.emptyFn);\r",
                                             "        errors[errors.length] = 'All fields are mandatory !';\r",
