@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect TuserController_Roo_Controller_Json {
@@ -91,14 +90,6 @@ privileged aspect TuserController_Roo_Controller_Json {
         }
         tuser.remove();
         return new ResponseEntity<String>(headers, HttpStatus.OK);
-    }
-    
-    @RequestMapping(params = "find=ByUseridEqualsAndPasswordEquals", headers = "Accept=application/json")
-    @ResponseBody
-    public ResponseEntity<String> TuserController.jsonFindTusersByUseridEqualsAndPasswordEquals(@RequestParam("userid") String userid, @RequestParam("password") String password) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Tuser.toJsonArray(Tuser.findTusersByUseridEqualsAndPasswordEquals(userid, password).getResultList()), headers, HttpStatus.OK);
     }
     
 }

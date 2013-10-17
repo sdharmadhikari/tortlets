@@ -3,6 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:find finderName="ByUseridEquals" id="ff_com_softrism_tortlets_domain_Tuser" path="/tusers" z="r/fTLJ3x0wJhLQVqf42CkPAOWSk=">
-        <field:input disableFormBinding="true" field="userid" id="f_com_softrism_tortlets_domain_Tuser_userid" max="23" min="3" required="true" z="eyEzYecqf86EXZrhQmiWE9qW/wI="/>
+        <field:input disableFormBinding="true" field="userid" id="f_com_softrism_tortlets_domain_Tuser_userid" max="16" min="6" required="true" z="b3RACT9NCQAm6/C+bHUjWoLhgSc="/>
     </form:find>
 </div>

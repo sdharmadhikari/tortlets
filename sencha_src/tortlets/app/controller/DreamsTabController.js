@@ -123,10 +123,11 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var tortoiseList = this.getTortoiseList();
         var dreamDetailsForm = this.getDreamDetails();
         var newStatus = dreamDetailsForm.newStatus;
-        var currentUser = MyApp.app.currentUser;
+        var currentUser = Ext.JSON.decode(localStorage.getItem('userInfo'));
         /* Accessing global variable which has been set 
         in Application launch() function */
-        var userid = MyApp.app.currentUser.get('userid');
+        var userObject = currentUser; 
+        var userid = currentUser.userid;
         var utility = MyApp.app.getController('UtilityController');
         /* Need this so that this controller is available in 
         callback methods. */
@@ -155,7 +156,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         if(newStatus === 'true'){ 
             newOrOldDream.set('userid', userid);
-            newOrOldDream.setTuser(currentUser.getData());
+            newOrOldDream.setTuser(currentUser);
             /* IF u dont do following, id will be posted to server as 
             ext-record-<number>. That will result into exception */
             newOrOldDream.set('id',MyApp.app.tempId);
@@ -277,8 +278,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var caller = MyApp.app.getController('DreamsTabController');
 
         var newStatus = tortoiseDetailsForm.newStatus;
-        var currentUser = MyApp.app.currentUser;
-        var userid = MyApp.app.currentUser.get('userid'); 
+        var currentUser = Ext.JSON.decode(localStorage.getItem('userInfo'));
+        var userid = currentUser.userid; 
         var tempDreamId = MyApp.app.tempId;
 
         var newOrOldTortoise = tortoiseDetailsForm.getRecord();

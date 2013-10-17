@@ -189,7 +189,7 @@
                     "passwordField.setValue('');\r",
                     "\r",
                     "var host = MyApp.app.getHost();\r",
-                    "var loginUrl = 'http://' + host + me.getInitialConfig().loginUrl;\r",
+                    "var loginUrl = host + me.getInitialConfig().loginUrl;\r",
                     "//me.getInitialConfig().loginUrl = loginUrl;\r",
                     "\r",
                     "Ext.Viewport.setMasked({xtype: 'loadmask'});\r",

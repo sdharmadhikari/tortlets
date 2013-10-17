@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Default copy.png</key>
+		<data>
+		rwfPrP3oFKLsAoCH5MwN+BqYgJA=
+		</data>
 		<key>Default-Landscape@2x~ipad.png</key>
 		<data>
 		KdMc5vOQ25c8wMFCP43HyATTaNU=
@@ -34,11 +38,23 @@
 		</data>
 		<key>Default.png</key>
 		<data>
-		rwfPrP3oFKLsAoCH5MwN+BqYgJA=
+		FADeHidlvsQFUIbbnTn5hstTuJg=
+		</data>
+		<key>Default.xcf</key>
+		<data>
+		ASN132oAVH7vUyJjUORsbLI/NG0=
+		</data>
+		<key>Default@2x copy.png</key>
+		<data>
+		VoZFozEeM2JeV8esgKTL/BYZITM=
 		</data>
 		<key>Default@2x.png</key>
 		<data>
-		VoZFozEeM2JeV8esgKTL/BYZITM=
+		nk7C0kJ/2QP3UlMLXrxutzdhCzk=
+		</data>
+		<key>Default@2x.xcf</key>
+		<data>
+		k4A5Ze/nzH0mx+AyU5aQcyuYlbo=
 		</data>
 		<key>Default~ipad.png</key>
 		<data>
@@ -62,7 +78,15 @@
 		</data>
 		<key>icon@2x.png</key>
 		<data>
-		Ff3maCW2yFgj42rLCLNk6o3q0yw=
+		T/Q/z+hZyCcXTYju9u33qZXTUMs=
+		</data>
+		<key>sencha-org-Default@2x.png</key>
+		<data>
+		4zath8BIda+6LdV5l16awLoZbP0=
+		</data>
+		<key>webapp/.DS_Store</key>
+		<data>
+		3y++sUAKzaCQmjLBz2v0kvESHgc=
 		</data>
 		<key>webapp/Icon copy.png</key>
 		<data>
@@ -82,7 +106,7 @@
 		</data>
 		<key>webapp/Icon@2x.png</key>
 		<data>
-		Ff3maCW2yFgj42rLCLNk6o3q0yw=
+		T/Q/z+hZyCcXTYju9u33qZXTUMs=
 		</data>
 		<key>webapp/Icon@2x.xcf</key>
 		<data>
@@ -98,7 +122,7 @@
 		</data>
 		<key>webapp/app.js</key>
 		<data>
-		b/3okYsuJBD/rEVVkVg4/TMoqM4=
+		lLbfCjzhzLdsIX5qVkWbQ0621JI=
 		</data>
 		<key>webapp/app.json</key>
 		<data>
@@ -120,6 +144,10 @@
 		<data>
 		gRb0NDeKIwMhBMMszLbD6MjJgJ0=
 		</data>
+		<key>webapp/resources/icons/.DS_Store</key>
+		<data>
+		3y++sUAKzaCQmjLBz2v0kvESHgc=
+		</data>
 		<key>webapp/resources/icons/Icon copy.png</key>
 		<data>
 		K7bsjP9rKk4p2NOBsifpsh7mp3k=
@@ -138,7 +166,7 @@
 		</data>
 		<key>webapp/resources/icons/Icon@2x.png</key>
 		<data>
-		Ff3maCW2yFgj42rLCLNk6o3q0yw=
+		T/Q/z+hZyCcXTYju9u33qZXTUMs=
 		</data>
 		<key>webapp/resources/icons/Icon@2x.xcf</key>
 		<data>
@@ -160,6 +188,14 @@
 		<data>
 		gyb58/PWoz7wRm8DKqBg0NkjTAg=
 		</data>
+		<key>webapp/resources/startup/.DS_Store</key>
+		<data>
+		3y++sUAKzaCQmjLBz2v0kvESHgc=
+		</data>
+		<key>webapp/resources/startup/1496x2048 copy.png</key>
+		<data>
+		VPnh0DfYrrX/o7sxg+APxF8Hm/M=
+		</data>
 		<key>webapp/resources/startup/1496x2048.png</key>
 		<data>
 		VPnh0DfYrrX/o7sxg+APxF8Hm/M=
@@ -168,17 +204,45 @@
 		<data>
 		HdViW30ecYJb04wAOjrlX2F6Ohs=
 		</data>
-		<key>webapp/resources/startup/320x460.jpg</key>
+		<key>webapp/resources/startup/320x460 copy.jpg</key>
 		<data>
 		Qm1gTbLW/a0MYsQmxZH5K79vOTo=
 		</data>
-		<key>webapp/resources/startup/640x920.png</key>
+		<key>webapp/resources/startup/320x460.jpg</key>
+		<data>
+		vMuh1fkBy3R491QZ4ryAg0iJ8as=
+		</data>
+		<key>webapp/resources/startup/320x460.png</key>
+		<data>
+		fHCwGxkzLu6MrKg4FMLWweqIbyY=
+		</data>
+		<key>webapp/resources/startup/320x460.xcf</key>
+		<data>
+		WmSSc3ftDd8XNMdy8k9uY4WeXw0=
+		</data>
+		<key>webapp/resources/startup/640x920 copy.png</key>
 		<data>
 		XBRisISMlF+iOG1qKA/ITwgyNow=
+		</data>
+		<key>webapp/resources/startup/640x920.png</key>
+		<data>
+		pZKft9WwqYQHWvSO+kBhd8zAUxc=
+		</data>
+		<key>webapp/resources/startup/640x920.xcf</key>
+		<data>
+		Im6NIZJfbtPl8jB4Orn1qWWck8s=
+		</data>
+		<key>webapp/resources/startup/748x1024 copy.png</key>
+		<data>
+		fri7XbqxDW0SWc1PSeXGw0iktZ0=
 		</data>
 		<key>webapp/resources/startup/748x1024.png</key>
 		<data>
 		fri7XbqxDW0SWc1PSeXGw0iktZ0=
+		</data>
+		<key>webapp/resources/startup/768x1004 copy.png</key>
+		<data>
+		pTv3djBYDZz2GuxWjge72TaidHM=
 		</data>
 		<key>webapp/resources/startup/768x1004.png</key>
 		<data>
@@ -199,6 +263,10 @@
 		<key>webapp/static/images/tortoise_smaller.gif</key>
 		<data>
 		EAVaT499TJHRik7lYG8Vswc1IBw=
+		</data>
+		<key>webapp/static/images/tortoise_smaller.png</key>
+		<data>
+		LlGqJagEMiyXNp9oXsKvq4dl8Cg=
 		</data>
 		<key>webapp/static/js/Base64.js</key>
 		<data>

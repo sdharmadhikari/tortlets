@@ -3,9 +3,9 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_softrism_tortlets_domain_Tuser" modelAttribute="tuser" path="/tusers" versionField="Version" z="bsOD1/1vD3oL0dGBG9gqU3RSCVk=">
-        <field:input field="firstName" id="c_com_softrism_tortlets_domain_Tuser_firstName" max="25" min="0" required="true" z="PUxlkKmWKtl3aVFlKYU7DPDl41E="/>
-        <field:input field="lastName" id="c_com_softrism_tortlets_domain_Tuser_lastName" max="25" min="0" required="true" z="oxGyKsP0XCLM8L5bNR6IcmOjEbM="/>
-        <field:input field="userid" id="c_com_softrism_tortlets_domain_Tuser_userid" max="23" min="3" required="true" z="0AZB2WMS52M1jYL/YzXeWTnMFiM="/>
+        <field:input field="firstName" id="c_com_softrism_tortlets_domain_Tuser_firstName" max="25" min="1" required="true" z="zYpCOSW/yk9KzOEUojssClxJwas="/>
+        <field:input field="lastName" id="c_com_softrism_tortlets_domain_Tuser_lastName" max="25" min="1" required="true" z="JJJ5PLGRApbrSNsdB3CvnQHMeVE="/>
+        <field:input field="userid" id="c_com_softrism_tortlets_domain_Tuser_userid" max="16" min="6" required="true" z="3z95lfN2LcWUaZQ98i5+mfX6h18="/>
         <field:input field="password" id="c_com_softrism_tortlets_domain_Tuser_password" max="16" min="6" required="true" type="password" z="user-managed"/>
         <field:input field="retypePassword" id="c_com_softrism_tortlets_domain_Tuser_retypePassword" max="16" min="6" render="false" required="true" type="password" z="user-managed"/>
         <field:input field="allowedDelayDays" id="c_com_softrism_tortlets_domain_Tuser_allowedDelayDays" z="tc6b6YN2EzORJdnGSKTPvA8U8Uk="/>
@@ -19,8 +19,5 @@
         <field:select field="status" id="c_com_softrism_tortlets_domain_Tuser_status" items="${tuserstatusenums}" path="tuserstatusenums" required="true" z="DZNHOje8iwoQhYkAVnCSxbmuQDM="/>
         <field:select field="timezone" id="c_com_softrism_tortlets_domain_Tuser_timezone" items="${tusertimezoneenums}" path="tusertimezoneenums" required="true" z="54TsmHYJddog1NU0ATSQdNCiKcQ="/>
         <field:datetime dateTimePattern="${tuser_birthdate_date_format}" field="birthDate" id="c_com_softrism_tortlets_domain_Tuser_birthDate" z="IYtgDF2AcnlTU/V2UhU+vc5Q5y4="/>
-        <field:input field="userEmail" id="c_com_softrism_tortlets_domain_Tuser_userEmail" z="Ouxo7tfWv+JkcV+FMYIp958tlN4="/>
-        <field:input field="roleName" id="c_com_softrism_tortlets_domain_Tuser_roleName" required="true" z="SNWstIx2I3DpvhNQvbU3Ce1BhfU="/>
-        <field:datetime dateTimePattern="${tuser_updatedon_date_format}" field="updatedOn" id="c_com_softrism_tortlets_domain_Tuser_updatedOn" z="TeRz0ZISSSTVjq4TV5w76XJlmCw="/>
     </form:update>
 </div>

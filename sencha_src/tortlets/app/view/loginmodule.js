@@ -115,7 +115,7 @@ Ext.define('MyApp.view.loginmodule', {
         passwordField.setValue('');
 
         var host = MyApp.app.getHost();
-        var loginUrl = 'http://' + host + me.getInitialConfig().loginUrl;
+        var loginUrl = host + me.getInitialConfig().loginUrl;
         //me.getInitialConfig().loginUrl = loginUrl;
 
         Ext.Viewport.setMasked({xtype: 'loadmask'});

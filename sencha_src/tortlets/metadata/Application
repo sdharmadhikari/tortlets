@@ -57,7 +57,18 @@
             "UtilityController",
             "UserScoreTabController"
         ],
-        "name": "MyApp"
+        "name": "MyApp",
+        "startupImage": [
+            "{\r",
+            "        '320x460': 'resources/startup/320x460.jpg',\r",
+            "        '640x920': 'resources/startup/640x920.png',\r",
+            "        '640x1096': 'resources/startup/640x1096.png',\r",
+            "        '768x1004': 'resources/startup/768x1004.png',\r",
+            "        '748x1024': 'resources/startup/748x1024.png',\r",
+            "        '1536x2008': 'resources/startup/1536x2008.png',\r",
+            "        '1496x2048': 'resources/startup/1496x2048.png'\r",
+            " }"
+        ]
     },
     "designerId": "application",
     "customConfigs": [
@@ -123,6 +134,7 @@
                     "weekday[5]=\"Friday\";\r",
                     "weekday[6]=\"Saturday\";\r",
                     "MyApp.app.weekdayArray = weekday;\r",
+                    "\r",
                     "console.log('done application launch');\r",
                     ""
                 ]
@@ -196,18 +208,19 @@
                 "fn": "getHost",
                 "implHandler": [
                     "var env = 'ec2' ; // Change this as required.\r",
+                    "var httpScheme = \"http://\";\r",
                     "\r",
                     "var host = '';\r",
                     "if( env === 'home'){\r",
-                    "    host = '192.168.0.105:8080';   \r",
+                    "    host = httpScheme + '192.168.0.105:8080';   \r",
                     "}else if(env === 'office'){\r",
-                    "    host = '172.26.0.151:8080';   \r",
+                    "    host = httpScheme + '172.26.0.151:8080';   \r",
                     "}else if(env === 'appfog'){\r",
-                    "    host = 'tortlets.aws.af.cm';  \r",
+                    "    host = httpScheme + 'tortlets.aws.af.cm';  \r",
                     "}else if(env === 'cloudfoundry'){\r",
-                    "    host = 'tortlets.cfapps.io';     \r",
+                    "    host = httpScheme + 'tortlets.cfapps.io';     \r",
                     "}else if(env === 'ec2') {\r",
-                    "    host = 'ec2-54-200-65-103.us-west-2.compute.amazonaws.com';\r",
+                    "    host = httpScheme + 'ec2-54-200-65-103.us-west-2.compute.amazonaws.com';\r",
                     "}\r",
                     "\r",
                     "return host;"

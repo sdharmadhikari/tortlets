@@ -38,7 +38,6 @@ privileged aspect DreamController_Roo_Controller_Json {
         List<Dream> result = Dream.findAllDreams();
         return new ResponseEntity<String>(Dream.toJsonArray(result), headers, HttpStatus.OK);
     }
-
     
     @RequestMapping(value = "/jsonArray", method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> DreamController.createFromJsonArray(@RequestBody String json) {

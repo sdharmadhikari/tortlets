@@ -115,7 +115,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "timeZone"
+                "name": "timezone"
             },
             "designerId": "17b01708-53b0-4e69-b24b-0a134f80c033"
         },
@@ -209,6 +209,18 @@
                 "model": "Dream"
             },
             "designerId": "5f7869c3-059e-40bb-bd4d-f82386e1ebe0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userEmail"
+            },
+            "designerId": "4cefb61a-70b4-4ff5-b132-cf135c535ae0"
         }
     ]
 }

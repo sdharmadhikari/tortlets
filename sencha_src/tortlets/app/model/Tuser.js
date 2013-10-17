@@ -48,7 +48,7 @@ Ext.define('MyApp.model.Tuser', {
                 name: 'birthDate'
             },
             {
-                name: 'timeZone'
+                name: 'timezone'
             },
             {
                 name: 'version',
@@ -65,6 +65,9 @@ Ext.define('MyApp.model.Tuser', {
             },
             {
                 name: 'tortletsCompletedCount'
+            },
+            {
+                name: 'userEmail'
             }
         ],
         proxy: {

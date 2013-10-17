@@ -67,7 +67,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var wordYouLike = quickSignupForm.down('#wordYouLike');
 
         var host = MyApp.app.getHost();
-        var registrationUrl = 'http://' + host + registrationCardPanel.getInitialConfig().registrationUrl;
+        var registrationUrl = host + registrationCardPanel.getInitialConfig().registrationUrl;
 
         registrationCardPanel.getInitialConfig().registrationUrl = registrationUrl;
 
@@ -102,26 +102,16 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var registrationCardPanel = this.getRegistrationCardPanel();
         var registrationPage1 = this.getRegistrationPage1();
         var signOutButton = registrationCardPanel.down('#signOutButton');
-        var userObject = JSON.parse(localStorage.getItem('userInfo'));
+        var userObject = Ext.JSON.decode(localStorage.getItem('userInfo'));
 
         signOutButton.show();
         registrationPage1.getScrollable().getScroller().scrollToTop();
 
         registrationCardPanel.setActiveItem(registrationPage1);
 
-        MyApp.model.Tuser.load(userObject.id, {
+        MyApp.app.getController('MyApp.controller.UserCredentialsController').populateUserSettingsForm(registrationPage1);
+        landingCardPanel.animateActiveItem(registrationCardPanel, { type: 'slide'});
 
-            success : function(record, operation) { 
-                MyApp.app.currentUser = record;
-                MyApp.app.getController('MyApp.controller.UserCredentialsController').populateUserSettingsForm(registrationPage1);
-                landingCardPanel.animateActiveItem(registrationCardPanel, { type: 'slide'});
-
-            },
-            failure : function(record, operation) { 
-                Ext.Msg.alert('',MyApp.app.getServerErrorMessage());
-            }
-
-        });
 
     },
 
@@ -141,21 +131,11 @@ Ext.define('MyApp.controller.UserCredentialsController', {
     },
 
     populateUserInfo: function(userObject) {
-        var currentUser = Ext.create('MyApp.model.Tuser');
-        currentUser.set('id',userObject.id);
-        currentUser.set('firstName',userObject.firstName);
-        currentUser.set('lastName',userObject.lastName);
-        currentUser.set('userid',userObject.userid);
-        currentUser.set('version',userObject.version);
-
         var userid = userObject.userid;
         var authHeaderValue = userObject.authHeaderValue;
 
         localStorage.setItem('userid',userid);
         localStorage.setItem('userInfo', JSON.stringify(userObject));
-
-        MyApp.app.currentUser = currentUser; // Here currentUser becomes global variable to be accessed using MyApp.app.currentUser
-        MyApp.app.currentUser.tempId = 0;
 
     },
 
@@ -173,7 +153,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         //todaysTortletsStore
         var todaysTortletsStore = Ext.getStore('todaysTortletsStore');
         var proxy = todaysTortletsStore.getProxy();
-        var todayOrgUrl = 'http://' + host + '/tortlets?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid ;
+        var todayOrgUrl = host + '/tortlets?find=ByUseridEqualsAndCreatedOnEqualsAndCompleted&userid=' +userid ;
         proxy.setUrl(todayOrgUrl + '&createdOn=' + today);
         var headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
@@ -186,7 +166,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         proxy = incompleteTortletsStore.getProxy();
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        proxy.setUrl('http://' + host + '/tortlets?find=ByUseridEqualsAndCompleted&userid=' +userid);
+        proxy.setUrl(host + '/tortlets?find=ByUseridEqualsAndCompleted&userid=' +userid);
 
         //incompleteTortletsStore.load(storeLoadCallback);
 
@@ -195,7 +175,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         proxy = dreamsStore.getProxy();
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        proxy.setUrl('http://' + host + '/dreams?find=ByUseridEquals&userid=' +userid);
+        proxy.setUrl(host + '/dreams?find=ByUseridEquals&userid=' +userid);
 
         dreamsStore.load(storeLoadCallback);
 
@@ -204,7 +184,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         proxy = tortoisesStore.getProxy();
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        proxy.setUrl('http://' + host + '/tortoises?find=ByDreamAndUseridEquals&userid=' +userid);
+        proxy.setUrl(host + '/tortoises?find=ByDreamAndUseridEquals&userid=' +userid);
 
         ////////////////////////////////////////////////////
 
@@ -212,25 +192,25 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         proxy = Tuser.getProxy();
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        proxy.setUrl('http://' + host + '/tusers');
+        proxy.setUrl(host + '/tusers');
 
         var Dream = Ext.ModelMgr.getModel('MyApp.model.Dream');
         proxy = Dream.getProxy();
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        proxy.setUrl('http://' + host + '/dreams');
+        proxy.setUrl(host + '/dreams');
 
         var Tortoise = Ext.ModelMgr.getModel('MyApp.model.Tortoise');
         proxy = Tortoise.getProxy();
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        proxy.setUrl('http://' + host + '/tortoises');
+        proxy.setUrl(host + '/tortoises');
 
         var Tortlet = Ext.ModelMgr.getModel('MyApp.model.Tortlet');
         proxy = Tortlet.getProxy();
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        proxy.setUrl('http://' + host + '/tortlets');
+        proxy.setUrl(host + '/tortlets');
 
         console.log('coming out populate user resources');
     },

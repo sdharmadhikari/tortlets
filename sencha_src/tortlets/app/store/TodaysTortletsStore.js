@@ -37,10 +37,20 @@ Ext.define('MyApp.store.TodaysTortletsStore', {
         },
         sorters: {
             sorterFn: function(first, second) {
-                var name1 = first.data.tortoise.latestTortoiseScore;
-                var name2 = second.data.tortoise.latestTortoiseScore;
+                var score1 = first.data.tortoise.latestTortoiseScore;
+                var score2 = second.data.tortoise.latestTortoiseScore;
 
-                return name1 > name2 ? 1 : (name1 === name2 ? 0 : -1);
+                if(score1 === score2){
+
+                    var createdCount1 = first.data.tortoise.tortletsCreatedCount;
+                    var createdCount2 = second.data.tortoise.tortletsCreatedCount;
+                    return createdCount1 < createdCount2 ? 1 : (createdCount1 === createdCount2 ? 0 : -1);
+
+                }else{
+
+                    return score1 > score2 ? 1 : (score1 === score2 ? 0 : -1);
+
+                }
             },
             property: 'tortoise.dream.latestDreamScore'
         }

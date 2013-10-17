@@ -160,7 +160,8 @@ Ext.define('MyApp.view.signupmodule', {
                                                 var wordAsPassword = quickSignUpDoneForm.down('#wordAsPassword');
                                                 wordAsPassword.setValue(createdUserObject.plainPassword);
 
-                                                quickSignUpDoneForm.createdUserObject = createdUserObject;
+                                                //quickSignUpDoneForm.createdUserObject = createdUserObject;
+                                                localStorage.setItem('userInfo',Ext.JSON.encode(createdUserObject));
                                                 quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
                                                 Ext.Viewport.setMasked(false);
                                                 registrationCardPanel.animateActiveItem(quickSignUpDoneForm, { type : 'slide'});
@@ -234,7 +235,7 @@ Ext.define('MyApp.view.signupmodule', {
                                 handler: function(button, event) {
                                     var registrationCardPanel = this.up('registrationCardPanel');
                                     var quickSignUpDoneForm = registrationCardPanel.down('#quickSignUpDoneForm');
-                                    var userObject = quickSignUpDoneForm.createdUserObject;
+                                    var userObject = Ext.JSON.decode(localStorage.getItem('userInfo'));
                                     registrationCardPanel.fireEvent('signUpSuccess',userObject);
                                 },
                                 ui: 'action',
@@ -380,7 +381,7 @@ Ext.define('MyApp.view.signupmodule', {
                                     var readablePassword = registrationPage1.down('#readablePassword');
                                     var showPasswordCheckBox = registrationPage1.down('#showPasswordCheckBox');
 
-                                    var userObject = registrationPage1.userObject;
+                                    var userObject = Ext.JSON.decode(localStorage.getItem('userInfo'));
                                     var currentAuthHeaderValue = userObject.authHeaderValue;
 
                                     userObject.firstName = firstName.getValue();
@@ -466,7 +467,7 @@ Ext.define('MyApp.view.signupmodule', {
 
                                     var host = MyApp.app.getHost();
                                     var regUrl = registrationCardPanel.getInitialConfig().registrationUrl;
-                                    regUrl = 'http://' + host + regUrl;
+                                    regUrl = host + regUrl;
 
                                     Ext.Viewport.setMasked({xtype: 'loadmask'});
                                     Ext.Ajax.request({
@@ -482,18 +483,15 @@ Ext.define('MyApp.view.signupmodule', {
 
                                             var updatedUserObject = Ext.JSON.decode(response.responseText);
                                             Ext.Viewport.setMasked(false);
-                                            if (updatedUserObject.updatedOn > userObject.updatedOn) {
-                                                updatedUserObject.plainPassword = userObject.password;
-                                                var tok = updatedUserObject.userid + ':' + updatedUserObject.plainPassword ;
-                                                var hash = Base64.encode(tok);
-                                                var authHeaderValue = "Basic " + hash;
+                                            updatedUserObject.plainPassword = userObject.password;
+                                            var tok = updatedUserObject.userid + ':' + updatedUserObject.plainPassword ;
+                                            var hash = Base64.encode(tok);
+                                            var authHeaderValue = "Basic " + hash;
 
-                                                updatedUserObject.authHeaderValue = authHeaderValue ; 
+                                            updatedUserObject.authHeaderValue = authHeaderValue ; 
 
-                                                registrationCardPanel.fireEvent('signUpSuccess',updatedUserObject);
-                                            } else {
-                                                Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);  
-                                            }
+                                            registrationCardPanel.fireEvent('signUpSuccess',updatedUserObject);
+
                                         },
                                         failure: function (response) {
                                             if(response.status === 409) {
@@ -502,8 +500,7 @@ Ext.define('MyApp.view.signupmodule', {
                                                 Ext.Msg.alert('',msg,Ext.emptyFn); 
                                             }else{
                                                 Ext.Viewport.setMasked(false);
-                                                var msg = 'Server error, please try later';
-                                                Ext.Msg.alert('',msg,Ext.emptyFn);    
+                                                Ext.Msg.alert('',MyApp.app.getServerErrorMessage(),Ext.emptyFn);    
                                             }
                                         }
                                     });

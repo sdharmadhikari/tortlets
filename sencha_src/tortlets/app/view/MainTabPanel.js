@@ -82,7 +82,8 @@ Ext.define('MyApp.view.MainTabPanel', {
         }else if(value.xtype === 'scoreTabCardPanel') {
 
             Ext.Viewport.setMasked({xtype: 'loadmask'});
-            MyApp.model.Tuser.load(MyApp.app.currentUser.get('id'), {
+            var userObject = Ext.JSON.decode(localStorage.getItem('userInfo'));
+            MyApp.model.Tuser.load(userObject.id, {
                 scope: this,
                 failure: function(record, operation) {
                     Ext.Viewport.setMasked(false);
@@ -90,8 +91,13 @@ Ext.define('MyApp.view.MainTabPanel', {
 
                 },
                 success: function(record, operation) {
-                    MyApp.app.currentUser = record;
-                    var score =  MyApp.app.currentUser.get('latestDreamScore');
+                    var serverUserObject = record.getData();
+                    var localUserObject = Ext.JSON.decode(localStorage.getItem('userInfo'));
+                    serverUserObject.plainPassword = localUserObject.plainPassword;
+                    serverUserObject.authHeaderValue = localUserObject.authHeaderValue;
+                    localStorage.setItem('userInfo',Ext.JSON.encode(serverUserObject));
+
+                    var score =  serverUserObject.latestDreamScore
                     var userScoreTabController = MyApp.app.getController('UserScoreTabController');
                     var scoreTabCardPanel = userScoreTabController.getScoreTabCardPanel();
                     var userScoreGuageChart = userScoreTabController.getUserScoreGuageChart();

@@ -80,6 +80,15 @@ Ext.application({
         'UserScoreTabController'
     ],
     name: 'MyApp',
+    startupImage: {
+        '320x460': 'resources/startup/320x460.jpg',
+        '640x920': 'resources/startup/640x920.png',
+        '640x1096': 'resources/startup/640x1096.png',
+        '768x1004': 'resources/startup/768x1004.png',
+        '748x1024': 'resources/startup/748x1024.png',
+        '1536x2008': 'resources/startup/1536x2008.png',
+        '1496x2048': 'resources/startup/1496x2048.png'
+    },
 
     launch: function() {
         console.log('application launch');
@@ -127,6 +136,7 @@ Ext.application({
         weekday[5]="Friday";
         weekday[6]="Saturday";
         MyApp.app.weekdayArray = weekday;
+
         console.log('done application launch');
 
     },
@@ -142,18 +152,19 @@ Ext.application({
 
     getHost: function() {
         var env = 'ec2' ; // Change this as required.
+        var httpScheme = "http://";
 
         var host = '';
         if( env === 'home'){
-            host = '192.168.0.105:8080';   
+            host = httpScheme + '192.168.0.105:8080';   
         }else if(env === 'office'){
-            host = '172.26.0.151:8080';   
+            host = httpScheme + '172.26.0.151:8080';   
         }else if(env === 'appfog'){
-            host = 'tortlets.aws.af.cm';  
+            host = httpScheme + 'tortlets.aws.af.cm';  
         }else if(env === 'cloudfoundry'){
-            host = 'tortlets.cfapps.io';     
+            host = httpScheme + 'tortlets.cfapps.io';     
         }else if(env === 'ec2') {
-            host = 'ec2-54-200-65-103.us-west-2.compute.amazonaws.com';
+            host = httpScheme + 'ec2-54-200-65-103.us-west-2.compute.amazonaws.com';
         }
 
         return host;

@@ -11,7 +11,7 @@
             "    \r",
             "    appName : 'Tortlets',\r",
             "    allowedDelayDays : 7,\r",
-            "    smallTseImg : '<img src=\"static/images/tortoise_smaller.gif\"></img>'\r",
+            "    smallTseImg : '<img src=\"static/images/tortoise_smaller.png\"></img>'\r",
             "}"
         ],
         "html": null,

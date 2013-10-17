@@ -29,7 +29,6 @@
             <menu:item id="i_tuser_list" messageCode="global_menu_list" render="false" url="/tusers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
             <menu:item id="i_tuser_new" messageCode="global_menu_new" url="/tusers?form" z="user-managed"/>
             <menu:item id="fi_tuser_useridequals" messageCode="global_menu_find" render="false" url="/tusers?find=ByUseridEquals&amp;form" z="user-managed"/>
-            <menu:item id="fi_tuser_useridequalsandpasswordequals" messageCode="global_menu_find" url="/tusers?find=ByUseridEqualsAndPasswordEquals&amp;form" z="F4LOljiz3dc1mYaF3V+DCEs19TA="/>
         </menu:category>
     </menu:menu>
 </div>

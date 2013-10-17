@@ -23,7 +23,7 @@ Ext.define('MyApp.view.HelpPanel', {
         data: {
             appName: 'Tortlets',
             allowedDelayDays: 7,
-            smallTseImg: '<img src="static/images/tortoise_smaller.gif"></img>'
+            smallTseImg: '<img src="static/images/tortoise_smaller.png"></img>'
         },
         tpl: [
             '{appName} helps you declare your dream or goal to yourself, ',
