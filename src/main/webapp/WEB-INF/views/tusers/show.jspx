@@ -19,5 +19,8 @@
         <field:display date="true" dateTimePattern="${tuser_birthdate_date_format}" field="birthDate" id="s_com_softrism_tortlets_domain_Tuser_birthDate" object="${tuser}" z="hd4WC4cAgUGLoJyhhMO25rlw46c="/>
         <field:display date="true" dateTimePattern="${tuser_createdon_date_format}" field="createdOn" id="s_com_softrism_tortlets_domain_Tuser_createdOn" object="${tuser}" z="FHURUOdOCaMPGSmv6msh4cwOm7k="/>
         <field:display field="dreams" id="s_com_softrism_tortlets_domain_Tuser_dreams" object="${tuser}" z="st95VTpVyeKhtx3Ozu1CsW7YhUM="/>
+        <field:display field="userEmail" id="s_com_softrism_tortlets_domain_Tuser_userEmail" object="${tuser}" z="deup7Jj1idYtcuQsToShNP49HhY="/>
+        <field:display field="roleName" id="s_com_softrism_tortlets_domain_Tuser_roleName" object="${tuser}" z="24AwtZ8PGS3PbTjSMNs67bJO8l0="/>
+        <field:display date="true" dateTimePattern="${tuser_updatedon_date_format}" field="updatedOn" id="s_com_softrism_tortlets_domain_Tuser_updatedOn" object="${tuser}" z="Yudj2n/bpP2VXel5jhI6Q107ICA="/>
     </page:show>
 </div>

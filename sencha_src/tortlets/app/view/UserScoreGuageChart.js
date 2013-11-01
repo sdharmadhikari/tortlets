@@ -38,7 +38,7 @@ Ext.define('MyApp.view.UserScoreGuageChart', {
                 sectors: [
                     {
                         end: 25,
-                        label: 'Forgot Dreams?',
+                        label: 'Dreams?',
                         color: '#FF7272'
                     },
                     {

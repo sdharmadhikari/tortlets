@@ -54,7 +54,7 @@ Ext.define('MyApp.view.loginmodule', {
                         itemId: 'userIdItemId',
                         name: 'userid',
                         required: true,
-                        placeHolder: 'Userid..'
+                        placeHolder: 'User name...'
                     },
                     {
                         xtype: 'passwordfield',
@@ -87,6 +87,27 @@ Ext.define('MyApp.view.loginmodule', {
                         },
                         ui: 'confirm',
                         text: 'Snap Sign Up !'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                margin: 12,
+                ui: 'light',
+                layout: {
+                    type: 'hbox'
+                },
+                items: [
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            Ext.Msg.alert('', 'Please send email to tortlets@softrism.com for forgotten userid and password', Ext.emptyFn);
+                        },
+                        flex: 1,
+                        docked: 'right',
+                        ui: 'action-round',
+                        iconAlign: 'right',
+                        iconCls: 'info'
                     }
                 ]
             }

@@ -2,6 +2,9 @@ package com.softrism.tortlets.domain;
 
 import com.softrism.tortlets.TortletsConstants;
 import flexjson.JSONSerializer;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -105,13 +108,16 @@ public class Tortoise {
     }
 
     @Transactional
-    public void processForTortletGeneration( Integer today){
-        DateTime jdTime = new DateTime();
+    public void processForTortletGeneration( String todayDate) throws ParseException {
+        DateTime jdTime = null;
         int dayOfWeek = 0;
-        if(today == null){
+        if(todayDate == null){
+            jdTime = new DateTime();
             dayOfWeek = jdTime.getDayOfWeek();
         }else{
-            dayOfWeek = today.intValue();
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+            jdTime =  new DateTime(sdf.parse(todayDate));
+            dayOfWeek = jdTime.getDayOfWeek();
         }
         boolean shouldCreate = false;
         Dream dream = Dream.findDream(this.getDream().getId()); // Have to do this again because if calling from
@@ -182,6 +188,7 @@ public class Tortoise {
             Tortlet tortlet = new Tortlet();
             tortlet.setUserid(tuser.getUserid());
             tortlet.setTitle(this.getTitle() + " - " + jdTime.dayOfWeek().getAsShortText() + "," + jdTime.toString(org.joda.time.format.DateTimeFormat.forPattern("MM/dd")));
+            tortlet.setCreatedOn(jdTime.toDate());
             int tortoiseCreatedCount = this.getTortletsCreatedCount() + 1;
             int tortoiseCompletedCount = this.getTortletsCompletedCount();
             int tortoiseScore = (tortoiseCompletedCount * TortletsConstants.MAX_SCORE_VALUE) / tortoiseCreatedCount;

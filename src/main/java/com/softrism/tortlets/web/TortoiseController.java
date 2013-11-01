@@ -3,6 +3,8 @@ package com.softrism.tortlets.web;
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.domain.TortoiseStatusEnum;
+
+import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
@@ -105,12 +107,12 @@ public class TortoiseController {
     // Really dont want to have this method and want to handle everything in aspect but
     // i can not access tortoise object after persist (with id populated) in aspect !
     @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
-    public ResponseEntity<String> createFromJson(@RequestBody String json, @RequestHeader("Today-Day") Integer todayDay ) {
-        System.out.println("Today-Day : " + todayDay);
+    public ResponseEntity<String> createFromJson(@RequestBody String json, @RequestHeader("Today-Day") String todayDate ) throws ParseException {
+        System.out.println("Today-Day : " + todayDate);
         Tortoise tortoise = Tortoise.fromJsonToTortoise(json);
         tortoise.persist();
 
-        tortoise.processForTortletGeneration(todayDay);
+        tortoise.processForTortletGeneration(todayDate);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(tortoise.toJson(),headers, HttpStatus.CREATED);

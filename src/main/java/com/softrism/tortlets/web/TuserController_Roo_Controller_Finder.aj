@@ -3,16 +3,29 @@
 
 package com.softrism.tortlets.web;
 
+import com.softrism.tortlets.domain.Tuser;
 import com.softrism.tortlets.web.TuserController;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 privileged aspect TuserController_Roo_Controller_Finder {
     
     @RequestMapping(params = { "find=ByUseridEquals", "form" }, method = RequestMethod.GET)
     public String TuserController.findTusersByUseridEqualsForm(Model uiModel) {
         return "tusers/findTusersByUseridEquals";
+    }
+    
+    @RequestMapping(params = { "find=ByUseridEqualsAndPasswordEquals", "form" }, method = RequestMethod.GET)
+    public String TuserController.findTusersByUseridEqualsAndPasswordEqualsForm(Model uiModel) {
+        return "tusers/findTusersByUseridEqualsAndPasswordEquals";
+    }
+    
+    @RequestMapping(params = "find=ByUseridEqualsAndPasswordEquals", method = RequestMethod.GET)
+    public String TuserController.findTusersByUseridEqualsAndPasswordEquals(@RequestParam("userid") String userid, @RequestParam("password") String password, Model uiModel) {
+        uiModel.addAttribute("tusers", Tuser.findTusersByUseridEqualsAndPasswordEquals(userid, password).getResultList());
+        return "tusers/list";
     }
     
 }

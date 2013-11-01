@@ -1,15 +1,16 @@
 t-bugs sequence ( fix client, move to aws , then work on server) 
 
+Click on different dr , sometimes show previous click tses
+Around 6.30 , tortlet is not created even if day is not matching.
+
+Make icon image white background
+Make splash screen image white background
+Make main image green.
+
 Dr save only make call if data is changed.
 
 Back to dreams now scrolls in direction "up", i think that is only in one condition, either old or new dream.
 Try alert mechanism "App is updated, do you want to update"
-
-
-
-Login i color change
-Flash i not ready
-small tse bg color change
 
 
 Row was updated by another transaction : When I start adding details to snap created user.

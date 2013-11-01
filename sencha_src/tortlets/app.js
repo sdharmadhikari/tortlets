@@ -153,12 +153,13 @@ Ext.application({
     getHost: function() {
         var env = 'ec2' ; // Change this as required.
         var httpScheme = "http://";
-
+        var port = '8443'; // Only applicable to home and office.
+        // home 
         var host = '';
         if( env === 'home'){
-            host = httpScheme + '192.168.0.105:8080';   
+            host = httpScheme + '192.168.0.105:' + port;   
         }else if(env === 'office'){
-            host = httpScheme + '172.26.0.151:8080';   
+            host = httpScheme + '172.26.0.151:' + port;   
         }else if(env === 'appfog'){
             host = httpScheme + 'tortlets.aws.af.cm';  
         }else if(env === 'cloudfoundry'){

@@ -49,7 +49,9 @@ public class Tortlet {
     @PrePersist
     private void prePersist(){
         Date now = new Date();
-        createdOn = now;
+        if(createdOn == null) {
+            createdOn = now;
+        }
         updatedOn = now;
     }
 

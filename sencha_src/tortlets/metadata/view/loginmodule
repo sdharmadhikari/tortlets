@@ -108,7 +108,7 @@
                         "label": null,
                         "name": "userid",
                         "required": true,
-                        "placeHolder": "Userid.."
+                        "placeHolder": "User name..."
                     },
                     "designerId": "fefbd0f9-a86a-4d22-afa6-d2969118ea11"
                 },
@@ -294,6 +294,60 @@
                                 ]
                             },
                             "designerId": "0d0caea5-39e7-4cad-b667-4b062696ca7e"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "margin": 12,
+                "ui": "light",
+                "layout": "hbox"
+            },
+            "designerId": "9bc1a500-08aa-49a3-b378-5267691971d1",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "docked": "right",
+                        "ui": "action-round",
+                        "iconAlign": "right",
+                        "iconCls": "info",
+                        "text": null
+                    },
+                    "designerId": "34c27c6c-024b-441c-b441-eb4302498f0d",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.Msg.alert('', 'Please send email to tortlets@softrism.com for forgotten userid and password', Ext.emptyFn);"
+                                ]
+                            },
+                            "designerId": "3c23ef81-b321-4474-a525-836ea8dbead0"
                         }
                     ]
                 }

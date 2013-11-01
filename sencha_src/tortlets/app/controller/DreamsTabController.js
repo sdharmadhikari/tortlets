@@ -135,8 +135,15 @@ Ext.define('MyApp.controller.DreamsTabController', {
         var tempDreamId = MyApp.app.tempId;
 
         var newOrOldDream = dreamDetailsForm.getRecord();
+        var oldTitle = newOrOldDream.get('title');
+        var oldNotes = newOrOldDream.get('notes');
 
         dreamDetailsForm.updateRecord(newOrOldDream);
+        var newTitle = newOrOldDream.get('title');
+        var newNotes = newOrOldDream.get('notes');
+        //alert('dreamId ' + newOrOldDream.get('id'));
+
+
 
         var errors = newOrOldDream.validate();
 
@@ -163,7 +170,11 @@ Ext.define('MyApp.controller.DreamsTabController', {
             newOrOldDream.save(operation);
 
         }else{
+            if((oldTitle.trim() !== newTitle.trim()) || (oldNotes.trim() !== newNotes.trim())){
+                console.log('dream is changed, then only save it, do later');
+            }
             newOrOldDream.save(operation);
+
         }
 
     },
@@ -300,9 +311,8 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var tProxy = newOrOldTortoise.getProxy();
         var headers = tProxy.getHeaders();
-        var intDay = new Date().getDay();
-        intDay = intDay === 0 ? 7 : intDay; // On server side sunday is 7 not zero, rest is same
-        headers["Today-Day"] = intDay;
+        //intDay = intDay === 0 ? 7 : intDay; // On server side sunday is 7 not zero, rest is same
+        headers["Today-Day"] = MyApp.app.getToday();
         tProxy.setHeaders(headers);
 
         Ext.Viewport.setMasked({xtype: 'loadmask'});

@@ -32,7 +32,7 @@
                 "needleWidth": 10,
                 "sectors": [
                     "[\r",
-                    "    {end : 25, label : 'Forgot Dreams?', color : '#FF7272'},\r",
+                    "    {end : 25, label : 'Dreams?', color : '#FF7272'},\r",
                     "    {end : 50, label : 'Average', color : '#FEECA1'},\r",
                     "    {end : 75, label : 'Good', color : '#BCD7A9'},\r",
                     "    {end : 100, label : 'Great!', color : '#567E3A'}\r",

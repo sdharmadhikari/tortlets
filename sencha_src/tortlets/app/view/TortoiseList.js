@@ -21,7 +21,7 @@ Ext.define('MyApp.view.TortoiseList', {
         hideAnimation: 'wipe',
         showAnimation: 'slide',
         ui: 'round',
-        emptyText: 'You need to at least one Tortoise to realize the dream. Tortoise is nothing but an activity to want to do regularly. Remember, slow and steady tortoise wins !',
+        emptyText: 'You need at least one Tortoise to realize the dream. Tortoise is nothing but an activity you want to do regularly. Remember, slow and steady tortoise wins !',
         store: 'tortoisesStore',
         onItemDisclosure: true,
         variableHeights: true,

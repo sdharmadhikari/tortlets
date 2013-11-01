@@ -1,5 +1,6 @@
 package com.softrism.tortlets.domain;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
@@ -106,7 +107,7 @@ public class Tuser {
     }
 
     @Transactional
-    public com.softrism.tortlets.domain.Tuser generateTortlets() {
+    public com.softrism.tortlets.domain.Tuser generateTortlets() throws ParseException {
         String userid = this.getUserid();
         Tuser tuser = Tuser.findTusersByUseridEquals(userid).getResultList().get(0);
         if (!tuser.getStatus().equals(TuserStatusEnum.ACTIVE)) {
