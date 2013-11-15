@@ -1,20 +1,32 @@
-t-bugs sequence ( fix client, move to aws , then work on server) 
+t-bugs sequence
 
+tse -> back -> dr -> back click on other dr, shows previous dr 
+
+
+Sample dream auto-creation ? 
 Click on different dr , sometimes show previous click tses
-Around 6.30 , tortlet is not created even if day is not matching.
+https ! 
+Dr save should only happen in case data changed (partial done)
+For every entity except tuser, userid column should be treated as id (hibernateid) not userid (userid can change !) 
+  -- Might have server side aspects changes too ( need to get id instead of userid from SEcurityContext)
+  -- Dr save userid=id
+  -- Tse save userid=id
+ add back button to registrationPage1 as well
+  -- Back button on registration page, should go to origin. (If from guage screen, go to guage, if from snapsignupdone form go back to that form)
 
-Make icon image white background
-Make splash screen image white background
-Make main image green.
+Add "cancel" button on DreamDetails in case clicked from + Dr button.
 
-Dr save only make call if data is changed.
 
-Back to dreams now scrolls in direction "up", i think that is only in one condition, either old or new dream.
+Row was updated by another transaction : This happens many times in real app while dr , tse update. 
+org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.softrism.tortlets.domain.Dream#26]; nested exception is javax.persistence.OptimisticLockException: 
+This happens when you update data from another client !
+This exception should be handled
+
+
 Try alert mechanism "App is updated, do you want to update"
 
 
-Row was updated by another transaction : When I start adding details to snap created user.
-org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.softrism.tortlets.domain.Dream#26]; nested exception is javax.persistence.OptimisticLockException: 
+
 
 nice to have
 status
@@ -26,4 +38,12 @@ Guage ideas to try later:
 -	try chart background for image/gradient or color
 
 SignInSignOutModule pending things
+
+567E3A
+
+
+original yellow color
+
+ffcc00ff
+
 

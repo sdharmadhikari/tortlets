@@ -679,7 +679,8 @@
                                 "itemId": "userid",
                                 "label": "User Id",
                                 "labelWidth": "37%",
-                                "name": null
+                                "name": null,
+                                "readOnly": true
                             },
                             "designerId": "cd69b31c-0008-409f-a21d-750c8ba167a2"
                         },
@@ -937,9 +938,9 @@
                                             "        var tok = updatedUserObject.userid + ':' + updatedUserObject.plainPassword ;\r",
                                             "        var hash = Base64.encode(tok);\r",
                                             "        var authHeaderValue = \"Basic \" + hash;\r",
-                                            "        \r",
+                                            "\r",
                                             "        updatedUserObject.authHeaderValue = authHeaderValue ; \r",
-                                            "        \r",
+                                            "\r",
                                             "        registrationCardPanel.fireEvent('signUpSuccess',updatedUserObject);\r",
                                             "\r",
                                             "    },\r",

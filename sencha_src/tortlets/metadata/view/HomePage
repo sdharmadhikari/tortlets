@@ -22,7 +22,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
-                "title": "Tortlets"
+                "title": "<img src=\"static/images/won_tortoise_smaller.png\"/>Tortlets"
             },
             "designerId": "f2c2fe36-3373-45fd-bb4e-48cfaaa5afff"
         },
@@ -74,6 +74,7 @@
                         "docked": "right",
                         "margin": 2,
                         "ui": "action",
+                        "icon": null,
                         "text": "Go"
                     },
                     "designerId": "7b3a08fd-7f84-4f03-863d-b5dc88d6917b",

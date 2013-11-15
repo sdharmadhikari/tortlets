@@ -56,6 +56,18 @@
             "designerId": "7eaac8f5-1384-4583-9f2e-7c21b4c442d7"
         },
         {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 20
+            },
+            "designerId": "10aacb05-13a4-4163-8ccc-e4eecd1c52e4"
+        },
+        {
             "type": "Ext.Img",
             "reference": {
                 "name": "items",
@@ -63,9 +75,23 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": 101
+                "height": 101,
+                "width": null,
+                "src": "static/images/tortlets-login.png"
             },
             "designerId": "e7e3c30f-cee6-4cbd-9f93-2534e7b74729"
+        },
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 10
+            },
+            "designerId": "cf2a435e-0bf0-4d9b-a2f0-8c0bdaa7bb0a"
         },
         {
             "type": "Ext.Label",

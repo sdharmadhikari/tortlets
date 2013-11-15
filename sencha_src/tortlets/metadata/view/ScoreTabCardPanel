@@ -48,6 +48,52 @@
                             "type": "string"
                         }
                     ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "signOutButtonOnGauge",
+                        "hidden": false,
+                        "itemId": "signOutButtonOnGuage",
+                        "ui": "small",
+                        "text": "Sign Out"
+                    },
+                    "designerId": "b8963bad-6276-4d00-84ce-e01d925be819",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "\r",
+                                    "var scoreTabCardPanel = this.up('scoreTabCardPanel');\r",
+                                    "scoreTabCardPanel.fireEvent('signOut');"
+                                ]
+                            },
+                            "designerId": "5ca29219-e308-4d5d-ae62-cb44d0de7235"
+                        }
+                    ]
                 }
             ]
         }

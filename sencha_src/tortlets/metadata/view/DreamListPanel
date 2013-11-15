@@ -24,7 +24,31 @@
                 "designer|displayName": "DreamListPanelTitleBar",
                 "title": "Your Dreams"
             },
-            "designerId": "9bf07779-4091-40ae-9704-b833c9fb87da"
+            "designerId": "9bf07779-4091-40ae-9704-b833c9fb87da",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "name": "dreamListPanelDreamAdd",
+                        "iconCls": "add",
+                        "text": ""
+                    },
+                    "designerId": "4e3812d5-bdf8-4dae-98fc-d2fd6929fcee",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "linkedinstance",

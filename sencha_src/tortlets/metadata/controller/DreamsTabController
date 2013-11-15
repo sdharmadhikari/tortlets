@@ -28,10 +28,15 @@
                     "var whatsYourDreamTextField = this.getWhatsYourDreamTextField();\r",
                     "\r",
                     "var text = this.getWhatsYourDreamTextField().getValue();\r",
-                    "//alert(text);\r",
+                    "\r",
+                    "console.log('button : ' + button.config.name);\r",
                     "var record = Ext.create('MyApp.model.Dream');\r",
                     "record.set('title', text);\r",
+                    "\r",
                     "dreamForm.newStatus='true';\r",
+                    "\r",
+                    "dreamForm.origin = button.config.name;   \r",
+                    "\r",
                     "dreamForm.setRecord(record);\r",
                     "\r",
                     "mainTabPanel.setActiveItem(1);\r",
@@ -138,10 +143,10 @@
                     "\r",
                     "}else{\r",
                     "    if((oldTitle.trim() !== newTitle.trim()) || (oldNotes.trim() !== newNotes.trim())){\r",
-                    "\t\tconsole.log('dream is changed, then only save it, do later');\r",
-                    "\t}\r",
+                    "        console.log('dream is changed, then only save it, do later');\r",
+                    "    }\r",
                     "    newOrOldDream.save(operation);\r",
-                    "    \r",
+                    "\r",
                     "}\r",
                     ""
                 ],
@@ -167,7 +172,11 @@
                     "var dreamListCardPanel = this.getDreamListCardPanel();\r",
                     "var dreamListPanel = this.getDreamListPanel();\r",
                     "\r",
-                    "if(dreamForm.newStatus === 'true') {\r",
+                    "//alert(dreamForm.origin);\r",
+                    "// dreamListPanelDreamAdd\r",
+                    "// homePageDreamButton\r",
+                    "\r",
+                    "if(dreamForm.newStatus === 'true' && dreamForm.origin === 'homePageDreamButton') {\r",
                     "\r",
                     "    mainTabPanel.setActiveItem(homeTabCardPanel);\r",
                     "}else {\r",
@@ -205,7 +214,7 @@
                     "\r",
                     "Ext.Viewport.setMasked({xtype: 'loadmask'});\r",
                     "\r",
-                    "Ext.Msg.confirm('', \"Dream and it's tortoises will be deleted !\", function(buttonId,value,opt) {\r",
+                    "Ext.Msg.confirm('', \"Dream and its tortoises will be deleted !\", function(buttonId,value,opt) {\r",
                     "\r",
                     "    if(buttonId === 'yes') { \r",
                     "        dream.getProxy().setAppendId(true);\r",
@@ -618,7 +627,7 @@
                     "var dreamId = tortoise.getDream().get('id');\r",
                     "\r",
                     "\r",
-                    "Ext.Msg.confirm('', \"Tortoise will be deleted !\", function(buttonId,value,opt) {\r",
+                    "Ext.Msg.confirm('', \"Tortoise and its pending tortlets will be deleted !\", function(buttonId,value,opt) {\r",
                     "\r",
                     "    if(buttonId === 'yes') { \r",
                     "        Ext.Viewport.setMasked({xtype: 'loadmask'});\r",
@@ -849,6 +858,25 @@
                 ]
             },
             "designerId": "fd6cb084-499d-4e61-b386-2b4b84f58340"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDreamListPanelDreamAddButtonTap",
+                "implHandler": [
+                    "\r",
+                    "this.onHomeTabNewDreamButtonTap(button,e,eOpts);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='dreamListPanelDreamAdd']"
+            },
+            "designerId": "165d81b5-f162-46a8-94b9-ac599ca41b1a"
         }
     ]
 }
