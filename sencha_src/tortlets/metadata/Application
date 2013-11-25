@@ -209,7 +209,7 @@
                 "implHandler": [
                     "var env = 'ec2' ; // Change this as required.\r",
                     "var httpScheme = \"http://\";\r",
-                    "var port = '8443'; // Only applicable to home and office.\r",
+                    "var port = '8080'; // Only applicable to home and office.\r",
                     "// home \r",
                     "var host = '';\r",
                     "if( env === 'home'){\r",

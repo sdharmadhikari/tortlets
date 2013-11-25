@@ -339,7 +339,7 @@ Ext.define('MyApp.view.signupmodule', {
                                 itemId: 'userid',
                                 label: 'User Id',
                                 labelWidth: '37%',
-                                readOnly: true
+                                readOnly: false
                             },
                             {
                                 xtype: 'passwordfield',

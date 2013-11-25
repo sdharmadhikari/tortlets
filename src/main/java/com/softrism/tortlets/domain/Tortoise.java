@@ -2,17 +2,14 @@ package com.softrism.tortlets.domain;
 
 import com.softrism.tortlets.TortletsConstants;
 import flexjson.JSONSerializer;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-import javax.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateMidnight;
@@ -94,34 +91,32 @@ public class Tortoise {
     private String userid;
 
     @PrePersist
-    private void prePersist(){
+    private void prePersist() {
         Date now = new Date();
         createdOn = now;
         updatedOn = now;
     }
 
     @PreUpdate
-    private void preUpdate(){
-
+    private void preUpdate() {
         Date now = new Date();
         updatedOn = now;
     }
 
     @Transactional
-    public void processForTortletGeneration( String todayDate) throws ParseException {
+    public void processForTortletGeneration(String todayDate) throws ParseException {
         DateTime jdTime = null;
         int dayOfWeek = 0;
-        if(todayDate == null){
+        if (todayDate == null) {
             jdTime = new DateTime();
             dayOfWeek = jdTime.getDayOfWeek();
-        }else{
+        } else {
             SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-            jdTime =  new DateTime(sdf.parse(todayDate));
+            jdTime = new DateTime(sdf.parse(todayDate));
             dayOfWeek = jdTime.getDayOfWeek();
         }
         boolean shouldCreate = false;
-        Dream dream = Dream.findDream(this.getDream().getId()); // Have to do this again because if calling from
-        // TortoiseController, dream is detached. (even if I get tortoise persisted from using findTortoise !
+        Dream dream = Dream.findDream(this.getDream().getId());
         Tuser tuser = dream.getTuser();
         boolean tortoiseStarted = this.getStartDate() == null ? true : jdTime.isAfter(this.getStartDate().getTime());
         DateMidnight tortoiseEndMidnight = this.getEndDate() == null ? new DateMidnight() : new DateMidnight(this.getEndDate());
@@ -186,7 +181,7 @@ public class Tortoise {
         if (shouldCreate) {
             log.info("Creating new tortlet for tortoise : " + this.getTitle());
             Tortlet tortlet = new Tortlet();
-            tortlet.setUserid(tuser.getUserid());
+            tortlet.setUserid(tuser.getId().toString());
             tortlet.setTitle(this.getTitle() + " - " + jdTime.dayOfWeek().getAsShortText() + "," + jdTime.toString(org.joda.time.format.DateTimeFormat.forPattern("MM/dd")));
             tortlet.setCreatedOn(jdTime.toDate());
             int tortoiseCreatedCount = this.getTortletsCreatedCount() + 1;
@@ -209,6 +204,5 @@ public class Tortoise {
             dream.setTuser(tuser);
             tortlet.persist();
         }
-
     }
 }

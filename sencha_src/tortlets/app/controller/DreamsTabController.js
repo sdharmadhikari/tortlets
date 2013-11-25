@@ -135,7 +135,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
         /* Accessing global variable which has been set 
         in Application launch() function */
         var userObject = currentUser; 
-        var userid = currentUser.userid;
+        var userid = currentUser.id.toString();
         var utility = MyApp.app.getController('UtilityController');
         /* Need this so that this controller is available in 
         callback methods. */
@@ -302,7 +302,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var newStatus = tortoiseDetailsForm.newStatus;
         var currentUser = Ext.JSON.decode(localStorage.getItem('userInfo'));
-        var userid = currentUser.userid; 
+        var userid = currentUser.id.toString(); 
         var tempDreamId = MyApp.app.tempId;
 
         var newOrOldTortoise = tortoiseDetailsForm.getRecord();

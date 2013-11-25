@@ -30,7 +30,6 @@ public class DreamController {
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String create(@Valid Dream dream, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        dream.setUserid(userDetails.getUsername());
         Tuser tuser = Tuser.findTusersByUseridEquals(userDetails.getUsername()).getSingleResult();
         dream.setTuser(tuser);
         if (bindingResult.hasErrors()) {
@@ -54,23 +53,12 @@ public class DreamController {
         }
         uiModel.asMap().clear();
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        dream.setUserid(userDetails.getUsername());
         Tuser tuser = Tuser.findTusersByUseridEquals(userDetails.getUsername()).getSingleResult();
         dream.setTuser(tuser);
         Date now = new Date();
         dream.setUpdatedOn(now);
         dream.merge();
         return "redirect:/dreams/" + encodeUrlPathSegment(dream.getId().toString(), httpServletRequest);
-    }
-
-    @RequestMapping(params = "find=ByUseridEquals", method = RequestMethod.GET)
-    public String findDreamsByUseridEquals(@RequestParam(value = "userid", required = false) String userid, Model uiModel) {
-        if (userid == null || userid.length() == 0) {
-            UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-            userid = userDetails.getUsername();
-        }
-        uiModel.addAttribute("dreams", Dream.findDreamsByUseridEquals(userid).getResultList());
-        return "dreams/list";
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")

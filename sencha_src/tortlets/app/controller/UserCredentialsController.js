@@ -149,7 +149,7 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         var utility = MyApp.app.getController('UtilityController');
         var storeLoadCallback = utility.storeLoadCallback;
 
-        var userid = userObject.userid;
+        var userid = userObject.id;
         var authHeaderValue = userObject.authHeaderValue;
 
         var today = MyApp.app.getToday();
@@ -181,7 +181,9 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         proxy = dreamsStore.getProxy();
         headers = proxy.getHeaders();
         headers.Authorization = authHeaderValue;
-        proxy.setUrl(host + '/dreams?find=ByUseridEquals&userid=' +userid);
+        //proxy.setUrl(host + '/dreams?find=ByUseridEquals&userid=' +userid);
+        proxy.setUrl(host + '/dreams?find=ByTuser&tuser=' +userid);
+
 
         dreamsStore.load(storeLoadCallback);
 

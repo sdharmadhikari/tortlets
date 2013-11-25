@@ -7,6 +7,7 @@
             <menu:item id="i_dream_new" messageCode="global_menu_new" url="/dreams?form" z="WmXMGa8pyAAmGZIFgPtnIxODfJA="/>
             <menu:item id="i_dream_list" messageCode="global_menu_list" render="false" url="/dreams?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
             <menu:item id="fi_dream_useridequals" messageCode="global_menu_find" url="/dreams?find=ByUseridEquals&amp;userid" z="user-managed"/>
+            <menu:item id="fi_dream_tuser" messageCode="global_menu_find" url="/dreams?find=ByTuser&amp;form" z="XNxZ4rQTByUlqmKG7kDom2CmstE="/>
         </menu:category>
         <menu:category id="c_tortoise" z="sfGASZ0b2/JD6vmc8Yutp6c4Zk8=">
             <menu:item id="i_tortoise_new" messageCode="global_menu_new" url="/tortoises?form" z="kZspn5GuYIPRVeMUTwPyi8OQhD8="/>

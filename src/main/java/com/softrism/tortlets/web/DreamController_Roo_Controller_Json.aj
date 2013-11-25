@@ -4,6 +4,7 @@
 package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Dream;
+import com.softrism.tortlets.domain.Tuser;
 import com.softrism.tortlets.web.DreamController;
 import java.util.List;
 import org.springframework.http.HttpHeaders;
@@ -84,12 +85,12 @@ privileged aspect DreamController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
     
-    @RequestMapping(params = "find=ByUseridEquals", headers = "Accept=application/json")
+    @RequestMapping(params = "find=ByTuser", headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> DreamController.jsonFindDreamsByUseridEquals(@RequestParam("userid") String userid) {
+    public ResponseEntity<String> DreamController.jsonFindDreamsByTuser(@RequestParam("tuser") Tuser tuser) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
-        return new ResponseEntity<String>(Dream.toJsonArray(Dream.findDreamsByUseridEquals(userid).getResultList()), headers, HttpStatus.OK);
+        return new ResponseEntity<String>(Dream.toJsonArray(Dream.findDreamsByTuser(tuser).getResultList()), headers, HttpStatus.OK);
     }
     
 }

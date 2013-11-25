@@ -713,3 +713,31 @@ exit
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-10-18 15:44:06
 exit
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-10-18 16:13:57
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-11-15 17:56:44
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-11-15 17:56:57
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-11-19 10:41:52
+focus --class ~.domain.Dream
+finder list --filter ByTuserEquals
+finder list --filter ByTuser
+finder add --finderName findDreamsByTuser
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-11-19 15:17:32
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-11-19 15:17:43
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-11-19 16:24:08
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-11-19 16:24:14
+focus --class ~.domain.Tortoise
+field reference --fieldName tuser --type ~.domain.Tuser
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-11-19 20:23:40
+focus --class ~.domain.Tortoise
+// [failed] field embedded --type ~.domain.Tuser --fieldName tuser
+field other --fieldName tuser --type ~.domain.Tuser
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-11-19 20:34:39
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-11-20 20:01:56
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-11-20 20:05:47
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-11-20 20:05:53
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-11-21 10:15:55

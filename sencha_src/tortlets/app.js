@@ -153,7 +153,7 @@ Ext.application({
     getHost: function() {
         var env = 'ec2' ; // Change this as required.
         var httpScheme = "http://";
-        var port = '8443'; // Only applicable to home and office.
+        var port = '8080'; // Only applicable to home and office.
         // home 
         var host = '';
         if( env === 'home'){

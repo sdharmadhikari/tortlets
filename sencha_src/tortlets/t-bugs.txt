@@ -14,7 +14,6 @@ For every entity except tuser, userid column should be treated as id (hibernatei
  add back button to registrationPage1 as well
   -- Back button on registration page, should go to origin. (If from guage screen, go to guage, if from snapsignupdone form go back to that form)
 
-Add "cancel" button on DreamDetails in case clicked from + Dr button.
 
 
 Row was updated by another transaction : This happens many times in real app while dr , tse update. 
@@ -25,7 +24,14 @@ This exception should be handled
 
 Try alert mechanism "App is updated, do you want to update"
 
+Helpful queries
 
+update tortlet set userid = (select id from tuser where userid = 'sudhir')
+where userid = 'sudhir'
+
+update tortlet set userid = id
+
+alter table dream drop column userid;
 
 
 nice to have

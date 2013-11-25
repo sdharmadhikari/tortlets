@@ -3,16 +3,26 @@
 
 package com.softrism.tortlets.web;
 
+import com.softrism.tortlets.domain.Dream;
+import com.softrism.tortlets.domain.Tuser;
 import com.softrism.tortlets.web.DreamController;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 privileged aspect DreamController_Roo_Controller_Finder {
     
-    @RequestMapping(params = { "find=ByUseridEquals", "form" }, method = RequestMethod.GET)
-    public String DreamController.findDreamsByUseridEqualsForm(Model uiModel) {
-        return "dreams/findDreamsByUseridEquals";
+    @RequestMapping(params = { "find=ByTuser", "form" }, method = RequestMethod.GET)
+    public String DreamController.findDreamsByTuserForm(Model uiModel) {
+        uiModel.addAttribute("tusers", Tuser.findAllTusers());
+        return "dreams/findDreamsByTuser";
+    }
+    
+    @RequestMapping(params = "find=ByTuser", method = RequestMethod.GET)
+    public String DreamController.findDreamsByTuser(@RequestParam("tuser") Tuser tuser, Model uiModel) {
+        uiModel.addAttribute("dreams", Dream.findDreamsByTuser(tuser).getResultList());
+        return "dreams/list";
     }
     
 }

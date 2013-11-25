@@ -4,16 +4,17 @@
 package com.softrism.tortlets.domain;
 
 import com.softrism.tortlets.domain.Dream;
+import com.softrism.tortlets.domain.Tuser;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 privileged aspect Dream_Roo_Finder {
     
-    public static TypedQuery<Dream> Dream.findDreamsByUseridEquals(String userid) {
-        if (userid == null || userid.length() == 0) throw new IllegalArgumentException("The userid argument is required");
+    public static TypedQuery<Dream> Dream.findDreamsByTuser(Tuser tuser) {
+        if (tuser == null) throw new IllegalArgumentException("The tuser argument is required");
         EntityManager em = Dream.entityManager();
-        TypedQuery<Dream> q = em.createQuery("SELECT o FROM Dream AS o WHERE o.userid = :userid", Dream.class);
-        q.setParameter("userid", userid);
+        TypedQuery<Dream> q = em.createQuery("SELECT o FROM Dream AS o WHERE o.tuser = :tuser", Dream.class);
+        q.setParameter("tuser", tuser);
         return q;
     }
     

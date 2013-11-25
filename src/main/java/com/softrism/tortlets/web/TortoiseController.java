@@ -82,9 +82,10 @@ public class TortoiseController {
     void populateEditForm(Model uiModel, Tortoise tortoise) {
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String userid = userDetails.getUsername();
+        Tuser tuser = Tuser.findTusersByUseridEquals(userid).getSingleResult();
         uiModel.addAttribute("tortoise", tortoise);
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("dreams", com.softrism.tortlets.domain.Dream.findDreamsByUseridEquals(userid).getResultList());
+        uiModel.addAttribute("dreams", com.softrism.tortlets.domain.Dream.findDreamsByTuser(tuser).getResultList());
         uiModel.addAttribute("tortlets", com.softrism.tortlets.domain.Tortlet.findTortletsByUseridEquals(userid).getResultList());
         uiModel.addAttribute("tortoisedurationtypeenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseDurationTypeEnum.values()));
         uiModel.addAttribute("tortoisestatusenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseStatusEnum.values()));

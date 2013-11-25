@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByTuser" id="ff_com_softrism_tortlets_domain_Dream" path="/dreams" z="fUI2zAYYWLiqIjlrt4t7JuWskro=">
+        <field:select disableFormBinding="true" field="tuser" id="f_com_softrism_tortlets_domain_Dream_tuser" itemValue="id" items="${tusers}" path="/tusers" required="true" z="SHqKDbVxf+wJT5cilCck1nmpJlU="/>
+    </form:find>
+</div>

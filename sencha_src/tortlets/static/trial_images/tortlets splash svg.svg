@@ -15,8 +15,8 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="tortlets main svg file.svg"
-   inkscape:export-filename="/Users/sudhir/Projects/trials/tortlets/sencha_src/tortlets/static/images/won_tortoise_smaller.png"
+   sodipodi:docname="tortlets splash svg.svg"
+   inkscape:export-filename="/Users/sudhir/Projects/trials/tortlets/sencha_src/tortlets/resources/loading/Default@2x.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -857,7 +857,7 @@
      pagecolor="#eeeeee"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.67817488"
      inkscape:cx="318.27525"
@@ -1682,7 +1682,7 @@
        sodipodi:cy="490.56586"
        sodipodi:rx="1.3258252"
        sodipodi:ry="4.0658641"
-       d="m 221.67798,490.56586 a 1.3258252,4.0658641 0 1 1 -2.65165,0 1.3258252,4.0658641 0 1 1 2.65165,0 z"
+       d="m 221.67798,490.56586 c 0,2.24551 -0.59359,4.06586 -1.32582,4.06586 -0.73224,0 -1.32583,-1.82035 -1.32583,-4.06586 0,-2.24552 0.59359,-4.06587 1.32583,-4.06587 0.73223,0 1.32582,1.82035 1.32582,4.06587 z"
        transform="matrix(1.2735843,-1.1097534,1.1097534,1.2735843,-673.59226,260.31962)"
        inkscape:transform-center-x="4.9093631"
        inkscape:transform-center-y="0.76354437" />
@@ -1784,7 +1784,7 @@
        sodipodi:cy="606.88489"
        sodipodi:rx="26.516504"
        sodipodi:ry="54.09367"
-       d="m 394.56558,606.88489 a 26.516504,54.09367 0 1 1 -53.03301,0 26.516504,54.09367 0 1 1 53.03301,0 z"
+       d="m 394.56558,606.88489 c 0,29.87511 -11.87185,54.09367 -26.51651,54.09367 -14.64466,0 -26.5165,-24.21856 -26.5165,-54.09367 0,-29.87511 11.87184,-54.09367 26.5165,-54.09367 14.64466,0 26.51651,24.21856 26.51651,54.09367 z"
        transform="matrix(1.1300234,0,0,1.5917736,29.480143,-94.499883)" />
     <path
        style="fill:#803300;fill-opacity:1;stroke:#000000;stroke-width:1.68925154px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

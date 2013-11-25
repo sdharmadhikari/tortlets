@@ -680,7 +680,7 @@
                                 "label": "User Id",
                                 "labelWidth": "37%",
                                 "name": null,
-                                "readOnly": true
+                                "readOnly": false
                             },
                             "designerId": "cd69b31c-0008-409f-a21d-750c8ba167a2"
                         },

@@ -1,6 +1,7 @@
 package com.softrism.tortlets.web;
 
 import com.softrism.tortlets.domain.Dream;
+import com.softrism.tortlets.domain.Tuser;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +21,12 @@ public aspect DreamControllerAspect {
 
     Object around(String jsonDreamString) : aroundCreateDream(jsonDreamString){
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        String loggedInUser = userDetails.getUsername();
+        Tuser loggedInTuser = Tuser.findTusersByUseridEquals(userDetails.getUsername()).getSingleResult();
+        System.out.println("loggedInTuser : " + loggedInTuser.getId());
         Dream dream = Dream.fromJsonToDream(jsonDreamString);
-        if( ! dream.getUserid().equals(loggedInUser)){
+        Tuser tuserRequesting = dream.getTuser();
+        System.out.println("tuserRequesting : " + tuserRequesting.getId());
+        if( loggedInTuser.getId() != tuserRequesting.getId()){
             System.out.println("Userid does not match with logged in user while creating dream !!!");
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Type", "application/json");

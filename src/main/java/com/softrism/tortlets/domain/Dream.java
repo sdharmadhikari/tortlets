@@ -1,5 +1,12 @@
 package com.softrism.tortlets.domain;
 
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+import javax.*;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
@@ -7,17 +14,10 @@ import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "findDreamsByUseridEquals" })
 @RooJson(deepSerialize = false)
+@RooJpaActiveRecord(finders = { "findDreamsByTuser" })
 public class Dream {
 
     @NotNull
@@ -56,20 +56,16 @@ public class Dream {
     @Enumerated(EnumType.STRING)
     private DreamStatusEnum status;
 
-    private String userid;
-
     @PrePersist
-    private void prePersist(){
-
+    private void prePersist() {
         Date now = new Date();
         createdOn = now;
         updatedOn = now;
-        status = DreamStatusEnum.ACTIVE; // later need to be removed as Status will come from client.
-
+        status = DreamStatusEnum.ACTIVE;
     }
 
     @PreUpdate
-    private void preUpdate(){
+    private void preUpdate() {
         Date now = new Date();
         updatedOn = now;
     }

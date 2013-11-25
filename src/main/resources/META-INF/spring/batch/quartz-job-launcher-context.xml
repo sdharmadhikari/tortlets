@@ -15,6 +15,7 @@
 				<property name="jobDetail" ref="jobDetail" />
 				<property name="cronExpression" value="0 01 09 * * ?" />
                 <!--property name="cronExpression" value="0 */15 * * * ?" /-->
+                <!--property name="cronExpression" value="0 45 19 * * ?" /-->
 			</bean>
 	</property>
 	</bean>

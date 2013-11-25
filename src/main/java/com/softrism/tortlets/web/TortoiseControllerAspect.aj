@@ -21,9 +21,11 @@ public aspect TortoiseControllerAspect {
 
     Object around(String jsonTortoiseString) : aroundCreateTortoise(jsonTortoiseString){
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        String loggedInUser = userDetails.getUsername();
+        Tuser loggedInUser = Tuser.findTusersByUseridEquals(userDetails.getUsername()).getSingleResult();
+        long loggedInUserId = loggedInUser.getId();
         Tortoise tortoise = Tortoise.fromJsonToTortoise(jsonTortoiseString);
-        if( ! tortoise.getUserid().equals(loggedInUser)){
+        long userIdRequesting = Long.parseLong( tortoise.getUserid());
+        if( loggedInUserId != userIdRequesting){
             System.out.println("Userid does not match with logged in user while creating tortoise !!!");
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Type", "application/json");
