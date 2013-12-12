@@ -1,5 +1,7 @@
 package com.softrism.tortlets.web;
 
+import com.softrism.tortlets.domain.Dream;
+import com.softrism.tortlets.domain.DreamStatusEnum;
 import com.softrism.tortlets.domain.Tuser;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -12,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,7 +25,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 
-public aspect TuserControllerAspect {
+privileged aspect TuserControllerAspect {
 
     pointcut authUser(String userid, String password) :  execution(* com.softrism.tortlets.web.TuserController.jsonFindTusersByUseridEqualsAndPasswordEquals(..)) && args(userid,password);
 
@@ -60,8 +63,19 @@ public aspect TuserControllerAspect {
         ResponseEntity responseEntity = (ResponseEntity)proceed(finalJsonUser);
 
         tuser = Tuser.findTusersByUseridEquals(userid).getSingleResult();
-        tuser.setPassword(null);
+        tuser.setPassword(null); // Client should not get back the encrypted password.
+        /*
+        Dream testDream = new Dream();
 
+        Date now = new Date();
+        testDream.setTitle("Be on top of my activities");
+        testDream.setTuser(tuser);
+        testDream.setCreatedOn(now);
+        testDream.setUpdatedOn(now);
+        testDream.setStatus(DreamStatusEnum.ACTIVE);
+        //testDream.setDreamColor();
+        testDream.persist();
+        */
         return new ResponseEntity<String>(tuser.toJson(),responseEntity.getHeaders(), responseEntity.getStatusCode());
     }
 

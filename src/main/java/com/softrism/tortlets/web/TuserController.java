@@ -1,5 +1,7 @@
 package com.softrism.tortlets.web;
 
+import com.softrism.tortlets.domain.Dream;
+import com.softrism.tortlets.domain.DreamStatusEnum;
 import com.softrism.tortlets.domain.Tuser;
 import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
@@ -66,4 +68,5 @@ public class TuserController {
         headers.add("Content-Type", "application/json; charset=utf-8");
         return new ResponseEntity<String>(Tuser.toJsonArray(Tuser.findTusersByUseridEquals(userid).getResultList()), headers, HttpStatus.OK);
     }
+
 }

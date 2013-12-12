@@ -119,5 +119,18 @@ public class TortoiseController {
         return new ResponseEntity<String>(tortoise.toJson(),headers, HttpStatus.CREATED);
     }
 
+    // Moved this method from Roo aspect because If I add my custom aspect on top of this, it says PUT method not supported !
+    @RequestMapping(method = RequestMethod.PUT, headers = "Accept=application/json")
+    public ResponseEntity<String> updateFromJson(@RequestBody String json) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+        Tortoise tortoise = Tortoise.fromJsonToTortoise(json);
+        if (tortoise.merge() == null) {
+            return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<String>(headers, HttpStatus.OK);
+    }
+
+
 
 }

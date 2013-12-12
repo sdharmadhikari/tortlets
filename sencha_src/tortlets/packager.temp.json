@@ -2,7 +2,7 @@
   "applicationName": "Tortlets",
   "applicationId": "com.softrism.tortlets",
   "bundleSeedId": "5GPZWUFUB9",
-  "versionString": "1.0",
+  "versionString": "1.01",
   "versionCode": "1",
   "icon": {
     "57": "resources/icons/Icon.png",
@@ -12,9 +12,11 @@
   },
   "inputPath": "/Users/sudhir/Projects/trials/tortlets/sencha_src/tortlets/build/MyApp/package",
   "outputPath": "/Users/sudhir/Projects/trials/tortlets/sencha_src/tortlets/build/MyApp/native",
-  "configuration": "Debug",
+  "configuration": "Release",
   "platform": "iOS",
   "deviceType": "iPhone",
+  "certificateAlias": "iPhone Distribution: Softrism Inc (5GPZWUFUB9)",
+  "provisionProfile": "tortlets_adhoc_profile.mobileprovision",
   "androidAPILevel": "8",
   "permissions": [
     "INTERNET",
@@ -27,6 +29,8 @@
   ],
   "orientations": [
     "portrait",
+    "landscapeLeft",
+    "landscapeRight",
     "portraitUpsideDown"
   ]
 }

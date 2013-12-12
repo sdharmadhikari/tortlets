@@ -17,13 +17,14 @@ import org.springframework.security.core.userdetails.UserDetails;
  */
 public aspect TortoiseControllerAspect {
 
-    pointcut aroundCreateTortoise(String jsonTortoiseString) : execution(* com.softrism.tortlets.web.TortoiseController.createFromJson(..)) && args(jsonTortoiseString);
+    pointcut aroundCreateTortoise(String jsonTortoiseString, String todayDate) : execution(* com.softrism.tortlets.web.TortoiseController.createFromJson(..)) && args(jsonTortoiseString, todayDate);
 
-    Object around(String jsonTortoiseString) : aroundCreateTortoise(jsonTortoiseString){
+    Object around(String jsonTortoiseString, String todayDate) : aroundCreateTortoise(jsonTortoiseString, todayDate){
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Tuser loggedInUser = Tuser.findTusersByUseridEquals(userDetails.getUsername()).getSingleResult();
-        long loggedInUserId = loggedInUser.getId();
+        long loggedInUserId = loggedInUser.getId().longValue();
         Tortoise tortoise = Tortoise.fromJsonToTortoise(jsonTortoiseString);
+        System.out.println("Creating Tortoise : " + tortoise.toString());
         long userIdRequesting = Long.parseLong( tortoise.getUserid());
         if( loggedInUserId != userIdRequesting){
             System.out.println("Userid does not match with logged in user while creating tortoise !!!");
@@ -31,7 +32,7 @@ public aspect TortoiseControllerAspect {
             headers.add("Content-Type", "application/json");
             return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
         }
-        ResponseEntity responseEntity = (ResponseEntity)proceed(jsonTortoiseString);
+        ResponseEntity responseEntity = (ResponseEntity)proceed(jsonTortoiseString, todayDate);
         //Tortoise tortoisePersisted = Tortoise.fromJsonToTortoise((String)responseEntity.getBody());
         //tortoisePersisted = Tortoise.findTortoise(tortoisePersisted.getId());
         //Tuser.processTortoise(tortoisePersisted);
@@ -39,4 +40,20 @@ public aspect TortoiseControllerAspect {
 
 
     }
-}
+
+
+    pointcut aroundUpdateTortoise(String jsonTortoiseString) : execution(* com.softrism.tortlets.web.TortoiseController.updateFromJson(..)) && args(jsonTortoiseString);
+
+    Object around(String jsonTortoiseString) : aroundUpdateTortoise(jsonTortoiseString){
+
+        Tortoise tortoise = Tortoise.fromJsonToTortoise(jsonTortoiseString);
+        System.out.println("Updating Tortoise : " + tortoise.toString());
+
+        ResponseEntity responseEntity = (ResponseEntity)proceed(jsonTortoiseString);
+
+        return responseEntity;
+
+    }
+
+
+    }

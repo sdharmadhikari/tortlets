@@ -24,9 +24,10 @@ public aspect DreamControllerAspect {
         Tuser loggedInTuser = Tuser.findTusersByUseridEquals(userDetails.getUsername()).getSingleResult();
         System.out.println("loggedInTuser : " + loggedInTuser.getId());
         Dream dream = Dream.fromJsonToDream(jsonDreamString);
+        System.out.println(dream.toString());
         Tuser tuserRequesting = dream.getTuser();
         System.out.println("tuserRequesting : " + tuserRequesting.getId());
-        if( loggedInTuser.getId() != tuserRequesting.getId()){
+        if( loggedInTuser.getId().longValue() != tuserRequesting.getId().longValue()){
             System.out.println("Userid does not match with logged in user while creating dream !!!");
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Type", "application/json");

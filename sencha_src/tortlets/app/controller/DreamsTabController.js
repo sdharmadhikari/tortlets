@@ -435,6 +435,12 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var dreamId = savedModel.get('id');
 
+        if ( dreamId == null || dreamId === ''){
+            Ext.Msg.alert('Error : DS1. Try Operation Again','',Ext.emptyFn);
+            Ext.Viewport.setMasked(false);
+            return;
+        }
+
         var urlWithDream = orgUrl + '&dream=' + dreamId;
         proxy.setUrl(urlWithDream);
         tortoisesStore.load(function(records, operation, success) {
@@ -466,6 +472,12 @@ Ext.define('MyApp.controller.DreamsTabController', {
 
         var dream = savedModel.get('dream');
         var dreamId = dream.id;
+
+        if ( dreamId == null || dreamId === ''){
+            Ext.Msg.alert('Error : TS1. Try Operation Again','',Ext.emptyFn);
+            Ext.Viewport.setMasked(false);
+            return;
+        }
         var urlWithDream = orgUrl + '&dream=' + dreamId;
         proxy.setUrl(urlWithDream);
         tortoisesStore.load(function(records, operation, success) {

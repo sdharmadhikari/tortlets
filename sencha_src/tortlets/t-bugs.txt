@@ -7,10 +7,7 @@ Sample dream auto-creation ?
 Click on different dr , sometimes show previous click tses
 https ! 
 Dr save should only happen in case data changed (partial done)
-For every entity except tuser, userid column should be treated as id (hibernateid) not userid (userid can change !) 
-  -- Might have server side aspects changes too ( need to get id instead of userid from SEcurityContext)
-  -- Dr save userid=id
-  -- Tse save userid=id
+
  add back button to registrationPage1 as well
   -- Back button on registration page, should go to origin. (If from guage screen, go to guage, if from snapsignupdone form go back to that form)
 
@@ -29,7 +26,9 @@ Helpful queries
 update tortlet set userid = (select id from tuser where userid = 'sudhir')
 where userid = 'sudhir'
 
-update tortlet set userid = id
+update tortoise set userid =  (select id from tuser where userid = 'sudhir')
+
+select title from tortlet where tortoise in (select id from tortoise where tuser = 1)
 
 alter table dream drop column userid;
 
