@@ -110,7 +110,7 @@ Ext.define('MyApp.view.loginmodule', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
-                            Ext.Msg.alert('', 'Please send email to tortlets@softrism.com for forgotten userid and password', Ext.emptyFn);
+                            Ext.Msg.alert('', 'Please send email to tortlets@softrism.com for login problems and user feedback', Ext.emptyFn);
                         },
                         flex: 1,
                         docked: 'right',

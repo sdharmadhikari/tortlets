@@ -1,0 +1,154 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "tortletDetailsName",
+        "id": "tortletsDetailsId",
+        "designer|userClassName": "TortletsDetails",
+        "designer|userAlias": "tortletDetails"
+    },
+    "designerId": "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "name",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "",
+                "margin": 10
+            },
+            "designerId": "d18152e7-7a49-4a02-ad4e-0b51d0eea3fd"
+        },
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Tortlet"
+            },
+            "designerId": "32a67882-8f70-4574-a1ae-6790eb991159",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortletsDetailsBackButton",
+                        "ui": "back",
+                        "designer|displayName": "TortletsDetailBack",
+                        "text": "Back"
+                    },
+                    "designerId": "52aaa77a-0cf2-448d-b873-0fc7ce3f4c69",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortletDetailsSaveButton",
+                        "align": "right",
+                        "text": "Save"
+                    },
+                    "designerId": "07af0886-2d9e-453b-93ad-7485abd11357",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "TortletTitle",
+                "label": "Title",
+                "name": "title"
+            },
+            "designerId": "8748b3e4-9e45-45de-bba1-c171a736a4ac"
+        },
+        {
+            "type": "Ext.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "label": "Notes",
+                "name": "notes"
+            },
+            "designerId": "33c782fc-6985-4e3d-8388-89642aebe3b3"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "margin": 10,
+                "designer|displayName": "CompletedFieldSet",
+                "title": null
+            },
+            "designerId": "ec25368c-c38b-47d2-a0ec-3a872bfe971d",
+            "cn": [
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": null,
+                        "designer|displayName": "CompletedToggleField",
+                        "label": "Completed",
+                        "labelWidth": null,
+                        "name": "completed"
+                    },
+                    "designerId": "67184b3b-04cc-46eb-9b47-a5c4bc36ed28"
+                }
+            ]
+        }
+    ]
+}

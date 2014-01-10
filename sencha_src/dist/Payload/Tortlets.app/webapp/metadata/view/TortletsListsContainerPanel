@@ -1,0 +1,40 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "flip",
+        "container|animation.direction": null,
+        "ui": null,
+        "designer|userClassName": "TortletsListsContainerPanel",
+        "designer|userAlias": "tortletsListsContainerPanel",
+        "layout": "card",
+        "scrollable": null
+    },
+    "designerId": "af38c8d3-9dd0-4cc3-ae15-a0abe4d641fc",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "0c02e72b-c458-468d-bafe-d2c611bfcce8",
+            "masterInstanceId": "96dc9ea9-4fbc-405e-96e2-47a36defae14"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "fd5e7b51-9879-43ae-b024-5bcd486d2803",
+            "masterInstanceId": "c4a261f1-da65-4acd-8b6c-851fd3eaf2e6"
+        }
+    ]
+}

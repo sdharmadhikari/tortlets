@@ -1,0 +1,54 @@
+t-bugs sequence
+
+tse -> back -> dr -> back click on other dr, shows previous dr 
+
+
+Sample dream auto-creation ? 
+Click on different dr , sometimes show previous click tses
+https ! 
+Dr save should only happen in case data changed (partial done)
+
+ add back button to registrationPage1 as well
+  -- Back button on registration page, should go to origin. (If from guage screen, go to guage, if from snapsignupdone form go back to that form)
+
+
+
+Row was updated by another transaction : This happens many times in real app while dr , tse update. 
+org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.softrism.tortlets.domain.Dream#26]; nested exception is javax.persistence.OptimisticLockException: 
+This happens when you update data from another client !
+This exception should be handled
+
+
+Try alert mechanism "App is updated, do you want to update"
+
+Helpful queries
+
+update tortlet set userid = (select id from tuser where userid = 'sudhir')
+where userid = 'sudhir'
+
+update tortoise set userid =  (select id from tuser where userid = 'sudhir')
+
+select title from tortlet where tortoise in (select id from tortoise where tuser = 1)
+
+alter table dream drop column userid;
+
+
+nice to have
+status
+add allowed delay days
+add start date and end date
+dream color
+
+Guage ideas to try later:
+-	try chart background for image/gradient or color
+
+SignInSignOutModule pending things
+
+567E3A
+
+
+original yellow color
+
+ffcc00ff
+
+

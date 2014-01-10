@@ -1,0 +1,111 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TortoiseListPanel",
+        "designer|userAlias": "tortoiseListPanel",
+        "layout": "vbox"
+    },
+    "designerId": "c717694e-2e8e-4855-ba93-2500aa9367bf",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "itemId": "tortoiseListTitleBar",
+                "designer|displayName": "TortoiseListPanelTitleBar",
+                "title": "Tortoises"
+            },
+            "designerId": "c92b0635-d55f-4fa0-908e-d9a377bb3d0d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseListPanelBackButton",
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "3a3f1956-9239-43a0-90ec-9643f018b018",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseListPanelAddButton",
+                        "align": "right",
+                        "iconCls": "add",
+                        "text": ""
+                    },
+                    "designerId": "130a0383-ddfc-45f3-a2ca-f9c209c9c6cf",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 10
+            },
+            "designerId": "9812fcd3-ef9d-4ad3-a1ff-c26aa1a9be08",
+            "masterInstanceId": "eccbc6a6-9583-424c-ac72-aef0e7263cdf"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortoiseListBackToDreamButton",
+                "itemId": "mybutton2",
+                "ui": "confirm",
+                "text": "Back To Dreams"
+            },
+            "designerId": "0d1842e0-720d-439f-9690-01f93309f3e8",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

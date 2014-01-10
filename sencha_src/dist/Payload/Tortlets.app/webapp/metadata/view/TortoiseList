@@ -1,0 +1,100 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": null,
+        "hideAnimation": "wipe",
+        "margin": null,
+        "showAnimation": "slide",
+        "ui": "round",
+        "designer|userClassName": "TortoiseList",
+        "designer|userAlias": "tortoiseList",
+        "emptyText": "You need at least one Tortoise to realize the dream. Tortoise is nothing but an activity you want to do regularly. Remember, slow and steady tortoise wins !",
+        "store": "tortoisesStore",
+        "onItemDisclosure": true,
+        "variableHeights": true
+    },
+    "configAlternates": {
+        "data": "array"
+    },
+    "designerId": "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "data",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div>{title}</div>\r",
+                    "\r",
+                    "\r",
+                    "{%\r",
+                    "\r",
+                    "var maxScore = 100;\r",
+                    "var done = '';\r",
+                    "for(i=10; i < maxScore+1; i=i+10) {    \r",
+                    "\tif(i <= values.latestTortoiseScore) {\r",
+                    "%}\r",
+                    "        ..\r",
+                    "{%\r",
+                    "     }else{\r",
+                    "        if(done !== 'true'){\r",
+                    "%}\r",
+                    "           <img src=\"static/images/tortoise_smaller.png\"></img>\r",
+                    "{%\r",
+                    "            done = 'true';\r",
+                    "        }else{\r",
+                    "%}\r",
+                    "          .. \r",
+                    "{%\r",
+                    "        }\r",
+                    "\t}\r",
+                    "}\r",
+                    "%}\r",
+                    "\r",
+                    "{%\r",
+                    "if(values.latestTortoiseScore >= 100) {\r",
+                    "%}\r",
+                    "&nbsp;..\r",
+                    "<img src=\"static/images/race-finish-small.png\"></img>\r",
+                    "<img src=\"static/images/won_tortoise_smaller.png\"></img>\r",
+                    "{%\r",
+                    "}else {\r",
+                    "%}\r",
+                    "<img src=\"static/images/race-finish-small.png\"></img>\r",
+                    "{%\r",
+                    "}\r",
+                    "%}\r",
+                    "<span class=\"smallFont\">(Score:{latestTortoiseScore})</span>\r",
+                    ""
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "configAlternates": {
+                "data": "array"
+            },
+            "designerId": "4033550c-a896-459f-ad4d-caf4924e0e06",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

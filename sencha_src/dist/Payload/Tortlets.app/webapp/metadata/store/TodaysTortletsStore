@@ -1,0 +1,101 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Tortlet",
+        "storeId": "todaysTortletsStore",
+        "designer|userClassName": "TodaysTortletsStore"
+    },
+    "designerId": "15eb7579-b7e5-4a31-96e4-4dd8481e7568",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": null,
+                "enablePagingParams": false,
+                "url": "http://dummy.url",
+                "headers": [
+                    "{ 'Accept' : 'application/json'}"
+                ],
+                "appendId": false
+            },
+            "configAlternates": {
+                "actionMethods": "object"
+            },
+            "designerId": "ce9b222a-0e3e-438f-9bb9-23f8d08eb0ee",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "actionMethods",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "8a3dcec9-3544-4be3-a0ec-4f49cd20b814"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "tortoise.dream.latestDreamScore"
+            },
+            "designerId": "a7d83a4b-62c5-43ba-aee0-65095a0e2f83",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "sorterFn",
+                        "designer|params": [
+                            "first",
+                            "second"
+                        ],
+                        "implHandler": [
+                            "var score1 = first.data.tortoise.latestTortoiseScore;\r",
+                            "var score2 = second.data.tortoise.latestTortoiseScore;\r",
+                            "\r",
+                            "if(score1 === score2){\r",
+                            "\r",
+                            "    var createdCount1 = first.data.tortoise.tortletsCreatedCount;\r",
+                            "    var createdCount2 = second.data.tortoise.tortletsCreatedCount;\r",
+                            "    return createdCount1 < createdCount2 ? 1 : (createdCount1 === createdCount2 ? 0 : -1);\r",
+                            "\r",
+                            "}else{\r",
+                            "\r",
+                            "    return score1 > score2 ? 1 : (score1 === score2 ? 0 : -1);\r",
+                            "\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "44a2cce4-407d-4f34-a679-cac9d71883a0"
+                }
+            ]
+        }
+    ]
+}

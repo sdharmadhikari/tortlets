@@ -1,0 +1,57 @@
+{
+    "type": "Ext.chart.SpaceFillingChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UserScoreGuageChart",
+        "designer|userAlias": "userScoreGuageChart",
+        "colors": [
+            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+        ]
+    },
+    "designerId": "95d937cc-2252-4abb-b179-b99c259bb007",
+    "isBuiltIn": true,
+    "iconCls": "icon-gauge-chart",
+    "autoName": "MyGaugeChart",
+    "cn": [
+        {
+            "type": "Ext.chart.series.Gauge",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "totalAngle": 3.141592653589793,
+                "title": null,
+                "field": null,
+                "needle": true,
+                "needleWidth": 10,
+                "sectors": [
+                    "[\r",
+                    "    {end : 25, label : 'Dreams?', color : '#FF7272'},\r",
+                    "    {end : 50, label : 'Average', color : '#FEECA1'},\r",
+                    "    {end : 75, label : 'Good', color : '#BCD7A9'},\r",
+                    "    {end : 100, label : 'Great!', color : '#567E3A'}\r",
+                    "\r",
+                    "]"
+                ],
+                "value": 10
+            },
+            "configAlternates": {
+                "totalAngle": "number"
+            },
+            "designerId": "404e90d0-064c-487c-af83-aec3c461174e",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "totalAngle",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

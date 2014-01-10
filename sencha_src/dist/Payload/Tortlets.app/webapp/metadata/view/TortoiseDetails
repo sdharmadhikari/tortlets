@@ -1,0 +1,319 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "scrollToTopOnRefresh": "true",
+        "designer|userClassName": "TortoiseDetails",
+        "designer|userAlias": "tortoiseDetails",
+        "scrollable": "vertical"
+    },
+    "designerId": "dca854bb-a33a-4137-aef2-90d43399589d",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "newStatus",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "scrollToTopOnRefresh",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Tortoise"
+            },
+            "designerId": "d70911fe-a2c2-4979-8f11-22f2a3864fcf",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseDetailsBackToDreamButton",
+                        "ui": "back",
+                        "designer|displayName": "TortoiseDetailsBackToDream",
+                        "iconAlign": null,
+                        "iconCls": null,
+                        "text": "Back"
+                    },
+                    "designerId": "23149791-3e80-4e50-a961-89f2ee8a27c0",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseDetailsBackToListButton",
+                        "align": "right",
+                        "docked": null,
+                        "designer|displayName": "TortoiseDtailsBackToListButton",
+                        "iconCls": "arrow_up",
+                        "text": null
+                    },
+                    "designerId": "1cbf4938-88e5-4276-961f-2df0a7f12dc7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "TortoiseTiteFieldSet",
+                "title": null
+            },
+            "designerId": "bc9c221e-9788-46e0-b186-1ac25cc22217",
+            "cn": [
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 65,
+                        "html": null,
+                        "designer|displayName": "TortoiseTitle",
+                        "label": null,
+                        "labelWidth": "0%",
+                        "name": "title",
+                        "placeHolder": "Recurring activity title..",
+                        "maxRows": 2
+                    },
+                    "designerId": "36659fb2-3e42-4150-b471-45a137c54e00"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "TortoiseDetailsRepeatFieldSet",
+                "title": "Do It On Every"
+            },
+            "designerId": "3254f6bf-be79-4da5-a4ac-b697fcb19929",
+            "cn": [
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "MondayToggle",
+                        "label": "Monday",
+                        "labelWidth": "40%",
+                        "name": "monday"
+                    },
+                    "designerId": "21ef1e3f-9df2-4995-9d5f-c7d7457d7db4"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "TuesdayToggle",
+                        "label": "Tuesday",
+                        "labelWidth": "40%",
+                        "name": "tuesday"
+                    },
+                    "designerId": "9f44f8d1-b9d3-4ecc-98fe-bc28e76d04fb"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "WednesdayToggle",
+                        "label": "Wednesday",
+                        "labelWidth": "40%",
+                        "name": "wednesday"
+                    },
+                    "designerId": "6b64c5cd-3f4a-4220-a63b-4fee2105698b"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "ThursdayToggle",
+                        "label": "Thursday",
+                        "labelWidth": "40%",
+                        "name": "thursday"
+                    },
+                    "designerId": "8a10e2d3-cf1e-455b-b454-54ce02734c45"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "FridayToggle",
+                        "label": "Friday",
+                        "labelWidth": "40%",
+                        "name": "friday"
+                    },
+                    "designerId": "45fcd68d-c1e6-484a-a77e-535fb868b02b"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "SaturdayToggle",
+                        "label": "Saturday",
+                        "labelWidth": "40%",
+                        "name": "saturday"
+                    },
+                    "designerId": "1f4a08ea-d3ed-427b-94f6-57f6e1b1078b"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "SundayToggle",
+                        "label": "Sunday",
+                        "labelWidth": "40%",
+                        "name": "sunday"
+                    },
+                    "designerId": "595acfc2-4f79-45ad-a374-c8bf81a46a75"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "TortoiseSaveFieldSet",
+                "title": null
+            },
+            "designerId": "18481e8a-67de-46bb-9139-3ef5d65c09fc",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseDetailsSaveButton",
+                        "ui": "confirm",
+                        "text": "Save"
+                    },
+                    "designerId": "e6d4a749-5930-4c01-b4cf-b90dc4e350c7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "stopTortoiseFieldSet",
+                "title": null
+            },
+            "designerId": "34e20e8f-0ee1-48db-bb75-030d1784fd6b",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "tortoiseDeleteButton",
+                        "ui": "decline",
+                        "designer|displayName": "tortoiseDeleteButton",
+                        "text": "I am Done, Stop The Tortoise.."
+                    },
+                    "designerId": "fa9fc892-935d-47b2-a560-b1ad04009981",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

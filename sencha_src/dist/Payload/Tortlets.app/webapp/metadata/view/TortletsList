@@ -1,0 +1,76 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": null,
+        "docked": null,
+        "ui": "round",
+        "designer|userClassName": "TortletsList",
+        "designer|userAlias": "tortletsList",
+        "scrollable": null,
+        "emptyText": null,
+        "scrollToTopOnRefresh": false,
+        "store": "incompleteTortletsStore",
+        "grouped": true,
+        "onItemDisclosure": false,
+        "variableHeights": true
+    },
+    "configAlternates": {
+        "data": "array"
+    },
+    "designerId": "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "data",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "{title}\r",
+                    "<br/>\r",
+                    "<span class=\"smallFont\">Dream: {tortoise.dream.title}</span>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "9d650fb1-5b46-4a79-8f11-f6cfa818529d"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListPainted",
+                "implHandler": [
+                    "var tortletList = this;\r",
+                    "var dreamStore = Ext.getStore('dreamsStore');\r",
+                    "dreamStore.load(function(records, operation, success) {\r",
+                    "    if(records.length === 0){\r",
+                    "        tortletList.setEmptyText('You need to have dreams to have Tortlets');\r",
+                    "    }else{\r",
+                    "        tortletList.setEmptyText('Wow ! Nothing pending. You are really on top of everything !');\r",
+                    "    }   \r",
+                    "}, this);"
+                ],
+                "name": "painted"
+            },
+            "designerId": "e657dbd5-5f58-492a-a979-38d55bd9b7b1"
+        }
+    ]
+}

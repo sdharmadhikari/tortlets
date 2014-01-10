@@ -1,0 +1,54 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Tortoise",
+        "storeId": "tortoisesStore",
+        "designer|userClassName": "TortoisesStore"
+    },
+    "designerId": "6ae46be0-527b-4709-b96e-84eb3fb55148",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://dummy.url",
+                "headers": [
+                    "{ 'Accept' : 'application/json'}"
+                ]
+            },
+            "designerId": "57e26ae2-f3b5-4ce4-ac0e-00651a04cc35",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "f0f02b37-e7ac-425f-b41a-3f08582cc447"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "latestTortoiseScore"
+            },
+            "designerId": "4c969974-1375-4995-9c6e-b5af2b1b743e"
+        }
+    ]
+}

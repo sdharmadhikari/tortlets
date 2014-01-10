@@ -1,0 +1,173 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "margin": null,
+        "designer|userClassName": "MainTabPanel",
+        "designer|userAlias": "mainTabPanel",
+        "modal": false
+    },
+    "designerId": "424d6af0-4bed-488c-bf22-6b9993519c5f",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Home",
+                "iconCls": "home"
+            },
+            "designerId": "bcc0ae67-91fd-4d26-85c0-65fe79f35217",
+            "masterInstanceId": "c2bdc653-c608-400e-b209-ef000e5d7997"
+        },
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "designerId": "e9ea8147-6b1e-44dc-af44-483e1ebd9577"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Dreams",
+                "iconCls": "star"
+            },
+            "designerId": "188ee7e3-3e56-4e96-ae66-e940ea174345",
+            "masterInstanceId": "ccd9f3a8-ae61-4fc6-982b-b0ab91b1a0b9"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Your Score",
+                "iconCls": "user"
+            },
+            "designerId": "44e7eaf8-c360-4200-9227-e36979155a10",
+            "masterInstanceId": "5aac1687-a779-4ce8-9bce-1cb5d9d3f226"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Help",
+                "iconCls": "info"
+            },
+            "designerId": "c681d4f7-2a2a-42e0-85ca-65a63c61e49c",
+            "masterInstanceId": "0da20323-db08-47ce-9741-64ded49ccb84"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTabpanelActiveItemChange",
+                "implHandler": [
+                    "var utility = MyApp.app.getController('UtilityController');\r",
+                    "var storeLoadCallBack = utility.storeLoadCallBack;\r",
+                    "\r",
+                    "if(value.xtype === 'dreamListCardPanel'){\r",
+                    "    var dreamsStore = Ext.getStore('dreamsStore');\r",
+                    "    dreamsStore.load(storeLoadCallBack);\r",
+                    "}else if(value.xtype === 'homeTabCardPanel'){\r",
+                    "    /* this is commented, too many server calls\r",
+                    "    var tortletsStore = Ext.getStore('incompleteTortletsStore');\r",
+                    "    tortletsStore.load(storeLoadCallBack);\r",
+                    "    var todaysTortletsStore = Ext.getStore('todaysTortletsStore');\r",
+                    "    var todayOrgUrl = todaysTortletsStore.getProxy().getUrl();\r",
+                    "    var today = MyApp.app.getToday();\r",
+                    "    var todayUrl = todayOrgUrl + '&createdOn=' + today;\r",
+                    "    todaysTortletsStore.getProxy().setUrl(todayUrl);\r",
+                    "    todaysTortletsStore.load(storeLoadCallBack);\r",
+                    "    todaysTortletsStore.getProxy().setUrl(todayOrgUrl);\r",
+                    "    */\r",
+                    "\r",
+                    "}else if(value.xtype === 'scoreTabCardPanel') {\r",
+                    "\r",
+                    "    Ext.Viewport.setMasked({xtype: 'loadmask'});\r",
+                    "    var userObject = Ext.JSON.decode(localStorage.getItem('userInfo'));\r",
+                    "    MyApp.model.Tuser.load(userObject.id, {\r",
+                    "        scope: this,\r",
+                    "        failure: function(record, operation) {\r",
+                    "            Ext.Viewport.setMasked(false);\r",
+                    "            Ext.Msg.alert(MyApp.app.getServerErrorMessage(),'',Ext.emptyFn);\r",
+                    "\r",
+                    "        },\r",
+                    "        success: function(record, operation) {\r",
+                    "            var serverUserObject = record.getData();\r",
+                    "            var localUserObject = Ext.JSON.decode(localStorage.getItem('userInfo'));\r",
+                    "            serverUserObject.plainPassword = localUserObject.plainPassword;\r",
+                    "            serverUserObject.authHeaderValue = localUserObject.authHeaderValue;\r",
+                    "            localStorage.setItem('userInfo',Ext.JSON.encode(serverUserObject));\r",
+                    "\r",
+                    "            var score =  serverUserObject.latestDreamScore\r",
+                    "            var userScoreTabController = MyApp.app.getController('UserScoreTabController');\r",
+                    "            var scoreTabCardPanel = userScoreTabController.getScoreTabCardPanel();\r",
+                    "            var userScoreGuageChart = userScoreTabController.getUserScoreGuageChart();\r",
+                    "            userScoreGuageChart.getSeries()[0].setValue(score);\r",
+                    "\r",
+                    "            /////////////////////////////////////////////////\r",
+                    "\r",
+                    "\r",
+                    "            var scoreTextOnChart = Ext.create('Ext.draw.sprite.Text', {\r",
+                    "                type : 'text',\r",
+                    "                text : 'Tortlets Score :' + score + '%',\r",
+                    "                font : 'bold 20px Arial',\r",
+                    "                x: 1,\r",
+                    "                y: 20\r",
+                    "            });\r",
+                    "\r",
+                    "            Ext.Viewport.setMasked(false);\r",
+                    "            userScoreGuageChart.getSurface().removeAll();\r",
+                    "            userScoreGuageChart.getSurface().add(scoreTextOnChart);\r",
+                    "            scoreTextOnChart.show(true);\r",
+                    "\r",
+                    "\r",
+                    "            /////////////////////////////////////////////////            \r",
+                    "\r",
+                    "            scoreTabCardPanel.add(userScoreGuageChart);// I believe add\r",
+                    "            // is needed to repaint the gauge.\r",
+                    "\r",
+                    "        },\r",
+                    "        callback: function(record, operation) {\r",
+                    "            //do something whether the load succeeded or failed\r",
+                    "        }\r",
+                    "    });\r",
+                    "\r",
+                    "\r",
+                    "}"
+                ],
+                "name": "activeitemchange"
+            },
+            "designerId": "6c1295ef-f42f-4f99-a448-365ad4175039"
+        }
+    ]
+}

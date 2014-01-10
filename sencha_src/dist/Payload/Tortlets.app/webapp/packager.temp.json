@@ -1,0 +1,34 @@
+{
+  "applicationName": "Tortlets",
+  "applicationId": "com.softrism.tortlets",
+  "bundleSeedId": "5GPZWUFUB9",
+  "versionString": "1.04",
+  "versionCode": "1",
+  "icon": {
+    "57": "resources/icons/Icon.png",
+    "114": "resources/icons/Icon@2x.png",
+    "60": "resources/icons/Icon-60.png",
+    "120": "resources/icons/Icon-60@2x.png"
+  },
+  "inputPath": "/Users/sudhir/Projects/trials/tortlets/sencha_src/tortlets/build/MyApp/package",
+  "outputPath": "/Users/sudhir/Projects/trials/tortlets/sencha_src/tortlets/build/MyApp/native",
+  "configuration": "Release",
+  "platform": "iOS",
+  "deviceType": "iPhone",
+  "certificateAlias": "iPhone Distribution: Softrism Inc (5GPZWUFUB9)",
+  "provisionProfile": "tortletsdistributionprofile.mobileprovision",
+  "androidAPILevel": "8",
+  "permissions": [
+    "INTERNET",
+    "ACCESS_NETWORK_STATE",
+    "CAMERA",
+    "VIBRATE",
+    "ACCESS_FINE_LOCATION",
+    "ACCESS_COARSE_LOCATION",
+    "CALL_PHONE"
+  ],
+  "orientations": [
+    "portrait",
+    "portraitUpsideDown"
+  ]
+}

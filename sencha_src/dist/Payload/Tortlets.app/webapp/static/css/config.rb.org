@@ -1,0 +1,13 @@
+# Get the directory that this configuration file exists in
+#dir = File.dirname(__FILE__)
+dir = File.dirname("/Users/sudhir/MyPrograms/touch-2.2.0/resources/sass/sencha-touch.scss")
+
+# Load the sencha-touch framework automatically.
+load File.join(dir, '..', 'themes')
+
+# Compass configurations
+fonts_path = File.join(dir, '..', 'themes/fonts/')
+sass_path = dir
+css_path = File.join(dir, "..", "css")
+environment  = :development
+output_style = :expanded

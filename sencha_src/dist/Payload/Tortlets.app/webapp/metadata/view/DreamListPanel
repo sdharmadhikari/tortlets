@@ -1,0 +1,64 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DreamListPanel",
+        "designer|userAlias": "dreamListPanel",
+        "layout": "fit"
+    },
+    "designerId": "eaceb40a-b0c4-4740-a5a5-7c98435c0248",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "designer|displayName": "DreamListPanelTitleBar",
+                "title": "Your Dreams"
+            },
+            "designerId": "9bf07779-4091-40ae-9704-b833c9fb87da",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "name": "dreamListPanelDreamAdd",
+                        "iconCls": "add",
+                        "text": ""
+                    },
+                    "designerId": "4e3812d5-bdf8-4dae-98fc-d2fd6929fcee",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "d015d54a-c224-42a9-99c4-c7b112f4e23d",
+            "masterInstanceId": "3f058fa0-cbf4-4a61-a122-32c6457d8ec4"
+        }
+    ]
+}

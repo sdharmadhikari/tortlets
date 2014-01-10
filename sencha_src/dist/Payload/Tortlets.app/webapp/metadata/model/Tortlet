@@ -1,0 +1,130 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Tortlet",
+        "designer|userAlias": "tortlet"
+    },
+    "designerId": "98103327-6270-4ea5-9055-efe31b2727a6",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title",
+                "type": "string"
+            },
+            "designerId": "1b51fab2-4b61-40c4-b82c-69b015e76a8d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "completed",
+                "type": "boolean"
+            },
+            "designerId": "a038140b-4388-48b9-9c00-1f96ca4e2171"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "notes",
+                "type": "string"
+            },
+            "designerId": "0b8d2dd5-2cf7-49c4-ae44-c748f341f459"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "version",
+                "type": "int"
+            },
+            "designerId": "12163408-d4a8-4ceb-8b29-dbc50f00e365"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "TortletRestProxy",
+                "url": "http://dummy.url",
+                "headers": [
+                    "{ 'Accept' : 'application/json'}"
+                ],
+                "appendId": false
+            },
+            "designerId": "e23ce123-2d53-4c17-ae20-1607b948c042",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "2d06a988-2bb8-466a-98a9-7ac11fc362d0"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "b59474e0-24e3-4c22-8cbe-39e8fc68dad1"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.association.BelongsTo",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "belongsToTortoise",
+                "model": "Tortoise",
+                "foreignKey": "tortoise"
+            },
+            "designerId": "51b19fec-6f63-4042-b1e1-6554376305f7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "createdOn"
+            },
+            "designerId": "63e83c36-59db-426b-8511-ade1c8367edb"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "landingCardPanel",
+        "designer|userClassName": "LandingCardPanel",
+        "designer|userAlias": "landingCardPanel",
+        "layout": "card"
+    },
+    "designerId": "1cc19794-36b6-4e82-baae-38a39a5ce5ec",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "5f71e72e-63e9-481b-accc-fdd19a1b8dbc",
+            "masterInstanceId": "0774d05e-de9d-4085-bd90-9758034e790b"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "7efde643-154d-4f61-b267-354087f960f0",
+            "masterInstanceId": "15444b93-1202-4a0e-8cbe-b9820ac02a0e"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "19c62cf8-b128-44f7-9962-73475b0a4246",
+            "masterInstanceId": "424d6af0-4bed-488c-bf22-6b9993519c5f"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "94a9f2d2-49b1-45dc-93e9-fc47aef25053",
+            "masterInstanceId": "9ec7c3d5-c386-4db0-af50-aa3c1b0cd6c6"
+        }
+    ]
+}

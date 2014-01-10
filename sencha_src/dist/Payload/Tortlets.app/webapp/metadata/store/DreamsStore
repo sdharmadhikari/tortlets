@@ -1,0 +1,54 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Dream",
+        "storeId": "dreamsStore",
+        "designer|userClassName": "DreamsStore"
+    },
+    "designerId": "2a7e2b19-f954-4c5d-a553-29c3ae040071",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://dummy.url",
+                "headers": [
+                    "{ 'Accept' : 'application/json'}"
+                ]
+            },
+            "designerId": "e4c9535a-9efa-443c-a0bb-08593f57296e",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "6aec8cda-037b-417a-989d-53dc8773fc43"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "latestDreamScore"
+            },
+            "designerId": "db70f9e1-4a9d-48f4-b9e3-f0ab0ab65787"
+        }
+    ]
+}

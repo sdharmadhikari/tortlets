@@ -1,0 +1,101 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ScoreTabCardPanel",
+        "designer|userAlias": "scoreTabCardPanel",
+        "layout": "fit"
+    },
+    "designerId": "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Your Score"
+            },
+            "designerId": "35d96897-69ce-4875-8b5f-283f45a0d2cf",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "userProfileButton",
+                        "align": "right",
+                        "docked": null,
+                        "itemId": "userProfileButton",
+                        "iconCls": "settings",
+                        "text": null
+                    },
+                    "designerId": "34c965e9-8b9b-42ae-b678-b6af592366db",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "signOutButtonOnGauge",
+                        "hidden": false,
+                        "itemId": "signOutButtonOnGuage",
+                        "ui": "small",
+                        "text": "Sign Out"
+                    },
+                    "designerId": "b8963bad-6276-4d00-84ce-e01d925be819",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "\r",
+                                    "var scoreTabCardPanel = this.up('scoreTabCardPanel');\r",
+                                    "scoreTabCardPanel.fireEvent('signOut');"
+                                ]
+                            },
+                            "designerId": "5ca29219-e308-4d5d-ae62-cb44d0de7235"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

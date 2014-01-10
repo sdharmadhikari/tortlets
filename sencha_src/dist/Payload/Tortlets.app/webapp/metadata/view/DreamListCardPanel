@@ -1,0 +1,72 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DreamListCardPanel",
+        "designer|userAlias": "dreamListCardPanel",
+        "layout": "card"
+    },
+    "designerId": "ccd9f3a8-ae61-4fc6-982b-b0ab91b1a0b9",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "4bcc6931-fc3a-4998-8f29-bbc017224c3e",
+            "masterInstanceId": "eaceb40a-b0c4-4740-a5a5-7c98435c0248"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "e972da35-59d2-448d-a639-5820c4f71409",
+            "masterInstanceId": "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "34b21d74-1890-458c-bd4d-8e97d8452ab1",
+            "masterInstanceId": "c717694e-2e8e-4855-ba93-2500aa9367bf"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "f0ed9f77-37cb-4d27-b21f-a7302cae79b3",
+            "masterInstanceId": "dca854bb-a33a-4137-aef2-90d43399589d"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelShow",
+                "implHandler": [
+                    "component.setActiveItem(0);"
+                ],
+                "name": "show"
+            },
+            "designerId": "bbfd9a4b-3d8d-4708-bacb-17e9fb8c1911"
+        }
+    ]
+}

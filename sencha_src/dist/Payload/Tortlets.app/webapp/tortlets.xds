@@ -1,0 +1,389 @@
+{
+    "name": "tortlets",
+    "settings": {
+        "urlPrefix": "C:\\Users\\sudhir\\workspace\\mytrunk\\tortlets-mobile\\sencha\\tortlets",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "/Users/sudhir/MyPrograms/touch-2.2.0",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "424d6af0-4bed-488c-bf22-6b9993519c5f": {
+            "paths": [
+                "metadata/view/MainTabPanel",
+                "app/view/override/MainTabPanel.js",
+                "app/view/MainTabPanel.js"
+            ],
+            "className": "MainTabPanel"
+        },
+        "811d49e0-92af-414a-9025-4cb5ec728652": {
+            "paths": [
+                "metadata/view/HomePage",
+                "app/view/override/HomePage.js",
+                "app/view/HomePage.js"
+            ],
+            "className": "HomePage"
+        },
+        "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d": {
+            "paths": [
+                "metadata/view/TortletsDetails",
+                "app/view/override/TortletsDetails.js",
+                "app/view/TortletsDetails.js"
+            ],
+            "className": "TortletsDetails"
+        },
+        "dca854bb-a33a-4137-aef2-90d43399589d": {
+            "paths": [
+                "metadata/view/TortoiseDetails",
+                "app/view/override/TortoiseDetails.js",
+                "app/view/TortoiseDetails.js"
+            ],
+            "className": "TortoiseDetails"
+        },
+        "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0": {
+            "paths": [
+                "metadata/view/DreamDetails",
+                "app/view/override/DreamDetails.js",
+                "app/view/DreamDetails.js"
+            ],
+            "className": "DreamDetails"
+        },
+        "eaceb40a-b0c4-4740-a5a5-7c98435c0248": {
+            "paths": [
+                "metadata/view/DreamListPanel",
+                "app/view/override/DreamListPanel.js",
+                "app/view/DreamListPanel.js"
+            ],
+            "className": "DreamListPanel"
+        },
+        "c717694e-2e8e-4855-ba93-2500aa9367bf": {
+            "paths": [
+                "metadata/view/TortoiseListPanel",
+                "app/view/override/TortoiseListPanel.js",
+                "app/view/TortoiseListPanel.js"
+            ],
+            "className": "TortoiseListPanel"
+        },
+        "f349d5fa-f50b-405e-b80f-e46f09bf9967": {
+            "paths": [
+                "metadata/controller/HomeTabController",
+                "app/controller/override/HomeTabController.js",
+                "app/controller/HomeTabController.js"
+            ],
+            "className": "HomeTabController"
+        },
+        "c2bdc653-c608-400e-b209-ef000e5d7997": {
+            "paths": [
+                "metadata/view/HomeTabCardPanel",
+                "app/view/override/HomeTabCardPanel.js",
+                "app/view/HomeTabCardPanel.js"
+            ],
+            "className": "HomeTabCardPanel"
+        },
+        "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0": {
+            "paths": [
+                "metadata/view/TortletsList",
+                "app/view/override/TortletsList.js",
+                "app/view/TortletsList.js"
+            ],
+            "className": "TortletsList"
+        },
+        "ccd9f3a8-ae61-4fc6-982b-b0ab91b1a0b9": {
+            "paths": [
+                "metadata/view/DreamListCardPanel",
+                "app/view/override/DreamListCardPanel.js",
+                "app/view/DreamListCardPanel.js"
+            ],
+            "className": "DreamListCardPanel"
+        },
+        "3f058fa0-cbf4-4a61-a122-32c6457d8ec4": {
+            "paths": [
+                "metadata/view/DreamList",
+                "app/view/override/DreamList.js",
+                "app/view/DreamList.js"
+            ],
+            "className": "DreamList"
+        },
+        "b4ef4b19-e96a-4128-b08f-83eee4866b5b": {
+            "paths": [
+                "metadata/controller/DreamsTabController",
+                "app/controller/override/DreamsTabController.js",
+                "app/controller/DreamsTabController.js"
+            ],
+            "className": "DreamsTabController"
+        },
+        "eccbc6a6-9583-424c-ac72-aef0e7263cdf": {
+            "paths": [
+                "metadata/view/TortoiseList",
+                "app/view/override/TortoiseList.js",
+                "app/view/TortoiseList.js"
+            ],
+            "className": "TortoiseList"
+        },
+        "5aac1687-a779-4ce8-9bce-1cb5d9d3f226": {
+            "paths": [
+                "metadata/view/ScoreTabCardPanel",
+                "app/view/override/ScoreTabCardPanel.js",
+                "app/view/ScoreTabCardPanel.js"
+            ],
+            "className": "ScoreTabCardPanel"
+        },
+        "0da20323-db08-47ce-9741-64ded49ccb84": {
+            "paths": [
+                "metadata/view/HelpPanel",
+                "app/view/override/HelpPanel.js",
+                "app/view/HelpPanel.js"
+            ],
+            "className": "HelpPanel"
+        },
+        "345107d0-a788-4507-9220-261ec811d61a": {
+            "paths": [
+                "metadata/store/IncompleteTortletsStore",
+                "app/store/override/IncompleteTortletsStore.js",
+                "app/store/IncompleteTortletsStore.js"
+            ],
+            "className": "IncompleteTortletsStore"
+        },
+        "98103327-6270-4ea5-9055-efe31b2727a6": {
+            "paths": [
+                "metadata/model/Tortlet",
+                "app/model/override/Tortlet.js",
+                "app/model/Tortlet.js"
+            ],
+            "className": "Tortlet"
+        },
+        "15eb7579-b7e5-4a31-96e4-4dd8481e7568": {
+            "paths": [
+                "metadata/store/TodaysTortletsStore",
+                "app/store/override/TodaysTortletsStore.js",
+                "app/store/TodaysTortletsStore.js"
+            ],
+            "className": "TodaysTortletsStore"
+        },
+        "8162b955-c1db-4f2f-bcaa-753970ca90eb": {
+            "paths": [
+                "metadata/view/TodaysTortletList",
+                "app/view/override/TodaysTortletList.js",
+                "app/view/TodaysTortletList.js"
+            ],
+            "className": "TodaysTortletList"
+        },
+        "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49": {
+            "paths": [
+                "metadata/model/Dream",
+                "app/model/override/Dream.js",
+                "app/model/Dream.js"
+            ],
+            "className": "Dream"
+        },
+        "2a7e2b19-f954-4c5d-a553-29c3ae040071": {
+            "paths": [
+                "metadata/store/DreamsStore",
+                "app/store/override/DreamsStore.js",
+                "app/store/DreamsStore.js"
+            ],
+            "className": "DreamsStore"
+        },
+        "6224bddc-b988-416c-beca-b6c25b31ac1d": {
+            "paths": [
+                "metadata/model/Tortoise",
+                "app/model/override/Tortoise.js",
+                "app/model/Tortoise.js"
+            ],
+            "className": "Tortoise"
+        },
+        "6ae46be0-527b-4709-b96e-84eb3fb55148": {
+            "paths": [
+                "metadata/store/TortoisesStore",
+                "app/store/override/TortoisesStore.js",
+                "app/store/TortoisesStore.js"
+            ],
+            "className": "TortoisesStore"
+        },
+        "a6be32fc-255c-4b23-8caf-f80699a22551": {
+            "paths": [
+                "metadata/controller/SampleOverriddenController",
+                "app/controller/override/SampleOverriddenController.js",
+                "app/controller/SampleOverriddenController.js"
+            ],
+            "className": "SampleOverriddenController"
+        },
+        "d972eca9-cfd7-429d-8792-8238d5fc4127": {
+            "paths": [
+                "metadata/model/Tuser",
+                "app/model/override/Tuser.js",
+                "app/model/Tuser.js"
+            ],
+            "className": "Tuser"
+        },
+        "bc9381e5-fa6a-401c-a12f-d87047f599b7": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "5197d1d2-b9ae-4186-8349-752497e93cb4": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "4fd5c999-6918-471c-87b8-96d68a98489a": {
+            "paths": [
+                "metadata/controller/UserCredentialsController",
+                "app/controller/override/UserCredentialsController.js",
+                "app/controller/UserCredentialsController.js"
+            ],
+            "className": "UserCredentialsController"
+        },
+        "1cc19794-36b6-4e82-baae-38a39a5ce5ec": {
+            "paths": [
+                "metadata/view/LandingCardPanel",
+                "app/view/override/LandingCardPanel.js",
+                "app/view/LandingCardPanel.js"
+            ],
+            "className": "LandingCardPanel"
+        },
+        "7e277a5b-0624-4aa7-941e-c927df2fcc01": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "0774d05e-de9d-4085-bd90-9758034e790b": {
+            "paths": [
+                "metadata/view/loginmodule",
+                "app/view/override/loginmodule.js",
+                "app/view/loginmodule.js"
+            ],
+            "className": "loginmodule"
+        },
+        "15444b93-1202-4a0e-8cbe-b9820ac02a0e": {
+            "paths": [
+                "metadata/view/signupmodule",
+                "app/view/override/signupmodule.js",
+                "app/view/signupmodule.js"
+            ],
+            "className": "signupmodule"
+        },
+        "96dc9ea9-4fbc-405e-96e2-47a36defae14": {
+            "paths": [
+                "metadata/view/TodaysTortletListPanel",
+                "app/view/override/TodaysTortletListPanel.js",
+                "app/view/TodaysTortletListPanel.js"
+            ],
+            "className": "TodaysTortletListPanel"
+        },
+        "c4a261f1-da65-4acd-8b6c-851fd3eaf2e6": {
+            "paths": [
+                "metadata/view/TortletListPanel",
+                "app/view/override/TortletListPanel.js",
+                "app/view/TortletListPanel.js"
+            ],
+            "className": "TortletListPanel"
+        },
+        "af38c8d3-9dd0-4cc3-ae15-a0abe4d641fc": {
+            "paths": [
+                "metadata/view/TortletsListsContainerPanel",
+                "app/view/override/TortletsListsContainerPanel.js",
+                "app/view/TortletsListsContainerPanel.js"
+            ],
+            "className": "TortletsListsContainerPanel"
+        },
+        "95d937cc-2252-4abb-b179-b99c259bb007": {
+            "paths": [
+                "metadata/view/UserScoreGuageChart",
+                "app/view/override/UserScoreGuageChart.js",
+                "app/view/UserScoreGuageChart.js"
+            ],
+            "className": "UserScoreGuageChart"
+        },
+        "3a2719a1-f0a2-4d6d-9e54-4acd611b7ddc": {
+            "paths": [
+                "metadata/controller/UtilityController",
+                "app/controller/override/UtilityController.js",
+                "app/controller/UtilityController.js"
+            ],
+            "className": "UtilityController"
+        },
+        "4adb5b1a-4440-495e-9df1-40af054479bd": {
+            "paths": [
+                "metadata/controller/UserScoreTabController",
+                "app/controller/override/UserScoreTabController.js",
+                "app/controller/UserScoreTabController.js"
+            ],
+            "className": "UserScoreTabController"
+        },
+        "9ec7c3d5-c386-4db0-af50-aa3c1b0cd6c6": {
+            "paths": [
+                "metadata/view/HomePageHelpModal",
+                "app/view/override/HomePageHelpModal.js",
+                "app/view/HomePageHelpModal.js"
+            ],
+            "className": "HomePageHelpModal"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "1cc19794-36b6-4e82-baae-38a39a5ce5ec",
+            "424d6af0-4bed-488c-bf22-6b9993519c5f",
+            "c2bdc653-c608-400e-b209-ef000e5d7997",
+            "ccd9f3a8-ae61-4fc6-982b-b0ab91b1a0b9",
+            "0774d05e-de9d-4085-bd90-9758034e790b",
+            "15444b93-1202-4a0e-8cbe-b9820ac02a0e",
+            "3f058fa0-cbf4-4a61-a122-32c6457d8ec4",
+            "af38c8d3-9dd0-4cc3-ae15-a0abe4d641fc",
+            "96dc9ea9-4fbc-405e-96e2-47a36defae14",
+            "c4a261f1-da65-4acd-8b6c-851fd3eaf2e6",
+            "8162b955-c1db-4f2f-bcaa-753970ca90eb",
+            "3bb1c2c5-8893-4a3e-89ac-e9b35dbdd4a0",
+            "eccbc6a6-9583-424c-ac72-aef0e7263cdf",
+            "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0",
+            "dca854bb-a33a-4137-aef2-90d43399589d",
+            "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d",
+            "811d49e0-92af-414a-9025-4cb5ec728652",
+            "eaceb40a-b0c4-4740-a5a5-7c98435c0248",
+            "c717694e-2e8e-4855-ba93-2500aa9367bf",
+            "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
+            "95d937cc-2252-4abb-b179-b99c259bb007",
+            "0da20323-db08-47ce-9741-64ded49ccb84",
+            "9ec7c3d5-c386-4db0-af50-aa3c1b0cd6c6"
+        ],
+        "store": [
+            "345107d0-a788-4507-9220-261ec811d61a",
+            "15eb7579-b7e5-4a31-96e4-4dd8481e7568",
+            "2a7e2b19-f954-4c5d-a553-29c3ae040071",
+            "6ae46be0-527b-4709-b96e-84eb3fb55148"
+        ],
+        "controller": [
+            "3a2719a1-f0a2-4d6d-9e54-4acd611b7ddc",
+            "f349d5fa-f50b-405e-b80f-e46f09bf9967",
+            "b4ef4b19-e96a-4128-b08f-83eee4866b5b",
+            "a6be32fc-255c-4b23-8caf-f80699a22551",
+            "4fd5c999-6918-471c-87b8-96d68a98489a",
+            "4adb5b1a-4440-495e-9df1-40af054479bd"
+        ],
+        "model": [
+            "98103327-6270-4ea5-9055-efe31b2727a6",
+            "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
+            "6224bddc-b988-416c-beca-b6c25b31ac1d",
+            "d972eca9-cfd7-429d-8792-8238d5fc4127"
+        ],
+        "resource": [
+            "7e277a5b-0624-4aa7-941e-c927df2fcc01",
+            "bc9381e5-fa6a-401c-a12f-d87047f599b7",
+            "5197d1d2-b9ae-4186-8349-752497e93cb4"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

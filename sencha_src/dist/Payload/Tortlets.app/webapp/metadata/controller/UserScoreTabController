@@ -1,0 +1,42 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UserScoreTabController"
+    },
+    "designerId": "4adb5b1a-4440-495e-9df1-40af054479bd",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "scoreTabCardPanel",
+                "selector": "scoreTabCardPanel"
+            },
+            "designerId": "d3d07d58-abbb-462d-a8bb-08e2ba43e2bb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoCreate": true,
+                "ref": "userScoreGuageChart",
+                "selector": "userScoreGuageChart",
+                "xtype": "userScoreGuageChart"
+            },
+            "designerId": "215014e8-fd42-4c27-bfab-6de54d3fb0bc"
+        }
+    ]
+}

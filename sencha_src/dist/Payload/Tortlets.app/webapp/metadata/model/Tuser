@@ -1,0 +1,226 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Tuser"
+    },
+    "designerId": "d972eca9-cfd7-429d-8792-8238d5fc4127",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "firstName"
+            },
+            "designerId": "dfb0dae0-d323-4ec3-90f6-5305032443ab"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lastName"
+            },
+            "designerId": "fc5873c1-1db0-461a-8853-442ae71a5b93"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "designerId": "8a34b5d2-1873-482f-88b4-5730be96b5eb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "password"
+            },
+            "designerId": "55b64d48-cbd3-4b2d-8006-4eecd24bc765"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "latestDreamScore",
+                "type": "int"
+            },
+            "designerId": "930975de-e99a-49a3-b659-e8ac00209318"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status"
+            },
+            "designerId": "513c72e2-1081-4924-9e28-154898b9b348"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "allowedDelayDays"
+            },
+            "designerId": "7d3ecb17-ea4b-482f-881b-9800738741f9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "birthDate"
+            },
+            "designerId": "ffb28261-59a2-4d24-8e3c-f37f1ec04522"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timezone"
+            },
+            "designerId": "17b01708-53b0-4e69-b24b-0a134f80c033"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "version",
+                "type": "int"
+            },
+            "designerId": "147aa558-24ab-42d4-b7cb-e66f79e90858"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://dummy.url",
+                "headers": [
+                    "{\r",
+                    "   Accept: 'application/json'\r",
+                    "}"
+                ]
+            },
+            "designerId": "ce5cb664-f6e1-4305-a47d-055c20825f09"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "roleName"
+            },
+            "designerId": "513571b5-9511-4eb1-b58d-6be97e2abe2b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortletsCreatedCount"
+            },
+            "designerId": "ca85872f-0d1c-43b3-b993-1a742062a3cb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortletsDeletedCount"
+            },
+            "designerId": "f7e16fcb-3f8f-4b65-9f2f-1bd168d9d9a0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tortletsCompletedCount"
+            },
+            "designerId": "cc9e3047-1723-4505-b876-0517b61dee90"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "hasManyDream",
+                "model": "Dream"
+            },
+            "designerId": "5f7869c3-059e-40bb-bd4d-f82386e1ebe0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userEmail"
+            },
+            "designerId": "4cefb61a-70b4-4ff5-b132-cf135c535ae0"
+        }
+    ]
+}

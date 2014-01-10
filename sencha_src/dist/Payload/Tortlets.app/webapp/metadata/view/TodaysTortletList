@@ -1,0 +1,83 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": null,
+        "docked": null,
+        "ui": "round",
+        "designer|userClassName": "TodaysTortletList",
+        "designer|userAlias": "todayTortletsList",
+        "emptyText": null,
+        "scrollToTopOnRefresh": false,
+        "store": "todaysTortletsStore",
+        "onItemDisclosure": false,
+        "variableHeights": true
+    },
+    "configAlternates": {
+        "data": "array"
+    },
+    "designerId": "8162b955-c1db-4f2f-bcaa-753970ca90eb",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "data",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "{title}\r",
+                    "<br/>\r",
+                    "<span class=\"smallFont\">Dream: {tortoise.dream.title}</span>\r",
+                    "<br/>\r",
+                    "<span class=\"smallFont\">{tortoise.tortletsCompletedCount} out of {tortoise.tortletsCreatedCount} completed</span>\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "c430cd4f-2fd3-478f-8d35-9b81f613b5e7"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListPainted",
+                "implHandler": [
+                    "var todaysTortletList = this;\r",
+                    "var dreamStore = Ext.getStore('dreamsStore');\r",
+                    "//var records = dreamStore.getAllCount(); was trying to remove following server call but bringing in bugs\r",
+                    "dreamStore.load(function(records, operation, success) {\r",
+                    "    if(records.length === 0){ \r",
+                    "        todaysTortletList.setEmptyText('You need to have dreams to have Tortlets');\r",
+                    "    }else{\r",
+                    "        todaysTortletList.setEmptyText('Great ! You are done for today ! Check your pending list to make up');\r",
+                    "    }   \r",
+                    "}, this);\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "name": "painted"
+            },
+            "designerId": "2c433e03-1c94-4ee1-ad48-d1d0daff15c0"
+        }
+    ]
+}

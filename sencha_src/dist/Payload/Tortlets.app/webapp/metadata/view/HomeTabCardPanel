@@ -1,0 +1,62 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "HomeTabCardPanel",
+        "designer|userAlias": "homeTabCardPanel",
+        "layout": "card"
+    },
+    "designerId": "c2bdc653-c608-400e-b209-ef000e5d7997",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelShow",
+                "implHandler": [
+                    "component.setActiveItem(0);"
+                ],
+                "name": "show"
+            },
+            "designerId": "2c536106-cd44-44aa-a5a8-b499edf455f4"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "ca549a70-f78d-4a7c-a328-5aa94a693df7",
+            "masterInstanceId": "811d49e0-92af-414a-9025-4cb5ec728652"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "0766883a-6b7a-428e-b2c3-7a88bc68f48d",
+            "masterInstanceId": "bb8d18be-5e76-4cc7-a5f9-35852ddd4ed0"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "084eb44d-be38-4655-91c1-b3548c4fe1ea",
+            "masterInstanceId": "1e2d15a4-85fd-4696-bf6b-82d8e6cb782d"
+        }
+    ]
+}

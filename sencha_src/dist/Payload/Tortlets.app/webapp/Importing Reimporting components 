@@ -1,0 +1,8 @@
+Importing and re-importing modules into current project.
+
+1. REmoving is better than adding something in imported module when customizing the component.
+2. When u reimport, delete original imported component, then re-import.
+3. But app.js has entry of old component(for example loginmodule) in views section. Delete and readd component in views list.
+4. If you were using component in card-panel and the item was at 0th position, remember that active-item is now set to 1 not to 0. Because you removed that component.
+5. Whenver you customize the component, remember to always add application wide event. Easy to replace component and also, easy to make your customization as standard.
+6. You may have to re-add event listeners, if you have to dont forget function parameters.

@@ -1,0 +1,99 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": null,
+        "margin": null,
+        "ui": "round",
+        "designer|userClassName": "DreamList",
+        "designer|userAlias": "dreamList",
+        "emptyText": "You have no dreams !  Create it using Home tab.",
+        "scrollToTopOnRefresh": false,
+        "store": "dreamsStore",
+        "onItemDisclosure": true,
+        "variableHeights": true
+    },
+    "configAlternates": {
+        "data": "array"
+    },
+    "designerId": "3f058fa0-cbf4-4a61-a122-32c6457d8ec4",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "data",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div>{title}</div>\r",
+                    "\r",
+                    "{%\r",
+                    "var maxScore = 100;\r",
+                    "var done = '';\r",
+                    "for(i=10; i < maxScore+1; i=i+10) {    \r",
+                    "\tif(i <= values.latestDreamScore) {\r",
+                    "%}\r",
+                    "        ..\r",
+                    "{%\r",
+                    "     }else{\r",
+                    "        if(done !== 'true'){\r",
+                    "%}\r",
+                    "           <img src=\"static/images/tortoise_smaller.png\"></img>\r",
+                    "{%\r",
+                    "            done = 'true';\r",
+                    "        }else{\r",
+                    "%}\r",
+                    "          .. \r",
+                    "{%\r",
+                    "        }\r",
+                    "\t}\r",
+                    "}\r",
+                    "%}\r",
+                    "\r",
+                    "{%\r",
+                    "if(values.latestDreamScore >= 100) {\r",
+                    "%}\r",
+                    "&nbsp;..\r",
+                    "<img src=\"static/images/race-finish-small.png\"></img>\r",
+                    "<img src=\"static/images/won_tortoise_smaller.png\"></img>\r",
+                    "{%\r",
+                    "}else {\r",
+                    "%}\r",
+                    "<img src=\"static/images/race-finish-small.png\"></img>\r",
+                    "{%\r",
+                    "}\r",
+                    "%}\r",
+                    "<span class=\"smallFont\">(Score:{latestDreamScore}%)</span>\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "configAlternates": {
+                "data": "array"
+            },
+            "designerId": "5f23be3f-3745-4d2a-9ef2-a383a02992be",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

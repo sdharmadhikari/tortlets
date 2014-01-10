@@ -1,0 +1,111 @@
+Sencha Cmd v4.0.0.126
+[INF]                     app.appCache.cache.0 : index.html                                        
+[INF]                app.appCache.cache.length : 1                                                 
+[INF]             app.appCache.fallback.length : 0                                                 
+[INF]                   app.appCache.network.0 : *                                                 
+[INF]              app.appCache.network.length : 1                                                 
+[INF]                          app.archivePath : archive                                           
+[INF]                            app.build.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/build/tortlets
+[INF]                            app.classpath : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/app.js,/Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/app
+[INF]                          app.cmd.version : 4.0.0.126                                         
+[INF]                           app.config.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/.sencha/app
+[INF]                           app.css.0.path : static/css/sencha-touch.2.2.0.tortlets.css        
+[INF]                         app.css.0.update : delta                                             
+[INF]                           app.css.1.path : static/css/additional.css                         
+[INF]                         app.css.1.update : delta                                             
+[INF]                           app.css.length : 2                                                 
+[INF]                                  app.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets
+[INF]                            app.framework : touch                                             
+[INF]                    app.framework.version : 2.2.0.387                                         
+[INF]                                   app.id : 0ccdbc2e-0e8e-450d-843f-4f0f183e1420              
+[INF]                             app.ignore.0 : .svn$                                             
+[INF]                        app.ignore.length : 1                                                 
+[INF]                        app.indexHtmlPath : index.html                                        
+[INF]                            app.js.0.path : touch/sencha-touch-debug.js                       
+[INF]                     app.js.0.x-bootstrap : true                                              
+[INF]                            app.js.1.path : bootstrap.js                                      
+[INF]                     app.js.1.x-bootstrap : true                                              
+[INF]                          app.js.2.bundle : true                                              
+[INF]                            app.js.2.path : app.js                                            
+[INF]                          app.js.2.update : delta                                             
+[INF]                            app.js.3.path : static/js/Base64.js                               
+[INF]                            app.js.length : 4                                                 
+[INF]                                 app.name : tortlets                                          
+[INF]                             app.platform : web                                               
+[INF]          app.platforms.android.js.0.path : native/src/android/cordova.js                     
+[INF]          app.platforms.android.js.length : 1                                                 
+[INF]            app.platforms.android.package : com.myCompany                                     
+[INF]             app.platforms.bb10.js.0.path : native/src/bb10/cordova.js                        
+[INF]             app.platforms.bb10.js.length : 1                                                 
+[INF]               app.platforms.bb10.package : com.myCompany                                     
+[INF]              app.platforms.ios.js.0.path : native/src/ios/cordova.js                         
+[INF]              app.platforms.ios.js.length : 1                                                 
+[INF]                app.platforms.ios.package : com.myCompany                                     
+[INF]                       app.requires.names :                                                   
+[INF]                    app.requires.packages :                                                   
+[INF]                          app.resources.0 : resources/images                                  
+[INF]                          app.resources.1 : resources/icons                                   
+[INF]                          app.resources.2 : resources/startup                                 
+[INF]                     app.resources.length : 3                                                 
+[INF]                     buildenvironment.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets
+[INF]                buildenvironment.load.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/app/view
+[INF] cmd-cordova-packager.cordova.android.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/apps/android
+[INF] cmd-cordova-packager.cordova.android.src.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/src/android
+[INF] cmd-cordova-packager.cordova.android.webroot.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/apps/android/assets/www
+[INF]    cmd-cordova-packager.cordova.apps.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/apps
+[INF]    cmd-cordova-packager.cordova.bb10.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/apps/bb10
+[INF] cmd-cordova-packager.cordova.bb10.src.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/src/bb10
+[INF] cmd-cordova-packager.cordova.bb10.webroot.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/apps/bb10/www
+[INF]   cmd-cordova-packager.cordova.build.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/build/tortlets/cordova
+[INF] cmd-cordova-packager.cordova.cloud.build.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/build/tortlets/cordova/build
+[INF] cmd-cordova-packager.cordova.cloud.prefix : CordovaBuild_                                     
+[INF]     cmd-cordova-packager.cordova.ios.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/apps/ios
+[INF] cmd-cordova-packager.cordova.ios.src.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/src/ios
+[INF] cmd-cordova-packager.cordova.ios.webroot.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/apps/ios/www
+[INF]     cmd-cordova-packager.cordova.lib.dir : /SDKs/phonegap/2.9.0/lib                          
+[INF]  cmd-cordova-packager.cordova.native.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native
+[INF]     cmd-cordova-packager.cordova.src.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/native/src
+[INF]                       cmd.architect.mode : true                                              
+[INF]                           cmd.config.dir : /Users/sudhir/MyPrograms/sencha_installation/Sencha/Cmd/4.0.0.126
+[INF]                                  cmd.dir : /Users/sudhir/MyPrograms/sencha_installation/Sencha/Cmd/4.0.0.126
+[INF]                     cmd.framework.minver : 2.2.0                                             
+[INF]                    cmd.framework.version : 2.99.99.99999                                     
+[INF]                             cmd.jvm.args : -Xms128m -Xmx1024m -Djava.awt.headless=true       
+[INF]               cmd.merge.tool.args.araxis : -wait -merge -3 -a1 {base} {user} {generated} {out}
+[INF]               cmd.merge.tool.args.kdiff3 : {base} {user} {generated} -o {out}                
+[INF]              cmd.merge.tool.args.p4merge : {base} {user} {generated} {out}                   
+[INF]            cmd.merge.tool.args.smartsync : {user} {generated} {base}                         
+[INF]           cmd.merge.tool.args.sourcegear : --merge --result={out} {user} {base} {generated}  
+[INF]             cmd.merge.tool.args.tortoise : -base:{base} -theirs:{generated} -mine:{user} -merged:{out}
+[INF]                               cmd.minver : 3.0.0.0                                           
+[INF]                             cmd.platform : osx                                               
+[INF]                              cmd.version : 4.0.0.126                                         
+[INF]                      framework.classpath : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/touch/src
+[INF]                     framework.cmd.minver : 3.1.0.53                                          
+[INF]                    framework.cmd.version : 3.1.1.274                                         
+[INF]                     framework.config.dir : /Users/sudhir/MyPrograms/sencha_installation/Sencha/Cmd/4.0.0.126/plugins/touch/2.3
+[INF]                            framework.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/touch
+[INF]                        framework.ignores : src/locale,src/platform,auth2/Auth.js,scroller/Infinite.js
+[INF]                           framework.name : touch                                             
+[INF]                        framework.version : 2.2.0.387                                         
+[INF]         packager.cordova.android.sdk.dir : /SDKs/android                                     
+[INF]          packager.cordova.bb10.device.ip : 192.168.8.128                                     
+[INF] packager.cordova.bb10.device.keystorepass :                                                   
+[INF]        packager.cordova.bb10.device.name : dev                                               
+[INF]    packager.cordova.bb10.device.password :                                                   
+[INF]            packager.cordova.bb10.sdk.dir : /Applications/bbndk                               
+[INF]       packager.cordova.bb10.simulator.ip : 192.168.8.128                                     
+[INF]     packager.cordova.bb10.simulator.name : sim                                               
+[INF] packager.cordova.bb10.simulator.password :                                                   
+[INF]                 packager.cordova.sdk.dir : /SDKs/phonegap/2.9.0                              
+[INF]                 packager.osx.systemPaths : /opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+[INF]                           repo.local.dir : /Users/sudhir/MyPrograms/sencha_installation/Sencha/Cmd/repo
+[INF]         system.java.net.useSystemProxies : true                                              
+[INF]                                touch.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/touch
+[INF]                      workspace.build.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/build
+[INF]                    workspace.cmd.version : 3.1.2.342                                         
+[INF]                     workspace.config.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/.sencha/workspace
+[INF]                            workspace.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets
+[INF]                   workspace.packages.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/packages
+[INF]                      workspace.theme.dir : /Users/sudhir/Projects/trials/tortlets/src/main/webapp/clients/sencha/tortlets/packages/${args.themeName}
+

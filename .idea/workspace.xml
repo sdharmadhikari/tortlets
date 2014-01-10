@@ -19,12 +19,15 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/Info.plist" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/PkgInfo" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/_CodeSignature/CodeResources" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/embedded.mobileprovision" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/iTunesArtwork" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/icon.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/icon@2x.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/sencha-org-Default@2x.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/stbuild_template" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon copy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon-60.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon-60@2x.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon.xcf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/Icon@2x copy.png" afterPath="" />
@@ -39,6 +42,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/css/app.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon copy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon-60.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon-60@2x.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon.xcf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/resources/icons/Icon@2x copy.png" afterPath="" />
@@ -69,24 +74,31 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/static/images/tortoise_smaller.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/static/images/won_tortoise_smaller.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.app/webapp/static/js/Base64.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/packager.iphone.device.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/Default.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/Default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/resources/loading/Default.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/resources/loading/Default.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/Icon.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/Icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/resources/icons/Icon.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/resources/icons/Icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/resources/icons/Icon.png" afterPath="$PROJECT_DIR$/sencha_src/tortlets/resources/icons/Icon.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/ipa_build.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sencha_src/tortlets/tortlets_adhoc_profile.mobileprovision" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.ipa" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Tortlets.ipa" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/embedded.mobileprovision" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/embedded.mobileprovision" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/stbuild_template" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/stbuild_template" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/.architect" afterPath="$PROJECT_DIR$/sencha_src/tortlets/.architect" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/metadata/Application" afterPath="$PROJECT_DIR$/sencha_src/tortlets/metadata/Application" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/_CodeSignature/CodeResources" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/_CodeSignature/CodeResources" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController_Roo_Controller_Json.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController_Roo_Controller_Json.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspect.aj" afterPath="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspect.aj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.roo" afterPath="$PROJECT_DIR$/log.roo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/app/controller/DreamsTabController.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/app/controller/DreamsTabController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/metadata/controller/DreamsTabController" afterPath="$PROJECT_DIR$/sencha_src/tortlets/metadata/controller/DreamsTabController" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/app/view/HelpPanel.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/app/view/HelpPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/metadata/view/HelpPanel" afterPath="$PROJECT_DIR$/sencha_src/tortlets/metadata/view/HelpPanel" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/Info.plist" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/app.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/webapp/app.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/native/Payload/Tortlets.app/webapp/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/app.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build/MyApp/package/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/build_commands.txt" afterPath="$PROJECT_DIR$/sencha_src/tortlets/build_commands.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/packager.ios.adhoc.json" afterPath="$PROJECT_DIR$/sencha_src/tortlets/packager.ios.adhoc.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/packager.ios.appstore.json" afterPath="$PROJECT_DIR$/sencha_src/tortlets/packager.ios.appstore.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/packager.json" afterPath="$PROJECT_DIR$/sencha_src/tortlets/packager.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/packager.temp.json" afterPath="$PROJECT_DIR$/sencha_src/tortlets/packager.temp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resourceNotFound.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resourceNotFound.jspx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/t-bugs.txt" afterPath="$PROJECT_DIR$/sencha_src/tortlets/t-bugs.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/uncaughtException.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/uncaughtException.jspx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/app/view/signupmodule.js" afterPath="$PROJECT_DIR$/sencha_src/tortlets/app/view/signupmodule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sencha_src/tortlets/metadata/view/signupmodule" afterPath="$PROJECT_DIR$/sencha_src/tortlets/metadata/view/signupmodule" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tortlets.iws" />
@@ -404,7 +416,7 @@
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement/core/target/src/com/verient/infinipay/domain/transactional/FundingCard_120Impl.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367017291715" ignored="false" />
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement/core/target/src/com/verient/infinipay/domain/transactional/FundingCard_120DaoImpl.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367017291715" ignored="false" />
     <file path="$PROJECT_DIR$/../../trunk/CBKC/apsettlement-batch/apsettlement/core/target/src/com/verient/infinipay/domain/transactional/FundingCard_120DaoBase.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1367017291715" ignored="false" />
-    <file path="/Dummy.txt" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1386614702235" ignored="false" />
+    <file path="/Dummy.txt" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388428027499" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/ach-batch/ach-launcher/src/main/java/com/verient/batch/ach/processors/AchProcessor.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1371673886878" ignored="false" />
     <file path="/AchProcessor.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1371514050906" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/ach-batch/ach-launcher/src/main/java/com/verient/batch/ach/AchConstants.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1369094395276" ignored="false" />
@@ -554,9 +566,9 @@
     <file path="/DreamControllerAspect.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1386357517122" ignored="false" />
     <file path="/TortoiseControllerAspect.aj" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1386360161014" ignored="false" />
     <file path="/TortletsConstants.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1371849951474" ignored="false" />
-    <file path="/a.dummy" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1386365624205" ignored="false" />
+    <file path="/a.dummy" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388170149123" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/ach-batch/ach-launcher/src/main/java/com/verient/batch/ach/aggregators/ClientReportGroupTrailerAggregator.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1372371284940" ignored="false" />
-    <file path="$PROJECT_DIR$/../dNORAM/dnoramserver/pom.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1372480213376" ignored="false" />
+    <file path="$PROJECT_DIR$/../dNORAM/dnoramserver/pom.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388120375733" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/ach-batch/ach-launcher/.idea/workspace.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1375216325750" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/ach-batch/ach/.idea/workspace.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1375216325750" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/ach-batch/ach-launcher/src/main/java/com/verient/batch/ach/aggregators/AchReportAggregator.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1375215067006" ignored="false" />
@@ -585,7 +597,7 @@
     <file path="/MerchantRowValidatorProcessor.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1381428388551" ignored="false" />
     <file path="$MAVEN_REPOSITORY$/com/verient/infinipay/domain/apautomation/apautomation/1.0/apautomation-1.0.jar!/META-INF/spring/applicationContext.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1381870950237" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/merchant-batch/InfinipayMerchantFileBatch/.idea/workspace.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1382132898327" ignored="false" />
-    <file path="$PROJECT_DIR$/../../verient/merchant-batch/InfinipayMerchantFileBatch/src/main/resources/META-INF/spring/processors.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1381869782898" ignored="false" />
+    <file path="$PROJECT_DIR$/../../verient/merchant-batch/InfinipayMerchantFileBatch/src/main/resources/META-INF/spring/processors.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388427919557" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/merchant-batch/InfinipayMerchantFileBatch/src/main/java/com/verient/infinipay/merchant/main/JobStart.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1381870211387" ignored="false" />
     <file path="$PROJECT_DIR$/../../verient/apsettlement-batch/apsettlement-launcher/src/main/resources/META-INF/spring/readers-ctp-format.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1381950201571" ignored="false" />
     <file path="/readers-ctp-format.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1381950201571" ignored="false" />
@@ -811,6 +823,38 @@
     <file path="/AppUser.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1385593703520" ignored="false" />
     <file path="/uncaughtException.jspx" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1386279030981" ignored="false" />
     <file path="/resourceNotFound.jspx" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1386279171089" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/pom.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387415840151" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/java/org/springframework/roo/addon/web/selenium/SenchaTouchCommands.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387416232625" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/java/org/springframework/roo/addon/web/selenium/SenchaTouchOperations.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387416232624" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/java/org/springframework/roo/addon/web/selenium/SenchaTouchOperationsImpl.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387416232625" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/java/org/springframework/roo/addon/web/senchatouch/SenchaTouchOperations.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387435382911" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/java/org/springframework/roo/addon/web/senchatouch/SenchaTouchCommands.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387435429711" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/java/org/springframework/roo/addon/web/senchatouch/SenchaTouchOperationsImpl.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387435544088" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/resources/org/springframework/roo/addon/web/senchatouch/SenchaTouchAppJSTemplate.js" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387432201143" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/resources/org/springframework/roo/addon/web/senchatouch/SenchaTouchControllerJSTemplate.js" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387432205446" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/resources/org/springframework/roo/addon/web/senchatouch/SenchaTouchModelJSTemplate.js" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387432209570" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/resources/org/springframework/roo/addon/web/senchatouch/SenchaTouchStoreJSTemplate.js" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387432213452" ignored="false" />
+    <file path="$PROJECT_DIR$/../addon-roo-sencha/src/main/resources/org/springframework/roo/addon/web/senchatouch/SenchaTouchViewJSTemplate.js" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387432217197" ignored="false" />
+    <file path="/SenchaTouchCommands.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387435427689" ignored="false" />
+    <file path="/SenchaTouchOperations.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387435382911" ignored="false" />
+    <file path="/SenchaTouchOperationsImpl.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387435329019" ignored="false" />
+    <file path="$PROJECT_DIR$/../gs-accessing-data-jpa/complete/src/main/java/hello/Account.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387850473867" ignored="false" />
+    <file path="$PROJECT_DIR$/../gs-accessing-data-jpa/complete/src/main/java/hello/Customer.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387850651709" ignored="false" />
+    <file path="/Customer.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387850649495" ignored="false" />
+    <file path="$PROJECT_DIR$/../gs-accessing-data-jpa/complete/src/main/java/hello/CustomerRepository.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387850580732" ignored="false" />
+    <file path="/CustomerRepository.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387850580732" ignored="false" />
+    <file path="$PROJECT_DIR$/../gs-accessing-data-jpa/complete/src/main/java/hello/Application.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387850992264" ignored="false" />
+    <file path="/Application.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387850990196" ignored="false" />
+    <file path="/AccountRepository.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387849839770" ignored="false" />
+    <file path="$PROJECT_DIR$/../gs-accessing-data-jpa/complete/src/main/java/hello/AccountRepository.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387849840562" ignored="false" />
+    <file path="/Account.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1387850473099" ignored="false" />
+    <file path="$PROJECT_DIR$/../dNORAM/dnoramserver/src/main/resources/META-INF/spring/database.properties" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388120131599" ignored="false" />
+    <file path="$PROJECT_DIR$/../dNORAM/dnoramserver/src/main/resources/META-INF/persistence.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388120440153" ignored="false" />
+    <file path="$PROJECT_DIR$/../../verient/apfile-batch/apfile-launcher/src/main/java/com/verient/batch/apfile/processors/FileRejectionBusinessValidationProcessor.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388170936888" ignored="false" />
+    <file path="/processors.xml" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388427919557" ignored="false" />
+    <file path="$PROJECT_DIR$/../../verient/apfile-batch/apfile-launcher/src/main/java/com/verient/batch/apfile/aggregators/APFileValidationMessageAggregator.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388710773919" ignored="false" />
+    <file path="/APFileValidationMessageAggregator.java" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388445002567" ignored="false" />
+    <file path="$PROJECT_DIR$/../dnoram/dnoramserver/src/main/resources/META-INF/spring/database.properties" changelist="9726801d-b3bd-455e-bef1-fa29786b8c4c" time="1388693154362" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -966,7 +1010,25 @@
       <file leaf-file-name="database.properties" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/database.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="22" selection-start="458" selection-end="458" vertical-scroll-proportion="0.72115386">
+            <state line="8" column="0" selection-start="234" selection-end="580" vertical-scroll-proportion="0.2238806">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="374" column="0" selection-start="14021" selection-end="14200" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="54" selection-start="522" selection-end="563" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -975,7 +1037,7 @@
       <file leaf-file-name="DreamControllerAspect.aj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="552" selection-end="829" vertical-scroll-proportion="0.0">
+            <state line="28" column="130" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -990,31 +1052,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dream_Roo_ToString.aj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Dream_Roo_ToString.aj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="18" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uncaughtException.jspx" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/uncaughtException.jspx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="42" selection-start="1368" selection-end="1368" vertical-scroll-proportion="-12.666667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TortoiseControllerAspect.aj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="3" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="17" column="14" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dream.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Dream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="13" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tuser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Tuser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="13" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1032,15 +1092,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="121" column="125" selection-start="6295" selection-end="6295" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resourceNotFound.jspx" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resourceNotFound.jspx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="61" selection-start="1024" selection-end="1024" vertical-scroll-proportion="-8.916667">
               <folding />
             </state>
           </provider>
@@ -1077,10 +1128,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TuserControllerAspect.aj" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resourceNotFound.jspx" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/uncaughtException.jspx" />
-        <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj" />
         <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj" />
         <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/database.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj" />
       </list>
     </option>
   </component>
@@ -1110,9 +1161,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="15" />
     <option name="y" value="22" />
-    <option name="width" value="1223" />
+    <option name="width" value="1392" />
     <option name="height" value="730" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -1182,126 +1232,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="i18n" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1378,178 +1308,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="spring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tortlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1903,13 +1661,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="22" width="1223" height="730" extended-state="0" />
+    <frame x="0" y="22" width="1392" height="730" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40327868" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1917,15 +1674,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29411766" sideWeight="0.25" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33770493" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14662273" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.100254886" sideWeight="0.595082" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1961367" sideWeight="0.595082" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3229508" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40186915" sideWeight="0.595082" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33803862" sideWeight="0.595082" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40491804" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1934,6 +1690,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33770493" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2006,36 +1764,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/webapp-dataSource.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="55" selection-end="1397" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="20.28">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/applicationContext-security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="49" selection-start="3569" selection-end="3569" vertical-scroll-proportion="-34.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
@@ -2043,51 +1776,28 @@
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/ApplicationConversionServiceFactoryBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="17" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/resourceNotFound.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="61" selection-start="1024" selection-end="1024" vertical-scroll-proportion="-8.916667">
-          <folding />
-        </state>
+        <state line="17" column="61" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/uncaughtException.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="1368" selection-end="1368" vertical-scroll-proportion="-12.666667">
-          <folding />
-        </state>
+        <state line="23" column="42" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Dream_Roo_ToString.aj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="18" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="552" selection-end="829" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2099,19 +1809,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController_Roo_Controller_Json.aj">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="2462" selection-end="2482" vertical-scroll-proportion="0.0">
+        <state line="374" column="0" selection-start="14021" selection-end="14200" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamControllerAspect.aj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="130" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/DreamController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseControllerAspect.aj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="3" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="17" column="14" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Dream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="13" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/domain/Tuser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="13" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softrism/tortlets/web/TortoiseController_Roo_Controller_Json.aj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="2462" selection-end="2482" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2122,9 +1865,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="54" selection-start="522" selection-end="563" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/database.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="458" selection-end="458" vertical-scroll-proportion="0.72115386">
+        <state line="8" column="0" selection-start="234" selection-end="580" vertical-scroll-proportion="0.2238806">
           <folding />
         </state>
       </provider>

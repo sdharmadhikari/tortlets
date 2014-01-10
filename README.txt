@@ -2,6 +2,9 @@ Chrome security disable
 --disable-web-security
 -–allow-file-access-from-files
 
+ssh -i /Users/sudhir/Projects/trials/keys-certificates/ec2-tortlets.pem ubuntu@54.200.65.103
+sftp -i /Users/sudhir/Projects/trials/keys-certificates/ec2-tortlets.pem ubuntu@54.200.65.103
+
 http://localhost:8080/tortlets/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir
 
 http://tortlets.cloudfoundry.com/tortlets/json?find=ByUseridEqualsAndCompleted&userid=sudhir

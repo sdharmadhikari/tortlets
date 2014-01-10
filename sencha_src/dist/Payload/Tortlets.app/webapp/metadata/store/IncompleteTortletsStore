@@ -1,0 +1,129 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Tortlet",
+        "storeId": "incompleteTortletsStore",
+        "designer|userClassName": "IncompleteTortletsStore",
+        "designer|userAlias": "incompleteTortletsStore"
+    },
+    "designerId": "345107d0-a788-4507-9220-261ec811d61a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": null,
+                "enablePagingParams": false,
+                "url": "http://dummy.url",
+                "headers": [
+                    "{ 'Accept' : 'application/json'}"
+                ],
+                "appendId": null
+            },
+            "configAlternates": {
+                "actionMethods": "object"
+            },
+            "designerId": "45439594-47f2-42c4-a6a7-b8b5ffe071a7",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "actionMethods",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "207d21af-e6bb-4d25-9c67-1f2d2c2be027"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "sortProperty": "createdOn"
+            },
+            "designerId": "21067caa-164d-4f1e-a793-f48de117f483",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "item"
+                        ],
+                        "implHandler": [
+                            "var d = new Date(item.get('createdOn'));\r",
+                            "var datePart = d.getDate();\r",
+                            "var monthPart = d.getMonth() + 1; //Months are zero based\r",
+                            "var today = MyApp.app.weekdayArray[d.getDay()] + \",\" + monthPart  + \"/\" + datePart;\r",
+                            "\r",
+                            "return today;"
+                        ]
+                    },
+                    "designerId": "99f9334c-9e83-4aa1-af3d-41a351d2602d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Filter",
+            "reference": {
+                "name": "filters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "0230e17e-6b97-4d7c-8174-4e56c0d6c7c6",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "filterFn",
+                        "designer|params": [
+                            "item"
+                        ],
+                        "implHandler": [
+                            "var d = new Date(item.get('createdOn'));\r",
+                            "var createdDate = d.getDate();\r",
+                            "var createdMonth = d.getMonth() + 1; //Months are zero based\r",
+                            "var createdYear = d.getFullYear();\r",
+                            "var createdOn = createdMonth  + \"/\" + createdDate + \"/\" + createdYear;\r",
+                            "\r",
+                            "var today = MyApp.app.getToday();\r",
+                            "return !(today === createdOn);"
+                        ]
+                    },
+                    "designerId": "4968dc4a-d72a-4f7b-ad6b-199cdc47e460"
+                }
+            ]
+        }
+    ]
+}

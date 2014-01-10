@@ -22,11 +22,11 @@ public aspect DreamControllerAspect {
     Object around(String jsonDreamString) : aroundCreateDream(jsonDreamString){
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Tuser loggedInTuser = Tuser.findTusersByUseridEquals(userDetails.getUsername()).getSingleResult();
-        System.out.println("loggedInTuser : " + loggedInTuser.getId());
+
         Dream dream = Dream.fromJsonToDream(jsonDreamString);
         System.out.println(dream.toString());
         Tuser tuserRequesting = dream.getTuser();
-        System.out.println("tuserRequesting : " + tuserRequesting.getId());
+        System.out.println("loggedInTuser : " + loggedInTuser.getId() + " and " + "tuserRequesting : " + tuserRequesting.getId());
         if( loggedInTuser.getId().longValue() != tuserRequesting.getId().longValue()){
             System.out.println("Userid does not match with logged in user while creating dream !!!");
             HttpHeaders headers = new HttpHeaders();
