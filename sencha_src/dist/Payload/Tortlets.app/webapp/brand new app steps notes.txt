@@ -1,0 +1,173 @@
+
+Steps
+
+Create new architect brand new project.
+Make sure its build tools is off
+Save the project.
+REview directory structure saved.
+Copy similar stuff from dNORAM original project to another directory.
+Now change the config of brand new project to "build tools" enabled.
+Save brand new project.
+Copy paste the commands executed and logs. 
+
+
+Now run similar commands on dNORAM copied project. 
+
+/Users/sudhir/bin/Sencha/Cmd/4.0.1.45/sencha generate app --refresh=false MyApp /Users/sudhir/Projects/trials/dnoram-edited/
+
+7:59:02 PM
+"/Users/sudhir/bin/Sencha/Cmd/4.0.2.67/sencha" generate app --refresh=false CascadingSelectApp "/Users/sudhir/Projects/trials/CascadingSelect/"
+cd /Users/sudhir/Library/Application Support/Sencha/Sencha Architect 3.0/assets/touch23/2.3.1.410/commercial
+/Users/sudhir/bin/Sencha/Cmd/4.0.2.67/sencha generate app --refresh=false CascadingSelectApp /Users/sudhir/Projects/trials/CascadingSelect/
+
+Sencha Cmd v4.0.2.67
+[INF] 
+[INF] init-plugin:
+[INF] 
+[INF] -before-generate-workspace:
+[INF] 
+[INF] cmd-root-plugin.init-properties:
+[INF] 
+[INF] init-properties:
+[INF] 
+[INF] init-sencha-command:
+[INF] 
+[INF] init:
+[INF] 
+[INF] generate-workspace-impl:
+[INF]      [echo] generating into /Users/sudhir/Projects/trials/CascadingSelect from /Users/sudhir/bin/Sencha/Cmd/4.0.2.67/templates/workspace
+[INF]     [mkdir] Created dir: /Users/sudhir/Projects/trials/CascadingSelect/packages
+[INF] 
+[INF] cmd-root-plugin.copy-framework-to-workspace-impl:
+[INF] [propertyfile] Updating property file: /Users/sudhir/Projects/trials/CascadingSelect/.sencha/workspace/sencha.cfg
+[INF] 
+[INF] copy-framework-to-workspace-impl:
+[INF]      [copy] Copying 2330 files to /Users/sudhir/Projects/trials/CascadingSelect/touch
+[INF]      [copy] Copying 1 file to /Users/sudhir/Projects/trials/CascadingSelect/touch
+[INF]      [copy] Copying 1 file to /Users/sudhir/Projects/trials/CascadingSelect/touch
+[INF] [propertyfile] Updating property file: /Users/sudhir/Projects/trials/CascadingSelect/.sencha/workspace/sencha.cfg
+[INF] 
+[INF] copy-framework-to-workspace:
+[INF] 
+[INF] generate-workspace:
+[INF] 
+[INF] -after-generate-workspace:
+[INF] 
+[INF] init-plugin:
+[INF] 
+[INF] cmd-root-plugin.init-properties:
+[INF] 
+[INF] init-properties:
+[INF] 
+[INF] init-sencha-command:
+[INF] 
+[INF] init:
+[INF] 
+[INF] before-upgrade:
+[INF] 
+[INF] generate-app-impl:
+[INF] 
+[INF] generate-starter-app:
+[INF]     [mkdir] Created dir: /Users/sudhir/Projects/trials/CascadingSelect/app/profile
+[INF]     [mkdir] Created dir: /Users/sudhir/Library/Application Support/Sencha/Sencha Architect 3.0/assets/touch23/2.3.1.410/commercial/resources/icons
+[INF] 
+[INF] copy-sdk:
+[INF]      [copy] Copying 1 file to /Users/sudhir/Projects/trials/CascadingSelect/resources/css
+[INF]      [copy] Copying 14 files to /Users/sudhir/Projects/trials/CascadingSelect/resources/sass/stylesheets
+[INF] 
+[INF] after-upgrade:
+[INF] 
+[INF] generate-app:
+[INF] 
+[INF] -after-generate-app:
+[INF] [x-property-file] Updating property file: /Users/sudhir/Projects/trials/CascadingSelect/.sencha/app/sencha.cfg
+
+7:59:14 PM
+"/Users/sudhir/bin/Sencha/Cmd/4.0.2.67/sencha" app refresh
+cd /Users/sudhir/Projects/trials/CascadingSelect/
+/Users/sudhir/bin/Sencha/Cmd/4.0.2.67/sencha app refresh
+
+Sencha Cmd v4.0.2.67
+[INF] 
+[INF] init-plugin:
+[INF] 
+[INF] cmd-root-plugin.init-properties:
+[INF] 
+[INF] init-properties:
+[INF] 
+[INF] init-sencha-command:
+[INF] 
+[INF] init:
+[INF] 
+[INF] app-refresh:
+[INF]      [echo] Refreshing app at /Users/sudhir/Projects/trials/CascadingSelect
+[INF] 
+[INF] app-refresh-impl:
+[INF] 
+[INF] -before-init-local:
+[INF] 
+[INF] -init-local:
+[INF] 
+[INF] -after-init-local:
+[INF] 
+[INF] init-local:
+[INF] 
+[INF] find-cmd-in-path:
+[INF] 
+[INF] find-cmd-in-environment:
+[INF] 
+[INF] find-cmd-in-shell:
+[INF] 
+[INF] init-cmd:
+[INF]      [echo] Using Sencha Cmd from /Users/sudhir/bin/Sencha/Cmd/4.0.2.67 for /Users/sudhir/Projects/trials/CascadingSelect/build.xml
+[INF] 
+[INF] -before-init:
+[INF] 
+[INF] -init:
+[INF] Initializing Sencha Cmd ant environment
+[INF] Adding antlib taskdef for com/sencha/command/compass/ant/antlib.xml
+[INF] 
+[INF] -after-init:
+[INF] 
+[INF] -before-init-defaults:
+[INF] 
+[INF] -init-defaults:
+[INF] 
+[INF] -after-init-defaults:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] init:
+[INF] 
+[INF] refresh:
+[INF] 
+[INF] -before-refresh:
+[INF] 
+[INF] -init:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] -detect-app-build-properties:
+[INF] Loading app json manifest...
+[INF] Loading classpath entry /Users/sudhir/Projects/trials/CascadingSelect/touch/src
+[INF] Loading classpath entry /Users/sudhir/Projects/trials/CascadingSelect/app.js
+[INF] Loading classpath entry /Users/sudhir/Projects/trials/CascadingSelect/app
+[INF] Loading classpath entry /Users/sudhir/Projects/trials/CascadingSelect/build/temp/production/CascadingSelectApp/sencha-compiler/app
+[INF] Loading classpath entry /Users/sudhir/Projects/trials/CascadingSelect/build/temp/production/CascadingSelectApp/sencha-compiler/app
+[INF] Concatenating output to file /Users/sudhir/Projects/trials/CascadingSelect/build/temp/production/CascadingSelectApp/sencha-compiler/cmd-packages.js
+[INF] Adding external reference : @full-page => @overrides
+[INF] Loading classpath entry /Users/sudhir/Projects/trials/CascadingSelect/build/temp/production/CascadingSelectApp/sencha-compiler/cmd-packages.js
+[INF] Adding external reference : Ext.util.Observable => /Users/sudhir/Projects/trials/CascadingSelect/build/temp/production/CascadingSelectApp/sencha-compiler/cmd-packages.js
+[INF] 
+[INF] -refresh-app:
+[INF] Appending concatenated output to file /Users/sudhir/Projects/trials/CascadingSelect/bootstrap.js
+[INF] Appending concatenated output to file /Users/sudhir/Projects/trials/CascadingSelect/bootstrap.js
+[INF] Appending concatenated output to file /Users/sudhir/Projects/trials/CascadingSelect/bootstrap.js
+[INF] Appending concatenated output to file /Users/sudhir/Projects/trials/CascadingSelect/bootstrap.js
+[INF] Appending concatenated output to file /Users/sudhir/Projects/trials/CascadingSelect/bootstrap.js
+[INF] Appending content to /Users/sudhir/Projects/trials/CascadingSelect/bootstrap.json
+[INF] 
+[INF] -refresh:
+[INF] 
+[INF] -after-refresh:
+

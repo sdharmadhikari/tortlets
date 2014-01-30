@@ -181,7 +181,7 @@ Ext.define('MyApp.controller.HomeTabController', {
 
         //myMsgObj.show();
         myMsgObj.setCls('smallFont');
-        myMsgObj.alert('','Pending tortlets older than 7 days get permanently deleted. <br/> You have to complete it before that to keep your score as high as possible', Ext.emptyFn);
+        myMsgObj.alert('','Activity you are lagging in most shows up on top.<br/> Pending tortlets older than 7 days get permanently deleted. <br/> Focus on today, then pending !', Ext.emptyFn);
 
         //myMsgObj.destroy ??
 

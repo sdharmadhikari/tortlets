@@ -40,10 +40,9 @@
                 "implHandler": [
                     "{title}\r",
                     "<br/>\r",
-                    "<span class=\"smallFont\">Dream: {tortoise.dream.title}</span>\r",
+                    "<progress value=\"{tortoise.latestTortoiseScore}\" max=\"100\"></progress>{tortoise.latestTortoiseScore}% \r",
                     "<br/>\r",
-                    "<span class=\"smallFont\">{tortoise.tortletsCompletedCount} out of {tortoise.tortletsCreatedCount} completed</span>\r",
-                    "\r",
+                    "<span class=\"smallFont\">Dream: {tortoise.dream.title}</span>\r",
                     "\r",
                     ""
                 ],

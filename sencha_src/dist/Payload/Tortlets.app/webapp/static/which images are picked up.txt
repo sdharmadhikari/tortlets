@@ -1,0 +1,18 @@
+My images confusion
+
+All images with ipad word in it are there, but all with sencha leaf.
+icons are being picked from resource/icons directory
+splash screens are being picked up from resources/loading directory
+resource/startup directory is being ignored.
+files in static/images are used by webapp (not by native shell)
+static/trial_images is dump of all images including inkscape files
+
+
+Default-568h@2x.png 640 x 1136 pixels
+
+https://itunes.apple.com/us/app/dnoram/id560610412?mt=8
+
+
+aiscustomerservice@aisinsurance.com
+
+

@@ -2,7 +2,7 @@
   "applicationName": "Tortlets",
   "applicationId": "com.softrism.tortlets",
   "bundleSeedId": "5GPZWUFUB9",
-  "versionString": "1.03.1",
+  "versionString": "1.05",
   "versionCode": "1",
   "icon": {
     "57": "resources/icons/Icon.png",

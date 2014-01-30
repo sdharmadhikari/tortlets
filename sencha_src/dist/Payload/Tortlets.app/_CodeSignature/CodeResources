@@ -6,7 +6,7 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		MBI20CZUBwAREvNXo6c1uNahij0=
+		nm0zMb3VfLKdZ5Cve6VrpBRiVDY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>webapp/.architect</key>
 		<data>
-		T6CxzzKXXXPRGTRW0Hqejb3L584=
+		lcXX6E3moVsrTAfV8ABeLTWyr/U=
 		</data>
 		<key>webapp/.sencha/app/build-impl.xml</key>
 		<data>
@@ -83,6 +83,10 @@
 		<key>webapp/Importing Reimporting components </key>
 		<data>
 		FO8MhOPWkBMeIKi+neJ6d/3MARQ=
+		</data>
+		<key>webapp/Tortlets-production.ipa</key>
+		<data>
+		TDRj5cQBcD0VXdqFGYeoEi7BFVg=
 		</data>
 		<key>webapp/adhoc_build.sh</key>
 		<data>
@@ -134,7 +138,7 @@
 		</data>
 		<key>webapp/app/controller/HomeTabController.js</key>
 		<data>
-		nh6R4O+rkvCAJKtbZF3M9dApXSg=
+		NSQmlawErgNceGa7a9Ige8nl+jM=
 		</data>
 		<key>webapp/app/controller/Readme.md</key>
 		<data>
@@ -258,7 +262,7 @@
 		</data>
 		<key>webapp/app/view/TodaysTortletList.js</key>
 		<data>
-		L7+vWxJVy/qc69uFBZHgI2YWGE0=
+		euSVRrk9AwZa6X1iCb/HTtQp1FU=
 		</data>
 		<key>webapp/app/view/TodaysTortletListPanel.js</key>
 		<data>
@@ -302,7 +306,7 @@
 		</data>
 		<key>webapp/app/view/loginmodule.js</key>
 		<data>
-		Asbwh4y5sP4bC+CzseCH7bnvP6Q=
+		WAoV9B7rCZs4/gf778zxMWCZiOg=
 		</data>
 		<key>webapp/app/view/signupmodule.js</key>
 		<data>
@@ -384,6 +388,10 @@
 		<data>
 		py9VBs//sZoeUziQcUy5CS+wTNA=
 		</data>
+		<key>webapp/archive/app.js/c5d9ca3afe3d5d0a98e7b075f950b7f77c73cb35</key>
+		<data>
+		xFEccZfJQyXCjgiv5i8yc3/ZDPU=
+		</data>
 		<key>webapp/archive/app.js/cbd171baf15f4a4e92e772a3684b0288028827aa</key>
 		<data>
 		QttDWRt63F33wdkGk0a/RKoNvHc=
@@ -420,13 +428,17 @@
 		<data>
 		MdZ+a1PzehAjc91JGKTufQCVCJg=
 		</data>
+		<key>webapp/brand new app steps notes.txt</key>
+		<data>
+		O9ZRQGHmtZN+fSR3vH6/qys7r28=
+		</data>
 		<key>webapp/build.xml</key>
 		<data>
 		D57+F0M7oyPuaHUFl9rtt4HEhxo=
 		</data>
-		<key>webapp/build/MyApp/native/.DS_Store</key>
+		<key>webapp/build/MyApp/native/Payload/.DS_Store</key>
 		<data>
-		/KGAx8mI4ycQQyymQEjQwj175WQ=
+		nJxJac5+pls7aFIjn2qnthpC+9c=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/Default copy.png</key>
 		<data>
@@ -490,7 +502,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/Info.plist</key>
 		<data>
-		2LLZW4YLuelnKs+rNiUZbah0UHs=
+		/2f8YaV7TGjQGX/AfcjNCMDXEfA=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/PkgInfo</key>
 		<data>
@@ -498,11 +510,11 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/_CodeSignature/CodeResources</key>
 		<data>
-		cAOM6nYrnNdpZFZKNEz3dTda1U0=
+		ZtHwEr660S9witQqwTXuCnIyyXM=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/embedded.mobileprovision</key>
 		<data>
-		OwPlmcf3WsIMnE4rzC9E6YVmksg=
+		Fy74SkewTst1wEi46TfRRYFYha4=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/iTunesArtwork</key>
 		<data>
@@ -522,7 +534,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/stbuild_template</key>
 		<data>
-		FUrdgsRqcCdCmJQ8ijuaxCaLCD4=
+		f8xyeHHTRyNeyiaVjQjwB6wiiek=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/.DS_Store</key>
 		<data>
@@ -570,7 +582,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/app.js</key>
 		<data>
-		CA5o0p0RzmTfRtlo3p5eXZ1br78=
+		WIeAY2sINZqz4DYBjWwCKr52UJo=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/app.json</key>
 		<data>
@@ -706,7 +718,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/static/css/additional.css</key>
 		<data>
-		VOfrcia5sYk03LBrHSbKsMSZzP4=
+		dj+K4R/USsW0Lpw0t2sLD6Oba1k=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/static/images/.DS_Store</key>
 		<data>
@@ -738,7 +750,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Tortlets.ipa</key>
 		<data>
-		TDRj5cQBcD0VXdqFGYeoEi7BFVg=
+		8tS9kLRL20JU622cmsAdCWHXWoE=
 		</data>
 		<key>webapp/build/MyApp/package/.DS_Store</key>
 		<data>
@@ -846,7 +858,7 @@
 		</data>
 		<key>webapp/build/MyApp/package/app.js</key>
 		<data>
-		CA5o0p0RzmTfRtlo3p5eXZ1br78=
+		WIeAY2sINZqz4DYBjWwCKr52UJo=
 		</data>
 		<key>webapp/build/MyApp/package/app.json</key>
 		<data>
@@ -986,7 +998,7 @@
 		</data>
 		<key>webapp/build/MyApp/package/static/css/additional.css</key>
 		<data>
-		VOfrcia5sYk03LBrHSbKsMSZzP4=
+		dj+K4R/USsW0Lpw0t2sLD6Oba1k=
 		</data>
 		<key>webapp/build/MyApp/package/static/images/.DS_Store</key>
 		<data>
@@ -1018,7 +1030,7 @@
 		</data>
 		<key>webapp/build_commands.txt</key>
 		<data>
-		qsXvZ3DeEPnAhhD5mfMoFy/bXB8=
+		2xpybIh4wp1kI1o5/mTh/+qz1So=
 		</data>
 		<key>webapp/important app-js do not delete.js</key>
 		<data>
@@ -1038,7 +1050,7 @@
 		</data>
 		<key>webapp/metadata/controller/HomeTabController</key>
 		<data>
-		LRbnzwQQuunilnpHwp0o+2IzstM=
+		uuvkh8Wr1JF82jeb9cDb6nMcw4s=
 		</data>
 		<key>webapp/metadata/controller/SampleOverriddenController</key>
 		<data>
@@ -1146,7 +1158,7 @@
 		</data>
 		<key>webapp/metadata/view/TodaysTortletList</key>
 		<data>
-		WWbOZSJIPiKjVKq0jUwK1z2rKG4=
+		90270d3AXSkudyfNfMiPQw+sbuA=
 		</data>
 		<key>webapp/metadata/view/TodaysTortletListPanel</key>
 		<data>
@@ -1186,7 +1198,7 @@
 		</data>
 		<key>webapp/metadata/view/loginmodule</key>
 		<data>
-		wLQgZz1A9OKDTLS7wwNnqLHg39k=
+		w+EdSQkhPdnYhurqZ7F+hhYGJgg=
 		</data>
 		<key>webapp/metadata/view/signupmodule</key>
 		<data>
@@ -1218,11 +1230,11 @@
 		</data>
 		<key>webapp/packager.json</key>
 		<data>
-		n7JnRnxPWwYrtjahIPlF/Vy4nDE=
+		WF21UNzC1L71kIOlQ3pMXChSl58=
 		</data>
 		<key>webapp/packager.temp.json</key>
 		<data>
-		KCGrHd+w2I1T3biulNGyq1spBuk=
+		A0MCXwonkO6YsVcgNRqAnBKRsuM=
 		</data>
 		<key>webapp/resources/css/app.css</key>
 		<data>
@@ -1954,7 +1966,7 @@
 		</data>
 		<key>webapp/static/css/additional.css</key>
 		<data>
-		VOfrcia5sYk03LBrHSbKsMSZzP4=
+		dj+K4R/USsW0Lpw0t2sLD6Oba1k=
 		</data>
 		<key>webapp/static/css/base.2.2.0.tortlets.css</key>
 		<data>
@@ -2163,6 +2175,10 @@
 		<key>webapp/static/trial_images/traced_tortoise_small.svg</key>
 		<data>
 		VsoezEO+dMcNjeoQ3f3ascUXHYQ=
+		</data>
+		<key>webapp/static/which images are picked up.txt</key>
+		<data>
+		ht0KnXco9LKiC8DXxCI4OtiNvwo=
 		</data>
 		<key>webapp/t-bugs.txt</key>
 		<data>
@@ -10157,7 +10173,7 @@
 		</data>
 		<key>webapp/.architect</key>
 		<data>
-		T6CxzzKXXXPRGTRW0Hqejb3L584=
+		lcXX6E3moVsrTAfV8ABeLTWyr/U=
 		</data>
 		<key>webapp/.sencha/app/build-impl.xml</key>
 		<data>
@@ -10207,6 +10223,10 @@
 		<data>
 		FO8MhOPWkBMeIKi+neJ6d/3MARQ=
 		</data>
+		<key>webapp/Tortlets-production.ipa</key>
+		<data>
+		TDRj5cQBcD0VXdqFGYeoEi7BFVg=
+		</data>
 		<key>webapp/adhoc_build.sh</key>
 		<data>
 		LWVdiY04jyJbbeD7YbJwYblA/X4=
@@ -10249,7 +10269,7 @@
 		</data>
 		<key>webapp/app/controller/HomeTabController.js</key>
 		<data>
-		nh6R4O+rkvCAJKtbZF3M9dApXSg=
+		NSQmlawErgNceGa7a9Ige8nl+jM=
 		</data>
 		<key>webapp/app/controller/Readme.md</key>
 		<data>
@@ -10373,7 +10393,7 @@
 		</data>
 		<key>webapp/app/view/TodaysTortletList.js</key>
 		<data>
-		L7+vWxJVy/qc69uFBZHgI2YWGE0=
+		euSVRrk9AwZa6X1iCb/HTtQp1FU=
 		</data>
 		<key>webapp/app/view/TodaysTortletListPanel.js</key>
 		<data>
@@ -10417,7 +10437,7 @@
 		</data>
 		<key>webapp/app/view/loginmodule.js</key>
 		<data>
-		Asbwh4y5sP4bC+CzseCH7bnvP6Q=
+		WAoV9B7rCZs4/gf778zxMWCZiOg=
 		</data>
 		<key>webapp/app/view/signupmodule.js</key>
 		<data>
@@ -10499,6 +10519,10 @@
 		<data>
 		py9VBs//sZoeUziQcUy5CS+wTNA=
 		</data>
+		<key>webapp/archive/app.js/c5d9ca3afe3d5d0a98e7b075f950b7f77c73cb35</key>
+		<data>
+		xFEccZfJQyXCjgiv5i8yc3/ZDPU=
+		</data>
 		<key>webapp/archive/app.js/cbd171baf15f4a4e92e772a3684b0288028827aa</key>
 		<data>
 		QttDWRt63F33wdkGk0a/RKoNvHc=
@@ -10534,6 +10558,10 @@
 		<key>webapp/archive/static/js/Base64.js/8b9e6dc37d04c830822fb8ec18d49ec63f21e261</key>
 		<data>
 		MdZ+a1PzehAjc91JGKTufQCVCJg=
+		</data>
+		<key>webapp/brand new app steps notes.txt</key>
+		<data>
+		O9ZRQGHmtZN+fSR3vH6/qys7r28=
 		</data>
 		<key>webapp/build.xml</key>
 		<data>
@@ -10601,7 +10629,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/Info.plist</key>
 		<data>
-		2LLZW4YLuelnKs+rNiUZbah0UHs=
+		/2f8YaV7TGjQGX/AfcjNCMDXEfA=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/PkgInfo</key>
 		<data>
@@ -10609,11 +10637,11 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/_CodeSignature/CodeResources</key>
 		<data>
-		cAOM6nYrnNdpZFZKNEz3dTda1U0=
+		ZtHwEr660S9witQqwTXuCnIyyXM=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/embedded.mobileprovision</key>
 		<data>
-		OwPlmcf3WsIMnE4rzC9E6YVmksg=
+		Fy74SkewTst1wEi46TfRRYFYha4=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/iTunesArtwork</key>
 		<data>
@@ -10633,7 +10661,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/stbuild_template</key>
 		<data>
-		FUrdgsRqcCdCmJQ8ijuaxCaLCD4=
+		f8xyeHHTRyNeyiaVjQjwB6wiiek=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/Icon copy.png</key>
 		<data>
@@ -10677,7 +10705,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/app.js</key>
 		<data>
-		CA5o0p0RzmTfRtlo3p5eXZ1br78=
+		WIeAY2sINZqz4DYBjWwCKr52UJo=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/app.json</key>
 		<data>
@@ -10805,7 +10833,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/static/css/additional.css</key>
 		<data>
-		VOfrcia5sYk03LBrHSbKsMSZzP4=
+		dj+K4R/USsW0Lpw0t2sLD6Oba1k=
 		</data>
 		<key>webapp/build/MyApp/native/Payload/Tortlets.app/webapp/static/images/race-finish-small.png</key>
 		<data>
@@ -10833,7 +10861,7 @@
 		</data>
 		<key>webapp/build/MyApp/native/Tortlets.ipa</key>
 		<data>
-		TDRj5cQBcD0VXdqFGYeoEi7BFVg=
+		8tS9kLRL20JU622cmsAdCWHXWoE=
 		</data>
 		<key>webapp/build/MyApp/package/Default copy.png</key>
 		<data>
@@ -10937,7 +10965,7 @@
 		</data>
 		<key>webapp/build/MyApp/package/app.js</key>
 		<data>
-		CA5o0p0RzmTfRtlo3p5eXZ1br78=
+		WIeAY2sINZqz4DYBjWwCKr52UJo=
 		</data>
 		<key>webapp/build/MyApp/package/app.json</key>
 		<data>
@@ -11069,7 +11097,7 @@
 		</data>
 		<key>webapp/build/MyApp/package/static/css/additional.css</key>
 		<data>
-		VOfrcia5sYk03LBrHSbKsMSZzP4=
+		dj+K4R/USsW0Lpw0t2sLD6Oba1k=
 		</data>
 		<key>webapp/build/MyApp/package/static/images/race-finish-small.png</key>
 		<data>
@@ -11097,7 +11125,7 @@
 		</data>
 		<key>webapp/build_commands.txt</key>
 		<data>
-		qsXvZ3DeEPnAhhD5mfMoFy/bXB8=
+		2xpybIh4wp1kI1o5/mTh/+qz1So=
 		</data>
 		<key>webapp/important app-js do not delete.js</key>
 		<data>
@@ -11117,7 +11145,7 @@
 		</data>
 		<key>webapp/metadata/controller/HomeTabController</key>
 		<data>
-		LRbnzwQQuunilnpHwp0o+2IzstM=
+		uuvkh8Wr1JF82jeb9cDb6nMcw4s=
 		</data>
 		<key>webapp/metadata/controller/SampleOverriddenController</key>
 		<data>
@@ -11225,7 +11253,7 @@
 		</data>
 		<key>webapp/metadata/view/TodaysTortletList</key>
 		<data>
-		WWbOZSJIPiKjVKq0jUwK1z2rKG4=
+		90270d3AXSkudyfNfMiPQw+sbuA=
 		</data>
 		<key>webapp/metadata/view/TodaysTortletListPanel</key>
 		<data>
@@ -11265,7 +11293,7 @@
 		</data>
 		<key>webapp/metadata/view/loginmodule</key>
 		<data>
-		wLQgZz1A9OKDTLS7wwNnqLHg39k=
+		w+EdSQkhPdnYhurqZ7F+hhYGJgg=
 		</data>
 		<key>webapp/metadata/view/signupmodule</key>
 		<data>
@@ -11297,11 +11325,11 @@
 		</data>
 		<key>webapp/packager.json</key>
 		<data>
-		n7JnRnxPWwYrtjahIPlF/Vy4nDE=
+		WF21UNzC1L71kIOlQ3pMXChSl58=
 		</data>
 		<key>webapp/packager.temp.json</key>
 		<data>
-		KCGrHd+w2I1T3biulNGyq1spBuk=
+		A0MCXwonkO6YsVcgNRqAnBKRsuM=
 		</data>
 		<key>webapp/resources/css/app.css</key>
 		<data>
@@ -12017,7 +12045,7 @@
 		</data>
 		<key>webapp/static/css/additional.css</key>
 		<data>
-		VOfrcia5sYk03LBrHSbKsMSZzP4=
+		dj+K4R/USsW0Lpw0t2sLD6Oba1k=
 		</data>
 		<key>webapp/static/css/base.2.2.0.tortlets.css</key>
 		<data>
@@ -12210,6 +12238,10 @@
 		<key>webapp/static/trial_images/traced_tortoise_small.svg</key>
 		<data>
 		VsoezEO+dMcNjeoQ3f3ascUXHYQ=
+		</data>
+		<key>webapp/static/which images are picked up.txt</key>
+		<data>
+		ht0KnXco9LKiC8DXxCI4OtiNvwo=
 		</data>
 		<key>webapp/t-bugs.txt</key>
 		<data>

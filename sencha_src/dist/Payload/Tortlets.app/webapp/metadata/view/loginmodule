@@ -370,7 +370,7 @@
                                     "event"
                                 ],
                                 "implHandler": [
-                                    "Ext.Msg.alert('', 'Please send email to tortlets@softrism.com for forgotten userid and password', Ext.emptyFn);"
+                                    "Ext.Msg.alert('', 'Please send email to tortlets@softrism.com for login problems and user feedback', Ext.emptyFn);"
                                 ]
                             },
                             "designerId": "3c23ef81-b321-4474-a525-836ea8dbead0"

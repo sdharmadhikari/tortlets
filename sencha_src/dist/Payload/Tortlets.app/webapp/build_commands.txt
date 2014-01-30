@@ -15,6 +15,7 @@ sencha app build  --destination  /Users/sudhir/Projects/trials/tortlets/src/main
 -- Confusing problems for ad hoc profile
 
 sencha app package build -p ./packager.json
+sencha app build native
 Then go to ../dist/Payload and run zip command
 zip -r -q Tortlets.ipa zipfile Payload
 ( This build creates big app file need to have clean up script later)
