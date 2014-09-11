@@ -20,6 +20,7 @@ Ext.define('MyApp.view.MainTabPanel', {
     requires: [
         'MyApp.view.HomeTabCardPanel',
         'MyApp.view.DreamListCardPanel',
+        'MyApp.view.MyList',
         'MyApp.view.ScoreTabCardPanel',
         'MyApp.view.HelpPanel'
     ],
@@ -36,6 +37,11 @@ Ext.define('MyApp.view.MainTabPanel', {
                 xtype: 'dreamListCardPanel',
                 title: 'Dreams',
                 iconCls: 'star'
+            },
+            {
+                xtype: 'mylist',
+                title: 'Schedule',
+                iconCls: 'info'
             },
             {
                 xtype: 'scoreTabCardPanel',

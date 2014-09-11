@@ -744,7 +744,7 @@
                     "    dreamsStore.load(storeLoadCallBack);// Looks like this call can be async, so no\r",
                     "    // no callback function is passed. And it is needed so that server data will return back \r",
                     "    // in case specifically new dream. \r",
-                    "    tortoiseListPanel.down('#tortoiseListTitleBar').setTitle(savedModel.get('title'));\r",
+                    "    tortoiseListPanel.down('#tortoiseListTitleBar').setTitle(Ext.String.ellipsis(savedModel.get('title'),14,false));\r",
                     "    dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});  \r",
                     "    proxy.setUrl(orgUrl);\r",
                     "},this);\r",

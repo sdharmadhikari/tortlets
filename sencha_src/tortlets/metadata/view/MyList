@@ -1,0 +1,33 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyList",
+        "designer|userAlias": "mylist",
+        "store": "dayDetailsStore",
+        "grouped": true
+    },
+    "designerId": "42492743-65cf-4164-a086-925d6857cf6c",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<div><b>{dayName}</b></div>\r",
+                    "<div>Total Activities : {totalTortoises}</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "8570c74e-521f-4ba9-b4d4-1ad3d13832b1"
+        }
+    ]
+}

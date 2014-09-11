@@ -85,8 +85,7 @@ public class Tortoise {
     @Enumerated(EnumType.STRING)
     private TortoiseStatusEnum status;
 
-    @Enumerated(EnumType.STRING)
-    private TortoiseDurationTypeEnum duration;
+    private int duration;
 
     private String userid;
 

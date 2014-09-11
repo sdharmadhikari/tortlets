@@ -10,7 +10,6 @@
         <field:display date="true" dateTimePattern="${tortoise_startdate_date_format}" field="startDate" id="s_com_softrism_tortlets_domain_Tortoise_startDate" object="${tortoise}" z="JRhrTqs9nuwa1GIYJWoB8Wql8rA="/>
         <field:display date="true" dateTimePattern="${tortoise_enddate_date_format}" field="endDate" id="s_com_softrism_tortlets_domain_Tortoise_endDate" object="${tortoise}" z="0AeCRNwAcB4a+oFvFLZj6d6EOKs="/>
         <field:display field="status" id="s_com_softrism_tortlets_domain_Tortoise_status" object="${tortoise}" z="JIydTHJ43e0vEnQXy/InRanjc7U="/>
-        <field:display field="duration" id="s_com_softrism_tortlets_domain_Tortoise_duration" object="${tortoise}" z="zUZSpKbCIHDST6hN3GDdP2tviCg="/>
         <field:display field="tortletsCreatedCount" id="s_com_softrism_tortlets_domain_Tortoise_tortletsCreatedCount" object="${tortoise}" render="false" z="user-managed"/>
         <field:display field="tortletsDeletedCount" id="s_com_softrism_tortlets_domain_Tortoise_tortletsDeletedCount" object="${tortoise}" render="false" z="user-managed"/>
         <field:display field="tortletsCompletedCount" id="s_com_softrism_tortlets_domain_Tortoise_tortletsCompletedCount" object="${tortoise}" render="false" z="user-managed"/>
@@ -26,5 +25,6 @@
         <field:display field="latestTortoiseScore" id="s_com_softrism_tortlets_domain_Tortoise_latestTortoiseScore" object="${tortoise}" z="bDurcrrCLQfNK+Th3NIAK26he00="/>
         <field:display field="userid" id="s_com_softrism_tortlets_domain_Tortoise_userid" object="${tortoise}" render="false" z="user-managed"/>
         <field:display field="tortlets" id="s_com_softrism_tortlets_domain_Tortoise_tortlets" object="${tortoise}" z="cNvvL+svwVvyh+w4eM8yX1TsAtI="/>
+        <field:display field="duration" id="s_com_softrism_tortlets_domain_Tortoise_duration" object="${tortoise}" z="zUZSpKbCIHDST6hN3GDdP2tviCg="/>
     </page:show>
 </div>

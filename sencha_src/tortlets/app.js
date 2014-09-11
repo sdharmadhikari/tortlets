@@ -38,13 +38,15 @@ Ext.application({
         'Tortlet',
         'Dream',
         'Tortoise',
-        'Tuser'
+        'Tuser',
+        'DayDetails'
     ],
     stores: [
         'IncompleteTortletsStore',
         'TodaysTortletsStore',
         'DreamsStore',
-        'TortoisesStore'
+        'TortoisesStore',
+        'DayDetailsStore'
     ],
     views: [
         'MainTabPanel',
@@ -69,7 +71,8 @@ Ext.application({
         'TortletListPanel',
         'TortletsListsContainerPanel',
         'UserScoreGuageChart',
-        'HomePageHelpModal'
+        'HomePageHelpModal',
+        'MyList'
     ],
     controllers: [
         'HomeTabController',
@@ -157,7 +160,7 @@ Ext.application({
         // home 
         var host = '';
         if( env === 'home'){
-            host = httpScheme + '192.168.0.105:' + port;   
+            host = httpScheme + 'localhost:' + port;   
         }else if(env === 'office'){
             host = httpScheme + '172.26.0.151:' + port;   
         }else if(env === 'appfog'){

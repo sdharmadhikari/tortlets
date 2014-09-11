@@ -5,12 +5,13 @@ import com.softrism.tortlets.domain.Tortoise;
 import com.softrism.tortlets.domain.TortoiseStatusEnum;
 
 import java.text.ParseException;
-import java.util.Arrays;
-import java.util.Date;
+import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import com.softrism.tortlets.domain.Tuser;
+import com.softrism.tortlets.vo.DayVO;
+import org.joda.time.DateTimeConstants;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -87,7 +88,7 @@ public class TortoiseController {
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("dreams", com.softrism.tortlets.domain.Dream.findDreamsByTuser(tuser).getResultList());
         uiModel.addAttribute("tortlets", com.softrism.tortlets.domain.Tortlet.findTortletsByUseridEquals(userid).getResultList());
-        uiModel.addAttribute("tortoisedurationtypeenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseDurationTypeEnum.values()));
+        //uiModel.addAttribute("tortoisedurationtypeenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseDurationTypeEnum.values()));
         uiModel.addAttribute("tortoisestatusenums", Arrays.asList(com.softrism.tortlets.domain.TortoiseStatusEnum.values()));
     }
 
@@ -131,6 +132,94 @@ public class TortoiseController {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
 
+
+    @RequestMapping(params = "find=ByUseridEqualsReturnDays", headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String> jsonFindTortoisesByUseridEqualsReturnDays(@RequestParam("userid") String userid) {
+        System.out.println("entered into ByUseridEqualsReturnDays");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        userid = "1";
+        Collection<Tortoise> userTortoises = Tortoise.findTortoisesByUseridEquals(userid).getResultList();
+
+        List<DayVO> dayVOs = new ArrayList<DayVO>();
+        for(int dayInt = DateTimeConstants.MONDAY; dayInt <= DateTimeConstants.SUNDAY; dayInt++){
+            DayVO newDay = new DayVO();
+            newDay.setDayName(getDayName(dayInt));
+            Set<Tortoise> forTheDayTses = getTortoisesForTheDay(dayInt,userTortoises);
+            newDay.setTortoises(forTheDayTses);
+            int totalDayTime = 0;
+            for(Tortoise tse : forTheDayTses){
+               totalDayTime += tse.getDuration();
+            }
+            newDay.setTotalActivityMinutes(totalDayTime);
+            newDay.setTotalTortoises(forTheDayTses.size());
+            dayVOs.add(newDay);
+
+        }
+        return new ResponseEntity<String>(DayVO.toJsonArray(dayVOs), headers, HttpStatus.OK);
+    }
+
+    private String getDayName(int dayInt){
+
+            if(dayInt == DateTimeConstants.MONDAY) {
+                return "Monday";
+            }else if(dayInt == DateTimeConstants.TUESDAY) {
+                return "Tuesday";
+            }else if(dayInt == DateTimeConstants.WEDNESDAY) {
+                return "Wednesday";
+            }else if(dayInt == DateTimeConstants.THURSDAY) {
+                return "Thursday";
+            }else if(dayInt == DateTimeConstants.FRIDAY) {
+                return "Friday";
+            }else if(dayInt == DateTimeConstants.SATURDAY) {
+                return "Saturday";
+            }else
+
+            return "Sunday";
+
+
+    }
+
+    private Set<Tortoise> getTortoisesForTheDay(int dayInt, Collection<Tortoise> allUserTortoises){
+        Set<Tortoise> forTheDayTortoise = new HashSet<Tortoise>();
+        for(Tortoise tortoise : allUserTortoises) {
+            if(dayInt == DateTimeConstants.MONDAY) {
+               if(tortoise.getMonday() != null && tortoise.getMonday().booleanValue()){
+                   forTheDayTortoise.add(tortoise);
+               }
+            }else if(dayInt == DateTimeConstants.TUESDAY) {
+                if(tortoise.getTuesday() != null && tortoise.getTuesday().booleanValue()){
+                    forTheDayTortoise.add(tortoise);
+                }
+            }else if(dayInt == DateTimeConstants.WEDNESDAY) {
+                if(tortoise.getWednesday() != null && tortoise.getWednesday().booleanValue()){
+                    forTheDayTortoise.add(tortoise);
+                }
+            }else if(dayInt == DateTimeConstants.THURSDAY) {
+                if(tortoise.getThursday() != null && tortoise.getThursday().booleanValue()){
+                    forTheDayTortoise.add(tortoise);
+                }
+            }else if(dayInt == DateTimeConstants.FRIDAY) {
+                if(tortoise.getFriday() != null && tortoise.getFriday().booleanValue()){
+                    forTheDayTortoise.add(tortoise);
+                }
+            }else if(dayInt == DateTimeConstants.SATURDAY) {
+                if(tortoise.getSaturday() != null && tortoise.getSaturday().booleanValue()){
+                    forTheDayTortoise.add(tortoise);
+                }
+            }else if(dayInt == DateTimeConstants.SUNDAY) {
+                if(tortoise.getSunday() != null && tortoise.getSunday().booleanValue()){
+                    forTheDayTortoise.add(tortoise);
+                }
+            }
+
+
+        }
+
+        return forTheDayTortoise;
+
+    }
 
 
 }

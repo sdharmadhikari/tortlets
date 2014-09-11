@@ -194,6 +194,14 @@ Ext.define('MyApp.controller.UserCredentialsController', {
         headers.Authorization = authHeaderValue;
         proxy.setUrl(host + '/tortoises?find=ByDreamAndUseridEquals&userid=' +userid);
 
+        //dayDetailsStore
+        var dayDetailsStore = Ext.getStore('dayDetailsStore');
+        proxy = dayDetailsStore.getProxy();
+        headers = proxy.getHeaders();
+        headers.Authorization = authHeaderValue;
+        proxy.setUrl(host + '/tortoises?find=ByUseridEqualsReturnDays&userid=' +userid);
+
+        dayDetailsStore.load(storeLoadCallback);
         ////////////////////////////////////////////////////
 
         var Tuser = Ext.ModelMgr.getModel('MyApp.model.Tuser');

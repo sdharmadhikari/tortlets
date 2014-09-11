@@ -61,6 +61,20 @@
             },
             "codeClass": null,
             "userConfig": {
+                "title": "Schedule",
+                "iconCls": "info"
+            },
+            "designerId": "13e48b49-27a3-449f-bd21-0935049d3497",
+            "masterInstanceId": "42492743-65cf-4164-a086-925d6857cf6c"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "title": "Your Score",
                 "iconCls": "user"
             },

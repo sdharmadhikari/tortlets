@@ -11,13 +11,15 @@
             "Tortlet",
             "Dream",
             "Tortoise",
-            "Tuser"
+            "Tuser",
+            "DayDetails"
         ],
         "stores": [
             "IncompleteTortletsStore",
             "TodaysTortletsStore",
             "DreamsStore",
-            "TortoisesStore"
+            "TortoisesStore",
+            "DayDetailsStore"
         ],
         "views": [
             "MainTabPanel",
@@ -42,7 +44,8 @@
             "TortletListPanel",
             "TortletsListsContainerPanel",
             "UserScoreGuageChart",
-            "HomePageHelpModal"
+            "HomePageHelpModal",
+            "MyList"
         ],
         "requires": [
             "Ext.chart.series.Gauge",
@@ -213,7 +216,7 @@
                     "// home \r",
                     "var host = '';\r",
                     "if( env === 'home'){\r",
-                    "    host = httpScheme + '192.168.0.105:' + port;   \r",
+                    "    host = httpScheme + 'localhost:' + port;   \r",
                     "}else if(env === 'office'){\r",
                     "    host = httpScheme + '172.26.0.151:' + port;   \r",
                     "}else if(env === 'appfog'){\r",

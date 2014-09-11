@@ -1,0 +1,88 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "groupField": null,
+        "model": "DayDetails",
+        "storeId": "dayDetailsStore",
+        "designer|userClassName": "DayDetailsStore"
+    },
+    "designerId": "7f6f1e3f-1e39-412b-aacb-aa024ffe041e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://dummy.url",
+                "headers": [
+                    "{\r",
+                    "    Accept : 'application/json'\r",
+                    "}"
+                ]
+            },
+            "designerId": "2eca69e5-d2a9-4782-bbac-c02289f6fb8d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "5c6354c7-149d-4eab-a391-e0a9df408a11"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "totalTortoises"
+            },
+            "designerId": "2d491cef-16a9-462b-9cd1-f21cfdfbe085"
+        },
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "893518ab-5f95-4104-ba16-c1e32d20949a",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "item"
+                        ],
+                        "implHandler": [
+                            "var hours = item.get('totalActivityMinutes') / 60;\r",
+                            "\r",
+                            "return hours.toFixed(2) + \" hours \" ;"
+                        ]
+                    },
+                    "designerId": "6d0fb2bf-65d0-4588-bd32-0993b1345186"
+                }
+            ]
+        }
+    ]
+}

@@ -11,7 +11,6 @@
         <field:datetime dateTimePattern="${tortoise_startdate_date_format}" field="startDate" id="c_com_softrism_tortlets_domain_Tortoise_startDate" z="EO0KJ7Xl/h2b3yMe9yF/bzZmS4w="/>
         <field:datetime dateTimePattern="${tortoise_enddate_date_format}" field="endDate" id="c_com_softrism_tortlets_domain_Tortoise_endDate" z="21C64GiGN8qIv9rL1fhiml7j7N8="/>
         <field:select field="status" id="c_com_softrism_tortlets_domain_Tortoise_status" items="${tortoisestatusenums}" path="tortoisestatusenums" z="HMnA9JHjg+ybhIH0NEyt4hMaSF4="/>
-        <field:select field="duration" id="c_com_softrism_tortlets_domain_Tortoise_duration" items="${tortoisedurationtypeenums}" path="tortoisedurationtypeenums" z="itMaSwQi+aqE3arTuCoTFSin5/4="/>
         <field:checkbox field="monday" id="c_com_softrism_tortlets_domain_Tortoise_monday" z="bdpXWai7dj/V3JlGcH7nfhcKX1Y="/>
         <field:checkbox field="tuesday" id="c_com_softrism_tortlets_domain_Tortoise_tuesday" z="uAHuirHhSQCIlZErcdhP9sdMScc="/>
         <field:checkbox field="wednesday" id="c_com_softrism_tortlets_domain_Tortoise_wednesday" z="ENvO0YugNa2WwhR7YfCAsMFZyOI="/>
@@ -27,5 +26,6 @@
         <field:datetime dateTimePattern="${tortoise_updatedon_date_format}" field="updatedOn" id="c_com_softrism_tortlets_domain_Tortoise_updatedOn" type="hidden" z="user-managed"/>
         <field:simple field="tortlets" id="c_com_softrism_tortlets_domain_Tortoise_tortlets" messageCode="entity_reference_not_managed" messageCodeAttribute="Tortlet" render="false" z="user-managed"/>
         <field:input field="userid" id="c_com_softrism_tortlets_domain_Tortoise_userid" render="false" z="user-managed"/>
+        <field:input field="duration" id="c_com_softrism_tortlets_domain_Tortoise_duration" z="zHzY7Q3WmRXrs0NVjPiT+Y9un+g="/>
     </form:update>
 </div>

@@ -453,7 +453,7 @@ Ext.define('MyApp.controller.DreamsTabController', {
             dreamsStore.load(storeLoadCallBack);// Looks like this call can be async, so no
             // no callback function is passed. And it is needed so that server data will return back 
             // in case specifically new dream. 
-            tortoiseListPanel.down('#tortoiseListTitleBar').setTitle(savedModel.get('title'));
+            tortoiseListPanel.down('#tortoiseListTitleBar').setTitle(Ext.String.ellipsis(savedModel.get('title'),14,false));
             dreamsTabController.getDreamListCardPanel().animateActiveItem(tortoiseListPanel, {type : 'slide'});  
             proxy.setUrl(orgUrl);
         },this);

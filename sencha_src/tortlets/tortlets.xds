@@ -329,6 +329,30 @@
                 "app/view/HomePageHelpModal.js"
             ],
             "className": "HomePageHelpModal"
+        },
+        "42492743-65cf-4164-a086-925d6857cf6c": {
+            "paths": [
+                "metadata/view/MyList",
+                "app/view/override/MyList.js",
+                "app/view/MyList.js"
+            ],
+            "className": "MyList"
+        },
+        "09dea96d-a137-40ef-bda7-56c54a33d2ad": {
+            "paths": [
+                "metadata/model/DayDetails",
+                "app/model/override/DayDetails.js",
+                "app/model/DayDetails.js"
+            ],
+            "className": "DayDetails"
+        },
+        "7f6f1e3f-1e39-412b-aacb-aa024ffe041e": {
+            "paths": [
+                "metadata/store/DayDetailsStore",
+                "app/store/override/DayDetailsStore.js",
+                "app/store/DayDetailsStore.js"
+            ],
+            "className": "DayDetailsStore"
         }
     },
     "viewOrderMap": {
@@ -355,13 +379,15 @@
             "5aac1687-a779-4ce8-9bce-1cb5d9d3f226",
             "95d937cc-2252-4abb-b179-b99c259bb007",
             "0da20323-db08-47ce-9741-64ded49ccb84",
-            "9ec7c3d5-c386-4db0-af50-aa3c1b0cd6c6"
+            "9ec7c3d5-c386-4db0-af50-aa3c1b0cd6c6",
+            "42492743-65cf-4164-a086-925d6857cf6c"
         ],
         "store": [
             "345107d0-a788-4507-9220-261ec811d61a",
             "15eb7579-b7e5-4a31-96e4-4dd8481e7568",
             "2a7e2b19-f954-4c5d-a553-29c3ae040071",
-            "6ae46be0-527b-4709-b96e-84eb3fb55148"
+            "6ae46be0-527b-4709-b96e-84eb3fb55148",
+            "7f6f1e3f-1e39-412b-aacb-aa024ffe041e"
         ],
         "controller": [
             "3a2719a1-f0a2-4d6d-9e54-4acd611b7ddc",
@@ -375,7 +401,8 @@
             "98103327-6270-4ea5-9055-efe31b2727a6",
             "0ce0bf8c-5d62-4f83-aeb6-1b4405045b49",
             "6224bddc-b988-416c-beca-b6c25b31ac1d",
-            "d972eca9-cfd7-429d-8792-8238d5fc4127"
+            "d972eca9-cfd7-429d-8792-8238d5fc4127",
+            "09dea96d-a137-40ef-bda7-56c54a33d2ad"
         ],
         "resource": [
             "7e277a5b-0624-4aa7-941e-c927df2fcc01",

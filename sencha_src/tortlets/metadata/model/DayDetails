@@ -1,0 +1,53 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DayDetails"
+    },
+    "designerId": "09dea96d-a137-40ef-bda7-56c54a33d2ad",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dayName",
+                "type": "string"
+            },
+            "designerId": "39a1652a-a031-42ca-8a0d-6a62640e2f31"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "totalTortoises",
+                "type": "int"
+            },
+            "designerId": "d0e2d9e8-6553-47c2-b788-6f0a21a75399"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "totalActivityMinutes",
+                "type": "int"
+            },
+            "designerId": "1ba297e5-cf6f-4c0b-8915-fb43bebbb920"
+        }
+    ]
+}

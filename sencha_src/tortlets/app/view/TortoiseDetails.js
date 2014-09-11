@@ -55,6 +55,18 @@ Ext.define('MyApp.view.TortoiseDetails', {
             },
             {
                 xtype: 'fieldset',
+                hidden: false,
+                items: [
+                    {
+                        xtype: 'textfield',
+                        label: 'Minutes',
+                        labelWidth: '40%',
+                        name: 'duration'
+                    }
+                ]
+            },
+            {
+                xtype: 'fieldset',
                 title: 'Do It On Every',
                 items: [
                     {

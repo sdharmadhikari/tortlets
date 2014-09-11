@@ -6,7 +6,6 @@ package com.softrism.tortlets.domain;
 import com.softrism.tortlets.domain.Dream;
 import com.softrism.tortlets.domain.Tortlet;
 import com.softrism.tortlets.domain.Tortoise;
-import com.softrism.tortlets.domain.TortoiseDurationTypeEnum;
 import com.softrism.tortlets.domain.TortoiseStatusEnum;
 import java.util.Date;
 import java.util.Set;
@@ -181,11 +180,11 @@ privileged aspect Tortoise_Roo_JavaBean {
         this.status = status;
     }
     
-    public TortoiseDurationTypeEnum Tortoise.getDuration() {
+    public int Tortoise.getDuration() {
         return this.duration;
     }
     
-    public void Tortoise.setDuration(TortoiseDurationTypeEnum duration) {
+    public void Tortoise.setDuration(int duration) {
         this.duration = duration;
     }
     

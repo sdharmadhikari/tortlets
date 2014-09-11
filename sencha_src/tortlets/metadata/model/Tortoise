@@ -182,7 +182,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "duration"
+                "defaultValue": [
+                    "0"
+                ],
+                "name": "duration",
+                "type": "int"
             },
             "designerId": "8d7b514e-e8f3-4b19-a6cb-7aa7d5932136"
         },

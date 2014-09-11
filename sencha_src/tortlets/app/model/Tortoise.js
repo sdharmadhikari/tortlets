@@ -70,7 +70,9 @@ Ext.define('MyApp.model.Tortoise', {
                 type: 'boolean'
             },
             {
-                name: 'duration'
+                defaultValue: 0,
+                name: 'duration',
+                type: 'int'
             },
             {
                 name: 'userid'

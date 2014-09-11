@@ -1,0 +1,33 @@
+Again, create blank project,
+Disable build tools
+Save configuration.
+Save project.
+Go to project directory and List of things generated and list here.
+	- app directory
+	- app.js
+	- index.html
+	- metadata directory
+	- project.xds directory.
+	
+Copy from original location from the list.
+Mv index.html to org-index.html
+Open the project in 3.0
+Open first configuration and set build-tools to disabled.
+Save it. It should create index. Now customize this index using the-IDE and try to make same as org-index.html.
+Now from architect see if there is any trace of old ST version. Library version etc.
+Now enable build-tools from the-IDE
+If not enabled (mostly it will not), Go to Sencha SDK directory and run
+/Users/sudhir/bin/Sencha/Cmd/4.0.1.45/sencha generate app --refresh=false MyApp /Users/sudhir/Projects/trials/dnoram-edited/
+If you run sencha app build -run native . It might fail by NullPointer exception because above command did not generate/touch your old index.html.
+Or you saved project from architect again and overwriting index.html which was backup in metadata of architect.
+SO
+Go to architect and click do not overwrite index.html
+Now copy the index.html as is from your blank project (it has development.js etc) 
+Change project name to appropriate. 
+Run command "pathtosencha/sencha app build -run native.
+It should kickoff the emulator !!! 
+
+
+408-887-1812
+
+510-623-9942

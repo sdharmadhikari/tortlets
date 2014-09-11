@@ -9,6 +9,7 @@
     <http request-matcher-ref="jsonRequestMatcher" use-expressions="true" path-type="regex" create-session="never" authentication-manager-ref="authenticationManager" >
          <intercept-url pattern="/tusers\?find=ByUseridEqualsAndPasswordEquals.*" access="permitAll" />
          <intercept-url pattern="/tusers.*" method="POST" access="permitAll"/>
+         <intercept-url pattern="/tortoises\?find=ByUseridEqualsReturnDays.*" access="permitAll" />
          <intercept-url pattern="/.*" access="isAuthenticated()" />
          <http-basic/>
     </http>

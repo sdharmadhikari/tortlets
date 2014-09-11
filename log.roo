@@ -744,3 +744,18 @@ exit
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-12-06 12:17:55
 exit
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-12-06 12:37:33
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-01-29 17:13:56
+class --class ~.vo.DayVO --rooAnnotations true
+field string --fieldName dayName
+// [failed] field number --fieldName number --type int
+field number --fieldName totalTortoises --type int
+field number --fieldName totalActivityMinutes --type int 
+field set --type ~.domain.Tortoise --fieldName tortoises --cardinality ONE_TO_MANY
+json add --class ~.vo.DayVO
+focus --class ~.domain.Tortoise
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-01-30 10:29:23
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-05-23 16:04:29
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-05-23 19:13:32
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-05-23 19:13:45
