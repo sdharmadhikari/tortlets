@@ -24,7 +24,7 @@ Ext.define('MyApp.view.TodaysTortletList', {
         onItemDisclosure: false,
         variableHeights: true,
         itemTpl: [
-            '{title}',
+            '{title}<span class="smallFont"> ({tortoise.duration}min)</span>',
             '<br/>',
             '<progress value="{tortoise.latestTortoiseScore}" max="100"></progress>{tortoise.latestTortoiseScore}% ',
             '<br/>',

@@ -25,7 +25,7 @@ Ext.define('MyApp.view.TortletsList', {
         onItemDisclosure: false,
         variableHeights: true,
         itemTpl: [
-            '{title}',
+            '{title}<span class="smallFont"> ({tortoise.duration}min)</span>',
             '<br/>',
             '<span class="smallFont">Dream: {tortoise.dream.title}</span>'
         ],

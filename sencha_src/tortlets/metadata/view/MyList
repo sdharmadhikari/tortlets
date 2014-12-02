@@ -23,7 +23,9 @@
             "userConfig": {
                 "implHandler": [
                     "<div><b>{dayName}</b></div>\r",
-                    "<div>Total Activities : {totalTortoises}</div>"
+                    "<div>Total Activities : {totalTortoises}</div>\r",
+                    "\r",
+                    ""
                 ],
                 "designer|displayName": "itemTpl"
             },

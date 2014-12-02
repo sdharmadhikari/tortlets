@@ -16,6 +16,10 @@
 Ext.define('MyApp.model.DayDetails', {
     extend: 'Ext.data.Model',
 
+    uses: [
+        'MyApp.model.TestModel'
+    ],
+
     config: {
         fields: [
             {
@@ -30,6 +34,16 @@ Ext.define('MyApp.model.DayDetails', {
                 name: 'totalActivityMinutes',
                 type: 'int'
             }
-        ]
+        ],
+        hasMany: {
+            associatedName: 'tortoises',
+            associationKey: 'tortoises',
+            model: 'MyApp.model.TestModel',
+            foreignKey: 'tortoises',
+            name: 'tortoises',
+            reader: {
+                type: 'json'
+            }
+        }
     }
 });

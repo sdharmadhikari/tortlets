@@ -13,7 +13,7 @@ import java.util.List;
 privileged aspect DayVO_Roo_Json {
     
     public String DayVO.toJson() {
-        return new JSONSerializer().exclude("*.class").serialize(this);
+        return new JSONSerializer().exclude("*.class").deepSerialize(this);
     }
     
     public static DayVO DayVO.fromJsonToDayVO(String json) {
@@ -21,7 +21,7 @@ privileged aspect DayVO_Roo_Json {
     }
     
     public static String DayVO.toJsonArray(Collection<DayVO> collection) {
-        return new JSONSerializer().exclude("*.class").serialize(collection);
+        return new JSONSerializer().exclude("*.class").deepSerialize(collection);
     }
     
     public static Collection<DayVO> DayVO.fromJsonArrayToDayVO(String json) {

@@ -40,7 +40,7 @@
             "codeClass": null,
             "userConfig": {
                 "implHandler": [
-                    "{title}\r",
+                    "{title}<span class=\"smallFont\"> ({tortoise.duration}min)</span>\r",
                     "<br/>\r",
                     "<span class=\"smallFont\">Dream: {tortoise.dream.title}</span>"
                 ],

@@ -15,7 +15,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooEquals
 @RooSerializable
-@RooJson
+@RooJson(deepSerialize = true)
 public class DayVO {
 
     private String dayName;

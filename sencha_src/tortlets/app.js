@@ -39,7 +39,8 @@ Ext.application({
         'Dream',
         'Tortoise',
         'Tuser',
-        'DayDetails'
+        'DayDetails',
+        'TestModel'
     ],
     stores: [
         'IncompleteTortletsStore',

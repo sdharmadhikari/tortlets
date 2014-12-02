@@ -48,6 +48,34 @@
                 "type": "int"
             },
             "designerId": "1ba297e5-cf6f-4c0b-8915-fb43bebbb920"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associatedName": "tortoises",
+                "associationKey": "tortoises",
+                "designer|displayName": "hasManyTestModel",
+                "model": "TestModel",
+                "foreignKey": "tortoises",
+                "name": "tortoises"
+            },
+            "designerId": "d475b029-20e3-4dd8-b2ba-03f35c3f8dfa",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "0ebee71c-7b31-4097-bddf-a8e783a0a9d0"
+                }
+            ]
         }
     ]
 }

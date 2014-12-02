@@ -22,7 +22,9 @@ Ext.define('MyApp.view.MyList', {
         grouped: true,
         itemTpl: [
             '<div><b>{dayName}</b></div>',
-            '<div>Total Activities : {totalTortoises}</div>'
+            '<div>Total Activities : {totalTortoises}</div>',
+            '',
+            ''
         ]
     }
 
